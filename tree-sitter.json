@@ -1,0 +1,44 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "stelf",
+      "camelcase": "Stelf",
+      "title": "Stelf",
+      "scope": "source.stelf",
+      "file-types": [
+        "slf",
+        "thm",
+        "elf",
+        "lf"
+      ],
+      "injection-regex": "^stelf$",
+      "class-name": "TreeSitterStelf"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "The System for Totality in the Edinbrugh Logical Framework",
+    "authors": [
+      {
+        "name": "Asher Frost",
+        "url": ""
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-stelf",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": true
+  }
+}
