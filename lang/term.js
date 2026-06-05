@@ -16,7 +16,7 @@ export default {
 
   // Atoms and qualified forms
   atom: $ => choice($.ident, $.qualified),
-  qualified: $ => seq(token(seq('%', 'val', /(?=[\s(){}\[\]%]|$)/)), choice($.ident, seq('(', repeat1($.ident), ')'))),
+  qualified: $ => seq(token('%val'), choice($.ident, seq('(', repeat1($.ident), ')'))),
 
   // Small expression (no top-level binders)
   expr1: $ => choice($.atom, seq('(', $.expr, ')')),
@@ -32,9 +32,9 @@ export default {
   expr_app: $ => seq($.expr1, repeat($.expr1), optional($.expr_trail)),
 
   // Arrow / backarrow chains and ascription
-  ascription: $ => seq(token(seq('%', 'the', /(?=[\s(){}\[\]%]|$)/)), $.expr1, $.expr),
-  arrow_chain: $ => seq(token(seq('%', '->', /(?=[\s(){}\[\]%]|$)/)), $.expr1, repeat(seq(optional(token(seq('%', '->', /(?=[\s(){}\[\]%]|$)/)), $.expr1)))),
-  backarrow_chain: $ => seq(token(seq('%', '<-', /(?=[\s(){}\[\]%]|$)/)), $.expr1, repeat(seq(optional(token(seq('%', '<-', /(?=[\s(){}\[\]%]|$)/)), $.expr1)))),
+  ascription: $ => seq(token('%the'), $.expr1, $.expr),
+  arrow_chain: $ => seq(token('%->'), $.expr1, repeat(seq(optional(token('%->')), $.expr1))),
+  backarrow_chain: $ => seq(token('%<-'), $.expr1, repeat(seq(optional(token('%<-')), $.expr1))),
 
   // Top-level expression
   expr: $ => choice($.ascription, $.arrow_chain, $.backarrow_chain, $.expr_app),
@@ -49,7 +49,7 @@ export default {
   bdecl: $ => seq('{', $.decl, '}'),
 
   // Modes
-  mode: $ => choice(token(seq('%','in', /(?=[\s(){}\[\]%]|$)/)), token(seq('%','out', /(?=[\s(){}\[\]%]|$)/)), token(seq('%','out1', /(?=[\s(){}\[\]%]|$)/)), token(seq('%','star', /(?=[\s(){}\[\]%]|$)/))),
+  mode: $ => choice(token('%in'), token('%out'), token('%out1'), token('%star')),
   mode_dec: $ => seq(repeat(seq('{', $.mode, $.decl, '}')), $.expr, repeat($.mode)),
 
   // Orders

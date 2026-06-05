@@ -1,0 +1,19 @@
+====
+Bools
+====
+%sort bool 
+%term (false true) bool 
+----
+
+(source_file
+  (command
+    (sort_cmd
+      (ident)))
+  (command
+    (term_cmd
+      (decl
+        (arg
+          (ident))
+        (arg
+          (ident)))))
+  (outer_text))

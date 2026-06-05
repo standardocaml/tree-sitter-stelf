@@ -1,0 +1,1171 @@
+[
+  {
+    "type": "adhoc_query",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arg",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arrow_chain",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr1",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ascription",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "expr1",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "atom",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "qualified",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "backarrow_chain",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr1",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bdecl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bdecl",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "sdecl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "adhoc_query",
+          "named": true
+        },
+        {
+          "type": "block_cmd",
+          "named": true
+        },
+        {
+          "type": "covers_cmd",
+          "named": true
+        },
+        {
+          "type": "decl_cmd",
+          "named": true
+        },
+        {
+          "type": "define_cmd",
+          "named": true
+        },
+        {
+          "type": "deterministic_cmd",
+          "named": true
+        },
+        {
+          "type": "eval_cmd",
+          "named": true
+        },
+        {
+          "type": "freeze_cmd",
+          "named": true
+        },
+        {
+          "type": "inline_cmd",
+          "named": true
+        },
+        {
+          "type": "mode_cmd",
+          "named": true
+        },
+        {
+          "type": "name_cmd",
+          "named": true
+        },
+        {
+          "type": "open_cmd",
+          "named": true
+        },
+        {
+          "type": "prec_cmd",
+          "named": true
+        },
+        {
+          "type": "qtab_cmd",
+          "named": true
+        },
+        {
+          "type": "query_cmd",
+          "named": true
+        },
+        {
+          "type": "reduces_cmd",
+          "named": true
+        },
+        {
+          "type": "repl_cmd",
+          "named": true
+        },
+        {
+          "type": "sort_cmd",
+          "named": true
+        },
+        {
+          "type": "stop",
+          "named": true
+        },
+        {
+          "type": "symbol_cmd",
+          "named": true
+        },
+        {
+          "type": "term_cmd",
+          "named": true
+        },
+        {
+          "type": "terminates_cmd",
+          "named": true
+        },
+        {
+          "type": "thaw_cmd",
+          "named": true
+        },
+        {
+          "type": "total_cmd",
+          "named": true
+        },
+        {
+          "type": "union_cmd",
+          "named": true
+        },
+        {
+          "type": "unique_cmd",
+          "named": true
+        },
+        {
+          "type": "use_cmd",
+          "named": true
+        },
+        {
+          "type": "worlds_cmd",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "covers_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "mode_dec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arg",
+          "named": true
+        },
+        {
+          "type": "expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "decl_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "define_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "expr1",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "deterministic_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "id_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "eval_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "arrow_chain",
+          "named": true
+        },
+        {
+          "type": "ascription",
+          "named": true
+        },
+        {
+          "type": "backarrow_chain",
+          "named": true
+        },
+        {
+          "type": "expr_app",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expr1",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expr_app",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr1",
+          "named": true
+        },
+        {
+          "type": "expr_trail",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expr_trail",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "decl",
+          "named": true
+        },
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "freeze_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "id_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "id_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inline_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mode",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "mode_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "mode_dec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mode_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "decl",
+          "named": true
+        },
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "mode",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "open_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "id_list",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "order",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "id_list",
+          "named": true
+        },
+        {
+          "type": "order",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "order_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "order",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "prec_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "id_list",
+          "named": true
+        },
+        {
+          "type": "nat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "qtab_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "nat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "qualified",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "query_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "nat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reduces_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr1",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "repl_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sdecl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sort_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bdecl",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "outer_text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "symbol_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "term_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "terminates_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr1",
+          "named": true
+        },
+        {
+          "type": "order_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "thaw_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "id_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "total_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr1",
+          "named": true
+        },
+        {
+          "type": "order_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "union_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unique_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "use_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "worlds_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "%->",
+    "named": false
+  },
+  {
+    "type": "%<-",
+    "named": false
+  },
+  {
+    "type": "%?",
+    "named": false
+  },
+  {
+    "type": "%block",
+    "named": false
+  },
+  {
+    "type": "%covers",
+    "named": false
+  },
+  {
+    "type": "%decl",
+    "named": false
+  },
+  {
+    "type": "%define",
+    "named": false
+  },
+  {
+    "type": "%deterministic",
+    "named": false
+  },
+  {
+    "type": "%eval",
+    "named": false
+  },
+  {
+    "type": "%freeze",
+    "named": false
+  },
+  {
+    "type": "%get",
+    "named": false
+  },
+  {
+    "type": "%help",
+    "named": false
+  },
+  {
+    "type": "%in",
+    "named": false
+  },
+  {
+    "type": "%inline",
+    "named": false
+  },
+  {
+    "type": "%left",
+    "named": false
+  },
+  {
+    "type": "%middle",
+    "named": false
+  },
+  {
+    "type": "%mode",
+    "named": false
+  },
+  {
+    "type": "%name",
+    "named": false
+  },
+  {
+    "type": "%none",
+    "named": false
+  },
+  {
+    "type": "%open",
+    "named": false
+  },
+  {
+    "type": "%out",
+    "named": false
+  },
+  {
+    "type": "%out1",
+    "named": false
+  },
+  {
+    "type": "%postfix",
+    "named": false
+  },
+  {
+    "type": "%prec",
+    "named": false
+  },
+  {
+    "type": "%prefix",
+    "named": false
+  },
+  {
+    "type": "%query",
+    "named": false
+  },
+  {
+    "type": "%querytabled",
+    "named": false
+  },
+  {
+    "type": "%quit",
+    "named": false
+  },
+  {
+    "type": "%reduces",
+    "named": false
+  },
+  {
+    "type": "%right",
+    "named": false
+  },
+  {
+    "type": "%set",
+    "named": false
+  },
+  {
+    "type": "%sort",
+    "named": false
+  },
+  {
+    "type": "%star",
+    "named": false
+  },
+  {
+    "type": "%symbol",
+    "named": false
+  },
+  {
+    "type": "%term",
+    "named": false
+  },
+  {
+    "type": "%terminates",
+    "named": false
+  },
+  {
+    "type": "%thaw",
+    "named": false
+  },
+  {
+    "type": "%the",
+    "named": false
+  },
+  {
+    "type": "%total",
+    "named": false
+  },
+  {
+    "type": "%union",
+    "named": false
+  },
+  {
+    "type": "%unique",
+    "named": false
+  },
+  {
+    "type": "%use",
+    "named": false
+  },
+  {
+    "type": "%val",
+    "named": false
+  },
+  {
+    "type": "%version",
+    "named": false
+  },
+  {
+    "type": "%worlds",
+    "named": false
+  },
+  {
+    "type": "%{",
+    "named": false
+  },
+  {
+    "type": "%}",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "_",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "ident",
+    "named": true
+  },
+  {
+    "type": "nat",
+    "named": true
+  },
+  {
+    "type": "outer_text",
+    "named": true
+  },
+  {
+    "type": "stop",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "{{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "}}",
+    "named": false
+  }
+]

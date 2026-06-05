@@ -12,18 +12,17 @@ import term from "./lang/term.js";
 export default grammar({
   name: "stelf",
 
-  extras: $ => [ /[ \t\n\r]+/, $.comment ],
+  extras: $ => [/[ \t\n\r]+/, $.comment],
 
   rules: {
     source_file: $ => repeat(choice($.command, $.outer_text)),
 
-    outer_text: $ => token(/[^%]+/),
+    outer_text: $ => token(/([^%]|\%\%\%)+/),
 
     comment: $ => token(choice(
-      seq('%{', /[^]*?%}/),
-      seq('%%', /[^\n]*/),
-      seq('%', /[^\n]/, repeat(/[^\n]/))
+      seq('%', /[ \t]/, /[^\n]*/)
     )),
+
 
     command: $ => choice(
       $.stop,
@@ -58,39 +57,37 @@ export default grammar({
 
     stop: $ => token(seq('%', '.')),
 
-    sort_cmd: $ => seq(token(seq('%', 'sort', /(?=[\s(){}\[\]%]|$)/)), $.id_list, repeat($.bdecl)),
-    term_cmd: $ => seq(token(seq('%', 'term', /(?=[\s(){}\[\]%]|$)/)), $._decl),
-    mode_cmd: $ => seq(token(seq('%', 'mode', /(?=[\s(){}\[\]%]|$)/)), $.mode_dec),
-    worlds_cmd: $ => seq(token(seq('%', 'worlds', /(?=[\s(){}\[\]%]|$)/)), '(', repeat($.ident), ')', $.expr),
-    total_cmd: $ => seq(token(seq('%', 'total', /(?=[\s(){}\[\]%]|$)/)), $.order_list, repeat($.expr1)),
-    terminates_cmd: $ => seq(token(seq('%', 'terminates', /(?=[\s(){}\[\]%]|$)/)), $.order_list, repeat($.expr1)),
-    reduces_cmd: $ => seq(token(seq('%', 'reduces', /(?=[\s(){}\[\]%]|$)/)), choice(seq('<','='), seq('>','='), '<', '>', '='), repeat1($.expr1)),
-    query_cmd: $ => seq(token(seq('%', 'query', /(?=[\s(){}\[\]%]|$)/)), choice('_', $.nat), choice('_', $.nat), choice('_', $.nat), $.expr),
-    qtab_cmd: $ => seq(token(seq('%', 'querytabled', /(?=[\s(){}\[\]%]|$)/)), choice('_', $.nat), choice('_', $.nat), choice('_', $.nat), $.expr),
+
+
+    sort_cmd: $ => seq(token('%sort'), choice($.ident, seq('(', repeat1($.ident), ')')), repeat($.bdecl)),
+    term_cmd: $ => seq(token('%term'), $._decl),
+    mode_cmd: $ => seq(token('%mode'), $.mode_dec),
+    worlds_cmd: $ => seq(token('%worlds'), '(', repeat($.ident), ')', $.expr),
+    total_cmd: $ => seq(token('%total'), $.order_list, repeat($.expr1)),
+    terminates_cmd: $ => seq(token('%terminates'), $.order_list, repeat($.expr1)),
+    reduces_cmd: $ => seq(token('%reduces'), choice(seq('<', '='), seq('>', '='), '<', '>', '='), repeat1($.expr1)),
+    query_cmd: $ => seq(token('%query'), choice('_', $.nat), choice('_', $.nat), choice('_', $.nat), $.expr),
+    qtab_cmd: $ => seq(token('%querytabled'), choice('_', $.nat), choice('_', $.nat), choice('_', $.nat), $.expr),
     adhoc_query: $ => seq(token('%?'), $.expr),
-    define_cmd: $ => seq(token(seq('%', 'define', /(?=[\s(){}\[\]%]|$)/)), choice($.ident, '_'), $.expr1, $.expr),
-    decl_cmd: $ => seq(token(seq('%', 'decl', /(?=[\s(){}\[\]%]|$)/)), $.expr),
-    inline_cmd: $ => seq(token(seq('%', 'inline', /(?=[\s(){}\[\]%]|$)/)), $.ident, $.expr),
-    unique_cmd: $ => seq(token(seq('%', 'unique', /(?=[\s(){}\[\]%]|$)/)), $.expr),
-    prec_cmd: $ => seq(token(seq('%', 'prec', /(?=[\s(){}\[\]%]|$)/)), choice(token('%left'), token('%right'), token('%prefix'), token('%postfix'), token('%middle'), token('%none')), $.nat, $.id_list),
-    block_cmd: $ => seq(token(seq('%', 'block', /(?=[\s(){}\[\]%]|$)/)), $.ident, repeat(choice($.bdecl, $.sdecl))),
-    union_cmd: $ => seq(token(seq('%', 'union', /(?=[\s(){}\[\]%]|$)/)), $.ident, '(', repeat1($.ident), ')'),
-    repl_cmd: $ => choice(seq(token(seq('%','quit', /(?=[\s(){}\[\]%]|$)/))), seq(token(seq('%','help', /(?=[\s(){}\[\]%]|$)/)), optional($.ident)), seq(token(seq('%','get', /(?=[\s(){}\[\]%]|$)/)), $.ident), seq(token(seq('%','set', /(?=[\s(){}\[\]%]|$)/)), $.ident, $.ident), seq(token(seq('%','version', /(?=[\s(){}\[\]%]|$)/)))),
-    name_cmd: $ => seq(token(seq('%', 'name', /(?=[\s(){}\[\]%]|$)/)), $.ident),
-    symbol_cmd: $ => seq(token(seq('%', 'symbol', /(?=[\s(){}\[\]%]|$)/)), $.ident, $.ident),
-    freeze_cmd: $ => seq(token(seq('%', 'freeze', /(?=[\s(){}\[\]%]|$)/)), $.id_list),
-    thaw_cmd: $ => seq(token(seq('%', 'thaw', /(?=[\s(){}\[\]%]|$)/)), $.id_list),
-    deterministic_cmd: $ => seq(token(seq('%', 'deterministic', /(?=[\s(){}\[\]%]|$)/)), $.id_list),
-    use_cmd: $ => seq(token(seq('%', 'use', /(?=[\s(){}\[\]%]|$)/)), $.ident, $.ident, '(', repeat($.ident), ')'),
-    open_cmd: $ => seq(token(seq('%', 'open', /(?=[\s(){}\[\]%]|$)/)), $.ident, $.id_list),
-    eval_cmd: $ => seq(token(seq('%','eval', /(?=[\s(){}\[\]%]|$)/)), '%{', repeat($.command), '%}'),
-    covers_cmd: $ => seq(token(seq('%', 'covers', /(?=[\s(){}\[\]%]|$)/)), $.mode_dec),
-
-    id_list: $ => choice($.ident, seq('(', repeat1($.ident), ')')),
-    ident: $ => /[^ \t\n(){}\[\]%]+/,
-    nat: $ => /[0-9]+/,
-
+    define_cmd: $ => seq(token('%define'), choice($.ident, '_'), $.expr1, $.expr),
+    decl_cmd: $ => seq(token('%decl'), $.expr),
+    inline_cmd: $ => seq(token('%inline'), $.ident, $.expr),
+    unique_cmd: $ => seq(token('%unique'), $.expr),
+    prec_cmd: $ => seq(token('%prec'), choice(token('%left'), token('%right'), token('%prefix'), token('%postfix'), token('%middle'), token('%none')), $.nat, $.id_list),
+    block_cmd: $ => seq(token('%block'), $.ident, repeat(choice($.bdecl, $.sdecl))),
+    union_cmd: $ => seq(token('%union'), $.ident, '(', repeat1($.ident), ')'),
+    repl_cmd: $ => choice(seq(token('%quit')), seq(token('%help'), optional($.ident)), seq(token('%get'), $.ident), seq(token('%set'), $.ident, $.ident), seq(token('%version'))),
+    name_cmd: $ => seq(token('%name'), $.ident),
+    symbol_cmd: $ => seq(token('%symbol'), $.ident, $.ident),
+    freeze_cmd: $ => seq(token('%freeze'), $.id_list),
+    thaw_cmd: $ => seq(token('%thaw'), $.id_list),
+    deterministic_cmd: $ => seq(token('%deterministic'), $.id_list),
+    use_cmd: $ => seq(token('%use'), $.ident, $.ident, '(', repeat($.ident), ')'),
+    open_cmd: $ => seq(token('%open'), $.ident, $.id_list),
+    eval_cmd: $ => seq(token('%eval'), '%{', repeat($.command), '%}'),
+    covers_cmd: $ => seq(token('%covers'), $.mode_dec),
     // spread in term rules
     ...term
-  }
+  },
+  conflicts: $ => [[$.id_list]]
 });

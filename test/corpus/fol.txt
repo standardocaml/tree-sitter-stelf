@@ -1,0 +1,23 @@
+==== 
+First Order Logic (FOL)
+====
+
+%sort * 
+%sort prop 
+
+%term => (%-> prop prop prop) %. 
+%prec %right 10 => %.
+Logical implication 
+
+%term not (%-> prop) %.
+Logical negation
+
+%sort solve prop %.
+A natural deduction
+
+%term solve/intro {{A B}} {_ %-> solve A %-> solve B} solve (A => B)
+%term solve/elim {{A B}} %-> solve (A => B) %-> solve A %-> solve B
+%term not/intro {{A}} %-> ({P prop} nd A %-> nd p)}
+----
+
+
