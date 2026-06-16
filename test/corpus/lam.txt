@@ -1,7 +1,0 @@
-====
-Simply typed lambda calculus
-====
-
-----
-
-(source_file)

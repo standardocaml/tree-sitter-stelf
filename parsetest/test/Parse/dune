@@ -1,3 +1,0 @@
-(test
- (name ParseTest)
- (libraries modern alcotest display))

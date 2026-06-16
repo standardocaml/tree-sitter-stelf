@@ -6,14 +6,11 @@
       "camelcase": "Stelf",
       "title": "Stelf",
       "scope": "source.stelf",
-      "file-types": [
-        "slf",
-        "thm",
-        "elf",
-        "lf"
-      ],
+      "file-types": ["slf", "thm", "elf", "lf"],
       "injection-regex": "^stelf$",
-      "class-name": "TreeSitterStelf"
+      "class-name": "TreeSitterStelf",
+      "locals": "queries/locals.scm",
+      "highlights": "queries/highlight.scm"
     }
   ],
   "metadata": {
