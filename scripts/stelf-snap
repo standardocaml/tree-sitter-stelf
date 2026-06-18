@@ -1,0 +1,118 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+usage() { echo "Usage: stelf-snap <input.lf> [output.png]" >&2; exit 1 }
+[[ $# -lt 1 ]] && usage
+
+INPUT=$1
+[[ -f $INPUT ]] || { echo "stelf-snap: file not found: $INPUT" >&2; exit 1 }
+
+OUTFILE=${2:-${INPUT:t:r}.png}
+GRAMMAR_DIR=${0:A:h}/..
+TMPHTML=$(mktemp /tmp/stelf_snap_XXXXXX.html)
+trap "rm -f $TMPHTML" EXIT
+
+FILENAME=${INPUT:t}
+LINE_COUNT=$(wc -l < "$INPUT")
+WIN_HEIGHT=$(( 80 + LINE_COUNT * 24 ))
+(( WIN_HEIGHT < 180 )) && WIN_HEIGHT=180
+
+INNER=$(tree-sitter highlight --html -p "$GRAMMAR_DIR" "$INPUT" 2>/dev/null \
+  | sed -n '/<table>/,/<\/table>/p') \
+  || { echo "stelf-snap: tree-sitter highlight failed" >&2; exit 1 }
+
+cat > "$TMPHTML" << HTMLEOF
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1e1e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 48px;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  }
+  .window {
+    background: #181825;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08);
+    overflow: hidden;
+    min-width: 420px;
+  }
+  .titlebar {
+    background: #1e1e2e;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red    { background: #ff5f57; }
+  .dot-yellow { background: #febc2e; }
+  .dot-green  { background: #28c840; }
+  .filename {
+    margin-left: auto;
+    margin-right: auto;
+    color: #6c7086;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .code-area { padding: 24px; }
+  table { border-collapse: collapse; }
+  .line-number {
+    user-select: none;
+    text-align: right;
+    color: #45475a;
+    padding: 0 16px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+    vertical-align: top;
+  }
+  .line {
+    white-space: pre;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #cdd6f4;
+  }
+  .line span[style*='#5f00d7'] { color: #cba6f7 !important; }
+  .line span[style*='#af8700'] { color: #89dceb !important; }
+  .line span[style*='#005f5f'] { color: #89b4fa !important; }
+  .line span[style*='#005fd7'] { color: #a6e3a1 !important; }
+  .line span[style*='#8a8a8a'] { color: #585b70 !important; }
+  .line span[style*='#875f00'] { color: #fab387 !important; }
+  .line span[style*='#4e4e4e'] { color: #7f849c !important; }
+  .line span[style*='#af0000'] { color: #f38ba8 !important; }
+  .line span[style*='#008700'] { color: #a6e3a1 !important; }
+  .line span[style*='#d0d0d0'] { color: #cdd6f4 !important; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="dot dot-red"></div>
+    <div class="dot dot-yellow"></div>
+    <div class="dot dot-green"></div>
+    <span class="filename">${FILENAME}</span>
+  </div>
+  <div class="code-area">
+${INNER}
+  </div>
+</div>
+</body>
+</html>
+HTMLEOF
+
+chromium --headless=new \
+  --screenshot="$(realpath "$OUTFILE")" \
+  --window-size=700,${WIN_HEIGHT} \
+  --hide-scrollbars \
+  --default-background-color=00000000 \
+  "file://${TMPHTML}" 2>/dev/null
+
+echo "$OUTFILE"

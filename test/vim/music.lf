@@ -1,0 +1,24 @@
+# A example STELF file
+We start in literate mode, where we can write markdown (like this!). The only charecter we can't write is the percent sign, but we can if we escape it as %%%.
+## The Basic Syntax
+%sort τ %. Sort of all types. After the `%%%.` sign, we are back in the "outer" literate mode
+%sort e %. 
+Expressions, not that much special here, also, we can use as many newlines as we wish in outer mode (or any other chareters, like this `‾\(ツ)/‾` )
+### Abbreviations
+%inline type τ %. Of course, writing out τ on a normal keyboard is a bit of a pain (that's why TeX has macros like $\tau$), so we can define an abbreviation for it.
+> [!TIP] In STELF, the only reserved symbols (symbols that not allowed in identifiers) is the percent sign, as well as `()[]{}`, so we are free to use `type` as an identifier
+%inline sort type %. Even commands without the prefix can be used as identifiers, so this is perfectly valid. 
+%inline expr e %. We can also define namespaces (a.k.a, scopes) to group definitions together and avoid name clashes
+## Syntax of Types
+%scope τ %{ %.
+  > [!NOTE] `->` is a perfectly valid identifier 
+  %term -> 
+    %pi type % This is the new chain syntax
+    %-> type % We use the prefixed symbol as an arrow
+    %-> type % Also, this is an inline comment.
+    %.
+  The above could also be written (without the escape) as
+  `%%%term -> {_ type} {_ type} type`
+%}
+
+...

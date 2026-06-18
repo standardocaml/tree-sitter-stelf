@@ -10,22 +10,13 @@
 export default grammar({
   name: "stelf",
 
-  externals: ($) => [
-    $._give_symbol,
-    $.left_arrow,
-    $.right_arrow,
-    $.some_block,
-    $.begin_group,
-    $.end_group,
-    $.begin_string,
-    $.end_string,
-  ],
+  externals: ($) => [],
   extras: ($) => [/[ \t\n\r]+/, $.comment],
 
   rules: {
-    source_file: ($) => seq($.outer_text, repeat(seq($.command))),
+    source_file: ($) => repeat(choice($.outer_text, $.command)),
 
-    outer_text: ($) => prec(0, token(/([^%]|\%\%\%)+?/)),
+    outer_text: ($) => prec(0, token(/([^%]|\%\%\%)+/)),
 
     comment: ($) => token(choice(seq("%", /[ \t]/, /[^\n]*/))),
     // Tokens
@@ -52,7 +43,7 @@ export default grammar({
     pi: ($) => seq("{", field("decl", $.decl), "}", field("expr", $.expr)),
     impl: ($) => seq("{{", repeat1($.ident), "}}", field("expr", $.expr)),
     // Trailing binders used in application position
-    _expr_trail: ($) => choice($.lam, $.pi, $.impl),
+    _expr_trail: ($) => choice($.lam, $.impl, $.pi),
 
     // Application: one or more _expr1, optionally followed by a trailing binder
     app: ($) =>
@@ -116,7 +107,8 @@ export default grammar({
     // convenience re-exports
     _expr_trailing: ($) => $._expr_trail,
     _any: ($) => /.+?/,
-    _value: ($) => choice($._expr1, seq($.begin_string, $._any, $.end_string)),
+    string_lit: ($) => seq("%[", $._any, "%]"),
+    _value: ($) => choice($._expr1, $.string_lit),
     command: ($) =>
       choice(
         $.stop,
@@ -147,6 +139,8 @@ export default grammar({
         $.open_cmd,
         $.eval_cmd,
         $.covers_cmd,
+        $.seq_cmd,
+        $.scope_cmd,
       ),
 
     stop: ($) => seq(token("%."), $.outer_text),
@@ -247,6 +241,8 @@ export default grammar({
         repeat(field("ident", $.ident)),
         ")",
       ),
+    seq_cmd: ($) => seq(token("%{"), repeat($.command), token("%}")),
+    scope_cmd: ($) => seq(token("%scope"), field("name", $.ident), $.command),
     open_cmd: ($) => seq(token("%open"), field("name", $.ident), field("id_list", $.id_list)),
     eval_cmd: ($) => seq(token("%eval"), "%{", repeat(field("command", $.command)), "%}"),
     covers_cmd: ($) => seq(token("%covers"), $.mode_dec),

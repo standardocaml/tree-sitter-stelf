@@ -377,6 +377,14 @@
           "named": true
         },
         {
+          "type": "scope_cmd",
+          "named": true
+        },
+        {
+          "type": "seq_cmd",
+          "named": true
+        },
+        {
           "type": "sort_cmd",
           "named": true
         },
@@ -1142,6 +1150,32 @@
     }
   },
   {
+    "type": "scope_cmd",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "sdecl",
     "named": true,
     "fields": {},
@@ -1151,6 +1185,21 @@
       "types": [
         {
           "type": "decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "seq_cmd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
           "named": true
         }
       ]
@@ -1197,7 +1246,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "command",
@@ -1605,6 +1654,10 @@
   },
   {
     "type": "%right",
+    "named": false
+  },
+  {
+    "type": "%scope",
     "named": false
   },
   {

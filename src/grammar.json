@@ -3,25 +3,20 @@
   "name": "stelf",
   "rules": {
     "source_file": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "outer_text"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "command"
-              }
-            ]
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "outer_text"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "command"
           }
-        }
-      ]
+        ]
+      }
     },
     "outer_text": {
       "type": "PREC",
@@ -30,7 +25,7 @@
         "type": "TOKEN",
         "content": {
           "type": "PATTERN",
-          "value": "([^%]|\\%\\%\\%)+?"
+          "value": "([^%]|\\%\\%\\%)+"
         }
       }
     },
@@ -287,11 +282,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "pi"
+          "name": "impl"
         },
         {
           "type": "SYMBOL",
-          "name": "impl"
+          "name": "pi"
         }
       ]
     },
@@ -846,6 +841,23 @@
       "type": "PATTERN",
       "value": ".+?"
     },
+    "string_lit": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "%["
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_any"
+        },
+        {
+          "type": "STRING",
+          "value": "%]"
+        }
+      ]
+    },
     "_value": {
       "type": "CHOICE",
       "members": [
@@ -854,21 +866,8 @@
           "name": "_expr1"
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "begin_string"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_any"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "end_string"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "string_lit"
         }
       ]
     },
@@ -986,6 +985,14 @@
         {
           "type": "SYMBOL",
           "name": "covers_cmd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "seq_cmd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "scope_cmd"
         }
       ]
     },
@@ -1959,6 +1966,56 @@
         }
       ]
     },
+    "seq_cmd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "%{"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "command"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "%}"
+          }
+        }
+      ]
+    },
+    "scope_cmd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "%scope"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "ident"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "command"
+        }
+      ]
+    },
     "open_cmd": {
       "type": "SEQ",
       "members": [
@@ -2051,40 +2108,7 @@
     ]
   ],
   "precedences": [],
-  "externals": [
-    {
-      "type": "SYMBOL",
-      "name": "_give_symbol"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "left_arrow"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "right_arrow"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "some_block"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "begin_group"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "end_group"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "begin_string"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "end_string"
-    }
-  ],
+  "externals": [],
   "inline": [],
   "supertypes": [],
   "reserved": {}

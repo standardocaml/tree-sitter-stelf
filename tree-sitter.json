@@ -10,7 +10,7 @@
       "injection-regex": "^stelf$",
       "class-name": "TreeSitterStelf",
       "locals": "queries/locals.scm",
-      "highlights": "queries/highlight.scm"
+      "highlights": "queries/highlights.scm"
     }
   ],
   "metadata": {
