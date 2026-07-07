@@ -862,11 +862,43 @@
       "required": true,
       "types": [
         {
+          "type": "prose_asciidoc",
+          "named": true
+        },
+        {
+          "type": "prose_doxygen",
+          "named": true
+        },
+        {
+          "type": "prose_html",
+          "named": true
+        },
+        {
+          "type": "prose_javadoc",
+          "named": true
+        },
+        {
+          "type": "prose_jsdoc",
+          "named": true
+        },
+        {
           "type": "prose_latex",
           "named": true
         },
         {
           "type": "prose_markdown",
+          "named": true
+        },
+        {
+          "type": "prose_org",
+          "named": true
+        },
+        {
+          "type": "prose_rst",
+          "named": true
+        },
+        {
+          "type": "prose_rtf",
           "named": true
         },
         {
@@ -1855,7 +1887,27 @@
     "named": true
   },
   {
+    "type": "prose_asciidoc",
+    "named": true
+  },
+  {
+    "type": "prose_doxygen",
+    "named": true
+  },
+  {
+    "type": "prose_html",
+    "named": true
+  },
+  {
     "type": "prose_id",
+    "named": true
+  },
+  {
+    "type": "prose_javadoc",
+    "named": true
+  },
+  {
+    "type": "prose_jsdoc",
     "named": true
   },
   {
@@ -1864,6 +1916,18 @@
   },
   {
     "type": "prose_markdown",
+    "named": true
+  },
+  {
+    "type": "prose_org",
+    "named": true
+  },
+  {
+    "type": "prose_rst",
+    "named": true
+  },
+  {
+    "type": "prose_rtf",
     "named": true
   },
   {

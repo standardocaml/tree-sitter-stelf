@@ -19,14 +19,45 @@ export default grammar({
   name: "stelf",
 
   // @ts-ignore
-  externals: ($) => [$.begin_string, $.end_string, $.prose_id, $.prose_markdown, $.prose_latex, $.prose_typst],
+  externals: ($) => [
+    $.begin_string,
+    $.end_string,
+    $.prose_id,
+    $.prose_markdown,
+    $.prose_latex,
+    $.prose_typst,
+    $.prose_html,
+    $.prose_rst,
+    $.prose_rtf,
+    $.prose_javadoc,
+    $.prose_jsdoc,
+    $.prose_doxygen,
+    $.prose_org,
+    $.prose_asciidoc,
+  ],
   extras: ($) => [/[ \t\n\r]+/, $.comment],
   // @ts-ignore
   rules: {
     source_file: ($) => seq($.outer_text, repeat(seq($.command, $.outer_text))),
     string_lit: ($) => seq($.begin_string, /.*?/, $.end_string),
 
-    outer_text: ($) => seq(prec(0, repeat(choice(token(/([^%]|(%%.))+/), $.string_lit))), choice($.prose_markdown, $.prose_latex, $.prose_typst)),
+    outer_text: ($) =>
+      seq(
+        prec(0, repeat(choice(token(/([^%]|(%%.))+/), $.string_lit))),
+        choice(
+          $.prose_markdown,
+          $.prose_latex,
+          $.prose_typst,
+          $.prose_html,
+          $.prose_rst,
+          $.prose_rtf,
+          $.prose_javadoc,
+          $.prose_jsdoc,
+          $.prose_doxygen,
+          $.prose_org,
+          $.prose_asciidoc,
+        ),
+      ),
 
     // @ts-ignore
     comment: ($) => token(choice(seq("%", /[ \t]/, /[^\n]*/))),

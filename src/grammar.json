@@ -84,6 +84,38 @@
             {
               "type": "SYMBOL",
               "name": "prose_typst"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_html"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_rst"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_rtf"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_javadoc"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_jsdoc"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_doxygen"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_org"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "prose_asciidoc"
             }
           ]
         }
@@ -2232,6 +2264,38 @@
     {
       "type": "SYMBOL",
       "name": "prose_typst"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_html"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_rst"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_rtf"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_javadoc"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_jsdoc"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_doxygen"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_org"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "prose_asciidoc"
     }
   ],
   "inline": [],

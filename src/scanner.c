@@ -2,13 +2,21 @@
 #include "tree_sitter/parser.h"
 #include <string.h>
 
-enum TokenType { 
-  BEGIN_STRING, 
+enum TokenType {
+  BEGIN_STRING,
   END_STRING,
   PROSE_ID,
   MARKDOWN0,
   LATEX0,
   TYPST0,
+  HTML0,
+  RST0,
+  RTF0,
+  JAVADOC0,
+  JSDOC0,
+  DOXYGEN0,
+  ORG0,
+  ASCIIDOC0,
  };
 
 struct state {
@@ -16,6 +24,15 @@ struct state {
   int currentProse;
 };
 
+bool consume_whitespace(struct state* st, TSLexer *lexer) {
+  bool found_whitespace = false;
+  while (lexer->lookahead == ' ' || lexer->lookahead == '\t' ||
+         lexer->lookahead == '\n' || lexer->lookahead == '\r') {
+    lexer->advance(lexer, true);
+    found_whitespace = true;
+  }
+  return found_whitespace;
+}
 void *tree_sitter_stelf_external_scanner_create() {
 
   struct state *st = ts_malloc(sizeof(struct state));
@@ -49,7 +66,7 @@ void tree_sitter_stelf_external_scanner_deserialize(void *payload,
     memcpy(&st->currentProse, &buffer[sizeof(int)], sizeof(int));
   }
 }
-#define MAX_PROSE_NAME 128
+#define MAX_PROSE_NAME 255
 bool str_equal(char* s0, const char* s1) {
   for (int i = 0; i < MAX_PROSE_NAME; i++) {
     if (s0[i] != s1[i]) {
@@ -69,10 +86,7 @@ bool parse_prose_name(void* payload, TSLexer *lexer, const bool *valid_symbols) 
   struct state *st = payload;
   // The space between `%prose` and the language name is not skipped for us
   // before this scanner runs, so skip it ourselves before reading the name.
-  while (lexer->lookahead == ' ' || lexer->lookahead == '\t' ||
-         lexer->lookahead == '\n' || lexer->lookahead == '\r') {
-    lexer->advance(lexer, true);
-  }
+  consume_whitespace(st, lexer);
   int i = 0;
   while (i < MAX_PROSE_NAME - 1 && lexer->lookahead != ' ' && lexer->lookahead != '\n' && lexer->lookahead != '\r' && lexer->lookahead != '\t' && lexer->lookahead != '\0' && lexer->lookahead != '%') {
     name[i++] = lexer->lookahead;
@@ -87,12 +101,29 @@ bool parse_prose_name(void* payload, TSLexer *lexer, const bool *valid_symbols) 
     st->currentProse = LATEX0;
   } else if (str_equal(name, "typst")) {
     st->currentProse = TYPST0;
+  } else if (str_equal(name, "html")) {
+    st->currentProse = HTML0;
+  } else if (str_equal(name, "rst")) {
+    st->currentProse = RST0;
+  } else if (str_equal(name, "rtf")) {
+    st->currentProse = RTF0;
+  } else if (str_equal(name, "javadoc")) {
+    st->currentProse = JAVADOC0;
+  } else if (str_equal(name, "jsdoc")) {
+    st->currentProse = JSDOC0;
+  } else if (str_equal(name, "doxygen")) {
+    st->currentProse = DOXYGEN0;
+  } else if (str_equal(name, "org")) {
+    st->currentProse = ORG0;
+  } else if (str_equal(name, "asciidoc")) {
+    st->currentProse = ASCIIDOC0;
   } else {
     return false;
   }
   lexer->result_symbol = PROSE_ID;
   return true;
 }
+
 bool tree_sitter_stelf_external_scanner_scan(void *payload, TSLexer *lexer,
                                              const bool *valid_symbols) {
   struct state *st = payload;
@@ -175,10 +206,7 @@ bool tree_sitter_stelf_external_scanner_scan(void *payload, TSLexer *lexer,
   // follows right after.
   if (valid_symbols[st->currentProse]) {
     lexer->mark_end(lexer);
-    while (lexer->lookahead == ' ' || lexer->lookahead == '\t' ||
-           lexer->lookahead == '\n' || lexer->lookahead == '\r') {
-      lexer->advance(lexer, true);
-    }
+    consume_whitespace(st, lexer);
     if (lexer->lookahead == '%' || lexer->eof(lexer)) {
       lexer->result_symbol = st->currentProse;
       return true;
