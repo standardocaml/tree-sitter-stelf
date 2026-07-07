@@ -10,15 +10,17 @@ Expressions, not that much special here, also, we can use as many newlines as we
 %inline sort type %. Even commands without the prefix can be used as identifiers, so this is perfectly valid. 
 %inline expr e %. We can also define namespaces (a.k.a, scopes) to group definitions together and avoid name clashes
 ## Syntax of Types
-%scope τ %{ %.
-  > [!NOTE] `->` is a perfectly valid identifier 
+%scope τ %{ 
+  %. > [!NOTE] `->` is a perfectly valid identifier
   %term -> 
     %pi type % This is the new chain syntax
     %-> type % We use the prefixed symbol as an arrow
     %-> type % Also, this is an inline comment.
     %.
-  The above could also be written (without the escape) as
-  `%%%term -> {_ type} {_ type} type`
+  %. The above could also be written 
+  %[ `%term -> {_ type} {_ type} type` %]
 %}
 
 ...
+
+

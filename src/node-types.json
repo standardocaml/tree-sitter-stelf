@@ -361,6 +361,10 @@
           "named": true
         },
         {
+          "type": "prose_header",
+          "named": true
+        },
+        {
           "type": "qtab_cmd",
           "named": true
         },
@@ -852,7 +856,29 @@
   {
     "type": "outer_text",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "prose_latex",
+          "named": true
+        },
+        {
+          "type": "prose_markdown",
+          "named": true
+        },
+        {
+          "type": "prose_typst",
+          "named": true
+        },
+        {
+          "type": "string_lit",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "pi",
@@ -934,6 +960,21 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "prose_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "prose_id",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1094,11 +1135,15 @@
         ]
       },
       "rel": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
           {
             "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
             "named": false
           },
           {
@@ -1107,6 +1152,10 @@
           },
           {
             "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
             "named": false
           }
         ]
@@ -1201,6 +1250,10 @@
         {
           "type": "command",
           "named": true
+        },
+        {
+          "type": "outer_text",
+          "named": true
         }
       ]
     }
@@ -1246,7 +1299,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "command",
@@ -1260,15 +1313,19 @@
     }
   },
   {
-    "type": "stop",
+    "type": "string_lit",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "outer_text",
+          "type": "begin_string",
+          "named": true
+        },
+        {
+          "type": "end_string",
           "named": true
         }
       ]
@@ -1521,10 +1578,6 @@
     "named": false
   },
   {
-    "type": "%.",
-    "named": false
-  },
-  {
     "type": "%<-",
     "named": false
   },
@@ -1597,6 +1650,10 @@
     "named": false
   },
   {
+    "type": "%minus",
+    "named": false
+  },
+  {
     "type": "%mode",
     "named": false
   },
@@ -1625,6 +1682,10 @@
     "named": false
   },
   {
+    "type": "%plus",
+    "named": false
+  },
+  {
     "type": "%postfix",
     "named": false
   },
@@ -1634,6 +1695,10 @@
   },
   {
     "type": "%prefix",
+    "named": false
+  },
+  {
+    "type": "%prose",
     "named": false
   },
   {
@@ -1741,11 +1806,19 @@
     "named": false
   },
   {
+    "type": "<=",
+    "named": false
+  },
+  {
     "type": "=",
     "named": false
   },
   {
     "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
     "named": false
   },
   {
@@ -1761,9 +1834,17 @@
     "named": false
   },
   {
+    "type": "begin_string",
+    "named": true
+  },
+  {
     "type": "comment",
     "named": true,
     "extra": true
+  },
+  {
+    "type": "end_string",
+    "named": true
   },
   {
     "type": "ident",
@@ -1771,6 +1852,26 @@
   },
   {
     "type": "nat",
+    "named": true
+  },
+  {
+    "type": "prose_id",
+    "named": true
+  },
+  {
+    "type": "prose_latex",
+    "named": true
+  },
+  {
+    "type": "prose_markdown",
+    "named": true
+  },
+  {
+    "type": "prose_typst",
+    "named": true
+  },
+  {
+    "type": "stop",
     "named": true
   },
   {

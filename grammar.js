@@ -7,20 +7,33 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
+// @ts-ignore
+const keyword = (/** @type {string} */ kw) => token(seq("%", token.immediate(kw)));
+const parens = (/** @type {any[]} */ ...rule) => seq("(", ...rule, ")");
+// @ts-ignore
+const braces = (/** @type {any[]} */ ...rule) => seq("{", ...rule, "}");
+// @ts-ignore
+const bracks = (/** @type {any[]} */ ...rule) => seq("[", ...rule, "]");
+
 export default grammar({
   name: "stelf",
 
-  externals: ($) => [],
+  // @ts-ignore
+  externals: ($) => [$.begin_string, $.end_string, $.prose_id, $.prose_markdown, $.prose_latex, $.prose_typst],
   extras: ($) => [/[ \t\n\r]+/, $.comment],
-
+  // @ts-ignore
   rules: {
-    source_file: ($) => repeat(choice($.outer_text, $.command)),
+    source_file: ($) => seq($.outer_text, repeat(seq($.command, $.outer_text))),
+    string_lit: ($) => seq($.begin_string, /.*?/, $.end_string),
 
-    outer_text: ($) => prec(0, token(/([^%]|\%\%\%)+/)),
+    outer_text: ($) => seq(prec(0, repeat(choice(token(/([^%]|(%%.))+/), $.string_lit))), choice($.prose_markdown, $.prose_latex, $.prose_typst)),
 
+    // @ts-ignore
     comment: ($) => token(choice(seq("%", /[ \t]/, /[^\n]*/))),
     // Tokens
+    // @ts-ignore
     ident: ($) => token(prec(1, /[^ \t\n(){}\[\]%]+/)),
+    // @ts-ignore
     nat: ($) => token(prec(1, /[0-9]+/)),
 
     // Ident categories are handled downstream; keep a single identifier token
@@ -37,7 +50,7 @@ export default grammar({
     // Inner syntax
 
     // Small expression (no top-level binders)
-    _expr1: ($) => choice($.atom, seq("(", $.expr, ")")),
+    _expr1: ($) => choice($.atom, parens($.expr)),
 
     lam: ($) => seq("[", field("decl", $.decl), "]", field("expr", $.expr)),
     pi: ($) => seq("{", field("decl", $.decl), "}", field("expr", $.expr)),
@@ -82,7 +95,8 @@ export default grammar({
     bdecl: ($) => seq("{", $.decl, "}"),
 
     // Modes
-    mode: ($) => choice(token("%in"), token("%out"), token("%out1"), token("%star")),
+    // @ts-ignore
+    mode: ($) => choice(token("%in"), token("%plus"), token("%minus"), token("%out"), token("%out1"), token("%star")),
     mode_dec: ($) =>
       seq(
         repeat(seq("{", field("mode", $.mode), field("decl", $.decl), "}")),
@@ -106,8 +120,8 @@ export default grammar({
 
     // convenience re-exports
     _expr_trailing: ($) => $._expr_trail,
+    // @ts-ignore
     _any: ($) => /.+?/,
-    string_lit: ($) => seq("%[", $._any, "%]"),
     _value: ($) => choice($._expr1, $.string_lit),
     command: ($) =>
       choice(
@@ -141,9 +155,10 @@ export default grammar({
         $.covers_cmd,
         $.seq_cmd,
         $.scope_cmd,
+        $.prose_header,
       ),
 
-    stop: ($) => seq(token("%."), $.outer_text),
+    stop: ($) => token("%."),
 
     sort_cmd: ($) =>
       seq(
@@ -165,7 +180,7 @@ export default grammar({
     reduces_cmd: ($) =>
       seq(
         token("%reduces"),
-        field("rel", choice(seq("<", "="), seq(">", "="), "<", ">", "=")),
+        field("rel", choice(token("<="), token(">="), token("<"), token(">"), token("="))),
         field("exprs", repeat1($._expr1)),
       ),
     query_cmd: ($) =>
@@ -241,12 +256,22 @@ export default grammar({
         repeat(field("ident", $.ident)),
         ")",
       ),
-    seq_cmd: ($) => seq(token("%{"), repeat($.command), token("%}")),
+    seq_cmd: ($) =>
+      seq(
+        token("%{"),
+        optional($.outer_text),
+        repeat(seq($.command, optional($.outer_text))),
+        token("%}"),
+      ),
     scope_cmd: ($) => seq(token("%scope"), field("name", $.ident), $.command),
     open_cmd: ($) => seq(token("%open"), field("name", $.ident), field("id_list", $.id_list)),
     eval_cmd: ($) => seq(token("%eval"), "%{", repeat(field("command", $.command)), "%}"),
     covers_cmd: ($) => seq(token("%covers"), $.mode_dec),
     // spread in term rules
+    literal: $ => choice(
+      $.ident,
+    ),
+    prose_header: $ => seq("%prose", $.prose_id)
   },
   conflicts: ($) => [[$.id_list]],
 });

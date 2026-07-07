@@ -80,7 +80,6 @@
 (name_cmd   name:  (ident) @variable) @attribute
 (symbol_cmd name:  (ident) @function)
 (symbol_cmd value: (ident) @operator)
-(scope_cmd name: (ident) @module)
 
 ; ─── Local definitions (for nvim-treesitter locals) ──────────────────────────
 (sort_cmd   name:  (ident) @type)
