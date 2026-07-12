@@ -1,6 +1,6 @@
 %                                 
 %                                                                                    
-%{! A [judgment](/wiki/judgment/) is a statement derivable in a particular object logic. A **hypothetical judgment** is a judgment that makes use of hypothetical assumptions. On paper, we often represent a set of hypothetical assumptions using a context:
+%[[ A [judgment](/wiki/judgment/) is a statement derivable in a particular object logic. A **hypothetical judgment** is a judgment that makes use of hypothetical assumptions. On paper, we often represent a set of hypothetical assumptions using a context:
 
 ```math
 {
@@ -20,12 +20,12 @@ This sample rule is the implication introduction rule, which says that <Math for
 
 In the LF methodology, we represent the hypothetical context of our object language's judgment using the LF context itself. (See [higher-order judgment](/wiki/higher-order-judgements/).)
 
-For example, we can represent the introduction rule as follows: !}%
+For example, we can represent the introduction rule as follows: %]]
 %sort prop %.
 %term ==> %pi prop %-> prop %-> prop %.
 %prec %none 10 ==> %.
 %sort true {_ prop} %.
 %term imp/intro %pi (true (A ==> B)) %<- (%pi (true A) %-> (true B)) %.
-%{! Here, we represent the hypothetical assumption that <Math formula="A\textrm{ true}"/> using an LF hypothesis of type ``A true``. We can see this clearly if we write down the proof term for the proof of the tautology ``P ==> P``: !}%
+%[[ Here, we represent the hypothetical assumption that <Math formula="A\textrm{ true}"/> using an LF hypothesis of type ``A true``. We can see this clearly if we write down the proof term for the proof of the tautology ``P ==> P``: %]]
 %define taut (true (P ==> P)) imp/intro ([ptrue true P] ptrue) %.
-%{! Within the scope of the function argument to ``imp/intro``, we assume that we have a proof of ``P true`` (which we creatively named ``ptrue``). This assumption lets us show that ``P true`` holds, and that lets us show that ``(P ==> P) true``. !}%
+%[[ Within the scope of the function argument to ``imp/intro``, we assume that we have a proof of ``P true`` (which we creatively named ``ptrue``). This assumption lets us show that ``P true`` holds, and that lets us show that ``(P ==> P) true``. %]]

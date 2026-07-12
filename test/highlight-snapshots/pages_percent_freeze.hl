@@ -1,0 +1,191 @@
+0:0-0:20	comment	`%                   `
+1:0-1:84	comment	`%                                                                                   `
+2:1-2:2	punctuation.bracket	`[`
+2:2-2:3	punctuation.bracket	`[`
+2:12-2:19	keyword	`%freeze`
+2:19-2:23	local.reference	```**`
+2:19-2:23	operator	```**`
+2:278-2:283	keyword	`%thaw`
+2:283-2:285	local.reference	````
+2:283-2:285	operator	````
+8:2-8:9	keyword	`%freeze`
+8:10-8:12	constructor	`t1`
+8:10-8:12	local.reference	`t1`
+14:48-14:49	punctuation.bracket	`]`
+14:49-14:50	punctuation.bracket	`]`
+15:0-15:5	keyword.type	`%sort`
+15:6-15:9	constructor	`nat`
+15:6-15:9	local.reference	`nat`
+15:6-15:9	type	`nat`
+15:9-15:12	keyword.return	` %.`
+16:6-16:7	constructor	`z`
+16:6-16:7	function	`z`
+16:6-16:7	local.reference	`z`
+16:6-16:7	variable.parameter	`z`
+16:7-16:11	constructor	` nat`
+16:7-16:11	local.reference	` nat`
+16:11-16:14	keyword.return	` %.`
+17:6-17:7	constructor	`s`
+17:6-17:7	function	`s`
+17:6-17:7	local.reference	`s`
+17:6-17:7	variable.parameter	`s`
+17:7-17:11	operator	` %pi`
+17:12-17:15	constructor	`nat`
+17:12-17:15	local.reference	`nat`
+17:16-17:19	operator	`%->`
+17:20-17:23	constructor	`nat`
+17:20-17:23	local.reference	`nat`
+17:23-17:26	keyword.return	` %.`
+18:6-18:13	keyword.modifier	`%prefix`
+18:14-18:18	number	`9999`
+18:19-18:20	constructor	`s`
+18:19-18:20	local.reference	`s`
+18:20-18:23	keyword.return	` %.`
+18:23-19:5	keyword.type	``
+19:6-19:10	constructor	`plus`
+19:6-19:10	local.reference	`plus`
+19:6-19:10	type	`plus`
+19:35-19:37	keyword.return	`%.`
+20:6-20:10	constructor	`plus`
+20:6-20:10	local.reference	`plus`
+20:10-20:14	keyword.modifier	` %in`
+20:14-20:18	keyword.modifier	` %in`
+20:18-20:23	keyword.modifier	` %out`
+20:23-20:26	keyword.return	` %.`
+21:6-21:12	constructor	`plus/z`
+21:6-21:12	function	`plus/z`
+21:6-21:12	local.reference	`plus/z`
+21:6-21:12	variable.parameter	`plus/z`
+21:12-21:17	constructor	` plus`
+21:12-21:17	local.reference	` plus`
+21:17-21:19	constructor	` z`
+21:17-21:19	local.reference	` z`
+21:19-21:21	constructor	` N`
+21:19-21:21	local.reference	` N`
+21:21-21:23	constructor	` N`
+21:21-21:23	local.reference	` N`
+21:23-21:26	keyword.return	` %.`
+22:6-22:12	constructor	`plus/s`
+22:6-22:12	function	`plus/s`
+22:6-22:12	local.reference	`plus/s`
+22:6-22:12	variable.parameter	`plus/s`
+22:12-22:16	operator	` %pi`
+22:17-22:18	punctuation.bracket	`(`
+22:18-22:22	constructor	`plus`
+22:18-22:22	local.reference	`plus`
+22:23-22:24	punctuation.bracket	`(`
+22:24-22:25	constructor	`s`
+22:24-22:25	local.reference	`s`
+22:26-22:27	constructor	`N`
+22:26-22:27	local.reference	`N`
+22:27-22:28	punctuation.bracket	`)`
+22:29-22:30	constructor	`M`
+22:29-22:30	local.reference	`M`
+22:31-22:32	punctuation.bracket	`(`
+22:32-22:33	constructor	`s`
+22:32-22:33	local.reference	`s`
+22:34-22:35	constructor	`P`
+22:34-22:35	local.reference	`P`
+22:35-22:36	punctuation.bracket	`)`
+22:36-22:37	punctuation.bracket	`)`
+22:38-22:41	operator	`%<-`
+22:42-22:43	punctuation.bracket	`(`
+22:43-22:47	constructor	`plus`
+22:43-22:47	local.reference	`plus`
+22:48-22:49	constructor	`N`
+22:48-22:49	local.reference	`N`
+22:50-22:51	constructor	`M`
+22:50-22:51	local.reference	`M`
+22:52-22:53	constructor	`P`
+22:52-22:53	local.reference	`P`
+22:53-22:54	punctuation.bracket	`)`
+22:54-22:57	keyword.return	` %.`
+23:1-23:2	punctuation.bracket	`[`
+23:2-23:3	punctuation.bracket	`[`
+32:0-32:7	keyword	`%freeze`
+32:8-32:13	constructor	`plus.`
+32:8-32:13	local.reference	`plus.`
+39:0-39:7	keyword	`%freeze`
+39:8-39:13	constructor	`plus.`
+39:8-39:13	local.reference	`plus.`
+48:0-48:7	keyword	`%freeze`
+48:8-48:13	constructor	`plus.`
+48:8-48:13	local.reference	`plus.`
+56:84-56:91	keyword	`%worlds`
+56:93-56:94	punctuation.bracket	`]`
+56:94-56:95	punctuation.bracket	`(`
+56:95-56:116	constructor	`/wiki/percent-worlds/`
+56:95-56:116	local.reference	`/wiki/percent-worlds/`
+56:116-56:117	punctuation.bracket	`)`
+56:118-56:130	constructor	`declaration,`
+56:118-56:130	local.reference	`declaration,`
+56:130-56:133	constructor	` or`
+56:130-56:133	local.reference	` or`
+56:133-56:137	constructor	` for`
+56:133-56:137	local.reference	` for`
+56:137-56:141	constructor	` any`
+56:137-56:141	local.reference	` any`
+56:141-56:146	constructor	` type`
+56:141-56:146	local.reference	` type`
+56:146-56:153	constructor	` family`
+56:146-56:153	local.reference	` family`
+56:153-56:158	constructor	` that`
+56:153-56:158	local.reference	` that`
+56:158-56:166	constructor	` depends`
+56:158-56:166	local.reference	` depends`
+56:166-56:169	constructor	` on`
+56:166-56:169	local.reference	` on`
+56:169-56:174	constructor	` that`
+56:169-56:174	local.reference	` that`
+56:174-56:182	constructor	` family.`
+56:174-56:182	local.reference	` family.`
+56:182-56:187	constructor	` This`
+56:182-56:187	local.reference	` This`
+56:187-56:196	constructor	` prevents`
+56:187-56:196	local.reference	` prevents`
+56:196-56:205	constructor	` mistakes`
+56:196-56:205	local.reference	` mistakes`
+56:205-56:211	constructor	` where`
+56:205-56:211	local.reference	` where`
+56:211-56:213	constructor	` a`
+56:211-56:213	local.reference	` a`
+56:213-56:225	constructor	` metatheorem`
+56:213-56:225	local.reference	` metatheorem`
+56:225-56:228	constructor	` is`
+56:225-56:228	local.reference	` is`
+56:228-56:235	constructor	` proved`
+56:228-56:235	local.reference	` proved`
+56:235-56:239	constructor	` for`
+56:235-56:239	local.reference	` for`
+56:239-56:241	constructor	` a`
+56:239-56:241	local.reference	` a`
+56:241-56:246	constructor	` type`
+56:241-56:246	local.reference	` type`
+56:246-56:253	constructor	` family`
+56:246-56:253	local.reference	` family`
+56:253-56:257	constructor	` but`
+56:253-56:257	local.reference	` but`
+56:257-56:262	constructor	` then`
+56:257-56:262	local.reference	` then`
+56:262-56:267	constructor	` that`
+56:262-56:267	local.reference	` that`
+56:267-56:272	constructor	` type`
+56:267-56:272	local.reference	` type`
+56:272-56:279	constructor	` family`
+56:272-56:279	local.reference	` family`
+56:279-56:282	constructor	` is`
+56:279-56:282	local.reference	` is`
+56:282-56:292	constructor	` extended,`
+56:282-56:292	local.reference	` extended,`
+56:292-56:305	constructor	` invalidating`
+56:292-56:305	local.reference	` invalidating`
+56:305-56:309	constructor	` the`
+56:305-56:309	local.reference	` the`
+56:309-56:318	constructor	` theorem.`
+56:309-56:318	local.reference	` theorem.`
+56:318-58:8	constructor	``
+56:318-58:8	local.reference	``
+58:8-58:11	local.reference	` />`
+58:8-58:11	operator	` />`
+60:1-60:2	punctuation.bracket	`]`
+60:2-60:3	punctuation.bracket	`]`

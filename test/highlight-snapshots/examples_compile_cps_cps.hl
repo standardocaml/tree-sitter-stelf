@@ -1,0 +1,172 @@
+0:0-0:45	comment	`%%% Expressions in Continuation-Passing Style`
+1:0-1:26	comment	`%%% Author: Frank Pfenning`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:10	constructor	`cexp`
+2:6-2:10	local.reference	`cexp`
+2:6-2:10	type	`cexp`
+2:10-2:13	keyword.return	` %.`
+2:13-3:5	keyword.type	``
+3:6-3:10	constructor	`cval`
+3:6-3:10	local.reference	`cval`
+3:6-3:10	type	`cval`
+3:10-3:13	keyword.return	` %.`
+4:6-4:8	constructor	`z+`
+4:6-4:8	function	`z+`
+4:6-4:8	local.reference	`z+`
+4:6-4:8	variable.parameter	`z+`
+4:8-4:13	constructor	` cval`
+4:8-4:13	local.reference	` cval`
+4:13-4:16	keyword.return	` %.`
+5:6-5:8	constructor	`s+`
+5:6-5:8	function	`s+`
+5:6-5:8	local.reference	`s+`
+5:6-5:8	variable.parameter	`s+`
+5:8-5:12	operator	` %pi`
+5:13-5:17	constructor	`cval`
+5:13-5:17	local.reference	`cval`
+5:18-5:21	operator	`%->`
+5:22-5:26	constructor	`cval`
+5:22-5:26	local.reference	`cval`
+5:26-5:29	keyword.return	` %.`
+6:6-6:11	constructor	`case+`
+6:6-6:11	function	`case+`
+6:6-6:11	local.reference	`case+`
+6:6-6:11	variable.parameter	`case+`
+6:11-6:15	operator	` %pi`
+6:16-6:20	constructor	`cval`
+6:16-6:20	local.reference	`cval`
+6:21-6:24	operator	`%->`
+6:25-6:29	constructor	`cexp`
+6:25-6:29	local.reference	`cexp`
+6:29-6:33	operator	` %->`
+6:34-6:35	punctuation.bracket	`(`
+6:35-6:38	operator	`%pi`
+6:39-6:43	constructor	`cval`
+6:39-6:43	local.reference	`cval`
+6:44-6:47	operator	`%->`
+6:48-6:52	constructor	`cexp`
+6:48-6:52	local.reference	`cexp`
+6:52-6:53	punctuation.bracket	`)`
+6:53-6:57	operator	` %->`
+6:58-6:62	constructor	`cexp`
+6:58-6:62	local.reference	`cexp`
+6:62-6:65	keyword.return	` %.`
+7:6-7:11	constructor	`pair+`
+7:6-7:11	function	`pair+`
+7:6-7:11	local.reference	`pair+`
+7:6-7:11	variable.parameter	`pair+`
+7:11-7:15	operator	` %pi`
+7:16-7:20	constructor	`cval`
+7:16-7:20	local.reference	`cval`
+7:21-7:24	operator	`%->`
+7:25-7:29	constructor	`cval`
+7:25-7:29	local.reference	`cval`
+7:29-7:33	operator	` %->`
+7:34-7:38	constructor	`cval`
+7:34-7:38	local.reference	`cval`
+7:38-7:41	keyword.return	` %.`
+8:6-8:10	constructor	`fst+`
+8:6-8:10	function	`fst+`
+8:6-8:10	local.reference	`fst+`
+8:6-8:10	variable.parameter	`fst+`
+8:10-8:14	operator	` %pi`
+8:15-8:19	constructor	`cval`
+8:15-8:19	local.reference	`cval`
+8:20-8:23	operator	`%->`
+8:24-8:25	punctuation.bracket	`(`
+8:25-8:28	operator	`%pi`
+8:29-8:33	constructor	`cval`
+8:29-8:33	local.reference	`cval`
+8:34-8:37	operator	`%->`
+8:38-8:42	constructor	`cexp`
+8:38-8:42	local.reference	`cexp`
+8:42-8:43	punctuation.bracket	`)`
+8:43-8:47	operator	` %->`
+8:48-8:52	constructor	`cexp`
+8:48-8:52	local.reference	`cexp`
+8:52-8:55	keyword.return	` %.`
+9:6-9:10	constructor	`snd+`
+9:6-9:10	function	`snd+`
+9:6-9:10	local.reference	`snd+`
+9:6-9:10	variable.parameter	`snd+`
+9:10-9:14	operator	` %pi`
+9:15-9:19	constructor	`cval`
+9:15-9:19	local.reference	`cval`
+9:20-9:23	operator	`%->`
+9:24-9:25	punctuation.bracket	`(`
+9:25-9:28	operator	`%pi`
+9:29-9:33	constructor	`cval`
+9:29-9:33	local.reference	`cval`
+9:34-9:37	operator	`%->`
+9:38-9:42	constructor	`cexp`
+9:38-9:42	local.reference	`cexp`
+9:42-9:43	punctuation.bracket	`)`
+9:43-9:47	operator	` %->`
+9:48-9:52	constructor	`cexp`
+9:48-9:52	local.reference	`cexp`
+9:52-9:55	keyword.return	` %.`
+10:6-10:10	constructor	`lam+`
+10:6-10:10	function	`lam+`
+10:6-10:10	local.reference	`lam+`
+10:6-10:10	variable.parameter	`lam+`
+10:10-10:14	operator	` %pi`
+10:15-10:16	punctuation.bracket	`(`
+10:16-10:19	operator	`%pi`
+10:20-10:24	constructor	`cval`
+10:20-10:24	local.reference	`cval`
+10:25-10:28	operator	`%->`
+10:29-10:30	punctuation.bracket	`(`
+10:30-10:33	operator	`%pi`
+10:34-10:38	constructor	`cval`
+10:34-10:38	local.reference	`cval`
+10:39-10:42	operator	`%->`
+10:43-10:47	constructor	`cexp`
+10:43-10:47	local.reference	`cexp`
+10:47-10:48	punctuation.bracket	`)`
+10:49-10:52	operator	`%->`
+10:53-10:57	constructor	`cexp`
+10:53-10:57	local.reference	`cexp`
+10:57-10:58	punctuation.bracket	`)`
+10:59-10:62	operator	`%->`
+10:63-10:67	constructor	`cval`
+10:63-10:67	local.reference	`cval`
+10:67-10:70	keyword.return	` %.`
+11:6-11:10	constructor	`app+`
+11:6-11:10	function	`app+`
+11:6-11:10	local.reference	`app+`
+11:6-11:10	variable.parameter	`app+`
+11:10-11:14	operator	` %pi`
+11:15-11:19	constructor	`cval`
+11:15-11:19	local.reference	`cval`
+11:20-11:23	operator	`%->`
+11:24-11:28	constructor	`cval`
+11:24-11:28	local.reference	`cval`
+11:28-11:32	operator	` %->`
+11:33-11:34	punctuation.bracket	`(`
+11:34-11:37	operator	`%pi`
+11:38-11:42	constructor	`cval`
+11:38-11:42	local.reference	`cval`
+11:43-11:46	operator	`%->`
+11:47-11:51	constructor	`cexp`
+11:47-11:51	local.reference	`cexp`
+11:51-11:52	punctuation.bracket	`)`
+11:52-11:56	operator	` %->`
+11:57-11:61	constructor	`cexp`
+11:57-11:61	local.reference	`cexp`
+11:61-11:64	keyword.return	` %.`
+11:64-12:10	comment	``
+12:10-13:37	comment	``
+13:37-14:53	comment	``
+14:53-15:34	comment	``
+15:34-16:33	comment	``
+17:6-17:9	constructor	`vl+`
+17:6-17:9	function	`vl+`
+17:6-17:9	local.reference	`vl+`
+17:6-17:9	variable.parameter	`vl+`
+17:9-17:13	operator	` %pi`
+17:14-17:18	constructor	`cval`
+17:14-17:18	local.reference	`cval`
+17:19-17:22	operator	`%->`
+17:23-17:27	constructor	`cexp`
+17:23-17:27	local.reference	`cexp`
+17:27-17:30	keyword.return	` %.`

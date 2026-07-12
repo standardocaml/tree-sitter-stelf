@@ -1,0 +1,227 @@
+0:0-0:19	comment	`%                  `
+1:0-1:94	comment	`%                                                                                             `
+2:1-2:2	punctuation.bracket	`[`
+2:2-2:3	punctuation.bracket	`[`
+2:10-2:16	keyword	`%block`
+2:16-2:20	label	```**`
+2:16-2:20	local.reference	```**`
+2:16-2:20	operator	```**`
+2:174-2:181	keyword	`%worlds`
+2:183-2:184	punctuation.bracket	`]`
+2:184-2:185	punctuation.bracket	`(`
+2:185-2:206	constructor	`/wiki/percent-worlds/`
+2:185-2:206	local.reference	`/wiki/percent-worlds/`
+2:206-2:207	punctuation.bracket	`)`
+2:208-2:221	constructor	`declarations,`
+2:208-2:221	local.reference	`declarations,`
+2:221-2:227	constructor	` which`
+2:221-2:227	local.reference	` which`
+2:227-2:236	constructor	` describe`
+2:227-2:236	local.reference	` describe`
+2:236-2:240	constructor	` the`
+2:236-2:240	local.reference	` the`
+2:240-2:249	constructor	` complete`
+2:240-2:249	local.reference	` complete`
+2:249-2:253	constructor	` set`
+2:249-2:253	local.reference	` set`
+2:253-2:256	constructor	` of`
+2:253-2:256	local.reference	` of`
+2:256-2:265	constructor	` possible`
+2:256-2:265	local.reference	` possible`
+2:265-2:274	constructor	` contexts`
+2:265-2:274	local.reference	` contexts`
+2:274-2:278	constructor	` for`
+2:274-2:278	local.reference	` for`
+2:278-2:280	constructor	` a`
+2:278-2:280	local.reference	` a`
+2:280-2:285	constructor	` type`
+2:280-2:285	local.reference	` type`
+2:285-2:293	constructor	` family.`
+2:285-2:293	local.reference	` family.`
+2:293-2:298	constructor	` This`
+2:293-2:298	local.reference	` This`
+2:298-2:310	constructor	` description`
+2:298-2:310	local.reference	` description`
+2:310-2:313	constructor	` of`
+2:310-2:313	local.reference	` of`
+2:313-2:317	constructor	` the`
+2:313-2:317	local.reference	` the`
+2:317-2:325	constructor	` context`
+2:317-2:325	local.reference	` context`
+2:325-2:328	constructor	` is`
+2:325-2:328	local.reference	` is`
+2:328-2:331	constructor	` an`
+2:328-2:331	local.reference	` an`
+2:331-2:341	constructor	` important`
+2:331-2:341	local.reference	` important`
+2:341-2:346	constructor	` part`
+2:341-2:346	local.reference	` part`
+2:346-2:349	constructor	` of`
+2:346-2:349	local.reference	` of`
+2:349-2:353	constructor	` the`
+2:349-2:353	local.reference	` the`
+2:443-2:449	keyword	`%total`
+2:449-2:451	local.reference	````
+2:449-2:451	operator	````
+2:451-2:452	punctuation.bracket	`]`
+2:452-2:453	punctuation.bracket	`(`
+2:453-2:473	constructor	`/wiki/percent-total/`
+2:453-2:473	local.reference	`/wiki/percent-total/`
+2:473-2:474	punctuation.bracket	`)`
+4:4-4:10	keyword	`%block`
+4:10-4:12	label	````
+4:10-4:12	local.reference	````
+4:10-4:12	operator	````
+4:186-4:193	keyword	`%define`
+4:193-4:194	punctuation.bracket	`]`
+4:194-4:195	punctuation.bracket	`(`
+4:220-4:221	punctuation.bracket	`)`
+7:12-7:18	keyword	`%block`
+7:18-7:20	label	````
+7:18-7:20	local.reference	````
+7:18-7:20	operator	````
+9:15-9:21	keyword	`%block`
+9:21-9:23	label	````
+9:21-9:23	local.reference	````
+9:21-9:23	operator	````
+9:111-9:118	keyword	`%worlds`
+9:120-9:121	punctuation.bracket	`]`
+9:121-9:122	punctuation.bracket	`(`
+9:122-9:143	constructor	`/wiki/percent-worlds/`
+9:122-9:143	local.reference	`/wiki/percent-worlds/`
+9:143-9:144	punctuation.bracket	`)`
+9:145-9:153	constructor	`article.`
+9:145-9:153	local.reference	`article.`
+9:153-11:5	constructor	``
+9:153-11:5	local.reference	``
+11:5-11:10	constructor	` this`
+11:5-11:10	local.reference	` this`
+11:10-11:16	constructor	` block`
+11:10-11:16	local.reference	` block`
+11:16-11:19	constructor	` in`
+11:16-11:19	local.reference	` in`
+11:19-11:21	constructor	` a`
+11:19-11:21	local.reference	` a`
+11:21-11:24	local.reference	` ```
+11:21-11:24	operator	` ```
+11:24-11:31	keyword	`%worlds`
+13:0-13:6	keyword	`%block`
+13:7-13:15	constructor	`var-rand`
+13:7-13:15	label	`var-rand`
+13:7-13:15	local.reference	`var-rand`
+15:24-15:31	keyword	`%worlds`
+17:0-17:6	keyword	`%block`
+17:7-17:17	constructor	`var-height`
+17:7-17:17	label	`var-height`
+17:7-17:17	local.reference	`var-height`
+19:24-19:31	keyword	`%worlds`
+21:0-21:6	keyword	`%block`
+21:7-21:18	constructor	`var-heightN`
+21:7-21:18	label	`var-heightN`
+21:7-21:18	local.reference	`var-heightN`
+26:1-26:2	punctuation.bracket	`]`
+26:2-26:3	punctuation.bracket	`]`
+27:0-27:5	keyword.type	`%sort`
+27:6-27:9	constructor	`typ`
+27:6-27:9	local.reference	`typ`
+27:6-27:9	type	`typ`
+27:9-27:12	keyword.return	` %.`
+27:12-28:5	keyword.type	``
+28:6-28:9	constructor	`exp`
+28:6-28:9	local.reference	`exp`
+28:6-28:9	type	`exp`
+28:18-28:20	keyword.return	`%.`
+29:7-29:14	constructor	`typ-var`
+29:7-29:14	label	`typ-var`
+29:7-29:14	local.reference	`typ-var`
+29:22-29:24	keyword.return	`%.`
+30:7-30:14	constructor	`exp-var`
+30:7-30:14	label	`exp-var`
+30:7-30:14	local.reference	`exp-var`
+30:32-30:34	keyword.return	`%.`
+31:7-31:11	constructor	`vars`
+31:7-31:11	label	`vars`
+31:7-31:11	local.reference	`vars`
+31:11-31:13	keyword.return	`%.`
+32:1-32:2	punctuation.bracket	`[`
+32:2-32:3	punctuation.bracket	`[`
+32:24-32:25	punctuation.bracket	`[`
+32:27-32:34	keyword	`%worlds`
+32:36-32:37	punctuation.bracket	`]`
+32:37-32:38	punctuation.bracket	`(`
+32:38-32:59	constructor	`/wiki/percent-worlds/`
+32:38-32:59	local.reference	`/wiki/percent-worlds/`
+32:59-32:60	punctuation.bracket	`)`
+32:61-32:72	constructor	`declaration`
+32:61-32:72	local.reference	`declaration`
+32:72-32:75	constructor	` is`
+32:72-32:75	local.reference	` is`
+32:75-32:79	constructor	` the`
+32:75-32:79	local.reference	` the`
+32:79-32:84	constructor	` same`
+32:79-32:84	local.reference	` same`
+32:84-32:87	constructor	` as`
+32:84-32:87	local.reference	` as`
+32:87-32:93	constructor	` using`
+32:87-32:93	local.reference	` using`
+32:93-32:103	constructor	` ``typ-var`
+32:93-32:103	local.reference	` ``typ-var`
+32:103-32:105	local.reference	` |`
+32:103-32:105	operator	` |`
+32:105-32:116	constructor	` exp-var``,`
+32:105-32:116	local.reference	` exp-var``,`
+32:116-32:120	constructor	` and`
+32:116-32:120	local.reference	` and`
+32:120-32:123	constructor	` in`
+32:120-32:123	local.reference	` in`
+32:123-32:128	constructor	` fact`
+32:123-32:128	local.reference	` fact`
+32:128-32:133	constructor	` when`
+32:128-32:133	local.reference	` when`
+32:133-32:139	constructor	` Twelf`
+32:133-32:139	local.reference	` Twelf`
+32:139-32:146	constructor	` prints`
+32:139-32:146	local.reference	` prints`
+32:146-32:150	constructor	` out`
+32:146-32:150	local.reference	` out`
+32:150-32:154	constructor	` the`
+32:150-32:154	local.reference	` the`
+32:154-32:157	local.reference	` ```
+32:154-32:157	operator	` ```
+32:157-32:164	keyword	`%worlds`
+32:231-32:232	punctuation.bracket	`]`
+32:232-32:233	punctuation.bracket	`]`
+33:1-33:2	punctuation.bracket	`[`
+33:2-33:3	punctuation.bracket	`[`
+33:21-33:22	punctuation.bracket	`]`
+33:22-33:23	punctuation.bracket	`]`
+34:0-34:7	keyword	`%worlds`
+34:8-34:9	punctuation.bracket	`(`
+34:9-34:13	constructor	`vars`
+34:9-34:13	local.reference	`vars`
+34:13-34:14	punctuation.bracket	`)`
+34:15-34:16	punctuation.bracket	`(`
+34:16-34:19	constructor	`exp`
+34:16-34:19	local.reference	`exp`
+34:20-34:21	constructor	`_`
+34:20-34:21	local.reference	`_`
+34:20-34:21	variable.parameter	`_`
+34:21-34:22	punctuation.bracket	`)`
+34:22-34:25	keyword.return	` %.`
+35:1-35:2	punctuation.bracket	`[`
+35:2-35:3	punctuation.bracket	`[`
+35:19-35:20	punctuation.bracket	`]`
+35:20-35:21	punctuation.bracket	`]`
+36:1-36:2	punctuation.bracket	`[`
+36:2-36:3	punctuation.bracket	`[`
+38:2-38:3	punctuation.bracket	`[`
+38:5-38:12	keyword	`%worlds`
+38:14-38:15	punctuation.bracket	`]`
+38:15-38:16	punctuation.bracket	`(`
+38:16-38:37	constructor	`/wiki/percent-worlds/`
+38:16-38:37	local.reference	`/wiki/percent-worlds/`
+38:37-38:38	punctuation.bracket	`)`
+39:0-39:1	local.reference	`*`
+39:0-39:1	operator	`*`
+45:1-45:2	punctuation.bracket	`]`
+45:2-45:3	punctuation.bracket	`]`

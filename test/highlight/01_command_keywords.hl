@@ -1,0 +1,39 @@
+0:0-0:5	keyword.type	`%sort`
+0:6-0:9	constructor	`nat`
+0:6-0:9	local.reference	`nat`
+0:6-0:9	type	`nat`
+1:6-1:10	constructor	`zero`
+1:6-1:10	function	`zero`
+1:6-1:10	local.reference	`zero`
+1:6-1:10	variable.parameter	`zero`
+1:10-1:14	constructor	` nat`
+1:10-1:14	local.reference	` nat`
+2:8-2:11	constructor	`foo`
+2:8-2:11	function	`foo`
+2:8-2:11	local.reference	`foo`
+2:12-2:15	constructor	`nat`
+2:12-2:15	local.reference	`nat`
+2:16-2:20	constructor	`zero`
+2:16-2:20	local.reference	`zero`
+3:6-3:9	constructor	`add`
+3:6-3:9	local.reference	`add`
+3:9-3:13	keyword.modifier	` %in`
+3:13-3:17	keyword.modifier	` %in`
+3:17-3:22	keyword.modifier	` %out`
+3:22-4:4	keyword.import	``
+4:5-4:6	constructor	`M`
+4:5-4:6	local.reference	`M`
+4:5-4:6	module	`M`
+4:7-4:8	constructor	`N`
+4:7-4:8	local.reference	`N`
+4:7-4:8	module	`N`
+4:9-4:10	punctuation.bracket	`(`
+4:10-4:11	punctuation.bracket	`)`
+4:11-5:5	keyword.import	``
+5:6-5:7	constructor	`M`
+5:6-5:7	local.reference	`M`
+5:6-5:7	module	`M`
+5:8-5:9	punctuation.bracket	`(`
+5:9-5:10	constructor	`n`
+5:9-5:10	local.reference	`n`
+5:10-5:11	punctuation.bracket	`)`

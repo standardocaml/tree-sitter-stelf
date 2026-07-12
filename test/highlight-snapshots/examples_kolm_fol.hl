@@ -1,0 +1,143 @@
+0:0-0:15	comment	`% File: fol.elf`
+1:0-1:30	comment	`% First Order Logic Signature.`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:7	constructor	`i`
+2:6-2:7	local.reference	`i`
+2:6-2:7	type	`i`
+2:7-2:10	keyword.return	` %.`
+2:10-3:7	attribute	``
+3:6-3:7	constructor	`i`
+3:6-3:7	local.reference	`i`
+3:6-3:7	variable	`i`
+3:7-3:10	keyword.return	` %.`
+3:10-4:5	keyword.type	``
+4:6-4:7	constructor	`o`
+4:6-4:7	local.reference	`o`
+4:6-4:7	type	`o`
+4:7-4:10	keyword.return	` %.`
+4:10-5:7	attribute	``
+5:6-5:7	constructor	`o`
+5:6-5:7	local.reference	`o`
+5:6-5:7	variable	`o`
+5:7-5:10	keyword.return	` %.`
+6:6-6:9	constructor	`and`
+6:6-6:9	function	`and`
+6:6-6:9	local.reference	`and`
+6:6-6:9	variable.parameter	`and`
+6:9-6:13	operator	` %pi`
+6:14-6:15	constructor	`o`
+6:14-6:15	local.reference	`o`
+6:16-6:19	operator	`%->`
+6:20-6:21	constructor	`o`
+6:20-6:21	local.reference	`o`
+6:21-6:25	operator	` %->`
+6:26-6:27	constructor	`o`
+6:26-6:27	local.reference	`o`
+6:27-6:30	keyword.return	` %.`
+7:6-7:12	keyword.modifier	`%right`
+7:13-7:15	number	`11`
+7:16-7:19	constructor	`and`
+7:16-7:19	local.reference	`and`
+7:19-7:22	keyword.return	` %.`
+8:6-8:9	constructor	`imp`
+8:6-8:9	function	`imp`
+8:6-8:9	local.reference	`imp`
+8:6-8:9	variable.parameter	`imp`
+8:9-8:13	operator	` %pi`
+8:14-8:15	constructor	`o`
+8:14-8:15	local.reference	`o`
+8:16-8:19	operator	`%->`
+8:20-8:21	constructor	`o`
+8:20-8:21	local.reference	`o`
+8:21-8:25	operator	` %->`
+8:26-8:27	constructor	`o`
+8:26-8:27	local.reference	`o`
+8:27-8:30	keyword.return	` %.`
+9:6-9:12	keyword.modifier	`%right`
+9:13-9:15	number	`10`
+9:16-9:19	constructor	`imp`
+9:16-9:19	local.reference	`imp`
+9:19-9:22	keyword.return	` %.`
+10:6-10:8	constructor	`or`
+10:6-10:8	function	`or`
+10:6-10:8	local.reference	`or`
+10:6-10:8	variable.parameter	`or`
+10:8-10:12	operator	` %pi`
+10:13-10:14	constructor	`o`
+10:13-10:14	local.reference	`o`
+10:15-10:18	operator	`%->`
+10:19-10:20	constructor	`o`
+10:19-10:20	local.reference	`o`
+10:20-10:24	operator	` %->`
+10:25-10:26	constructor	`o`
+10:25-10:26	local.reference	`o`
+10:26-10:29	keyword.return	` %.`
+11:6-11:12	keyword.modifier	`%right`
+11:13-11:15	number	`11`
+11:16-11:18	constructor	`or`
+11:16-11:18	local.reference	`or`
+11:18-11:21	keyword.return	` %.`
+12:6-12:9	constructor	`not`
+12:6-12:9	function	`not`
+12:6-12:9	local.reference	`not`
+12:6-12:9	variable.parameter	`not`
+12:9-12:13	operator	` %pi`
+12:14-12:15	constructor	`o`
+12:14-12:15	local.reference	`o`
+12:16-12:19	operator	`%->`
+12:20-12:21	constructor	`o`
+12:20-12:21	local.reference	`o`
+12:21-12:24	keyword.return	` %.`
+13:6-13:13	keyword.modifier	`%prefix`
+13:14-13:16	number	`12`
+13:17-13:20	constructor	`not`
+13:17-13:20	local.reference	`not`
+13:20-13:23	keyword.return	` %.`
+14:6-14:10	constructor	`true`
+14:6-14:10	function	`true`
+14:6-14:10	local.reference	`true`
+14:6-14:10	variable.parameter	`true`
+14:10-14:12	constructor	` o`
+14:10-14:12	local.reference	` o`
+14:12-14:15	keyword.return	` %.`
+15:6-15:11	constructor	`false`
+15:6-15:11	function	`false`
+15:6-15:11	local.reference	`false`
+15:6-15:11	variable.parameter	`false`
+15:11-15:13	constructor	` o`
+15:11-15:13	local.reference	` o`
+15:13-15:16	keyword.return	` %.`
+16:6-16:12	constructor	`forall`
+16:6-16:12	function	`forall`
+16:6-16:12	local.reference	`forall`
+16:6-16:12	variable.parameter	`forall`
+16:12-16:16	operator	` %pi`
+16:17-16:18	punctuation.bracket	`(`
+16:18-16:21	operator	`%pi`
+16:22-16:23	constructor	`i`
+16:22-16:23	local.reference	`i`
+16:24-16:27	operator	`%->`
+16:28-16:29	constructor	`o`
+16:28-16:29	local.reference	`o`
+16:29-16:30	punctuation.bracket	`)`
+16:31-16:34	operator	`%->`
+16:35-16:36	constructor	`o`
+16:35-16:36	local.reference	`o`
+16:36-16:39	keyword.return	` %.`
+17:6-17:12	constructor	`exists`
+17:6-17:12	function	`exists`
+17:6-17:12	local.reference	`exists`
+17:6-17:12	variable.parameter	`exists`
+17:12-17:16	operator	` %pi`
+17:17-17:18	punctuation.bracket	`(`
+17:18-17:21	operator	`%pi`
+17:22-17:23	constructor	`i`
+17:22-17:23	local.reference	`i`
+17:24-17:27	operator	`%->`
+17:28-17:29	constructor	`o`
+17:28-17:29	local.reference	`o`
+17:29-17:30	punctuation.bracket	`)`
+17:31-17:34	operator	`%->`
+17:35-17:36	constructor	`o`
+17:35-17:36	local.reference	`o`
+17:36-17:39	keyword.return	` %.`

@@ -1,0 +1,98 @@
+0:0-0:35	comment	`%%% Appending lists of propositions`
+1:0-1:28	comment	`%%% Example for User's Guide`
+2:0-2:26	comment	`%%% Author: Frank Pfenning`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:10	constructor	`list`
+3:6-3:10	local.reference	`list`
+3:6-3:10	type	`list`
+3:10-3:13	keyword.return	` %.`
+4:6-4:9	constructor	`nil`
+4:6-4:9	function	`nil`
+4:6-4:9	local.reference	`nil`
+4:6-4:9	variable.parameter	`nil`
+4:9-4:14	constructor	` list`
+4:9-4:14	local.reference	` list`
+4:14-4:17	keyword.return	` %.`
+5:6-5:10	constructor	`cons`
+5:6-5:10	function	`cons`
+5:6-5:10	local.reference	`cons`
+5:6-5:10	variable.parameter	`cons`
+5:10-5:14	operator	` %pi`
+5:15-5:16	constructor	`o`
+5:15-5:16	local.reference	`o`
+5:17-5:20	operator	`%->`
+5:21-5:25	constructor	`list`
+5:21-5:25	local.reference	`list`
+5:25-5:29	operator	` %->`
+5:30-5:34	constructor	`list`
+5:30-5:34	local.reference	`list`
+5:34-5:37	keyword.return	` %.`
+5:37-6:5	keyword.type	``
+6:6-6:12	constructor	`append`
+6:6-6:12	local.reference	`append`
+6:6-6:12	type	`append`
+6:40-6:42	keyword.return	`%.`
+7:6-7:12	constructor	`appNil`
+7:6-7:12	function	`appNil`
+7:6-7:12	local.reference	`appNil`
+7:6-7:12	variable.parameter	`appNil`
+7:12-7:19	constructor	` append`
+7:12-7:19	local.reference	` append`
+7:19-7:23	constructor	` nil`
+7:19-7:23	local.reference	` nil`
+7:23-7:25	constructor	` K`
+7:23-7:25	local.reference	` K`
+7:25-7:27	constructor	` K`
+7:25-7:27	local.reference	` K`
+7:27-7:30	keyword.return	` %.`
+8:6-8:13	constructor	`appCons`
+8:6-8:13	function	`appCons`
+8:6-8:13	local.reference	`appCons`
+8:6-8:13	variable.parameter	`appCons`
+8:13-8:17	operator	` %pi`
+8:18-8:19	punctuation.bracket	`(`
+8:19-8:25	constructor	`append`
+8:19-8:25	local.reference	`append`
+8:26-8:27	punctuation.bracket	`(`
+8:27-8:31	constructor	`cons`
+8:27-8:31	local.reference	`cons`
+8:32-8:33	constructor	`A`
+8:32-8:33	local.reference	`A`
+8:34-8:35	constructor	`L`
+8:34-8:35	local.reference	`L`
+8:35-8:36	punctuation.bracket	`)`
+8:37-8:38	constructor	`K`
+8:37-8:38	local.reference	`K`
+8:39-8:40	punctuation.bracket	`(`
+8:40-8:44	constructor	`cons`
+8:40-8:44	local.reference	`cons`
+8:45-8:46	constructor	`A`
+8:45-8:46	local.reference	`A`
+8:47-8:48	constructor	`M`
+8:47-8:48	local.reference	`M`
+8:48-8:49	punctuation.bracket	`)`
+8:49-8:50	punctuation.bracket	`)`
+8:51-8:54	operator	`%<-`
+8:55-8:56	punctuation.bracket	`(`
+8:56-8:62	constructor	`append`
+8:56-8:62	local.reference	`append`
+8:63-8:64	constructor	`L`
+8:63-8:64	local.reference	`L`
+8:65-8:66	constructor	`K`
+8:65-8:66	local.reference	`K`
+8:67-8:68	constructor	`M`
+8:67-8:68	local.reference	`M`
+8:68-8:69	punctuation.bracket	`)`
+8:69-8:72	keyword.return	` %.`
+9:7-9:8	number	`1`
+9:9-9:10	number	`1`
+9:11-9:12	variable.parameter.builtin	`_`
+9:13-9:19	constructor	`append`
+9:13-9:19	local.reference	`append`
+9:55-9:57	keyword.return	`%.`
+10:7-10:8	number	`1`
+10:9-10:10	number	`1`
+10:11-10:12	variable.parameter.builtin	`_`
+10:13-10:19	constructor	`append`
+10:13-10:19	local.reference	`append`
+10:67-10:69	keyword.return	`%.`

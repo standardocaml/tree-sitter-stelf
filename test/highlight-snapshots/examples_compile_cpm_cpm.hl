@@ -1,0 +1,206 @@
+0:0-0:36	comment	`%%% Continuation Machine for Mini-ML`
+1:0-1:26	comment	`%%% Author: Frank Pfenning`
+2:0-2:22	comment	`% Machine Instructions`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:10	constructor	`inst`
+3:6-3:10	local.reference	`inst`
+3:6-3:10	type	`inst`
+3:10-3:13	keyword.return	` %.`
+3:13-4:10	attribute	``
+4:6-4:10	constructor	`inst`
+4:6-4:10	local.reference	`inst`
+4:6-4:10	variable	`inst`
+4:10-4:13	keyword.return	` %.`
+5:6-5:8	constructor	`ev`
+5:6-5:8	function	`ev`
+5:6-5:8	local.reference	`ev`
+5:6-5:8	variable.parameter	`ev`
+5:8-5:12	operator	` %pi`
+5:13-5:16	constructor	`exp`
+5:13-5:16	local.reference	`exp`
+5:17-5:20	operator	`%->`
+5:21-5:25	constructor	`inst`
+5:21-5:25	local.reference	`inst`
+5:25-5:28	keyword.return	` %.`
+6:6-6:12	constructor	`return`
+6:6-6:12	function	`return`
+6:6-6:12	local.reference	`return`
+6:6-6:12	variable.parameter	`return`
+6:12-6:16	operator	` %pi`
+6:17-6:20	constructor	`val`
+6:17-6:20	local.reference	`val`
+6:21-6:24	operator	`%->`
+6:25-6:29	constructor	`inst`
+6:25-6:29	local.reference	`inst`
+6:29-6:32	keyword.return	` %.`
+7:6-7:11	constructor	`case1`
+7:6-7:11	function	`case1`
+7:6-7:11	local.reference	`case1`
+7:6-7:11	variable.parameter	`case1`
+7:11-7:15	operator	` %pi`
+7:16-7:19	constructor	`val`
+7:16-7:19	local.reference	`val`
+7:20-7:23	operator	`%->`
+7:24-7:27	constructor	`exp`
+7:24-7:27	local.reference	`exp`
+7:27-7:31	operator	` %->`
+7:32-7:33	punctuation.bracket	`(`
+7:33-7:36	operator	`%pi`
+7:37-7:40	constructor	`val`
+7:37-7:40	local.reference	`val`
+7:41-7:44	operator	`%->`
+7:45-7:48	constructor	`exp`
+7:45-7:48	local.reference	`exp`
+7:48-7:49	punctuation.bracket	`)`
+7:49-7:53	operator	` %->`
+7:54-7:58	constructor	`inst`
+7:54-7:58	local.reference	`inst`
+7:58-7:61	keyword.return	` %.`
+8:6-8:11	constructor	`pair1`
+8:6-8:11	function	`pair1`
+8:6-8:11	local.reference	`pair1`
+8:6-8:11	variable.parameter	`pair1`
+8:11-8:15	operator	` %pi`
+8:16-8:19	constructor	`val`
+8:16-8:19	local.reference	`val`
+8:20-8:23	operator	`%->`
+8:24-8:27	constructor	`exp`
+8:24-8:27	local.reference	`exp`
+8:27-8:31	operator	` %->`
+8:32-8:36	constructor	`inst`
+8:32-8:36	local.reference	`inst`
+8:36-8:39	keyword.return	` %.`
+9:6-9:10	constructor	`fst1`
+9:6-9:10	function	`fst1`
+9:6-9:10	local.reference	`fst1`
+9:6-9:10	variable.parameter	`fst1`
+9:10-9:14	operator	` %pi`
+9:15-9:18	constructor	`val`
+9:15-9:18	local.reference	`val`
+9:19-9:22	operator	`%->`
+9:23-9:27	constructor	`inst`
+9:23-9:27	local.reference	`inst`
+9:27-9:30	keyword.return	` %.`
+10:6-10:10	constructor	`snd1`
+10:6-10:10	function	`snd1`
+10:6-10:10	local.reference	`snd1`
+10:6-10:10	variable.parameter	`snd1`
+10:10-10:14	operator	` %pi`
+10:15-10:18	constructor	`val`
+10:15-10:18	local.reference	`val`
+10:19-10:22	operator	`%->`
+10:23-10:27	constructor	`inst`
+10:23-10:27	local.reference	`inst`
+10:27-10:30	keyword.return	` %.`
+11:6-11:10	constructor	`app1`
+11:6-11:10	function	`app1`
+11:6-11:10	local.reference	`app1`
+11:6-11:10	variable.parameter	`app1`
+11:10-11:14	operator	` %pi`
+11:15-11:18	constructor	`val`
+11:15-11:18	local.reference	`val`
+11:19-11:22	operator	`%->`
+11:23-11:26	constructor	`exp`
+11:23-11:26	local.reference	`exp`
+11:26-11:30	operator	` %->`
+11:31-11:35	constructor	`inst`
+11:31-11:35	local.reference	`inst`
+11:35-11:38	keyword.return	` %.`
+12:6-12:10	constructor	`app2`
+12:6-12:10	function	`app2`
+12:6-12:10	local.reference	`app2`
+12:6-12:10	variable.parameter	`app2`
+12:10-12:14	operator	` %pi`
+12:15-12:18	constructor	`val`
+12:15-12:18	local.reference	`val`
+12:19-12:22	operator	`%->`
+12:23-12:26	constructor	`val`
+12:23-12:26	local.reference	`val`
+12:26-12:30	operator	` %->`
+12:31-12:35	constructor	`inst`
+12:31-12:35	local.reference	`inst`
+12:35-12:38	keyword.return	` %.`
+12:38-13:15	comment	``
+13:15-14:5	keyword.type	``
+14:6-14:10	constructor	`cont`
+14:6-14:10	local.reference	`cont`
+14:6-14:10	type	`cont`
+14:10-14:13	keyword.return	` %.`
+14:13-15:10	attribute	``
+15:6-15:10	constructor	`cont`
+15:6-15:10	local.reference	`cont`
+15:6-15:10	variable	`cont`
+15:10-15:13	keyword.return	` %.`
+16:6-16:10	constructor	`init`
+16:6-16:10	function	`init`
+16:6-16:10	local.reference	`init`
+16:6-16:10	variable.parameter	`init`
+16:10-16:15	constructor	` cont`
+16:10-16:15	local.reference	` cont`
+16:15-16:18	keyword.return	` %.`
+17:6-17:7	function	`;`
+17:6-17:7	local.reference	`;`
+17:6-17:7	operator	`;`
+17:6-17:7	variable.parameter	`;`
+17:7-17:11	operator	` %pi`
+17:12-17:16	constructor	`cont`
+17:12-17:16	local.reference	`cont`
+17:17-17:20	operator	`%->`
+17:21-17:22	punctuation.bracket	`(`
+17:22-17:25	operator	`%pi`
+17:26-17:29	constructor	`val`
+17:26-17:29	local.reference	`val`
+17:30-17:33	operator	`%->`
+17:34-17:38	constructor	`inst`
+17:34-17:38	local.reference	`inst`
+17:38-17:39	punctuation.bracket	`)`
+17:39-17:43	operator	` %->`
+17:44-17:48	constructor	`cont`
+17:44-17:48	local.reference	`cont`
+17:48-17:51	keyword.return	` %.`
+18:6-18:11	keyword.modifier	`%left`
+18:12-18:13	number	`8`
+18:14-18:15	local.reference	`;`
+18:14-18:15	operator	`;`
+18:15-18:18	keyword.return	` %.`
+18:18-19:29	comment	``
+19:29-20:5	keyword.type	``
+20:6-20:11	constructor	`state`
+20:6-20:11	local.reference	`state`
+20:6-20:11	type	`state`
+20:11-20:14	keyword.return	` %.`
+20:14-21:11	attribute	``
+21:6-21:11	constructor	`state`
+21:6-21:11	local.reference	`state`
+21:6-21:11	variable	`state`
+21:11-21:14	keyword.return	` %.`
+22:6-22:7	function	`#`
+22:6-22:7	local.reference	`#`
+22:6-22:7	operator	`#`
+22:6-22:7	variable.parameter	`#`
+22:7-22:11	operator	` %pi`
+22:12-22:16	constructor	`cont`
+22:12-22:16	local.reference	`cont`
+22:17-22:20	operator	`%->`
+22:21-22:25	constructor	`inst`
+22:21-22:25	local.reference	`inst`
+22:25-22:29	operator	` %->`
+22:30-22:35	constructor	`state`
+22:30-22:35	local.reference	`state`
+22:35-22:38	keyword.return	` %.`
+23:6-23:12	constructor	`answer`
+23:6-23:12	function	`answer`
+23:6-23:12	local.reference	`answer`
+23:6-23:12	variable.parameter	`answer`
+23:12-23:16	operator	` %pi`
+23:17-23:20	constructor	`val`
+23:17-23:20	local.reference	`val`
+23:21-23:24	operator	`%->`
+23:25-23:30	constructor	`state`
+23:25-23:30	local.reference	`state`
+23:30-23:33	keyword.return	` %.`
+24:6-24:11	keyword.modifier	`%none`
+24:12-24:13	number	`7`
+24:14-24:15	local.reference	`#`
+24:14-24:15	operator	`#`
+24:15-24:18	keyword.return	` %.`

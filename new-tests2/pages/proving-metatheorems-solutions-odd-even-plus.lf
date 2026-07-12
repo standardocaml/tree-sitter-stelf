@@ -1,6 +1,6 @@
 %                                                              
 %                                                                                                                                                    
-%{!
+%[[
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
 Exercise 4 from [the part 1 exercises](/wiki/proving-metatheorems-summary-the-natural-numbers/): Prove remaining properties of how evenness and oddness interacts with addition:
@@ -10,7 +10,7 @@ Exercise 4 from [the part 1 exercises](/wiki/proving-metatheorems-summary-the-na
 
 Starting with the preliminaries, including the [definition of `odd` from exercise 2](/wiki/proving-metatheorems-solutions-define-odd/):
 
-!}%
+%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -23,8 +23,8 @@ Starting with the preliminaries, including the [definition of `odd` from exercis
 %sort odd {_ nat} %.
 %term odd-1 odd (s z) %.
 %term odd-s %pi (odd N) %-> (odd (s (s N))) %.
-%{! ## The sum of an even and odd number is odd !}%
-%{!! begin checked !!}%
+%[[ ## The sum of an even and odd number is odd %]]
+%[[! begin checked !%]]
 %sort sum-even-odd {_ even N1} {_ odd N2} {_ plus N1 N2 N3} {_ odd N3} %.
 %mode sum-even-odd %in %in %in %out %.
 %term seoz sum-even-odd even-z OddN2 plus-z OddN2 %.
@@ -33,8 +33,8 @@ Starting with the preliminaries, including the [definition of `odd` from exercis
 	%<- (sum-even-odd EvenN1 OddN2 PlusN1N2N3 OddN3) %.
 %worlds () (sum-even-odd _ _ _ _) %.
 %total D (sum-even-odd D _ _ _) %.
-%{!! end checked !!}%
-%{! ## The sum of an odd and an even number is odd 
+%[[! end checked !%]]
+%[[ ## The sum of an odd and an even number is odd 
 
 Unlike the previous proof that the sum of an even number and on odd, the base case of this proof is easiest to prove by reusing one of the lemmas a previous exercise.
 
@@ -45,15 +45,15 @@ Neither answer is better than the other! It's valuable to think through the answ
 If you've just written `sum-even-odd`, and try to adapt the structure of that proof, the easiest approach is to reuse [`succ-even` from Exercise 3](/wiki/proving-metatheorems-solutions-odd-even-succ/), the proof that the successor of an even number is odd.
 
 We'll first repeat that proof:
-!}%
+%]]
 %sort succ-even {_ even N} {_ odd (s N)} %.
 %mode succ-even %in %out %.
 %term sez succ-even even-z odd-1 %.
 %term ses %pi (succ-even (even-s EvenA) (odd-s OddA)) %<- (succ-even EvenA OddA) %.
 %worlds () (succ-even _ _) %.
 %total D (succ-even D _) %.
-%{! With `succ-even` in hand, the proof of `sum-odd-even` has the same structure as the proof of `sum-even-odd`: !}%
-%{!! begin checked !!}%
+%[[ With `succ-even` in hand, the proof of `sum-odd-even` has the same structure as the proof of `sum-even-odd`: %]]
+%[[! begin checked !%]]
 %sort sum-odd-even {_ odd N1} {_ even N2} {_ plus N1 N2 N3} {_ odd N3} %.
 %mode sum-odd-even %in %in %in %out %.
 %term soe1 %pi (sum-odd-even odd-1 EvenN2 _ OddN3) %<- (succ-even EvenN2 OddN3) %.
@@ -62,12 +62,12 @@ We'll first repeat that proof:
 	%<- (sum-odd-even OddN1 EvenN2 PlusN1N2N3 OddN3) %.
 %worlds () (sum-odd-even _ _ _ _) %.
 %total D (sum-odd-even D _ _ _) %.
-%{!! end checked !!}%
-%{! ### Alternative solution, reusing `succ-even-odd` and `plus-commutes`
+%[[! end checked !%]]
+%[[ ### Alternative solution, reusing `succ-even-odd` and `plus-commutes`
 
 Another proof of `sum-odd-even` uses the previously proved `sum-even-odd` along with the proof of the [proof of the commutativity of plus from Exercise 1](/wiki/proving-metatheorems-solution-plus-comm/). The `sum-even-odd` proof is a bit involved:
 
-!}%
+%]]
 %sort plus-zero-id {N1 nat} {_ plus N1 z N1} %.
 %mode plus-zero-id %in %out %.
 %term pzidz plus-zero-id z plus-z %.
@@ -93,8 +93,8 @@ Another proof of `sum-odd-even` uses the previously proved `sum-even-odd` along 
 	%<- (plus-flip DIH D) %.
 %worlds () (plus-commutes _ _) %.
 %total D (plus-commutes D _) %.
-%{! Once that proof is available, the proof of `sum-odd-even` requires no additional induction: !}%
-%{!! begin checked !!}%
+%[[ Once that proof is available, the proof of `sum-odd-even` requires no additional induction: %]]
+%[[! begin checked !%]]
 %sort sum-odd-even {_ odd M} {_ even N} {_ plus M N P} {_ odd P} %.
 %mode sum-odd-even %in %in %in %out %.
 %term soe 
@@ -103,21 +103,21 @@ Another proof of `sum-odd-even` uses the previously proved `sum-even-odd` along 
 	%<- (sum-even-odd E O A0 O0) %.
 %worlds () (sum-odd-even _ _ _ _) %.
 %total [] (sum-odd-even D _ _ _) %.
-%{!! end checked !!}%
-%{! ## The sum of two odd numbers is even 
+%[[! end checked !%]]
+%[[ ## The sum of two odd numbers is even 
 
 The most straightforward approach here reuses [`succ-odd` from Exercise 3](/wiki/proving-metatheorems-solutions-odd-even-succ/) in exactly the same way as the "expected" solution to the previous theorem reused `succ-even`.
 
 First, we'll repeat the proof of `succ-odd` from Exercise 3:
-!}%
+%]]
 %sort succ-odd {_ odd N} {_ even (s N)} %.
 %mode succ-odd %in %out %.
 %term so1 succ-odd odd-1 (even-s even-z) %.
 %term sos %pi (succ-odd (odd-s OddA) (even-s EvenA)) %<- (succ-odd OddA EvenA) %.
 %worlds () (succ-odd _ _) %.
 %total D (succ-odd D _) %.
-%{! With that out of the way, the proof of `sum-odds` has the same structure as the previous solutions: !}%
-%{!! begin checked !!}%
+%[[ With that out of the way, the proof of `sum-odds` has the same structure as the previous solutions: %]]
+%[[! begin checked !%]]
 %sort sum-odds {_ odd N1} {_ odd N2} {_ plus N1 N2 N3} {_ even N3} %.
 %mode sum-odds %in %in %in %out %.
 %term soz %pi (sum-odds odd-1 OddN2 _ EvenN3) %<- (succ-odd OddN2 EvenN3) %.
@@ -126,4 +126,4 @@ First, we'll repeat the proof of `succ-odd` from Exercise 3:
 	%<- (sum-odds OddN1 OddN2 PlusN1N2N3 EvenN3) %.
 %worlds () (sum-odds _ _ _ _) %.
 %total D (sum-odds D _ _ _) %.
-%{!! end checked !!}%
+%[[! end checked !%]]

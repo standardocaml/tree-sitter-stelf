@@ -1,0 +1,73 @@
+0:0-0:39	comment	`% %query 1 * (sqnt rnil rnil rnil rnil `
+1:0-1:48	comment	`%		(^ (snt (bob | loves | mary | nil) nil T)) ).`
+2:0-2:6	keyword	`%query`
+2:7-2:8	number	`1`
+2:9-2:10	variable.parameter.builtin	`_`
+2:11-2:12	variable.parameter.builtin	`_`
+2:13-2:17	constructor	`sqnt`
+2:13-2:17	local.reference	`sqnt`
+2:17-2:22	constructor	` rnil`
+2:17-2:22	local.reference	` rnil`
+2:22-2:27	constructor	` rnil`
+2:22-2:27	local.reference	` rnil`
+2:27-2:32	constructor	` rnil`
+2:27-2:32	local.reference	` rnil`
+2:32-2:37	constructor	` rnil`
+2:32-2:37	local.reference	` rnil`
+2:111-2:113	keyword.return	`%.`
+3:7-3:8	number	`1`
+3:9-3:10	variable.parameter.builtin	`_`
+3:11-3:12	variable.parameter.builtin	`_`
+3:13-3:17	constructor	`sqnt`
+3:13-3:17	local.reference	`sqnt`
+3:17-3:22	constructor	` rnil`
+3:17-3:22	local.reference	` rnil`
+3:22-3:27	constructor	` rnil`
+3:22-3:27	local.reference	` rnil`
+3:27-3:32	constructor	` rnil`
+3:27-3:32	local.reference	` rnil`
+3:32-3:37	constructor	` rnil`
+3:32-3:37	local.reference	` rnil`
+3:140-3:142	keyword.return	`%.`
+4:7-4:8	number	`0`
+4:9-4:10	variable.parameter.builtin	`_`
+4:11-4:12	variable.parameter.builtin	`_`
+4:13-4:17	constructor	`sqnt`
+4:13-4:17	local.reference	`sqnt`
+4:17-4:22	constructor	` rnil`
+4:17-4:22	local.reference	` rnil`
+4:22-4:27	constructor	` rnil`
+4:22-4:27	local.reference	` rnil`
+4:27-4:32	constructor	` rnil`
+4:27-4:32	local.reference	` rnil`
+4:32-4:37	constructor	` rnil`
+4:32-4:37	local.reference	` rnil`
+4:140-4:142	keyword.return	`%.`
+5:7-5:8	number	`0`
+5:9-5:10	variable.parameter.builtin	`_`
+5:11-5:12	variable.parameter.builtin	`_`
+5:13-5:17	constructor	`sqnt`
+5:13-5:17	local.reference	`sqnt`
+5:17-5:22	constructor	` rnil`
+5:17-5:22	local.reference	` rnil`
+5:22-5:27	constructor	` rnil`
+5:22-5:27	local.reference	` rnil`
+5:27-5:32	constructor	` rnil`
+5:27-5:32	local.reference	` rnil`
+5:32-5:37	constructor	` rnil`
+5:32-5:37	local.reference	` rnil`
+5:118-5:120	keyword.return	`%.`
+6:7-6:8	number	`0`
+6:9-6:10	variable.parameter.builtin	`_`
+6:11-6:12	variable.parameter.builtin	`_`
+6:13-6:17	constructor	`sqnt`
+6:13-6:17	local.reference	`sqnt`
+6:17-6:22	constructor	` rnil`
+6:17-6:22	local.reference	` rnil`
+6:22-6:27	constructor	` rnil`
+6:22-6:27	local.reference	` rnil`
+6:27-6:32	constructor	` rnil`
+6:27-6:32	local.reference	` rnil`
+6:32-6:37	constructor	` rnil`
+6:32-6:37	local.reference	` rnil`
+6:104-6:106	keyword.return	`%.`

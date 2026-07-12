@@ -1,6 +1,6 @@
 %                         
 %                     
-%{! **Strengthening** lemmas prove that something which holds under assumptions also holds without them.
+%[[ **Strengthening** lemmas prove that something which holds under assumptions also holds without them.
 
 When proving type families total using [%total](/wiki/percent-total/), strengthening lemmas are sometimes necessary because Twelf estimates dependencies conservatively using the [subordination](/wiki/subordination/) relation.  Specifically, for Twelf's [output coverage](/wiki/coverage-checking/) check to succeed, the output variables of higher-order premises must mention all assumptions of subordinate types.  If an assumption's type is subordinate to an output variable's type, but additional reasoning shows that the assumption cannot occur in the output variable in a particular case, you must prove a strengthening lemma expressing this reasoning.
 
@@ -8,7 +8,7 @@ In this tutorial, we'll show a proof where the need for strengthening arises. We
 
 ## A little language with locations
 
-Locations and terms: !}%
+Locations and terms: %]]
 %sort loc %.
 %name loc %.
 %term loc/z loc %.
@@ -18,11 +18,11 @@ Locations and terms: !}%
 %term tm/loc %pi loc %-> tm %.
 %term tm/lam %pi (%pi tm %-> tm) %-> tm %.
 %term tm/app %pi tm %-> tm %-> tm %.
-%{! This is a silly little language; it has locations but no way to use them.
+%[[ This is a silly little language; it has locations but no way to use them.
 
 (The [``%name``](/wiki/percent-name/) declarations give a prefix which Twelf uses to name unnamed variables for display; we prefix the names with ``_`` so that it's clear which variables Twelf named, and also because Twelf will rename your variables if they collide with the naming prefix, which can be very confusing.)
 
-Stores and store lookup: !}%
+Stores and store lookup: %]]
 %sort st %.
 %name st %.
 %term st/nil st %.
@@ -31,9 +31,9 @@ Stores and store lookup: !}%
 %name st-lookup %.
 %term st-lookup/1 st-lookup (st/cons L T _) L T %.
 %term st-lookup/2 %pi (st-lookup (st/cons L T S) L' T') %<- (st-lookup S L' T') %.
-%{! Stores are just lists of location/term pairs. The lookup relation might look a little strange, since both ``st-lookup/1`` and ``st-lookup/2`` apply if ``L = L'``, but for our purpose it is OK and this avoids having to define disequality of locations.
+%[[ Stores are just lists of location/term pairs. The lookup relation might look a little strange, since both ``st-lookup/1`` and ``st-lookup/2`` apply if ``L = L'``, but for our purpose it is OK and this avoids having to define disequality of locations.
 
-Well-formedness of terms with respect to a store: !}%
+Well-formedness of terms with respect to a store: %]]
 %sort tm-wf {_ tm} {_ st} %.
 %name tm-wf %.
 %sort tm-var {_ tm} %.
@@ -41,7 +41,7 @@ Well-formedness of terms with respect to a store: !}%
 %term tm-wf/loc %pi (tm-wf (tm/loc L) S) %<- (st-lookup S L T) %<- (tm-wf T S) %.
 %term tm-wf/lam %pi (tm-wf (tm/lam ([x tm] T x)) S) %<- ({v tm} {d tm-var v} tm-wf (T v) S) %.
 %term tm-wf/app %pi (tm-wf (tm/app T1 T2) S) %<- (tm-wf T1 S) %<- (tm-wf T2 S) %.
-%{! A term is well-formed with respect to a store if its locations are all defined in the store, and if the terms bound to its locations are all well-formed with respect to the store.
+%[[ A term is well-formed with respect to a store if its locations are all defined in the store, and if the terms bound to its locations are all well-formed with respect to the store.
 
 How to define well-formedness of the open term that appears in the ``lam`` case? We assume some term, and mark it is a variable using ``tm-var``, then check the well-formedness of the lambda body applied to this new term. Then we give a case saying that any term marked as a variable is well-formed.
 
@@ -54,7 +54,7 @@ However, as we will see, this approach forces us to prove a substitution lemma, 
 Now we give a definition for how terms evaluate.
 Evaluation is just beta-reduction; we do nothing with locations.
 
-!}%
+%]]
 %sort eval {_ tm} {_ tm} %.
 %name eval %.
 %term eval/loc eval (tm/loc L) (tm/loc L) %.
@@ -63,7 +63,7 @@ Evaluation is just beta-reduction; we do nothing with locations.
 	%pi (eval (tm/app T1 T2) T')
 	%<- (eval T1 (tm/lam ([x tm] T1' x)))
 	%<- (eval (T1' T2) T') %.
-%{!
+%[[
 
 ### Substitution Lemma
 
@@ -86,7 +86,7 @@ then we could just write ``(Dwf1' T2 Dwf2)`` in place of ``Dwf'``.
 But, as previously noted, that gets us into a different kind of
 trouble. So we'll need to prove an explicit substitution lemma first.
 
- !}%
+ %]]
 %sort tm-wf-subst {_ {v tm} {d tm-var v} tm-wf (T1 v) S} {_ tm-wf T2 S} {_ tm-wf (T1 T2) S} %.
 %mode tm-wf-subst %in %in %out %.
 %scope tm-wf-subst %term /app 
@@ -98,7 +98,7 @@ trouble. So we'll need to prove an explicit substitution lemma first.
 	%<- ({v' tm} {d' tm-var v'} tm-wf-subst ([v] [d] Dwf1 v d v' d') Dwf2 (Dwf1' v' d')) %.
 %scope tm-wf-subst %term /var tm-wf-subst ([v] [d] tm-wf/var d) Dwf Dwf %.
 %term /bind tm-wf-subst ([v] [d] Dwf) _ Dwf %.
-%{! This lemma gives us exactly what we'll need in the application
+%[[ This lemma gives us exactly what we'll need in the application
 %case of preservation.
 
 The ``lam`` case is complicated only by the fact that we need to go
@@ -132,7 +132,7 @@ looking up locations in the store, so it also has no dependencies.
 
 ### Preservation theorem
 
-!}%
+%]]
 %sort eval-pres-wf {_ eval T T'} {_ tm-wf T S} {_ tm-wf T' S} %.
 %mode eval-pres-wf %in %in %out %.
 %scope eval-pres-wf %term /loc eval-pres-wf eval/loc D D %.
@@ -142,11 +142,11 @@ looking up locations in the store, so it also has no dependencies.
 	%<- (eval-pres-wf Deval1 Dwf1 (tm-wf/lam Dwf1'))
 	%<- (tm-wf-subst Dwf1' Dwf2 Dwf')
 	%<- (eval-pres-wf Deval2 Dwf' Dwf'') %.
-%{!
+%[[
 
 ### Strengthening lemmas
 
-Here is the first: !}%
+Here is the first: %]]
 %sort tm-eq {_ tm} {_ tm} %.
 %term tm-eq_ tm-eq T T %.
 %sort st-lookup-strengthen {_ {v tm} st-lookup S L (T v)} {_ st-lookup S L T'} {_ {v tm} tm-eq (T v) T'} %.
@@ -158,9 +158,9 @@ Here is the first: !}%
 %block tm-bind [v tm] [d tm-var v]%.
 %worlds (tm-bind) (st-lookup-strengthen _ _ _) %.
 %total D (st-lookup-strengthen D _ _) %.
-%{! It would be nice if we could just get rid of the ``v`` assumption on the ``st-lookup`` derivation, but we have in addition that the returned term ``T`` can depend on ``v``, so we must invent a new non-dependent ``T'`` and return an equality. Otherwise, this is a straightforward induction that demonstrates that we never use the assumption.
+%[[ It would be nice if we could just get rid of the ``v`` assumption on the ``st-lookup`` derivation, but we have in addition that the returned term ``T`` can depend on ``v``, so we must invent a new non-dependent ``T'`` and return an equality. Otherwise, this is a straightforward induction that demonstrates that we never use the assumption.
 
-The second strengthening lemma is a little different: !}%
+The second strengthening lemma is a little different: %]]
 %sort tm-wf-strengthen {_ {v tm} {d tm-var v} tm-wf (T v) S} {_ {v tm} tm-eq (T v) T'} {_ tm-wf T' S} %.
 %mode tm-wf-strengthen %in %in %out %.
 %scope tm-wf-strengthen %term /app 
@@ -177,29 +177,29 @@ The second strengthening lemma is a little different: !}%
 %term /bind tm-wf-strengthen ([v] [d] Dwf) _ Dwf %.
 %worlds (tm-bind) (tm-wf-strengthen _ _ _) %.
 %total D (tm-wf-strengthen D _ _) %.
-%{! Here it is a priori possible that something of type ``tm-wf (T v) S`` could depend on ``v`` and ``d`` (e.g. it could be ``(tm-wf/var d)``), but in conjunction with the equality it cannot. In the ``loc`` case we're doing essentially the same thing that we do in the substitution lemma, and must appeal to ``st-lookup-strengthen`` and ``tm-wf-strengthen`` (but we're not inducting over the well-formed term here). The coverage checker is able to rule out the ``var`` case since ``T`` does not depend on ``v``.
+%[[ Here it is a priori possible that something of type ``tm-wf (T v) S`` could depend on ``v`` and ``d`` (e.g. it could be ``(tm-wf/var d)``), but in conjunction with the equality it cannot. In the ``loc`` case we're doing essentially the same thing that we do in the substitution lemma, and must appeal to ``st-lookup-strengthen`` and ``tm-wf-strengthen`` (but we're not inducting over the well-formed term here). The coverage checker is able to rule out the ``var`` case since ``T`` does not depend on ``v``.
 
 ### Finishing the proof
 
 Now that we have the strengthening lemmas, we can implement the final clause of our substitution lemma:
 
-!}%
+%]]
 %scope tm-wf-strengthen %term /loc 
 	%pi (tm-wf-subst ([v] [d] tm-wf/loc (Dwf1 v d) (Dlook v)) Dwf2 (tm-wf/loc Dwf1' Dlook'))
 	%<- (st-lookup-strengthen Dlook Dlook' Deq)
 	%<- (tm-wf-strengthen Dwf1 Deq Dwf1') %.
-%{!
+%[[
 
 and check that the substitution lemma and the preservation theorem are actually correct:
 
-!}%
+%]]
 %worlds (tm-bind) (tm-wf-subst _ _ _) %.
 %total D (tm-wf-subst D _ _) %.
 %worlds () (eval-pres-wf _ _ _) %.
 %total D (eval-pres-wf D _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Strengthening).
-!}%
+%]]

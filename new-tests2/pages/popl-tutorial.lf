@@ -1,5 +1,5 @@
 %                         
-%{! &lt;!--
+%[[ &lt;!--
 &lt;div style="font-size:162%;border:none;margin: 0;padding:.1em;color:#F00"&gt;**_We want your input!**_&lt;/div&gt;
 
 Help us out by filling out our handy dandy [http://spreadsheets.google.com/viewform?key=pff4VF1v6KVNcwC_c2qFAGA feedback form]!
@@ -71,10 +71,10 @@ Thanks to our sponsors:
 
 [[Image:POPL_Tutorial-docomo-logo.gif|250px]] [[Image:POPL Tutorial-mozilla.jpg|300px]]
 
-[[Image:POPL Tutorial-google-logo.gif]] !}%
-%{!
+[[Image:POPL Tutorial-google-logo.gif]] %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial).
-!}%
+%]]

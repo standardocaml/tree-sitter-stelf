@@ -1,14 +1,14 @@
 %                                    
-%{! 
+%[[ 
 This is an extended example of a proof of correctness of mergesort for lists without duplicates. In particular, it is an example of showing that an implementation of sorting (mergesort) matches up with a declarative definition that relates a list to its sort (i.e. the sorted list is a permutation of the unsorted list). 
-!}%
-%{! 
+%]]
+%[[ 
 ### Definitions
 
 #### Declarative definitions
 
 We must first define natural numbers, lists of natural numbers, comparison on natural numbers, and what it means for one list to be the sorted version of another.
-!}%
+%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -36,9 +36,9 @@ We must first define natural numbers, lists of natural numbers, comparison on na
 	%pi (all-in-nat-list (nat-list/cons N NL) NL')
 	%<- (in-nat-list N NL')
 	%<- (all-in-nat-list NL NL') %.
-%{! 
+%[[ 
 For the purposes of this proof, we use a set-theoretic extensional definition of permutation, where two lists are permutations of each other if they contain the same set of elements. This is only a proper definition of permutation if we assume both lists contain no duplicates. This invariant is baked into both our definition of sorted and our definition of mergesort. 
-!}%
+%]]
 %sort nat-list-permute {_ nat-list} {_ nat-list} %.
 %term nat-list-permute/i 
 	%pi (nat-list-permute NL NL')
@@ -49,9 +49,9 @@ For the purposes of this proof, we use a set-theoretic extensional definition of
 	%pi (nat-list-declarative-sort NL NL')
 	%<- (nat-list-permute NL NL')
 	%<- (nat-list-sorted NL') %.
-%{! 
+%[[ 
 #### Definitions used to define mergesort
-!}%
+%]]
 %sort split {_ nat-list} {_ nat-list} {_ nat-list} %.
 %term split/nil split nat-list/nil nat-list/nil nat-list/nil %.
 %term split/1 split (nat-list/cons N nat-list/nil) (nat-list/cons N nat-list/nil) nat-list/nil %.
@@ -78,11 +78,11 @@ For the purposes of this proof, we use a set-theoretic extensional definition of
 	%<- (mergesort NLA NLA')
 	%<- (mergesort NLB NLB')
 	%<- (merge NLA' NLB' NL2) %.
-%{! ### Helper definitions used in proofs
+%[[ ### Helper definitions used in proofs
 
 ``all-in-2 N1 N2 N3`` is a judgment that holds when all the elements in ``N1`` are in the union of ``N1`` and ``N2``/
 
-!}%
+%]]
 % all-in-2 N1 N2 N3, everything in N1 is either in N2 or N3
 %sort all-in-2 {_ nat-list} {_ nat-list} {_ nat-list} %.
 %term all-in-2/nil all-in-2 nat-list/nil NL1 NL2 %.
@@ -94,7 +94,7 @@ For the purposes of this proof, we use a set-theoretic extensional definition of
 	%pi (all-in-2 (nat-list/cons N NL) NL1 NL2)
 	%<- (in-nat-list N NL2)
 	%<- (all-in-2 NL NL1 NL2) %.
-%{! ### Proof that mergesort returns a sorted result !}%
+%[[ ### Proof that mergesort returns a sorted result %]]
 %sort nat-less-trans {_ nat-less N1 N2} {_ nat-less N2 N3} {_ nat-less N1 N3} %.
 %mode nat-less-trans %in %in %out %.
 %term _ nat-less-trans nat-less/z D1 nat-less/z %.
@@ -135,7 +135,7 @@ For the purposes of this proof, we use a set-theoretic extensional definition of
 	%<- (merge-sorted DS1 DS2 DM DS) %.
 %worlds () (mergesort-sorted _ _) %.
 %total (D1) (mergesort-sorted D1 _) %.
-%{! ### Proof that mergesort returns a permutation of the input !}%
+%[[ ### Proof that mergesort returns a permutation of the input %]]
 %sort all-in-2-wkn-l {N} {_ all-in-2 NL NA NB} {_ all-in-2 NL (nat-list/cons N NA) NB} %.
 %mode all-in-2-wkn-l %in %in %out %.
 %term _ all-in-2-wkn-l _ all-in-2/nil all-in-2/nil %.
@@ -333,10 +333,10 @@ For the purposes of this proof, we use a set-theoretic extensional definition of
 	%<- (mergesort-all-in-r D1 DB) %.
 %worlds () (mergesort-permute _ _) %.
 %total () (mergesort-permute _ _) %.
-%{! ### Final result
+%[[ ### Final result
 Showing the final result merely requires composing the two big intermediate results, namely that mergesort produces a sorted output and that mergesort's output is a permutation of the input.
 
-!}%
+%]]
 %sort mergesort-correct {_ mergesort N1 N2} {_ nat-list-declarative-sort N1 N2} %.
 %mode mergesort-correct %in %out %.
 %term _ 
@@ -345,7 +345,7 @@ Showing the final result merely requires composing the two big intermediate resu
 	%<- (mergesort-sorted D1 Dsorted) %.
 %worlds () (mergesort-correct _ _) %.
 %total () (mergesort-correct _ _) %.
-%{! 
+%[[ 
 
 ----
 
@@ -355,7 +355,7 @@ We can also show that ``nat-list-permute`` under the right constraints (implied 
 
 Note: Maybe this should be its own article?
 
-!}%
+%]]
 %sort all-in-nat-list-trans {_ all-in-nat-list N1 N2} {_ all-in-nat-list N2 N3} {_ all-in-nat-list N1 N3} %.
 %mode all-in-nat-list-trans %in %in %out %.
 %term _ all-in-nat-list-trans all-in-nat-list/nil _ all-in-nat-list/nil %.
@@ -543,15 +543,15 @@ Note: Maybe this should be its own article?
 	%<- (nat-list-permutes-sym DP DP') %.
 %worlds () (all-in-no-dups-permutes _ _ _ _ _ _) %.
 %total (D1) (all-in-no-dups-permutes D1 _ _ _ _ _) %.
-%{! 
+%[[ 
 
 TODO: Finish commentary on the proof. 
 
 \{\{stub\}\}
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Correctness_of_mergesort).
-!}%
+%]]

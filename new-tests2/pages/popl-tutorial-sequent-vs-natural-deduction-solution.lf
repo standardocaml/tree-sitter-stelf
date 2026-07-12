@@ -1,6 +1,6 @@
 %                                                                
-%{! This is the solution to [this exercise](/wiki/popl-tutorial-sequent-vs-natural-deduction/).
-|hidden = true !}%
+%[[ This is the solution to [this exercise](/wiki/popl-tutorial-sequent-vs-natural-deduction/).
+|hidden = true %]]
 %% Syntax for Propositions %%
 %sort prop %.
 %name prop %.
@@ -27,11 +27,11 @@
 %term cut %pi (conc B) %<- (conc A) %<- (%pi (hyp A) %-> (conc B)) %.
 %%  blocks  %%
 %block bhyp {A prop} [H hyp A]%.
-%{! 
+%[[ 
 
 ## Translation: Natural Deduction to Sequent Calculus
 
-!}%
+%]]
 %sort nd-to-seq {_ true A} {_ conc A} %.
 %mode nd-to-seq %in %out %.
 %scope nd-to-seq %term top nd-to-seq topI topR %.
@@ -55,11 +55,11 @@
 %block truetohyp {A prop} [DA true A] [HA hyp A] [Dtrans nd-to-seq DA (init HA)]%.
 %worlds (truetohyp) (nd-to-seq _ _) %.
 %total D (nd-to-seq D _) %.
-%{! 
+%[[ 
 
 ## Translation: Sequent Calculus to Natural Deduction
 
-!}%
+%]]
 %sort hyp-to-true {_ hyp A} {_ true A} %.
 %mode hyp-to-true %in %out %.
 %block hyptotrue {A prop} [HA hyp A] [DA true A] [Dtrans hyp-to-true HA DA]%.
@@ -93,9 +93,9 @@
 	%<- (seq-to-nd DconcA (%the (true A) DtrueA)) %.
 %worlds (hyptotrue) (seq-to-nd _ _) %.
 %total D (seq-to-nd D _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Sequent_vs_Natural_Deduction:_Solution).
-!}%
+%]]

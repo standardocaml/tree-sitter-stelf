@@ -1,10 +1,10 @@
 %                                            
-%{! 
+%[[ 
 Adapted from the case study on [Typed combinators soundness and completeness](/wiki/typed-combinators-soundness-and-completeness/).
 
 ## Syntax
 
-!}%
+%]]
 % lambda calculus
 %sort term %.
 %name term %.
@@ -21,11 +21,11 @@ Adapted from the case study on [Typed combinators soundness and completeness](/w
 %term capp %pi comb %-> comb %-> comb %.
 %block comb-block [y comb]%.
 %worlds (comb-block) (comb) %.
-%{! 
+%[[ 
 
 ## Translation
 
-!}%
+%]]
 % bracket abstraction
 %sort bracket {_ %pi comb %-> comb} {_ comb} %.
 %mode bracket %in %out %.
@@ -51,11 +51,11 @@ Adapted from the case study on [Typed combinators soundness and completeness](/w
 %block translate-block [x term] [y comb] [bracket/y bracket ([z] y) (capp k y)] [translate/x translate x y]%.
 %worlds (translate-block) (translate _ _) %.
 %total M (translate M _) %.
-%{! 
+%[[ 
 
 ## Equational theory
 
-!}%
+%]]
 % lambda term equality
 %sort teq {_ term} {_ term} %.
 % beta
@@ -85,11 +85,11 @@ Adapted from the case study on [Typed combinators soundness and completeness](/w
 %term ceq/symm %pi (ceq A A') %<- (ceq A' A) %.
 %term ceq/trans %pi (ceq A A') %<- (ceq A B) %<- (ceq B A') %.
 %worlds (comb-block) (ceq _ _) %.
-%{! 
+%[[ 
 
 ## Correctness of the translation
 
-!}%
+%]]
 % substitution lemma
 %sort subst {_ bracket ([y] A y) A'} {C comb} {_ ceq (capp A' C) (A C)} %.
 %mode subst %in %in %out %.
@@ -104,9 +104,9 @@ Adapted from the case study on [Typed combinators soundness and completeness](/w
 %block subst-block [y comb] [dbrack bracket ([z] y) (capp k y)] [thm-subst {C comb} subst dbrack C ceq/k]%.
 %worlds (subst-block) (subst _ _ _) %.
 %total D (subst D _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Combinators_Answer).
-!}%
+%]]

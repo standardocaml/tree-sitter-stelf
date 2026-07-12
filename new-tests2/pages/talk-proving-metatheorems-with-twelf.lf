@@ -1,5 +1,5 @@
 %                                                
-%{! The content is good, but I'm not sure if it's directed to the right
+%[[ The content is good, but I'm not sure if it's directed to the right
 audience.  It seems to be directed to someone who wants to
 know what's _really_ going on in Twelf.  If someone just wants to see
 how to use Twelf, they might get bogged down in Simply-Typed LF,
@@ -12,10 +12,10 @@ wondering when the interesting content is going to come.
 
 ## The third layer
 
-Does this line "The third layer presents some more-interesting proofs and introduces one additional feature of Twelf, the ability to do proofs about open terms." need to be tweaked with the restructuring of the tutorial? — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 20:25, 14 March 2007 (EDT) !}%
-%{!
+Does this line "The third layer presents some more-interesting proofs and introduces one additional feature of Twelf, the ability to do proofs about open terms." need to be tweaked with the restructuring of the tutorial? — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 20:25, 14 March 2007 (EDT) %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Talk:Proving_metatheorems_with_Twelf).
-!}%
+%]]

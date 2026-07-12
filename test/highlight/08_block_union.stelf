@@ -1,0 +1,3 @@
+%block nat_block {x nat}
+%block env {x nat} {y bool}
+%union num_kinds (nat bool)

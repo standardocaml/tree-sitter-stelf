@@ -1,0 +1,160 @@
+0:0-0:31	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+1:0-1:30	comment	`% var-validity of mixed stacks`
+2:0-2:31	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:12	constructor	`vvalMS`
+3:6-3:12	local.reference	`vvalMS`
+3:6-3:12	type	`vvalMS`
+3:33-3:35	keyword.return	`%.`
+4:6-4:17	constructor	`vvalMS_init`
+4:6-4:17	function	`vvalMS_init`
+4:6-4:17	local.reference	`vvalMS_init`
+4:6-4:17	variable.parameter	`vvalMS_init`
+4:17-4:24	constructor	` vvalMS`
+4:17-4:24	local.reference	` vvalMS`
+4:24-4:28	constructor	` dot`
+4:24-4:28	local.reference	` dot`
+4:28-4:32	constructor	` dot`
+4:28-4:32	local.reference	` dot`
+4:32-4:35	keyword.return	` %.`
+5:6-5:14	constructor	`vvalMS_v`
+5:6-5:14	function	`vvalMS_v`
+5:6-5:14	local.reference	`vvalMS_v`
+5:6-5:14	variable.parameter	`vvalMS_v`
+5:14-5:18	operator	` %pi`
+5:19-5:20	punctuation.bracket	`(`
+5:20-5:26	constructor	`vvalMS`
+5:20-5:26	local.reference	`vvalMS`
+5:27-5:28	punctuation.bracket	`(`
+5:28-5:31	constructor	`XXi`
+5:28-5:31	local.reference	`XXi`
+5:32-5:33	local.reference	`,`
+5:32-5:33	operator	`,`
+5:34-5:35	constructor	`V`
+5:34-5:35	local.reference	`V`
+5:35-5:36	punctuation.bracket	`)`
+5:37-5:38	punctuation.bracket	`(`
+5:38-5:40	constructor	`Xi`
+5:38-5:40	local.reference	`Xi`
+5:41-5:42	local.reference	`,`
+5:41-5:42	operator	`,`
+5:43-5:44	constructor	`V`
+5:43-5:44	local.reference	`V`
+5:44-5:45	punctuation.bracket	`)`
+5:45-5:46	punctuation.bracket	`)`
+5:47-5:50	operator	`%<-`
+5:51-5:52	punctuation.bracket	`(`
+5:52-5:58	constructor	`vvalMS`
+5:52-5:58	local.reference	`vvalMS`
+5:59-5:62	constructor	`XXi`
+5:59-5:62	local.reference	`XXi`
+5:63-5:65	constructor	`Xi`
+5:63-5:65	local.reference	`Xi`
+5:65-5:66	punctuation.bracket	`)`
+5:66-5:69	keyword.return	` %.`
+6:6-6:14	constructor	`vvalMS_t`
+6:6-6:14	function	`vvalMS_t`
+6:6-6:14	local.reference	`vvalMS_t`
+6:6-6:14	variable.parameter	`vvalMS_t`
+6:14-6:18	operator	` %pi`
+6:19-6:20	punctuation.bracket	`(`
+6:20-6:26	constructor	`vvalMS`
+6:20-6:26	local.reference	`vvalMS`
+6:27-6:28	punctuation.bracket	`(`
+6:28-6:31	constructor	`XXi`
+6:28-6:31	local.reference	`XXi`
+6:32-6:33	local.reference	`,`
+6:32-6:33	operator	`,`
+6:34-6:35	constructor	`V`
+6:34-6:35	local.reference	`V`
+6:35-6:36	punctuation.bracket	`)`
+6:37-6:38	punctuation.bracket	`(`
+6:38-6:40	constructor	`Xi`
+6:38-6:40	local.reference	`Xi`
+6:41-6:42	local.reference	`,`
+6:41-6:42	operator	`,`
+6:43-6:44	constructor	`T`
+6:43-6:44	local.reference	`T`
+6:44-6:45	punctuation.bracket	`)`
+6:45-6:46	punctuation.bracket	`)`
+6:47-6:50	operator	`%<-`
+6:51-6:52	punctuation.bracket	`(`
+6:52-6:52	local.reference	``
+6:52-6:52	operator	``
+6:52-6:53	punctuation.bracket	`{`
+6:53-6:55	constructor	`xi`
+6:53-6:55	local.reference	`xi`
+6:53-6:55	variable.parameter	`xi`
+6:56-6:61	constructor	`stack`
+6:56-6:61	local.reference	`stack`
+6:61-6:62	punctuation.bracket	`}`
+6:63-6:68	constructor	`vvalT`
+6:63-6:68	local.reference	`vvalT`
+6:69-6:71	constructor	`xi`
+6:69-6:71	local.reference	`xi`
+6:72-6:73	constructor	`T`
+6:72-6:73	local.reference	`T`
+6:74-6:76	constructor	`xi`
+6:74-6:76	local.reference	`xi`
+6:76-6:77	punctuation.bracket	`)`
+6:77-6:81	operator	` %<-`
+6:82-6:83	punctuation.bracket	`(`
+6:83-6:89	constructor	`vvalMS`
+6:83-6:89	local.reference	`vvalMS`
+6:90-6:93	constructor	`XXi`
+6:90-6:93	local.reference	`XXi`
+6:94-6:96	constructor	`Xi`
+6:94-6:96	local.reference	`Xi`
+6:96-6:97	punctuation.bracket	`)`
+6:97-6:100	keyword.return	` %.`
+6:100-7:5	keyword.type	``
+7:6-7:20	constructor	`vvalDS->vvalMS`
+7:6-7:20	local.reference	`vvalDS->vvalMS`
+7:6-7:20	type	`vvalDS->vvalMS`
+7:57-7:59	keyword.return	`%.`
+8:6-8:16	constructor	`ds_ms_init`
+8:6-8:16	function	`ds_ms_init`
+8:6-8:16	local.reference	`ds_ms_init`
+8:6-8:16	variable.parameter	`ds_ms_init`
+8:16-8:31	constructor	` vvalDS->vvalMS`
+8:16-8:31	local.reference	` vvalDS->vvalMS`
+8:31-8:43	constructor	` vvalDS_init`
+8:31-8:43	local.reference	` vvalDS_init`
+8:43-8:55	constructor	` vvalMS_init`
+8:43-8:55	local.reference	` vvalMS_init`
+8:55-8:58	keyword.return	` %.`
+9:6-9:17	constructor	`ds_ms_stack`
+9:6-9:17	function	`ds_ms_stack`
+9:6-9:17	local.reference	`ds_ms_stack`
+9:6-9:17	variable.parameter	`ds_ms_stack`
+9:17-10:4	operator	``
+10:5-10:6	punctuation.bracket	`(`
+10:6-10:20	constructor	`vvalDS->vvalMS`
+10:6-10:20	local.reference	`vvalDS->vvalMS`
+10:21-10:22	punctuation.bracket	`(`
+10:22-10:34	constructor	`vvalDS_stack`
+10:22-10:34	local.reference	`vvalDS_stack`
+10:35-10:39	constructor	`VVDS`
+10:35-10:39	local.reference	`VVDS`
+10:40-10:43	constructor	`VVT`
+10:40-10:43	local.reference	`VVT`
+10:43-10:44	punctuation.bracket	`)`
+10:45-10:46	punctuation.bracket	`(`
+10:46-10:54	constructor	`vvalMS_t`
+10:46-10:54	local.reference	`vvalMS_t`
+10:55-10:59	constructor	`VVMS`
+10:55-10:59	local.reference	`VVMS`
+10:60-10:63	constructor	`VVT`
+10:60-10:63	local.reference	`VVT`
+10:63-10:64	punctuation.bracket	`)`
+10:64-10:65	punctuation.bracket	`)`
+11:1-11:4	operator	`%<-`
+11:5-11:6	punctuation.bracket	`(`
+11:6-11:20	constructor	`vvalDS->vvalMS`
+11:6-11:20	local.reference	`vvalDS->vvalMS`
+11:21-11:25	constructor	`VVDS`
+11:21-11:25	local.reference	`VVDS`
+11:26-11:30	constructor	`VVMS`
+11:26-11:30	local.reference	`VVMS`
+11:30-11:31	punctuation.bracket	`)`
+11:31-11:34	keyword.return	` %.`

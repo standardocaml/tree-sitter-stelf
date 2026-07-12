@@ -1,5 +1,5 @@
 %                              
-%{! \{\{needs|this is really about multisets encoded as lists . s/set/multiset/g. BTW didn't I author the part to do with reflexivity? [Varming](/wiki/user-varming/) 03:52, 13 October 2006 (EDT)\}\}
+%[[ \{\{needs|this is really about multisets encoded as lists . s/set/multiset/g. BTW didn't I author the part to do with reflexivity? [Varming](/wiki/user-varming/) 03:52, 13 October 2006 (EDT)\}\}
 \{\{needs|editing for context and tone\}\}
 
 This is a simplification of your concept further to take away the need for subtyping. I think this is essentially as simple as you can get, and from here you can do one of two things:
@@ -7,7 +7,7 @@ This is a simplification of your concept further to take away the need for subty
 * Make the entries in the sets not strictly equal, but subject to a subtype relation (this is what you did, essentially)
 * Make the sets ordered
 
-Once you've done both of these things, which seem like they are relatively orthogonal to each other, *then* we've got the environments that Appel is looking for. I think what would be interesting is to see the progression of all of them, so what I'm probably going to do next (unless you want to crack at it) is to redo this file will well-ordered sets. !}%
+Once you've done both of these things, which seem like they are relatively orthogonal to each other, *then* we've got the environments that Appel is looking for. I think what would be interesting is to see the progression of all of them, so what I'm probably going to do next (unless you want to crack at it) is to redo this file will well-ordered sets. %]]
 %% Map subtyping - concept progression
 %% 1) Notion of sets and supersets of natural numbers
 %% Daniel K. Lee and Robert J. Simmons
@@ -112,11 +112,11 @@ is the hit, you're done, if it's not, keep looking.
 	%<- (in-superset IN SUP1 IN') %.
 %worlds () (superset-trans _ _ _) %.
 %total T (superset-trans _ T _) %.
-%{! [Category:Twelf code](/wiki/category-twelf-code/)
-\{\{stub tutorial\}\} !}%
-%{!
+%[[ [Category:Twelf code](/wiki/category-twelf-code/)
+\{\{stub tutorial\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Sets_and_supersets).
-!}%
+%]]

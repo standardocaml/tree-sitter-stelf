@@ -1,0 +1,13 @@
+0:0-0:37	comment	`% terminates after 3 stages (variant)`
+1:0-1:41	comment	`% terminates after 3 stages (subsumption)`
+2:0-2:12	keyword	`%querytabled`
+2:13-2:14	variable.parameter.builtin	`_`
+2:15-2:16	number	`6`
+2:24-2:26	keyword.return	`%.`
+3:0-3:12	keyword	`%querytabled`
+3:13-3:14	variable.parameter.builtin	`_`
+3:15-3:16	constructor	`7`
+3:15-3:16	local.reference	`7`
+3:16-3:19	constructor	` of`
+3:16-3:19	local.reference	` of`
+3:41-3:43	keyword.return	`%.`

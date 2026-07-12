@@ -1,0 +1,490 @@
+2:0-2:27	comment	`% twelf signature for INCLL`
+5:0-5:5	keyword.type	`%sort`
+5:6-5:10	constructor	`sort`
+5:6-5:10	local.reference	`sort`
+5:6-5:10	type	`sort`
+5:10-5:13	keyword.return	` %.`
+6:6-6:11	constructor	`arrow`
+6:6-6:11	function	`arrow`
+6:6-6:11	local.reference	`arrow`
+6:6-6:11	variable.parameter	`arrow`
+6:11-6:15	operator	` %pi`
+6:16-6:20	constructor	`sort`
+6:16-6:20	local.reference	`sort`
+6:21-6:24	operator	`%->`
+6:25-6:29	constructor	`sort`
+6:25-6:29	local.reference	`sort`
+6:29-6:33	operator	` %->`
+6:34-6:38	constructor	`sort`
+6:34-6:38	local.reference	`sort`
+6:38-6:41	keyword.return	` %.`
+7:6-7:11	constructor	`cross`
+7:6-7:11	function	`cross`
+7:6-7:11	local.reference	`cross`
+7:6-7:11	variable.parameter	`cross`
+7:11-7:15	operator	` %pi`
+7:16-7:20	constructor	`sort`
+7:16-7:20	local.reference	`sort`
+7:21-7:24	operator	`%->`
+7:25-7:29	constructor	`sort`
+7:25-7:29	local.reference	`sort`
+7:29-7:33	operator	` %->`
+7:34-7:38	constructor	`sort`
+7:34-7:38	local.reference	`sort`
+7:38-7:41	keyword.return	` %.`
+7:41-8:5	keyword.type	``
+8:6-8:9	constructor	`trm`
+8:6-8:9	local.reference	`trm`
+8:6-8:9	type	`trm`
+8:19-8:21	keyword.return	`%.`
+9:6-9:9	constructor	`app`
+9:6-9:9	function	`app`
+9:6-9:9	local.reference	`app`
+9:6-9:9	variable.parameter	`app`
+9:9-9:13	operator	` %pi`
+9:14-9:15	punctuation.bracket	`(`
+9:15-9:18	constructor	`trm`
+9:15-9:18	local.reference	`trm`
+9:19-9:20	punctuation.bracket	`(`
+9:20-9:25	constructor	`arrow`
+9:20-9:25	local.reference	`arrow`
+9:26-9:27	constructor	`A`
+9:26-9:27	local.reference	`A`
+9:28-9:29	constructor	`B`
+9:28-9:29	local.reference	`B`
+9:29-9:30	punctuation.bracket	`)`
+9:30-9:31	punctuation.bracket	`)`
+9:32-9:35	operator	`%->`
+9:36-9:37	punctuation.bracket	`(`
+9:37-9:40	constructor	`trm`
+9:37-9:40	local.reference	`trm`
+9:41-9:42	constructor	`A`
+9:41-9:42	local.reference	`A`
+9:42-9:43	punctuation.bracket	`)`
+9:43-9:47	operator	` %->`
+9:48-9:49	punctuation.bracket	`(`
+9:49-9:52	constructor	`trm`
+9:49-9:52	local.reference	`trm`
+9:53-9:54	constructor	`B`
+9:53-9:54	local.reference	`B`
+9:54-9:55	punctuation.bracket	`)`
+9:55-9:58	keyword.return	` %.`
+10:6-10:9	constructor	`lam`
+10:6-10:9	function	`lam`
+10:6-10:9	local.reference	`lam`
+10:6-10:9	variable.parameter	`lam`
+10:9-10:13	operator	` %pi`
+10:14-10:15	punctuation.bracket	`(`
+10:15-10:18	operator	`%pi`
+10:19-10:20	punctuation.bracket	`(`
+10:20-10:23	constructor	`trm`
+10:20-10:23	local.reference	`trm`
+10:24-10:25	constructor	`A`
+10:24-10:25	local.reference	`A`
+10:25-10:26	punctuation.bracket	`)`
+10:27-10:30	operator	`%->`
+10:31-10:32	punctuation.bracket	`(`
+10:32-10:35	constructor	`trm`
+10:32-10:35	local.reference	`trm`
+10:36-10:37	constructor	`B`
+10:36-10:37	local.reference	`B`
+10:37-10:38	punctuation.bracket	`)`
+10:38-10:39	punctuation.bracket	`)`
+10:40-10:43	operator	`%->`
+10:44-10:45	punctuation.bracket	`(`
+10:45-10:48	constructor	`trm`
+10:45-10:48	local.reference	`trm`
+10:49-10:50	punctuation.bracket	`(`
+10:50-10:55	constructor	`arrow`
+10:50-10:55	local.reference	`arrow`
+10:56-10:57	constructor	`A`
+10:56-10:57	local.reference	`A`
+10:58-10:59	constructor	`B`
+10:58-10:59	local.reference	`B`
+10:59-10:60	punctuation.bracket	`)`
+10:60-10:61	punctuation.bracket	`)`
+10:61-10:64	keyword.return	` %.`
+11:6-11:10	constructor	`pair`
+11:6-11:10	function	`pair`
+11:6-11:10	local.reference	`pair`
+11:6-11:10	variable.parameter	`pair`
+11:10-11:14	operator	` %pi`
+11:15-11:16	punctuation.bracket	`(`
+11:16-11:19	constructor	`trm`
+11:16-11:19	local.reference	`trm`
+11:20-11:21	constructor	`A`
+11:20-11:21	local.reference	`A`
+11:21-11:22	punctuation.bracket	`)`
+11:23-11:26	operator	`%->`
+11:27-11:28	punctuation.bracket	`(`
+11:28-11:31	constructor	`trm`
+11:28-11:31	local.reference	`trm`
+11:32-11:33	constructor	`B`
+11:32-11:33	local.reference	`B`
+11:33-11:34	punctuation.bracket	`)`
+11:34-11:38	operator	` %->`
+11:39-11:40	punctuation.bracket	`(`
+11:40-11:43	constructor	`trm`
+11:40-11:43	local.reference	`trm`
+11:44-11:45	punctuation.bracket	`(`
+11:45-11:50	constructor	`cross`
+11:45-11:50	local.reference	`cross`
+11:51-11:52	constructor	`A`
+11:51-11:52	local.reference	`A`
+11:53-11:54	constructor	`B`
+11:53-11:54	local.reference	`B`
+11:54-11:55	punctuation.bracket	`)`
+11:55-11:56	punctuation.bracket	`)`
+11:56-11:59	keyword.return	` %.`
+11:59-12:5	keyword.type	``
+12:6-12:10	constructor	`eval`
+12:6-12:10	local.reference	`eval`
+12:6-12:10	type	`eval`
+12:31-12:33	keyword.return	`%.`
+13:6-13:14	constructor	`eval_lam`
+13:6-13:14	function	`eval_lam`
+13:6-13:14	local.reference	`eval_lam`
+13:6-13:14	variable.parameter	`eval_lam`
+13:14-13:19	constructor	` eval`
+13:14-13:19	local.reference	` eval`
+13:36-13:38	keyword.return	`%.`
+14:6-14:14	constructor	`eval_app`
+14:6-14:14	function	`eval_app`
+14:6-14:14	local.reference	`eval_app`
+14:6-14:14	variable.parameter	`eval_app`
+14:14-14:18	operator	` %pi`
+14:19-14:20	punctuation.bracket	`(`
+14:20-14:24	constructor	`eval`
+14:20-14:24	local.reference	`eval`
+14:25-14:26	punctuation.bracket	`(`
+14:26-14:29	constructor	`app`
+14:26-14:29	local.reference	`app`
+14:30-14:31	punctuation.bracket	`(`
+14:31-14:34	constructor	`lam`
+14:31-14:34	local.reference	`lam`
+14:35-14:36	constructor	`E`
+14:35-14:36	local.reference	`E`
+14:36-14:37	punctuation.bracket	`)`
+14:38-14:40	constructor	`E'`
+14:38-14:40	local.reference	`E'`
+14:40-14:41	punctuation.bracket	`)`
+14:42-14:43	constructor	`V`
+14:42-14:43	local.reference	`V`
+14:43-14:44	punctuation.bracket	`)`
+14:45-14:48	operator	`%<-`
+14:49-14:50	punctuation.bracket	`(`
+14:50-14:54	constructor	`eval`
+14:50-14:54	local.reference	`eval`
+14:55-14:57	constructor	`E'`
+14:55-14:57	local.reference	`E'`
+14:58-14:60	constructor	`V'`
+14:58-14:60	local.reference	`V'`
+14:60-14:61	punctuation.bracket	`)`
+14:61-14:65	operator	` %<-`
+14:66-14:67	punctuation.bracket	`(`
+14:67-14:71	constructor	`eval`
+14:67-14:71	local.reference	`eval`
+14:72-14:73	punctuation.bracket	`(`
+14:73-14:74	constructor	`E`
+14:73-14:74	local.reference	`E`
+14:75-14:77	constructor	`V'`
+14:75-14:77	local.reference	`V'`
+14:77-14:78	punctuation.bracket	`)`
+14:79-14:80	constructor	`V`
+14:79-14:80	local.reference	`V`
+14:80-14:81	punctuation.bracket	`)`
+14:81-14:84	keyword.return	` %.`
+14:84-15:5	keyword.type	``
+15:6-15:9	constructor	`atm`
+15:6-15:9	local.reference	`atm`
+15:6-15:9	type	`atm`
+15:9-15:12	keyword.return	` %.`
+15:12-16:5	keyword.type	``
+16:6-16:9	constructor	`frm`
+16:6-16:9	local.reference	`frm`
+16:6-16:9	type	`frm`
+16:9-16:12	keyword.return	` %.`
+17:6-17:9	constructor	`int`
+17:6-17:9	function	`int`
+17:6-17:9	local.reference	`int`
+17:6-17:9	variable.parameter	`int`
+17:9-17:14	constructor	` sort`
+17:9-17:14	local.reference	` sort`
+17:14-17:17	keyword.return	` %.`
+18:6-18:7	constructor	`1`
+18:6-18:7	function	`1`
+18:6-18:7	local.reference	`1`
+18:6-18:7	variable.parameter	`1`
+18:7-18:11	constructor	` trm`
+18:7-18:11	local.reference	` trm`
+18:11-18:15	constructor	` int`
+18:11-18:15	local.reference	` int`
+18:15-18:18	keyword.return	` %.`
+19:6-19:7	constructor	`2`
+19:6-19:7	function	`2`
+19:6-19:7	local.reference	`2`
+19:6-19:7	variable.parameter	`2`
+19:7-19:11	constructor	` trm`
+19:7-19:11	local.reference	` trm`
+19:11-19:15	constructor	` int`
+19:11-19:15	local.reference	` int`
+19:15-19:18	keyword.return	` %.`
+20:6-20:7	constructor	`3`
+20:6-20:7	function	`3`
+20:6-20:7	local.reference	`3`
+20:6-20:7	variable.parameter	`3`
+20:7-20:11	constructor	` trm`
+20:7-20:11	local.reference	` trm`
+20:11-20:15	constructor	` int`
+20:11-20:15	local.reference	` int`
+20:15-20:18	keyword.return	` %.`
+21:6-21:7	constructor	`4`
+21:6-21:7	function	`4`
+21:6-21:7	local.reference	`4`
+21:6-21:7	variable.parameter	`4`
+21:7-21:11	constructor	` trm`
+21:7-21:11	local.reference	` trm`
+21:11-21:15	constructor	` int`
+21:11-21:15	local.reference	` int`
+21:15-21:18	keyword.return	` %.`
+22:6-22:7	constructor	`5`
+22:6-22:7	function	`5`
+22:6-22:7	local.reference	`5`
+22:6-22:7	variable.parameter	`5`
+22:7-22:11	constructor	` trm`
+22:7-22:11	local.reference	` trm`
+22:11-22:15	constructor	` int`
+22:11-22:15	local.reference	` int`
+22:15-22:18	keyword.return	` %.`
+23:6-23:10	constructor	`list`
+23:6-23:10	function	`list`
+23:6-23:10	local.reference	`list`
+23:6-23:10	variable.parameter	`list`
+23:10-23:14	operator	` %pi`
+23:15-23:19	constructor	`sort`
+23:15-23:19	local.reference	`sort`
+23:20-23:23	operator	`%->`
+23:24-23:28	constructor	`sort`
+23:24-23:28	local.reference	`sort`
+23:28-23:31	keyword.return	` %.`
+24:6-24:9	constructor	`nil`
+24:6-24:9	function	`nil`
+24:6-24:9	local.reference	`nil`
+24:6-24:9	variable.parameter	`nil`
+24:9-24:13	constructor	` trm`
+24:9-24:13	local.reference	` trm`
+24:23-24:25	keyword.return	`%.`
+25:6-25:7	function	`|`
+25:6-25:7	local.reference	`|`
+25:6-25:7	operator	`|`
+25:6-25:7	variable.parameter	`|`
+25:7-25:11	operator	` %pi`
+25:12-25:13	punctuation.bracket	`(`
+25:13-25:16	constructor	`trm`
+25:13-25:16	local.reference	`trm`
+25:17-25:18	constructor	`A`
+25:17-25:18	local.reference	`A`
+25:18-25:19	punctuation.bracket	`)`
+25:20-25:23	operator	`%->`
+25:24-25:25	punctuation.bracket	`(`
+25:25-25:28	constructor	`trm`
+25:25-25:28	local.reference	`trm`
+25:29-25:30	punctuation.bracket	`(`
+25:30-25:34	constructor	`list`
+25:30-25:34	local.reference	`list`
+25:35-25:36	constructor	`A`
+25:35-25:36	local.reference	`A`
+25:36-25:37	punctuation.bracket	`)`
+25:37-25:38	punctuation.bracket	`)`
+25:38-25:42	operator	` %->`
+25:43-25:44	punctuation.bracket	`(`
+25:44-25:47	constructor	`trm`
+25:44-25:47	local.reference	`trm`
+25:48-25:49	punctuation.bracket	`(`
+25:49-25:53	constructor	`list`
+25:49-25:53	local.reference	`list`
+25:54-25:55	constructor	`A`
+25:54-25:55	local.reference	`A`
+25:55-25:56	punctuation.bracket	`)`
+25:56-25:57	punctuation.bracket	`)`
+25:57-25:60	keyword.return	` %.`
+26:6-26:12	keyword.modifier	`%right`
+26:13-26:15	number	`30`
+26:16-26:17	local.reference	`|`
+26:16-26:17	operator	`|`
+26:17-26:20	keyword.return	` %.`
+27:6-27:7	function	`^`
+27:6-27:7	local.reference	`^`
+27:6-27:7	operator	`^`
+27:6-27:7	variable.parameter	`^`
+27:7-27:11	operator	` %pi`
+27:12-27:15	constructor	`atm`
+27:12-27:15	local.reference	`atm`
+27:16-27:19	operator	`%->`
+27:20-27:23	constructor	`frm`
+27:20-27:23	local.reference	`frm`
+27:23-27:26	keyword.return	` %.`
+28:6-28:13	keyword.modifier	`%prefix`
+28:14-28:16	number	`50`
+28:17-28:18	local.reference	`^`
+28:17-28:18	operator	`^`
+28:18-28:21	keyword.return	` %.`
+29:6-29:8	function	`=>`
+29:6-29:8	local.reference	`=>`
+29:6-29:8	operator	`=>`
+29:6-29:8	variable.parameter	`=>`
+29:8-29:12	operator	` %pi`
+29:13-29:16	constructor	`frm`
+29:13-29:16	local.reference	`frm`
+29:17-29:20	operator	`%->`
+29:21-29:24	constructor	`frm`
+29:21-29:24	local.reference	`frm`
+29:24-29:28	operator	` %->`
+29:29-29:32	constructor	`frm`
+29:29-29:32	local.reference	`frm`
+29:32-29:35	keyword.return	` %.`
+30:6-30:12	keyword.modifier	`%right`
+30:13-30:15	number	`20`
+30:16-30:18	local.reference	`=>`
+30:16-30:18	operator	`=>`
+30:18-30:21	keyword.return	` %.`
+31:6-31:8	constructor	`=0`
+31:6-31:8	function	`=0`
+31:6-31:8	local.reference	`=0`
+31:6-31:8	variable.parameter	`=0`
+31:8-31:12	operator	` %pi`
+31:13-31:16	constructor	`frm`
+31:13-31:16	local.reference	`frm`
+31:17-31:20	operator	`%->`
+31:21-31:24	constructor	`frm`
+31:21-31:24	local.reference	`frm`
+31:24-31:28	operator	` %->`
+31:29-31:32	constructor	`frm`
+31:29-31:32	local.reference	`frm`
+31:32-31:35	keyword.return	` %.`
+32:6-32:12	keyword.modifier	`%right`
+32:13-32:15	number	`20`
+32:16-32:18	constructor	`=0`
+32:16-32:18	local.reference	`=0`
+32:18-32:21	keyword.return	` %.`
+33:6-33:9	function	`=>>`
+33:6-33:9	local.reference	`=>>`
+33:6-33:9	operator	`=>>`
+33:6-33:9	variable.parameter	`=>>`
+33:9-33:13	operator	` %pi`
+33:14-33:17	constructor	`frm`
+33:14-33:17	local.reference	`frm`
+33:18-33:21	operator	`%->`
+33:22-33:25	constructor	`frm`
+33:22-33:25	local.reference	`frm`
+33:25-33:29	operator	` %->`
+33:30-33:33	constructor	`frm`
+33:30-33:33	local.reference	`frm`
+33:33-33:36	keyword.return	` %.`
+34:6-34:12	keyword.modifier	`%right`
+34:13-34:15	number	`20`
+34:16-34:19	local.reference	`=>>`
+34:16-34:19	operator	`=>>`
+34:19-34:22	keyword.return	` %.`
+35:6-35:9	function	`>=>`
+35:6-35:9	local.reference	`>=>`
+35:6-35:9	operator	`>=>`
+35:6-35:9	variable.parameter	`>=>`
+35:9-35:13	operator	` %pi`
+35:14-35:17	constructor	`frm`
+35:14-35:17	local.reference	`frm`
+35:18-35:21	operator	`%->`
+35:22-35:25	constructor	`frm`
+35:22-35:25	local.reference	`frm`
+35:25-35:29	operator	` %->`
+35:30-35:33	constructor	`frm`
+35:30-35:33	local.reference	`frm`
+35:33-35:36	keyword.return	` %.`
+36:6-36:12	keyword.modifier	`%right`
+36:13-36:15	number	`20`
+36:16-36:19	local.reference	`>=>`
+36:16-36:19	operator	`>=>`
+36:19-36:22	keyword.return	` %.`
+37:6-37:12	constructor	`forall`
+37:6-37:12	function	`forall`
+37:6-37:12	local.reference	`forall`
+37:6-37:12	variable.parameter	`forall`
+37:17-37:20	operator	`%pi`
+37:21-37:22	punctuation.bracket	`(`
+37:22-37:25	operator	`%pi`
+37:26-37:27	punctuation.bracket	`(`
+37:32-37:33	punctuation.bracket	`)`
+37:34-37:37	operator	`%->`
+37:41-37:42	punctuation.bracket	`)`
+37:43-37:46	operator	`%->`
+37:51-37:53	keyword.return	`%.`
+38:6-38:13	constructor	`forall2`
+38:6-38:13	function	`forall2`
+38:6-38:13	local.reference	`forall2`
+38:6-38:13	variable.parameter	`forall2`
+38:24-38:27	operator	`%pi`
+38:28-38:29	punctuation.bracket	`(`
+38:29-38:32	operator	`%pi`
+38:33-38:34	punctuation.bracket	`(`
+38:34-38:37	operator	`%pi`
+38:38-38:39	punctuation.bracket	`(`
+38:44-38:45	number	`1`
+38:45-38:46	punctuation.bracket	`)`
+38:47-38:50	operator	`%->`
+38:51-38:52	punctuation.bracket	`(`
+38:57-38:58	number	`2`
+38:58-38:59	punctuation.bracket	`)`
+38:59-38:60	punctuation.bracket	`)`
+38:61-38:64	operator	`%->`
+38:68-38:69	punctuation.bracket	`)`
+38:70-38:73	operator	`%->`
+38:78-38:80	keyword.return	`%.`
+39:8-39:10	local.reference	`<=`
+39:8-39:10	operator	`<=`
+39:11-39:12	punctuation.bracket	`[`
+39:13-39:14	punctuation.bracket	`]`
+39:15-39:16	punctuation.bracket	`[`
+39:17-39:18	punctuation.bracket	`]`
+39:26-39:28	keyword.return	`%.`
+40:6-40:11	keyword.modifier	`%left`
+40:12-40:14	number	`10`
+40:15-40:17	local.reference	`<=`
+40:15-40:17	operator	`<=`
+40:17-40:20	keyword.return	` %.`
+41:8-41:10	constructor	`0=`
+41:8-41:10	local.reference	`0=`
+41:11-41:12	punctuation.bracket	`[`
+41:13-41:14	punctuation.bracket	`]`
+41:15-41:16	punctuation.bracket	`[`
+41:17-41:18	punctuation.bracket	`]`
+41:22-41:23	number	`0`
+41:26-41:28	keyword.return	`%.`
+42:6-42:11	keyword.modifier	`%left`
+42:12-42:14	number	`10`
+42:15-42:17	constructor	`0=`
+42:15-42:17	local.reference	`0=`
+42:17-42:20	keyword.return	` %.`
+43:8-43:11	local.reference	`<<=`
+43:8-43:11	operator	`<<=`
+43:12-43:13	punctuation.bracket	`[`
+43:14-43:15	punctuation.bracket	`]`
+43:16-43:17	punctuation.bracket	`[`
+43:18-43:19	punctuation.bracket	`]`
+43:28-43:30	keyword.return	`%.`
+44:6-44:11	keyword.modifier	`%left`
+44:12-44:14	number	`10`
+44:15-44:18	local.reference	`<<=`
+44:15-44:18	operator	`<<=`
+44:18-44:21	keyword.return	` %.`
+45:8-45:11	local.reference	`<=<`
+45:8-45:11	operator	`<=<`
+45:12-45:13	punctuation.bracket	`[`
+45:14-45:15	punctuation.bracket	`]`
+45:16-45:17	punctuation.bracket	`[`
+45:18-45:19	punctuation.bracket	`]`
+45:28-45:30	keyword.return	`%.`
+46:6-46:11	keyword.modifier	`%left`
+46:12-46:14	number	`10`
+46:15-46:18	local.reference	`<=<`
+46:15-46:18	operator	`<=<`
+46:18-46:21	keyword.return	` %.`

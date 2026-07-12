@@ -1,0 +1,14 @@
+0:0-0:6	keyword	`%prose`
+0:7-0:15	constant	`markdown`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:9	constructor	`nat`
+2:6-2:9	local.reference	`nat`
+2:6-2:9	type	`nat`
+3:7-3:12	constant	`latex`
+5:0-5:5	keyword	`%term`
+5:6-5:10	constructor	`zero`
+5:6-5:10	function	`zero`
+5:6-5:10	local.reference	`zero`
+5:6-5:10	variable.parameter	`zero`
+5:10-5:14	constructor	` nat`
+5:10-5:14	local.reference	` nat`

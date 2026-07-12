@@ -1,0 +1,273 @@
+0:0-0:41	comment	`%%% Intuitionistic propositional calculus`
+1:0-1:46	comment	`%%% Positive fragment with implies, and, true.`
+2:0-2:26	comment	`%%% Author: Frank Pfenning`
+3:0-3:23	comment	`% Type of propositions.`
+4:0-4:5	keyword.type	`%sort`
+4:6-4:7	constructor	`o`
+4:6-4:7	local.reference	`o`
+4:6-4:7	type	`o`
+4:7-4:10	keyword.return	` %.`
+4:10-5:7	attribute	``
+5:6-5:7	constructor	`o`
+5:6-5:7	local.reference	`o`
+5:6-5:7	variable	`o`
+5:7-5:10	keyword.return	` %.`
+5:10-6:30	comment	``
+6:30-7:5	keyword.type	``
+7:6-7:9	constructor	`atm`
+7:6-7:9	local.reference	`atm`
+7:6-7:9	type	`atm`
+7:9-7:12	keyword.return	` %.`
+7:12-8:44	comment	``
+9:6-9:8	function	`=>`
+9:6-9:8	local.reference	`=>`
+9:6-9:8	operator	`=>`
+9:6-9:8	variable.parameter	`=>`
+9:8-9:12	operator	` %pi`
+9:13-9:14	constructor	`o`
+9:13-9:14	local.reference	`o`
+9:15-9:18	operator	`%->`
+9:19-9:20	constructor	`o`
+9:19-9:20	local.reference	`o`
+9:20-9:24	operator	` %->`
+9:25-9:26	constructor	`o`
+9:25-9:26	local.reference	`o`
+9:26-9:29	keyword.return	` %.`
+10:6-10:12	keyword.modifier	`%right`
+10:13-10:15	number	`10`
+10:16-10:18	local.reference	`=>`
+10:16-10:18	operator	`=>`
+10:18-10:21	keyword.return	` %.`
+11:6-11:7	function	`&`
+11:6-11:7	local.reference	`&`
+11:6-11:7	operator	`&`
+11:6-11:7	variable.parameter	`&`
+11:7-11:11	operator	` %pi`
+11:12-11:13	constructor	`o`
+11:12-11:13	local.reference	`o`
+11:14-11:17	operator	`%->`
+11:18-11:19	constructor	`o`
+11:18-11:19	local.reference	`o`
+11:19-11:23	operator	` %->`
+11:24-11:25	constructor	`o`
+11:24-11:25	local.reference	`o`
+11:25-11:28	keyword.return	` %.`
+12:6-12:12	keyword.modifier	`%right`
+12:13-12:15	number	`11`
+12:16-12:17	local.reference	`&`
+12:16-12:17	operator	`&`
+12:17-12:20	keyword.return	` %.`
+13:6-13:10	constructor	`true`
+13:6-13:10	function	`true`
+13:6-13:10	local.reference	`true`
+13:6-13:10	variable.parameter	`true`
+13:10-13:12	constructor	` o`
+13:10-13:12	local.reference	` o`
+13:12-13:15	keyword.return	` %.`
+14:6-14:7	function	```
+14:6-14:7	local.reference	```
+14:6-14:7	operator	```
+14:6-14:7	variable.parameter	```
+14:7-14:11	operator	` %pi`
+14:12-14:15	constructor	`atm`
+14:12-14:15	local.reference	`atm`
+14:16-14:19	operator	`%->`
+14:20-14:21	constructor	`o`
+14:20-14:21	local.reference	`o`
+14:21-14:24	keyword.return	` %.`
+14:24-15:39	comment	``
+15:39-16:5	keyword.type	``
+16:6-16:8	local.reference	`!^`
+16:6-16:8	operator	`!^`
+16:6-16:8	type	`!^`
+16:15-16:17	keyword.return	`%.`
+16:17-17:5	keyword.type	``
+17:6-17:8	constructor	`!v`
+17:6-17:8	local.reference	`!v`
+17:6-17:8	type	`!v`
+17:15-17:17	keyword.return	`%.`
+18:6-18:12	constructor	`trueI^`
+18:6-18:12	function	`trueI^`
+18:6-18:12	local.reference	`trueI^`
+18:6-18:12	variable.parameter	`trueI^`
+18:12-18:15	local.reference	` !^`
+18:12-18:15	operator	` !^`
+18:15-18:20	constructor	` true`
+18:15-18:20	local.reference	` true`
+18:20-18:23	keyword.return	` %.`
+19:6-19:11	constructor	`andI^`
+19:6-19:11	function	`andI^`
+19:6-19:11	local.reference	`andI^`
+19:6-19:11	variable.parameter	`andI^`
+19:11-19:15	operator	` %pi`
+19:16-19:17	punctuation.bracket	`(`
+19:17-19:19	local.reference	`!^`
+19:17-19:19	operator	`!^`
+19:20-19:21	constructor	`A`
+19:20-19:21	local.reference	`A`
+19:21-19:22	punctuation.bracket	`)`
+19:23-19:26	operator	`%->`
+19:27-19:28	punctuation.bracket	`(`
+19:28-19:30	local.reference	`!^`
+19:28-19:30	operator	`!^`
+19:31-19:32	constructor	`B`
+19:31-19:32	local.reference	`B`
+19:32-19:33	punctuation.bracket	`)`
+19:33-19:37	operator	` %->`
+19:38-19:39	punctuation.bracket	`(`
+19:39-19:41	local.reference	`!^`
+19:39-19:41	operator	`!^`
+19:42-19:43	punctuation.bracket	`(`
+19:43-19:44	constructor	`A`
+19:43-19:44	local.reference	`A`
+19:45-19:46	local.reference	`&`
+19:45-19:46	operator	`&`
+19:47-19:48	constructor	`B`
+19:47-19:48	local.reference	`B`
+19:48-19:49	punctuation.bracket	`)`
+19:49-19:50	punctuation.bracket	`)`
+19:50-19:53	keyword.return	` %.`
+20:6-20:12	constructor	`andEvL`
+20:6-20:12	function	`andEvL`
+20:6-20:12	local.reference	`andEvL`
+20:6-20:12	variable.parameter	`andEvL`
+20:12-20:16	operator	` %pi`
+20:17-20:18	punctuation.bracket	`(`
+20:18-20:20	constructor	`!v`
+20:18-20:20	local.reference	`!v`
+20:21-20:22	punctuation.bracket	`(`
+20:22-20:23	constructor	`A`
+20:22-20:23	local.reference	`A`
+20:24-20:25	local.reference	`&`
+20:24-20:25	operator	`&`
+20:26-20:27	constructor	`B`
+20:26-20:27	local.reference	`B`
+20:27-20:28	punctuation.bracket	`)`
+20:28-20:29	punctuation.bracket	`)`
+20:30-20:33	operator	`%->`
+20:34-20:35	punctuation.bracket	`(`
+20:35-20:37	constructor	`!v`
+20:35-20:37	local.reference	`!v`
+20:38-20:39	constructor	`A`
+20:38-20:39	local.reference	`A`
+20:39-20:40	punctuation.bracket	`)`
+20:40-20:43	keyword.return	` %.`
+21:6-21:12	constructor	`andEvR`
+21:6-21:12	function	`andEvR`
+21:6-21:12	local.reference	`andEvR`
+21:6-21:12	variable.parameter	`andEvR`
+21:12-21:16	operator	` %pi`
+21:17-21:18	punctuation.bracket	`(`
+21:18-21:20	constructor	`!v`
+21:18-21:20	local.reference	`!v`
+21:21-21:22	punctuation.bracket	`(`
+21:22-21:23	constructor	`A`
+21:22-21:23	local.reference	`A`
+21:24-21:25	local.reference	`&`
+21:24-21:25	operator	`&`
+21:26-21:27	constructor	`B`
+21:26-21:27	local.reference	`B`
+21:27-21:28	punctuation.bracket	`)`
+21:28-21:29	punctuation.bracket	`)`
+21:30-21:33	operator	`%->`
+21:34-21:35	punctuation.bracket	`(`
+21:35-21:37	constructor	`!v`
+21:35-21:37	local.reference	`!v`
+21:38-21:39	constructor	`B`
+21:38-21:39	local.reference	`B`
+21:39-21:40	punctuation.bracket	`)`
+21:40-21:43	keyword.return	` %.`
+22:6-22:11	constructor	`impI^`
+22:6-22:11	function	`impI^`
+22:6-22:11	local.reference	`impI^`
+22:6-22:11	variable.parameter	`impI^`
+22:11-22:15	operator	` %pi`
+22:16-22:17	punctuation.bracket	`(`
+22:17-22:20	operator	`%pi`
+22:21-22:22	punctuation.bracket	`(`
+22:22-22:24	constructor	`!v`
+22:22-22:24	local.reference	`!v`
+22:25-22:26	constructor	`A`
+22:25-22:26	local.reference	`A`
+22:26-22:27	punctuation.bracket	`)`
+22:28-22:31	operator	`%->`
+22:32-22:33	punctuation.bracket	`(`
+22:33-22:35	local.reference	`!^`
+22:33-22:35	operator	`!^`
+22:36-22:37	constructor	`B`
+22:36-22:37	local.reference	`B`
+22:37-22:38	punctuation.bracket	`)`
+22:38-22:39	punctuation.bracket	`)`
+22:40-22:43	operator	`%->`
+22:44-22:45	punctuation.bracket	`(`
+22:45-22:47	local.reference	`!^`
+22:45-22:47	operator	`!^`
+22:48-22:49	punctuation.bracket	`(`
+22:49-22:50	constructor	`A`
+22:49-22:50	local.reference	`A`
+22:51-22:53	local.reference	`=>`
+22:51-22:53	operator	`=>`
+22:54-22:55	constructor	`B`
+22:54-22:55	local.reference	`B`
+22:55-22:56	punctuation.bracket	`)`
+22:56-22:57	punctuation.bracket	`)`
+22:57-22:60	keyword.return	` %.`
+23:6-23:11	constructor	`impEv`
+23:6-23:11	function	`impEv`
+23:6-23:11	local.reference	`impEv`
+23:6-23:11	variable.parameter	`impEv`
+23:11-23:15	operator	` %pi`
+23:16-23:17	punctuation.bracket	`(`
+23:17-23:19	constructor	`!v`
+23:17-23:19	local.reference	`!v`
+23:20-23:21	punctuation.bracket	`(`
+23:21-23:22	constructor	`A`
+23:21-23:22	local.reference	`A`
+23:23-23:25	local.reference	`=>`
+23:23-23:25	operator	`=>`
+23:26-23:27	constructor	`B`
+23:26-23:27	local.reference	`B`
+23:27-23:28	punctuation.bracket	`)`
+23:28-23:29	punctuation.bracket	`)`
+23:30-23:33	operator	`%->`
+23:34-23:35	punctuation.bracket	`(`
+23:35-23:37	local.reference	`!^`
+23:35-23:37	operator	`!^`
+23:38-23:39	constructor	`A`
+23:38-23:39	local.reference	`A`
+23:39-23:40	punctuation.bracket	`)`
+23:40-23:44	operator	` %->`
+23:45-23:46	punctuation.bracket	`(`
+23:46-23:48	constructor	`!v`
+23:46-23:48	local.reference	`!v`
+23:49-23:50	constructor	`B`
+23:49-23:50	local.reference	`B`
+23:50-23:51	punctuation.bracket	`)`
+23:51-23:54	keyword.return	` %.`
+24:6-24:11	constructor	`close`
+24:6-24:11	function	`close`
+24:6-24:11	local.reference	`close`
+24:6-24:11	variable.parameter	`close`
+24:11-24:15	operator	` %pi`
+24:16-24:17	punctuation.bracket	`(`
+24:17-24:19	constructor	`!v`
+24:17-24:19	local.reference	`!v`
+24:20-24:21	punctuation.bracket	`(`
+24:21-24:22	local.reference	```
+24:21-24:22	operator	```
+24:23-24:24	constructor	`P`
+24:23-24:24	local.reference	`P`
+24:24-24:25	punctuation.bracket	`)`
+24:25-24:26	punctuation.bracket	`)`
+24:27-24:30	operator	`%->`
+24:31-24:32	punctuation.bracket	`(`
+24:32-24:34	local.reference	`!^`
+24:32-24:34	operator	`!^`
+24:35-24:36	punctuation.bracket	`(`
+24:36-24:37	local.reference	```
+24:36-24:37	operator	```
+24:38-24:39	constructor	`P`
+24:38-24:39	local.reference	`P`
+24:39-24:40	punctuation.bracket	`)`
+24:40-24:41	punctuation.bracket	`)`
+24:41-24:44	keyword.return	` %.`

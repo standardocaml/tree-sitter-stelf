@@ -1,6 +1,6 @@
 %                      
 %                                                                           
-%{! The **``%establish``** directive attempts to prove a theorem specified by a [``%theorem``](/wiki/percent-theorem/) directive using the [theorem prover](/wiki/theorem-prover/). It is therefore similar to the [``%prove``](/wiki/percent-prove/) directive. However, unlike the ``%prove`` directive, theorems shown to be true by the ``%establish`` directive are not used to prove other theorems.
+%[[ The **``%establish``** directive attempts to prove a theorem specified by a [``%theorem``](/wiki/percent-theorem/) directive using the [theorem prover](/wiki/theorem-prover/). It is therefore similar to the [``%prove``](/wiki/percent-prove/) directive. However, unlike the ``%prove`` directive, theorems shown to be true by the ``%establish`` directive are not used to prove other theorems.
 
 ## See also
 
@@ -9,4 +9,4 @@
 
 <Keyword />
 
-!}%
+%]]

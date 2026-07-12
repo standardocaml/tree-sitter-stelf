@@ -1,5 +1,5 @@
 %                                                                      
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Arithmetic expressions
@@ -11,7 +11,7 @@
 Next, we add let-binding to our expression language.  Natural numbers
 and addition are the same as before.
 
-|hidden="true" !}%
+|hidden="true" %]]
 %sort nat %.
 %name nat %.
 %term z nat %.
@@ -23,7 +23,7 @@ and addition are the same as before.
 %% addition is a total function on closed terms of type nat
 %worlds () (add _ _ _) %.
 %total M (add M _ _) %.
-%{! 
+%[[ 
 
 ## Arithmetic expressions with let-binding
 
@@ -31,13 +31,13 @@ and addition are the same as before.
 
 First, the syntax:
 
-!}%
+%]]
 %sort exp %.
 %name exp %.
 %term num %pi nat %-> exp %.
 %term plus %pi exp %-> exp %-> exp %.
 %term let %pi exp %-> (%pi exp %-> exp) %-> exp %.
-%{! 
+%[[ 
 
 Let-binding is represented using [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/):
 <Math formula="\mathsf{let} \, x \, = e_1 \, \mathsf{in} \, e_2"/> is
@@ -45,12 +45,12 @@ represented by ``let e_1 ([x] e_2)``; an LF variable is used to
 represent the bound-variable.  So the body of the ``let`` has LF
 type ``(exp -> exp)``.
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ### Evaluation, using substitution
 
-!}%
+%]]
 %sort ans %.
 %name ans %.
 %term anum %pi nat %-> ans %.
@@ -63,7 +63,7 @@ type ``(exp -> exp)``.
 	%<- (eval E2 (anum N2))
 	%<- (add N1 N2 N) %.
 %term eval/let %pi (eval (let E1 ([x] E2 x)) A) %<- (eval E1 (anum N)) %<- (eval (E2 (num N)) A) %.
-%{! 
+%[[ 
 That is, to evaluate a ``let``, we 
 * evaluate the let-bound term ``E1`` to an answer ``anum N``
 * substitute its value into the body.  Substitution is represented by the LF application of ``E2`` to ``(num N)``.
@@ -73,9 +73,9 @@ Twelf cannot prove this total without some help, because it's not
 obvious that the substitution instance ``(E2 (num N))`` is smaller
 than the input expression.
 
-!}%
+%]]
 %worlds () (eval _ _) %.
-%{! 
+%[[ 
 
 &lt;twelf ignore="true" check="decl"&gt;
 %total E (eval E _).
@@ -99,10 +99,10 @@ At this point, you should explore one or both of these variations, and then proc
   |nextname=Arithmetic expressions with call-by-value let-binding
 \}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Arithmetic_expressions_with_let-binding).
-!}%
+%]]

@@ -1,12 +1,12 @@
 %                                     
 %                     
-%{! This page lists techniques for debugging [input coverage](/wiki/coverage-checking/) and [output coverage](/wiki/coverage-checking/) errors.
+%[[ This page lists techniques for debugging [input coverage](/wiki/coverage-checking/) and [output coverage](/wiki/coverage-checking/) errors.
 
 ## Debugging input coverage errors by adding type annotations
 
 ### Motivating example
 
-As a motivating example, we define a simple subtyping relation on the types of a programming language.  The language includes integers, floating point numbers, and functions.  We consider ``int`` to be a subtype of ``float``, and we give the usual contravariant rule for functions: !}%
+As a motivating example, we define a simple subtyping relation on the types of a programming language.  The language includes integers, floating point numbers, and functions.  We consider ``int`` to be a subtype of ``float``, and we give the usual contravariant rule for functions: %]]
 %sort tp %.
 %term int tp %.
 %term float tp %.
@@ -16,7 +16,7 @@ As a motivating example, we define a simple subtyping relation on the types of a
 %term sub-ff sub float float %.
 %term sub-if sub int float %.
 %term sub-arrow %pi (sub (arrow T S) (arrow T' S')) %<- (sub T' T) %<- (sub S S') %.
-%{! Let's prove that this subtyping relation is transitive.  When writing Twelf code, it's sometimes convenient to just blaze ahead with a proof without thinking to hard about what you're doing, and then think about what's going on only if Twelf reports an error.  So a first proof attempt might look like this: !}%
+%[[ Let's prove that this subtyping relation is transitive.  When writing Twelf code, it's sometimes convenient to just blaze ahead with a proof without thinking to hard about what you're doing, and then think about what's going on only if Twelf reports an error.  So a first proof attempt might look like this: %]]
 %sort sub-trans {_ sub T1 T2} {_ sub T2 T3} {_ sub T1 T3} %.
 %mode sub-trans %in %in %out %.
 %term _ sub-trans (%the (sub T T) D) (%the (sub T T) D') D %.
@@ -26,7 +26,7 @@ As a motivating example, we define a simple subtyping relation on the types of a
 	%pi (sub-trans (sub-arrow DS DT) (sub-arrow DS' DT') (sub-arrow DS'' DT''))
 	%<- (sub-trans DT DT' DT'')
 	%<- (sub-trans DS DS' DS'') %.
-%{! We let our fingers do the proving and came up with the straightforward inductive proof.  Each case type checks.  Does it work?
+%[[ We let our fingers do the proving and came up with the straightforward inductive proof.  Each case type checks.  Does it work?
 
 ```checkedtwelf
 %worlds () (sub-trans _ _ _).
@@ -79,12 +79,12 @@ We can make this type error more comprehensible by removing some of the constrai
 
 Ah ha!  Twelf is pointing us to the first premise, as saying that because ``DT`` has type ``sub T2 T1``, the second argument ``DT'`` needs to have type ``sub T1 X1`` for some ``X1``; but we wrote a term with type ``sub T3 T2``.  If we annotate the constant enough that Twelf knows that ``T1`` and ``T3`` are supposed to be different, this is reported as a type error.  Otherwise, Twelf unifies these two, coming up with a valid type for the constant; but because this type doesn't cover the part of the relation that we thought it did, we get an input coverage error.  
 
-As you may have figured out already, the problem is that the first recursive call should swap the two arguments:  !}%
+As you may have figured out already, the problem is that the first recursive call should swap the two arguments:  %]]
 %term arrow 
 	%pi (sub-trans (sub-arrow (%the (sub S1 S2) DS) (%the (sub T2 T1) DT)) (sub-arrow (%the (sub S2 S3) DS') (%the (sub T3 T2) DT')) (sub-arrow DS'' DT''))
 	%<- (sub-trans DT' DT DT'')
 	%<- (sub-trans DS DS' DS'') %.
-%{! In this example, this "fix" itself creates some termination trouble; see the article on [mutual induction](/wiki/mutual-induction/) for a completed proof.  But the broken proof illustrates a useful technique for coverage checking.  
+%[[ In this example, this "fix" itself creates some termination trouble; see the article on [mutual induction](/wiki/mutual-induction/) for a completed proof.  But the broken proof illustrates a useful technique for coverage checking.  
 
 ### A Messy Example
 
@@ -273,4 +273,4 @@ the coverage checker will split the equality predicate and re-introduce the prob
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Debugging_coverage_errors).
-!}%
+%]]

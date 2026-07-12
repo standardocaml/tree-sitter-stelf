@@ -1,0 +1,248 @@
+0:0-0:24	comment	`%%% The Mini-ML Language`
+1:0-1:49	comment	`%%% Version distinguishing expressions and values`
+2:0-2:26	comment	`%%% Author: Frank Pfenning`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:9	constructor	`exp`
+3:6-3:9	local.reference	`exp`
+3:6-3:9	type	`exp`
+3:9-3:12	keyword.return	` %.`
+3:12-4:9	attribute	``
+4:6-4:9	constructor	`exp`
+4:6-4:9	local.reference	`exp`
+4:6-4:9	variable	`exp`
+4:9-4:12	keyword.return	` %.`
+4:12-5:5	keyword.type	``
+5:6-5:9	constructor	`val`
+5:6-5:9	local.reference	`val`
+5:6-5:9	type	`val`
+5:9-5:12	keyword.return	` %.`
+5:12-6:9	attribute	``
+6:6-6:9	constructor	`val`
+6:6-6:9	local.reference	`val`
+6:6-6:9	variable	`val`
+6:9-6:12	keyword.return	` %.`
+7:6-7:7	constructor	`z`
+7:6-7:7	function	`z`
+7:6-7:7	local.reference	`z`
+7:6-7:7	variable.parameter	`z`
+7:7-7:11	constructor	` exp`
+7:7-7:11	local.reference	` exp`
+7:11-7:14	keyword.return	` %.`
+8:6-8:7	constructor	`s`
+8:6-8:7	function	`s`
+8:6-8:7	local.reference	`s`
+8:6-8:7	variable.parameter	`s`
+8:7-8:11	operator	` %pi`
+8:12-8:15	constructor	`exp`
+8:12-8:15	local.reference	`exp`
+8:16-8:19	operator	`%->`
+8:20-8:23	constructor	`exp`
+8:20-8:23	local.reference	`exp`
+8:23-8:26	keyword.return	` %.`
+9:6-9:10	constructor	`case`
+9:6-9:10	function	`case`
+9:6-9:10	local.reference	`case`
+9:6-9:10	variable.parameter	`case`
+9:10-9:14	operator	` %pi`
+9:15-9:18	constructor	`exp`
+9:15-9:18	local.reference	`exp`
+9:19-9:22	operator	`%->`
+9:23-9:26	constructor	`exp`
+9:23-9:26	local.reference	`exp`
+9:26-9:30	operator	` %->`
+9:31-9:32	punctuation.bracket	`(`
+9:32-9:35	operator	`%pi`
+9:36-9:39	constructor	`val`
+9:36-9:39	local.reference	`val`
+9:40-9:43	operator	`%->`
+9:44-9:47	constructor	`exp`
+9:44-9:47	local.reference	`exp`
+9:47-9:48	punctuation.bracket	`)`
+9:48-9:52	operator	` %->`
+9:53-9:56	constructor	`exp`
+9:53-9:56	local.reference	`exp`
+9:56-9:59	keyword.return	` %.`
+10:6-10:10	constructor	`pair`
+10:6-10:10	function	`pair`
+10:6-10:10	local.reference	`pair`
+10:6-10:10	variable.parameter	`pair`
+10:10-10:14	operator	` %pi`
+10:15-10:18	constructor	`exp`
+10:15-10:18	local.reference	`exp`
+10:19-10:22	operator	`%->`
+10:23-10:26	constructor	`exp`
+10:23-10:26	local.reference	`exp`
+10:26-10:30	operator	` %->`
+10:31-10:34	constructor	`exp`
+10:31-10:34	local.reference	`exp`
+10:34-10:37	keyword.return	` %.`
+11:6-11:9	constructor	`fst`
+11:6-11:9	function	`fst`
+11:6-11:9	local.reference	`fst`
+11:6-11:9	variable.parameter	`fst`
+11:9-11:13	operator	` %pi`
+11:14-11:17	constructor	`exp`
+11:14-11:17	local.reference	`exp`
+11:18-11:21	operator	`%->`
+11:22-11:25	constructor	`exp`
+11:22-11:25	local.reference	`exp`
+11:25-11:28	keyword.return	` %.`
+12:6-12:9	constructor	`snd`
+12:6-12:9	function	`snd`
+12:6-12:9	local.reference	`snd`
+12:6-12:9	variable.parameter	`snd`
+12:9-12:13	operator	` %pi`
+12:14-12:17	constructor	`exp`
+12:14-12:17	local.reference	`exp`
+12:18-12:21	operator	`%->`
+12:22-12:25	constructor	`exp`
+12:22-12:25	local.reference	`exp`
+12:25-12:28	keyword.return	` %.`
+13:6-13:9	constructor	`lam`
+13:6-13:9	function	`lam`
+13:6-13:9	local.reference	`lam`
+13:6-13:9	variable.parameter	`lam`
+13:9-13:13	operator	` %pi`
+13:14-13:15	punctuation.bracket	`(`
+13:15-13:18	operator	`%pi`
+13:19-13:22	constructor	`val`
+13:19-13:22	local.reference	`val`
+13:23-13:26	operator	`%->`
+13:27-13:30	constructor	`exp`
+13:27-13:30	local.reference	`exp`
+13:30-13:31	punctuation.bracket	`)`
+13:32-13:35	operator	`%->`
+13:36-13:39	constructor	`exp`
+13:36-13:39	local.reference	`exp`
+13:39-13:42	keyword.return	` %.`
+14:6-14:9	constructor	`app`
+14:6-14:9	function	`app`
+14:6-14:9	local.reference	`app`
+14:6-14:9	variable.parameter	`app`
+14:9-14:13	operator	` %pi`
+14:14-14:17	constructor	`exp`
+14:14-14:17	local.reference	`exp`
+14:18-14:21	operator	`%->`
+14:22-14:25	constructor	`exp`
+14:22-14:25	local.reference	`exp`
+14:25-14:29	operator	` %->`
+14:30-14:33	constructor	`exp`
+14:30-14:33	local.reference	`exp`
+14:33-14:36	keyword.return	` %.`
+15:6-15:10	constructor	`letv`
+15:6-15:10	function	`letv`
+15:6-15:10	local.reference	`letv`
+15:6-15:10	variable.parameter	`letv`
+15:10-15:14	operator	` %pi`
+15:15-15:18	constructor	`exp`
+15:15-15:18	local.reference	`exp`
+15:19-15:22	operator	`%->`
+15:23-15:24	punctuation.bracket	`(`
+15:24-15:27	operator	`%pi`
+15:28-15:31	constructor	`val`
+15:28-15:31	local.reference	`val`
+15:32-15:35	operator	`%->`
+15:36-15:39	constructor	`exp`
+15:36-15:39	local.reference	`exp`
+15:39-15:40	punctuation.bracket	`)`
+15:40-15:44	operator	` %->`
+15:45-15:48	constructor	`exp`
+15:45-15:48	local.reference	`exp`
+15:48-15:51	keyword.return	` %.`
+16:6-16:10	constructor	`letn`
+16:6-16:10	function	`letn`
+16:6-16:10	local.reference	`letn`
+16:6-16:10	variable.parameter	`letn`
+16:10-16:14	operator	` %pi`
+16:15-16:18	constructor	`exp`
+16:15-16:18	local.reference	`exp`
+16:19-16:22	operator	`%->`
+16:23-16:24	punctuation.bracket	`(`
+16:24-16:27	operator	`%pi`
+16:28-16:31	constructor	`exp`
+16:28-16:31	local.reference	`exp`
+16:32-16:35	operator	`%->`
+16:36-16:39	constructor	`exp`
+16:36-16:39	local.reference	`exp`
+16:39-16:40	punctuation.bracket	`)`
+16:40-16:44	operator	` %->`
+16:45-16:48	constructor	`exp`
+16:45-16:48	local.reference	`exp`
+16:48-16:51	keyword.return	` %.`
+17:6-17:9	constructor	`fix`
+17:6-17:9	function	`fix`
+17:6-17:9	local.reference	`fix`
+17:6-17:9	variable.parameter	`fix`
+17:9-17:13	operator	` %pi`
+17:14-17:15	punctuation.bracket	`(`
+17:15-17:18	operator	`%pi`
+17:19-17:22	constructor	`exp`
+17:19-17:22	local.reference	`exp`
+17:23-17:26	operator	`%->`
+17:27-17:30	constructor	`exp`
+17:27-17:30	local.reference	`exp`
+17:30-17:31	punctuation.bracket	`)`
+17:32-17:35	operator	`%->`
+17:36-17:39	constructor	`exp`
+17:36-17:39	local.reference	`exp`
+17:39-17:42	keyword.return	` %.`
+18:6-18:8	constructor	`vl`
+18:6-18:8	function	`vl`
+18:6-18:8	local.reference	`vl`
+18:6-18:8	variable.parameter	`vl`
+18:8-18:12	operator	` %pi`
+18:13-18:16	constructor	`val`
+18:13-18:16	local.reference	`val`
+18:17-18:20	operator	`%->`
+18:21-18:24	constructor	`exp`
+18:21-18:24	local.reference	`exp`
+18:24-18:27	keyword.return	` %.`
+19:6-19:8	constructor	`z*`
+19:6-19:8	function	`z*`
+19:6-19:8	local.reference	`z*`
+19:6-19:8	variable.parameter	`z*`
+19:8-19:12	constructor	` val`
+19:8-19:12	local.reference	` val`
+19:12-19:15	keyword.return	` %.`
+20:6-20:8	constructor	`s*`
+20:6-20:8	function	`s*`
+20:6-20:8	local.reference	`s*`
+20:6-20:8	variable.parameter	`s*`
+20:8-20:12	operator	` %pi`
+20:13-20:16	constructor	`val`
+20:13-20:16	local.reference	`val`
+20:17-20:20	operator	`%->`
+20:21-20:24	constructor	`val`
+20:21-20:24	local.reference	`val`
+20:24-20:27	keyword.return	` %.`
+21:6-21:11	constructor	`pair*`
+21:6-21:11	function	`pair*`
+21:6-21:11	local.reference	`pair*`
+21:6-21:11	variable.parameter	`pair*`
+21:11-21:15	operator	` %pi`
+21:16-21:19	constructor	`val`
+21:16-21:19	local.reference	`val`
+21:20-21:23	operator	`%->`
+21:24-21:27	constructor	`val`
+21:24-21:27	local.reference	`val`
+21:27-21:31	operator	` %->`
+21:32-21:35	constructor	`val`
+21:32-21:35	local.reference	`val`
+21:35-21:38	keyword.return	` %.`
+22:6-22:10	constructor	`lam*`
+22:6-22:10	function	`lam*`
+22:6-22:10	local.reference	`lam*`
+22:6-22:10	variable.parameter	`lam*`
+22:10-22:14	operator	` %pi`
+22:15-22:16	punctuation.bracket	`(`
+22:16-22:19	operator	`%pi`
+22:20-22:23	constructor	`val`
+22:20-22:23	local.reference	`val`
+22:24-22:27	operator	`%->`
+22:28-22:31	constructor	`exp`
+22:28-22:31	local.reference	`exp`
+22:31-22:32	punctuation.bracket	`)`
+22:33-22:36	operator	`%->`
+22:37-22:40	constructor	`val`
+22:37-22:40	local.reference	`val`
+22:40-22:43	keyword.return	` %.`

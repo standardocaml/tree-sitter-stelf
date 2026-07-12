@@ -1,0 +1,86 @@
+0:0-0:40	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+1:0-1:31	comment	`%%%%% BNF of direct-style terms`
+2:0-2:40	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:11	constructor	`droot`
+3:6-3:11	local.reference	`droot`
+3:6-3:11	type	`droot`
+3:11-3:14	keyword.return	` %.`
+3:14-4:11	attribute	``
+4:6-4:11	constructor	`droot`
+4:6-4:11	local.reference	`droot`
+4:6-4:11	variable	`droot`
+4:11-4:14	keyword.return	` %.`
+4:14-5:5	keyword.type	``
+5:6-5:10	constructor	`dexp`
+5:6-5:10	local.reference	`dexp`
+5:6-5:10	type	`dexp`
+5:10-5:13	keyword.return	` %.`
+5:13-6:10	attribute	``
+6:6-6:10	constructor	`dexp`
+6:6-6:10	local.reference	`dexp`
+6:6-6:10	variable	`dexp`
+6:10-6:13	keyword.return	` %.`
+6:13-7:5	keyword.type	``
+7:6-7:11	constructor	`dtriv`
+7:6-7:11	local.reference	`dtriv`
+7:6-7:11	type	`dtriv`
+7:11-7:14	keyword.return	` %.`
+7:14-8:11	attribute	``
+8:6-8:11	constructor	`dtriv`
+8:6-8:11	local.reference	`dtriv`
+8:6-8:11	variable	`dtriv`
+8:11-8:14	keyword.return	` %.`
+9:6-9:17	constructor	`dexp->droot`
+9:6-9:17	function	`dexp->droot`
+9:6-9:17	local.reference	`dexp->droot`
+9:6-9:17	variable.parameter	`dexp->droot`
+9:17-9:21	operator	` %pi`
+9:22-9:26	constructor	`dexp`
+9:22-9:26	local.reference	`dexp`
+9:27-9:30	operator	`%->`
+9:31-9:36	constructor	`droot`
+9:31-9:36	local.reference	`droot`
+9:36-9:39	keyword.return	` %.`
+10:6-10:10	constructor	`dapp`
+10:6-10:10	function	`dapp`
+10:6-10:10	local.reference	`dapp`
+10:6-10:10	variable.parameter	`dapp`
+10:10-10:14	operator	` %pi`
+10:15-10:19	constructor	`dexp`
+10:15-10:19	local.reference	`dexp`
+10:20-10:23	operator	`%->`
+10:24-10:28	constructor	`dexp`
+10:24-10:28	local.reference	`dexp`
+10:28-10:32	operator	` %->`
+10:33-10:37	constructor	`dexp`
+10:33-10:37	local.reference	`dexp`
+10:37-10:40	keyword.return	` %.`
+11:6-11:17	constructor	`dtriv->dexp`
+11:6-11:17	function	`dtriv->dexp`
+11:6-11:17	local.reference	`dtriv->dexp`
+11:6-11:17	variable.parameter	`dtriv->dexp`
+11:17-11:21	operator	` %pi`
+11:22-11:27	constructor	`dtriv`
+11:22-11:27	local.reference	`dtriv`
+11:28-11:31	operator	`%->`
+11:32-11:36	constructor	`dexp`
+11:32-11:36	local.reference	`dexp`
+11:36-11:39	keyword.return	` %.`
+12:6-12:10	constructor	`dlam`
+12:6-12:10	function	`dlam`
+12:6-12:10	local.reference	`dlam`
+12:6-12:10	variable.parameter	`dlam`
+12:10-12:14	operator	` %pi`
+12:15-12:16	punctuation.bracket	`(`
+12:16-12:19	operator	`%pi`
+12:20-12:25	constructor	`dtriv`
+12:20-12:25	local.reference	`dtriv`
+12:26-12:29	operator	`%->`
+12:30-12:35	constructor	`droot`
+12:30-12:35	local.reference	`droot`
+12:35-12:36	punctuation.bracket	`)`
+12:37-12:40	operator	`%->`
+12:41-12:46	constructor	`dtriv`
+12:41-12:46	local.reference	`dtriv`
+12:46-12:49	keyword.return	` %.`

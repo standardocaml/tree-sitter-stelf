@@ -1,5 +1,5 @@
 %                                          
-%{! \{\{Summer school 2008
+%[[ \{\{Summer school 2008
    |noprevious = 
    |nonext = \}\}
 
@@ -25,10 +25,10 @@ Read the discussion of Twelf's totality checker on  [this page](/wiki/proving-me
 
 ## Call-by-name
 
-Do a call-by-name version of evaluation for [Arithmetic expressions with let-binding](/wiki/summer-school-2008-arithmetic-expressions-with-let-binding/).  How would you prove evaluation terminates? !}%
-%{!
+Do a call-by-name version of evaluation for [Arithmetic expressions with let-binding](/wiki/summer-school-2008-arithmetic-expressions-with-let-binding/).  How would you prove evaluation terminates? %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Exercises_1).
-!}%
+%]]

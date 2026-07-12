@@ -6,7 +6,7 @@
 %        
 %                           
 %                                                      
-%{!
+%[[
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -30,11 +30,11 @@ That is, <Math formula="\mathsf{zero}"/> is a natural number, and if <Math formu
 
 LF is a typed lambda-calculus. We represent an object language in LF by writing an LF signature. A signature declares type and term constants. For example, this LF signature defines a type representing the natural numbers:
 
-!}%
+%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
-%{!
+%[[
 
 Intuitively, the LF type `nat` classifies the LF representations of natural numbers. The LF constant `z` corresponds to <Math formula="\mathsf{zero}"/> and the LF constant `s` corresponds to <Math formula="\mathsf{succ}"/>.
 
@@ -81,4 +81,4 @@ The first part establishes that the judgement <Math formula="{n \gg N }"/> relat
 
 The first part can be proved by a simple induction on the derivation of the encoding. The second can be proved by structural induction on <Math formula="n"/>. The third part states that all LF terms of type `nat` represent a unique informal number. It can be proved by induction on the structure of LF terms. To do so, we will need to give a more precise account of LF. 
 
-!}%
+%]]

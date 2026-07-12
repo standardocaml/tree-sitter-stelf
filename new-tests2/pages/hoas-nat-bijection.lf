@@ -1,7 +1,7 @@
 %                              
-%{! # Bijection from HOAS to natural numbers !}%
-%{! ## Preliminaries !}%
-%{! 
+%[[ # Bijection from HOAS to natural numbers %]]
+%[[ ## Preliminaries %]]
+%[[ 
 This file shows a simple HOAS term type and a mapping from these
 terms to the natural numbers.  It depends on John Boyland's
 library signatures, in particular void, bool, nat and natpair.
@@ -26,8 +26,8 @@ up my challenge to write bijections involving HOAS terms.  However,
 I go against his explicit advice in using the "%theorem" syntax
 extensively which I find much more clear that the "preferred" Twelf
 way of purity.
-!}%
-%{! | hidden=true !}%
+%]]
+%[[ | hidden=true %]]
 %%%% Imports
 %%%%%% Proposed Twelf Standard Library
 %%%%%% John Boyland
@@ -3673,34 +3673,34 @@ way of purity.
 %inline natpair`constrained2-pair2nat-unbounded constrained2-pair2nat-unbounded %.
 %inline natpair`natpair natpair %.
 %inline natpair`natpair/ natpair/ %.
-%{! ## Definitions !}%
-%{! ### The syntax !}%
-%{! 
+%[[ ## Definitions %]]
+%[[ ### The syntax %]]
+%[[ 
 The HOAS defined here is uninteresting.  There isn't even any way to use
 more than one variable (although the proofs use techniques that can 
 handle any number of variables).
-!}%
+%]]
 %sort t %.
 %term a t %.
 %term b %pi t %-> t %.
 %term f %pi (%pi t %-> t) %-> t %.
 %block blocksimple [v t]%.
-%{! ### Equality !}%
+%[[ ### Equality %]]
 %sort eq {_ t} {_ t} %.
 %term eq/ eq T T %.
-%{! ### Variable levels !}%
-%{! 
+%[[ ### Variable levels %]]
+%[[ 
 A variable level is the (nonzero) natural number for a variable.
 This value is used to determine the mapping for a variable.
-!}%
+%]]
 %sort varlevel {_ t} {_ nat} %.
 %block blockvar {l} [v] [vl varlevel v (s l)]%.
-%{! ### Mapping !}%
-%{! 
+%[[ ### Mapping %]]
+%[[ 
 The bijection from t to nat is called "tonat".  In its more general
 form the relation takes a natural number indicating how deep we are
 inside functions.
-!}%
+%]]
 %sort tonat* {_ nat} {_ t} {_ nat} %.
 %inline tonat tonat* z %.
 %term tonat/v %pi (varlevel V L) %-> (plus M L N) %-> (tonat* N V M) %.
@@ -3715,12 +3715,12 @@ inside functions.
 	%-> (times (s (s z)) M TM)
 	%-> (plus (s (s N)) TM M')
 	%-> (tonat* N (f F) M') %.
-%{! ### Utility lemmas !}%
-%{! 
+%[[ ### Utility lemmas %]]
+%[[ 
 The following theorems prove obvious simple things about the
 basic relations.  They following the conventions established in
 John Boyland's library signatures.
-!}%
+%]]
 %theorem false-implies-varlevel : forall* {V} {L} forall {F void} exists {VL varlevel V L} true %.
 %worlds (blockvar) (false-implies-varlevel _ _) %.
 %total () (false-implies-varlevel _ _) %.
@@ -3731,8 +3731,8 @@ John Boyland's library signatures.
 %theorem false-implies-tonat : forall* {N} {T} {M} forall {F void} exists {TN tonat* N T M} true %.
 %worlds (blockvar) (false-implies-tonat _ _) %.
 %total () (false-implies-tonat _ _) %.
-%{! ## Proof of totality of tonat !}%
-%{! 
+%[[ ## Proof of totality of tonat %]]
+%[[ 
 The difficulty here is that we need to prove that when
 we get to a variable (and exactly how we tell this
 in Twelf is tricky because variables can't be captured in
@@ -3751,32 +3751,32 @@ We package this approach up into an auxiliary relation that incidentally
 makes it easy to capture variables in case analysis.  This makes
 for a wordy series of proofs.  Perhaps we can get rid of 'case'
 in general.
-!}%
-%{! ### Auxiliary definitions !}%
-%{! #### raw variables !}%
-%{! 
+%]]
+%[[ ### Auxiliary definitions %]]
+%[[ #### raw variables %]]
+%[[ 
 A variable is raw if we haven't verified that it has a level in range.
 Non variables are not raw.
-!}%
+%]]
 %sort israw {_ t} {_ bool} %.
 %inline rawvar [T] israw T true %.
 %term israw/a israw a false %.
 %term israw/b israw (b _) false %.
 %term israw/f israw (f _) false %.
-%{! #### case analysis !}%
-%{! 
+%[[ #### case analysis %]]
+%[[ 
 We case analysis terms with two cases for variables.
 The raw case is used only internally and can be ignored in
 "clients" that don't use israw.
-!}%
+%]]
 %sort case {_ nat} {_ t} %.
 %term case/a case _ a %.
 %term case/b %pi (case N T) %-> (case N (b T)) %.
 %term case/f %pi ({v} %pi (varlevel v (s N)) %-> (case (s N) (F v))) %-> (case N (f F)) %.
 %term case/var %pi (varlevel V L) %-> (nat`ge N L) %-> (case N V) %.
 %term case/raw %pi (rawvar V) %-> (case N V) %.
-%{! ### Theorems about auxiliary definitions !}%
-%{! 
+%[[ ### Theorems about auxiliary definitions %]]
+%[[ 
 What follows first is a theorem that says that in a context where 
 all variables are raw, we can campute the rawness of all terms.
 In a Twelf idiom that will be seen several times in this file
@@ -3791,7 +3791,7 @@ circular dependency.  (Again, the idea from Rob Simmons.)
 For some reason, unlike Rob's examples and the later instances in
 this file, I need to add israw to the fake dependencies as well.
 The definition "fake" is never used again.  It has no "meaning."
-!}%
+%]]
 %theorem israw-total* : forall {T} exists {B} {I israw T B} true %.
 %inline israw-total israw-total* _ _ %.
 %term _ israw-total israw/a %.
@@ -3803,11 +3803,11 @@ The definition "fake" is never used again.  It has no "meaning."
 %block blockraw [v] [rv rawvar v] [irt israw-total rv]%.
 %worlds (blockraw) (israw-total* _ _ _) %.
 %total () (israw-total* _ _ _) %.
-%{! 
+%[[ 
 The following theorem handles one variable converting it from raw to
 handle a level that is in the required range.  This is an important
 technique for handle variables in Twelf: one at a time.
-!}%
+%]]
 %theorem var-gets-level : forall* {N} {T} {L} forall {F {v} {rv rawvar v} {i israw-total rv} case N (T v)} {GE nat`ge N L} exists {F' {v} %pi (varlevel v L) %-> (case N (T v))} true %.
 %term _ var-gets-level ([v] [r] [i] case/raw r) N>=L ([v] [vl] case/var vl N>=L) %.
 %term _ var-gets-level ([v] [r] [i] case/raw R) _ ([v] [vl] case/raw R) %.
@@ -3822,7 +3822,7 @@ technique for handle variables in Twelf: one at a time.
 	%<- ({v'} {vl' varlevel v' _} var-gets-level ([v] [c] [i] C v' vl' v c i) (nat`ge/> N+1>L) ([v] [vl] C' v' vl' v vl)) %.
 %worlds (blockvar blockraw) (var-gets-level _ _ _) %.
 %total F (var-gets-level F _ _) %.
-%{! 
+%[[ 
 We are now ready to prove that we can always "case" a term.
 This code follows John Boyland's library convention of defining a 
 "-total" metatheorem as having implicit arguments that are explicit
@@ -3832,7 +3832,7 @@ be tested for rawness, we recurse while the variable is assumed raw.
 Once this is done, we convert the variable into one with a level
 using "var-gets-level".  Note that the var levels don't go into 
 the context for this theorem.
-!}%
+%]]
 %theorem case-total* : forall {T} exists {C case z T} true %.
 %inline case-total case-total* _ %.
 %theorem case-total/L : forall* {B} forall {N} {T} {I israw T B} exists {C case N T} true %.
@@ -3849,12 +3849,12 @@ the context for this theorem.
 %term _ %pi (case-total* T C) %<- (israw-total I) %<- (case-total/L z T I C) %.
 %worlds () (case-total* _ _) %.
 %total () (case-total* _ _) %.
-%{! ### Main theorem !}%
-%{! 
+%[[ ### Main theorem %]]
+%[[ 
 We are ready now to prove totality of the relation.
 We case the term first and then have everything we need
 to push through totality.
-!}%
+%]]
 %theorem tonat-total* : forall {T t} exists {M nat} {D tonat T M} true %.
 %inline tonat-total tonat-total* _ _ %.
 %theorem tonat-total/L : forall {N nat} {T t} {C case N T} exists {M nat} {D tonat* N T M} true %.
@@ -3877,8 +3877,8 @@ to push through totality.
 %term _ %pi (tonat-total TN) %<- (case-total C) %<- (tonat-total/L _ _ C _ TN) %.
 %worlds () (tonat-total* _ _ _) %.
 %total () (tonat-total* _ _ _) %.
-%{! ## Proof of the determinicity of the mapping !}%
-%{! 
+%[[ ## Proof of the determinicity of the mapping %]]
+%[[ 
 In this section, we prove that tonat gives only one value 
 (hence it is a function).  This sort of theorem is called
 a "uniqueness" theorem.  Here the name I use for it comes from 
@@ -3888,12 +3888,12 @@ might refer to the "one2one" aspect, proved later.)
 This aspect is much easier to prove that any of the others.
 That probably reflects the fact that the relation was written 
 in a functional style.
-!}%
-%{! ### Auxiliary theorems !}%
-%{! 
+%]]
+%[[ ### Auxiliary theorems %]]
+%[[ 
 We prove that variable levels are "unique" and that they are never zero.
 The proofs are trivial: Twelf can accept them from the context alone.
-!}%
+%]]
 %theorem varlevel-deterministic : forall* {V} {L1} {L2} forall {VL1 varlevel V L1} {VL2 varlevel V L2} exists {E nat`eq L1 L2} true %.
 %term _ varlevel-deterministic _ _ nat`eq/ %.
 %worlds (blockvar) (varlevel-deterministic _ _ _) %.
@@ -3901,7 +3901,7 @@ The proofs are trivial: Twelf can accept them from the context alone.
 %theorem varlevel-contradiction : forall* {V} {L} forall {VL varlevel V L} {E nat`eq L z} exists {F void} true %.
 %worlds (blockvar) (varlevel-contradiction _ _ _) %.
 %total () (varlevel-contradiction _ _ _) %.
-%{! ### Main Theorem !}%
+%[[ ### Main Theorem %]]
 %theorem tonat-deterministic : forall* {T1} {T2} {N1} {N2} forall {TN1 tonat T1 N1} {TN2 tonat T2 N2} {E eq T1 T2} exists {E nat`eq N1 N2} true %.
 %theorem tonat-deterministic/L : forall* {T} {N} {N1} {N2} forall {TN1 tonat* N T N1} {TN2 tonat* N T N2} exists {E nat`eq N1 N2} true %.
 %term _ 
@@ -3926,8 +3926,8 @@ The proofs are trivial: Twelf can accept them from the context alone.
 	%<- (tonat-deterministic/L TN1 TN2 N1=N2) %.
 %worlds () (tonat-deterministic _ _ _ _) %.
 %total () (tonat-deterministic _ _ _ _) %.
-%{! ## Proving that the mapping is onto. !}%
-%{! 
+%[[ ## Proving that the mapping is onto. %]]
+%[[ 
 Here we use the mathematical term "onto": a function is "onto" if 
 its range is equal to its co-domain: that is if every value in the 
 co-domain has a value in the domain that maps to it.
@@ -3937,21 +3937,21 @@ reverse mapping has a variable associated with it.  We do this using a
 helper relation, as opposed to putting something in the context, since 
 as explained earlier, the context is useless to connect variables with 
 the nesting level.
-!}%
-%{! ### Auxiliary definitions !}%
-%{! 
+%]]
+%[[ ### Auxiliary definitions %]]
+%[[ 
 We define a relation that builds on the context relation.
 I find this rather interesting because it uses the context relation but
 is not itself in the context.  This is rather rare in my limited 
 experience.
 
 upto N says that we have a variable for all levels 1..N.
-!}%
+%]]
 %sort upto {_ nat} %.
 %term upto/z upto z %.
 %term upto/s %pi (upto N) %-> (varlevel V (s N)) %-> (upto (s N)) %.
-%{! ### Theorems about auxiliary definitions !}%
-%{! #### The obvious lemma that makes use of the main purpose of the relation: !}%
+%[[ ### Theorems about auxiliary definitions %]]
+%[[ #### The obvious lemma that makes use of the main purpose of the relation: %]]
 %theorem upto-implies-varlevel : forall* {N} {L} forall {U upto N} {LT nat`gt N L} exists {V} {VL varlevel V (s L)} true %.
 %term _ 
 	%pi (upto-implies-varlevel upto/z ZERO>L a VL)
@@ -3963,15 +3963,15 @@ upto N says that we have a variable for all levels 1..N.
 	%<- (upto-implies-varlevel U G _ VL) %.
 %worlds (blockvar) (upto-implies-varlevel _ _ _ _) %.
 %total (U) (upto-implies-varlevel U _ _ _) %.
-%{! ### Main theorem !}%
-%{! 
+%[[ ### Main theorem %]]
+%[[ 
 We prove the main result using two lemmas that do the case
 analysis on the number against the nesting level and the
 parity.  (In general, one would use a divisor counting all
 cases that are recursive.)  The proofs are long but simply
 arithmetic manipulation.  Proving termination uses meta-gt
 for strong induction over the natural numbers.
-!}%
+%]]
 %theorem tonat-onto* : forall {N nat} exists {T} {TN tonat T N} true %.
 %inline tonat-onto tonat-onto* _ _ %.
 %theorem tonat-onto/L1 : forall* {C} forall {N nat} {U upto N} {M nat} {CMP nat`compare N M C} exists {T} {TN tonat* N T M} true %.
@@ -4027,8 +4027,8 @@ for strong induction over the natural numbers.
 	%<- (false-implies-tonat F TN) %.
 %worlds (blockvar) (tonat-onto/L1 _ _ _ _ _ _) (tonat-onto/L2 _ _ _ _ _ _ _ _ _) %.
 %total (M1 M2) (tonat-onto/L2 _ _ M2 _ _ _ _ _ _) (tonat-onto/L1 _ _ M1 _ _ _) %.
-%{! ## Proof that mapping is "one to one" !}%
-%{! 
+%[[ ## Proof that mapping is "one to one" %]]
+%[[ 
 This is the most involved proof.  The sketch is that we first prove
 that two terms that reduce to the same natural number are "eql" in a way 
 that only requires that the variables have the same level, but not that 
@@ -4036,9 +4036,9 @@ they are the same.  Of course, there is only one variable for each level,
 which means that the terms are truly identical.  But this is impossible
 to express in the context.  Instead, we chip away at the variables from
 the "outside", each time reducing the level of the remaining variables.
-!}%
-%{! ### Auxiliary definitions !}%
-%{! #### Equality (permitting variables with the same level). !}%
+%]]
+%[[ ### Auxiliary definitions %]]
+%[[ #### Equality (permitting variables with the same level). %]]
 %sort eql* {_ nat} {_ t} {_ t} %.
 %inline eql eql* z %.
 %term eql/eq %pi (eq T1 T2) %-> (eql* N T1 T2) %.
@@ -4048,27 +4048,27 @@ the "outside", each time reducing the level of the remaining variables.
 	%pi ({v t} {vl varlevel v (s N)} eql* (s N) (F1 v) (F2 v))
 	%-> (eql* N (f F1) (f F2)) %.
 %term eql/v %pi (varlevel V1 L) %-> (varlevel V2 L) %-> (eql* N V1 V2) %.
-%{! #### Measure of eql sizes. !}%
-%{! 
+%[[ #### Measure of eql sizes. %]]
+%[[ 
 We use this measure to be able to prove termination.
 We need eqlsize/v = eqlsize/eq, eqlsize/f1 = eqlsize/f2.
 (Less than is ok in each case but would require that we
 rephrase the lemmas.)
-!}%
+%]]
 %sort eqlsize {_ eql* N T1 T2} {_ nat} %.
 %term eqlsize/eq eqlsize (eql/eq _) z %.
 %term eqlsize/b %pi (eqlsize E N) %-> (eqlsize (eql/b E) (s N)) %.
 %term eqlsize/f1 %pi ({v} eqlsize (E v) N) %-> (eqlsize (eql/f1 ([v] E v)) (s N)) %.
 %term eqlsize/f2 %pi ({v} {vl} eqlsize (E v vl) N) %-> (eqlsize (eql/f2 ([v] [vl] E v vl)) (s N)) %.
 %term eqlsize/v eqlsize (eql/v _ _) z %.
-%{! #### Copied definitions !}%
-%{! 
+%[[ #### Copied definitions %]]
+%[[ 
 It turns out that switching variables to an earlier level
 will cause mixup (because we need to have both the old
 and new levels in the context at the same time) unless
 we use a different definition.  For that reason, we define
 alternatives for varlevel, eql and eqlsize.
-!}%
+%]]
 %sort varlevel' {_ t} {_ nat} %.
 %sort eql*' {_ nat} {_ t} {_ t} %.
 %term eql'/eq %pi (eq T1 T2) %-> (eql*' N T1 T2) %.
@@ -4086,7 +4086,7 @@ alternatives for varlevel, eql and eqlsize.
 	%pi ({v} {vl} eqlsize' (E v vl) N)
 	%-> (eqlsize' (eql'/f2 ([v] [vl] E v vl)) (s N)) %.
 %term eqlsize'/v eqlsize' (eql'/v _ _) z %.
-%{! ### Theorems about auxiliary definitions !}%
+%[[ ### Theorems about auxiliary definitions %]]
 %theorem false-implies-eql : forall* {T1} {T2} {N} forall {F void} exists {E eql* N T1 T2} true %.
 %worlds (blockvar blocksimple) (false-implies-eql _ _) %.
 %total () (false-implies-eql _ _) %.
@@ -4101,11 +4101,11 @@ alternatives for varlevel, eql and eqlsize.
 %term _ eqlsize-total eqlsize/v %.
 %worlds (blocksimple blockvar) (eqlsize-total* _ _ _) %.
 %total (E) (eqlsize-total* E _ _) %.
-%{! 
+%[[ 
 The following block is used when we remove the outmost variable:
 all other variables are at least level 2.  "blockvar2"
 makes this context explicit.
-!}%
+%]]
 %block blockvar2 {l} [v] [vl varlevel v (s (s l))]%.
 %theorem remove-one-var : forall* {F1} {F2} {N} {S} forall {E {v} {vl varlevel v (s z)} eql* (s N) (F1 v) (F2 v)} {ES {v} {vl} eqlsize (E v vl) S} exists {E' {v} eql* (s N) (F1 v) (F2 v)} {ES' {v} eqlsize (E' v) S} true %.
 %term _ remove-one-var ([v] [vl] eql/eq eq/) ([v] [vl] eqlsize/eq) ([v] eql/eq eq/) ([v] eqlsize/eq) %.
@@ -4122,7 +4122,7 @@ makes this context explicit.
 %term _ remove-one-var ([v] [vl] eql/v VL1 VL2) ([v] [vl] eqlsize/v) ([v] eql/v VL1 VL2) ([v] eqlsize/v) %.
 %worlds (blocksimple blockvar2) (remove-one-var _ _ _ _) %.
 %total (E) (remove-one-var E _ _ _) %.
-%{! 
+%[[ 
 Next follows the tortuous shift down of levels:
 we shift down and change to use the alternative definitions,
 and then we go to back the normal definitions (with no shift).
@@ -4135,7 +4135,7 @@ in context itself and add fake dependencies.
 
 Adding to the complexity is the fact that we need to track the
 size of the equality rules for termination proof (later).
-!}%
+%]]
 %theorem varlevel-shifts-down : forall* {V} {L} forall {VL varlevel V (s (s L))} exists {VL' varlevel' V (s L)} true %.
 %block shiftdown {l} [v] [vl varlevel v (s (s l))] [vl' varlevel' v (s l)] [vsd varlevel-shifts-down vl vl']%.
 %sort fake %.
@@ -4182,9 +4182,9 @@ size of the equality rules for termination proof (later).
 	%<- (varlevel-shifts-back VL2 VL2') %.
 %worlds (blocksimple shiftback) (shift-varlevel/L2 _ _ _ _) %.
 %total (E) (shift-varlevel/L2 E _ _ _) %.
-%{! 
+%[[ 
 Now we put these two parts in one that hides the alternative definitions.
-!}%
+%]]
 %theorem shift-varlevel : forall* {N} {T1} {T2} {S} forall {E eql* (s N) T1 T2} {ES eqlsize E S} exists {E' eql* N T1 T2} {ES' eqlsize E' S} true %.
 %term _ 
 	%pi (shift-varlevel E1 ES1 E3 ES3)
@@ -4192,11 +4192,11 @@ Now we put these two parts in one that hides the alternative definitions.
 	%<- (shift-varlevel/L2 E2 ES2 E3 ES3) %.
 %worlds (blocksimple) (shift-varlevel _ _ _ _) %.
 %total () (shift-varlevel _ _ _ _) %.
-%{! 
+%[[ 
 The following two theorems relate structural equality with
 identity based equality.  One of them is called "Leibnitz" equality,
 I have heard, but apparently haven't remembered which one.
-!}%
+%]]
 %theorem b-preserves-eq : forall* {T1} {T2} forall {E eq T1 T2} exists {BE eq (b T1) (b T2)} true %.
 %term _ b-preserves-eq eq/ eq/ %.
 %worlds (blocksimple) (b-preserves-eq _ _) %.
@@ -4205,12 +4205,12 @@ I have heard, but apparently haven't remembered which one.
 %term _ f-preserves-eq ([v] eq/) eq/ %.
 %worlds (blocksimple) (f-preserves-eq _ _) %.
 %total () (f-preserves-eq _ _) %.
-%{! 
+%[[ 
 Next the main lemma that says we can avoid looking at varlevels in checking
 equality.  We remove the outside variable, shift remaining variables,
 and then recurse (hence the need for tracking eqlsize).  Note that we
 never put var levels in the context.
-!}%
+%]]
 %theorem eql-implies-eq : forall* {T1} {T2} forall {E eql T1 T2} exists {E' eq T1 T2} true %.
 %theorem eql-implies-eq/L : forall* {T1} {T2} forall {E eql T1 T2} {S} {ES eqlsize E S} exists {E' eq T1 T2} true %.
 %term _ eql-implies-eq/L (eql/eq E) _ _ E %.
@@ -4233,8 +4233,8 @@ never put var levels in the context.
 %term _ %pi (eql-implies-eq E E') %<- (eqlsize-total ES) %<- (eql-implies-eq/L E _ ES E') %.
 %worlds (blocksimple) (eql-implies-eq _ _) %.
 %total () (eql-implies-eq _ _) %.
-%{! ### Main Theorem !}%
-%{! 
+%[[ ### Main Theorem %]]
+%[[ 
 Finally the statement of the main theorem of this section.
 It is proved by using eql as a between station.  In this case,
 we do have var levels in the context.  This theorem (or rather 
@@ -4243,7 +4243,7 @@ cases cannot be distinguished by Twelf's case analysis.
 It also uses the "divrem" part of the nat signature extensively
 as well as theorems about plus and times.  The proofs of the cases are
 uninteresting arithmetic fiddling.
-!}%
+%]]
 %theorem tonat-one2one : forall* {T1} {N1} {T2} {N2} forall {TN1 tonat T1 N1} {TN2 tonat T2 N2} {E nat`eq N1 N2} exists {ET eq T1 T2} true %.
 %theorem tonat-one2one/L : forall* {N} {T1} {M1} {T2} {M2} forall {TN1 tonat* N T1 M1} {TN2 tonat* N T2 M2} {E nat`eq M1 M2} exists {ET eql* N T1 T2} true %.
 %term _ tonat-one2one/L tonat/a tonat/a _ (eql/eq eq/) %.
@@ -4383,9 +4383,9 @@ uninteresting arithmetic fiddling.
 	%<- (eql-implies-eq EQL TEQ) %.
 %worlds () (tonat-one2one _ _ _ _) %.
 %total () (tonat-one2one _ _ _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/HOAS_nat_bijection).
-!}%
+%]]

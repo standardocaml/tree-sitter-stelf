@@ -1,0 +1,149 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:18	comment	`%%% loc-lemmas.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:24	comment	`%%% Loc Less-than Lemmas`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword.type	`%sort`
+6:6-6:18	constructor	`loc!lt_trans`
+6:6-6:18	local.reference	`loc!lt_trans`
+6:6-6:18	type	`loc!lt_trans`
+6:70-6:72	keyword.return	`%.`
+7:6-7:18	constructor	`loc!lt_trans`
+7:6-7:18	local.reference	`loc!lt_trans`
+7:18-7:22	keyword.modifier	` %in`
+7:22-7:26	keyword.modifier	` %in`
+7:26-7:31	keyword.modifier	` %out`
+7:31-7:34	keyword.return	` %.`
+8:6-8:7	constructor	`_`
+8:6-8:7	function	`_`
+8:6-8:7	local.reference	`_`
+8:6-8:7	variable.parameter	`_`
+8:7-9:4	operator	``
+9:5-9:6	punctuation.bracket	`(`
+9:6-9:18	constructor	`loc!lt_trans`
+9:6-9:18	local.reference	`loc!lt_trans`
+9:19-9:20	punctuation.bracket	`(`
+9:20-9:27	constructor	`loc_lt_`
+9:20-9:27	local.reference	`loc_lt_`
+9:28-9:36	constructor	`DNatLt12`
+9:28-9:36	local.reference	`DNatLt12`
+9:36-9:37	punctuation.bracket	`)`
+9:38-9:39	punctuation.bracket	`(`
+9:39-9:46	constructor	`loc_lt_`
+9:39-9:46	local.reference	`loc_lt_`
+9:47-9:55	constructor	`DNatLt23`
+9:47-9:55	local.reference	`DNatLt23`
+9:55-9:56	punctuation.bracket	`)`
+9:57-9:58	punctuation.bracket	`(`
+9:58-9:65	constructor	`loc_lt_`
+9:58-9:65	local.reference	`loc_lt_`
+9:66-9:74	constructor	`DNatLt13`
+9:66-9:74	local.reference	`DNatLt13`
+9:74-9:75	punctuation.bracket	`)`
+9:75-9:76	punctuation.bracket	`)`
+10:1-10:4	operator	`%<-`
+10:5-10:6	punctuation.bracket	`(`
+10:6-10:18	constructor	`nat!lt_trans`
+10:6-10:18	local.reference	`nat!lt_trans`
+10:19-10:27	constructor	`DNatLt12`
+10:19-10:27	local.reference	`DNatLt12`
+10:28-10:36	constructor	`DNatLt23`
+10:28-10:36	local.reference	`DNatLt23`
+10:37-10:45	constructor	`DNatLt13`
+10:37-10:45	local.reference	`DNatLt13`
+10:45-10:46	punctuation.bracket	`)`
+10:46-10:49	keyword.return	` %.`
+11:8-11:9	punctuation.bracket	`(`
+11:9-11:10	punctuation.bracket	`)`
+11:11-11:12	punctuation.bracket	`(`
+11:12-11:24	constructor	`loc!lt_trans`
+11:12-11:24	local.reference	`loc!lt_trans`
+11:25-11:26	constructor	`_`
+11:25-11:26	local.reference	`_`
+11:25-11:26	variable.parameter	`_`
+11:27-11:28	constructor	`_`
+11:27-11:28	local.reference	`_`
+11:27-11:28	variable.parameter	`_`
+11:29-11:30	constructor	`_`
+11:29-11:30	local.reference	`_`
+11:29-11:30	variable.parameter	`_`
+11:30-11:31	punctuation.bracket	`)`
+11:31-11:34	keyword.return	` %.`
+12:7-12:15	constructor	`DLocLt12`
+12:7-12:15	local.reference	`DLocLt12`
+12:16-12:17	punctuation.bracket	`(`
+12:17-12:29	constructor	`loc!lt_trans`
+12:17-12:29	local.reference	`loc!lt_trans`
+12:30-12:38	constructor	`DLocLt12`
+12:30-12:38	local.reference	`DLocLt12`
+12:39-12:40	constructor	`_`
+12:39-12:40	local.reference	`_`
+12:39-12:40	variable.parameter	`_`
+12:41-12:42	constructor	`_`
+12:41-12:42	local.reference	`_`
+12:41-12:42	variable.parameter	`_`
+12:42-12:43	punctuation.bracket	`)`
+12:43-12:46	keyword.return	` %.`
+12:46-13:5	keyword.type	``
+13:6-13:23	constructor	`loc!lt_contradict`
+13:6-13:23	local.reference	`loc!lt_contradict`
+13:6-13:23	type	`loc!lt_contradict`
+13:50-13:52	keyword.return	`%.`
+14:6-14:23	constructor	`loc!lt_contradict`
+14:6-14:23	local.reference	`loc!lt_contradict`
+14:23-14:27	keyword.modifier	` %in`
+14:27-14:32	keyword.modifier	` %out`
+14:32-14:35	keyword.return	` %.`
+15:6-15:7	constructor	`_`
+15:6-15:7	function	`_`
+15:6-15:7	local.reference	`_`
+15:6-15:7	variable.parameter	`_`
+15:7-16:4	operator	``
+16:5-16:6	punctuation.bracket	`(`
+16:6-16:23	constructor	`loc!lt_contradict`
+16:6-16:23	local.reference	`loc!lt_contradict`
+16:24-16:25	punctuation.bracket	`(`
+16:25-16:32	constructor	`loc_lt_`
+16:25-16:32	local.reference	`loc_lt_`
+16:33-16:39	constructor	`DNatLt`
+16:33-16:39	local.reference	`DNatLt`
+16:39-16:40	punctuation.bracket	`)`
+16:41-16:47	constructor	`Absurd`
+16:41-16:47	local.reference	`Absurd`
+16:47-16:48	punctuation.bracket	`)`
+17:1-17:4	operator	`%<-`
+17:5-17:6	punctuation.bracket	`(`
+17:6-17:23	constructor	`nat!lt_contradict`
+17:6-17:23	local.reference	`nat!lt_contradict`
+17:24-17:30	constructor	`DNatLt`
+17:24-17:30	local.reference	`DNatLt`
+17:31-17:37	constructor	`Absurd`
+17:31-17:37	local.reference	`Absurd`
+17:37-17:38	punctuation.bracket	`)`
+17:38-17:41	keyword.return	` %.`
+18:8-18:9	punctuation.bracket	`(`
+18:9-18:10	punctuation.bracket	`)`
+18:11-18:12	punctuation.bracket	`(`
+18:12-18:29	constructor	`loc!lt_contradict`
+18:12-18:29	local.reference	`loc!lt_contradict`
+18:30-18:31	constructor	`_`
+18:30-18:31	local.reference	`_`
+18:30-18:31	variable.parameter	`_`
+18:32-18:33	constructor	`_`
+18:32-18:33	local.reference	`_`
+18:32-18:33	variable.parameter	`_`
+18:33-18:34	punctuation.bracket	`)`
+18:34-18:37	keyword.return	` %.`
+19:7-19:13	constructor	`DLocLt`
+19:7-19:13	local.reference	`DLocLt`
+19:14-19:15	punctuation.bracket	`(`
+19:15-19:32	constructor	`loc!lt_contradict`
+19:15-19:32	local.reference	`loc!lt_contradict`
+19:33-19:39	constructor	`DLocLt`
+19:33-19:39	local.reference	`DLocLt`
+19:40-19:41	constructor	`_`
+19:40-19:41	local.reference	`_`
+19:40-19:41	variable.parameter	`_`
+19:41-19:42	punctuation.bracket	`)`
+19:42-19:45	keyword.return	` %.`

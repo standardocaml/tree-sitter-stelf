@@ -1,0 +1,6 @@
+%prec %left 5 add
+%prec %right 10 imp
+%prec %prefix 12 neg
+%prec %postfix 15 succ
+%prec %middle 8 pair
+%prec %none 3 semi

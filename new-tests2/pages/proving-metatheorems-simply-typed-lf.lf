@@ -6,7 +6,7 @@
 %         
 %                                                              
 %                                                                                         
-%{!
+%[[
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -33,11 +33,11 @@ The types <Math formula="A"/> consist of base types <Math formula="a"/>, which a
 
 ## Canonical forms
 
-The above syntax describes what we call _[canonical forms](/wiki/canonical-form/)_ (as long as they are well-typed, more on this below).  Note what is _not_ a canonical form: there is no syntactic way to apply a lambda-abstraction <Math formula="\lambda x.M"/> to an argument.  Based on your past experience with programming languages, it may seem strange to define LF so that only canonical forms exist: we are not allowed to write down any programs that have any computation left to do.  However, this restriction makes sense if you think about our methodology for representing object languages in LF.  In the previous section, we represented natural numbers with the following LF signature: !}%
+The above syntax describes what we call _[canonical forms](/wiki/canonical-form/)_ (as long as they are well-typed, more on this below).  Note what is _not_ a canonical form: there is no syntactic way to apply a lambda-abstraction <Math formula="\lambda x.M"/> to an argument.  Based on your past experience with programming languages, it may seem strange to define LF so that only canonical forms exist: we are not allowed to write down any programs that have any computation left to do.  However, this restriction makes sense if you think about our methodology for representing object languages in LF.  In the previous section, we represented natural numbers with the following LF signature: %]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
-%{! For this representation to be adequate, the only LF terms of type ``nat`` must be ``z``, ``s z``, ``s (s z)``, and so on.  Non-canonical LF terms interfere with this encoding.  For example, the LF term <Math formula="(\lambda x. \mathtt{s}\,x)\,\mathtt{z}"/> would have type ``nat`` were it allowed, and that is not the representation of any informal natural number. This would contradict the third part of the adequacy argument in the previous section. Restricting LF to canonical forms avoids these counterexamples.  
+%[[ For this representation to be adequate, the only LF terms of type ``nat`` must be ``z``, ``s z``, ``s (s z)``, and so on.  Non-canonical LF terms interfere with this encoding.  For example, the LF term <Math formula="(\lambda x. \mathtt{s}\,x)\,\mathtt{z}"/> would have type ``nat`` were it allowed, and that is not the representation of any informal natural number. This would contradict the third part of the adequacy argument in the previous section. Restricting LF to canonical forms avoids these counterexamples.  
 
 We won't present all the typing rules for canonical forms here, but you can see Harper and Licata's paper [_Mechanizing Metatheory in a Logical Framework_](https://www.cs.cmu.edu/~rwh/papers/mech/jfp07.pdf) for all the details. The only detail we need to note here is that terms <Math formula="R"/> are only canonical at base type <Math formula="a"/>, not at function type.  For example, the constant ``s`` is _not_ a canonical form of type ``nat -> nat``.  The term <Math formula="\lambda x. \mathtt{s}\,x"/>, however, is a canonical form.  
 
@@ -69,4 +69,4 @@ The above syntax constitutes an inductive definition of the canonical forms of L
 
 At this point, you may be wondering what we gain by using a lambda-calculus to represent other deductive systems—to represent the natural numbers, all we needed was constants and application; we never even used a term of the form <Math formula="\lambda x.M"/>.  At a high level, the answer is that using a meta-language with variable binding permits clean representations of object languages with variable binding. However, we defer a real answer to this question until we talk about representing the [syntax](/wiki/proving-metatheorems-representing-the-syntax-of-the-stlc/) and [judgements](/wiki/proving-metatheorems-representing-the-judgements-of-the-stlc/) of a language with binding.
 
-!}%
+%]]

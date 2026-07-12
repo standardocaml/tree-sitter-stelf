@@ -1,0 +1,328 @@
+0:0-0:75	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:18	comment	`% parsing examples`
+6:0-6:35	comment	`% the logic program is the grammar.`
+7:0-7:48	comment	`% the ordered context is the input to be parsed.`
+14:0-14:49	comment	`% small_parser.ll example from Lolli distribution`
+19:0-19:5	keyword	`%term`
+19:6-19:9	constructor	`snt`
+19:6-19:9	function	`snt`
+19:6-19:9	local.reference	`snt`
+19:6-19:9	variable.parameter	`snt`
+19:9-19:13	constructor	` atm`
+19:9-19:13	local.reference	` atm`
+19:13-19:16	keyword.return	` %.`
+20:6-20:10	constructor	`snt1`
+20:6-20:10	function	`snt1`
+20:6-20:10	local.reference	`snt1`
+20:6-20:10	variable.parameter	`snt1`
+20:10-20:14	constructor	` atm`
+20:10-20:14	local.reference	` atm`
+20:14-20:17	keyword.return	` %.`
+21:6-21:8	constructor	`np`
+21:6-21:8	function	`np`
+21:6-21:8	local.reference	`np`
+21:6-21:8	variable.parameter	`np`
+21:8-21:12	constructor	` atm`
+21:8-21:12	local.reference	` atm`
+21:12-21:15	keyword.return	` %.`
+22:6-22:8	constructor	`vp`
+22:6-22:8	function	`vp`
+22:6-22:8	local.reference	`vp`
+22:6-22:8	variable.parameter	`vp`
+22:8-22:12	constructor	` atm`
+22:8-22:12	local.reference	` atm`
+22:12-22:15	keyword.return	` %.`
+23:6-23:8	constructor	`tv`
+23:6-23:8	function	`tv`
+23:6-23:8	local.reference	`tv`
+23:6-23:8	variable.parameter	`tv`
+23:8-23:12	constructor	` atm`
+23:8-23:12	local.reference	` atm`
+23:12-23:15	keyword.return	` %.`
+24:6-24:9	constructor	`stv`
+24:6-24:9	function	`stv`
+24:6-24:9	local.reference	`stv`
+24:6-24:9	variable.parameter	`stv`
+24:9-24:13	constructor	` atm`
+24:9-24:13	local.reference	` atm`
+24:13-24:16	keyword.return	` %.`
+25:6-25:10	constructor	`sbar`
+25:6-25:10	function	`sbar`
+25:6-25:10	local.reference	`sbar`
+25:6-25:10	variable.parameter	`sbar`
+25:10-25:14	constructor	` atm`
+25:10-25:14	local.reference	` atm`
+25:14-25:17	keyword.return	` %.`
+26:6-26:9	constructor	`det`
+26:6-26:9	function	`det`
+26:6-26:9	local.reference	`det`
+26:6-26:9	variable.parameter	`det`
+26:9-26:13	constructor	` atm`
+26:9-26:13	local.reference	` atm`
+26:13-26:16	keyword.return	` %.`
+27:6-27:8	constructor	`pn`
+27:6-27:8	function	`pn`
+27:6-27:8	local.reference	`pn`
+27:6-27:8	variable.parameter	`pn`
+27:8-27:12	constructor	` atm`
+27:8-27:12	local.reference	` atm`
+27:12-27:15	keyword.return	` %.`
+28:6-28:7	constructor	`n`
+28:6-28:7	function	`n`
+28:6-28:7	local.reference	`n`
+28:6-28:7	variable.parameter	`n`
+28:7-28:11	constructor	` atm`
+28:7-28:11	local.reference	` atm`
+28:11-28:14	keyword.return	` %.`
+29:6-29:9	constructor	`rel`
+29:6-29:9	function	`rel`
+29:6-29:9	local.reference	`rel`
+29:6-29:9	variable.parameter	`rel`
+29:9-29:13	constructor	` atm`
+29:9-29:13	local.reference	` atm`
+29:13-29:16	keyword.return	` %.`
+30:6-30:10	constructor	`whom`
+30:6-30:10	function	`whom`
+30:6-30:10	local.reference	`whom`
+30:6-30:10	variable.parameter	`whom`
+30:10-30:14	constructor	` atm`
+30:10-30:14	local.reference	` atm`
+30:14-30:17	keyword.return	` %.`
+31:6-31:9	constructor	`the`
+31:6-31:9	function	`the`
+31:6-31:9	local.reference	`the`
+31:6-31:9	variable.parameter	`the`
+31:9-31:13	constructor	` atm`
+31:9-31:13	local.reference	` atm`
+31:13-31:16	keyword.return	` %.`
+32:6-32:10	constructor	`that`
+32:6-32:10	function	`that`
+32:6-32:10	local.reference	`that`
+32:6-32:10	variable.parameter	`that`
+32:10-32:14	constructor	` atm`
+32:10-32:14	local.reference	` atm`
+32:14-32:17	keyword.return	` %.`
+33:6-33:9	constructor	`man`
+33:6-33:9	function	`man`
+33:6-33:9	local.reference	`man`
+33:6-33:9	variable.parameter	`man`
+33:9-33:13	constructor	` atm`
+33:9-33:13	local.reference	` atm`
+33:13-33:16	keyword.return	` %.`
+34:6-34:11	constructor	`woman`
+34:6-34:11	function	`woman`
+34:6-34:11	local.reference	`woman`
+34:6-34:11	variable.parameter	`woman`
+34:11-34:15	constructor	` atm`
+34:11-34:15	local.reference	` atm`
+34:15-34:18	keyword.return	` %.`
+35:6-35:10	constructor	`girl`
+35:6-35:10	function	`girl`
+35:6-35:10	local.reference	`girl`
+35:6-35:10	variable.parameter	`girl`
+35:10-35:14	constructor	` atm`
+35:10-35:14	local.reference	` atm`
+35:14-35:17	keyword.return	` %.`
+36:6-36:9	constructor	`boy`
+36:6-36:9	function	`boy`
+36:6-36:9	local.reference	`boy`
+36:6-36:9	variable.parameter	`boy`
+36:9-36:13	constructor	` atm`
+36:9-36:13	local.reference	` atm`
+36:13-36:16	keyword.return	` %.`
+37:6-37:10	constructor	`mary`
+37:6-37:10	function	`mary`
+37:6-37:10	local.reference	`mary`
+37:6-37:10	variable.parameter	`mary`
+37:10-37:14	constructor	` atm`
+37:10-37:14	local.reference	` atm`
+37:14-37:17	keyword.return	` %.`
+38:6-38:9	constructor	`bob`
+38:6-38:9	function	`bob`
+38:6-38:9	local.reference	`bob`
+38:6-38:9	variable.parameter	`bob`
+38:9-38:13	constructor	` atm`
+38:9-38:13	local.reference	` atm`
+38:13-38:16	keyword.return	` %.`
+39:6-39:10	constructor	`jill`
+39:6-39:10	function	`jill`
+39:6-39:10	local.reference	`jill`
+39:6-39:10	variable.parameter	`jill`
+39:10-39:14	constructor	` atm`
+39:10-39:14	local.reference	` atm`
+39:14-39:17	keyword.return	` %.`
+40:6-40:11	constructor	`loves`
+40:6-40:11	function	`loves`
+40:6-40:11	local.reference	`loves`
+40:6-40:11	variable.parameter	`loves`
+40:11-40:15	constructor	` atm`
+40:11-40:15	local.reference	` atm`
+40:15-40:18	keyword.return	` %.`
+41:6-41:13	constructor	`married`
+41:6-41:13	function	`married`
+41:6-41:13	local.reference	`married`
+41:6-41:13	variable.parameter	`married`
+41:13-41:17	constructor	` atm`
+41:13-41:17	local.reference	` atm`
+41:17-41:20	keyword.return	` %.`
+42:6-42:14	constructor	`believes`
+42:6-42:14	function	`believes`
+42:6-42:14	local.reference	`believes`
+42:6-42:14	variable.parameter	`believes`
+42:14-42:18	constructor	` atm`
+42:14-42:18	local.reference	` atm`
+42:18-42:21	keyword.return	` %.`
+45:0-45:19	comment	`% the parse grammar`
+46:0-46:63	comment	`%   note that unlike in Lolli (or lambda-Prolog) everything can`
+47:0-47:26	comment	`%   remain propositional. `
+50:0-50:5	keyword	`%term`
+50:6-50:11	constructor	`snt_0`
+50:6-50:11	function	`snt_0`
+50:6-50:11	local.reference	`snt_0`
+50:6-50:11	variable.parameter	`snt_0`
+50:11-50:16	constructor	` prog`
+50:11-50:16	local.reference	` prog`
+50:43-50:45	keyword.return	`%.`
+51:6-51:12	constructor	`snt1_0`
+51:6-51:12	function	`snt1_0`
+51:6-51:12	local.reference	`snt1_0`
+51:6-51:12	variable.parameter	`snt1_0`
+51:12-51:17	constructor	` prog`
+51:12-51:17	local.reference	` prog`
+51:55-51:57	keyword.return	`%.`
+52:6-52:10	constructor	`vp_0`
+52:6-52:10	function	`vp_0`
+52:6-52:10	local.reference	`vp_0`
+52:6-52:10	variable.parameter	`vp_0`
+52:10-52:15	constructor	` prog`
+52:10-52:15	local.reference	` prog`
+52:41-52:43	keyword.return	`%.`
+53:6-53:10	constructor	`vp_1`
+53:6-53:10	function	`vp_1`
+53:6-53:10	local.reference	`vp_1`
+53:6-53:10	variable.parameter	`vp_1`
+53:10-53:15	constructor	` prog`
+53:10-53:15	local.reference	` prog`
+53:44-53:46	keyword.return	`%.`
+53:46-54:2	comment	``
+54:2-55:49	comment	``
+55:49-56:40	comment	``
+59:0-59:5	keyword	`%term`
+59:6-59:12	constructor	`sbar_0`
+59:6-59:12	function	`sbar_0`
+59:6-59:12	local.reference	`sbar_0`
+59:6-59:12	variable.parameter	`sbar_0`
+59:12-59:17	constructor	` prog`
+59:12-59:17	local.reference	` prog`
+59:48-59:50	keyword.return	`%.`
+60:6-60:10	constructor	`np_0`
+60:6-60:10	function	`np_0`
+60:6-60:10	local.reference	`np_0`
+60:6-60:10	variable.parameter	`np_0`
+60:10-60:15	constructor	` prog`
+60:10-60:15	local.reference	` prog`
+60:41-60:43	keyword.return	`%.`
+61:6-61:10	constructor	`np_1`
+61:6-61:10	function	`np_1`
+61:6-61:10	local.reference	`np_1`
+61:6-61:10	variable.parameter	`np_1`
+61:10-61:15	constructor	` prog`
+61:10-61:15	local.reference	` prog`
+61:51-61:53	keyword.return	`%.`
+62:6-62:10	constructor	`np_2`
+62:6-62:10	function	`np_2`
+62:6-62:10	local.reference	`np_2`
+62:6-62:10	variable.parameter	`np_2`
+62:10-62:15	constructor	` prog`
+62:10-62:15	local.reference	` prog`
+62:32-62:34	keyword.return	`%.`
+65:0-65:51	comment	`% Adding a ^ np at end of context, insures that gap`
+66:0-66:50	comment	`% is at end of phrase so no need for quantifiers. `
+67:0-67:42	comment	`% Also (^ whom) is before (^ np =>> ^ snt)`
+70:0-70:56	comment	`% rel_0 : prog( (^ np =>> ^ snt) =>> ^ whom >=> ^ rel).	`
+71:0-71:86	comment	`% rel_1 : prog( ((^ np =>> (^ np =0 ^ vp) =>> ^ snt) =0 ^ snt) =>> ^ whom >=> ^ rel).	`
+72:0-72:5	keyword	`%term`
+72:6-72:11	constructor	`rel_0`
+72:6-72:11	function	`rel_0`
+72:6-72:11	local.reference	`rel_0`
+72:6-72:11	variable.parameter	`rel_0`
+72:11-72:16	constructor	` prog`
+72:11-72:16	local.reference	` prog`
+72:47-72:49	keyword.return	`%.`
+73:6-73:11	constructor	`det_0`
+73:6-73:11	function	`det_0`
+73:6-73:11	local.reference	`det_0`
+73:6-73:11	variable.parameter	`det_0`
+73:11-73:16	constructor	` prog`
+73:11-73:16	local.reference	` prog`
+73:35-73:37	keyword.return	`%.`
+74:6-74:11	constructor	`n_man`
+74:6-74:11	function	`n_man`
+74:6-74:11	local.reference	`n_man`
+74:6-74:11	variable.parameter	`n_man`
+74:11-74:16	constructor	` prog`
+74:11-74:16	local.reference	` prog`
+74:33-74:35	keyword.return	`%.`
+75:6-75:13	constructor	`n_woman`
+75:6-75:13	function	`n_woman`
+75:6-75:13	local.reference	`n_woman`
+75:6-75:13	variable.parameter	`n_woman`
+75:13-75:18	constructor	` prog`
+75:13-75:18	local.reference	` prog`
+75:37-75:39	keyword.return	`%.`
+76:6-76:12	constructor	`n_girl`
+76:6-76:12	function	`n_girl`
+76:6-76:12	local.reference	`n_girl`
+76:6-76:12	variable.parameter	`n_girl`
+76:12-76:17	constructor	` prog`
+76:12-76:17	local.reference	` prog`
+76:35-76:37	keyword.return	`%.`
+77:6-77:11	constructor	`n_boy`
+77:6-77:11	function	`n_boy`
+77:6-77:11	local.reference	`n_boy`
+77:6-77:11	variable.parameter	`n_boy`
+77:11-77:16	constructor	` prog`
+77:11-77:16	local.reference	` prog`
+77:33-77:35	keyword.return	`%.`
+78:6-78:13	constructor	`pn_mary`
+78:6-78:13	function	`pn_mary`
+78:6-78:13	local.reference	`pn_mary`
+78:6-78:13	variable.parameter	`pn_mary`
+78:13-78:18	constructor	` prog`
+78:13-78:18	local.reference	` prog`
+78:37-78:39	keyword.return	`%.`
+79:6-79:12	constructor	`pn_bob`
+79:6-79:12	function	`pn_bob`
+79:6-79:12	local.reference	`pn_bob`
+79:6-79:12	variable.parameter	`pn_bob`
+79:12-79:17	constructor	` prog`
+79:12-79:17	local.reference	` prog`
+79:35-79:37	keyword.return	`%.`
+80:6-80:13	constructor	`pn_jill`
+80:6-80:13	function	`pn_jill`
+80:6-80:13	local.reference	`pn_jill`
+80:6-80:13	variable.parameter	`pn_jill`
+80:13-80:18	constructor	` prog`
+80:13-80:18	local.reference	` prog`
+80:37-80:39	keyword.return	`%.`
+81:6-81:14	constructor	`tv_loves`
+81:6-81:14	function	`tv_loves`
+81:6-81:14	local.reference	`tv_loves`
+81:6-81:14	variable.parameter	`tv_loves`
+81:14-81:19	constructor	` prog`
+81:14-81:19	local.reference	` prog`
+81:39-81:41	keyword.return	`%.`
+82:6-82:16	constructor	`tv_married`
+82:6-82:16	function	`tv_married`
+82:6-82:16	local.reference	`tv_married`
+82:6-82:16	variable.parameter	`tv_married`
+82:16-82:21	constructor	` prog`
+82:16-82:21	local.reference	` prog`
+82:43-82:45	keyword.return	`%.`
+83:6-83:17	constructor	`tv_believes`
+83:6-83:17	function	`tv_believes`
+83:6-83:17	local.reference	`tv_believes`
+83:6-83:17	variable.parameter	`tv_believes`
+83:17-83:22	constructor	` prog`
+83:17-83:22	local.reference	` prog`
+83:46-83:48	keyword.return	`%.`

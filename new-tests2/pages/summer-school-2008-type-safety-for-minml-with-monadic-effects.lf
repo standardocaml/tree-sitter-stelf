@@ -1,5 +1,5 @@
 %                                                                         
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Exercises 3
@@ -9,14 +9,14 @@
 
 Type safety for MinML with monadic effects
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Syntax / static semantics
 
 Types:
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term nat tp %.
@@ -24,13 +24,13 @@ Types:
 %term circle %pi tp %-> tp %.
 %% called 'comp' in PFPL;
 %% the lax modality is often rendered as a circle 
-%{! 
+%[[ 
 
 Next, we define typed expressions (i.e., typing derivations).  There are
 two syntactic classes: pure expressions, and possibly-effectful
 commands.
 
-!}%
+%]]
 %sort exp {_ tp} %.
 %name exp %.
 %prec %postfix 1 exp %.
@@ -45,13 +45,13 @@ commands.
 %term comp %pi (T command) %-> (circle T exp) %.
 %term return %pi (T exp) %-> (T command) %.
 %term let %pi (circle T exp) %-> (%pi (T exp) %-> (U command)) %-> (U command) %.
-%{! 
+%[[ 
 
 ## Dynamic semantics / preservation
 
 ### Values and final states
 
-!}%
+%]]
 %sort value {_ T exp} %.
 %name value %.
 %mode value %in %.
@@ -63,11 +63,11 @@ commands.
 %name final %.
 %mode final %in %.
 %term final/ret %pi (final (return E)) %<- (value E) %.
-%{! 
+%[[ 
 
 ### Transition relation for expressions
 
-!}%
+%]]
 %sort step {_ T exp} {_ T exp} %.
 %name step %.
 %mode step %in %out %.
@@ -80,11 +80,11 @@ commands.
 %term step/app/beta-v 
 	%pi (step (app (fun T1 T2 ([f] [x] E f x)) E2) (E (fun T1 T2 ([f] [x] E f x)) E2))
 	%<- (value E2) %.
-%{! 
+%[[ 
 
 ### Transition relation for commands
 
-!}%
+%]]
 %sort mstep {_ T command} {_ T command} %.
 %name mstep %.
 %mode mstep %in %out %.
@@ -94,7 +94,7 @@ commands.
 	%pi (mstep (let (comp M1) ([x] M2 x)) (let (comp M1') ([x] M2 x)))
 	%<- (mstep M1 M1') %.
 %term mstep/let-beta %pi (mstep (let (comp (return E)) ([x] M x)) (M E)) %<- (final (return E)) %.
-%{! 
+%[[ 
 
 ## Progress
 
@@ -105,7 +105,7 @@ first, and for commands below.
 
 ### Return sums
 
-!}%
+%]]
 %sort val-or-step {_ T exp} %.
 %name val-or-step %.
 %term vos/val %pi (val-or-step E) %<- (value E) %.
@@ -114,11 +114,11 @@ first, and for commands below.
 %name fin-or-mstep %.
 %term fos/fin %pi (fin-or-mstep M) %<- (final M) %.
 %term fos/step %pi (fin-or-mstep M) %<- (mstep M _) %.
-%{! 
+%[[ 
 
 ### [Factoring](/wiki/output-factoring/) lemmas
 
-!}%
+%]]
 %sort prog/s {_ val-or-step E} {_ val-or-step (s E)} %.
 %mode prog/s %in %out %.
 %term _ prog/s (vos/step Dstep) (vos/step (step/s Dstep)) %.
@@ -139,11 +139,11 @@ first, and for commands below.
 %term _ prog/app (vos/val Dval1) (vos/val Dval2) (step/app/beta-v Dval2) %.
 %worlds () (prog/app _ _ _) %.
 %total () (prog/app _ _ _) %.
-%{! 
+%[[ 
 
 ### Progress for expressions
 
-!}%
+%]]
 %sort prog {E T exp} {_ val-or-step E} %.
 %name prog %.
 %mode prog %in %out %.
@@ -162,11 +162,11 @@ first, and for commands below.
 %term _ prog (comp M) (vos/val value/comp) %.
 %worlds () (prog _ _) %.
 %total Dof (prog Dof _) %.
-%{! 
+%[[ 
 
 ### Factoring lemmas for commands
 
-!}%
+%]]
 %sort mprog/ret {_ val-or-step E} {_ fin-or-mstep (return E)} %.
 %mode mprog/ret %in %out %.
 %term _ mprog/ret (vos/val Dval) (fos/fin (final/ret Dval)) %.
@@ -179,7 +179,7 @@ first, and for commands below.
 %term _ mprog/let-comp (fos/step (%the (mstep M1 M1') Dmstep)) M2 (%the (mstep (let (comp M1) M2) (let (comp M1') M2)) (mstep/let-m Dmstep)) %.
 %worlds () (mprog/let-comp _ _ _) %.
 %total () (mprog/let-comp _ _ _) %.
-%{! 
+%[[ 
 
 ### Progress for commands
 
@@ -187,7 +187,7 @@ The factoring lemma for ``let`` is is mutually recursive with the
 main theorem---when the ``let``-bound expression is ``comp
 M``, we need to recursively appeal to progress on ``M``. 
 
-!}%
+%]]
 %sort mprog/let {E circle T exp} {_ val-or-step E} {M %pi (T exp) %-> (U command)} {_ mstep (let E M) M'} %.
 %mode mprog/let %in %in %in %out %.
 %sort mprog {M T command} {_ fin-or-mstep M} %.
@@ -206,7 +206,7 @@ M``, we need to recursively appeal to progress on ``M``.
 	%<- (mprog/let E Dvos M (%the (mstep (let E M) M') Dmstep)) %.
 %worlds () (mprog _ _) (mprog/let _ _ _ _) %.
 %total (M E) (mprog M _) (mprog/let E _ _ _) %.
-%{! 
+%[[ 
 Because ``mprog`` and ``mprog/let`` are mutually recursive, we:
 - Declare and give modes for both type families before declaring their constants.
 - Declare their worlds simulataneously, by putting two call-patterns in the world declaration.
@@ -220,10 +220,10 @@ And thus we have proved type safety for MinML with monadic effects!
   |nonext=
 \}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Type_safety_for_MinML_with_monadic_effects).
-!}%
+%]]

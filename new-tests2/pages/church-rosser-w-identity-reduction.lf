@@ -1,19 +1,19 @@
 %                                                 
-%{! ## Syntax !}%
+%[[ ## Syntax %]]
 %sort exp %.
 %name exp %.
 %term lam %pi (%pi exp %-> exp) %-> exp %.
 %term app %pi exp %-> exp %-> exp %.
-%{! 
+%[[ 
 
 When we use this ``%block``, it expresses that we can be working in a 
 context with arbitrary expression variables. This will be the only world we 
 will need for this exercise. 
 
-!}%
+%]]
 %block exps [x exp]%.
-%{! ## Reduction !}%
-%{! 
+%[[ ## Reduction %]]
+%[[ 
 
 We can always reduce an expression to itself (which means that we don't 
 explicitly need a case to handle variables). We can reduce under binders and 
@@ -26,7 +26,7 @@ we can return ``[eb'/x]ea'``, the substitution of ``eb'`` into
 The ``%worlds`` explicitly states that we will be reducing in a setting 
 with free variables. 
 
-!}%
+%]]
 %sort reduce {_ exp} {_ exp} %.
 %term reduce/id reduce E E %.
 %term reduce/lam %pi (reduce (lam E) (lam E')) %<- ({x exp} reduce (E x) (E' x)) %.
@@ -36,8 +36,8 @@ with free variables.
 	%<- ({x exp} reduce (E1 x) (E1' x))
 	%<- (reduce E2 E2') %.
 %worlds (exps) (reduce _ _) %.
-%{! ## Substitution !}%
-%{! 
+%[[ ## Substitution %]]
+%[[ 
 
 The first substitution theorem says that if we have a term ``e1`` with 
 ``x`` free and a term ``e2`` that reduces to term ``e2'``, 
@@ -52,7 +52,7 @@ variable, and all other cases are covered.
 
 The proof is by induction on the structure of the term with the free variable.
 
-!}%
+%]]
 %sort substitute1 {E1 %pi exp %-> exp} {_ reduce E2 E2'} {_ reduce (E1 E2) (E1 E2')} %.
 %mode substitute1 %in %in %out %.
 %term _ substitute1 ([x] x) D D %.
@@ -66,7 +66,7 @@ The proof is by induction on the structure of the term with the free variable.
 	%<- (substitute1 E2 D D2) %.
 %worlds (exps) (substitute1 _ _ _) %.
 %total E (substitute1 E _ _) %.
-%{! 
+%[[ 
 
 The second substitution theorem is similar, except that we are reducing 
 ``e1`` with ``x`` free to ``e1'`` as well as by reducing
@@ -77,7 +77,7 @@ Proof is by induction on the structure of the reduction of ``e1`` to
 ``e1'``. We call to the ``substitute1`` lemma 
 when we "bottom out" at the reflexive case ``reduce/id``.
 
-!}%
+%]]
 %sort substitute2 {_ {x exp} reduce (E1 x) (E1' x)} {_ reduce E2 E2'} {_ reduce (E1 E2) (E1' E2')} %.
 %mode substitute2 %in %in %out %.
 %term _ 
@@ -96,8 +96,8 @@ when we "bottom out" at the reflexive case ``reduce/id``.
 	%<- (substitute2 D2 D D2') %.
 %worlds (exps) (substitute2 _ _ _) %.
 %total D (substitute2 D _ _) %.
-%{! ## The Diamond Property !}%
-%{! 
+%[[ ## The Diamond Property %]]
+%[[ 
 
 Now we come to the interesting part: the diamond property.
 
@@ -112,11 +112,11 @@ Now we come to the interesting part: the diamond property.
 If ``E`` reduces to both ``E1``, and ``E2``, then there is a 
 common E' such that ``E1`` and ``E2`` both reduce to it.
 
-!}%
+%]]
 %sort diamond {_ reduce E E1} {_ reduce E E2} {_ reduce E1 E'} {_ reduce E2 E'} %.
 %mode diamond %in %in %out %out %.
-%{! ### Identity !}%
-%{! 
+%[[ ### Identity %]]
+%[[ 
 
 If either case is the identity, then we are done. 
 
@@ -128,11 +128,11 @@ If either case is the identity, then we are done.
  e=&gt;e2 \ / e2=&gt;e2   e1=&gt;e1\ / e=&gt;e1
         e2                 E1
 
-!}%
+%]]
 %term _ diamond reduce/id D D reduce/id %.
 %term _ diamond D reduce/id reduce/id D %.
-%{! ### Lambda-Lambda !}%
-%{! 
+%[[ ### Lambda-Lambda %]]
+%[[ 
 
 If both cases are reductions under a binder, we pull the result straight 
 from the induction hypothesis. 
@@ -151,12 +151,12 @@ Note the oversimplification being made in the graphical presentation, in that
 the subterms and sub-derivations are not clearly shown to have a free variable.
 Twelf will, of course, not allow this sloppiness.
 
-!}%
+%]]
 %term _ 
 	%pi (diamond (%the (reduce (lam E) (lam E1)) (reduce/lam (%the ({x exp} reduce (E x) (E1 x)) D1))) (%the (reduce (lam E) (lam E2)) (reduce/lam (%the ({x exp} reduce (E x) (E2 x)) D2))) (reduce/lam D1') (reduce/lam D2'))
 	%<- ({x exp} diamond (D1 x) (D2 x) (%the (reduce (E1 x) (E' x)) (D1' x)) (%the (reduce (E2 x) (E' x)) (D2' x))) %.
-%{! ### Application-Application !}%
-%{! 
+%[[ ### Application-Application %]]
+%[[ 
 
 If both cases are applications, we pull the result straight from the 
 induction hypothesis. 
@@ -170,13 +170,13 @@ induction hypothesis.
  reduce/app      \     /  reduce/app
  D1b' D1a'        \   /   D2b' D2a'
                  ea' eb'
-!}%
+%]]
 %term _ 
 	%pi (diamond (%the (reduce (app Ea Eb) (app E1a E1b)) (reduce/app (%the (reduce Eb E1b) D1b) (%the (reduce Ea E1a) D1a))) (%the (reduce (app Ea Eb) (app E2a E2b)) (reduce/app (%the (reduce Eb E2b) D2b) (%the (reduce Ea E2a) D2a))) (reduce/app D1b' D1a') (reduce/app D2b' D2a'))
 	%<- (diamond D1a D2a (%the (reduce E1a Ea') D1a') (%the (reduce E2a Ea') D2a'))
 	%<- (diamond D1b D2b (%the (reduce E1b Eb') D1b') (%the (reduce E2b Eb') D2b')) %.
-%{! ### Beta-Beta !}%
-%{! 
+%[[ ### Beta-Beta %]]
+%[[ 
 
 If both cases are beta reductions, we get the result from performing two 
 substitutions. 
@@ -190,15 +190,15 @@ substitutions.
  substitute      \   /  substitute
  D1b' into D1a'   \ /   D2b' into D2a'
               [eb'/x]ea
-!}%
+%]]
 %term _ 
 	%pi (diamond (%the (reduce (app (lam Ea) Eb) (E1a E1b)) (reduce/beta (%the (reduce Eb E1b) D1b) (%the ({x} reduce (Ea x) (E1a x)) D1a))) (%the (reduce (app (lam Ea) Eb) (E2a E2b)) (reduce/beta (%the (reduce Eb E2b) D2b) (%the ({x} reduce (Ea x) (E2a x)) D2a))) D1 D2)
 	%<- ({x} diamond (D1a x) (D2a x) (%the (reduce (E1a x) (Ea' x)) (D1a' x)) (%the (reduce (E2a x) (Ea' x)) (D2a' x)))
 	%<- (diamond D1b D2b (%the (reduce E1b Eb') D1b') (%the (reduce E2b Eb') D2b'))
 	%<- (substitute2 D1a' D1b' (%the (reduce (E1a E1b) (Ea' Eb')) D1))
 	%<- (substitute2 D2a' D2b' (%the (reduce (E2a E2b) (Ea' Eb')) D2)) %.
-%{! ### Beta-Application !}%
-%{! 
+%[[ ### Beta-Application %]]
+%[[ 
 
 If the left-hand side is a β-reduction 
 ``(λx.ea) eb => [e1b/x] e1a`` but the right-hand side is not, then we 
@@ -223,13 +223,13 @@ The first subcase:
  D1b' into D2a'  \   /  D2b' D2a'      
                   \ /   
                [eb'/x]ea'              
-!}%
+%]]
 %term _ 
 	%pi (diamond (%the (reduce (app (lam Ea) Eb) (E1a E1b)) (reduce/beta (%the (reduce Eb E1b) D1b) (%the ({x exp} reduce (Ea x) (E1a x)) D1a))) (%the (reduce (app (lam Ea) Eb) (app (lam E2a) E2b)) (reduce/app (%the (reduce Eb E2b) D2b) (reduce/lam (%the ({x exp} reduce (Ea x) (E2a x)) D2a)))) D1 (reduce/beta D2b' D2a'))
 	%<- ({x exp} diamond (D1a x) (D2a x) (%the (reduce (E1a x) (Ea' x)) (D1a' x)) (%the (reduce (E2a x) (Ea' x)) (D2a' x)))
 	%<- (diamond D1b D2b (%the (reduce E1b Eb') D1b') (%the (reduce E2b Eb') D2b'))
 	%<- (substitute2 D1a' D1b' (%the (reduce (E1a E1b) (Ea' Eb')) D1)) %.
-%{! 
+%[[ 
 
 The second subcase:
 
@@ -244,19 +244,19 @@ The second subcase:
  D1b' into e1a   \   /  D2b' D1a   
                   \ /   
                [eb'/x]e1a        
-!}%
+%]]
 %term _ 
 	%pi (diamond (%the (reduce (app (lam Ea) Eb) (E1a E1b)) (reduce/beta (%the (reduce Eb E1b) D1b) (%the ({x} reduce (Ea x) (E1a x)) D1a))) (%the (reduce (app (lam Ea) Eb) (app (lam Ea) E2b)) (reduce/app (%the (reduce Eb E2b) D2b) (%the (reduce (lam Ea) (lam Ea)) reduce/id))) D1 (reduce/beta D2b' D1a))
 	%<- (diamond D1b D2b (%the (reduce E1b Eb') D1b') (%the (reduce E2b Eb') D2b'))
 	%<- (substitute1 E1a D1b' (%the (reduce (E1a E1b) (E1a Eb')) D1)) %.
-%{! ### Application-Beta !}%
-%{! 
+%[[ ### Application-Beta %]]
+%[[ 
 
 If the right-hand hand side is a β-reduction but the left-hand side is not, we 
 have to do the same two cases in reverse; we omit the graphics for those 
 two cases as they are symmetric.
 
-!}%
+%]]
 %term _ 
 	%pi (diamond (%the (reduce (app (lam Ea) Eb) (app (lam Ea) E1b)) (reduce/app (%the (reduce Eb E1b) D1b) (%the (reduce (lam Ea) (lam Ea)) reduce/id))) (%the (reduce (app (lam Ea) Eb) (E2a E2b)) (reduce/beta (%the (reduce Eb E2b) D2b) (%the ({x} reduce (Ea x) (E2a x)) D2a))) (reduce/beta D1b' D2a) D2)
 	%<- (diamond D1b D2b (%the (reduce E1b Eb') D1b') (%the (reduce E2b Eb') D2b'))
@@ -266,12 +266,12 @@ two cases as they are symmetric.
 	%<- ({x} diamond (D1a x) (D2a x) (%the (reduce (E1a x) (Ea' x)) (D1a' x)) (%the (reduce (E2a x) (Ea' x)) (D2a' x)))
 	%<- (diamond D1b D2b (%the (reduce E1b Eb') D1b') (%the (reduce E2b Eb') D2b'))
 	%<- (substitute2 D2a' D2b' (%the (reduce (E2a E2b) (Ea' Eb')) D2)) %.
-%{! Now we are done! We check in the ``exps`` world with free variables. !}%
+%[[ Now we are done! We check in the ``exps`` world with free variables. %]]
 %worlds (exps) (diamond _ _ _ _) %.
 %total D1 (diamond D1 D2 _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Church-Rosser_(w/_identity_reduction)).
-!}%
+%]]

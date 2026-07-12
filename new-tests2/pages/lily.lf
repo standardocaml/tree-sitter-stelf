@@ -1,5 +1,5 @@
 %                
-%{! This [case study](/wiki/case-studies/) concerns the metatheory of the [linear](/wiki/linear-logic/) Lily language. 
+%[[ This [case study](/wiki/case-studies/) concerns the metatheory of the [linear](/wiki/linear-logic/) Lily language. 
 
 It is incomplete; ask [User:varming](/wiki/user-varming/) for updates.
 
@@ -12,7 +12,7 @@ In this example I will show examples of the following:
 
 ## Lily - the language
 ### Grammar
-I define the grammar for the types !}%
+I define the grammar for the types %]]
 % Lily meta theory
 % By Carsten Varming 2006
 %sort tp %.
@@ -23,7 +23,7 @@ I define the grammar for the types !}%
 %term i tp %.
 %term tensor %pi tp %-> tp %-> tp %.
 %freeze tp %.
-%{! and the grammar for the terms and values !}%
+%[[ and the grammar for the terms and values %]]
 %sort term %.
 %name term %.
 %term lam %pi tp %-> (%pi term %-> term) %-> term %.
@@ -47,7 +47,7 @@ I define the grammar for the types !}%
 %worlds () (value _) %.
 %terminates {} (value _) %.
 %freeze value %.
-%{! Next I define the call-by-name big step evaluation relation !}%
+%[[ Next I define the call-by-name big step evaluation relation %]]
 %sort \n/ {_ term} {_ term} %.
 %mode \n/ %in %out %.
 %name \n/ %.
@@ -70,7 +70,7 @@ I define the grammar for the types !}%
 %mode \/ %in %.
 %term terminate %pi (M \/) %<- (M \n/ V) %.
 %freeze \/ %.
-%{! I also have an strict (call-by-value) evaluation relation for Lily. !}%
+%[[ I also have an strict (call-by-value) evaluation relation for Lily. %]]
 %sort \s/ {_ term} {_ term} %.
 %mode \s/ %in %out %.
 %name \s/ %.
@@ -88,8 +88,8 @@ I define the grammar for the types !}%
 %worlds () (\s/ _ _) %.
 %covers \s/ %in %out %.
 %freeze \s/ %.
-%{! ### Value soundness
-By now I can prove value soundness for the two evaluation relations. !}%
+%[[ ### Value soundness
+By now I can prove value soundness for the two evaluation relations. %]]
 %sort value_soundness {_ M \n/ V} {_ value V} %.
 %mode value_soundness %in %out %.
 %term vs_lam value_soundness ev_lam val_lam %.
@@ -120,7 +120,7 @@ By now I can prove value soundness for the two evaluation relations. !}%
 %worlds () (value_soundness_s _ _) %.
 %freeze value_soundness_s %.
 %total D (value_soundness_s D _) %.
-%{! It is also neat to know that values evaluate to themselves. !}%
+%[[ It is also neat to know that values evaluate to themselves. %]]
 %sort selfeval {_ value V} {_ V \n/ V} %.
 %mode selfeval %in %out %.
 %term selfeval_lam selfeval val_lam ev_lam %.
@@ -141,8 +141,8 @@ By now I can prove value soundness for the two evaluation relations. !}%
 %worlds () (selfevals _ _) %.
 %freeze selfevals %.
 %total V (selfevals V _) %.
-%{! ### Equalities
-I need some equalities on types and terms: !}%
+%[[ ### Equalities
+I need some equalities on types and terms: %]]
 %sort eqt {_ tp} {_ tp} %.
 %mode eqt %in %out %.
 %term eqt_ref eqt T T %.
@@ -239,8 +239,8 @@ I need some equalities on types and terms: !}%
 %worlds () (eq_sym _ _) %.
 %freeze eq_sym %.
 %total D (eq_sym D _) %.
-%{! ### Determinism
-Evaluation is deterministic. !}%
+%[[ ### Determinism
+Evaluation is deterministic. %]]
 %sort eval_determ {_ M \n/ V} {_ M \n/ V'} {_ eq V V'} %.
 %mode eval_determ %in %in %out %.
 %term eval_determ_unit eval_determ ev_unit ev_unit eq_ref %.
@@ -284,7 +284,7 @@ Evaluation is deterministic. !}%
 %worlds () (eval_determ _ _ _) %.
 %freeze eval_determ %.
 %total D (eval_determ D _ _) %.
-%{! And transitive: !}%
+%[[ And transitive: %]]
 %sort eval_trans {_ M \n/ V} {_ V \n/ V'} {_ M \n/ V'} %.
 %mode eval_trans %in %in %out %.
 %term eval_trans_rule 
@@ -301,11 +301,11 @@ Evaluation is deterministic. !}%
 %worlds () (eq_val _ _ _) %.
 %freeze eval_trans %.
 %total () (eq_val _ _ _) %.
-%{! ## Frame stack semantics
+%[[ ## Frame stack semantics
 The abstract machine is defined as a relation on tuples consisting of a frame stack and a term to evaluate in that stack.
 
 ### Evaluation frames
-The frame stack is a stack of evaluation frames that provides a context on which we will continue evaluation after we have computed a value for the current term. !}%
+The frame stack is a stack of evaluation frames that provides a context on which we will continue evaluation after we have computed a value for the current term. %]]
 %sort frame {_ %pi term %-> term} %.
 %name frame %.
 %term fletb {M} frame ([a] letb a M) %.
@@ -314,7 +314,7 @@ The frame stack is a stack of evaluation frames that provides a context on which
 %term fletu {M} frame ([a] letu a M) %.
 %term flett {M} frame ([a] lett a M) %.
 %freeze frame %.
-%{! Evaluation frames are functions from terms to terms and sometimes I need to apply such a function to a term. !}%
+%[[ Evaluation frames are functions from terms to terms and sometimes I need to apply such a function to a term. %]]
 %sort frameapp {_ frame F} {_ term} {_ term} %.
 %mode frameapp %in %in %out %.
 %term frameapp_app frameapp (%the (frame F') F) M (F' M) %.
@@ -327,7 +327,7 @@ The frame stack is a stack of evaluation frames that provides a context on which
 %worlds () (frameapp_exists _ _ _) %.
 %freeze frameapp_exists %.
 %total D (frameapp_exists D _ _) %.
-%{! The definition of the frame stack and application of frame stacks to terms. !}%
+%[[ The definition of the frame stack and application of frame stacks to terms. %]]
 %sort framestack %.
 %name framestack %.
 %term cons %pi (frame F) %-> framestack %-> framestack %.
@@ -343,10 +343,10 @@ The frame stack is a stack of evaluation frames that provides a context on which
 %worlds () (frameapply _ _ _) %.
 %freeze frameapply %.
 %total D (frameapply D _ _) %.
-%{! I should move you: !}%
+%[[ I should move you: %]]
 %block blam [y term]%.
-%{! ### Equalities on frame stacks
-I also need some equational reasoning on frame stacks: !}%
+%[[ ### Equalities on frame stacks
+I also need some equational reasoning on frame stacks: %]]
 %sort eqf {_ framestack} {_ framestack} %.
 %mode eqf %in %out %.
 %term eqf_ref eqf Fs Fs %.
@@ -381,7 +381,7 @@ I also need some equational reasoning on frame stacks: !}%
 %worlds (blam) (frameapply_nil_eq _ _) %.
 %freeze frameapply_nil_eq %.
 %total () (frameapply_nil_eq _ _) %.
-%{! #### More metatheorems about frame application !}%
+%[[ #### More metatheorems about frame application %]]
 %sort frameapply_exists {Fs} {M} {_ frameapply Fs M M'} %.
 %mode frameapply_exists %in %in %out %.
 %term frameapply_exists_nil frameapply_exists nil M frameapply_nil %.
@@ -403,8 +403,8 @@ I also need some equational reasoning on frame stacks: !}%
 %worlds () (frameapply_exists _ _ _) %.
 %freeze frameapply_exists %.
 %total D (frameapply_exists D _ _) %.
-%{! ### Frame stack evaluation
-Here I define the evaluation relation for the abstract machine. !}%
+%[[ ### Frame stack evaluation
+Here I define the evaluation relation for the abstract machine. %]]
 %scope frameapply_exists_cons_tapp %sort -> {_ framestack} {_ term} {_ framestack} {_ term} %.
 %mode --> %in %in %out %out %.
 %term evfs_letu --> Fs (letu M N) (cons (fletu N) Fs) M %.
@@ -429,8 +429,8 @@ Here I define the evaluation relation for the abstract machine. !}%
 %term ->*_ref -->* Fs M Fs M %.
 %scope eq_step_rule %term ->*_step %pi (-->* Fs M Fs' M') %<- (--> Fs'' M'' Fs' M') %<- (-->* Fs M Fs'' M'') %.
 %freeze -->* %.
-%{! ### Meta theory of the abstract machine
-Here are some basic properties of the abstract machine: !}%
+%[[ ### Meta theory of the abstract machine
+Here are some basic properties of the abstract machine: %]]
 %sort concat-->* {_ -->* Fs M Fs'' M''} {_ -->* Fs'' M'' Fs' M'} {_ -->* Fs M Fs' M'} %.
 %mode concat-->* %in %in %out %.
 %term concatref concat-->* S -->*_ref S %.
@@ -473,7 +473,7 @@ Here are some basic properties of the abstract machine: !}%
 %worlds () (frameApplyUnique _ _ _) %.
 %freeze frameApplyUnique %.
 %total D (frameApplyUnique D _ _) %.
-%{! ## Correspondence between the big step semantics and the abstract machine !}%
+%[[ ## Correspondence between the big step semantics and the abstract machine %]]
 %sort lemma48 {Fs} {M} {_ M \n/ V} {_ -->* Fs M Fs V} %.
 %mode lemma48 %in %in %in %out %.
 %term lemma48_lam lemma48 _ _ ev_lam -->*_ref %.
@@ -728,7 +728,7 @@ Here are some basic properties of the abstract machine: !}%
 %worlds () (eq_eval_frame _ _ _) %.
 %freeze eq_eval_frame %.
 %total () (eq_eval_frame _ _ _) %.
-%{! #### Termination relation on the abstract machine !}%
+%[[ #### Termination relation on the abstract machine %]]
 %sort frameterm {_ framestack} {_ term} %.
 %term frameterm_val %pi (frameterm nil V) %<- (value V) %.
 %term frameterm_app %pi (frameterm Fs (app M1 M2)) %<- (frameterm (cons (fapp M2) Fs) M1) %.
@@ -786,7 +786,7 @@ Here are some basic properties of the abstract machine: !}%
 %worlds () (inverse_ft_letb _ _) %.
 %reduces < D E (inverse_ft_letb E D) %.
 %total () (inverse_ft_letb _ _) %.
-%{! The termination relation is really about the machine. !}%
+%[[ The termination relation is really about the machine. %]]
 %sort frameterm_eq_f {_ frameterm Fs M} {_ -->r* Fs M nil V} {_ value V} %.
 %mode frameterm_eq_f %in %out %out %.
 %term frameterm_eq_f_val frameterm_eq_f (frameterm_val V) -->r*_ref V %.
@@ -899,9 +899,9 @@ Here are some basic properties of the abstract machine: !}%
 %worlds () (frameterm_eval _ _) %.
 %freeze frameterm_eval %.
 %total () (frameterm_eval _ _) %.
-%{! Excellent. We now know that termination in the frame stack semantics is the same as evaluation in the big step semantics. The nice thing about the termination relation is that it supplies us with an inductive description of termination.
+%[[ Excellent. We now know that termination in the frame stack semantics is the same as evaluation in the big step semantics. The nice thing about the termination relation is that it supplies us with an inductive description of termination.
 
-#### Termination is invariant under evaluation !}%
+#### Termination is invariant under evaluation %]]
 %sort lemma413a {_ -->* Fs M Fs' M'} {_ frameterm Fs M} {_ frameterm Fs' M'} %.
 %mode lemma413a %in %in %out %.
 %term lemma413a_ref lemma413a -->*_ref FT FT %.
@@ -980,9 +980,9 @@ Here are some basic properties of the abstract machine: !}%
 %worlds () (lemma413c _ _ _) %.
 %freeze lemma413c %.
 %total () (lemma413c _ _ _) %.
-%{! ## The Lily type system
+%[[ ## The Lily type system
 #### Linearity
-I encode linearity as a predicate on LF functions. Thus if linear([x].F) then we know that F is linear in x. !}%
+I encode linearity as a predicate on LF functions. Thus if linear([x].F) then we know that F is linear in x. %]]
 %sort linear {_ %pi term %-> term} %.
 %name linear %.
 % mode linear +E.
@@ -1034,7 +1034,7 @@ I encode linearity as a predicate on LF functions. Thus if linear([x].F) then we
 %worlds (bsub_linear_lam1 bsub_linear_lam2) (sub_linear _ _ _) %.
 %freeze sub_linear %.
 %total D (sub_linear D _ _) %.
-%{! Some proofs are easier with relevance than with linearity. !}%
+%[[ Some proofs are easier with relevance than with linearity. %]]
 %sort relavant {_ %pi term %-> term} %.
 %name relavant %.
 %mode relavant %in %.
@@ -1109,7 +1109,7 @@ I encode linearity as a predicate on LF functions. Thus if linear([x].F) then we
 %worlds (blam) (eq_linear _ _ _) %.
 %freeze eq_linear %.
 %total () (eq_linear _ _ _) %.
-%{! #### Typing rules !}%
+%[[ #### Typing rules %]]
 %sort ? {_ term} {_ tp} %.
 % mode ? +M -T.
 %name ? %.
@@ -1137,10 +1137,10 @@ I encode linearity as a predicate on LF functions. Thus if linear([x].F) then we
 %worlds (blam_t btlam_t) (? _ _) %.
 %covers ? %in %out %.
 %freeze ? %.
-%{! Take note of how I require functions and products to be linear.
+%[[ Take note of how I require functions and products to be linear.
 
 ### Type preservation
-As we have a type system we should prove soundness of it. !}%
+As we have a type system we should prove soundness of it. %]]
 %sort tpres {_ M ? T} {_ M \n/ V} {_ V ? T} %.
 %mode tpres %in %in %out %.
 %term tpres_lam tpres (of_lam L D) ev_lam (of_lam L D) %.
@@ -1224,7 +1224,7 @@ As we have a type system we should prove soundness of it. !}%
 %worlds () (tpres_s _ _ _) %.
 %freeze tpres_s %.
 %total D (tpres_s _ D _) %.
-%{! ### Equalities and inversions !}%
+%[[ ### Equalities and inversions %]]
 %block bts_tlam [t tp]%.
 %sort eq_typings {_ M ? T} {_ M ? T} %.
 %mode eq_typings %in %out %.
@@ -1290,7 +1290,7 @@ As we have a type system we should prove soundness of it. !}%
 %worlds () (eq_val_bang _ _ _) %.
 %freeze eq_val_bang %.
 %total () (eq_val_bang _ _ _) %.
-%{! ## Abstract machine types !}%
+%[[ ## Abstract machine types %]]
 %sort fstp {_ framestack} {_ tp} {_ tp} %.
 % mode fstp +FST +T -T'.
 %name fstp %.
@@ -1335,8 +1335,8 @@ As we have a type system we should prove soundness of it. !}%
 %worlds () (eqt_tapp _ _ _) %.
 %freeze eqt_tapp %.
 %total () (eqt_tapp _ _ _) %.
-%{! ### Preservation
-Now I can prove soundness of the type system for the frame stack semantics: !}%
+%[[ ### Preservation
+Now I can prove soundness of the type system for the frame stack semantics: %]]
 %sort typed_step {_ fstp Fs T T'} {_ M ? T} {_ --> Fs M Fs' M'} {_ fstp Fs' T'' T'} {_ M' ? T''} %.
 %mode typed_step %in %in %in %out %out %.
 %term typed_step_letu %type d_step FsT (of_letu DN Di) evfs_letu (ftp_cons FsT ([a] [da] of_letu DN da)) Di %.
@@ -1380,9 +1380,9 @@ Now I can prove soundness of the type system for the frame stack semantics: !}%
 	%<- (frame_pres_lem Ss' FsTp D FsTp' D') %.
 %worlds () (frame_pres _ _ _ _ _) %.
 %total Ss (frame_pres Ss _ _ _ _) %.
-%{! #### Progress
+%[[ #### Progress
 Progress and preservation seem to be in fashion.
-I will not rely on progress elsewhere. !}%
+I will not rely on progress elsewhere. %]]
 %sort progress_good {_ framestack} {_ term} %.
 %mode progress_good %in %in %.
 %term progress_good_v %pi (progress_good nil V) %<- (value V) %.
@@ -1439,9 +1439,9 @@ I will not rely on progress elsewhere. !}%
 %term progress_lett progress _ _ (progress_good_s evfs_lett) %.
 %worlds () (progress _ _ _) %.
 %total () (progress _ _ _) %.
-%{! ## Strictness lemma
+%[[ ## Strictness lemma
 ### Stack manipulations
-There are two natural ways to define application of a frame stack to a term. I need them both and I need to show how they relate. As stacks are represented as lists this code is a nice example of how to prove classic theorems about lists. !}%
+There are two natural ways to define application of a frame stack to a term. I need them both and I need to show how they relate. As stacks are represented as lists this code is a nice example of how to prove classic theorems about lists. %]]
 %sort frameapply' {_ framestack} {_ term} {_ term} %.
 %mode frameapply' %in %in %out %.
 %term frameapply'_nil frameapply' nil M M %.
@@ -1583,8 +1583,8 @@ There are two natural ways to define application of a frame stack to a term. I n
 %worlds (blam) (frameapply_e1 _ _ _) %.
 %freeze frameapply_e1 %.
 %total () (frameapply_e1 _ _ _) %.
-%{! ### Some degenerate lemmas
-The next lemma is degenerate and needed to take care of other degenerate cases. !}%
+%[[ ### Some degenerate lemmas
+The next lemma is degenerate and needed to take care of other degenerate cases. %]]
 %sort lem45 {M %pi term %-> term} {_ {m term} frameapply' (Fs m) (N m) R} {_ {m term} frameapply' (Fs m) (M (N m)) R'} %.
 %mode lem45 %in %in %out %.
 %term lem45_nil lem45 _ ([m] frameapply'_nil) ([m] frameapply'_nil) %.
@@ -1606,7 +1606,7 @@ The next lemma is degenerate and needed to take care of other degenerate cases. 
 %worlds (blam) (lem45 _ _ _) %.
 %freeze lem45 %.
 %total D (lem45 _ D _) %.
-%{! ### Frames are linear !}%
+%[[ ### Frames are linear %]]
 %sort redex {_ term} {_ term} %.
 %name redex %.
 % mode redex +M +M'.
@@ -1669,8 +1669,8 @@ The next lemma is degenerate and needed to take care of other degenerate cases. 
 %mode lem35 %in %in %in %in %out %.
 %worlds (blam) (lem35 _ _ _ _ _) %.
 %total () (lem35 _ _ _ _ _) %.
-%{! Here I am building up rather technical lemmas that are needed in the strictness lemma.
-Take note of how easy it is to deal with linearity. !}%
+%[[ Here I am building up rather technical lemmas that are needed in the strictness lemma.
+Take note of how easy it is to deal with linearity. %]]
 %sort frame_linear_lem2 {_ redex_tp (%the ({m term} redex (M m) (M' m)) C) Ct} {_ {m term} frameapply' (Fs m) (M m) (R m)} {_ linear R} {_ {m} frameapply' (Fs m) (M' m) (R' m)} {_ linear R'} %.
 %mode frame_linear_lem2 %in %in %in %out %out %.
 %term frame_linear_lem2_nil1 frame_linear_lem2 _ ([m] %the (frameapply' _ (app _ M2) _) frameapply'_nil) (linear_app1 (linear_lam L)) ([m] frameapply'_nil) (L M2) %.
@@ -1771,7 +1771,7 @@ Take note of how easy it is to deal with linearity. !}%
 	%<- (frame_linear_lem1 redex_tp_tapp FA LR FA' LR') %.
 %worlds () (frame_linear _ _ _ _ _ _) %.
 %total () (frame_linear _ _ _ _ _ _) %.
-%{! ### Termination is invariant to redexes !}%
+%[[ ### Termination is invariant to redexes %]]
 %sort add_redex_steps {_ redex M M'} {_ frameterm Fs M'} {_ frameterm Fs M} %.
 %mode add_redex_steps %in %in %out %.
 %term add_redex_steps_app add_redex_steps redex_app Ft (frameterm_app (frameterm_lam Ft)) %.
@@ -1879,7 +1879,7 @@ Take note of how easy it is to deal with linearity. !}%
 %worlds (blam) (lem26 _ _ _ _) %.
 %freeze lem26 %.
 %total () (lem26 _ _ _ _) %.
-%{! ### More on linear frames !}%
+%[[ ### More on linear frames %]]
 %sort lem27 {_ relavant ([m] N)} {Fs} {Fs'} {_ eqf Fs Fs'} %.
 %mode lem27 %in %in %in %out %.
 %term lem27_app1 %pi (lem27 (relavant_app1 R) M M' Q) %<- (lem27 R M M' Q) %.
@@ -2055,11 +2055,11 @@ Take note of how easy it is to deal with linearity. !}%
 %worlds () (add_frame _ _ _ _ _) %.
 %freeze add_frame %.
 %total () (add_frame _ _ _ _ _) %.
-%{! ### Strictness lemma preparations
+%[[ ### Strictness lemma preparations
 Now we are ready for the strictness lemma.
 
 ### Height preservation
-The proof relies on complete induction on the height of a derivation which is a little troublesome in Twelf. !}%
+The proof relies on complete induction on the height of a derivation which is a little troublesome in Twelf. %]]
 %sort nat %.
 %term zero nat %.
 %term succ %pi nat %-> nat %.
@@ -2150,7 +2150,7 @@ The proof relies on complete induction on the height of a derivation which is a 
 %term frameterm_eq_framesNum_rule frameterm_eq_framesNum eqf_ref eq_ref Ft H Ft H %.
 %worlds () (frameterm_eq_framesNum _ _ _ _ _ _) %.
 %total () (frameterm_eq_framesNum _ _ _ _ _ _) %.
-%{! #### Height reducing inversions !}%
+%[[ #### Height reducing inversions %]]
 %sort up_app {ft frameterm Fs (app M1 M2)} {_ height_ok ft (succ N)} {ft' frameterm (cons (fapp M2) Fs) M1} {_ height_ok ft' N} %.
 %mode up_app %in %in %out %out %.
 %term up_app_rule up_app (frameterm_app F) (height_ok_app H) F H %.
@@ -2201,7 +2201,7 @@ The proof relies on complete induction on the height of a derivation which is a 
 %term up_thunk_rule up_thunk (frameterm_thunk F) (height_ok_thunk H) F H %.
 %worlds () (up_thunk _ _ _ _) %.
 %total D (up_thunk D _ _ _) %.
-%{! ### Special cases of type preservation !}%
+%[[ ### Special cases of type preservation %]]
 %sort types_pres_app1_s {_ M \s/ V} {_ app M N ? T} {_ app V N ? T} %.
 %mode types_pres_app1_s %in %in %out %.
 %term types_pres_app1_s_rule %pi (%type s_pres_app1_s E (of_app D2 D1) (of_app D2 D1')) %<- (tpres_s D1 E D1') %.
@@ -2250,7 +2250,7 @@ The proof relies on complete induction on the height of a derivation which is a 
 %term redex_rev_type_letb redex_rev_type redex_letb (of_letb D2 (of_thunk D1)) (D2 _ (of_letb D1 (of_thunk D1))) %.
 %worlds () (redex_rev_type _ _ _) %.
 %total () (redex_rev_type _ _ _) %.
-%{! ### The actual lemma !}%
+%[[ ### The actual lemma %]]
 %sort strictness_base {N} {M} {_ N M ? bang T} {_ linear N} {_ value (N M)} {_ value M} %.
 %mode strictness_base %in %in %in %in %in %out %.
 %term strictness_base_rule strictness_base _ _ _ linear_id V V %.
@@ -2587,13 +2587,13 @@ The proof relies on complete induction on the height of a derivation which is a 
 %worlds () (strictness21 _ _ _ _) %.
 % covers strictness21 +N +Ev -S -Term.
 %total () (strictness21 _ _ _ _) %.
-%{! ``>See all code for this case study``. `` check="true">See Twelf's output``.
+%[[ ``>See all code for this case study``. `` check="true">See Twelf's output``.
 
 [Category:Twelf code](/wiki/category-twelf-code/)
-\{\{case study\}\} !}%
-%{!
+\{\{case study\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Lily).
-!}%
+%]]

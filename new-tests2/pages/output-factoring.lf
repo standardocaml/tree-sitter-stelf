@@ -1,6 +1,6 @@
 %                            
 %                     
-%{! When checking coverage of [metatheorem](/wiki/metatheorem/)s, a common problem arises because the [output coverage](/wiki/coverage-checking/) checker only considers each rule in isolation. The proof transformation technique for addressing this problem is known as **output factoring**.
+%[[ When checking coverage of [metatheorem](/wiki/metatheorem/)s, a common problem arises because the [output coverage](/wiki/coverage-checking/) checker only considers each rule in isolation. The proof transformation technique for addressing this problem is known as **output factoring**.
 
 The primary symptom of the problem is if Twelf fails when checking an %total declaration and gives this sort of error:
 
@@ -11,7 +11,7 @@ Output coverage error ...
 
 ## Even and odd
 
-In this section, we prove that every natural number is even or odd.  First, we define the judgements: !}%
+In this section, we prove that every natural number is even or odd.  First, we define the judgements: %]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -23,7 +23,7 @@ In this section, we prove that every natural number is even or odd.  First, we d
 %sort even_or_odd {_ nat} %.
 %term eoo-e %pi (even_or_odd X) %<- (even X) %.
 %term eoo-o %pi (even_or_odd X) %<- (odd X) %.
-%{!
+%[[
 
 ### Incorrect proof
 
@@ -56,21 +56,21 @@ Unfortunately, Twelf's output-coverage checker does not notice this sort of mult
 
 Nonetheless, we need to case-analyze this output in order to complete the proof.  How can we do so?  Well, Twelf does not allow output coverage to be split across constants, but it certainly allows **input coverage** to be split across constants.  Thus, we can solve the problem by turning an output-coverage checking problem into an input-coverage checking problem.  We do this by writing an additional helper lemma.
 
-Looking at what the two constants do with the output of the inductive call, we can see that in each case they turn a derivation of ``even_or_odd X`` into a derivation of ``even_or_odd (s X)``—it's just that they do it differently depending on what the output is.  Thus, we factor this reasoning into a lemma: !}%
+Looking at what the two constants do with the output of the inductive call, we can see that in each case they turn a derivation of ``even_or_odd X`` into a derivation of ``even_or_odd (s X)``—it's just that they do it differently depending on what the output is.  Thus, we factor this reasoning into a lemma: %]]
 %sort lemma {_ even_or_odd X} {_ even_or_odd (s X)} %.
 %mode lemma %in %out %.
 %term _ lemma (eoo-o Y) (eoo-e (s-e Y)) %.
 %term _ lemma (eoo-e Y) (eoo-o (s-o Y)) %.
 %worlds () (lemma _ _) %.
 %total X (lemma X _) %.
-%{! Using this lemma, we complete the proof as follows: !}%
+%[[ Using this lemma, we complete the proof as follows: %]]
 %sort always_even_or_odd {N nat} {_ even_or_odd N} %.
 %mode always_even_or_odd %in %out %.
 %term aeo_zero always_even_or_odd z (eoo-e z-e) %.
 %term aeo_succ %pi (always_even_or_odd (s X) D') %<- (always_even_or_odd X D) %<- (lemma D D') %.
 %worlds () (always_even_or_odd D P) %.
 %total D (always_even_or_odd D _) %.
-%{! ## Progress
+%[[ ## Progress
 
 Another example where output factoring comes up is the progress theorem for a programming language:
 
@@ -78,7 +78,7 @@ Another example where output factoring comes up is the progress theorem for a pr
 
 A typical case of progress makes an inductive call on a subderivation and then case-analyzes whether the result is a value or takes a step.  This reasoning must be factored off into lemmas to avoid output coverage problems.
 
-Using the simply typed λ-calculus defined in \{\{proving|title=Representing the judgements of the STLC\}\}, we now show how output factoring is used to prove progress.  For review, here is the LF signature for the STLC: !}%
+Using the simply typed λ-calculus defined in \{\{proving|title=Representing the judgements of the STLC\}\}, we now show how output factoring is used to prove progress.  For review, here is the LF signature for the STLC: %]]
 %% Syntax
 %sort tp %.
 %term unit tp %.
@@ -100,11 +100,11 @@ Using the simply typed λ-calculus defined in \{\{proving|title=Representing the
 %term step_app_1 %pi (step (app E1 E2) (app E1' E2)) %<- (step E1 E1') %.
 %term step_app_2 %pi (step (app E1 E2) (app E1 E2')) %<- (step E2 E2') %<- (value E1) %.
 %term step_app_beta %pi (step (app (lam T2 ([x] E x)) E2) (E E2)) %<- (value E2) %.
-%{! The result of progress is represented by the following sum type: !}%
+%[[ The result of progress is represented by the following sum type: %]]
 %sort val_or_step {_ tm} %.
 %term vos_val %pi (val_or_step E) %<- (value E) %.
 %term vos_step %pi (val_or_step E) %<- (step E E') %.
-%{! As discussed above, we first prove a factoring lemma that does all the work after the inductive call of the application case: !}%
+%[[ As discussed above, we first prove a factoring lemma that does all the work after the inductive call of the application case: %]]
 %sort progress/app {_ of E1 (arrow T2 T)} {_ val_or_step E1} {_ val_or_step E2} {_ val_or_step (app E1 E2)} %.
 %mode progress/app %in %in %in %out %.
 %term pa_step_1 progress/app _ (vos_step DstepE1) _ (vos_step (step_app_1 DstepE1)) %.
@@ -112,9 +112,9 @@ Using the simply typed λ-calculus defined in \{\{proving|title=Representing the
 %term pa_val_val progress/app (%the (of (lam T2' ([x] E x)) (arrow T2 T)) DofE1) (vos_val (%the (value (lam T2' ([x] E x))) DvalE1)) (vos_val DvalE2) (vos_step (step_app_beta DvalE2)) %.
 %worlds () (progress/app _ _ _ _) %.
 %total () (progress/app _ _ _ _) %.
-%{! We give this lemma the typing derivation for ``E1`` so that we can learn in the case ``pa_val_val`` that the ``E1`` is a ``lam``, which is necessary to apply ``step_app_beta``.  Note that there is no need for an explicit value inversion/canonical forms lemma: in the case ``pa_val_val``, we simply assume that ``E1`` is a ``lam``, and the coverage checker justifies this assumption because it is both a ``value`` and has type ``arrow T2 T``.
+%[[ We give this lemma the typing derivation for ``E1`` so that we can learn in the case ``pa_val_val`` that the ``E1`` is a ``lam``, which is necessary to apply ``step_app_beta``.  Note that there is no need for an explicit value inversion/canonical forms lemma: in the case ``pa_val_val``, we simply assume that ``E1`` is a ``lam``, and the coverage checker justifies this assumption because it is both a ``value`` and has type ``arrow T2 T``.
 
-Using this lemma, the proof of progress is quite simple: !}%
+Using this lemma, the proof of progress is quite simple: %]]
 %sort progress {_ of E T} {_ val_or_step E} %.
 %mode progress %in %out %.
 %term prog_empty progress of_empty (vos_val value_empty) %.
@@ -126,9 +126,9 @@ Using this lemma, the proof of progress is quite simple: !}%
 	%<- (progress/app DofE1 DvosE1 DvosE2 DvosApp) %.
 %worlds () (progress _ _) %.
 %total D (progress D _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Output_factoring).
-!}%
+%]]

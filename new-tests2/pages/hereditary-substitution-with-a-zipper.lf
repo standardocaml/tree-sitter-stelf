@@ -1,9 +1,9 @@
 %                                                 
-%{! This article represents a (partially unsuccessful) attempt to remove the "ugly" portion from the global soundness proof in the [verifications and uses](/wiki/verifications-and-uses/) article.
+%[[ This article represents a (partially unsuccessful) attempt to remove the "ugly" portion from the global soundness proof in the [verifications and uses](/wiki/verifications-and-uses/) article.
 The language of propositions and rules (and, as a result, the argument for global completeness) is unchanged from the [verifications and uses](/wiki/verifications-and-uses/), and so we omit
 it here. 
 
-This article is an intermediate point between the [verifications and uses](/wiki/verifications-and-uses/) article and the [verifications and uses with zippers](/wiki/verifications-and-uses-with-zippers/) article. | hidden = true !}%
+This article is an intermediate point between the [verifications and uses](/wiki/verifications-and-uses/) article and the [verifications and uses with zippers](/wiki/verifications-and-uses-with-zippers/) article. | hidden = true %]]
 %sort prop %.
 %sort atom %.
 %block bl_atom [qp atom]%.
@@ -23,15 +23,15 @@ This article is an intermediate point between the [verifications and uses](/wiki
 %term ∧I %pi (verif A) %-> (verif B) %-> (verif (A ∧ B)) %.
 %term ∧E₁ %pi (use (A ∧ B)) %-> (use A) %.
 %term ∧E₂ %pi (use (A ∧ B)) %-> (use B) %.
-%{! Rather than the (somewhat ugly) process used to find the main variable
+%[[ Rather than the (somewhat ugly) process used to find the main variable
 in the [verifications and uses](/wiki/verifications-and-uses/) example, in this example we will create
 a sort-of zipper data structure that allows us to "pull out" the
-head variable from the inside of a term. !}%
-%{! ## Defining pseudo-zippers !}%
-%{! A [[w:zipper|zipper data structure]] is a way of describing paths into
+head variable from the inside of a term. %]]
+%[[ ## Defining pseudo-zippers %]]
+%[[ A [[w:zipper|zipper data structure]] is a way of describing paths into
 complex structures. A "real" zipper over an atomic term has the structure of a 
 _spine_ in a [[spine form]] presentation of logic; what we present
-here isn't "really" a spine (or a zipper). !}%
+here isn't "really" a spine (or a zipper). %]]
 %sort zip {_ prop} {_ prop} %.
 %term end zip A A %.
 %term ⊃Z %pi (zip A (B₁ ⊃ B₂)) %-> (verif B₁) %-> (zip A B₂) %.
@@ -40,7 +40,7 @@ here isn't "really" a spine (or a zipper). !}%
 %sort use' {_ prop} %.
 %term · %pi (hyp A) %-> (zip A B) %-> (use' B) %.
 %prec %none 10 · %.
-%{! For instance, the ``use'``
+%[[ For instance, the ``use'``
 corresponding to ``(⊃E (⊃E (⊃E (var x) N&lt;sub&gt;1&lt;/sub&gt;) N&lt;sub&gt;2&lt;/sub&gt;)
 N&lt;sub&gt;3&lt;/sub&gt;)`` is 
 ``x · (⊃Z (⊃Z (⊃Z end N&lt;sub>1&lt;/sub>) N&lt;sub>2&lt;/sub>) N&lt;sub>3&lt;/sub>)`` --- 
@@ -50,14 +50,14 @@ than the subterms ``N&lt;sub>2&lt;/sub>`` and
 ``N&lt;sub>3&lt;/sub>``. In a conversion to spine form,
 we would not only expose the head variable ``x`` but would make 
 ``N&lt;sub>1&lt;/sub>`` the "least deeply nested" subterm and make
-``N&lt;sub>3&lt;/sub>`` the "most deeply nested" subterm. !}%
-%{! ## Zipping and unzipping !}%
-%{! We need to both show that we can zip and unzip a ``use`` into
+``N&lt;sub>3&lt;/sub>`` the "most deeply nested" subterm. %]]
+%[[ ## Zipping and unzipping %]]
+%[[ We need to both show that we can zip and unzip a ``use`` into
 a ``use'``, and vice versa. These two proofs are essentially the
 same logic program run in opposite directions, but Twelf only allows
 us to assign a single mode to a metatheorem, so rather than just
 copying and pasted we have "cleaned up" both the ``unzip``
-and ``rezip`` functions a bit. !}%
+and ``rezip`` functions a bit. %]]
 %sort unzip {_ use B} {_ use' B} %.
 %term _ %pi (unzip (⊃E R N) (X · ⊃Z Z N)) %<- (unzip R (X · Z)) %.
 %term _ %pi (unzip (∧E₁ R) (X · ∧Z₁ Z)) %<- (unzip R (X · Z)) %.
@@ -74,7 +74,7 @@ and ``rezip`` functions a bit. !}%
 %mode rezip %in %in %out %.
 %worlds (bl_atom bl_hyp) (rezip _ _ _) %.
 %total Z (rezip _ Z _) %.
-%{! ## Global soundness !}%
+%[[ ## Global soundness %]]
 %sort hsubst_n {A} {_ verif A} {_ %pi (hyp A) %-> (verif B)} {_ verif B} %.
 %sort hsubst_r {A} {_ verif A} {_ %pi (hyp A) %-> (use' (a Q))} {_ verif (a Q)} %.
 %sort hsubst_rr {A} {_ verif A} {_ %pi (hyp A) %-> (zip C B)} {_ zip C B'} %.
@@ -120,8 +120,8 @@ and ``rezip`` functions a bit. !}%
 %term _ hsubst_rn A _ M₀ ([x] end) M₀ %.
 %worlds (bl_atom bl_hyp) (hsubst_n _ _ _ _) (hsubst_rr _ _ _ _) (hsubst_rn _ _ _ _ _) (hsubst_r _ _ _ _) %.
 %reduces <= B A (hsubst_rn A B _ _ _) %.
-%{! ## Failure of termination checking !}%
-%{! The fact that our representation uses both proofs ``use A`` and
+%[[ ## Failure of termination checking %]]
+%[[ The fact that our representation uses both proofs ``use A`` and
 proofs ``use' A`` means that we will run afowl of Twelf's termination
 checker --- an unzipped term has a different size than the corresponding 
 zipped term. We could certainly convince Twelf that zipping and unzipping
@@ -129,9 +129,9 @@ preserved size by using the same tree-like [structural metric](/wiki/structural-
 [concrete representation](/wiki/concrete-representation/) case study, but that would be notationally
 heavy and unenlightening.
 
-Another option is to ask Twelf to trust us: !}%
+Another option is to ask Twelf to trust us: %]]
 %reduces = R' R (unzip R R') %.
-%{! However, for some reason
+%[[ However, for some reason
 (possibly because the types of the two terms is different) this does not 
 work. and we still get an error message from the final `%total`
 declaration.
@@ -148,4 +148,4 @@ declaration.
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Hereditary_substitution_with_a_zipper).
-!}%
+%]]

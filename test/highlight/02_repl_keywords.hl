@@ -1,0 +1,13 @@
+0:0-0:5	keyword.debug	`%quit`
+0:5-1:5	keyword.debug	``
+1:5-1:10	constructor	` mode`
+1:5-1:10	local.reference	` mode`
+1:10-2:4	keyword.debug	``
+2:5-2:12	constructor	`chatter`
+2:5-2:12	local.reference	`chatter`
+2:12-3:4	keyword.debug	``
+3:5-3:12	constructor	`chatter`
+3:5-3:12	local.reference	`chatter`
+3:13-3:14	constructor	`3`
+3:13-3:14	local.reference	`3`
+3:14-4:8	keyword.debug	``

@@ -1,7 +1,7 @@
 %                                   
 %              
 %              
-%{! Twelf is a research project concerned with the design, implementation, and
+%[[ Twelf is a research project concerned with the design, implementation, and
 application of logical frameworks funded by the National Science Foundation
 under grants CCR-9619584 and CCR-9988281 Meta-Logical Frameworks, CCR-0306313
 Efficient Logical Frameworks (Principal Investigator: Frank Pfenning) and by
@@ -28,4 +28,4 @@ with major contributions by
 - Kevin Watkins
 
 Twelf provides a uniform meta-language for specifying, implementing, and proving properties of programming languages and logics. Example suites include Cartesian Closed Categories and lambda-calculus, the Church-Rosser theorem for the untyped lambda-calculus, Mini-ML including type preservation and compilation, cut elimination, theory of logic programming, and Hilbert's deduction theorem.
-!}%
+%]]

@@ -1,14 +1,14 @@
 %                                       
-%{! ## Fluid variable sets !}%
+%[[ ## Fluid variable sets %]]
 %sort uninhabited %.
 %sort fluid %.
 %sort fluids %.
 %term # fluids %.
 %term , %pi fluid %-> fluids %-> fluids %.
 %prec %right 10 , %.
-%{! ### Individual fluid variables !}%
-%{! We treat typing rules as if there are *no* concrete fluid variables,
-but we have to define specific fluid variables for the dynamic semantics. !}%
+%[[ ### Individual fluid variables %]]
+%[[ We treat typing rules as if there are *no* concrete fluid variables,
+but we have to define specific fluid variables for the dynamic semantics. %]]
 %term a fluid %.
 %term b fluid %.
 %term c fluid %.
@@ -56,7 +56,7 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %mode exclusive-fluid %in %in %out %.
 %worlds () (exclusive-fluid _ _ _) %.
 %total () (exclusive-fluid _ _ _) %.
-%{! ### Operations on sets of fluid variables !}%
+%[[ ### Operations on sets of fluid variables %]]
 %sort in {_ fluid} {_ fluids} %.
 %term in/z in A (A , As) %.
 %term in/s %pi (in A As) %-> (in A (B , As)) %.
@@ -66,7 +66,7 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %sort merge {_ fluids} {_ fluids} {_ fluids} %.
 %term merge/z merge # Bs Bs %.
 %term merge/s %pi (merge (A , As) Bs (A , Cs)) %<- (merge As Bs Cs) %.
-%{! ### Structural properties !}%
+%[[ ### Structural properties %]]
 %sort in-subset {_ in A Bs} {_ subset Bs Cs} {_ in A Cs} %.
 %term _ in-subset in/z (%the (subset (A , Bs) Cs) (subset/s In Sub)) In %.
 %term _ 
@@ -143,8 +143,8 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %mode merge-subset1 %in %out %.
 %worlds (bfluid) (merge-subset1 _ _) %.
 %total T (merge-subset1 T _) %.
-%{! ## Syntax !}%
-%{! ### Types !}%
+%[[ ## Syntax %]]
+%[[ ### Types %]]
 %sort ty %.
 %term ty/nat ty %.
 % nat
@@ -152,10 +152,10 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 % tau1 tau2
 %term ty/mayuse %pi ty %-> fluids %-> ty %.
 % [C] tau
-%{! #### Type equality !}%
+%[[ #### Type equality %]]
 %sort eqty {_ ty} {_ ty} %.
 %term eqty/refl eqty T T %.
-%{! #### Individual fluid types !}%
+%[[ #### Individual fluid types %]]
 %sort fluidty {_ fluid} {_ ty} %.
 %block ftyblock {T ty} [f fluid] [d fluidty f T]%.
 %term fluidty/a fluidty a ty/nat %.
@@ -170,7 +170,7 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %mode fluidty-uniq %in %in %out %.
 %worlds () (fluidty-uniq _ _ _) %.
 %total () (fluidty-uniq _ _ _) %.
-%{! ### Terms !}%
+%[[ ### Terms %]]
 %sort tm %.
 %term tm/lam %pi ty %-> (%pi tm %-> tm) %-> tm %.
 %term tm/app %pi tm %-> tm %-> tm %.
@@ -183,16 +183,16 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %term tm/susp %pi tm %-> tm %.
 %term tm/unsusp %pi tm %-> tm %.
 %define tm/let (%pi tm %-> ty %-> (%pi tm %-> tm) %-> tm) [e] [t] [f] tm/app (tm/lam t f) e %.
-%{! #### Term equality !}%
+%[[ #### Term equality %]]
 %sort eqtm {_ tm} {_ tm} %.
 %term eqtm/refl eqtm E E %.
-%{! ### Values !}%
+%[[ ### Values %]]
 %sort v {_ tm} %.
 %term v/lam v (tm/lam T ([x] E x)) %.
 %term v/z v tm/z %.
 %term v/s %pi (v E) %-> (v (tm/s E)) %.
 %term v/susp v (tm/susp E) %.
-%{! ### Frames and stacks !}%
+%[[ ### Frames and stacks %]]
 %sort frame %.
 %scope frame %sort - %.
 %term -- -- %.
@@ -207,11 +207,11 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %term emp stack %.
 %term ; %pi frame %-> stack %-> stack %.
 %prec %right 10 ; %.
-%{! ### Machine States !}%
+%[[ ### Machine States %]]
 %sort state %.
 %term >> %pi stack %-> tm %-> state %.
 %term << %pi stack %-> ({t} %pi (v t) %-> state) %.
-%{! ## Static semantics !}%
+%[[ ## Static semantics %]]
 %sort of {_ tm} {_ ty} {_ fluids} %.
 % May access the mentioned fluids
 %term of/weaken %pi (of E T Bs) %-> (subset Bs Cs) %-> (of E T Cs) %.
@@ -259,8 +259,8 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %sort ok {_ state} %.
 %term ok>> %pi (ofstack K T Bs) %-> (of E T Bs) %-> (ok (>> K E)) %.
 %term ok<< %pi (ofstack K T Bs) %-> (of E T Bs) %-> ({V v E} ok (<< K E V)) %.
-%{! ## Dynamic semantics !}%
-%{! ### Deep binding lookup !}%
+%[[ ## Dynamic semantics %]]
+%[[ ### Deep binding lookup %]]
 %sort lookup {_ fluid} {_ stack} {t tm} {_ v t} %.
 %term lookup/app1 %pi (lookup F K Val Dv) %-> (lookup F (f/app1 --- E2 ; K) Val Dv) %.
 %term lookup/app2 %pi (lookup F K Val Dv) %-> (lookup F (f/app2 E1 DV --- ; K) Val Dv) %.
@@ -273,7 +273,7 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 	%pi (neqfluid A B)
 	%-> (lookup A K Val Dv)
 	%-> (lookup A (f/fluid-bind B _ _ ; K) Val Dv) %.
-%{! ### Small-step evaluation !}%
+%[[ ### Small-step evaluation %]]
 %sort step {_ state} {_ state} %.
 %term step/lam step (>> K (tm/lam T ([x] E x))) (<< K (tm/lam T ([x] E x)) v/lam) %.
 %term step/app1 step (>> K (tm/app E1 E2)) (>> (f/app1 --- E2 ; K) E1) %.
@@ -293,12 +293,12 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %term step/susp step (>> K (tm/susp E)) (<< K (tm/susp E) v/susp) %.
 %term step/ususp step (>> K (tm/unsusp E)) (>> (f/unsusp --- ; K) E) %.
 %term step/ususpr step (<< (f/unsusp --- ; K) (tm/susp E) _) (>> K E) %.
-%{! ## Progress !}%
-%{! ### Not stuck !}%
+%[[ ## Progress %]]
+%[[ ### Not stuck %]]
 %sort nstuck {_ state} %.
 %term nstuck/step %pi (step E E') %-> (nstuck E) %.
 %term nstuck/final nstuck (<< emp V DV) %.
-%{! ### First deep stack access theorem !}%
+%[[ ### First deep stack access theorem %]]
 %sort access-stack {_ in A Bs} {_ ofstack K T Bs} {_ lookup A K E Dv} {_ fluidty A Tf} {_ of E Tf #} %.
 %mode access-stack %in %in %out %out %out %.
 %sort read-stack {_ eq-or-in A B Cs} {_ decidable-fluid A B} {_ offrame (f/fluid-bind B E Dv) T (B , Cs) T Cs} {_ ofstack K T Cs} {_ lookup A (f/fluid-bind B E Dv ; K) Ev Dval} {_ fluidty A Tf} {_ of Ev Tf #} %.
@@ -338,7 +338,7 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 	%<- (access-stack In' (%the (ofstack K T Cs) Dt) Look Df Dvt) %.
 %worlds () (access-stack _ _ _ _ _) (read-stack _ _ _ _ _ _ _) %.
 %total (T S) (access-stack _ T _ _ _) (read-stack _ _ _ S _ _ _) %.
-%{! ### Canonical Forms !}%
+%[[ ### Canonical Forms %]]
 %sort canon-arrow {_ of E1 (ty/arrow T1 T2) Bs} {_ v E1} {_ eqtm E1 (tm/lam T1 ([x] E x))} %.
 %term _ %pi (canon-arrow (of/weaken T _) Dv Eq) %<- (canon-arrow T Dv Eq) %.
 %term _ canon-arrow (of/lam _) v/lam eqtm/refl %.
@@ -361,7 +361,7 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 %mode canon-mayuse %in %in %out %.
 %worlds () (canon-mayuse _ _ _) %.
 %total T (canon-mayuse T _ _) %.
-%{! ### Progress !}%
+%[[ ### Progress %]]
 %sort progress>> {_ ofstack K T Bs} {_ of E T Bs} {_ step (>> K E) S'} %.
 %term _ 
 	%pi (progress>> TK (of/weaken TE Sub) Step)
@@ -410,8 +410,8 @@ but we have to define specific fluid variables for the dynamic semantics. !}%
 	%<- (p2 Eq _ _ _ _ Step) %.
 %term _ progress<< (ofstack/frame (offrame/fluid-let _ _) TK) TE Dv (nstuck/step step/flet2) %.
 %term _ progress<< (ofstack/frame (offrame/fluid-bind _ _) TK) TE Dv (nstuck/step step/fletr) %.
-%{! Note: when I write in ``eqtm E (tm/susp E)`` here and then
-try to check the case, the error I get is worrisome, occurs-check wise. !}%
+%[[ Note: when I write in ``eqtm E (tm/susp E)`` here and then
+try to check the case, the error I get is worrisome, occurs-check wise. %]]
 %sort p3 {_ eqtm E (tm/susp E')} {K} {Dv} {_ step (<< (f/unsusp --- ; K) E Dv) S'} %.
 %term _ p3 eqtm/refl _ _ step/ususpr %.
 %mode p3 %in %in %in %out %.
@@ -429,8 +429,8 @@ try to check the case, the error I get is worrisome, occurs-check wise. !}%
 %mode progress %in %out %.
 %worlds () (progress _ _) %.
 %total () (progress _ _) %.
-%{! ## Preservation !}%
-%{! ### Second deep stack access theorem !}%
+%[[ ## Preservation %]]
+%[[ ### Second deep stack access theorem %]]
 %sort access-stack' {_ in A Bs} {_ ofstack K T Bs} {_ lookup A K E Dv} {_ fluidty A Tf} {_ of E Tf #} %.
 %mode access-stack' %in %in %in %out %out %.
 %sort read-stack' {_ eq-or-in A B Cs} {_ decidable-fluid A B} {_ offrame (f/fluid-bind B E Dv) T (B , Cs) T Cs} {_ ofstack K T Cs} {_ lookup A (f/fluid-bind B E Dv ; K) Ev Dval} {_ fluidty A Tf} {_ of Ev Tf #} %.
@@ -470,11 +470,11 @@ try to check the case, the error I get is worrisome, occurs-check wise. !}%
 	%<- (access-stack' In' (%the (ofstack K T Cs) Dt) Look Df Dvt) %.
 %worlds () (access-stack' _ _ _ _ _) (read-stack' _ _ _ _ _ _ _) %.
 %total (T S) (access-stack' _ T _ _ _) (read-stack' _ _ _ S _ _ _) %.
-%{! ### Effect-free value theorem !}%
-%{! Yipes! This is actually a complicated induction principle, because we need
+%[[ ### Effect-free value theorem %]]
+%[[ Yipes! This is actually a complicated induction principle, because we need
 to induct on two things at once - either the typing derivation or the
 value derivation gets smaller with every recursive call. Perhaps this could
-be factored out into two non-mutually-recursive lemmas? !}%
+be factored out into two non-mutually-recursive lemmas? %]]
 %sort effect-value {_ v E} {_ of E T Bs} {_ of E T #} %.
 %term _ %pi (effect-value V (of/weaken T Sub) T') %<- (effect-value V T T') %.
 %term _ effect-value v/lam T T %.
@@ -484,7 +484,7 @@ be factored out into two non-mutually-recursive lemmas? !}%
 %mode effect-value %in %in %out %.
 %worlds () (effect-value _ _ _) %.
 %total [S T] (effect-value S T _) %.
-%{! ### Inversion !}%
+%[[ ### Inversion %]]
 %sort inv-lam {_ of (tm/lam T1 ([x] E x)) T Bs} {_ eqty T (ty/arrow T1 T2)} {_ {x} %pi (of x T1 #) %-> (of (E x) T2 #)} %.
 %term _ %pi (inv-lam (of/weaken T Sub) Eq Tf) %<- (inv-lam T Eq Tf) %.
 %term _ inv-lam (of/lam F) eqty/refl F %.
@@ -618,7 +618,7 @@ be factored out into two non-mutually-recursive lemmas? !}%
 %mode invf-fluid-bind %in %out %out %.
 %worlds () (invf-fluid-bind _ _ _) %.
 %total T (invf-fluid-bind T _ _) %.
-%{! ### Preservation !}%
+%[[ ### Preservation %]]
 %sort preservation {_ step S S'} {_ ok S} {_ ok S'} %.
 %mode preservation %in %in %out %.
 %term _ preservation step/lam (ok>> TK TE) (ok<< TK TE v/lam) %.
@@ -747,9 +747,9 @@ be factored out into two non-mutually-recursive lemmas? !}%
 	%<- (merge-subset1 Merge' Sub) %.
 %worlds () (preservation _ _ _) %.
 %total () (preservation _ _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/User:Rsimmons/Fluid_binding).
-!}%
+%]]

@@ -1,5 +1,5 @@
 %                       
-%{! A **metatheorem** is a theorem about an [object language](/wiki/object-logic/). This is a very general statement, but **metatheorem** is a very general term. Many interesting metatheorems can be posed as _∀∃-statements,_ and these are the kind of metatheorems that can be verified in Twelf. Another kind of metatheorem is a _[totality assertion](/wiki/totality-assertion/)_; these are more limited because any totality assertion can also be posed as a ∀∃-statement. 
+%[[ A **metatheorem** is a theorem about an [object language](/wiki/object-logic/). This is a very general statement, but **metatheorem** is a very general term. Many interesting metatheorems can be posed as _∀∃-statements,_ and these are the kind of metatheorems that can be verified in Twelf. Another kind of metatheorem is a _[totality assertion](/wiki/totality-assertion/)_; these are more limited because any totality assertion can also be posed as a ∀∃-statement. 
 
 Twelf can prove ∀∃-metatheorems in one of two ways. The first method, the [theorem prover](/wiki/theorem-prover/), is incomplete and not currently recommended for use. It allows the user to directly specify a ∀∃-statement about LF terms, and then ask Twelf to verify that statement. The other method is to write out a proof of the ∀∃ statement in Twelf, and then use Twelf's ability to state and verify [totality assertions](/wiki/totality-assertion/) to show that the proof is correct.
 
@@ -72,10 +72,10 @@ We will now write a judgment that, instead of relating objects with type <Math f
 
 Describing the rules that define this judgment is beyond the scope of this article; see Frank Pfenning's notes [http://www.cs.cmu.edu/~fp/courses/lp/lectures/18-proofs.html notes] for a continuation of this approach, or [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/) for a description that is closer to how Twelf is used in practice. However, without describing these rules, if they were written and written correctly, we could verify a totality assertion that stated that ``plus-comm`` is a total relation with derivations of <Math formula="\texttt{plus}(N_1,N_2,N_3)"/> as an input and derivations of <Math formula="\texttt{plus}(N_2,N_1,N_3)"/> as an output.
 
-This means that, for any three natural numbers <Math formula="\texttt{}N_1"/>, <Math formula="\texttt{}N_2"/>, and <Math formula="\texttt{}N_3"/>, and any proof object with the type <Math formula="\texttt{plus}(N_1,N_2,N_3)"/>, there is a proof object with type <Math formula="\texttt{plus}(N_2,N_1,N_3)"/>. This is equivalent to the ∀∃-statement for the commutativity of addition that we started out with; the only difference is that we are now speaking in terms of proof objects and types instead of derivations and judgments. !}%
-%{!
+This means that, for any three natural numbers <Math formula="\texttt{}N_1"/>, <Math formula="\texttt{}N_2"/>, and <Math formula="\texttt{}N_3"/>, and any proof object with the type <Math formula="\texttt{plus}(N_1,N_2,N_3)"/>, there is a proof object with type <Math formula="\texttt{plus}(N_2,N_1,N_3)"/>. This is equivalent to the ∀∃-statement for the commutativity of addition that we started out with; the only difference is that we are now speaking in terms of proof objects and types instead of derivations and judgments. %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Metatheorem).
-!}%
+%]]

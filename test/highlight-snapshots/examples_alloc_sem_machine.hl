@@ -1,0 +1,113 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:15	comment	`%%% machine.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:12	comment	`%%% Machines`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword	`%term`
+6:6-6:7	function	`;`
+6:6-6:7	local.reference	`;`
+6:6-6:7	operator	`;`
+6:6-6:7	variable.parameter	`;`
+6:7-6:11	operator	` %pi`
+6:12-6:14	constructor	`st`
+6:12-6:14	local.reference	`st`
+6:15-6:18	operator	`%->`
+6:19-6:22	constructor	`exp`
+6:19-6:22	local.reference	`exp`
+6:22-6:26	operator	` %->`
+6:27-6:31	constructor	`mach`
+6:27-6:31	local.reference	`mach`
+6:31-6:34	keyword.return	` %.`
+7:6-7:12	keyword.modifier	`%right`
+7:13-7:15	number	`20`
+7:16-7:17	local.reference	`;`
+7:16-7:17	operator	`;`
+7:17-7:20	keyword.return	` %.`
+7:20-8:67	comment	``
+11:0-11:5	keyword.type	`%sort`
+11:6-11:13	constructor	`mach_ok`
+11:6-11:13	local.reference	`mach_ok`
+11:6-11:13	type	`mach_ok`
+11:29-11:31	keyword.return	`%.`
+11:31-12:13	attribute	``
+12:6-12:13	constructor	`mach_ok`
+12:6-12:13	local.reference	`mach_ok`
+12:6-12:13	variable	`mach_ok`
+12:13-12:16	keyword.return	` %.`
+13:6-13:13	constructor	`mach_ok`
+13:6-13:13	local.reference	`mach_ok`
+13:13-13:17	keyword.modifier	` %in`
+13:17-13:21	keyword.modifier	` %in`
+13:21-13:24	keyword.return	` %.`
+14:6-14:19	constructor	`mach_ok_irred`
+14:6-14:19	function	`mach_ok_irred`
+14:6-14:19	local.reference	`mach_ok_irred`
+14:6-14:19	variable.parameter	`mach_ok_irred`
+14:19-14:23	operator	` %pi`
+14:24-14:25	punctuation.bracket	`(`
+14:25-14:34	constructor	`exp_irred`
+14:25-14:34	local.reference	`exp_irred`
+14:35-14:36	constructor	`E`
+14:35-14:36	local.reference	`E`
+14:36-14:37	punctuation.bracket	`)`
+14:38-14:41	operator	`%->`
+14:42-14:43	punctuation.bracket	`(`
+14:43-14:50	constructor	`mach_ok`
+14:43-14:50	local.reference	`mach_ok`
+14:51-14:52	constructor	`S`
+14:51-14:52	local.reference	`S`
+14:53-14:54	constructor	`E`
+14:53-14:54	local.reference	`E`
+14:54-14:55	punctuation.bracket	`)`
+14:55-14:58	keyword.return	` %.`
+15:6-15:18	constructor	`mach_ok_step`
+15:6-15:18	function	`mach_ok_step`
+15:6-15:18	local.reference	`mach_ok_step`
+15:6-15:18	variable.parameter	`mach_ok_step`
+15:18-15:22	operator	` %pi`
+15:23-15:24	punctuation.bracket	`(`
+15:24-15:28	constructor	`step`
+15:24-15:28	local.reference	`step`
+15:29-15:30	constructor	`S`
+15:29-15:30	local.reference	`S`
+15:31-15:32	constructor	`E`
+15:31-15:32	local.reference	`E`
+15:33-15:35	constructor	`S'`
+15:33-15:35	local.reference	`S'`
+15:36-15:38	constructor	`E'`
+15:36-15:38	local.reference	`E'`
+15:38-15:39	punctuation.bracket	`)`
+15:40-15:43	operator	`%->`
+15:44-15:45	punctuation.bracket	`(`
+15:45-15:52	constructor	`mach_ok`
+15:45-15:52	local.reference	`mach_ok`
+15:53-15:54	constructor	`S`
+15:53-15:54	local.reference	`S`
+15:55-15:56	constructor	`E`
+15:55-15:56	local.reference	`E`
+15:56-15:57	punctuation.bracket	`)`
+15:57-15:60	keyword.return	` %.`
+16:12-16:13	punctuation.bracket	`{`
+16:13-16:13	local.reference	``
+16:13-16:13	operator	``
+16:13-16:14	punctuation.bracket	`}`
+16:29-16:31	keyword.return	`%.`
+17:8-17:9	punctuation.bracket	`(`
+17:9-17:10	punctuation.bracket	`)`
+17:11-17:12	punctuation.bracket	`(`
+17:12-17:19	constructor	`mach_ok`
+17:12-17:19	local.reference	`mach_ok`
+17:20-17:21	constructor	`_`
+17:20-17:21	local.reference	`_`
+17:20-17:21	variable.parameter	`_`
+17:22-17:23	constructor	`_`
+17:22-17:23	local.reference	`_`
+17:22-17:23	variable.parameter	`_`
+17:23-17:24	punctuation.bracket	`)`
+17:24-17:27	keyword.return	` %.`
+18:8-18:15	constructor	`mach_ok`
+18:8-18:15	local.reference	`mach_ok`
+18:15-18:19	keyword.modifier	` %in`
+18:19-18:23	keyword.modifier	` %in`
+18:23-18:26	keyword.return	` %.`

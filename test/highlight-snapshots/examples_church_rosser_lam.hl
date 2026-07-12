@@ -1,0 +1,43 @@
+0:0-0:27	comment	`%%% Untyped lambda-calculus`
+1:0-1:26	comment	`%%% Author: Frank Pfenning`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:10	constructor	`term`
+2:6-2:10	local.reference	`term`
+2:6-2:10	type	`term`
+2:10-2:13	keyword.return	` %.`
+2:13-3:10	attribute	``
+3:6-3:10	constructor	`term`
+3:6-3:10	local.reference	`term`
+3:6-3:10	variable	`term`
+3:10-3:13	keyword.return	` %.`
+4:6-4:9	constructor	`lam`
+4:6-4:9	function	`lam`
+4:6-4:9	local.reference	`lam`
+4:6-4:9	variable.parameter	`lam`
+4:9-4:13	operator	` %pi`
+4:14-4:15	punctuation.bracket	`(`
+4:15-4:18	operator	`%pi`
+4:19-4:23	constructor	`term`
+4:19-4:23	local.reference	`term`
+4:24-4:27	operator	`%->`
+4:28-4:32	constructor	`term`
+4:28-4:32	local.reference	`term`
+4:32-4:33	punctuation.bracket	`)`
+4:34-4:37	operator	`%->`
+4:38-4:42	constructor	`term`
+4:38-4:42	local.reference	`term`
+4:42-4:45	keyword.return	` %.`
+5:6-5:9	constructor	`app`
+5:6-5:9	function	`app`
+5:6-5:9	local.reference	`app`
+5:6-5:9	variable.parameter	`app`
+5:9-5:13	operator	` %pi`
+5:14-5:18	constructor	`term`
+5:14-5:18	local.reference	`term`
+5:19-5:22	operator	`%->`
+5:23-5:27	constructor	`term`
+5:23-5:27	local.reference	`term`
+5:27-5:31	operator	` %->`
+5:32-5:36	constructor	`term`
+5:32-5:36	local.reference	`term`
+5:36-5:39	keyword.return	` %.`

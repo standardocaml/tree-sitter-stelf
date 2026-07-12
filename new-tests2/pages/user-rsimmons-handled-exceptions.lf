@@ -1,6 +1,6 @@
 %                                            
-%{! ## Syntax !}%
-%{! ### Types !}%
+%[[ ## Syntax %]]
+%[[ ### Types %]]
 %sort ty %.
 %term ty/nat ty %.
 % nat
@@ -8,13 +8,13 @@
 % tau1 tau2
 %term ty/mayraise %pi ty %-> ty %.
 % [*] tau
-%{! We have to pick some type associated with exceptions.
-Here, we'll just use nat. !}%
+%[[ We have to pick some type associated with exceptions.
+Here, we'll just use nat. %]]
 %define ty/exn ty/nat %.
-%{! #### Type equality !}%
+%[[ #### Type equality %]]
 %sort eqty {_ ty} {_ ty} %.
 %term eqty/refl eqty T T %.
-%{! ### Terms !}%
+%[[ ### Terms %]]
 %sort tm %.
 %term tm/lam %pi ty %-> (%pi tm %-> tm) %-> tm %.
 %term tm/app %pi tm %-> tm %-> tm %.
@@ -27,7 +27,7 @@ Here, we'll just use nat. !}%
 %term tm/susp %pi tm %-> tm %.
 %term tm/unsusp %pi tm %-> tm %.
 %define tm/let (%pi tm %-> ty %-> (%pi tm %-> tm) %-> tm) [e] [t] [f] tm/app (tm/lam t f) e %.
-%{! ## Static semantics !}%
+%[[ ## Static semantics %]]
 %sort of {_ tm} {_ ty} %.
 % Will not throw exceptions
 %sort of* {_ tm} {_ ty} %.
@@ -61,14 +61,14 @@ Here, we'll just use nat. !}%
 	%-> ({x} %pi (of x ty/exn) %-> (of* (E' x) T))
 	%-> (of* (tm/handle E ([x] E' x)) T) %.
 %term of*/unsusp %pi (of* E (ty/mayraise T)) %-> (of* (tm/unsusp E) T) %.
-%{! ## Dynamic semantics !}%
-%{! ### Values !}%
+%[[ ## Dynamic semantics %]]
+%[[ ### Values %]]
 %sort v {_ tm} %.
 %term v/lam v (tm/lam T ([x] E x)) %.
 %term v/z v tm/z %.
 %term v/s %pi (v E) %-> (v (tm/s E)) %.
 %term v/susp v (tm/susp E) %.
-%{! ### Small-step evaluation !}%
+%[[ ### Small-step evaluation %]]
 %sort step {_ tm} {_ tm} %.
 %term step/app1 %pi (step E1 E1') %-> (step (tm/app E1 E2) (tm/app E1' E2)) %.
 %term step/app1x %pi (v E) %-> (step (tm/app (tm/raise E) _) (tm/raise E)) %.
@@ -90,8 +90,8 @@ Here, we'll just use nat. !}%
 %term step/unsusp %pi (step E E') %-> (step (tm/unsusp E) (tm/unsusp E')) %.
 %term step/unsuspr step (tm/unsusp (tm/susp E)) E %.
 %term step/unsuspx %pi (v E) %-> (step (tm/unsusp (tm/raise E)) (tm/raise E)) %.
-%{! ## Progress !}%
-%{! ### Not stuck !}%
+%[[ ## Progress %]]
+%[[ ### Not stuck %]]
 %sort nstuck {_ tm} %.
 %term nstuck/step %pi (step E E') %-> (nstuck E) %.
 %term nstuck/value %pi (v E) %-> (nstuck E) %.
@@ -105,10 +105,10 @@ Here, we'll just use nat. !}%
 %mode ns-weaken %in %out %.
 %worlds () (ns-weaken _ _) %.
 %total () (ns-weaken _ _) %.
-%{! ### Mobile value !}%
-%{! This theorem really isn't as interesting as its name makes
+%[[ ### Mobile value %]]
+%[[ This theorem really isn't as interesting as its name makes
 it sound, though it is necessary in one place. Otherwise,
-all of the little factoring lemmas are only case analysis, not induction. !}%
+all of the little factoring lemmas are only case analysis, not induction. %]]
 %sort mobile {_ v E} {_ of* E T} {_ of E T} %.
 %term _ mobile v/lam (of*/weaken (of/lam F)) (of/lam F) %.
 %term _ mobile v/z (of*/weaken of/z) of/z %.
@@ -118,7 +118,7 @@ all of the little factoring lemmas are only case analysis, not induction. !}%
 %mode mobile %in %in %out %.
 %worlds () (mobile _ _ _) %.
 %total T (mobile T _ _) %.
-%{! ### Progress !}%
+%[[ ### Progress %]]
 %sort progress {_ of E T} {_ nstuck E} %.
 %sort progress* {_ of* E T} {_ nstuck* E} %.
 %mode progress %in %out %.
@@ -228,8 +228,8 @@ all of the little factoring lemmas are only case analysis, not induction. !}%
 %term _ %pi (progress* (of*/unsusp T) NS) %<- (progress* T NS1) %<- (p8 T NS1 NS) %.
 %worlds () (progress _ _) (progress* _ _) %.
 %total (T T*) (progress T _) (progress* T* _) %.
-%{! ## Preservation !}%
-%{! ### Inversion !}%
+%[[ ## Preservation %]]
+%[[ ### Inversion %]]
 %sort inv-lam {_ of* (tm/lam T' E) T} {_ {x} %pi (of x T') %-> (of (E x) T'')} {_ eqty T (ty/arrow T' T'')} %.
 %term _ inv-lam (of*/weaken (of/lam F)) F eqty/refl %.
 %mode inv-lam %in %out %out %.
@@ -274,12 +274,12 @@ all of the little factoring lemmas are only case analysis, not induction. !}%
 %mode inv-unsusp %in %out %.
 %worlds () (inv-unsusp _ _) %.
 %total () (inv-unsusp _ _) %.
-%{! ### Preservation !}%
+%[[ ### Preservation %]]
 %sort preservation {_ step E E'} {_ of E T} {_ of E' T} %.
 %sort preservation* {_ step E E'} {_ of* E T} {_ of* E' T} %.
 %mode preservation %in %in %out %.
 %mode preservation* %in %in %out %.
-%{! #### Application !}%
+%[[ #### Application %]]
 %term _ 
 	%pi (preservation (step/app1 E) (of/app T1 T2) (of/app T1' T2))
 	%<- (preservation E T1 T1') %.
@@ -314,7 +314,7 @@ all of the little factoring lemmas are only case analysis, not induction. !}%
 	%<- (mobile V T2* T2)
 	%<- (inv-lam T1 F Eq)
 	%<- (q2 Eq F T2 Tres) %.
-%{! #### Natural numbers !}%
+%[[ #### Natural numbers %]]
 %term _ %pi (preservation (step/s E) (of/s T) (of/s T')) %<- (preservation E T T') %.
 %term _ 
 	%pi (preservation (step/if E) (of/if T T1 T2) (of/if T' T1 T2))
@@ -356,7 +356,7 @@ all of the little factoring lemmas are only case analysis, not induction. !}%
 	%pi (preservation* (step/ifx V) DTif (of*/raise DTexn))
 	%<- (inv-if DTif DT _ _)
 	%<- (inv-raise DT DTexn) %.
-%{! #### Fix/raise/handle !}%
+%[[ #### Fix/raise/handle %]]
 %term _ preservation step/fix (of/fix F) (F _ (of/fix F)) %.
 %term _ 
 	%pi (preservation (step/handle E) (of/handle T* T) (of/handle T'* T))
@@ -404,9 +404,9 @@ all of the little factoring lemmas are only case analysis, not induction. !}%
 	%<- (inv-raise DT' (%the (of* E ty/exn) DTexn)) %.
 %worlds () (preservation _ _ _) (preservation* _ _ _) %.
 %total (E E*) (preservation E _ _) (preservation* E* _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/User:Rsimmons/Handled_exceptions).
-!}%
+%]]

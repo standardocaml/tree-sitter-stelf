@@ -1,0 +1,116 @@
+0:0-0:52	comment	`%                                                   `
+1:1-1:2	punctuation.bracket	`[`
+1:2-1:3	punctuation.bracket	`[`
+1:27-1:29	number	`16`
+4:12-4:17	keyword	`%name`
+4:12-4:21	attribute	`%name ttp`
+4:18-4:21	constructor	`ttp`
+4:18-4:21	local.reference	`ttp`
+4:18-4:21	variable	`ttp`
+10:13-10:18	keyword	`%name`
+10:13-10:23	attribute	`%name texp`
+10:19-10:23	constructor	`texp`
+10:19-10:23	local.reference	`texp`
+10:19-10:23	variable	`texp`
+11:13-11:18	keyword	`%name`
+11:13-11:23	attribute	`%name tval`
+11:19-11:23	constructor	`tval`
+11:19-11:23	local.reference	`tval`
+11:19-11:23	variable	`tval`
+115:0-115:5	keyword	`%mode`
+115:6-115:13	constructor	`correct`
+115:6-115:13	local.reference	`correct`
+115:13-115:17	constructor	` +D1`
+115:13-115:17	local.reference	` +D1`
+115:17-115:21	constructor	` -D2`
+115:17-115:21	local.reference	` -D2`
+115:21-115:26	constructor	` -D3.`
+115:21-115:26	local.reference	` -D3.`
+115:26-117:8	constructor	``
+115:26-117:8	local.reference	``
+117:8-117:10	local.reference	` :`
+117:8-117:10	operator	` :`
+117:10-117:16	constructor	` trans`
+117:10-117:16	local.reference	` trans`
+117:16-117:18	constructor	` E`
+117:16-117:18	local.reference	` E`
+117:18-117:20	constructor	` T`
+117:18-117:20	local.reference	` T`
+117:20-117:22	constructor	` V`
+117:20-117:22	local.reference	` V`
+117:22-117:25	local.reference	` ->`
+117:22-117:25	operator	` ->`
+117:25-117:32	constructor	` ttrans`
+117:25-117:32	local.reference	` ttrans`
+117:32-117:34	constructor	` T`
+117:32-117:34	local.reference	` T`
+117:34-117:37	constructor	` T'`
+117:34-117:37	local.reference	` T'`
+117:37-117:40	local.reference	` ->`
+117:37-117:40	operator	` ->`
+117:40-117:44	constructor	` tof`
+117:40-117:44	local.reference	` tof`
+117:44-117:46	constructor	` V`
+117:44-117:46	local.reference	` V`
+118:0-118:5	keyword	`%mode`
+118:6-118:14	constructor	`correct'`
+118:6-118:14	local.reference	`correct'`
+118:14-118:18	constructor	` +D1`
+118:14-118:18	local.reference	` +D1`
+118:18-118:22	constructor	` +D2`
+118:18-118:22	local.reference	` +D2`
+118:22-118:27	constructor	` -D3.`
+118:22-118:27	local.reference	` -D3.`
+118:27-120:1	local.reference	``
+118:27-120:1	operator	``
+120:1-120:3	local.reference	` :`
+120:1-120:3	operator	` :`
+120:3-120:11	constructor	` correct`
+120:3-120:11	local.reference	` correct`
+120:11-120:19	constructor	` trans/z`
+120:11-120:19	local.reference	` trans/z`
+120:19-120:30	constructor	` ttrans/num`
+120:19-120:30	local.reference	` ttrans/num`
+160:0-160:6	keyword	`%block`
+160:7-160:16	constructor	`transbind`
+160:7-160:16	label	`transbind`
+160:7-160:16	local.reference	`transbind`
+168:0-168:7	keyword	`%worlds`
+168:8-168:9	punctuation.bracket	`(`
+168:9-168:18	constructor	`transbind`
+168:9-168:18	local.reference	`transbind`
+168:18-168:19	punctuation.bracket	`)`
+168:20-168:21	punctuation.bracket	`(`
+168:21-168:28	constructor	`correct`
+168:21-168:28	local.reference	`correct`
+168:29-168:30	constructor	`_`
+168:29-168:30	local.reference	`_`
+168:29-168:30	variable.parameter	`_`
+168:31-168:32	constructor	`_`
+168:31-168:32	local.reference	`_`
+168:31-168:32	variable.parameter	`_`
+168:33-168:34	constructor	`_`
+168:33-168:34	local.reference	`_`
+168:33-168:34	variable.parameter	`_`
+168:34-168:35	punctuation.bracket	`)`
+169:0-169:6	keyword	`%total`
+169:7-169:8	punctuation.bracket	`(`
+169:8-169:9	constructor	`D`
+169:8-169:9	local.reference	`D`
+169:10-169:12	constructor	`D'`
+169:10-169:12	local.reference	`D'`
+169:12-169:13	punctuation.bracket	`)`
+169:14-169:15	punctuation.bracket	`(`
+169:15-169:22	constructor	`correct`
+169:15-169:22	local.reference	`correct`
+169:23-169:24	constructor	`D`
+169:23-169:24	local.reference	`D`
+169:25-169:26	constructor	`_`
+169:25-169:26	local.reference	`_`
+169:25-169:26	variable.parameter	`_`
+169:27-169:28	constructor	`_`
+169:27-169:28	local.reference	`_`
+169:27-169:28	variable.parameter	`_`
+169:28-169:29	punctuation.bracket	`)`
+176:1-176:2	punctuation.bracket	`]`
+176:2-176:3	punctuation.bracket	`]`

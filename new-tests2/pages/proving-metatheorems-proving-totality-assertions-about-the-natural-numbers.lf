@@ -6,11 +6,11 @@
 %        
 %                                                          
 %                                                                                     
-%{! 
+%[[ 
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
-In this section, we will use Twelf to mechanize proofs of [metatheorems](/wiki/metatheorem/), which are statements about an object language. First, we recap the signature we have defined to this point, using the conveniences afforded by Twelf: !}%
+In this section, we will use Twelf to mechanize proofs of [metatheorems](/wiki/metatheorem/), which are statements about an object language. First, we recap the signature we have defined to this point, using the conveniences afforded by Twelf: %]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -20,7 +20,7 @@ In this section, we will use Twelf to mechanize proofs of [metatheorems](/wiki/m
 %sort plus {_ nat} {_ nat} {_ nat} %.
 %term plus-z plus z N2 N2 %.
 %term plus-s %pi (plus (s N1) N2 (s N3)) %<- (plus N1 N2 N3) %.
-%{! ## Totality assertions
+%[[ ## Totality assertions
 
 A type family such as ``plus`` defines a relation among its indices, where indices are related iff their instance of the family is inhabited by an LF term.  For example, ``plus`` defines a relation between three terms of type ``nat``.  The terms (``s (s z)``, ``s z``, ``s (s (s z))``) are related by this relation (because <Math formula="2 + 1 = 3"/>), but the terms (``z``, ``s z``, ``s (s (s z))``) are not.
 
@@ -74,11 +74,11 @@ Twelf checks that each constant inhabiting the type family is _well-moded_.  Rou
 
 For example, the constant 
 
-!}%
-%{!! begin hidden !!}%
+%]]
+%[[! begin hidden !%]]
 %mode plus %in %in %out %.
-%{!! end hidden !!}%
-%{!
+%[[! end hidden !%]]
+%[[
 
 ```twelf
 plus-s : plus (s N1) N2 (s N3)
@@ -121,8 +121,8 @@ obeys the induction order ``N1`` specified in the above totality assertion becau
 
 In addition to the subterm ordering on a single argument, Twelf supports [mutual induction](/wiki/mutual-induction/) and [lexicographic induction](/wiki/percent-terminates/).
 
-### Output coverage !}%
-%{! In the definition of a type family, you may pattern-match the outputs of a premise.  For example, we might write
+### Output coverage %]]
+%[[ In the definition of a type family, you may pattern-match the outputs of a premise.  For example, we might write
 
 ```checkedtwelf
 %mode plus +N1 +N2 -N3.
@@ -184,11 +184,11 @@ If any constant in a type family fails mode, worlds, or output coverage, then mo
 
 ## Logic programming
 
-An LF signature can be interpreted as a logic program, where the constants defining a type family are viewed as rules for searching for derivations of that type family.  For example, we can use Twelf to add numbers as follows: !}%
-%{!! begin checked !!}%
+An LF signature can be interpreted as a logic program, where the constants defining a type family are viewed as rules for searching for derivations of that type family.  For example, we can use Twelf to add numbers as follows: %]]
+%[[! begin checked !%]]
 %solve D : plus (s z) (s z) N %.
-%{!! end checked !!}%
-%{! This [%solve](/wiki/percent-solve/) declaration asks Twelf to find an ``N`` and a derivation ``D`` that ``plus (s z) (s z) N``.  Of course, Twelf responds that 1 + 1 = 2.  
+%[[! end checked !%]]
+%[[ This [%solve](/wiki/percent-solve/) declaration asks Twelf to find an ``N`` and a derivation ``D`` that ``plus (s z) (s z) N``.  Of course, Twelf responds that 1 + 1 = 2.  
 
 This logic programming interpretation of an LF signature is very useful: you can directly run the judgements defining your programming language.  However, because the focus of this introduction is proving metatheorems, an interested reader should refer to the tutorial on [logic programming](/wiki/logic-programming/).
 
@@ -205,4 +205,4 @@ To start proving metatheorems, it is not necessary to have a thorough understand
 
 In this section, we have seen how to ask Twelf to verify totality assertions for LF type families.  To see why we have spent so much time on totality assertions, proceed to the next section.  
 
-!}%
+%]]

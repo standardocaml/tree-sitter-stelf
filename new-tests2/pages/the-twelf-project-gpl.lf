@@ -1,5 +1,5 @@
 %                                 
-%{! For any page marked with the tag &lt;nowiki&gt;\{\{license-gpl\}\}&lt;/nowiki&gt;, it is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+%[[ For any page marked with the tag &lt;nowiki&gt;\{\{license-gpl\}\}&lt;/nowiki&gt;, it is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
@@ -347,10 +347,10 @@ This General Public License does not permit incorporating your program into
 proprietary programs.  If your program is a subroutine library, you may
 consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Lesser General
-Public License instead of this License.&lt;/code&gt; !}%
-%{!
+Public License instead of this License.&lt;/code&gt; %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/The_Twelf_Project:GPL).
-!}%
+%]]

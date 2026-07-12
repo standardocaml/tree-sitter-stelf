@@ -1,13 +1,13 @@
 %                                             
-%{! This is a [case study](/wiki/case-studies/) about **division over the natural numbers**. A number of arithmetic operations over the natural numbers will be defined, including division. The ultimate goal is to prove properties normally associated with division hold. Twelf muscles flexed in this study include [reasoning from false](/wiki/reasoning-from-false/) and using the [%reduces](/wiki/percent-reduces/) directive to use strong induction in a proof.
+%[[ This is a [case study](/wiki/case-studies/) about **division over the natural numbers**. A number of arithmetic operations over the natural numbers will be defined, including division. The ultimate goal is to prove properties normally associated with division hold. Twelf muscles flexed in this study include [reasoning from false](/wiki/reasoning-from-false/) and using the [%reduces](/wiki/percent-reduces/) directive to use strong induction in a proof.
 
-First the "false" type and natural numbers are defined. !}%
+First the "false" type and natural numbers are defined. %]]
 %sort uninhabited %.
 %freeze uninhabited %.
 %sort nat %.
 %term nat/z nat %.
 %term nat/s %pi nat %-> nat %.
-%{! Relations about arithmetic over the natural numbers are defined in the standard way. !}%
+%[[ Relations about arithmetic over the natural numbers are defined in the standard way. %]]
 %sort nat-plus {_ nat} {_ nat} {_ nat} %.
 %term nat-plus/z nat-plus nat/z N N %.
 %term nat-plus/s %pi (nat-plus (nat/s N1) N2 (nat/s N3)) %<- (nat-plus N1 N2 N3) %.
@@ -30,7 +30,7 @@ First the "false" type and natural numbers are defined. !}%
 	%pi (nat-divmod N1 N2 (nat/s N3) N4)
 	%<- (nat-divmod N1' N2 N3 N4)
 	%<- (nat-plus N2 N1' N1) %.
-%{! Some basic properties about arithmetic. !}%
+%[[ Some basic properties about arithmetic. %]]
 %sort nat-leq-plus {_ nat-leq N1 N2} {_ nat-plus N1 _ N2} %.
 %mode nat-leq-plus %in %out %.
 %term _ nat-leq-plus nat-leq/z nat-plus/z %.
@@ -67,7 +67,7 @@ First the "false" type and natural numbers are defined. !}%
 	%<- (nat-plus-assoc DP1 DP2 DP3 DP4) %.
 %worlds () (nat-plus-assoc _ _ _ _) %.
 %total (D1) (nat-plus-assoc D1 _ _ _) %.
-%{! The first proof about division: The remainder is less than the divisor! !}%
+%[[ The first proof about division: The remainder is less than the divisor! %]]
 %sort nat-divmod-mod-less {_ nat-divmod N1 N2 N3 N4} {_ nat-less N4 N2} %.
 %sort nat-divmod-mod-less {_ nat-divmod N1 N2 N3 N4} {_ nat-less N4 N2} %.
 %mode nat-divmod-mod-less %in %out %.
@@ -77,7 +77,7 @@ First the "false" type and natural numbers are defined. !}%
 	%<- (nat-divmod-mod-less DDM DL) %.
 %worlds () (nat-divmod-mod-less _ _) %.
 %total {D1} (nat-divmod-mod-less D1 _) %.
-%{! Division by zero does not happen. !}%
+%[[ Division by zero does not happen. %]]
 %sort nat-divmod-z-uninhabited {_ nat-divmod N1 nat/z N3 N4} {_ uninhabited} %.
 %mode nat-divmod-z-uninhabited %in %out %.
 %term _ 
@@ -85,7 +85,7 @@ First the "false" type and natural numbers are defined. !}%
 	%<- (nat-divmod-z-uninhabited DDM DU) %.
 %worlds () (nat-divmod-z-uninhabited _ _) %.
 %total {D1} (nat-divmod-z-uninhabited D1 _) %.
-%{! The following theorem uses the ``%reduces`` directive to verify that if a non-zero number is added to ``N2``, then the result is strictly larger than ``N2`` in the sub-term sense. This is powerful information, because Twelf verifies well-founded inductions over sub-term orderings. !}%
+%[[ The following theorem uses the ``%reduces`` directive to verify that if a non-zero number is added to ``N2``, then the result is strictly larger than ``N2`` in the sub-term sense. This is powerful information, because Twelf verifies well-founded inductions over sub-term orderings. %]]
 %sort nat-plus-reduces-s {N2} {N3} {_ nat-plus (nat/s N1) N2 N3} %.
 %mode nat-plus-reduces-s %in %in %in %.
 %term _ nat-plus-reduces-s _ _ (nat-plus/s nat-plus/z) %.
@@ -93,7 +93,7 @@ First the "false" type and natural numbers are defined. !}%
 %worlds () (nat-plus-reduces-s _ _ _) %.
 %reduces < N2 N3 (nat-plus-reduces-s N2 N3 _) %.
 %total {D1} (nat-plus-reduces-s _ _ D1) %.
-%{! The highlight of this example. Division is possible for any dividend as long as the divisor is non-zero. This proof is by induction over the dividend, which does get smaller as inductive calls are made. However, because Twelf can not figure this out on its own, calls to nat-plus-reduces-s are required so that this proof passes the totality checker. !}%
+%[[ The highlight of this example. Division is possible for any dividend as long as the divisor is non-zero. This proof is by induction over the dividend, which does get smaller as inductive calls are made. However, because Twelf can not figure this out on its own, calls to nat-plus-reduces-s are required so that this proof passes the totality checker. %]]
 %sort can-nat-divmod* {N1} {_ nat-compare N1 (nat/s N2)} {_ nat-divmod N1 (nat/s N2) N3 N4} %.
 %mode can-nat-divmod* %in %in %out %.
 %term _ can-nat-divmod* _ (nat-compare/less DL) (nat-divmod/base DL) %.
@@ -113,8 +113,8 @@ First the "false" type and natural numbers are defined. !}%
 	%<- (can-nat-divmod* N1 DC DDM) %.
 %worlds () (can-nat-divmod _ _ _) %.
 %total () (can-nat-divmod _ _ _) %.
-%{! It is also useful to know the definition of division is correct with respect to multiplication. !}%
-%{!! begin checked !!}%
+%[[ It is also useful to know the definition of division is correct with respect to multiplication. %]]
+%[[! begin checked !%]]
 %sort nat-divmod-correct {_ nat-divmod N1 N2 N3 N4} {_ nat-mult N3 N2 N3'} {_ nat-plus N3' N4 N1} %.
 %mode nat-divmod-correct %in %out %out %.
 %term _ nat-divmod-correct (nat-divmod/base _) nat-mult/z nat-plus/z %.
@@ -125,7 +125,7 @@ First the "false" type and natural numbers are defined. !}%
 	%<- (nat-plus-assoc DP'' DP' DP DP''') %.
 %worlds () (nat-divmod-correct _ _ _) %.
 %total (D1) (nat-divmod-correct D1 _ _) %.
-%{!! end checked !!}%
-%{! In the above code, the division algorithm for natural numbers was defined. A few interesting properties about this judgment were proven. The first is that the remainder computed is strictly less than the divisor. The second is that the judgment is not inhabited when the divisor is zero. The third is an [effectiveness lemma](/wiki/effectiveness-lemma/) which shows that this judgment is inhabited for any dividend and any divisor greater than zero. Finally, the division relation was shown to be correct with respect to multiplication.
+%[[! end checked !%]]
+%[[ In the above code, the division algorithm for natural numbers was defined. A few interesting properties about this judgment were proven. The first is that the remainder computed is strictly less than the divisor. The second is that the judgment is not inhabited when the divisor is zero. The third is an [effectiveness lemma](/wiki/effectiveness-lemma/) which shows that this judgment is inhabited for any dividend and any divisor greater than zero. Finally, the division relation was shown to be correct with respect to multiplication.
 
-!}%
+%]]

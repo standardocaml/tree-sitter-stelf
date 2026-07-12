@@ -1,9 +1,9 @@
 %                                       
-%{! 
+%[[ 
 
 ## Intuitionistic logic
 
-!}%
+%]]
 %sort iprop %.
 %name iprop %.
 %term itop iprop %.
@@ -38,11 +38,11 @@
 %define distdnimp (%pi (itrue (idn (iimp A B))) %-> (itrue (iimp (idn A) (idn B)))) [f] ilam ([x itrue (idn A)] ilam ([y itrue (inot B)] iapp f (ilam ([g itrue (iimp A B)] iapp x (ilam ([z itrue A] iapp y (iapp g z))))))) %.
 %block itb {A iprop} [D itrue A]%.
 %worlds (ipb itb) (itrue _) %.
-%{! 
+%[[ 
 
 ## Classical logic
 
-!}%
+%]]
 %sort prop %.
 %name prop %.
 %term top prop %.
@@ -104,14 +104,14 @@
 %define cdne (%pi (>> true (not (not A))) %-> (>> true A)) [x] notcase x ([f] letcc ([u] throw f (noti u))) %.
 %define notimpbot (%pi (>> true (iff A B)) %-> (>> true (iff (not A) (imp B bot)))) [c] iffi ([x] notcase x ([f] lam ([y] cabort (throw f (iffer c y))))) ([x] noti (cont ([y] abort (app x (iffel c y))))) %.
 %define notimpbot2 (>> true (iff (not (not A)) (imp (imp A bot) bot))) notimpbot (notimpbot (iffi ([x] x) ([x] x))) %.
-%{! 
+%[[ 
 
 ## Double-negation translation
 
 This is essentially the 
 [Godel-Gentzen Negtive Translation](http://en.wikipedia.org/wiki/G%C3%B6del%E2%80%93Gentzen_negative_translation).
 It differs only by De Morgan laws that are provable intuitionistically.  
-!}%
+%]]
 %sort * {_ prop} {_ iprop} %.
 %mode * %in %out %.
 %term */top * top itop %.
@@ -148,11 +148,11 @@ It differs only by De Morgan laws that are provable intuitionistically.
 %term _ itrue-respects-id D _ D %.
 %worlds (itb ipb) (itrue-respects-id _ _ _) %.
 %total () (itrue-respects-id _ _ _) %.
-%{! 
+%[[ 
 
 ### Double-negation elimination for the target of the translation
 
-!}%
+%]]
 %sort dne {_ * A A'} {_ %pi (itrue (inot (inot A'))) %-> (itrue A')} %.
 %mode dne %in %out %.
 %term _ 
@@ -170,11 +170,11 @@ It differs only by De Morgan laws that are provable intuitionistically.
 %block dneb [X prop] [X' iprop] [dx * X (idn X')] [_ dne dx tne]%.
 %worlds (dneb itb) (dne _ _) %.
 %total D (dne D _) %.
-%{! 
+%[[ 
 
 ## Soundness
 
-!}%
+%]]
 %sort sound/true {_ >> true A} {_ * A A'} {_ itrue A'} %.
 %mode sound/true %in %in %out %.
 %sort sound/false {_ >> false A} {_ * A A'} {_ itrue (iimp A' ibot)} %.
@@ -332,7 +332,7 @@ It differs only by De Morgan laws that are provable intuitionistically.
 %block soundpb [X prop] [X' iprop] [dx * X (idn X')] [_ dne dx tne] [_ *tot X dx]%.
 %worlds (soundpb soundtb soundfb) (sound/true _ _ _) (sound/true _ _ _) (sound/false _ _ _) (sound/false _ _ _) (sound/contra _ _) %.
 %total (D1 D4 D2 D5 D3) (sound/true D4 _ _) (sound/true D1 _ _) (sound/false D5 _ _) (sound/false D2 _ _) (sound/contra D3 _) %.
-%{! 
+%[[ 
 
 ## Completeness
 
@@ -342,7 +342,7 @@ Include intuitionistic props into classical.  We need to define another
 translation because * is not total with the reverse mode (it doesn't
 translate atoms).
 
-!}%
+%]]
 %sort *i {_ prop} {_ iprop} %.
 %mode *i %out %in %.
 %term *i/top *i top itop %.
@@ -372,13 +372,13 @@ translate atoms).
 %term _ true-respects-id D _ D %.
 %worlds (tb fb pb) (true-respects-id _ _ _) %.
 %total () (true-respects-id _ _ _) %.
-%{! 
+%[[ 
 
 ### Intuitionistic truth implies classical truth
 
 The arguments are in a funny order because I copied from soundness. =)
 
-!}%
+%]]
 %sort incl {_ >> true A} {_ *i A A'} {_ itrue A'} %.
 %mode incl %out %in %in %.
 %term _ incl mt *i/top imt %.
@@ -419,11 +419,11 @@ The arguments are in a funny order because I copied from soundness. =)
 %block inclb {A} {A'} {D* *i A A'} [x >> true A] [x' itrue A'] [_ {A-2} {D*' *i A-2 A'} {Did id-prop A-2 A} {E >> true A-2} %pi (incl E D*' x') %<- (*iunique D*' D* Did) %<- (true-respects-id x Did E)]%.
 %worlds (inclb fb *itotb) (incl _ _ _) %.
 %total D (incl _ _ D) %.
-%{! 
+%[[ 
 
 ### Round-tripping the two translations is classically equivalent
 
-!}%
+%]]
 %sort equiv {_ * A A'} {_ *i A'' A'} {_ >> true (iff A A'')} %.
 %mode equiv %in %in %out %.
 %term _ equiv D D' (iffi ([x] x) ([x] x)) %.
@@ -446,11 +446,11 @@ The arguments are in a funny order because I copied from soundness. =)
 %block equivb [X prop] [X' iprop] [d*i *i X X'] [d* * X (inot (inot X'))] [_ equiv d* (*i/imp *i/bot (*i/imp *i/bot d*i)) (iffi ([x >> true X] iffel notimpbot2 (cdni x)) ([x >> true (imp (imp X bot) bot)] cdne (iffer notimpbot2 x)))]%.
 %worlds (equivb tb fb) (equiv _ _ _) %.
 %total D (equiv D _ _) %.
-%{! 
+%[[ 
 
 ### If A* is intuitionistically true, then A is classically true
 
-!}%
+%]]
 %sort comp {_ itrue A'} {_ * A A'} {_ >> true A} %.
 %mode comp %in %in %out %.
 %term _ 
@@ -473,9 +473,9 @@ The arguments are in a funny order because I copied from soundness. =)
 %term _ %pi (comp/contra E (nbote E')) %<- (comp E */nbot E') %.
 %worlds (comp-pb inclb fb) (comp/contra _ _) %.
 %total () (comp/contra _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 You can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Double-negation_translation).
-!}%
+%]]

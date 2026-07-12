@@ -1,5 +1,5 @@
 %                     
-%{! In this article, we will take a presentation of a logic very close to
+%[[ In this article, we will take a presentation of a logic very close to
 that of Fairtlough and Mendler's lax logic&lt;ref &gt;\{\{bibtex:fm97lax\}\}&lt;/ref&gt; and
 show a translation into a polarized version of Pfenning and Davies' judgmental
 reconstruction of lax logic.&lt;ref&gt;\{\{bibtex:pd01modal\}\}&lt;/ref&gt; We will refer to
@@ -26,13 +26,13 @@ arbitrary number of shift operations.
 
 &lt;references/&gt; 
 
-&lt;br/&gt; !}%
-%{! ## Preliminaries !}%
-%{! We will be [using a metric](/wiki/structural-metrics/) to make certain arguments about translation
+&lt;br/&gt; %]]
+%[[ ## Preliminaries %]]
+%[[ We will be [using a metric](/wiki/structural-metrics/) to make certain arguments about translation
 simpler - we can think of this metric as a tree ``T`` that is either
 a leaf (``o``), a parent with one child tree (``x T``), or a parent
 with two child trees (``T1 | T2``). 
-!}%
+%]]
 %sort metric %.
 %name metric %.
 %term o metric %.
@@ -42,13 +42,13 @@ with two child trees (``T1 | T2``).
 %sort id {_ metric} {_ metric} %.
 %name id %.
 %term id/refl id M M %.
-%{! We will also be, throughout, working in a universe of atomic propositions.
+%[[ We will also be, throughout, working in a universe of atomic propositions.
 Each atomic proposition has a defined polarity (``pos`` or ``neg``), 
 though this is mostly irrelevant in the target logic and totally irrelevant in 
 the source logic. Every theorem we prove will assume a universe of arbitrary
 atomic propositions of both polarities, so every [``%worlds``](/wiki/percent-worlds/) 
 declaration will include at least the blocks ``bl_atmpos`` (positive
-atomic propositions) and ``bl_atmneg`` (negative atomic propositions). !}%
+atomic propositions) and ``bl_atmneg`` (negative atomic propositions). %]]
 %sort polarity %.
 %name polarity %.
 %term pos polarity %.
@@ -57,15 +57,15 @@ atomic propositions) and ``bl_atmneg`` (negative atomic propositions). !}%
 %name atm %.
 %block bl_atmpos [qp atm pos]%.
 %block bl_atmneg [qn atm neg]%.
-%{! ## Fairtlough and Mendler's lax logic !}%
-%{! Fairtlough and Mendler's presentation of lax logic has a slight
+%[[ ## Fairtlough and Mendler's lax logic %]]
+%[[ Fairtlough and Mendler's presentation of lax logic has a slight
 inconsistancy: the logic's syntax is defined as 
 
 <DisplayMath formula="M ::= Q \mid \mathsf{true} \mid \mathsf{false} \mid M \wedge M \mid M \vee M \mid M \supset M \mid \neg M \mid {\bigcirc}M"/>
 
 However, rules are given for neither <Math formula="\mathsf{true}"/> nor 
 <Math formula="\mathsf{false}"/>. A reasonable approach seemed to be to define
-<Math formula="\mathsf{false}"/> as <Math formula="\neg \mathsf{true}"/>. !}%
+<Math formula="\mathsf{false}"/> as <Math formula="\neg \mathsf{true}"/>. %]]
 %sort prop' %.
 %name prop' %.
 %term atom' %pi (atm S) %-> prop' %.
@@ -79,8 +79,8 @@ However, rules are given for neither <Math formula="\mathsf{true}"/> nor
 %term not' %pi prop' %-> prop' %.
 %term circ' %pi prop' %-> prop' %.
 %define ff' prop' not' tt' %.
-%{! ### Sequent calculus !}%
-%{! Fairtlough and Mendler present a Genzen-style intuitionstic sequent
+%[[ ### Sequent calculus %]]
+%[[ Fairtlough and Mendler present a Genzen-style intuitionstic sequent
 calculus for propositional lax logic in terms of sequents
 <Math formula="\Gamma \vdash \Delta"/>, where <Math formula="\Gamma"/> is a finite
 list of _hypotheses_ and <Math formula="\Delta"/> is either 0 or 1 
@@ -91,13 +91,13 @@ hypotheses in <Math formula="\Gamma"/> are contradictory, to prove
 
 We represent the hypotheses using the LF context; each 
 <Math formula="M \in \Gamma"/> becomes an LF variable of type ``hyp' M``, and
-we use the world ``bl_hyp'`` to describe all such contexts. !}%
+we use the world ``bl_hyp'`` to describe all such contexts. %]]
 %sort hyp' {_ prop'} %.
 %block bl_hyp' {M prop'} [h hyp' M]%.
-%{! We represent the conclusion as ``conc' T D``, where
+%[[ We represent the conclusion as ``conc' T D``, where
 * ``T`` is a metric capturing the shape of the derivation
 * ``D`` = ``conc-#'`` represents proving a contradiction <Math formula="\Gamma \vdash "/>; we abbreviate ``conc' T conc-#'`` as ``# T``.
-* ``D`` = ``conc-true' M`` represents proving <Math formula="\Gamma \vdash M"/>; we abbreviate ``conc' T (conc-true' M)`` as ``true' T M``. !}%
+* ``D`` = ``conc-true' M`` represents proving <Math formula="\Gamma \vdash M"/>; we abbreviate ``conc' T (conc-true' M)`` as ``true' T M``. %]]
 %sort conseq' %.
 %name conseq' %.
 %term conc-# conseq' %.
@@ -107,7 +107,7 @@ we use the world ``bl_hyp'`` to describe all such contexts. !}%
 %sort conc' {_ metric} {_ conseq'} %.
 %inline # [m] conc' m conc-# %.
 %inline true' [m] [x] conc' m (conc-true' x) %.
-%{! While our use of a [structural metric](/wiki/structural-metrics/) embedded into the conclusion of
+%[[ While our use of a [structural metric](/wiki/structural-metrics/) embedded into the conclusion of
 a sequent needs to be justified by [adequacy](/wiki/adequacy/), it is less of an issue than
 other changes we have made to the system. 
 
@@ -144,8 +144,8 @@ here, to have the essential character of Fairtlough and Mendler's.
 
 &lt;br/&gt;
 
-&lt;center&gt;<Math formula="\frac {~~~} {\Gamma, M \vdash M} {id}"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {\Gamma \vdash M \qquad \Gamma, M \vdash \Delta} {\Gamma \vdash \Delta} {cut}"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {\Gamma \vdash} {\Gamma \vdash M} {weakR}"/>&lt;/center&gt; !}%
-%{! #### Rules in Twelf !}%
+&lt;center&gt;<Math formula="\frac {~~~} {\Gamma, M \vdash M} {id}"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {\Gamma \vdash M \qquad \Gamma, M \vdash \Delta} {\Gamma \vdash \Delta} {cut}"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {\Gamma \vdash} {\Gamma \vdash M} {weakR}"/>&lt;/center&gt; %]]
+%[[ #### Rules in Twelf %]]
 %term trueR' true' o tt' %.
 % no trueL'
 %term /\R' %pi (true' Tm M) %-> (true' Tn N) %-> (true' (Tm | Tn) (M /\ N)) %.
@@ -178,8 +178,8 @@ here, to have the essential character of Fairtlough and Mendler's.
 %term weakR' %pi (# T) %-> (true' (x T) M) %.
 %worlds (bl_atmpos bl_atmneg bl_hyp') (hyp' M) (conc' T M) %.
 % = (# T) (true' T A)
-%{! ## Polarized judgmental lax logic !}%
-%{! Polarized lax logic loses the <Math formula="\neg"/> but distinguishes
+%[[ ## Polarized judgmental lax logic %]]
+%[[ Polarized lax logic loses the <Math formula="\neg"/> but distinguishes
 between two different kinds of conjunction, <Math formula="\wedge^+"/> and 
 <Math formula="\wedge^-"/>, and two variants of <Math formula="\mathsf{true}"/>
 which are the units of the two kinds of conjunction.
@@ -201,7 +201,7 @@ The full language of propositions is:
 
 The Twelf versions of the the connectives resemble ones from linear logic, 
 but we mean unrestricted implication <Math formula="P \supset N"/>
-when we write ``P -o N``, not linear implication. !}%
+when we write ``P -o N``, not linear implication. %]]
 %sort prop {_ polarity} %.
 %name prop %.
 %term atom %pi (atm S) %-> (prop S) %.
@@ -219,15 +219,15 @@ when we write ``P -o N``, not linear implication. !}%
 %scope + %term o %pi (prop pos) %-> (prop neg) %-> (prop neg) %.
 %prec %right 6 -o %.
 %term circ %pi (prop pos) %-> (prop neg) %.
-%{! ### Sequent calculus !}%
-%{! Our assumptions are, as before, represented by LF variables, this time
-of type ``hyp A``. !}%
+%[[ ### Sequent calculus %]]
+%[[ Our assumptions are, as before, represented by LF variables, this time
+of type ``hyp A``. %]]
 %sort hyp {_ prop S} %.
 %block bl_hyp {S polarity} {A prop S} [h hyp A]%.
-%{! We are always trying to prove one of two _judgments,_ and so our
+%[[ We are always trying to prove one of two _judgments,_ and so our
 sequents either take the form <Math formula="\Gamma \vdash A~true"/> (<Math formula="A"/>
 is true) or <Math formula="\Gamma \vdash A~lax"/> (<Math formula="A"/> is true
-under a constraint). !}%
+under a constraint). %]]
 %sort conseq %.
 %name conseq %.
 %term conc-lax %pi (prop S) %-> conseq %.
@@ -237,12 +237,12 @@ under a constraint). !}%
 %sort conc {_ conseq} %.
 %inline lax [x] conc (conc-lax x) %.
 %inline true [x] conc (conc-true x) %.
-%{! Later on in the proof of soundness we will use identity of _derivations_
+%[[ Later on in the proof of soundness we will use identity of _derivations_
 in order to make a termination argument work; with this one trick, we avoid
-any need for a [structural metric](/wiki/structural-metrics/) like we used before. !}%
+any need for a [structural metric](/wiki/structural-metrics/) like we used before. %]]
 %sort idconc {_ conc C} {_ conc C'} %.
 %term idconc/refl idconc D D %.
-%{! #### Rules on paper
+%[[ #### Rules on paper
 
 &lt;center&gt;<Math formula="\frac {~~~} {\Gamma, Q^+ \vdash Q^+~true} {init}^+"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {~~~} {\Gamma, Q^- \vdash Q^-~true} {init}^-"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {\Gamma \vdash A~true} {\Gamma \vdash A~lax} {lax}R"/>&lt;/center&gt;
 
@@ -272,8 +272,8 @@ any need for a [structural metric](/wiki/structural-metrics/) like we used befor
 
 &lt;br/&gt;
 
-&lt;center&gt;<Math formula="\frac {\Gamma \vdash P~lax} {\Gamma \vdash {\bigcirc}P~true} {\bigcirc}R"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {\Gamma, {\bigcirc}P, P \vdash A~lax} {\Gamma, {\bigcirc}P \vdash A~lax} {\bigcirc}L"/>&lt;/center&gt; !}%
-%{! #### Rules in Twelf !}%
+&lt;center&gt;<Math formula="\frac {\Gamma \vdash P~lax} {\Gamma \vdash {\bigcirc}P~true} {\bigcirc}R"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<Math formula="\frac {\Gamma, {\bigcirc}P, P \vdash A~lax} {\Gamma, {\bigcirc}P \vdash A~lax} {\bigcirc}L"/>&lt;/center&gt; %]]
+%[[ #### Rules in Twelf %]]
 %term init+ %pi (hyp (atom Qp)) %-> (true (atom (%the (atm pos) Qp))) %.
 %term init- %pi (hyp (atom Qn)) %-> (true (atom (%the (atm neg) Qn))) %.
 %term laxR %pi (true A) %-> (lax A) %.
@@ -304,20 +304,20 @@ any need for a [structural metric](/wiki/structural-metrics/) like we used befor
 %term circR %pi (lax P) %-> (true (circ P)) %.
 %term circL %pi (%pi (hyp P) %-> (lax A)) %-> (hyp (circ P)) %-> (lax A) %.
 %worlds (bl_atmpos bl_atmneg bl_hyp) (hyp A) (conc J) %.
-%{! ## Translation !}%
-%{! Now we can define a nondeterminstic translation between our variant of
+%[[ ## Translation %]]
+%[[ Now we can define a nondeterminstic translation between our variant of
 Fairtlough and Mendler's propositional lax logic and our target logic,
 polarized, judgmental lax logic. We will use a metric that essentially
 captures the structure of the term in the target logic (in fact, it would
 be worth seeing if we could use the term in the target logic in lieu of
-the metric.) !}%
-%{! ### Propositions !}%
-%{! The intent of the first relation we define is to be maximally general, which
+the metric.) %]]
+%[[ ### Propositions %]]
+%[[ The intent of the first relation we define is to be maximally general, which
 means that the ``t+-`` and ``t-+`` rules can add an arbitrary 
 number of shifts. Read in the reverse direction, the translation is not 
 very nondeterminstic; however "``P -o up 0``" can still be translated
 to either "``not M``" or "``M => (not' tt')``," which are different
-source logic expressions. !}%
+source logic expressions. %]]
 %sort trans {_ metric} {_ prop'} {S} {_ prop S} %.
 %name trans %.
 %term t+- %pi (trans T M pos P) %-> (trans (x T) M neg (up P)) %.
@@ -345,18 +345,18 @@ source logic expressions. !}%
 %term t+not %pi (trans T M pos P) %-> (trans (x T) (not' M) neg (P -o up 0)) %.
 %term t+circ %pi (trans T M pos P) %-> (trans (x T) (circ' M) neg (circ P)) %.
 %worlds (bl_atmpos bl_atmneg) (trans _ _ _ _) %.
-%{! ### Conclusions !}%
-%{! We additionally define translation between right-hand-sides
+%[[ ### Conclusions %]]
+%[[ We additionally define translation between right-hand-sides
 ``D`` in the source logic and judgments ``J`` in the target 
-logic. !}%
+logic. %]]
 %sort trans-conc {_ metric} {_ conseq'} {_ conseq} %.
 %name trans-conc %.
 %term tc %pi (trans-conc T (conc-true' M) (conc-true A)) %<- (trans T M S A) %.
 %term tc# trans-conc o conc-# (conc-true (up 0)) %.
 %term tclax %pi (trans-conc T (conc-true' (circ' M)) (conc-lax A)) %<- (trans T M S A) %.
 %worlds (bl_atmpos bl_atmneg) (trans-conc _ _ _) %.
-%{! ### Hypotheses !}%
-%{! When we are showing soundness and completeness, we will need
+%[[ ### Hypotheses %]]
+%[[ When we are showing soundness and completeness, we will need
 to know that for every hypothesis in the \{source, target\} logic we have
 a hypothesis in the \{target, source\} logic such that one is the translation
 of the other. 
@@ -368,7 +368,7 @@ relation, we'll define two different relations, and use them to define two
 different worlds.
 
 * ``trans-soundhyp`` takes a target logic hypotheis ``H`` and obtains a translation ``TR`` and a source logic hypothesis ``H'``.
-* ``trans-complhyp`` takes a source logic hypothesis ``H'`` and obtains a translation ``TR`` and a target logic hypothesis ``H``. !}%
+* ``trans-complhyp`` takes a source logic hypothesis ``H'`` and obtains a translation ``TR`` and a target logic hypothesis ``H``. %]]
 %sort trans-soundhyp {_ hyp H} {_ trans Mh H' S H} {_ hyp' H'} %.
 %mode trans-soundhyp %in %out %out %.
 %block bl_trans-soundhyp {M metric} {S polarity} {A prop S} {A' prop'} {T trans M A' S A} [h hyp A] [h' hyp' A'] [t trans-soundhyp h T h']%.
@@ -379,8 +379,8 @@ different worlds.
 %block bl_trans-complhyp {M metric} {A prop'} {S polarity} {C prop S} {T trans M A S C} [h' hyp' A] [h hyp C] [t trans-complhyp h' T h]%.
 %worlds (bl_atmpos bl_atmneg bl_trans-complhyp) (trans-complhyp _ _ _) %.
 %total [] (trans-complhyp _ _ _) %.
-%{! ### Correspondence !}%
-%{! A corollary to the  theorem we will state below will say "If
+%[[ ### Correspondence %]]
+%[[ A corollary to the  theorem we will state below will say "If
 <Math formula="\vdash A~true"/> and <Math formula="M~\texttt{trans}~A"/>, then 
 <Math formula="\vdash M"/>." However, if there is no <Math formula="M"/> such that 
 <Math formula="M~\texttt{trans}~A"/>, then the theorem will be vacuously true, 
@@ -391,17 +391,17 @@ of propositions and conclusions are _correspondences_
 Twelf can verify that translation is _right-total_, that there is an 
 ``M`` for every ``A`` and a ``D`` for every ``J``, without
 any further work on our part: we just assign modes to the relation
-and state a [totality assertion](/wiki/totality-assertion/). !}%
+and state a [totality assertion](/wiki/totality-assertion/). %]]
 %mode trans %out %out %in %in %.
 %mode trans-conc %out %out %in %.
 %total (A C) (trans _ _ _ A) (trans-conc _ _ C) %.
-%{! However, in the forward direction, to show that the relation is
+%[[ However, in the forward direction, to show that the relation is
 _left-total_ we will need to write an 
 [effectiveness lemma](/wiki/effectiveness-lemma/), which we will call ``can-trans``.
 
 The two lemmas ``can-switch`` are really just case analysis to 
 establish that if you can translate something as a positive formula, you can
-apply an up shift to make it a negative formula, and vice versa. !}%
+apply an up shift to make it a negative formula, and vice versa. %]]
 %sort can-switch+ {_ trans M A S (%the (prop S) C)} {_ trans N A pos C'} %.
 %term _ can-switch+ T T %.
 %term _ can-switch+ T (t-+ T) %.
@@ -446,17 +446,17 @@ apply an up shift to make it a negative formula, and vice versa. !}%
 %term _ %pi (can-trans-conc (conc-true' M) (tc TR)) %<- (can-trans M TR) %.
 %worlds (bl_atmpos bl_atmneg) (can-trans-conc _ _) %.
 %total A (can-trans-conc A _) %.
-%{! ## Metatheory of the target logic !}%
-%{! The correctness of translation will rest on the standard metatheoretic
+%[[ ## Metatheory of the target logic %]]
+%[[ The correctness of translation will rest on the standard metatheoretic
 results: the _identity principle_ and the _admissibility of cut_. Note 
 that we could have added a ``cut`` and ``id`` rule to the target
 logic, but we still would have eventually needed to do the work in this 
-section in order to have confidence that our target logic was reasonable. !}%
-%{! ### Identity !}%
-%{! For all propositions <Math formula="A"/>, there exists a derivation of
+section in order to have confidence that our target logic was reasonable. %]]
+%[[ ### Identity %]]
+%[[ For all propositions <Math formula="A"/>, there exists a derivation of
 <Math formula="A \vdash A~true"/>. 
 
-The proof is by induction on the formula <Math formula="A"/>. !}%
+The proof is by induction on the formula <Math formula="A"/>. %]]
 %sort identity {A} {_ %pi (hyp A) %-> (true A)} %.
 %mode identity %in %out %.
 %term _ identity (atom Q) init+ %.
@@ -491,8 +491,8 @@ The proof is by induction on the formula <Math formula="A"/>. !}%
 	%<- (identity P (%the (%pi (hyp P) %-> (true P)) D1)) %.
 %worlds (bl_atmpos bl_atmneg bl_hyp) (identity _ _) %.
 %total T (identity T _) %.
-%{! ### Cut admissibility !}%
-%{! There are two cut principles which must be proven simultaneously;
+%[[ ### Cut admissibility %]]
+%[[ There are two cut principles which must be proven simultaneously;
 ``cut`` is the main theorem, and ``lcut`` is the cut principle
 for lax truth.
 
@@ -504,12 +504,12 @@ formula <Math formula="A"/> gets smaller, or else the principal cut formula
 stays the same and one or both of the input derivations get smaller. The proof
 is entirely standard other than the need for extra commutative cuts for
 ``tlax``; more explanation is available at the article on
-the [admissibility of cut](/wiki/admissibility-of-cut/). !}%
+the [admissibility of cut](/wiki/admissibility-of-cut/). %]]
 %sort cut {A} {_ true A} {_ %pi (hyp A) %-> (conc J)} {_ conc J} %.
 %sort lcut {A} {_ lax A} {_ %pi (hyp A) %-> (lax C)} {_ lax C} %.
 %mode cut %in %in %in %out %.
 %mode lcut %in %in %in %out %.
-%{! #### Principal cuts !}%
+%[[ #### Principal cuts %]]
 %term _ cut (atom Q) (init+ H) ([h] init+ h) (init+ H) %.
 %term _ cut (atom Q) (init- H) ([h] init- h) (init- H) %.
 %term _ 
@@ -551,7 +551,7 @@ the [admissibility of cut](/wiki/admissibility-of-cut/). !}%
 	%pi (cut (circ P) (circR (%the (lax P) D)) ([h] circL (%the (%pi (hyp P) %-> (lax C)) (E h)) h) G)
 	%<- ({h' hyp P} cut (circ P) (circR D) ([h] E h h') (%the (lax C) (F h')))
 	%<- (lcut P D ([h'] F h') G) %.
-%{! #### Left commutative cuts !}%
+%[[ #### Left commutative cuts %]]
 %term _ %pi (lcut P (laxR (%the (true P) D)) E F) %<- (cut P D E F) %.
 %term _ %pi (cut A (upL D H) E (upL F H)) %<- ({h1} cut A (D h1) E (F h1)) %.
 %term _ %pi (cut A (downL D H) E (downL F H)) %<- ({h1} cut A (D h1) E (F h1)) %.
@@ -564,7 +564,7 @@ the [admissibility of cut](/wiki/admissibility-of-cut/). !}%
 	%<- ({h1} cut A (D1 h1) E (F1 h1))
 	%<- ({h2} cut A (D2 h2) E (F2 h2)) %.
 %term _ %pi (cut A (-oL D1 D2 H) E (-oL D1 F2 H)) %<- ({h'} cut A (D2 h') E (F2 h')) %.
-%{! #### Monadic left commutative cuts !}%
+%[[ #### Monadic left commutative cuts %]]
 %term _ 
 	%pi (lcut A (circL ([h] D h) H) E (circL ([h] F h) H))
 	%<- ({h'} lcut A (D h') E (F h')) %.
@@ -579,7 +579,7 @@ the [admissibility of cut](/wiki/admissibility-of-cut/). !}%
 	%<- ({h1} lcut A (D1 h1) E (F1 h1))
 	%<- ({h2} lcut A (D2 h2) E (F2 h2)) %.
 %term _ %pi (lcut A (-oL D1 D2 H) E (-oL D1 F2 H)) %<- ({h'} lcut A (D2 h') E (F2 h')) %.
-%{! #### Right commutative cuts !}%
+%[[ #### Right commutative cuts %]]
 %term _ cut A D ([h] init+ H) (init+ H) %.
 %term _ cut A D ([h] init- H) (init- H) %.
 %term _ %pi (cut A D ([h] laxR (E h)) (laxR F)) %<- (cut A D ([h] E h) F) %.
@@ -628,7 +628,7 @@ the [admissibility of cut](/wiki/admissibility-of-cut/). !}%
 %term _ 
 	%pi (cut A D ([h] circL ([h'] E h h') H) (circL ([h'] F h') H))
 	%<- ({h'} cut A D ([h] E h h') (F h')) %.
-%{! #### Monadic right commutive cuts !}%
+%[[ #### Monadic right commutive cuts %]]
 %term _ 
 	%pi (lcut A D ([h] upL ([h'] E h h') H) (upL F H))
 	%<- ({h'} lcut A D ([h] E h h') (F h')) %.
@@ -650,8 +650,8 @@ the [admissibility of cut](/wiki/admissibility-of-cut/). !}%
 	%<- ({h2} lcut A D ([h] E2 h h2) (F2 h2)) %.
 %worlds (bl_atmpos bl_atmneg bl_hyp) (cut _ _ _ _) (lcut _ _ _ _) %.
 %total {(A1 A2) [(D1 D2) (E1 E2)]} (cut A1 D1 E1 F1) (lcut A2 D2 E2 F2) %.
-%{! ### Inversion lemmas !}%
-%{! Proving invertability is an application of both cut and identity; it
+%[[ ### Inversion lemmas %]]
+%[[ Proving invertability is an application of both cut and identity; it
 establishes that that for some rules, whenver the conclusion is true then
 the premises are always true as well. 
 
@@ -659,7 +659,7 @@ In general, negative propositions are invertible on the right and positive
 propositions are invertible on the left, though in unfocused intutionstic
 logic ``up`` and ``down`` are invertible in both directions and
 both variants of conjunction are invertible on the right. This is not the full
-set of inversion lemmas, just the ones we needed. !}%
+set of inversion lemmas, just the ones we needed. %]]
 %sort invupR {_ true (up P)} {_ true P} %.
 %term _ 
 	%pi (invupR D F)
@@ -736,9 +736,9 @@ set of inversion lemmas, just the ones we needed. !}%
 	%pi (invcircL D F)
 	%<- (identity P (%the (%pi (hyp P) %-> (true P)) E))
 	%<- ({h' hyp P} cut (circ P) (circR (laxR (E h'))) ([h] D h) (F h')) %.
-%{! ## Correctness of translation !}%
-%{! ### Equivalence !}%
-%{! This is an interesting theorem, because it captures the idea that the
+%[[ ## Correctness of translation %]]
+%[[ ### Equivalence %]]
+%[[ This is an interesting theorem, because it captures the idea that the
 translation, while nondeterminstic (a single source logic proposition 
 corresponds to many target logic propositions), is not significant
 (all target logic propositions in the image of a single source logic
@@ -758,7 +758,7 @@ cut and paste the lemma into two copies which then call each other at the
 critical case; Twelf can handle the unordered pair as mutual induction. 
 
 First we need a minor strenghtening lemma first, that expresses that if a 
-hypothesis translated from true, then it isn't needed. !}%
+hypothesis translated from true, then it isn't needed. %]]
 %sort trans-equiv-str {_ %pi (hyp A) %-> (conc J)} {_ trans _ tt' pos A} {_ conc J} %.
 %term _ 
 	%pi (trans-equiv-str D (t-+ (t+- TR)) E)
@@ -911,13 +911,13 @@ hypothesis translated from true, then it isn't needed. !}%
 	%<- (lcut P D1 ([h] laxR (E h)) F) %.
 %worlds (bl_atmpos bl_atmneg bl_hyp) (trans-equiv _ _ _ _) (trans-equivX _ _ _ _) %.
 %total [(T1 T2) (S1 S2)] (trans-equiv T1 _ S1 _) (trans-equivX S2 _ T2 _) %.
-%{! ### Soundness !}%
-%{! * If <Math formula="\Gamma \vdash J"/> and <Math formula="\Gamma'~\texttt{trans}~\Gamma"/> and <Math formula="\Delta~\texttt{trans}~J"/>, then <Math formula="\Gamma' \vdash \Delta"/> (``trans-sound``)
+%[[ ### Soundness %]]
+%[[ * If <Math formula="\Gamma \vdash J"/> and <Math formula="\Gamma'~\texttt{trans}~\Gamma"/> and <Math formula="\Delta~\texttt{trans}~J"/>, then <Math formula="\Gamma' \vdash \Delta"/> (``trans-sound``)
 
-Proved by induction on the target logic derivation <Math formula="\Gamma \vdash J"/>. !}%
+Proved by induction on the target logic derivation <Math formula="\Gamma \vdash J"/>. %]]
 %sort trans-sound {_ conc C} {_ trans-conc Mt C' C} {_ conc' Mc C'} %.
 %mode trans-sound %in %in %out %.
-%{! Every case of translating a left rule needs to translate a hypothesis,
+%[[ Every case of translating a left rule needs to translate a hypothesis,
 and we can usefully predict the form of the output, except in the cases where
 the reverse translation is not determinstic. The first lemma, 
 ``trans-init``, is essentally just an [output factoring](/wiki/output-factoring/) 
@@ -954,7 +954,7 @@ of cut admissibility in the target logic.
 This awkwardness is a result of the slight mismatch between falsehood in 
 the target logic and contradiction in the source logic, and is part of
 the reason we didn't include falsehood as a primitive in the source logic. 
-!}%
+%]]
 %sort trans-init {_ trans Mt A' S (atom Q)} {_ hyp' A'} {_ hyp' (atom' Q)} %.
 %term _ trans-init tatom H H %.
 %mode trans-init %in %in %out %.
@@ -1046,25 +1046,25 @@ the reason we didn't include falsehood as a primitive in the source logic.
 	%<- ({h} {h'} %pi (trans-soundhyp h Th h') %-> (trans-sound (D h) (tclax T) (E h'))) %.
 %worlds (bl_atmpos bl_atmneg bl_trans-soundhyp) (trans-sound _ _ _) (trans-imp _ _ _ _ _ _) %.
 %total (D E) (trans-imp E _ _ _ _ _) (trans-sound D _ _) %.
-%{! ### Completeness !}%
-%{! * If <Math formula="\Gamma' \vdash \Delta"/> and <Math formula="\Gamma'~\texttt{trans}~\Gamma"/> and <Math formula="\Delta~\texttt{trans}~J"/>, then <Math formula="\Gamma \vdash J"/>.
+%[[ ### Completeness %]]
+%[[ * If <Math formula="\Gamma' \vdash \Delta"/> and <Math formula="\Gamma'~\texttt{trans}~\Gamma"/> and <Math formula="\Delta~\texttt{trans}~J"/>, then <Math formula="\Gamma \vdash J"/>.
 
 By lexographic induction on the first derivation's metric and then
 the second derivation's metric. For every left rule, we need a mutually
 inductive lemma that strips off any unnecessary shifts from the translation
 of the hypothesis; within these lemmas, the first derivation will always
 stay the same, but the derivation of the translation of the hypothesis
-will get smaller. !}%
+will get smaller. %]]
 %sort trans-compl {Td} {Tt} {_ conc' Td D} {_ trans-conc Tt D J} {_ conc J} %.
 %mode trans-compl %in %in %in %in %out %.
 %inline trans-compl' [d conc' Td D] [t trans-conc Tt D J] [e conc J] trans-compl Td Tt d t e %.
-%{! #### Shifts !}%
+%[[ #### Shifts %]]
 %term _ %pi (trans-compl' D (tc (t+- T)) (upR E)) %<- (trans-compl' D (tc T) E) %.
 %term _ %pi (trans-compl' D (tc (t-+ T)) (downR E)) %<- (trans-compl' D (tc T) E) %.
-%{! #### Truth !}%
+%[[ #### Truth %]]
 %term _ trans-compl' trueR' (tc t+true) 1R %.
 %term _ trans-compl' trueR' (tc t-true) topR %.
-%{! #### Conjunction !}%
+%[[ #### Conjunction %]]
 %term _ 
 	%pi (trans-compl' (/\R' D1 D2) (tc (t+and T1 T2)) (*R E1 E2))
 	%<- (trans-compl' D1 (tc T1) E1)
@@ -1091,7 +1091,7 @@ will get smaller. !}%
 	%pi (trans-compl' (/\L' D H') T (E H))
 	%<- (trans-complhyp H' Th (%the (hyp A) H))
 	%<- (trans-andL _ _ id/refl D T Th (%the (%pi (hyp A) %-> (conc D')) E)) %.
-%{! #### Disjunction !}%
+%[[ #### Disjunction %]]
 %term _ 
 	%pi (trans-compl' (\/R1' (%the (true' Tt M1) D)) (tc (t+or T1 _)) (+R1 E))
 	%<- (trans-compl' D (tc T1) E) %.
@@ -1118,7 +1118,7 @@ will get smaller. !}%
 	%pi (trans-compl' (\/L' D1 D2 H') T (E H))
 	%<- (trans-complhyp H' Th H)
 	%<- (trans-orL _ _ id/refl D1 D2 T Th E) %.
-%{! #### Implication !}%
+%[[ #### Implication %]]
 %term _ 
 	%pi (trans-compl' (=>R' (%the (%pi (hyp' M1) %-> (true' Tt M2)) D)) (tc (t-imp T1 T2)) (-oR E))
 	%<- ({h'} {h} %pi (trans-complhyp h' T1 h) %-> (trans-compl' (D h') (tc T2) (E h))) %.
@@ -1138,7 +1138,7 @@ will get smaller. !}%
 	%pi (trans-compl' (=>L' D1 D2 (%the (hyp' (M1 => M2)) H')) T (E H))
 	%<- (trans-complhyp H' Th (%the (hyp A) H))
 	%<- (trans-impL _ _ id/refl D1 D2 T Th E) %.
-%{! #### Negation !}%
+%[[ #### Negation %]]
 %term _ 
 	%pi (trans-compl' (notR' (%the (%pi (hyp' tt') %-> (# _)) D)) (tc t+false) G)
 	%<- ({h'} {h} %pi (trans-complhyp h' t+true h) %-> (trans-compl' (D h') tc# (E h)))
@@ -1159,7 +1159,7 @@ will get smaller. !}%
 	%pi (trans-compl' (notL' (%the (true' Td M) D) (%the (hyp' (not' M)) H')) tc# (E H))
 	%<- (trans-complhyp H' Th (%the (hyp A) H))
 	%<- (trans-notL _ _ id/refl D Th E) %.
-%{! #### Lax modality !}%
+%[[ #### Lax modality %]]
 %term _ 
 	%pi (trans-compl' (circR' D) (tc (t+circ T)) (circR (laxR E)))
 	%<- (trans-compl' D (tc T) E) %.
@@ -1179,18 +1179,18 @@ will get smaller. !}%
 	%pi (trans-compl' (circL' (%the (%pi (hyp' M) %-> (true' Td (circ' D'))) D) H') (tclax (%the (trans Tt D' S J) T)) (E H))
 	%<- (trans-complhyp H' Th (%the (hyp A) H))
 	%<- (trans-circL _ _ id/refl D T Th E) %.
-%{! #### Structural Rules !}%
-%{! For translating a cut, we need to come up with a translation of a source
+%[[ #### Structural Rules %]]
+%[[ For translating a cut, we need to come up with a translation of a source
 logc expression to a target logic expression; we have already established
 this was possible when we proved ``can-trans`` to show that translation
-was left-total. !}%
+was left-total. %]]
 %term _ 
 	%pi (trans-compl' (cut' (%the (true' _ M) Da) Dc) T F)
 	%<- (can-trans M (%the (trans _ M S A) TRa))
 	%<- (trans-compl' Da (tc TRa) (%the (true A) Ea))
 	%<- ({h'} {h} %pi (trans-complhyp h' TRa h) %-> (trans-compl' (Dc h') T (Ec h)))
 	%<- (cut A Ea Ec F) %.
-%{! Due to the mismatch between
+%[[ Due to the mismatch between
 the lax judgment and the circle, we need three cases for translating identity. 
 The first case is the most important one and is straightforward, however: we
 are translating <Math formula="\Gamma', M \vdash M"/> and need to show
@@ -1203,19 +1203,19 @@ a hypothesis <Math formula="A"/> such that
 <Math formula="M~\texttt{trans}~A"/>, and so by the identity principle we can prove
 <Math formula="\Gamma, A \vdash A~true"/>; then, ``trans-equiv`` allows
 us to prove <Math formula="\Gamma, A_M \vdash A_M~true"/>, which is what we 
-actually need. !}%
+actually need. %]]
 %term _ 
 	%pi (trans-compl' (id' (%the (hyp' M) H')) (tc (%the (trans _ M S Am) T)) E)
 	%<- (trans-complhyp H' Th (%the (hyp A) H))
 	%<- (identity A (%the (%pi (hyp A) %-> (true A)) D2))
 	%<- (trans-equiv Th (D2 H) T (%the (true Am) E)) %.
-%{! When we are translating to a lax judgment in the target language, what we
+%[[ When we are translating to a lax judgment in the target language, what we
 get out of the translation isn't exactly what we want, we need
 <Math formula="\Gamma \vdash A~lax"/> but the best we can get is 
 <Math formula="\Gamma \vdash {\bigcirc}P~true"/> or 
 <Math formula="\Gamma \vdash {\bigcirc}{\downarrow}N~true"/>. However, we can 
 use inversion lemmas (and lax cut, in the second case) to get what we need.
-!}%
+%]]
 %term _ 
 	%pi (trans-compl' (id' (%the (hyp' (circ' M)) H')) (tclax (%the (trans _ M pos Pm) T)) F)
 	%<- (trans-complhyp H' Th (%the (hyp P) H))
@@ -1236,9 +1236,9 @@ use inversion lemmas (and lax cut, in the second case) to get what we need.
 	%<- (cut (up 0) E ([h] upL 0L h) F) %.
 %worlds (bl_atmpos bl_atmneg bl_trans-complhyp) (trans-compl _ _ _ _ _) (trans-andL _ _ _ _ _ _ _) (trans-impL _ _ _ _ _ _ _ _) (trans-orL _ _ _ _ _ _ _ _) (trans-notL _ _ _ _ _ _) (trans-circL _ _ _ _ _ _ _) %.
 %total {(D1 D2 D3 D4 D5 D6) (T1 T2 T3 T4 T5 T6)} (trans-compl D1 T1 _ _ _) (trans-andL D2 T2 _ _ _ _ _) (trans-orL D3 T3 _ _ _ _ _ _) (trans-impL D4 T4 _ _ _ _ _ _) (trans-notL D5 T5 _ _ _ _) (trans-circL D6 T6 _ _ _ _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Lax_logic).
-!}%
+%]]

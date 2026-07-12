@@ -1,5 +1,5 @@
 %                     
-%{! 
+%[[ 
 
 ⚠️ All the tutorials on this page assume some familiarity with Twelf. If you are just getting started, check out [Proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/) or one of the other [introductions to Twelf](/wiki/introductions-to-twelf/). ⚠️
 
@@ -50,4 +50,4 @@ These tutorials cover diagnosing and fixing Twelf errors.
 * [Constraint domains and coverage checking](/wiki/constraint-domains-and-coverage-checking/) - in general, you can't use them in the same [signature](/wiki/twelf-signature/).
 
 
-!}%
+%]]

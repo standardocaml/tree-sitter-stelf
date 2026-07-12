@@ -1282,10 +1282,6 @@
         {
           "type": "command",
           "named": true
-        },
-        {
-          "type": "outer_text",
-          "named": true
         }
       ]
     }
@@ -1331,7 +1327,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "command",
@@ -1465,7 +1461,7 @@
     "fields": {
       "exprs": {
         "multiple": true,
-        "required": false,
+        "required": true,
         "types": [
           {
             "type": "(",
@@ -1647,6 +1643,10 @@
   },
   {
     "type": "%eval",
+    "named": false
+  },
+  {
+    "type": "%fn",
     "named": false
   },
   {

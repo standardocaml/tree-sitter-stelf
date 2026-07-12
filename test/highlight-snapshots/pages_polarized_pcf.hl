@@ -1,0 +1,2216 @@
+0:0-0:26	comment	`%                         `
+1:1-1:2	punctuation.bracket	`[`
+1:2-1:3	punctuation.bracket	`[`
+5:62-5:63	punctuation.bracket	`(`
+5:84-5:85	punctuation.bracket	`)`
+8:36-8:37	punctuation.bracket	`(`
+8:50-8:51	punctuation.bracket	`)`
+10:1-10:2	punctuation.bracket	`]`
+10:2-10:3	punctuation.bracket	`]`
+11:1-11:2	punctuation.bracket	`[`
+11:2-11:3	punctuation.bracket	`[`
+11:15-11:16	punctuation.bracket	`]`
+11:16-11:17	punctuation.bracket	`]`
+12:0-12:5	keyword.type	`%sort`
+12:6-12:9	constructor	`pos`
+12:6-12:9	local.reference	`pos`
+12:6-12:9	type	`pos`
+12:9-12:12	keyword.return	` %.`
+12:12-13:5	keyword.type	``
+13:6-13:9	constructor	`neg`
+13:6-13:9	local.reference	`neg`
+13:6-13:9	type	`neg`
+13:9-13:12	keyword.return	` %.`
+14:6-14:10	constructor	`down`
+14:6-14:10	function	`down`
+14:6-14:10	local.reference	`down`
+14:6-14:10	variable.parameter	`down`
+14:10-14:14	operator	` %pi`
+14:15-14:18	constructor	`neg`
+14:15-14:18	local.reference	`neg`
+14:19-14:22	operator	`%->`
+14:23-14:26	constructor	`pos`
+14:23-14:26	local.reference	`pos`
+14:26-14:29	keyword.return	` %.`
+15:6-15:9	constructor	`nat`
+15:6-15:9	function	`nat`
+15:6-15:9	local.reference	`nat`
+15:6-15:9	variable.parameter	`nat`
+15:9-15:13	constructor	` pos`
+15:9-15:13	local.reference	` pos`
+15:13-15:16	keyword.return	` %.`
+16:6-16:8	constructor	`up`
+16:6-16:8	function	`up`
+16:6-16:8	local.reference	`up`
+16:6-16:8	variable.parameter	`up`
+16:8-16:12	operator	` %pi`
+16:13-16:16	constructor	`pos`
+16:13-16:16	local.reference	`pos`
+16:17-16:20	operator	`%->`
+16:21-16:24	constructor	`neg`
+16:21-16:24	local.reference	`neg`
+16:24-16:27	keyword.return	` %.`
+17:6-17:9	constructor	`arr`
+17:6-17:9	function	`arr`
+17:6-17:9	local.reference	`arr`
+17:6-17:9	variable.parameter	`arr`
+17:9-17:13	operator	` %pi`
+17:14-17:17	constructor	`pos`
+17:14-17:17	local.reference	`pos`
+17:18-17:21	operator	`%->`
+17:22-17:25	constructor	`neg`
+17:22-17:25	local.reference	`neg`
+17:25-17:29	operator	` %->`
+17:30-17:33	constructor	`neg`
+17:30-17:33	local.reference	`neg`
+17:33-17:36	keyword.return	` %.`
+18:6-18:12	constructor	`stream`
+18:6-18:12	function	`stream`
+18:6-18:12	local.reference	`stream`
+18:6-18:12	variable.parameter	`stream`
+18:12-18:16	operator	` %pi`
+18:17-18:20	constructor	`neg`
+18:17-18:20	local.reference	`neg`
+18:21-18:24	operator	`%->`
+18:25-18:28	constructor	`neg`
+18:25-18:28	local.reference	`neg`
+18:28-18:31	keyword.return	` %.`
+18:31-19:5	keyword.type	``
+19:6-19:10	constructor	`val+`
+19:6-19:10	local.reference	`val+`
+19:6-19:10	type	`val+`
+19:19-19:21	keyword.return	`%.`
+19:21-20:5	keyword.type	``
+20:6-20:11	constructor	`cont+`
+20:6-20:11	local.reference	`cont+`
+20:6-20:11	type	`cont+`
+20:28-20:30	keyword.return	`%.`
+20:30-21:5	keyword.type	``
+21:6-21:10	constructor	`val-`
+21:6-21:10	local.reference	`val-`
+21:6-21:10	type	`val-`
+21:19-21:21	keyword.return	`%.`
+21:21-22:5	keyword.type	``
+22:6-22:11	constructor	`cont-`
+22:6-22:11	local.reference	`cont-`
+22:6-22:11	type	`cont-`
+22:28-22:30	keyword.return	`%.`
+22:30-23:5	keyword.type	``
+23:6-23:9	constructor	`exp`
+23:6-23:9	local.reference	`exp`
+23:6-23:9	type	`exp`
+23:18-23:20	keyword.return	`%.`
+25:0-25:5	keyword	`%term`
+25:6-25:10	constructor	`zero`
+25:6-25:10	function	`zero`
+25:6-25:10	local.reference	`zero`
+25:6-25:10	variable.parameter	`zero`
+25:10-25:15	constructor	` val+`
+25:10-25:15	local.reference	` val+`
+25:15-25:19	constructor	` nat`
+25:15-25:19	local.reference	` nat`
+25:19-25:22	keyword.return	` %.`
+26:6-26:10	constructor	`succ`
+26:6-26:10	function	`succ`
+26:6-26:10	local.reference	`succ`
+26:6-26:10	variable.parameter	`succ`
+26:10-26:14	operator	` %pi`
+26:15-26:16	punctuation.bracket	`(`
+26:16-26:20	constructor	`val+`
+26:16-26:20	local.reference	`val+`
+26:21-26:24	constructor	`nat`
+26:21-26:24	local.reference	`nat`
+26:24-26:25	punctuation.bracket	`)`
+26:26-26:29	operator	`%->`
+26:30-26:31	punctuation.bracket	`(`
+26:31-26:35	constructor	`val+`
+26:31-26:35	local.reference	`val+`
+26:36-26:39	constructor	`nat`
+26:36-26:39	local.reference	`nat`
+26:39-26:40	punctuation.bracket	`)`
+26:40-26:43	keyword.return	` %.`
+27:6-27:12	constructor	`delay-`
+27:6-27:12	function	`delay-`
+27:6-27:12	local.reference	`delay-`
+27:6-27:12	variable.parameter	`delay-`
+27:12-27:16	operator	` %pi`
+27:17-27:18	punctuation.bracket	`(`
+27:18-27:22	constructor	`val-`
+27:18-27:22	local.reference	`val-`
+27:23-27:25	constructor	`A-`
+27:23-27:25	local.reference	`A-`
+27:25-27:26	punctuation.bracket	`)`
+27:27-27:30	operator	`%->`
+27:31-27:32	punctuation.bracket	`(`
+27:32-27:36	constructor	`val+`
+27:32-27:36	local.reference	`val+`
+27:37-27:38	punctuation.bracket	`(`
+27:38-27:42	constructor	`down`
+27:38-27:42	local.reference	`down`
+27:43-27:45	constructor	`A-`
+27:43-27:45	local.reference	`A-`
+27:45-27:46	punctuation.bracket	`)`
+27:46-27:47	punctuation.bracket	`)`
+27:47-27:50	keyword.return	` %.`
+29:0-29:5	keyword	`%term`
+29:6-29:9	constructor	`ifz`
+29:6-29:9	function	`ifz`
+29:6-29:9	local.reference	`ifz`
+29:6-29:9	variable.parameter	`ifz`
+29:9-29:13	operator	` %pi`
+29:14-29:15	punctuation.bracket	`(`
+29:15-29:18	constructor	`exp`
+29:15-29:18	local.reference	`exp`
+29:19-29:21	constructor	`A+`
+29:19-29:21	local.reference	`A+`
+29:21-29:22	punctuation.bracket	`)`
+29:23-29:26	operator	`%->`
+29:27-29:28	punctuation.bracket	`(`
+29:28-29:31	operator	`%pi`
+29:32-29:33	punctuation.bracket	`(`
+29:33-29:37	constructor	`val+`
+29:33-29:37	local.reference	`val+`
+29:38-29:41	constructor	`nat`
+29:38-29:41	local.reference	`nat`
+29:41-29:42	punctuation.bracket	`)`
+29:43-29:46	operator	`%->`
+29:47-29:48	punctuation.bracket	`(`
+29:48-29:51	constructor	`exp`
+29:48-29:51	local.reference	`exp`
+29:52-29:54	constructor	`A+`
+29:52-29:54	local.reference	`A+`
+29:54-29:55	punctuation.bracket	`)`
+29:55-29:56	punctuation.bracket	`)`
+29:56-29:60	operator	` %->`
+29:61-29:62	punctuation.bracket	`(`
+29:62-29:67	constructor	`cont+`
+29:62-29:67	local.reference	`cont+`
+29:68-29:71	constructor	`nat`
+29:68-29:71	local.reference	`nat`
+29:72-29:74	constructor	`A+`
+29:72-29:74	local.reference	`A+`
+29:74-29:75	punctuation.bracket	`)`
+29:75-29:78	keyword.return	` %.`
+30:6-30:12	constructor	`force-`
+30:6-30:12	function	`force-`
+30:6-30:12	local.reference	`force-`
+30:6-30:12	variable.parameter	`force-`
+30:12-30:16	operator	` %pi`
+30:17-30:18	punctuation.bracket	`(`
+30:18-30:21	operator	`%pi`
+30:22-30:23	punctuation.bracket	`(`
+30:23-30:27	constructor	`val-`
+30:23-30:27	local.reference	`val-`
+30:28-30:30	constructor	`A-`
+30:28-30:30	local.reference	`A-`
+30:30-30:31	punctuation.bracket	`)`
+30:32-30:35	operator	`%->`
+30:36-30:37	punctuation.bracket	`(`
+30:37-30:40	constructor	`exp`
+30:37-30:40	local.reference	`exp`
+30:41-30:43	constructor	`C+`
+30:41-30:43	local.reference	`C+`
+30:43-30:44	punctuation.bracket	`)`
+30:44-30:45	punctuation.bracket	`)`
+30:46-30:49	operator	`%->`
+30:50-30:51	punctuation.bracket	`(`
+30:51-30:56	constructor	`cont+`
+30:51-30:56	local.reference	`cont+`
+30:57-30:58	punctuation.bracket	`(`
+30:58-30:62	constructor	`down`
+30:58-30:62	local.reference	`down`
+30:63-30:65	constructor	`A-`
+30:63-30:65	local.reference	`A-`
+30:65-30:66	punctuation.bracket	`)`
+30:67-30:69	constructor	`C+`
+30:67-30:69	local.reference	`C+`
+30:69-30:70	punctuation.bracket	`)`
+30:70-30:73	keyword.return	` %.`
+32:0-32:5	keyword	`%term`
+32:6-32:11	constructor	`comp+`
+32:6-32:11	function	`comp+`
+32:6-32:11	local.reference	`comp+`
+32:6-32:11	variable.parameter	`comp+`
+32:11-32:15	operator	` %pi`
+32:16-32:17	punctuation.bracket	`(`
+32:17-32:22	constructor	`cont+`
+32:17-32:22	local.reference	`cont+`
+32:23-32:25	constructor	`A+`
+32:23-32:25	local.reference	`A+`
+32:26-32:28	constructor	`B+`
+32:26-32:28	local.reference	`B+`
+32:28-32:29	punctuation.bracket	`)`
+32:30-32:33	operator	`%->`
+32:34-32:35	punctuation.bracket	`(`
+32:35-32:38	operator	`%pi`
+32:39-32:40	punctuation.bracket	`(`
+32:40-32:44	constructor	`val+`
+32:40-32:44	local.reference	`val+`
+32:45-32:47	constructor	`B+`
+32:45-32:47	local.reference	`B+`
+32:47-32:48	punctuation.bracket	`)`
+32:49-32:52	operator	`%->`
+32:53-32:54	punctuation.bracket	`(`
+32:54-32:57	constructor	`exp`
+32:54-32:57	local.reference	`exp`
+32:58-32:60	constructor	`C+`
+32:58-32:60	local.reference	`C+`
+32:60-32:61	punctuation.bracket	`)`
+32:61-32:62	punctuation.bracket	`)`
+32:62-32:66	operator	` %->`
+32:67-32:68	punctuation.bracket	`(`
+32:68-32:73	constructor	`cont+`
+32:68-32:73	local.reference	`cont+`
+32:74-32:76	constructor	`A+`
+32:74-32:76	local.reference	`A+`
+32:77-32:79	constructor	`C+`
+32:77-32:79	local.reference	`C+`
+32:79-32:80	punctuation.bracket	`)`
+32:80-32:83	keyword.return	` %.`
+34:0-34:5	keyword	`%term`
+34:6-34:9	constructor	`lam`
+34:6-34:9	function	`lam`
+34:6-34:9	local.reference	`lam`
+34:6-34:9	variable.parameter	`lam`
+34:9-34:13	operator	` %pi`
+34:14-34:15	punctuation.bracket	`(`
+34:15-34:18	operator	`%pi`
+34:19-34:20	punctuation.bracket	`(`
+34:20-34:24	constructor	`val+`
+34:20-34:24	local.reference	`val+`
+34:25-34:27	constructor	`A+`
+34:25-34:27	local.reference	`A+`
+34:27-34:28	punctuation.bracket	`)`
+34:29-34:32	operator	`%->`
+34:33-34:34	punctuation.bracket	`(`
+34:34-34:38	constructor	`val-`
+34:34-34:38	local.reference	`val-`
+34:39-34:41	constructor	`B-`
+34:39-34:41	local.reference	`B-`
+34:41-34:42	punctuation.bracket	`)`
+34:42-34:43	punctuation.bracket	`)`
+34:44-34:47	operator	`%->`
+34:48-34:49	punctuation.bracket	`(`
+34:49-34:53	constructor	`val-`
+34:49-34:53	local.reference	`val-`
+34:54-34:55	punctuation.bracket	`(`
+34:55-34:58	constructor	`arr`
+34:55-34:58	local.reference	`arr`
+34:59-34:61	constructor	`A+`
+34:59-34:61	local.reference	`A+`
+34:62-34:64	constructor	`B-`
+34:62-34:64	local.reference	`B-`
+34:64-34:65	punctuation.bracket	`)`
+34:65-34:66	punctuation.bracket	`)`
+34:66-34:69	keyword.return	` %.`
+35:6-35:12	constructor	`delay+`
+35:6-35:12	function	`delay+`
+35:6-35:12	local.reference	`delay+`
+35:6-35:12	variable.parameter	`delay+`
+35:12-35:16	operator	` %pi`
+35:17-35:18	punctuation.bracket	`(`
+35:18-35:21	constructor	`exp`
+35:18-35:21	local.reference	`exp`
+35:22-35:24	constructor	`A+`
+35:22-35:24	local.reference	`A+`
+35:24-35:25	punctuation.bracket	`)`
+35:26-35:29	operator	`%->`
+35:30-35:31	punctuation.bracket	`(`
+35:31-35:35	constructor	`val-`
+35:31-35:35	local.reference	`val-`
+35:36-35:37	punctuation.bracket	`(`
+35:37-35:39	constructor	`up`
+35:37-35:39	local.reference	`up`
+35:40-35:42	constructor	`A+`
+35:40-35:42	local.reference	`A+`
+35:42-35:43	punctuation.bracket	`)`
+35:43-35:44	punctuation.bracket	`)`
+35:44-35:47	keyword.return	` %.`
+36:6-36:9	constructor	`fix`
+36:6-36:9	function	`fix`
+36:6-36:9	local.reference	`fix`
+36:6-36:9	variable.parameter	`fix`
+36:9-36:13	operator	` %pi`
+36:14-36:15	punctuation.bracket	`(`
+36:15-36:18	operator	`%pi`
+36:19-36:20	punctuation.bracket	`(`
+36:20-36:24	constructor	`val-`
+36:20-36:24	local.reference	`val-`
+36:25-36:27	constructor	`A-`
+36:25-36:27	local.reference	`A-`
+36:27-36:28	punctuation.bracket	`)`
+36:29-36:32	operator	`%->`
+36:33-36:34	punctuation.bracket	`(`
+36:34-36:38	constructor	`val-`
+36:34-36:38	local.reference	`val-`
+36:39-36:41	constructor	`A-`
+36:39-36:41	local.reference	`A-`
+36:41-36:42	punctuation.bracket	`)`
+36:42-36:43	punctuation.bracket	`)`
+36:44-36:47	operator	`%->`
+36:48-36:49	punctuation.bracket	`(`
+36:49-36:53	constructor	`val-`
+36:49-36:53	local.reference	`val-`
+36:54-36:56	constructor	`A-`
+36:54-36:56	local.reference	`A-`
+36:56-36:57	punctuation.bracket	`)`
+36:57-36:60	keyword.return	` %.`
+37:6-37:10	constructor	`cons`
+37:6-37:10	function	`cons`
+37:6-37:10	local.reference	`cons`
+37:6-37:10	variable.parameter	`cons`
+37:10-38:4	operator	``
+38:5-38:6	punctuation.bracket	`(`
+38:6-38:6	local.reference	``
+38:6-38:6	operator	``
+38:6-38:7	punctuation.bracket	`{`
+38:7-38:9	constructor	`C+`
+38:7-38:9	local.reference	`C+`
+38:7-38:9	variable.parameter	`C+`
+38:9-38:10	punctuation.bracket	`}`
+38:11-38:14	operator	`%pi`
+38:15-38:16	punctuation.bracket	`(`
+38:16-38:21	constructor	`cont-`
+38:16-38:21	local.reference	`cont-`
+38:22-38:24	constructor	`A-`
+38:22-38:24	local.reference	`A-`
+38:25-38:27	constructor	`C+`
+38:25-38:27	local.reference	`C+`
+38:27-38:28	punctuation.bracket	`)`
+38:29-38:32	operator	`%->`
+38:33-38:34	punctuation.bracket	`(`
+38:34-38:37	constructor	`exp`
+38:34-38:37	local.reference	`exp`
+38:38-38:40	constructor	`C+`
+38:38-38:40	local.reference	`C+`
+38:40-38:41	punctuation.bracket	`)`
+38:41-38:42	punctuation.bracket	`)`
+39:1-39:4	operator	`%->`
+39:5-39:6	punctuation.bracket	`(`
+39:6-39:6	local.reference	``
+39:6-39:6	operator	``
+39:6-39:7	punctuation.bracket	`{`
+39:7-39:9	constructor	`C+`
+39:7-39:9	local.reference	`C+`
+39:7-39:9	variable.parameter	`C+`
+39:9-39:10	punctuation.bracket	`}`
+39:11-39:14	operator	`%pi`
+39:15-39:16	punctuation.bracket	`(`
+39:16-39:21	constructor	`cont-`
+39:16-39:21	local.reference	`cont-`
+39:22-39:23	punctuation.bracket	`(`
+39:23-39:29	constructor	`stream`
+39:23-39:29	local.reference	`stream`
+39:30-39:32	constructor	`A-`
+39:30-39:32	local.reference	`A-`
+39:32-39:33	punctuation.bracket	`)`
+39:34-39:36	constructor	`C+`
+39:34-39:36	local.reference	`C+`
+39:36-39:37	punctuation.bracket	`)`
+39:38-39:41	operator	`%->`
+39:42-39:43	punctuation.bracket	`(`
+39:43-39:46	constructor	`exp`
+39:43-39:46	local.reference	`exp`
+39:47-39:49	constructor	`C+`
+39:47-39:49	local.reference	`C+`
+39:49-39:50	punctuation.bracket	`)`
+39:50-39:51	punctuation.bracket	`)`
+39:51-40:4	operator	``
+40:5-40:6	punctuation.bracket	`(`
+40:6-40:10	constructor	`val-`
+40:6-40:10	local.reference	`val-`
+40:11-40:12	punctuation.bracket	`(`
+40:12-40:18	constructor	`stream`
+40:12-40:18	local.reference	`stream`
+40:19-40:21	constructor	`A-`
+40:19-40:21	local.reference	`A-`
+40:21-40:22	punctuation.bracket	`)`
+40:22-40:23	punctuation.bracket	`)`
+40:23-40:26	keyword.return	` %.`
+42:0-42:5	keyword	`%term`
+42:6-42:9	constructor	`app`
+42:6-42:9	function	`app`
+42:6-42:9	local.reference	`app`
+42:6-42:9	variable.parameter	`app`
+42:9-42:13	operator	` %pi`
+42:14-42:15	punctuation.bracket	`(`
+42:15-42:19	constructor	`val+`
+42:15-42:19	local.reference	`val+`
+42:20-42:22	constructor	`A+`
+42:20-42:22	local.reference	`A+`
+42:22-42:23	punctuation.bracket	`)`
+42:24-42:27	operator	`%->`
+42:28-42:29	punctuation.bracket	`(`
+42:29-42:34	constructor	`cont-`
+42:29-42:34	local.reference	`cont-`
+42:35-42:37	constructor	`B-`
+42:35-42:37	local.reference	`B-`
+42:38-42:40	constructor	`C+`
+42:38-42:40	local.reference	`C+`
+42:40-42:41	punctuation.bracket	`)`
+42:41-42:45	operator	` %->`
+42:46-42:47	punctuation.bracket	`(`
+42:47-42:52	constructor	`cont-`
+42:47-42:52	local.reference	`cont-`
+42:53-42:54	punctuation.bracket	`(`
+42:54-42:57	constructor	`arr`
+42:54-42:57	local.reference	`arr`
+42:58-42:60	constructor	`A+`
+42:58-42:60	local.reference	`A+`
+42:61-42:63	constructor	`B-`
+42:61-42:63	local.reference	`B-`
+42:63-42:64	punctuation.bracket	`)`
+42:65-42:67	constructor	`C+`
+42:65-42:67	local.reference	`C+`
+42:67-42:68	punctuation.bracket	`)`
+42:68-42:71	keyword.return	` %.`
+43:6-43:12	constructor	`force+`
+43:6-43:12	function	`force+`
+43:6-43:12	local.reference	`force+`
+43:6-43:12	variable.parameter	`force+`
+43:12-43:16	operator	` %pi`
+43:17-43:18	punctuation.bracket	`(`
+43:18-43:21	operator	`%pi`
+43:22-43:23	punctuation.bracket	`(`
+43:23-43:27	constructor	`val+`
+43:23-43:27	local.reference	`val+`
+43:28-43:30	constructor	`A+`
+43:28-43:30	local.reference	`A+`
+43:30-43:31	punctuation.bracket	`)`
+43:32-43:35	operator	`%->`
+43:36-43:37	punctuation.bracket	`(`
+43:37-43:40	constructor	`exp`
+43:37-43:40	local.reference	`exp`
+43:41-43:43	constructor	`C+`
+43:41-43:43	local.reference	`C+`
+43:43-43:44	punctuation.bracket	`)`
+43:44-43:45	punctuation.bracket	`)`
+43:46-43:49	operator	`%->`
+43:50-43:51	punctuation.bracket	`(`
+43:51-43:56	constructor	`cont-`
+43:51-43:56	local.reference	`cont-`
+43:57-43:58	punctuation.bracket	`(`
+43:58-43:60	constructor	`up`
+43:58-43:60	local.reference	`up`
+43:61-43:63	constructor	`A+`
+43:61-43:63	local.reference	`A+`
+43:63-43:64	punctuation.bracket	`)`
+43:65-43:67	constructor	`C+`
+43:65-43:67	local.reference	`C+`
+43:67-43:68	punctuation.bracket	`)`
+43:68-43:71	keyword.return	` %.`
+45:0-45:5	keyword	`%term`
+45:6-45:11	constructor	`comp-`
+45:6-45:11	function	`comp-`
+45:6-45:11	local.reference	`comp-`
+45:6-45:11	variable.parameter	`comp-`
+45:11-45:15	operator	` %pi`
+45:16-45:17	punctuation.bracket	`(`
+45:17-45:22	constructor	`cont-`
+45:17-45:22	local.reference	`cont-`
+45:23-45:25	constructor	`A-`
+45:23-45:25	local.reference	`A-`
+45:26-45:28	constructor	`B+`
+45:26-45:28	local.reference	`B+`
+45:28-45:29	punctuation.bracket	`)`
+45:30-45:33	operator	`%->`
+45:34-45:35	punctuation.bracket	`(`
+45:35-45:38	operator	`%pi`
+45:39-45:40	punctuation.bracket	`(`
+45:40-45:44	constructor	`val+`
+45:40-45:44	local.reference	`val+`
+45:45-45:47	constructor	`B+`
+45:45-45:47	local.reference	`B+`
+45:47-45:48	punctuation.bracket	`)`
+45:49-45:52	operator	`%->`
+45:53-45:54	punctuation.bracket	`(`
+45:54-45:57	constructor	`exp`
+45:54-45:57	local.reference	`exp`
+45:58-45:60	constructor	`C+`
+45:58-45:60	local.reference	`C+`
+45:60-45:61	punctuation.bracket	`)`
+45:61-45:62	punctuation.bracket	`)`
+45:62-45:66	operator	` %->`
+45:67-45:68	punctuation.bracket	`(`
+45:68-45:73	constructor	`cont-`
+45:68-45:73	local.reference	`cont-`
+45:74-45:76	constructor	`A-`
+45:74-45:76	local.reference	`A-`
+45:77-45:79	constructor	`C+`
+45:77-45:79	local.reference	`C+`
+45:79-45:80	punctuation.bracket	`)`
+45:80-45:83	keyword.return	` %.`
+46:6-46:10	constructor	`head`
+46:6-46:10	function	`head`
+46:6-46:10	local.reference	`head`
+46:6-46:10	variable.parameter	`head`
+46:10-46:14	operator	` %pi`
+46:15-46:16	punctuation.bracket	`(`
+46:16-46:21	constructor	`cont-`
+46:16-46:21	local.reference	`cont-`
+46:22-46:24	constructor	`A-`
+46:22-46:24	local.reference	`A-`
+46:25-46:27	constructor	`C+`
+46:25-46:27	local.reference	`C+`
+46:27-46:28	punctuation.bracket	`)`
+46:29-46:32	operator	`%->`
+46:33-46:34	punctuation.bracket	`(`
+46:34-46:39	constructor	`cont-`
+46:34-46:39	local.reference	`cont-`
+46:40-46:41	punctuation.bracket	`(`
+46:41-46:47	constructor	`stream`
+46:41-46:47	local.reference	`stream`
+46:48-46:50	constructor	`A-`
+46:48-46:50	local.reference	`A-`
+46:50-46:51	punctuation.bracket	`)`
+46:52-46:54	constructor	`C+`
+46:52-46:54	local.reference	`C+`
+46:54-46:55	punctuation.bracket	`)`
+46:55-46:58	keyword.return	` %.`
+47:6-47:10	constructor	`tail`
+47:6-47:10	function	`tail`
+47:6-47:10	local.reference	`tail`
+47:6-47:10	variable.parameter	`tail`
+47:10-47:14	operator	` %pi`
+47:15-47:16	punctuation.bracket	`(`
+47:16-47:21	constructor	`cont-`
+47:16-47:21	local.reference	`cont-`
+47:22-47:23	punctuation.bracket	`(`
+47:23-47:29	constructor	`stream`
+47:23-47:29	local.reference	`stream`
+47:30-47:32	constructor	`A-`
+47:30-47:32	local.reference	`A-`
+47:32-47:33	punctuation.bracket	`)`
+47:34-47:36	constructor	`A+`
+47:34-47:36	local.reference	`A+`
+47:36-47:37	punctuation.bracket	`)`
+47:38-47:41	operator	`%->`
+47:42-47:43	punctuation.bracket	`(`
+47:43-47:48	constructor	`cont-`
+47:43-47:48	local.reference	`cont-`
+47:49-47:50	punctuation.bracket	`(`
+47:50-47:56	constructor	`stream`
+47:50-47:56	local.reference	`stream`
+47:57-47:59	constructor	`A-`
+47:57-47:59	local.reference	`A-`
+47:59-47:60	punctuation.bracket	`)`
+47:61-47:63	constructor	`A+`
+47:61-47:63	local.reference	`A+`
+47:63-47:64	punctuation.bracket	`)`
+47:64-47:67	keyword.return	` %.`
+49:0-49:5	keyword	`%term`
+49:6-49:9	constructor	`ret`
+49:6-49:9	function	`ret`
+49:6-49:9	local.reference	`ret`
+49:6-49:9	variable.parameter	`ret`
+49:9-49:13	operator	` %pi`
+49:14-49:15	punctuation.bracket	`(`
+49:15-49:19	constructor	`val+`
+49:15-49:19	local.reference	`val+`
+49:20-49:22	constructor	`A+`
+49:20-49:22	local.reference	`A+`
+49:22-49:23	punctuation.bracket	`)`
+49:24-49:27	operator	`%->`
+49:28-49:29	punctuation.bracket	`(`
+49:29-49:32	constructor	`exp`
+49:29-49:32	local.reference	`exp`
+49:33-49:35	constructor	`A+`
+49:33-49:35	local.reference	`A+`
+49:35-49:36	punctuation.bracket	`)`
+49:36-49:39	keyword.return	` %.`
+54:0-54:5	keyword	`%term`
+54:6-54:10	constructor	`cut+`
+54:6-54:10	function	`cut+`
+54:6-54:10	local.reference	`cut+`
+54:6-54:10	variable.parameter	`cut+`
+54:10-54:14	operator	` %pi`
+54:15-54:16	punctuation.bracket	`(`
+54:16-54:20	constructor	`val+`
+54:16-54:20	local.reference	`val+`
+54:21-54:23	constructor	`A+`
+54:21-54:23	local.reference	`A+`
+54:23-54:24	punctuation.bracket	`)`
+54:25-54:28	operator	`%->`
+54:29-54:30	punctuation.bracket	`(`
+54:30-54:35	constructor	`cont+`
+54:30-54:35	local.reference	`cont+`
+54:36-54:38	constructor	`A+`
+54:36-54:38	local.reference	`A+`
+54:39-54:41	constructor	`C+`
+54:39-54:41	local.reference	`C+`
+54:41-54:42	punctuation.bracket	`)`
+54:42-54:46	operator	` %->`
+54:47-54:48	punctuation.bracket	`(`
+54:48-54:51	constructor	`exp`
+54:48-54:51	local.reference	`exp`
+54:52-54:54	constructor	`C+`
+54:52-54:54	local.reference	`C+`
+54:54-54:55	punctuation.bracket	`)`
+54:55-54:58	keyword.return	` %.`
+55:6-55:10	constructor	`cut-`
+55:6-55:10	function	`cut-`
+55:6-55:10	local.reference	`cut-`
+55:6-55:10	variable.parameter	`cut-`
+55:10-55:14	operator	` %pi`
+55:15-55:16	punctuation.bracket	`(`
+55:16-55:20	constructor	`val-`
+55:16-55:20	local.reference	`val-`
+55:21-55:23	constructor	`A-`
+55:21-55:23	local.reference	`A-`
+55:23-55:24	punctuation.bracket	`)`
+55:25-55:28	operator	`%->`
+55:29-55:30	punctuation.bracket	`(`
+55:30-55:35	constructor	`cont-`
+55:30-55:35	local.reference	`cont-`
+55:36-55:38	constructor	`A-`
+55:36-55:38	local.reference	`A-`
+55:39-55:41	constructor	`C+`
+55:39-55:41	local.reference	`C+`
+55:41-55:42	punctuation.bracket	`)`
+55:42-55:46	operator	` %->`
+55:47-55:48	punctuation.bracket	`(`
+55:48-55:51	constructor	`exp`
+55:48-55:51	local.reference	`exp`
+55:52-55:54	constructor	`C+`
+55:52-55:54	local.reference	`C+`
+55:54-55:55	punctuation.bracket	`)`
+55:55-55:58	keyword.return	` %.`
+57:0-57:5	keyword	`%term`
+57:6-57:9	constructor	`let`
+57:6-57:9	function	`let`
+57:6-57:9	local.reference	`let`
+57:6-57:9	variable.parameter	`let`
+57:9-57:13	operator	` %pi`
+57:14-57:15	punctuation.bracket	`(`
+57:15-57:18	constructor	`exp`
+57:15-57:18	local.reference	`exp`
+57:19-57:21	constructor	`A+`
+57:19-57:21	local.reference	`A+`
+57:21-57:22	punctuation.bracket	`)`
+57:23-57:26	operator	`%->`
+57:27-57:28	punctuation.bracket	`(`
+57:28-57:31	operator	`%pi`
+57:32-57:33	punctuation.bracket	`(`
+57:33-57:37	constructor	`val+`
+57:33-57:37	local.reference	`val+`
+57:38-57:40	constructor	`A+`
+57:38-57:40	local.reference	`A+`
+57:40-57:41	punctuation.bracket	`)`
+57:42-57:45	operator	`%->`
+57:46-57:47	punctuation.bracket	`(`
+57:47-57:50	constructor	`exp`
+57:47-57:50	local.reference	`exp`
+57:51-57:53	constructor	`C+`
+57:51-57:53	local.reference	`C+`
+57:53-57:54	punctuation.bracket	`)`
+57:54-57:55	punctuation.bracket	`)`
+57:55-57:59	operator	` %->`
+57:60-57:61	punctuation.bracket	`(`
+57:61-57:64	constructor	`exp`
+57:61-57:64	local.reference	`exp`
+57:65-57:67	constructor	`C+`
+57:65-57:67	local.reference	`C+`
+57:67-57:68	punctuation.bracket	`)`
+57:68-57:71	keyword.return	` %.`
+60:0-60:6	keyword	`%block`
+60:7-60:11	constructor	`posb`
+60:7-60:11	label	`posb`
+60:7-60:11	local.reference	`posb`
+60:32-60:34	keyword.return	`%.`
+61:7-61:11	constructor	`negb`
+61:7-61:11	label	`negb`
+61:7-61:11	local.reference	`negb`
+61:32-61:34	keyword.return	`%.`
+62:7-62:12	constructor	`negcb`
+62:7-62:12	label	`negcb`
+62:7-62:12	local.reference	`negcb`
+62:46-62:48	keyword.return	`%.`
+63:8-63:9	punctuation.bracket	`(`
+63:9-63:13	constructor	`posb`
+63:9-63:13	local.reference	`posb`
+63:14-63:18	constructor	`negb`
+63:14-63:18	local.reference	`negb`
+63:19-63:24	constructor	`negcb`
+63:19-63:24	local.reference	`negcb`
+63:24-63:25	punctuation.bracket	`)`
+63:26-63:27	punctuation.bracket	`(`
+63:27-63:31	constructor	`val+`
+63:27-63:31	local.reference	`val+`
+63:32-63:33	constructor	`_`
+63:32-63:33	local.reference	`_`
+63:32-63:33	variable.parameter	`_`
+63:33-63:34	punctuation.bracket	`)`
+63:76-63:78	keyword.return	`%.`
+66:1-66:2	punctuation.bracket	`[`
+66:2-66:3	punctuation.bracket	`[`
+72:1-72:2	punctuation.bracket	`]`
+72:2-72:3	punctuation.bracket	`]`
+73:0-73:5	keyword.type	`%sort`
+73:6-73:10	constructor	`step`
+73:6-73:10	local.reference	`step`
+73:6-73:10	type	`step`
+73:33-73:35	keyword.return	`%.`
+74:6-74:10	constructor	`step`
+74:6-74:10	local.reference	`step`
+74:10-74:14	keyword.modifier	` %in`
+74:14-74:19	keyword.modifier	` %out`
+74:19-74:22	keyword.return	` %.`
+75:6-75:16	constructor	`step/ifz-0`
+75:6-75:16	function	`step/ifz-0`
+75:6-75:16	local.reference	`step/ifz-0`
+75:6-75:16	variable.parameter	`step/ifz-0`
+75:16-75:21	constructor	` step`
+75:16-75:21	local.reference	` step`
+75:49-75:51	keyword.return	`%.`
+76:6-76:16	constructor	`step/ifz-1`
+76:6-76:16	function	`step/ifz-1`
+76:6-76:16	local.reference	`step/ifz-1`
+76:6-76:16	variable.parameter	`step/ifz-1`
+76:16-76:21	constructor	` step`
+76:16-76:21	local.reference	` step`
+76:57-76:59	keyword.return	`%.`
+77:6-77:17	constructor	`step/force-`
+77:6-77:17	function	`step/force-`
+77:6-77:17	local.reference	`step/force-`
+77:6-77:17	variable.parameter	`step/force-`
+77:17-77:22	constructor	` step`
+77:17-77:22	local.reference	` step`
+77:60-77:62	keyword.return	`%.`
+78:6-78:14	constructor	`step/fix`
+78:6-78:14	function	`step/fix`
+78:6-78:14	local.reference	`step/fix`
+78:6-78:14	variable.parameter	`step/fix`
+78:14-78:19	constructor	` step`
+78:14-78:19	local.reference	` step`
+78:60-78:62	keyword.return	`%.`
+79:6-79:14	constructor	`step/app`
+79:6-79:14	function	`step/app`
+79:6-79:14	local.reference	`step/app`
+79:6-79:14	variable.parameter	`step/app`
+79:14-79:19	constructor	` step`
+79:14-79:19	local.reference	` step`
+79:66-79:68	keyword.return	`%.`
+80:6-80:17	constructor	`step/force+`
+80:6-80:17	function	`step/force+`
+80:6-80:17	local.reference	`step/force+`
+80:6-80:17	variable.parameter	`step/force+`
+80:17-80:22	constructor	` step`
+80:17-80:22	local.reference	` step`
+80:64-80:66	keyword.return	`%.`
+81:6-81:15	constructor	`step/head`
+81:6-81:15	function	`step/head`
+81:6-81:15	local.reference	`step/head`
+81:6-81:15	variable.parameter	`step/head`
+81:15-81:20	constructor	` step`
+81:15-81:20	local.reference	` step`
+81:61-81:63	keyword.return	`%.`
+82:6-82:15	constructor	`step/tail`
+82:6-82:15	function	`step/tail`
+82:6-82:15	local.reference	`step/tail`
+82:6-82:15	variable.parameter	`step/tail`
+82:15-82:20	constructor	` step`
+82:15-82:20	local.reference	` step`
+82:61-82:63	keyword.return	`%.`
+84:0-84:5	keyword	`%term`
+84:6-84:17	constructor	`step/letret`
+84:6-84:17	function	`step/letret`
+84:6-84:17	local.reference	`step/letret`
+84:6-84:17	variable.parameter	`step/letret`
+84:17-84:22	constructor	` step`
+84:17-84:22	local.reference	` step`
+84:49-84:51	keyword.return	`%.`
+85:6-85:18	constructor	`step/letcut+`
+85:6-85:18	function	`step/letcut+`
+85:6-85:18	local.reference	`step/letcut+`
+85:6-85:18	variable.parameter	`step/letcut+`
+85:18-85:23	constructor	` step`
+85:18-85:23	local.reference	` step`
+85:70-85:72	keyword.return	`%.`
+86:6-86:18	constructor	`step/letcut-`
+86:6-86:18	function	`step/letcut-`
+86:6-86:18	local.reference	`step/letcut-`
+86:6-86:18	variable.parameter	`step/letcut-`
+86:18-86:23	constructor	` step`
+86:18-86:23	local.reference	` step`
+86:70-86:72	keyword.return	`%.`
+87:6-87:17	constructor	`step/letlet`
+87:6-87:17	function	`step/letlet`
+87:6-87:17	local.reference	`step/letlet`
+87:6-87:17	variable.parameter	`step/letlet`
+87:17-87:22	constructor	` step`
+87:17-87:22	local.reference	` step`
+87:73-87:75	keyword.return	`%.`
+88:6-88:20	constructor	`step/cconv-ifz`
+88:6-88:20	function	`step/cconv-ifz`
+88:6-88:20	local.reference	`step/cconv-ifz`
+88:6-88:20	variable.parameter	`step/cconv-ifz`
+88:20-88:25	constructor	` step`
+88:20-88:25	local.reference	` step`
+88:104-88:106	keyword.return	`%.`
+89:6-89:23	constructor	`step/cconv-force-`
+89:6-89:23	function	`step/cconv-force-`
+89:6-89:23	local.reference	`step/cconv-force-`
+89:6-89:23	variable.parameter	`step/cconv-force-`
+89:23-89:28	constructor	` step`
+89:23-89:28	local.reference	` step`
+89:99-89:101	keyword.return	`%.`
+90:6-90:22	constructor	`step/cconv-comp+`
+90:6-90:22	function	`step/cconv-comp+`
+90:6-90:22	local.reference	`step/cconv-comp+`
+90:6-90:22	variable.parameter	`step/cconv-comp+`
+90:22-90:27	constructor	` step`
+90:22-90:27	local.reference	` step`
+90:102-90:104	keyword.return	`%.`
+91:6-91:20	constructor	`step/cconv-app`
+91:6-91:20	function	`step/cconv-app`
+91:6-91:20	local.reference	`step/cconv-app`
+91:6-91:20	variable.parameter	`step/cconv-app`
+91:20-91:25	constructor	` step`
+91:20-91:25	local.reference	` step`
+91:90-91:92	keyword.return	`%.`
+92:6-92:23	constructor	`step/cconv-force+`
+92:6-92:23	function	`step/cconv-force+`
+92:6-92:23	local.reference	`step/cconv-force+`
+92:6-92:23	variable.parameter	`step/cconv-force+`
+92:23-92:28	constructor	` step`
+92:23-92:28	local.reference	` step`
+92:99-92:101	keyword.return	`%.`
+93:6-93:22	constructor	`step/cconv-comp-`
+93:6-93:22	function	`step/cconv-comp-`
+93:6-93:22	local.reference	`step/cconv-comp-`
+93:6-93:22	variable.parameter	`step/cconv-comp-`
+93:22-93:27	constructor	` step`
+93:22-93:27	local.reference	` step`
+93:104-93:106	keyword.return	`%.`
+94:6-94:21	constructor	`step/cconv-head`
+94:6-94:21	function	`step/cconv-head`
+94:6-94:21	local.reference	`step/cconv-head`
+94:6-94:21	variable.parameter	`step/cconv-head`
+94:21-94:26	constructor	` step`
+94:21-94:26	local.reference	` step`
+94:87-94:89	keyword.return	`%.`
+95:6-95:21	constructor	`step/cconv-tail`
+95:6-95:21	function	`step/cconv-tail`
+95:6-95:21	local.reference	`step/cconv-tail`
+95:6-95:21	variable.parameter	`step/cconv-tail`
+95:21-95:26	constructor	` step`
+95:21-95:26	local.reference	` step`
+95:87-95:89	keyword.return	`%.`
+96:8-96:9	punctuation.bracket	`(`
+96:9-96:10	punctuation.bracket	`)`
+96:11-96:12	punctuation.bracket	`(`
+96:12-96:16	constructor	`step`
+96:12-96:16	local.reference	`step`
+96:17-96:18	constructor	`_`
+96:17-96:18	local.reference	`_`
+96:17-96:18	variable.parameter	`_`
+96:19-96:20	constructor	`_`
+96:19-96:20	local.reference	`_`
+96:19-96:20	variable.parameter	`_`
+96:20-96:21	punctuation.bracket	`)`
+96:21-96:24	keyword.return	` %.`
+97:1-97:2	punctuation.bracket	`[`
+97:2-97:3	punctuation.bracket	`[`
+101:1-101:2	punctuation.bracket	`]`
+101:2-101:3	punctuation.bracket	`]`
+102:0-102:5	keyword.type	`%sort`
+102:6-102:8	constructor	`ok`
+102:6-102:8	local.reference	`ok`
+102:6-102:8	type	`ok`
+102:20-102:22	keyword.return	`%.`
+103:6-103:14	constructor	`ok/final`
+103:6-103:14	function	`ok/final`
+103:6-103:14	local.reference	`ok/final`
+103:6-103:14	variable.parameter	`ok/final`
+103:14-103:17	constructor	` ok`
+103:14-103:17	local.reference	` ok`
+103:27-103:29	keyword.return	`%.`
+104:6-104:13	constructor	`ok/step`
+104:6-104:13	function	`ok/step`
+104:6-104:13	local.reference	`ok/step`
+104:6-104:13	variable.parameter	`ok/step`
+104:13-104:17	operator	` %pi`
+104:18-104:19	punctuation.bracket	`(`
+104:19-104:21	constructor	`ok`
+104:19-104:21	local.reference	`ok`
+104:22-104:23	constructor	`E`
+104:22-104:23	local.reference	`E`
+104:23-104:24	punctuation.bracket	`)`
+104:25-104:28	operator	`%<-`
+104:29-104:30	punctuation.bracket	`(`
+104:30-104:34	constructor	`step`
+104:30-104:34	local.reference	`step`
+104:35-104:36	constructor	`E`
+104:35-104:36	local.reference	`E`
+104:37-104:39	constructor	`E'`
+104:37-104:39	local.reference	`E'`
+104:39-104:40	punctuation.bracket	`)`
+104:40-104:43	keyword.return	` %.`
+104:43-105:5	keyword.type	``
+105:6-105:14	constructor	`progress`
+105:6-105:14	local.reference	`progress`
+105:6-105:14	type	`progress`
+105:35-105:37	keyword.return	`%.`
+106:6-106:14	constructor	`progress`
+106:6-106:14	local.reference	`progress`
+106:14-106:18	keyword.modifier	` %in`
+106:18-106:23	keyword.modifier	` %out`
+106:23-106:26	keyword.return	` %.`
+107:6-107:7	constructor	`_`
+107:6-107:7	function	`_`
+107:6-107:7	local.reference	`_`
+107:6-107:7	variable.parameter	`_`
+107:7-107:16	constructor	` progress`
+107:7-107:16	local.reference	` progress`
+107:16-107:18	constructor	` _`
+107:16-107:18	local.reference	` _`
+107:18-107:27	constructor	` ok/final`
+107:18-107:27	local.reference	` ok/final`
+107:27-107:30	keyword.return	` %.`
+108:6-108:7	constructor	`_`
+108:6-108:7	function	`_`
+108:6-108:7	local.reference	`_`
+108:6-108:7	variable.parameter	`_`
+108:7-108:16	constructor	` progress`
+108:7-108:16	local.reference	` progress`
+108:16-108:18	constructor	` _`
+108:16-108:18	local.reference	` _`
+108:40-108:42	keyword.return	`%.`
+109:6-109:7	constructor	`_`
+109:6-109:7	function	`_`
+109:6-109:7	local.reference	`_`
+109:6-109:7	variable.parameter	`_`
+109:7-109:16	constructor	` progress`
+109:7-109:16	local.reference	` progress`
+109:16-109:18	constructor	` _`
+109:16-109:18	local.reference	` _`
+109:40-109:42	keyword.return	`%.`
+110:6-110:7	constructor	`_`
+110:6-110:7	function	`_`
+110:6-110:7	local.reference	`_`
+110:6-110:7	variable.parameter	`_`
+110:7-110:16	constructor	` progress`
+110:7-110:16	local.reference	` progress`
+110:16-110:18	constructor	` _`
+110:16-110:18	local.reference	` _`
+110:41-110:43	keyword.return	`%.`
+111:6-111:7	constructor	`_`
+111:6-111:7	function	`_`
+111:6-111:7	local.reference	`_`
+111:6-111:7	variable.parameter	`_`
+111:7-111:16	constructor	` progress`
+111:7-111:16	local.reference	` progress`
+111:16-111:18	constructor	` _`
+111:16-111:18	local.reference	` _`
+111:38-111:40	keyword.return	`%.`
+112:6-112:7	constructor	`_`
+112:6-112:7	function	`_`
+112:6-112:7	local.reference	`_`
+112:6-112:7	variable.parameter	`_`
+112:7-112:16	constructor	` progress`
+112:7-112:16	local.reference	` progress`
+112:16-112:18	constructor	` _`
+112:16-112:18	local.reference	` _`
+112:38-112:40	keyword.return	`%.`
+113:6-113:7	constructor	`_`
+113:6-113:7	function	`_`
+113:6-113:7	local.reference	`_`
+113:6-113:7	variable.parameter	`_`
+113:7-113:16	constructor	` progress`
+113:7-113:16	local.reference	` progress`
+113:16-113:18	constructor	` _`
+113:16-113:18	local.reference	` _`
+113:41-113:43	keyword.return	`%.`
+114:6-114:7	constructor	`_`
+114:6-114:7	function	`_`
+114:6-114:7	local.reference	`_`
+114:6-114:7	variable.parameter	`_`
+114:7-114:16	constructor	` progress`
+114:7-114:16	local.reference	` progress`
+114:16-114:18	constructor	` _`
+114:16-114:18	local.reference	` _`
+114:39-114:41	keyword.return	`%.`
+115:6-115:7	constructor	`_`
+115:6-115:7	function	`_`
+115:6-115:7	local.reference	`_`
+115:6-115:7	variable.parameter	`_`
+115:7-115:16	constructor	` progress`
+115:7-115:16	local.reference	` progress`
+115:16-115:18	constructor	` _`
+115:16-115:18	local.reference	` _`
+115:39-115:41	keyword.return	`%.`
+116:6-116:7	constructor	`_`
+116:6-116:7	function	`_`
+116:6-116:7	local.reference	`_`
+116:6-116:7	variable.parameter	`_`
+116:7-116:16	constructor	` progress`
+116:7-116:16	local.reference	` progress`
+116:16-116:18	constructor	` _`
+116:16-116:18	local.reference	` _`
+116:41-116:43	keyword.return	`%.`
+117:6-117:7	constructor	`_`
+117:6-117:7	function	`_`
+117:6-117:7	local.reference	`_`
+117:6-117:7	variable.parameter	`_`
+117:7-117:16	constructor	` progress`
+117:7-117:16	local.reference	` progress`
+117:16-117:18	constructor	` _`
+117:16-117:18	local.reference	` _`
+117:42-117:44	keyword.return	`%.`
+118:6-118:7	constructor	`_`
+118:6-118:7	function	`_`
+118:6-118:7	local.reference	`_`
+118:6-118:7	variable.parameter	`_`
+118:7-118:16	constructor	` progress`
+118:7-118:16	local.reference	` progress`
+118:16-118:18	constructor	` _`
+118:16-118:18	local.reference	` _`
+118:42-118:44	keyword.return	`%.`
+119:6-119:7	constructor	`_`
+119:6-119:7	function	`_`
+119:6-119:7	local.reference	`_`
+119:6-119:7	variable.parameter	`_`
+119:7-119:16	constructor	` progress`
+119:7-119:16	local.reference	` progress`
+119:16-119:18	constructor	` _`
+119:16-119:18	local.reference	` _`
+119:41-119:43	keyword.return	`%.`
+120:6-120:7	constructor	`_`
+120:6-120:7	function	`_`
+120:6-120:7	local.reference	`_`
+120:6-120:7	variable.parameter	`_`
+120:7-120:16	constructor	` progress`
+120:7-120:16	local.reference	` progress`
+120:16-120:18	constructor	` _`
+120:16-120:18	local.reference	` _`
+120:44-120:46	keyword.return	`%.`
+121:6-121:7	constructor	`_`
+121:6-121:7	function	`_`
+121:6-121:7	local.reference	`_`
+121:6-121:7	variable.parameter	`_`
+121:7-121:16	constructor	` progress`
+121:7-121:16	local.reference	` progress`
+121:16-121:18	constructor	` _`
+121:16-121:18	local.reference	` _`
+121:47-121:49	keyword.return	`%.`
+122:6-122:7	constructor	`_`
+122:6-122:7	function	`_`
+122:6-122:7	local.reference	`_`
+122:6-122:7	variable.parameter	`_`
+122:7-122:16	constructor	` progress`
+122:7-122:16	local.reference	` progress`
+122:16-122:18	constructor	` _`
+122:16-122:18	local.reference	` _`
+122:46-122:48	keyword.return	`%.`
+123:6-123:7	constructor	`_`
+123:6-123:7	function	`_`
+123:6-123:7	local.reference	`_`
+123:6-123:7	variable.parameter	`_`
+123:7-123:16	constructor	` progress`
+123:7-123:16	local.reference	` progress`
+123:16-123:18	constructor	` _`
+123:16-123:18	local.reference	` _`
+123:44-123:46	keyword.return	`%.`
+124:6-124:7	constructor	`_`
+124:6-124:7	function	`_`
+124:6-124:7	local.reference	`_`
+124:6-124:7	variable.parameter	`_`
+124:7-124:16	constructor	` progress`
+124:7-124:16	local.reference	` progress`
+124:16-124:18	constructor	` _`
+124:16-124:18	local.reference	` _`
+124:47-124:49	keyword.return	`%.`
+125:6-125:7	constructor	`_`
+125:6-125:7	function	`_`
+125:6-125:7	local.reference	`_`
+125:6-125:7	variable.parameter	`_`
+125:7-125:16	constructor	` progress`
+125:7-125:16	local.reference	` progress`
+125:16-125:18	constructor	` _`
+125:16-125:18	local.reference	` _`
+125:45-125:47	keyword.return	`%.`
+126:6-126:7	constructor	`_`
+126:6-126:7	function	`_`
+126:6-126:7	local.reference	`_`
+126:6-126:7	variable.parameter	`_`
+126:7-126:16	constructor	` progress`
+126:7-126:16	local.reference	` progress`
+126:16-126:18	constructor	` _`
+126:16-126:18	local.reference	` _`
+126:45-126:47	keyword.return	`%.`
+127:6-127:7	constructor	`_`
+127:6-127:7	function	`_`
+127:6-127:7	local.reference	`_`
+127:6-127:7	variable.parameter	`_`
+127:7-127:16	constructor	` progress`
+127:7-127:16	local.reference	` progress`
+127:16-127:18	constructor	` _`
+127:16-127:18	local.reference	` _`
+127:46-127:48	keyword.return	`%.`
+128:8-128:9	punctuation.bracket	`(`
+128:9-128:10	punctuation.bracket	`)`
+128:11-128:12	punctuation.bracket	`(`
+128:12-128:20	constructor	`progress`
+128:12-128:20	local.reference	`progress`
+128:21-128:22	constructor	`_`
+128:21-128:22	local.reference	`_`
+128:21-128:22	variable.parameter	`_`
+128:23-128:24	constructor	`_`
+128:23-128:24	local.reference	`_`
+128:23-128:24	variable.parameter	`_`
+128:24-128:25	punctuation.bracket	`)`
+128:25-128:28	keyword.return	` %.`
+129:7-129:8	punctuation.bracket	`(`
+129:8-129:8	local.reference	``
+129:8-129:8	operator	``
+129:8-129:9	punctuation.bracket	`)`
+129:10-129:11	punctuation.bracket	`(`
+129:11-129:19	constructor	`progress`
+129:11-129:19	local.reference	`progress`
+129:20-129:21	constructor	`_`
+129:20-129:21	local.reference	`_`
+129:20-129:21	variable.parameter	`_`
+129:22-129:23	constructor	`_`
+129:22-129:23	local.reference	`_`
+129:22-129:23	variable.parameter	`_`
+129:23-129:24	punctuation.bracket	`)`
+129:24-129:27	keyword.return	` %.`
+130:1-130:2	punctuation.bracket	`[`
+130:2-130:3	punctuation.bracket	`[`
+130:11-130:12	punctuation.bracket	`]`
+130:12-130:13	punctuation.bracket	`]`
+131:1-131:2	punctuation.bracket	`[`
+131:2-131:3	punctuation.bracket	`[`
+131:16-131:17	punctuation.bracket	`]`
+131:17-131:18	punctuation.bracket	`]`
+132:0-132:5	keyword.type	`%sort`
+132:6-132:9	constructor	`etp`
+132:6-132:9	local.reference	`etp`
+132:6-132:9	type	`etp`
+132:9-132:12	keyword.return	` %.`
+132:12-133:9	attribute	``
+133:6-133:9	constructor	`etp`
+133:6-133:9	local.reference	`etp`
+133:6-133:9	variable	`etp`
+133:9-133:12	keyword.return	` %.`
+134:6-134:10	constructor	`enat`
+134:6-134:10	function	`enat`
+134:6-134:10	local.reference	`enat`
+134:6-134:10	variable.parameter	`enat`
+134:10-134:14	constructor	` etp`
+134:10-134:14	local.reference	` etp`
+134:14-134:17	keyword.return	` %.`
+135:6-135:10	constructor	`earr`
+135:6-135:10	function	`earr`
+135:6-135:10	local.reference	`earr`
+135:6-135:10	variable.parameter	`earr`
+135:10-135:14	operator	` %pi`
+135:15-135:18	constructor	`etp`
+135:15-135:18	local.reference	`etp`
+135:19-135:22	operator	`%->`
+135:23-135:26	constructor	`etp`
+135:23-135:26	local.reference	`etp`
+135:26-135:30	operator	` %->`
+135:31-135:34	constructor	`etp`
+135:31-135:34	local.reference	`etp`
+135:34-135:37	keyword.return	` %.`
+136:6-136:13	constructor	`estream`
+136:6-136:13	function	`estream`
+136:6-136:13	local.reference	`estream`
+136:6-136:13	variable.parameter	`estream`
+136:13-136:17	operator	` %pi`
+136:18-136:21	constructor	`etp`
+136:18-136:21	local.reference	`etp`
+136:22-136:25	operator	`%->`
+136:26-136:29	constructor	`etp`
+136:26-136:29	local.reference	`etp`
+136:29-136:32	keyword.return	` %.`
+136:32-137:5	keyword.type	``
+137:6-137:10	constructor	`eexp`
+137:6-137:10	local.reference	`eexp`
+137:6-137:10	type	`eexp`
+137:19-137:21	keyword.return	`%.`
+137:21-138:10	attribute	``
+138:6-138:10	constructor	`eexp`
+138:6-138:10	local.reference	`eexp`
+138:6-138:10	variable	`eexp`
+138:10-138:13	keyword.return	` %.`
+139:6-139:14	keyword.modifier	`%postfix`
+139:15-139:16	number	`1`
+139:17-139:21	constructor	`eexp`
+139:17-139:21	local.reference	`eexp`
+139:21-139:24	keyword.return	` %.`
+140:6-140:8	constructor	`ez`
+140:6-140:8	function	`ez`
+140:6-140:8	local.reference	`ez`
+140:6-140:8	variable.parameter	`ez`
+140:8-140:13	constructor	` enat`
+140:8-140:13	local.reference	` enat`
+140:13-140:18	constructor	` eexp`
+140:13-140:18	local.reference	` eexp`
+140:18-140:21	keyword.return	` %.`
+141:6-141:8	constructor	`es`
+141:6-141:8	function	`es`
+141:6-141:8	local.reference	`es`
+141:6-141:8	variable.parameter	`es`
+141:8-141:12	operator	` %pi`
+141:13-141:14	punctuation.bracket	`(`
+141:14-141:18	constructor	`enat`
+141:14-141:18	local.reference	`enat`
+141:19-141:23	constructor	`eexp`
+141:19-141:23	local.reference	`eexp`
+141:23-141:24	punctuation.bracket	`)`
+141:25-141:28	operator	`%->`
+141:29-141:30	punctuation.bracket	`(`
+141:30-141:34	constructor	`enat`
+141:30-141:34	local.reference	`enat`
+141:35-141:39	constructor	`eexp`
+141:35-141:39	local.reference	`eexp`
+141:39-141:40	punctuation.bracket	`)`
+141:40-141:43	keyword.return	` %.`
+142:6-142:10	constructor	`eifz`
+142:6-142:10	function	`eifz`
+142:6-142:10	local.reference	`eifz`
+142:6-142:10	variable.parameter	`eifz`
+142:10-142:14	operator	` %pi`
+142:15-142:16	punctuation.bracket	`(`
+142:16-142:20	constructor	`enat`
+142:16-142:20	local.reference	`enat`
+142:21-142:25	constructor	`eexp`
+142:21-142:25	local.reference	`eexp`
+142:25-142:26	punctuation.bracket	`)`
+142:27-142:30	operator	`%->`
+142:31-142:32	punctuation.bracket	`(`
+142:32-142:33	constructor	`T`
+142:32-142:33	local.reference	`T`
+142:34-142:38	constructor	`eexp`
+142:34-142:38	local.reference	`eexp`
+142:38-142:39	punctuation.bracket	`)`
+142:39-142:43	operator	` %->`
+142:44-142:45	punctuation.bracket	`(`
+142:45-142:48	operator	`%pi`
+142:49-142:50	punctuation.bracket	`(`
+142:50-142:54	constructor	`enat`
+142:50-142:54	local.reference	`enat`
+142:55-142:59	constructor	`eexp`
+142:55-142:59	local.reference	`eexp`
+142:59-142:60	punctuation.bracket	`)`
+142:61-142:64	operator	`%->`
+142:65-142:66	punctuation.bracket	`(`
+142:66-142:67	constructor	`T`
+142:66-142:67	local.reference	`T`
+142:68-142:72	constructor	`eexp`
+142:68-142:72	local.reference	`eexp`
+142:72-142:73	punctuation.bracket	`)`
+142:73-142:74	punctuation.bracket	`)`
+142:74-142:78	operator	` %->`
+142:79-142:80	punctuation.bracket	`(`
+142:80-142:81	constructor	`T`
+142:80-142:81	local.reference	`T`
+142:82-142:86	constructor	`eexp`
+142:82-142:86	local.reference	`eexp`
+142:86-142:87	punctuation.bracket	`)`
+142:87-142:90	keyword.return	` %.`
+143:6-143:10	constructor	`efun`
+143:6-143:10	function	`efun`
+143:6-143:10	local.reference	`efun`
+143:6-143:10	variable.parameter	`efun`
+143:29-143:32	operator	`%pi`
+143:33-143:34	punctuation.bracket	`(`
+143:34-143:37	operator	`%pi`
+143:38-143:39	punctuation.bracket	`(`
+143:45-143:46	number	`1`
+143:48-143:49	number	`2`
+143:54-143:55	punctuation.bracket	`)`
+143:56-143:59	operator	`%->`
+143:60-143:61	punctuation.bracket	`(`
+143:62-143:63	number	`1`
+143:68-143:69	punctuation.bracket	`)`
+143:70-143:73	operator	`%->`
+143:74-143:75	punctuation.bracket	`(`
+143:76-143:77	number	`2`
+143:82-143:83	punctuation.bracket	`)`
+143:83-143:84	punctuation.bracket	`)`
+143:85-143:88	operator	`%->`
+143:89-143:90	punctuation.bracket	`(`
+143:96-143:97	number	`1`
+143:99-143:100	number	`2`
+143:105-143:106	punctuation.bracket	`)`
+143:107-143:109	keyword.return	`%.`
+144:0-144:5	keyword	`%term`
+144:11-144:14	operator	`%pi`
+144:15-144:16	punctuation.bracket	`(`
+144:22-144:23	number	`1`
+144:25-144:26	number	`2`
+144:31-144:32	punctuation.bracket	`)`
+144:33-144:36	operator	`%->`
+144:37-144:38	punctuation.bracket	`(`
+144:39-144:40	number	`1`
+144:45-144:46	punctuation.bracket	`)`
+144:47-144:50	operator	`%->`
+144:51-144:52	punctuation.bracket	`(`
+144:53-144:54	number	`2`
+144:59-144:60	punctuation.bracket	`)`
+144:61-144:63	keyword.return	`%.`
+145:0-145:5	keyword	`%term`
+145:12-145:15	operator	`%pi`
+145:16-145:17	punctuation.bracket	`(`
+145:23-145:24	punctuation.bracket	`)`
+145:25-145:28	operator	`%->`
+145:29-145:30	punctuation.bracket	`(`
+145:44-145:45	punctuation.bracket	`)`
+145:46-145:49	operator	`%->`
+145:50-145:51	punctuation.bracket	`(`
+145:65-145:66	punctuation.bracket	`)`
+145:67-145:69	keyword.return	`%.`
+146:0-146:5	keyword	`%term`
+146:17-146:20	operator	`%pi`
+146:21-146:22	punctuation.bracket	`(`
+146:22-146:25	operator	`%pi`
+146:26-146:27	punctuation.bracket	`(`
+146:41-146:42	punctuation.bracket	`)`
+146:43-146:46	operator	`%->`
+146:47-146:48	punctuation.bracket	`(`
+146:62-146:63	punctuation.bracket	`)`
+146:63-146:64	punctuation.bracket	`)`
+146:65-146:68	operator	`%->`
+146:69-146:70	punctuation.bracket	`(`
+146:84-146:85	punctuation.bracket	`)`
+146:86-146:88	keyword.return	`%.`
+147:0-147:5	keyword	`%term`
+147:12-147:15	operator	`%pi`
+147:16-147:17	punctuation.bracket	`(`
+147:31-147:32	punctuation.bracket	`)`
+147:33-147:36	operator	`%->`
+147:37-147:38	punctuation.bracket	`(`
+147:44-147:45	punctuation.bracket	`)`
+147:46-147:48	keyword.return	`%.`
+148:0-148:5	keyword	`%term`
+148:12-148:15	operator	`%pi`
+148:16-148:17	punctuation.bracket	`(`
+148:31-148:32	punctuation.bracket	`)`
+148:33-148:36	operator	`%->`
+148:37-148:38	punctuation.bracket	`(`
+148:52-148:53	punctuation.bracket	`)`
+148:54-148:56	keyword.return	`%.`
+149:1-149:2	punctuation.bracket	`[`
+149:2-149:3	punctuation.bracket	`[`
+149:34-149:35	punctuation.bracket	`]`
+149:35-149:36	punctuation.bracket	`]`
+150:0-150:5	keyword.type	`%sort`
+150:12-150:13	punctuation.bracket	`{`
+150:13-150:14	variable.parameter.builtin	`_`
+150:18-150:19	punctuation.bracket	`}`
+150:20-150:21	punctuation.bracket	`{`
+150:21-150:22	variable.parameter.builtin	`_`
+150:26-150:27	punctuation.bracket	`}`
+150:28-150:30	keyword.return	`%.`
+151:0-151:5	keyword	`%mode`
+151:21-151:23	keyword.return	`%.`
+152:0-152:5	keyword	`%term`
+152:31-152:33	keyword.return	`%.`
+153:0-153:5	keyword	`%term`
+154:1-154:4	operator	`%pi`
+154:5-154:6	punctuation.bracket	`(`
+154:12-154:13	punctuation.bracket	`(`
+154:19-154:20	number	`1`
+154:22-154:23	number	`2`
+154:23-154:24	punctuation.bracket	`)`
+154:25-154:26	punctuation.bracket	`(`
+154:31-154:32	punctuation.bracket	`(`
+154:37-154:38	number	`1`
+154:39-154:40	punctuation.bracket	`(`
+154:44-154:45	number	`2`
+154:45-154:46	punctuation.bracket	`)`
+154:46-154:47	punctuation.bracket	`)`
+154:47-154:48	punctuation.bracket	`)`
+154:48-154:49	punctuation.bracket	`)`
+155:1-155:4	operator	`%<-`
+155:5-155:6	punctuation.bracket	`(`
+155:13-155:14	number	`1`
+155:16-155:17	number	`1`
+155:17-155:18	punctuation.bracket	`)`
+156:1-156:4	operator	`%<-`
+156:5-156:6	punctuation.bracket	`(`
+156:13-156:14	number	`2`
+156:16-156:17	number	`2`
+156:17-156:18	punctuation.bracket	`)`
+156:19-156:21	keyword.return	`%.`
+157:0-157:5	keyword	`%term`
+157:19-157:22	operator	`%pi`
+157:23-157:24	punctuation.bracket	`(`
+157:30-157:31	punctuation.bracket	`(`
+157:40-157:41	punctuation.bracket	`)`
+157:42-157:43	punctuation.bracket	`(`
+157:48-157:49	punctuation.bracket	`(`
+157:56-157:57	punctuation.bracket	`(`
+157:61-157:62	punctuation.bracket	`)`
+157:62-157:63	punctuation.bracket	`)`
+157:63-157:64	punctuation.bracket	`)`
+157:64-157:65	punctuation.bracket	`)`
+157:66-157:69	operator	`%<-`
+157:70-157:71	punctuation.bracket	`(`
+157:80-157:81	punctuation.bracket	`)`
+157:82-157:84	keyword.return	`%.`
+158:0-158:7	keyword	`%worlds`
+158:8-158:9	punctuation.bracket	`(`
+158:9-158:10	punctuation.bracket	`)`
+158:11-158:12	punctuation.bracket	`(`
+158:18-158:19	variable.parameter.builtin	`_`
+158:20-158:21	variable.parameter.builtin	`_`
+158:21-158:22	punctuation.bracket	`)`
+158:23-158:25	keyword.return	`%.`
+159:0-159:6	keyword	`%total`
+159:9-159:10	punctuation.bracket	`(`
+159:18-159:19	variable.parameter.builtin	`_`
+159:19-159:20	punctuation.bracket	`)`
+159:21-159:23	keyword.return	`%.`
+160:0-160:7	keyword	`%unique`
+160:23-160:25	keyword.return	`%.`
+161:0-161:5	keyword.type	`%sort`
+161:16-161:17	punctuation.bracket	`{`
+161:18-161:19	punctuation.bracket	`}`
+161:20-161:21	punctuation.bracket	`{`
+161:21-161:22	variable.parameter.builtin	`_`
+161:32-161:33	punctuation.bracket	`}`
+161:34-161:36	keyword.return	`%.`
+162:0-162:5	keyword	`%mode`
+162:25-162:27	keyword.return	`%.`
+163:0-163:7	keyword	`%worlds`
+163:8-163:9	punctuation.bracket	`(`
+163:9-163:10	punctuation.bracket	`)`
+163:11-163:12	punctuation.bracket	`(`
+163:22-163:23	variable.parameter.builtin	`_`
+163:24-163:25	variable.parameter.builtin	`_`
+163:25-163:26	punctuation.bracket	`)`
+163:27-163:29	keyword.return	`%.`
+164:0-164:57	comment	`% not really a trustme: Twelf proved this totality above!`
+165:0-165:6	keyword	`%total`
+165:7-165:8	punctuation.bracket	`(`
+165:8-165:9	punctuation.bracket	`)`
+165:10-165:11	punctuation.bracket	`(`
+165:21-165:22	variable.parameter.builtin	`_`
+165:23-165:24	variable.parameter.builtin	`_`
+165:24-165:25	punctuation.bracket	`)`
+165:26-165:28	keyword.return	`%.`
+166:0-166:5	keyword.type	`%sort`
+166:9-166:10	punctuation.bracket	`{`
+166:10-166:11	variable.parameter.builtin	`_`
+166:15-166:16	punctuation.bracket	`}`
+166:17-166:18	punctuation.bracket	`{`
+166:18-166:19	variable.parameter.builtin	`_`
+166:23-166:24	punctuation.bracket	`}`
+166:25-166:27	keyword.return	`%.`
+167:0-167:5	keyword	`%term`
+167:18-167:20	keyword.return	`%.`
+168:0-168:5	keyword.type	`%sort`
+168:19-168:20	punctuation.bracket	`{`
+168:20-168:21	variable.parameter.builtin	`_`
+168:32-168:33	punctuation.bracket	`}`
+168:34-168:35	punctuation.bracket	`{`
+168:35-168:36	variable.parameter.builtin	`_`
+168:46-168:47	punctuation.bracket	`}`
+168:48-168:49	punctuation.bracket	`{`
+168:49-168:50	variable.parameter.builtin	`_`
+168:58-168:59	punctuation.bracket	`}`
+168:60-168:62	keyword.return	`%.`
+169:0-169:5	keyword	`%mode`
+169:32-169:34	keyword.return	`%.`
+170:0-170:7	keyword	`%worlds`
+170:8-170:9	punctuation.bracket	`(`
+170:9-170:10	punctuation.bracket	`)`
+170:11-170:12	punctuation.bracket	`(`
+170:25-170:26	variable.parameter.builtin	`_`
+170:27-170:28	variable.parameter.builtin	`_`
+170:29-170:30	variable.parameter.builtin	`_`
+170:30-170:31	punctuation.bracket	`)`
+170:32-170:34	keyword.return	`%.`
+171:0-171:57	comment	`% not really a trustme: Twelf proved this totality above!`
+172:0-172:6	keyword	`%total`
+172:7-172:8	punctuation.bracket	`(`
+172:8-172:9	punctuation.bracket	`)`
+172:10-172:11	punctuation.bracket	`(`
+172:24-172:25	variable.parameter.builtin	`_`
+172:26-172:27	variable.parameter.builtin	`_`
+172:28-172:29	variable.parameter.builtin	`_`
+172:29-172:30	punctuation.bracket	`)`
+172:31-172:33	keyword.return	`%.`
+173:0-173:5	keyword.type	`%sort`
+173:13-173:14	punctuation.bracket	`{`
+173:14-173:15	variable.parameter.builtin	`_`
+173:21-173:22	punctuation.bracket	`}`
+173:23-173:24	punctuation.bracket	`{`
+173:24-173:25	variable.parameter.builtin	`_`
+173:33-173:34	punctuation.bracket	`}`
+173:35-173:36	punctuation.bracket	`{`
+173:36-173:37	variable.parameter.builtin	`_`
+173:44-173:45	punctuation.bracket	`}`
+173:46-173:48	keyword.return	`%.`
+174:0-174:5	keyword	`%mode`
+174:26-174:28	keyword.return	`%.`
+175:0-175:5	keyword	`%term`
+175:6-175:7	variable.parameter.builtin	`_`
+175:24-175:26	keyword.return	`%.`
+176:0-176:7	keyword	`%worlds`
+176:8-176:9	punctuation.bracket	`(`
+176:18-176:19	punctuation.bracket	`)`
+176:20-176:21	punctuation.bracket	`(`
+176:28-176:29	variable.parameter.builtin	`_`
+176:30-176:31	variable.parameter.builtin	`_`
+176:32-176:33	variable.parameter.builtin	`_`
+176:33-176:34	punctuation.bracket	`)`
+176:35-176:37	keyword.return	`%.`
+177:0-177:6	keyword	`%total`
+177:7-177:8	punctuation.bracket	`(`
+177:8-177:9	punctuation.bracket	`)`
+177:10-177:11	punctuation.bracket	`(`
+177:18-177:19	variable.parameter.builtin	`_`
+177:20-177:21	variable.parameter.builtin	`_`
+177:22-177:23	variable.parameter.builtin	`_`
+177:23-177:24	punctuation.bracket	`)`
+177:25-177:27	keyword.return	`%.`
+178:0-178:5	keyword.type	`%sort`
+178:15-178:16	punctuation.bracket	`{`
+178:16-178:17	variable.parameter.builtin	`_`
+178:27-178:28	punctuation.bracket	`}`
+178:29-178:30	punctuation.bracket	`{`
+178:30-178:31	variable.parameter.builtin	`_`
+178:38-178:39	punctuation.bracket	`}`
+178:40-178:41	punctuation.bracket	`{`
+178:41-178:42	variable.parameter.builtin	`_`
+178:48-178:49	punctuation.bracket	`}`
+178:50-178:52	keyword.return	`%.`
+179:0-179:5	keyword	`%mode`
+179:28-179:30	keyword.return	`%.`
+180:0-180:5	keyword	`%term`
+180:39-180:40	punctuation.bracket	`(`
+180:48-180:49	punctuation.bracket	`)`
+180:50-180:52	keyword.return	`%.`
+181:0-181:5	keyword	`%term`
+182:1-182:4	operator	`%pi`
+182:5-182:6	punctuation.bracket	`(`
+182:25-182:26	punctuation.bracket	`(`
+182:30-182:31	punctuation.bracket	`)`
+182:32-182:33	punctuation.bracket	`(`
+182:40-182:41	punctuation.bracket	`(`
+182:41-182:42	punctuation.bracket	`[`
+182:43-182:44	punctuation.bracket	`]`
+182:49-182:50	punctuation.bracket	`(`
+182:56-182:57	punctuation.bracket	`)`
+182:57-182:58	punctuation.bracket	`)`
+182:58-182:59	punctuation.bracket	`)`
+182:59-182:60	punctuation.bracket	`)`
+183:1-183:4	operator	`%<-`
+183:5-183:6	punctuation.bracket	`(`
+183:29-183:30	punctuation.bracket	`)`
+183:31-183:33	keyword.return	`%.`
+184:0-184:5	keyword	`%term`
+185:1-185:4	operator	`%pi`
+185:5-185:6	punctuation.bracket	`(`
+185:15-185:16	punctuation.bracket	`(`
+185:16-185:20	keyword.operator	`%the`
+185:21-185:22	punctuation.bracket	`(`
+185:31-185:32	punctuation.bracket	`)`
+185:37-185:38	punctuation.bracket	`)`
+185:39-185:40	punctuation.bracket	`(`
+185:48-185:49	number	`0`
+185:51-185:52	number	`1`
+185:52-185:53	punctuation.bracket	`)`
+185:54-185:55	punctuation.bracket	`(`
+185:62-185:63	punctuation.bracket	`(`
+185:63-185:64	punctuation.bracket	`[`
+185:65-185:66	punctuation.bracket	`]`
+185:74-185:75	punctuation.bracket	`(`
+185:80-185:81	number	`0`
+185:84-185:85	number	`1`
+185:86-185:87	punctuation.bracket	`)`
+185:87-185:88	punctuation.bracket	`)`
+185:88-185:89	punctuation.bracket	`)`
+185:89-185:90	punctuation.bracket	`)`
+186:1-186:4	operator	`%<-`
+186:5-186:6	punctuation.bracket	`(`
+186:29-186:30	punctuation.bracket	`)`
+187:1-187:4	operator	`%<-`
+187:5-187:6	punctuation.bracket	`(`
+187:21-187:22	number	`0`
+187:24-187:25	number	`0`
+187:26-187:27	punctuation.bracket	`)`
+188:1-188:4	operator	`%<-`
+188:5-188:6	punctuation.bracket	`(`
+188:6-188:7	punctuation.bracket	`{`
+188:18-188:19	punctuation.bracket	`}`
+188:20-188:21	punctuation.bracket	`{`
+188:32-188:33	punctuation.bracket	`}`
+188:34-188:35	punctuation.bracket	`{`
+188:37-188:38	punctuation.bracket	`{`
+188:39-188:40	number	`1`
+188:45-188:46	punctuation.bracket	`}`
+188:47-188:48	punctuation.bracket	`{`
+188:63-188:64	number	`1`
+188:65-188:66	punctuation.bracket	`}`
+188:67-188:68	punctuation.bracket	`{`
+188:80-188:81	number	`1`
+188:82-188:83	punctuation.bracket	`}`
+188:84-188:85	punctuation.bracket	`{`
+188:92-188:93	number	`1`
+188:94-188:95	punctuation.bracket	`}`
+189:1-189:4	operator	`%pi`
+189:5-189:6	punctuation.bracket	`(`
+189:21-189:22	punctuation.bracket	`)`
+190:1-190:4	operator	`%<-`
+190:5-190:6	punctuation.bracket	`(`
+190:35-190:36	punctuation.bracket	`)`
+191:1-191:4	operator	`%<-`
+191:5-191:6	punctuation.bracket	`(`
+191:13-191:14	punctuation.bracket	`(`
+191:20-191:21	punctuation.bracket	`)`
+191:27-191:28	punctuation.bracket	`)`
+191:28-191:29	punctuation.bracket	`}`
+191:44-191:45	punctuation.bracket	`(`
+191:46-191:47	number	`1`
+191:49-191:50	punctuation.bracket	`)`
+191:51-191:52	punctuation.bracket	`(`
+191:53-191:54	number	`1`
+191:58-191:59	punctuation.bracket	`)`
+191:59-191:60	punctuation.bracket	`)`
+191:61-191:63	keyword.return	`%.`
+192:0-192:5	keyword	`%term`
+193:1-193:4	operator	`%pi`
+193:5-193:6	punctuation.bracket	`(`
+193:15-193:16	punctuation.bracket	`(`
+193:26-193:27	punctuation.bracket	`(`
+193:27-193:31	keyword.operator	`%the`
+193:32-193:33	punctuation.bracket	`(`
+193:40-193:41	number	`2`
+193:43-193:44	number	`2`
+193:44-193:45	punctuation.bracket	`)`
+193:48-193:49	number	`2`
+193:49-193:50	punctuation.bracket	`)`
+193:51-193:52	punctuation.bracket	`(`
+193:52-193:56	keyword.operator	`%the`
+193:57-193:58	punctuation.bracket	`(`
+193:65-193:66	number	`1`
+193:68-193:69	number	`1`
+193:69-193:70	punctuation.bracket	`)`
+193:73-193:74	number	`1`
+193:74-193:75	punctuation.bracket	`)`
+193:75-193:76	punctuation.bracket	`)`
+193:77-193:78	punctuation.bracket	`(`
+193:84-193:85	number	`1`
+193:87-193:88	number	`2`
+193:90-193:91	punctuation.bracket	`)`
+193:92-193:93	punctuation.bracket	`(`
+193:97-193:98	punctuation.bracket	`(`
+193:105-193:106	punctuation.bracket	`(`
+193:110-193:111	punctuation.bracket	`(`
+193:111-193:112	punctuation.bracket	`[`
+193:114-193:115	punctuation.bracket	`]`
+193:120-193:121	punctuation.bracket	`(`
+193:121-193:122	punctuation.bracket	`[`
+193:124-193:125	punctuation.bracket	`]`
+193:133-193:134	punctuation.bracket	`(`
+193:137-193:138	punctuation.bracket	`(`
+193:147-193:148	punctuation.bracket	`)`
+193:151-193:152	punctuation.bracket	`)`
+193:152-193:153	punctuation.bracket	`)`
+193:153-193:154	punctuation.bracket	`)`
+193:154-193:155	punctuation.bracket	`)`
+193:155-193:156	punctuation.bracket	`)`
+193:156-193:157	punctuation.bracket	`)`
+193:157-193:158	punctuation.bracket	`)`
+194:1-194:4	operator	`%<-`
+194:5-194:6	punctuation.bracket	`(`
+194:6-194:7	punctuation.bracket	`{`
+194:15-194:16	number	`1`
+194:18-194:19	number	`2`
+194:24-194:25	punctuation.bracket	`}`
+194:26-194:27	punctuation.bracket	`{`
+194:35-194:36	punctuation.bracket	`(`
+194:41-194:42	punctuation.bracket	`(`
+194:47-194:48	number	`1`
+194:49-194:50	punctuation.bracket	`(`
+194:54-194:55	number	`2`
+194:55-194:56	punctuation.bracket	`)`
+194:56-194:57	punctuation.bracket	`)`
+194:57-194:58	punctuation.bracket	`)`
+194:58-194:59	punctuation.bracket	`}`
+194:60-194:61	punctuation.bracket	`{`
+194:63-194:64	punctuation.bracket	`{`
+194:65-194:66	number	`1`
+194:71-194:72	punctuation.bracket	`}`
+194:73-194:74	punctuation.bracket	`{`
+194:83-194:84	punctuation.bracket	`(`
+194:90-194:91	number	`1`
+194:93-194:94	number	`2`
+194:94-194:95	punctuation.bracket	`)`
+194:97-194:98	number	`1`
+194:99-194:100	punctuation.bracket	`}`
+194:101-194:102	punctuation.bracket	`{`
+194:109-194:110	punctuation.bracket	`(`
+194:115-194:116	punctuation.bracket	`(`
+194:121-194:122	number	`1`
+194:123-194:124	punctuation.bracket	`(`
+194:128-194:129	number	`2`
+194:129-194:130	punctuation.bracket	`)`
+194:130-194:131	punctuation.bracket	`)`
+194:131-194:132	punctuation.bracket	`)`
+194:134-194:135	number	`1`
+194:136-194:137	punctuation.bracket	`}`
+194:138-194:139	punctuation.bracket	`{`
+194:146-194:147	number	`1`
+194:148-194:149	punctuation.bracket	`}`
+195:1-195:4	operator	`%pi`
+195:5-195:6	punctuation.bracket	`(`
+195:21-195:22	punctuation.bracket	`)`
+196:1-196:4	operator	`%<-`
+196:5-196:6	punctuation.bracket	`(`
+196:22-196:23	punctuation.bracket	`(`
+196:35-196:36	number	`2`
+196:39-196:40	number	`1`
+196:40-196:41	punctuation.bracket	`)`
+196:45-196:46	punctuation.bracket	`)`
+197:1-197:4	operator	`%<-`
+197:5-197:6	punctuation.bracket	`(`
+197:13-197:14	punctuation.bracket	`(`
+197:20-197:21	punctuation.bracket	`)`
+197:27-197:28	punctuation.bracket	`)`
+197:28-197:29	punctuation.bracket	`}`
+197:30-197:31	punctuation.bracket	`{`
+197:34-197:35	number	`1`
+197:40-197:41	punctuation.bracket	`}`
+197:42-197:43	punctuation.bracket	`{`
+197:52-197:53	number	`1`
+197:53-197:54	punctuation.bracket	`}`
+197:55-197:56	punctuation.bracket	`{`
+197:58-197:59	punctuation.bracket	`{`
+197:60-197:61	number	`1`
+197:66-197:67	punctuation.bracket	`}`
+197:68-197:69	punctuation.bracket	`{`
+197:79-197:80	number	`1`
+197:82-197:83	number	`1`
+197:84-197:85	punctuation.bracket	`}`
+197:86-197:87	punctuation.bracket	`{`
+197:95-197:96	number	`1`
+197:98-197:99	number	`1`
+197:100-197:101	punctuation.bracket	`}`
+197:102-197:103	punctuation.bracket	`{`
+197:110-197:111	number	`1`
+197:112-197:113	punctuation.bracket	`}`
+197:114-197:117	operator	`%pi`
+197:118-197:119	punctuation.bracket	`(`
+197:134-197:135	punctuation.bracket	`)`
+197:136-197:139	operator	`%<-`
+197:140-197:141	punctuation.bracket	`(`
+197:159-197:160	number	`1`
+197:164-197:165	punctuation.bracket	`)`
+197:166-197:169	operator	`%<-`
+197:170-197:171	punctuation.bracket	`(`
+197:178-197:179	punctuation.bracket	`(`
+197:185-197:186	punctuation.bracket	`)`
+197:192-197:193	punctuation.bracket	`)`
+197:193-197:194	punctuation.bracket	`}`
+197:206-197:207	number	`2`
+197:208-197:209	punctuation.bracket	`(`
+197:214-197:215	punctuation.bracket	`)`
+197:216-197:217	punctuation.bracket	`(`
+197:225-197:226	punctuation.bracket	`)`
+197:226-197:227	punctuation.bracket	`)`
+197:228-197:230	keyword.return	`%.`
+198:0-198:5	keyword	`%term`
+199:1-199:4	operator	`%pi`
+199:5-199:6	punctuation.bracket	`(`
+199:15-199:16	punctuation.bracket	`(`
+199:16-199:20	keyword.operator	`%the`
+199:21-199:22	punctuation.bracket	`(`
+199:31-199:32	punctuation.bracket	`)`
+199:34-199:35	punctuation.bracket	`)`
+199:36-199:37	punctuation.bracket	`(`
+199:42-199:43	punctuation.bracket	`(`
+199:43-199:47	keyword.operator	`%the`
+199:48-199:49	punctuation.bracket	`(`
+199:55-199:56	number	`2`
+199:63-199:64	punctuation.bracket	`)`
+199:66-199:67	number	`1`
+199:67-199:68	punctuation.bracket	`)`
+199:70-199:71	number	`2`
+199:71-199:72	punctuation.bracket	`)`
+199:73-199:74	punctuation.bracket	`(`
+199:79-199:80	number	`1`
+199:82-199:83	punctuation.bracket	`(`
+199:83-199:84	punctuation.bracket	`[`
+199:85-199:86	punctuation.bracket	`]`
+199:92-199:93	number	`2`
+199:95-199:96	punctuation.bracket	`(`
+199:96-199:97	punctuation.bracket	`[`
+199:98-199:99	punctuation.bracket	`]`
+199:107-199:108	punctuation.bracket	`(`
+199:115-199:116	punctuation.bracket	`(`
+199:116-199:117	punctuation.bracket	`[`
+199:118-199:119	punctuation.bracket	`]`
+199:127-199:128	punctuation.bracket	`(`
+199:134-199:135	punctuation.bracket	`(`
+199:142-199:143	punctuation.bracket	`(`
+199:143-199:144	punctuation.bracket	`[`
+199:145-199:146	punctuation.bracket	`]`
+199:152-199:153	punctuation.bracket	`)`
+199:153-199:154	punctuation.bracket	`)`
+199:154-199:155	punctuation.bracket	`)`
+199:155-199:156	punctuation.bracket	`)`
+199:156-199:157	punctuation.bracket	`)`
+199:157-199:158	punctuation.bracket	`)`
+199:158-199:159	punctuation.bracket	`)`
+199:159-199:160	punctuation.bracket	`)`
+199:160-199:161	punctuation.bracket	`)`
+200:1-200:4	operator	`%<-`
+200:5-200:6	punctuation.bracket	`(`
+200:17-200:18	number	`2`
+200:19-200:20	punctuation.bracket	`(`
+200:20-200:24	keyword.operator	`%the`
+200:25-200:26	punctuation.bracket	`(`
+200:33-200:34	number	`2`
+200:36-200:37	number	`2`
+200:37-200:38	punctuation.bracket	`)`
+200:41-200:42	number	`2`
+200:42-200:43	punctuation.bracket	`)`
+200:43-200:44	punctuation.bracket	`)`
+201:1-201:4	operator	`%<-`
+201:5-201:6	punctuation.bracket	`(`
+201:15-201:16	punctuation.bracket	`(`
+201:30-201:31	number	`2`
+201:31-201:32	punctuation.bracket	`)`
+201:34-201:35	number	`1`
+201:37-201:38	number	`1`
+201:39-201:40	punctuation.bracket	`)`
+202:1-202:4	operator	`%<-`
+202:5-202:6	punctuation.bracket	`(`
+202:17-202:18	number	`2`
+202:20-202:21	number	`2`
+202:23-202:24	number	`2`
+202:25-202:26	punctuation.bracket	`)`
+202:27-202:29	keyword.return	`%.`
+204:0-204:5	keyword	`%term`
+205:1-205:4	operator	`%pi`
+205:5-205:6	punctuation.bracket	`(`
+205:15-205:16	punctuation.bracket	`(`
+205:31-205:32	punctuation.bracket	`)`
+205:33-205:34	punctuation.bracket	`(`
+205:41-205:42	number	`1`
+205:44-205:45	number	`2`
+205:45-205:46	punctuation.bracket	`)`
+205:47-205:48	punctuation.bracket	`(`
+205:52-205:53	punctuation.bracket	`(`
+205:60-205:61	punctuation.bracket	`(`
+205:66-205:67	punctuation.bracket	`(`
+205:67-205:68	punctuation.bracket	`[`
+205:70-205:71	punctuation.bracket	`]`
+205:72-205:73	punctuation.bracket	`[`
+205:74-205:75	punctuation.bracket	`]`
+205:81-205:82	number	`1`
+205:84-205:85	punctuation.bracket	`(`
+205:85-205:86	punctuation.bracket	`[`
+205:87-205:88	punctuation.bracket	`]`
+205:94-205:95	punctuation.bracket	`(`
+205:102-205:103	punctuation.bracket	`(`
+205:108-205:109	punctuation.bracket	`)`
+205:109-205:110	punctuation.bracket	`)`
+205:112-205:113	punctuation.bracket	`)`
+205:113-205:114	punctuation.bracket	`)`
+205:115-205:116	punctuation.bracket	`(`
+205:116-205:117	punctuation.bracket	`[`
+205:119-205:120	punctuation.bracket	`]`
+205:121-205:122	punctuation.bracket	`[`
+205:123-205:124	punctuation.bracket	`]`
+205:130-205:131	number	`2`
+205:133-205:134	punctuation.bracket	`(`
+205:134-205:135	punctuation.bracket	`[`
+205:136-205:137	punctuation.bracket	`]`
+205:145-205:146	punctuation.bracket	`(`
+205:153-205:154	punctuation.bracket	`(`
+205:154-205:155	punctuation.bracket	`[`
+205:156-205:157	punctuation.bracket	`]`
+205:166-205:167	punctuation.bracket	`)`
+205:167-205:168	punctuation.bracket	`)`
+205:168-205:169	punctuation.bracket	`)`
+205:169-205:170	punctuation.bracket	`)`
+205:170-205:171	punctuation.bracket	`)`
+205:171-205:172	punctuation.bracket	`)`
+205:172-205:173	punctuation.bracket	`)`
+205:173-205:174	punctuation.bracket	`)`
+206:1-206:4	operator	`%<-`
+206:5-206:6	punctuation.bracket	`(`
+206:19-206:20	number	`1`
+206:22-206:23	number	`1`
+206:24-206:25	punctuation.bracket	`)`
+207:1-207:4	operator	`%<-`
+207:5-207:6	punctuation.bracket	`(`
+207:15-207:16	punctuation.bracket	`(`
+207:31-207:32	punctuation.bracket	`)`
+207:34-207:35	number	`2`
+207:37-207:38	number	`2`
+207:39-207:40	punctuation.bracket	`)`
+207:41-207:43	keyword.return	`%.`
+208:0-208:5	keyword	`%term`
+209:1-209:4	operator	`%pi`
+209:5-209:6	punctuation.bracket	`(`
+209:17-209:18	punctuation.bracket	`(`
+209:25-209:26	punctuation.bracket	`)`
+209:27-209:28	punctuation.bracket	`(`
+209:35-209:36	punctuation.bracket	`(`
+209:36-209:37	punctuation.bracket	`[`
+209:38-209:39	punctuation.bracket	`]`
+209:47-209:48	punctuation.bracket	`(`
+209:55-209:56	punctuation.bracket	`(`
+209:56-209:57	punctuation.bracket	`[`
+209:58-209:59	punctuation.bracket	`]`
+209:67-209:68	punctuation.bracket	`(`
+209:73-209:74	punctuation.bracket	`(`
+209:81-209:82	punctuation.bracket	`(`
+209:82-209:83	punctuation.bracket	`[`
+209:84-209:85	punctuation.bracket	`]`
+209:91-209:92	punctuation.bracket	`)`
+209:92-209:93	punctuation.bracket	`)`
+209:93-209:94	punctuation.bracket	`)`
+209:94-209:95	punctuation.bracket	`)`
+209:95-209:96	punctuation.bracket	`)`
+209:96-209:97	punctuation.bracket	`)`
+209:97-209:98	punctuation.bracket	`)`
+209:98-209:99	punctuation.bracket	`)`
+210:1-210:4	operator	`%<-`
+210:5-210:6	punctuation.bracket	`(`
+210:15-210:16	punctuation.bracket	`(`
+210:30-210:31	punctuation.bracket	`)`
+210:36-210:37	punctuation.bracket	`)`
+210:38-210:40	keyword.return	`%.`
+211:0-211:5	keyword	`%term`
+212:1-212:4	operator	`%pi`
+212:5-212:6	punctuation.bracket	`(`
+212:15-212:16	punctuation.bracket	`(`
+212:30-212:31	punctuation.bracket	`)`
+212:32-212:33	punctuation.bracket	`(`
+212:40-212:41	punctuation.bracket	`)`
+212:42-212:43	punctuation.bracket	`(`
+212:50-212:51	punctuation.bracket	`(`
+212:51-212:52	punctuation.bracket	`[`
+212:53-212:54	punctuation.bracket	`]`
+212:62-212:63	punctuation.bracket	`(`
+212:70-212:71	punctuation.bracket	`(`
+212:71-212:72	punctuation.bracket	`[`
+212:73-212:74	punctuation.bracket	`]`
+212:79-212:80	punctuation.bracket	`(`
+212:87-212:88	punctuation.bracket	`(`
+212:93-212:94	punctuation.bracket	`(`
+212:94-212:95	punctuation.bracket	`[`
+212:96-212:97	punctuation.bracket	`]`
+212:98-212:99	punctuation.bracket	`[`
+212:103-212:104	punctuation.bracket	`]`
+212:112-212:113	punctuation.bracket	`(`
+212:118-212:119	punctuation.bracket	`(`
+212:128-212:129	punctuation.bracket	`)`
+212:129-212:130	punctuation.bracket	`)`
+212:130-212:131	punctuation.bracket	`)`
+212:132-212:133	punctuation.bracket	`(`
+212:133-212:134	punctuation.bracket	`[`
+212:135-212:136	punctuation.bracket	`]`
+212:137-212:138	punctuation.bracket	`[`
+212:142-212:143	punctuation.bracket	`]`
+212:151-212:152	punctuation.bracket	`(`
+212:157-212:158	punctuation.bracket	`(`
+212:167-212:168	punctuation.bracket	`)`
+212:168-212:169	punctuation.bracket	`)`
+212:169-212:170	punctuation.bracket	`)`
+212:170-212:171	punctuation.bracket	`)`
+212:171-212:172	punctuation.bracket	`)`
+212:172-212:173	punctuation.bracket	`)`
+212:173-212:174	punctuation.bracket	`)`
+212:174-212:175	punctuation.bracket	`)`
+212:175-212:176	punctuation.bracket	`)`
+212:176-212:177	punctuation.bracket	`)`
+213:1-213:4	operator	`%<-`
+213:5-213:6	punctuation.bracket	`(`
+213:15-213:16	punctuation.bracket	`(`
+213:30-213:31	punctuation.bracket	`)`
+213:36-213:37	punctuation.bracket	`)`
+213:38-213:40	keyword.return	`%.`
+214:0-214:5	keyword	`%term`
+215:1-215:4	operator	`%pi`
+215:5-215:6	punctuation.bracket	`(`
+215:15-215:16	punctuation.bracket	`(`
+215:30-215:31	punctuation.bracket	`)`
+215:32-215:33	punctuation.bracket	`(`
+215:45-215:46	number	`1`
+215:46-215:47	punctuation.bracket	`)`
+215:48-215:49	punctuation.bracket	`(`
+215:53-215:54	punctuation.bracket	`(`
+215:61-215:62	punctuation.bracket	`(`
+215:66-215:67	punctuation.bracket	`(`
+215:67-215:68	punctuation.bracket	`[`
+215:69-215:70	punctuation.bracket	`]`
+215:76-215:77	punctuation.bracket	`(`
+215:77-215:78	punctuation.bracket	`[`
+215:79-215:80	punctuation.bracket	`]`
+215:81-215:82	punctuation.bracket	`[`
+215:86-215:87	punctuation.bracket	`]`
+215:92-215:93	punctuation.bracket	`(`
+215:94-215:95	number	`1`
+215:97-215:98	punctuation.bracket	`(`
+215:106-215:107	punctuation.bracket	`)`
+215:107-215:108	punctuation.bracket	`)`
+215:109-215:110	punctuation.bracket	`(`
+215:110-215:111	punctuation.bracket	`[`
+215:112-215:113	punctuation.bracket	`]`
+215:121-215:122	punctuation.bracket	`(`
+215:129-215:130	punctuation.bracket	`(`
+215:130-215:131	punctuation.bracket	`[`
+215:133-215:134	punctuation.bracket	`]`
+215:143-215:144	punctuation.bracket	`(`
+215:153-215:154	punctuation.bracket	`)`
+215:154-215:155	punctuation.bracket	`)`
+215:155-215:156	punctuation.bracket	`)`
+215:156-215:157	punctuation.bracket	`)`
+215:157-215:158	punctuation.bracket	`)`
+215:159-215:160	punctuation.bracket	`(`
+215:160-215:161	punctuation.bracket	`[`
+215:162-215:163	punctuation.bracket	`]`
+215:164-215:165	punctuation.bracket	`[`
+215:169-215:170	punctuation.bracket	`]`
+215:175-215:176	punctuation.bracket	`(`
+215:177-215:178	number	`1`
+215:180-215:181	punctuation.bracket	`(`
+215:189-215:190	punctuation.bracket	`)`
+215:190-215:191	punctuation.bracket	`)`
+215:192-215:193	punctuation.bracket	`(`
+215:193-215:194	punctuation.bracket	`[`
+215:195-215:196	punctuation.bracket	`]`
+215:204-215:205	punctuation.bracket	`(`
+215:212-215:213	punctuation.bracket	`(`
+215:213-215:214	punctuation.bracket	`[`
+215:216-215:217	punctuation.bracket	`]`
+215:226-215:227	punctuation.bracket	`(`
+215:236-215:237	punctuation.bracket	`)`
+215:237-215:238	punctuation.bracket	`)`
+215:238-215:239	punctuation.bracket	`)`
+215:239-215:240	punctuation.bracket	`)`
+215:240-215:241	punctuation.bracket	`)`
+215:241-215:242	punctuation.bracket	`)`
+215:242-215:243	punctuation.bracket	`)`
+215:243-215:244	punctuation.bracket	`)`
+215:244-215:245	punctuation.bracket	`)`
+215:245-215:246	punctuation.bracket	`)`
+216:1-216:4	operator	`%<-`
+216:5-216:6	punctuation.bracket	`(`
+216:6-216:7	punctuation.bracket	`{`
+216:9-216:10	variable.parameter.builtin	`_`
+216:15-216:16	punctuation.bracket	`}`
+216:17-216:18	punctuation.bracket	`{`
+216:26-216:27	variable.parameter.builtin	`_`
+216:27-216:28	punctuation.bracket	`}`
+216:29-216:30	punctuation.bracket	`{`
+216:32-216:33	punctuation.bracket	`{`
+216:34-216:35	number	`1`
+216:40-216:41	punctuation.bracket	`}`
+216:42-216:43	punctuation.bracket	`{`
+216:52-216:53	variable.parameter.builtin	`_`
+216:55-216:56	number	`1`
+216:57-216:58	punctuation.bracket	`}`
+216:59-216:60	punctuation.bracket	`{`
+216:67-216:68	variable.parameter.builtin	`_`
+216:70-216:71	number	`1`
+216:72-216:73	punctuation.bracket	`}`
+216:74-216:75	punctuation.bracket	`{`
+216:82-216:83	number	`1`
+216:84-216:85	punctuation.bracket	`}`
+217:1-217:4	operator	`%pi`
+217:5-217:6	punctuation.bracket	`(`
+217:21-217:22	punctuation.bracket	`)`
+218:1-218:4	operator	`%<-`
+218:5-218:6	punctuation.bracket	`(`
+218:22-218:23	punctuation.bracket	`(`
+218:37-218:38	punctuation.bracket	`)`
+218:42-218:43	punctuation.bracket	`)`
+219:1-219:4	operator	`%<-`
+219:5-219:6	punctuation.bracket	`(`
+219:13-219:14	punctuation.bracket	`(`
+219:20-219:21	punctuation.bracket	`)`
+219:27-219:28	punctuation.bracket	`)`
+219:28-219:29	punctuation.bracket	`}`
+219:39-219:40	punctuation.bracket	`(`
+219:54-219:55	punctuation.bracket	`)`
+219:56-219:57	punctuation.bracket	`(`
+219:58-219:59	number	`1`
+219:61-219:62	punctuation.bracket	`)`
+219:63-219:64	punctuation.bracket	`(`
+219:65-219:66	number	`1`
+219:70-219:71	punctuation.bracket	`)`
+219:71-219:72	punctuation.bracket	`)`
+219:73-219:75	keyword.return	`%.`
+220:0-220:6	keyword	`%block`
+220:17-220:18	punctuation.bracket	`{`
+220:19-220:20	number	`1`
+220:24-220:25	punctuation.bracket	`}`
+220:26-220:27	punctuation.bracket	`{`
+220:28-220:29	number	`1`
+220:33-220:34	punctuation.bracket	`}`
+220:35-220:36	punctuation.bracket	`{`
+220:45-220:46	number	`1`
+220:48-220:49	number	`1`
+220:49-220:50	punctuation.bracket	`}`
+220:51-220:52	punctuation.bracket	`[`
+220:55-220:56	number	`1`
+220:61-220:62	punctuation.bracket	`]`
+220:63-220:64	punctuation.bracket	`[`
+220:73-220:74	number	`1`
+220:74-220:75	punctuation.bracket	`]`
+220:76-220:77	punctuation.bracket	`[`
+220:79-220:80	punctuation.bracket	`{`
+220:81-220:82	number	`1`
+220:87-220:88	punctuation.bracket	`}`
+220:89-220:90	punctuation.bracket	`{`
+220:100-220:101	number	`1`
+220:103-220:104	number	`1`
+220:105-220:106	punctuation.bracket	`}`
+220:107-220:108	punctuation.bracket	`{`
+220:116-220:117	number	`1`
+220:119-220:120	number	`1`
+220:121-220:122	punctuation.bracket	`}`
+220:123-220:124	punctuation.bracket	`{`
+220:131-220:132	number	`1`
+220:133-220:134	punctuation.bracket	`}`
+220:135-220:138	operator	`%pi`
+220:139-220:140	punctuation.bracket	`(`
+220:155-220:156	punctuation.bracket	`)`
+220:157-220:160	operator	`%<-`
+220:161-220:162	punctuation.bracket	`(`
+220:183-220:184	punctuation.bracket	`)`
+220:185-220:188	operator	`%<-`
+220:189-220:190	punctuation.bracket	`(`
+220:197-220:198	punctuation.bracket	`(`
+220:204-220:205	punctuation.bracket	`)`
+220:211-220:212	punctuation.bracket	`)`
+220:212-220:213	punctuation.bracket	`]`
+220:213-220:215	keyword.return	`%.`
+221:0-221:7	keyword	`%worlds`
+221:8-221:9	punctuation.bracket	`(`
+221:18-221:19	punctuation.bracket	`)`
+221:20-221:21	punctuation.bracket	`(`
+221:30-221:31	variable.parameter.builtin	`_`
+221:34-221:35	variable.parameter.builtin	`_`
+221:35-221:36	punctuation.bracket	`)`
+221:37-221:39	keyword.return	`%.`
+222:0-222:6	keyword	`%total`
+222:7-222:8	punctuation.bracket	`(`
+222:9-222:10	punctuation.bracket	`)`
+222:11-222:12	punctuation.bracket	`(`
+222:21-222:22	variable.parameter.builtin	`_`
+222:25-222:26	variable.parameter.builtin	`_`
+222:26-222:27	punctuation.bracket	`)`
+222:28-222:30	keyword.return	`%.`
+223:1-223:2	punctuation.bracket	`[`
+223:2-223:3	punctuation.bracket	`[`
+227:0-227:1	punctuation.bracket	`[`
+227:31-227:32	punctuation.bracket	`]`
+227:32-227:33	punctuation.bracket	`(`
+227:61-227:75	number	`20240303030303`
+227:107-227:108	variable.parameter.builtin	`_`
+227:111-227:112	punctuation.bracket	`)`
+228:1-228:2	punctuation.bracket	`]`
+228:2-228:3	punctuation.bracket	`]`

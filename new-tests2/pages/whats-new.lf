@@ -1,5 +1,5 @@
 %                      
-%{! ;January 17, 2015
+%[[ ;January 17, 2015
 *After a year of issues stemming from the age of our old server, twelf.org has been moved to a new machine. Some features, like Twelf Live and syntax highlighting, still only exist on the [http://twelf.plparty.org old site]. Let [Rob](/wiki/user-rsimmons/) know about any other deficiencies in the new site.
 
 ;June 10, 2013
@@ -117,10 +117,10 @@
 * [Substitution lemma](/wiki/substitution-lemma/) &mdash; [Dan Lee](/wiki/user-danielklee/)'s thorough explanation of the different ways substitution lemmas are dealt with by Twelf.
 * [Twelf CVS](/download/) &mdash; We have instructions from the Software page on downloading the development version of Twelf from the CVS repository. The CVS version of Twelf has undocumented features which are being described on the wiki, such as its capacity for working with [holes in metatheorems](/wiki/incremental-metatheorem-development/).
 
-&lt;/noinclude&gt; !}%
-%{!
+&lt;/noinclude&gt; %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/What%27s_new).
-!}%
+%]]

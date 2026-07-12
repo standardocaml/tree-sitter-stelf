@@ -1,0 +1,35 @@
+0:0-0:6	keyword	`%query`
+0:7-0:8	number	`1`
+0:9-0:10	variable.parameter.builtin	`_`
+0:11-0:12	variable.parameter.builtin	`_`
+0:13-0:18	constructor	`trans`
+0:13-0:18	local.reference	`trans`
+0:18-0:24	constructor	` empty`
+0:18-0:24	local.reference	` empty`
+0:24-0:26	constructor	` F`
+0:24-0:26	local.reference	` F`
+0:71-0:73	keyword.return	`%.`
+1:7-1:8	number	`1`
+1:9-1:10	variable.parameter.builtin	`_`
+1:11-1:12	variable.parameter.builtin	`_`
+1:13-1:18	constructor	`feval`
+1:13-1:18	local.reference	`feval`
+1:18-1:24	constructor	` empty`
+1:18-1:24	local.reference	` empty`
+1:63-1:65	keyword.return	`%.`
+2:7-2:8	number	`1`
+2:9-2:10	variable.parameter.builtin	`_`
+2:11-2:12	variable.parameter.builtin	`_`
+2:13-2:19	constructor	`vtrans`
+2:13-2:19	local.reference	`vtrans`
+2:70-2:72	keyword.return	`%.`
+3:7-3:8	number	`2`
+3:9-3:10	variable.parameter.builtin	`_`
+3:11-3:12	variable.parameter.builtin	`_`
+3:13-3:18	constructor	`trans`
+3:13-3:18	local.reference	`trans`
+3:18-3:24	constructor	` empty`
+3:18-3:24	local.reference	` empty`
+3:24-3:26	constructor	` F`
+3:24-3:26	local.reference	` F`
+3:57-3:59	keyword.return	`%.`

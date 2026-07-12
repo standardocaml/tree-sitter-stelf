@@ -1,0 +1,112 @@
+0:0-0:21	comment	`%%% Reverse direction`
+1:0-1:55	comment	`%%% Convert the Hilbert Calculus into Natural deduction`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:14	constructor	`combdefn`
+2:6-2:14	local.reference	`combdefn`
+2:6-2:14	type	`combdefn`
+2:32-2:34	keyword.return	`%.`
+3:6-3:14	constructor	`combdefn`
+3:6-3:14	local.reference	`combdefn`
+3:14-3:18	keyword.modifier	` %in`
+3:18-3:23	keyword.modifier	` %out`
+3:23-3:26	keyword.return	` %.`
+4:6-4:9	constructor	`cdK`
+4:6-4:9	function	`cdK`
+4:6-4:9	local.reference	`cdK`
+4:6-4:9	variable.parameter	`cdK`
+4:9-4:18	constructor	` combdefn`
+4:9-4:18	local.reference	` combdefn`
+4:18-4:20	constructor	` K`
+4:18-4:20	local.reference	` K`
+4:55-4:57	keyword.return	`%.`
+5:6-5:9	constructor	`cdS`
+5:6-5:9	function	`cdS`
+5:6-5:9	local.reference	`cdS`
+5:6-5:9	variable.parameter	`cdS`
+5:9-5:18	constructor	` combdefn`
+5:9-5:18	local.reference	` combdefn`
+5:18-5:20	constructor	` S`
+5:18-5:20	local.reference	` S`
+5:107-5:109	keyword.return	`%.`
+6:6-6:11	constructor	`cdONE`
+6:6-6:11	function	`cdONE`
+6:6-6:11	local.reference	`cdONE`
+6:6-6:11	variable.parameter	`cdONE`
+6:11-6:20	constructor	` combdefn`
+6:11-6:20	local.reference	` combdefn`
+6:20-6:24	constructor	` ONE`
+6:20-6:24	local.reference	` ONE`
+6:24-6:30	constructor	` trueI`
+6:24-6:30	local.reference	` trueI`
+6:30-6:33	keyword.return	` %.`
+7:6-7:12	constructor	`cdPAIR`
+7:6-7:12	function	`cdPAIR`
+7:6-7:12	local.reference	`cdPAIR`
+7:6-7:12	variable.parameter	`cdPAIR`
+7:12-7:21	constructor	` combdefn`
+7:12-7:21	local.reference	` combdefn`
+7:21-7:26	constructor	` PAIR`
+7:21-7:26	local.reference	` PAIR`
+7:68-7:70	keyword.return	`%.`
+8:6-8:12	constructor	`cdLEFT`
+8:6-8:12	function	`cdLEFT`
+8:6-8:12	local.reference	`cdLEFT`
+8:6-8:12	variable.parameter	`cdLEFT`
+8:12-8:21	constructor	` combdefn`
+8:12-8:21	local.reference	` combdefn`
+8:21-8:26	constructor	` LEFT`
+8:21-8:26	local.reference	` LEFT`
+8:52-8:54	keyword.return	`%.`
+9:6-9:13	constructor	`cdRIGHT`
+9:6-9:13	function	`cdRIGHT`
+9:6-9:13	local.reference	`cdRIGHT`
+9:6-9:13	variable.parameter	`cdRIGHT`
+9:13-9:22	constructor	` combdefn`
+9:13-9:22	local.reference	` combdefn`
+9:22-9:28	constructor	` RIGHT`
+9:22-9:28	local.reference	` RIGHT`
+9:54-9:56	keyword.return	`%.`
+10:6-10:10	constructor	`cdMP`
+10:6-10:10	function	`cdMP`
+10:6-10:10	local.reference	`cdMP`
+10:6-10:10	variable.parameter	`cdMP`
+10:10-10:14	operator	` %pi`
+10:15-10:16	punctuation.bracket	`(`
+10:16-10:24	constructor	`combdefn`
+10:16-10:24	local.reference	`combdefn`
+10:25-10:26	punctuation.bracket	`(`
+10:26-10:28	constructor	`MP`
+10:26-10:28	local.reference	`MP`
+10:29-10:30	constructor	`P`
+10:29-10:30	local.reference	`P`
+10:31-10:32	constructor	`Q`
+10:31-10:32	local.reference	`Q`
+10:32-10:33	punctuation.bracket	`)`
+10:34-10:35	punctuation.bracket	`(`
+10:35-10:43	constructor	`impliesE`
+10:35-10:43	local.reference	`impliesE`
+10:44-10:46	constructor	`P'`
+10:44-10:46	local.reference	`P'`
+10:47-10:49	constructor	`Q'`
+10:47-10:49	local.reference	`Q'`
+10:49-10:50	punctuation.bracket	`)`
+10:50-10:51	punctuation.bracket	`)`
+10:52-10:55	operator	`%<-`
+10:56-10:57	punctuation.bracket	`(`
+10:57-10:65	constructor	`combdefn`
+10:57-10:65	local.reference	`combdefn`
+10:66-10:67	constructor	`P`
+10:66-10:67	local.reference	`P`
+10:68-10:70	constructor	`P'`
+10:68-10:70	local.reference	`P'`
+10:70-10:71	punctuation.bracket	`)`
+10:71-10:75	operator	` %<-`
+10:76-10:77	punctuation.bracket	`(`
+10:77-10:85	constructor	`combdefn`
+10:77-10:85	local.reference	`combdefn`
+10:86-10:87	constructor	`Q`
+10:86-10:87	local.reference	`Q`
+10:88-10:90	constructor	`Q'`
+10:88-10:90	local.reference	`Q'`
+10:90-10:91	punctuation.bracket	`)`
+10:91-10:94	keyword.return	` %.`

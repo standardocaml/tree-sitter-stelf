@@ -1,6 +1,6 @@
 %                         
 %                                                                                                                          
-%{! The **``%determinstic``** declaration influences the way [logic programming](/wiki/logic-programming/) behaves in Twelf. If a type family is deterministic, then once Twelf finds a single solution through logic programming search it cannot backtrack to find different solutions.
+%[[ The **``%determinstic``** declaration influences the way [logic programming](/wiki/logic-programming/) behaves in Twelf. If a type family is deterministic, then once Twelf finds a single solution through logic programming search it cannot backtrack to find different solutions.
 
 ## Example: Tree search
 
@@ -11,7 +11,7 @@ We define a tree with labeled nodes, and a distinguished tree ``testtree``.
 
 Graphical representation of the tree ``testtree`` used in this example.
 </center>
-!}%
+%]]
 %sort label %.
 %term a label %.
 %term b label %.
@@ -21,18 +21,18 @@ Graphical representation of the tree ``testtree`` used in this example.
 %term node %pi tree %-> tree %-> tree %.
 %term leaf %pi label %-> tree %.
 %define testtree node (node (leaf a) (leaf b)) (node (leaf c) (leaf d)) %.
-%{! ### Searching for a leaf
+%[[ ### Searching for a leaf
 
-We also define a judgment, ``findlabel``, that looks for a label at leaves of the tree. Because Twelf tries to use the first-defined rule first, the operational behavior of this is to search for the leftmost node, then to backtrack and find the next-to-leftmost node, etc. !}%
+We also define a judgment, ``findlabel``, that looks for a label at leaves of the tree. Because Twelf tries to use the first-defined rule first, the operational behavior of this is to search for the leftmost node, then to backtrack and find the next-to-leftmost node, etc. %]]
 %sort findlabel {_ tree} {_ label} %.
 %term findlabel/leaf findlabel (leaf L) L %.
 %term findlabel/left %pi (findlabel (node T1 T2) L) %<- (findlabel T1 L) %.
 %term findlabel/right %pi (findlabel (node T1 T2) L) %<- (findlabel T2 L) %.
-%{! If ``findlabel`` is not declared deterministic, all four solutions can be returned, but with ``findlabel`` declared deterministic only one will be found. !}%
-%{!! begin checked !!}%
+%[[ If ``findlabel`` is not declared deterministic, all four solutions can be returned, but with ``findlabel`` declared deterministic only one will be found. %]]
+%[[! begin checked !%]]
 %query 4 _ _ findlabel testtree L %.
-%{!! end checked !!}%
-%{!
+%[[! end checked !%]]
+%[[
 
 ```checkedtwelf
 %deterministic findlabel.
@@ -41,16 +41,16 @@ We also define a judgment, ``findlabel``, that looks for a label at leaves of th
 
 ### Causing search to fail
 
-When using **``%deterministic``**, [[finite failure]] no longer means that no derivation can be found, becuase the deterministic search may put constraints on later results that causes them to fail. Take the ``searchfor`` predicate, which first looks up a label with ``findlabel`` and then checks to see if it is equal to some other label. !}%
+When using **``%deterministic``**, [[finite failure]] no longer means that no derivation can be found, becuase the deterministic search may put constraints on later results that causes them to fail. Take the ``searchfor`` predicate, which first looks up a label with ``findlabel`` and then checks to see if it is equal to some other label. %]]
 %sort eq {_ label} {_ label} %.
 %term eq/refl eq L L %.
 %sort searchfor {_ tree} {_ label} %.
 %term _ %pi (searchfor T L) %<- (findlabel T L') %<- (eq L L') %.
-%{! Using ``searchfor`` to look for ``c`` in our test tree will cause backtracking, because ``findlabel`` first make ``L'`` equal to ``a``, then ``b``, then ``c``. !}%
-%{!! begin checked !!}%
+%[[ Using ``searchfor`` to look for ``c`` in our test tree will cause backtracking, because ``findlabel`` first make ``L'`` equal to ``a``, then ``b``, then ``c``. %]]
+%[[! begin checked !%]]
 %query 1 _ _ %the (searchfor testtree c) P %.
-%{!! end checked !!}%
-%{! If ``findlabel`` is deterministic, then the same search will make ``L'`` equal ``a``, and will then be unable to backtrack.
+%[[! end checked !%]]
+%[[ If ``findlabel`` is deterministic, then the same search will make ``L'`` equal ``a``, and will then be unable to backtrack.
 
 ```checkedtwelf
 %deterministic findlabel.
@@ -64,4 +64,4 @@ When using **``%deterministic``**, [[finite failure]] no longer means that no de
 
 <Keyword />
 
-!}%
+%]]

@@ -1,0 +1,171 @@
+0:0-0:51	comment	`%%% The CLS machine (a variant of the SECD machine)`
+1:0-1:59	comment	`%%% Author: Frank Pfenning, based on [Hannan & Pfenning 92]`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:17	constructor	`instruction`
+2:6-2:17	local.reference	`instruction`
+2:6-2:17	type	`instruction`
+2:17-2:20	keyword.return	` %.`
+2:20-3:17	attribute	``
+3:6-3:17	constructor	`instruction`
+3:6-3:17	local.reference	`instruction`
+3:6-3:17	variable	`instruction`
+3:17-3:20	keyword.return	` %.`
+3:20-4:5	keyword.type	``
+4:6-4:13	constructor	`program`
+4:6-4:13	local.reference	`program`
+4:6-4:13	type	`program`
+4:13-4:16	keyword.return	` %.`
+4:16-5:13	attribute	``
+5:6-5:13	constructor	`program`
+5:6-5:13	local.reference	`program`
+5:6-5:13	variable	`program`
+5:13-5:16	keyword.return	` %.`
+5:16-6:5	keyword.type	``
+6:6-6:14	constructor	`envstack`
+6:6-6:14	local.reference	`envstack`
+6:6-6:14	type	`envstack`
+6:14-6:17	keyword.return	` %.`
+6:17-7:14	attribute	``
+7:6-7:14	constructor	`envstack`
+7:6-7:14	local.reference	`envstack`
+7:6-7:14	variable	`envstack`
+7:14-7:17	keyword.return	` %.`
+7:17-8:5	keyword.type	``
+8:6-8:11	constructor	`state`
+8:6-8:11	local.reference	`state`
+8:6-8:11	type	`state`
+8:11-8:14	keyword.return	` %.`
+8:14-9:11	attribute	``
+9:6-9:11	constructor	`state`
+9:6-9:11	local.reference	`state`
+9:6-9:11	variable	`state`
+9:11-9:14	keyword.return	` %.`
+10:6-10:8	constructor	`ev`
+10:6-10:8	function	`ev`
+10:6-10:8	local.reference	`ev`
+10:6-10:8	variable.parameter	`ev`
+10:8-10:12	operator	` %pi`
+10:13-10:17	constructor	`exp'`
+10:13-10:17	local.reference	`exp'`
+10:18-10:21	operator	`%->`
+10:22-10:33	constructor	`instruction`
+10:22-10:33	local.reference	`instruction`
+10:33-10:36	keyword.return	` %.`
+11:6-11:10	constructor	`add1`
+11:6-11:10	function	`add1`
+11:6-11:10	local.reference	`add1`
+11:6-11:10	variable.parameter	`add1`
+11:10-11:22	constructor	` instruction`
+11:10-11:22	local.reference	` instruction`
+11:22-11:25	keyword.return	` %.`
+12:6-12:12	constructor	`branch`
+12:6-12:12	function	`branch`
+12:6-12:12	local.reference	`branch`
+12:6-12:12	variable.parameter	`branch`
+12:12-12:24	constructor	` instruction`
+12:12-12:24	local.reference	` instruction`
+12:24-12:27	keyword.return	` %.`
+13:6-13:12	constructor	`mkpair`
+13:6-13:12	function	`mkpair`
+13:6-13:12	local.reference	`mkpair`
+13:6-13:12	variable.parameter	`mkpair`
+13:12-13:24	constructor	` instruction`
+13:12-13:24	local.reference	` instruction`
+13:24-13:27	keyword.return	` %.`
+14:6-14:12	constructor	`getfst`
+14:6-14:12	function	`getfst`
+14:6-14:12	local.reference	`getfst`
+14:6-14:12	variable.parameter	`getfst`
+14:12-14:24	constructor	` instruction`
+14:12-14:24	local.reference	` instruction`
+14:24-14:27	keyword.return	` %.`
+15:6-15:12	constructor	`getsnd`
+15:6-15:12	function	`getsnd`
+15:6-15:12	local.reference	`getsnd`
+15:6-15:12	variable.parameter	`getsnd`
+15:12-15:24	constructor	` instruction`
+15:12-15:24	local.reference	` instruction`
+15:24-15:27	keyword.return	` %.`
+16:6-16:11	constructor	`apply`
+16:6-16:11	function	`apply`
+16:6-16:11	local.reference	`apply`
+16:6-16:11	variable.parameter	`apply`
+16:11-16:23	constructor	` instruction`
+16:11-16:23	local.reference	` instruction`
+16:23-16:26	keyword.return	` %.`
+17:6-17:10	constructor	`bind`
+17:6-17:10	function	`bind`
+17:6-17:10	local.reference	`bind`
+17:6-17:10	variable.parameter	`bind`
+17:10-17:22	constructor	` instruction`
+17:10-17:22	local.reference	` instruction`
+17:22-17:25	keyword.return	` %.`
+18:6-18:10	constructor	`done`
+18:6-18:10	function	`done`
+18:6-18:10	local.reference	`done`
+18:6-18:10	variable.parameter	`done`
+18:10-18:18	constructor	` program`
+18:10-18:18	local.reference	` program`
+18:18-18:21	keyword.return	` %.`
+19:6-19:7	function	`&`
+19:6-19:7	local.reference	`&`
+19:6-19:7	operator	`&`
+19:6-19:7	variable.parameter	`&`
+19:7-19:11	operator	` %pi`
+19:12-19:23	constructor	`instruction`
+19:12-19:23	local.reference	`instruction`
+19:24-19:27	operator	`%->`
+19:28-19:35	constructor	`program`
+19:28-19:35	local.reference	`program`
+19:35-19:39	operator	` %->`
+19:40-19:47	constructor	`program`
+19:40-19:47	local.reference	`program`
+19:47-19:50	keyword.return	` %.`
+20:6-20:12	keyword.modifier	`%right`
+20:13-20:15	number	`10`
+20:16-20:17	local.reference	`&`
+20:16-20:17	operator	`&`
+20:17-20:20	keyword.return	` %.`
+21:6-21:12	constructor	`emptys`
+21:6-21:12	function	`emptys`
+21:6-21:12	local.reference	`emptys`
+21:6-21:12	variable.parameter	`emptys`
+21:12-21:21	constructor	` envstack`
+21:12-21:21	local.reference	` envstack`
+21:21-21:24	keyword.return	` %.`
+22:6-22:8	function	`;;`
+22:6-22:8	local.reference	`;;`
+22:6-22:8	operator	`;;`
+22:6-22:8	variable.parameter	`;;`
+22:8-22:12	operator	` %pi`
+22:13-22:21	constructor	`envstack`
+22:13-22:21	local.reference	`envstack`
+22:22-22:25	operator	`%->`
+22:26-22:29	constructor	`env`
+22:26-22:29	local.reference	`env`
+22:29-22:33	operator	` %->`
+22:34-22:42	constructor	`envstack`
+22:34-22:42	local.reference	`envstack`
+22:42-22:45	keyword.return	` %.`
+23:6-23:11	keyword.modifier	`%left`
+23:12-23:14	number	`10`
+23:15-23:17	local.reference	`;;`
+23:15-23:17	operator	`;;`
+23:17-23:20	keyword.return	` %.`
+24:6-24:8	constructor	`st`
+24:6-24:8	function	`st`
+24:6-24:8	local.reference	`st`
+24:6-24:8	variable.parameter	`st`
+24:8-24:12	operator	` %pi`
+24:13-24:21	constructor	`envstack`
+24:13-24:21	local.reference	`envstack`
+24:22-24:25	operator	`%->`
+24:26-24:33	constructor	`program`
+24:26-24:33	local.reference	`program`
+24:33-24:37	operator	` %->`
+24:38-24:41	constructor	`env`
+24:38-24:41	local.reference	`env`
+24:41-24:45	operator	` %->`
+24:46-24:51	constructor	`state`
+24:46-24:51	local.reference	`state`
+24:51-24:54	keyword.return	` %.`

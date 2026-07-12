@@ -1,5 +1,5 @@
 %                  
-%{! An example of encoding ``letrec``, i.e. let-binding a bundle of mutually recursive expressions !}%
+%[[ An example of encoding ``letrec``, i.e. let-binding a bundle of mutually recursive expressions %]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -12,9 +12,9 @@
 %sort exp %.
 %sort oexp {_ nat} %.
 %sort explist {_ nat} %.
-%{! 
+%[[ 
 oexplist N M, is a list of M expressions with N bound variables
-!}%
+%]]
 %sort oexplist {_ nat} {_ nat} %.
 %term zero exp %.
 %term succ %pi exp %-> exp %.
@@ -282,14 +282,14 @@ oexplist N M, is a list of M expressions with N bound variables
 	%<- (preservation-get D1' DOS D2 D) %.
 %worlds () (preservation _ _ _) %.
 %total (D1) (preservation _ D1 _) %.
-%{! 
+%[[ 
 TODO: commentary.
 
 \{\{stub\}\}
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Letrec).
-!}%
+%]]

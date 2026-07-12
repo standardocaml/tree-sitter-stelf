@@ -1,6 +1,6 @@
 %                    
 %                                                                                                   
-%{! The **``%theorem``** declaration is an alternative way of specifying metatheorems in Twelf. It is not fully supported or documented, but 
+%[[ The **``%theorem``** declaration is an alternative way of specifying metatheorems in Twelf. It is not fully supported or documented, but 
 some prefer the syntax for its clarity when proving [metatheorems](/wiki/metatheorem/). A ``%theorem`` declaration used in this style handles the type family declation and the [``%mode``](/wiki/percent-mode/) declaration parts of a [totality assertion](/wiki/totality-assertion/).
 
 ## Use with the theorem prover
@@ -13,4 +13,4 @@ When using the Twelf [theorem prover](/wiki/theorem-prover/), a ``%theorem`` dec
 * <Guide chapter="10" section="57">Theorem Prover</Guide>
 
 <Keyword/>
-!}%
+%]]

@@ -1,0 +1,49 @@
+0:0-0:40	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+1:0-1:40	comment	`%%%%% Figure 13 : Cont-valid data stacks`
+2:0-2:40	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:12	constructor	`cvalDS`
+3:6-3:12	local.reference	`cvalDS`
+3:6-3:12	type	`cvalDS`
+3:23-3:25	keyword.return	`%.`
+4:6-4:17	constructor	`cvalDS_init`
+4:6-4:17	function	`cvalDS_init`
+4:6-4:17	local.reference	`cvalDS_init`
+4:6-4:17	variable.parameter	`cvalDS_init`
+4:17-4:24	constructor	` cvalDS`
+4:17-4:24	local.reference	` cvalDS`
+4:24-4:28	constructor	` dot`
+4:24-4:28	local.reference	` dot`
+4:28-4:31	keyword.return	` %.`
+5:6-5:18	constructor	`cvalDS_stack`
+5:6-5:18	function	`cvalDS_stack`
+5:6-5:18	local.reference	`cvalDS_stack`
+5:6-5:18	variable.parameter	`cvalDS_stack`
+5:18-5:22	operator	` %pi`
+5:23-5:24	punctuation.bracket	`(`
+5:24-5:30	constructor	`cvalDS`
+5:24-5:30	local.reference	`cvalDS`
+5:31-5:32	punctuation.bracket	`(`
+5:32-5:34	constructor	`Xi`
+5:32-5:34	local.reference	`Xi`
+5:35-5:36	local.reference	`,`
+5:35-5:36	operator	`,`
+5:37-5:38	constructor	`T`
+5:37-5:38	local.reference	`T`
+5:38-5:39	punctuation.bracket	`)`
+5:39-5:40	punctuation.bracket	`)`
+5:41-5:44	operator	`%<-`
+5:45-5:46	punctuation.bracket	`(`
+5:46-5:51	constructor	`cvalT`
+5:46-5:51	local.reference	`cvalT`
+5:52-5:53	constructor	`T`
+5:52-5:53	local.reference	`T`
+5:53-5:54	punctuation.bracket	`)`
+5:54-5:58	operator	` %<-`
+5:59-5:60	punctuation.bracket	`(`
+5:60-5:66	constructor	`cvalDS`
+5:60-5:66	local.reference	`cvalDS`
+5:67-5:69	constructor	`Xi`
+5:67-5:69	local.reference	`Xi`
+5:69-5:70	punctuation.bracket	`)`
+5:70-5:73	keyword.return	` %.`

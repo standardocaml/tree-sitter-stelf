@@ -1,0 +1,3 @@
+%define id nat [x nat] x
+%define const nat {a nat} {b nat} a
+%define impl_id nat {{A B}} A

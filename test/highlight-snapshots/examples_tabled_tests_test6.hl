@@ -1,0 +1,106 @@
+0:0-0:18	comment	`%%%%%%%%%%%%%%%%%%`
+1:0-1:16	comment	`%%% Tamaki, Sato`
+2:0-2:3	comment	`%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:9	constructor	`nat`
+3:6-3:9	local.reference	`nat`
+3:6-3:9	type	`nat`
+3:9-3:12	keyword.return	` %.`
+4:6-4:7	constructor	`0`
+4:6-4:7	function	`0`
+4:6-4:7	local.reference	`0`
+4:6-4:7	variable.parameter	`0`
+4:7-4:11	constructor	` nat`
+4:7-4:11	local.reference	` nat`
+4:11-4:14	keyword.return	` %.`
+5:6-5:9	constructor	`suc`
+5:6-5:9	function	`suc`
+5:6-5:9	local.reference	`suc`
+5:6-5:9	variable.parameter	`suc`
+5:9-5:13	operator	` %pi`
+5:14-5:17	constructor	`nat`
+5:14-5:17	local.reference	`nat`
+5:18-5:21	operator	`%->`
+5:22-5:25	constructor	`nat`
+5:22-5:25	local.reference	`nat`
+5:25-5:28	keyword.return	` %.`
+5:28-6:5	keyword.type	``
+6:6-6:9	constructor	`pts`
+6:6-6:9	local.reference	`pts`
+6:6-6:9	type	`pts`
+6:18-6:20	keyword.return	`%.`
+6:20-7:5	keyword.type	``
+7:6-7:9	constructor	`qts`
+7:6-7:9	local.reference	`qts`
+7:6-7:9	type	`qts`
+7:18-7:20	keyword.return	`%.`
+7:20-8:5	keyword.type	``
+8:6-8:9	constructor	`rts`
+8:6-8:9	local.reference	`rts`
+8:6-8:9	type	`rts`
+8:9-8:12	keyword.return	` %.`
+9:12-9:14	keyword.return	`%.`
+10:6-10:8	constructor	`c1`
+10:6-10:8	function	`c1`
+10:6-10:8	local.reference	`c1`
+10:6-10:8	variable.parameter	`c1`
+10:8-10:12	operator	` %pi`
+10:13-10:14	punctuation.bracket	`(`
+10:14-10:17	constructor	`pts`
+10:14-10:17	local.reference	`pts`
+10:18-10:19	constructor	`X`
+10:18-10:19	local.reference	`X`
+10:19-10:20	punctuation.bracket	`)`
+10:21-10:24	operator	`%<-`
+10:25-10:26	punctuation.bracket	`(`
+10:26-10:29	constructor	`qts`
+10:26-10:29	local.reference	`qts`
+10:30-10:31	constructor	`X`
+10:30-10:31	local.reference	`X`
+10:31-10:32	punctuation.bracket	`)`
+10:32-10:36	operator	` %<-`
+10:37-10:40	constructor	`rts`
+10:37-10:40	local.reference	`rts`
+10:40-10:43	keyword.return	` %.`
+11:6-11:8	constructor	`c2`
+11:6-11:8	function	`c2`
+11:6-11:8	local.reference	`c2`
+11:6-11:8	variable.parameter	`c2`
+11:8-11:12	operator	` %pi`
+11:13-11:14	punctuation.bracket	`(`
+11:14-11:17	constructor	`qts`
+11:14-11:17	local.reference	`qts`
+11:18-11:19	punctuation.bracket	`(`
+11:19-11:22	constructor	`suc`
+11:19-11:22	local.reference	`suc`
+11:23-11:24	constructor	`X`
+11:23-11:24	local.reference	`X`
+11:24-11:25	punctuation.bracket	`)`
+11:25-11:26	punctuation.bracket	`)`
+11:27-11:30	operator	`%<-`
+11:31-11:32	punctuation.bracket	`(`
+11:32-11:35	constructor	`qts`
+11:32-11:35	local.reference	`qts`
+11:36-11:37	constructor	`X`
+11:36-11:37	local.reference	`X`
+11:37-11:38	punctuation.bracket	`)`
+11:38-11:41	keyword.return	` %.`
+12:6-12:8	constructor	`c3`
+12:6-12:8	function	`c3`
+12:6-12:8	local.reference	`c3`
+12:6-12:8	variable.parameter	`c3`
+12:8-12:12	constructor	` qts`
+12:8-12:12	local.reference	` qts`
+12:12-12:14	constructor	` 0`
+12:12-12:14	local.reference	` 0`
+12:14-12:17	keyword.return	` %.`
+13:6-13:8	constructor	`c4`
+13:6-13:8	function	`c4`
+13:6-13:8	local.reference	`c4`
+13:6-13:8	variable.parameter	`c4`
+13:8-13:12	constructor	` rts`
+13:8-13:12	local.reference	` rts`
+13:12-13:15	keyword.return	` %.`
+14:13-14:14	variable.parameter.builtin	`_`
+14:15-14:17	number	`10`
+14:24-14:26	keyword.return	`%.`

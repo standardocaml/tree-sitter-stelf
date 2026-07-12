@@ -1,5 +1,5 @@
 %                                                       
-%{! 
+%[[ 
 __NOTOC__
 
 In this lecture, Karl uses Prolog notation. I'm going to skip a step and go ahead and start using Twelf, since I've got all this infrastructure set up to incorporate pretty Twelf into web pages. For the purpose of this exercise, this only means that we have to declare types for things and that we write ``connect a b`` instead of ``connect(a,b)``
@@ -17,7 +17,7 @@ If you'll forgive the ugly illustration, we're interesting in answering question
 a----------&gt;c-----&gt;d
 &lt;/code&gt;
 
-!}%
+%]]
 %sort node %.
 %term a node %.
 %term b node %.
@@ -31,7 +31,7 @@ a----------&gt;c-----&gt;d
 %term connect/c-d connect c d %.
 %term reach/refl {X node} reaches X X %.
 %term reach/trans {X node} {Y node} {Z node} %pi (reaches Y Z) %-> (connect X Y) %-> (reaches X Z) %.
-%{! 
+%[[ 
 
 **NOTE:** You don't have to write the &Pi; bound things, so you could have used:
 &lt;twelf name=dsfadsf&gt;
@@ -46,27 +46,27 @@ I can confirm that there is one way through the graph from ``a`` to
 ``d`` (the notation ``%query 1 *`` isn't important for you to remember, but it means that I want one answer
 no matter how many times I try)
 
-|check=decl !}%
+|check=decl %]]
 %query 1 _ _ reaches a d %.
-%{! 
+%[[ 
 
 ...I can ask the engine to verify that there are no paths through the graph from ``b`` to ``a``:
 
-|check=decl !}%
+|check=decl %]]
 %query 0 _ _ reaches b a %.
-%{! 
+%[[ 
 
 ...finally, I can use a capital letter (metavariable or substitution variable) ``Z`` to ask, what is EVERY path, starting from
 ``a``, in the graph? Turns out there are 5 (``b`` can be reached in two different ways):
 
-|check=decl !}%
+|check=decl %]]
 %query 5 _ _ reaches a Z %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/User:Rsimmons/Lecture_20:_Logic_Programming).
-!}%
+%]]
 %.
 
 = The LF Logical Framework =

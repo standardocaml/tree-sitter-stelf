@@ -1,0 +1,459 @@
+0:0-0:35	comment	`%%% Computations of the CLS machine`
+1:0-1:59	comment	`%%% Author: Frank Pfenning, based on [Hannan & Pfenning 92]`
+2:0-2:27	comment	`%%% Single step transition.`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:8	local.reference	`=>`
+3:6-3:8	operator	`=>`
+3:6-3:8	type	`=>`
+3:29-3:31	keyword.return	`%.`
+4:6-4:11	keyword.modifier	`%none`
+4:12-4:14	number	`10`
+4:15-4:17	local.reference	`=>`
+4:15-4:17	operator	`=>`
+4:17-4:20	keyword.return	` %.`
+4:20-5:8	attribute	``
+5:6-5:8	local.reference	`=>`
+5:6-5:8	operator	`=>`
+5:6-5:8	variable	`=>`
+5:8-5:11	keyword.return	` %.`
+6:6-6:8	local.reference	`=>`
+6:6-6:8	operator	`=>`
+6:8-6:12	keyword.modifier	` %in`
+6:12-6:17	keyword.modifier	` %out`
+6:17-6:20	keyword.return	` %.`
+6:20-7:11	comment	``
+8:6-8:9	constructor	`c_1`
+8:6-8:9	function	`c_1`
+8:6-8:9	local.reference	`c_1`
+8:6-8:9	variable.parameter	`c_1`
+8:9-8:12	constructor	` st`
+8:9-8:12	local.reference	` st`
+8:61-8:63	keyword.return	`%.`
+9:6-9:9	constructor	`c_^`
+9:6-9:9	function	`c_^`
+9:6-9:9	local.reference	`c_^`
+9:6-9:9	variable.parameter	`c_^`
+9:9-9:12	constructor	` st`
+9:9-9:12	local.reference	` st`
+9:76-9:78	keyword.return	`%.`
+10:6-10:10	constructor	`c_1+`
+10:6-10:10	function	`c_1+`
+10:6-10:10	local.reference	`c_1+`
+10:6-10:10	variable.parameter	`c_1+`
+10:10-10:13	constructor	` st`
+10:10-10:13	local.reference	` st`
+10:72-10:74	keyword.return	`%.`
+11:6-11:10	constructor	`c_^+`
+11:6-11:10	function	`c_^+`
+11:6-11:10	local.reference	`c_^+`
+11:6-11:10	variable.parameter	`c_^+`
+11:10-11:13	constructor	` st`
+11:10-11:13	local.reference	` st`
+11:77-11:79	keyword.return	`%.`
+11:79-12:17	comment	``
+13:6-13:9	constructor	`c_z`
+13:6-13:9	function	`c_z`
+13:6-13:9	local.reference	`c_z`
+13:6-13:9	variable.parameter	`c_z`
+13:9-13:12	constructor	` st`
+13:9-13:12	local.reference	` st`
+13:57-13:59	keyword.return	`%.`
+14:6-14:9	constructor	`c_s`
+14:6-14:9	function	`c_s`
+14:6-14:9	local.reference	`c_s`
+14:6-14:9	variable.parameter	`c_s`
+14:9-14:12	constructor	` st`
+14:9-14:12	local.reference	` st`
+14:77-14:79	keyword.return	`%.`
+15:6-15:12	constructor	`c_add1`
+15:6-15:12	function	`c_add1`
+15:6-15:12	local.reference	`c_add1`
+15:6-15:12	variable.parameter	`c_add1`
+15:12-15:15	constructor	` st`
+15:12-15:15	local.reference	` st`
+15:15-15:18	constructor	` Ks`
+15:15-15:18	local.reference	` Ks`
+15:60-15:62	keyword.return	`%.`
+16:6-16:12	constructor	`c_case`
+16:6-16:12	function	`c_case`
+16:6-16:12	local.reference	`c_case`
+16:6-16:12	variable.parameter	`c_case`
+16:12-16:15	constructor	` st`
+16:12-16:15	local.reference	` st`
+16:114-16:116	keyword.return	`%.`
+17:6-17:16	constructor	`c_branch_z`
+17:6-17:16	function	`c_branch_z`
+17:6-17:16	local.reference	`c_branch_z`
+17:6-17:16	variable.parameter	`c_branch_z`
+17:16-17:19	constructor	` st`
+17:16-17:19	local.reference	` st`
+17:98-17:100	keyword.return	`%.`
+18:6-18:16	constructor	`c_branch_s`
+18:6-18:16	function	`c_branch_s`
+18:6-18:16	local.reference	`c_branch_s`
+18:6-18:16	variable.parameter	`c_branch_s`
+18:16-18:19	constructor	` st`
+18:16-18:19	local.reference	` st`
+18:106-18:108	keyword.return	`%.`
+18:108-19:7	comment	``
+20:6-20:12	constructor	`c_pair`
+20:6-20:12	function	`c_pair`
+20:6-20:12	local.reference	`c_pair`
+20:6-20:12	variable.parameter	`c_pair`
+20:12-20:15	constructor	` st`
+20:12-20:15	local.reference	` st`
+20:103-20:105	keyword.return	`%.`
+21:6-21:14	constructor	`c_mkpair`
+21:6-21:14	function	`c_mkpair`
+21:6-21:14	local.reference	`c_mkpair`
+21:6-21:14	variable.parameter	`c_mkpair`
+21:14-21:17	constructor	` st`
+21:14-21:17	local.reference	` st`
+21:17-21:20	constructor	` Ks`
+21:17-21:20	local.reference	` Ks`
+21:77-21:79	keyword.return	`%.`
+22:6-22:11	constructor	`c_fst`
+22:6-22:11	function	`c_fst`
+22:6-22:11	local.reference	`c_fst`
+22:6-22:11	variable.parameter	`c_fst`
+22:11-22:14	constructor	` st`
+22:11-22:14	local.reference	` st`
+22:83-22:85	keyword.return	`%.`
+23:6-23:14	constructor	`c_getfst`
+23:6-23:14	function	`c_getfst`
+23:6-23:14	local.reference	`c_getfst`
+23:6-23:14	variable.parameter	`c_getfst`
+23:14-23:17	constructor	` st`
+23:14-23:17	local.reference	` st`
+23:17-23:20	constructor	` Ks`
+23:17-23:20	local.reference	` Ks`
+23:72-23:74	keyword.return	`%.`
+24:6-24:11	constructor	`c_snd`
+24:6-24:11	function	`c_snd`
+24:6-24:11	local.reference	`c_snd`
+24:6-24:11	variable.parameter	`c_snd`
+24:11-24:14	constructor	` st`
+24:11-24:14	local.reference	` st`
+24:83-24:85	keyword.return	`%.`
+25:6-25:14	constructor	`c_getsnd`
+25:6-25:14	function	`c_getsnd`
+25:6-25:14	local.reference	`c_getsnd`
+25:6-25:14	variable.parameter	`c_getsnd`
+25:14-25:17	constructor	` st`
+25:14-25:17	local.reference	` st`
+25:17-25:20	constructor	` Ks`
+25:17-25:20	local.reference	` Ks`
+25:72-25:74	keyword.return	`%.`
+25:74-26:11	comment	``
+27:6-27:11	constructor	`c_lam`
+27:6-27:11	function	`c_lam`
+27:6-27:11	local.reference	`c_lam`
+27:6-27:11	variable.parameter	`c_lam`
+27:11-27:14	constructor	` st`
+27:11-27:14	local.reference	` st`
+27:77-27:79	keyword.return	`%.`
+28:6-28:11	constructor	`c_app`
+28:6-28:11	function	`c_app`
+28:6-28:11	local.reference	`c_app`
+28:6-28:11	variable.parameter	`c_app`
+28:11-28:14	constructor	` st`
+28:11-28:14	local.reference	` st`
+28:100-28:102	keyword.return	`%.`
+29:6-29:13	constructor	`c_apply`
+29:6-29:13	function	`c_apply`
+29:6-29:13	local.reference	`c_apply`
+29:6-29:13	variable.parameter	`c_apply`
+29:13-29:16	constructor	` st`
+29:13-29:16	local.reference	` st`
+29:16-29:19	constructor	` Ks`
+29:16-29:19	local.reference	` Ks`
+29:100-29:102	keyword.return	`%.`
+29:102-30:13	comment	``
+31:6-31:12	constructor	`c_letv`
+31:6-31:12	function	`c_letv`
+31:6-31:12	local.reference	`c_letv`
+31:6-31:12	variable.parameter	`c_letv`
+31:12-31:15	constructor	` st`
+31:12-31:15	local.reference	` st`
+31:101-31:103	keyword.return	`%.`
+32:6-32:12	constructor	`c_bind`
+32:6-32:12	function	`c_bind`
+32:6-32:12	local.reference	`c_bind`
+32:6-32:12	variable.parameter	`c_bind`
+32:12-32:15	constructor	` st`
+32:12-32:15	local.reference	` st`
+32:91-32:93	keyword.return	`%.`
+33:6-33:12	constructor	`c_letn`
+33:6-33:12	function	`c_letn`
+33:6-33:12	local.reference	`c_letn`
+33:6-33:12	variable.parameter	`c_letn`
+33:12-33:15	constructor	` st`
+33:12-33:15	local.reference	` st`
+33:88-33:90	keyword.return	`%.`
+33:90-34:11	comment	``
+35:6-35:11	constructor	`c_fix`
+35:6-35:11	function	`c_fix`
+35:6-35:11	local.reference	`c_fix`
+35:6-35:11	variable.parameter	`c_fix`
+35:11-35:14	constructor	` st`
+35:11-35:14	local.reference	` st`
+35:85-35:87	keyword.return	`%.`
+37:0-37:5	keyword.type	`%sort`
+37:6-37:9	local.reference	`=>*`
+37:6-37:9	operator	`=>*`
+37:6-37:9	type	`=>*`
+37:30-37:32	keyword.return	`%.`
+38:6-38:11	keyword.modifier	`%none`
+38:12-38:14	number	`10`
+38:15-38:18	local.reference	`=>*`
+38:15-38:18	operator	`=>*`
+38:18-38:21	keyword.return	` %.`
+38:21-39:9	attribute	``
+39:6-39:9	local.reference	`=>*`
+39:6-39:9	operator	`=>*`
+39:6-39:9	variable	`=>*`
+39:9-39:12	keyword.return	` %.`
+39:12-40:20	comment	``
+40:20-41:21	comment	``
+41:21-42:47	comment	``
+43:6-43:8	constructor	`id`
+43:6-43:8	function	`id`
+43:6-43:8	local.reference	`id`
+43:6-43:8	variable.parameter	`id`
+43:8-43:11	constructor	` St`
+43:8-43:11	local.reference	` St`
+43:11-43:15	local.reference	` =>*`
+43:11-43:15	operator	` =>*`
+43:15-43:18	constructor	` St`
+43:15-43:18	local.reference	` St`
+43:18-43:21	keyword.return	` %.`
+44:6-44:7	function	`~`
+44:6-44:7	local.reference	`~`
+44:6-44:7	operator	`~`
+44:6-44:7	variable.parameter	`~`
+44:7-44:11	operator	` %pi`
+44:12-44:13	punctuation.bracket	`(`
+44:13-44:15	constructor	`St`
+44:13-44:15	local.reference	`St`
+44:16-44:18	local.reference	`=>`
+44:16-44:18	operator	`=>`
+44:19-44:22	constructor	`St'`
+44:19-44:22	local.reference	`St'`
+44:22-44:23	punctuation.bracket	`)`
+44:24-44:27	operator	`%->`
+44:28-44:29	punctuation.bracket	`(`
+44:29-44:32	constructor	`St'`
+44:29-44:32	local.reference	`St'`
+44:33-44:36	local.reference	`=>*`
+44:33-44:36	operator	`=>*`
+44:37-44:41	constructor	`St''`
+44:37-44:41	local.reference	`St''`
+44:41-44:42	punctuation.bracket	`)`
+44:42-44:46	operator	` %->`
+44:47-44:48	punctuation.bracket	`(`
+44:48-44:50	constructor	`St`
+44:48-44:50	local.reference	`St`
+44:51-44:54	local.reference	`=>*`
+44:51-44:54	operator	`=>*`
+44:55-44:59	constructor	`St''`
+44:55-44:59	local.reference	`St''`
+44:59-44:60	punctuation.bracket	`)`
+44:60-44:63	keyword.return	` %.`
+45:6-45:12	keyword.modifier	`%right`
+45:13-45:15	number	`10`
+45:16-45:17	local.reference	`~`
+45:16-45:17	operator	`~`
+45:17-45:20	keyword.return	` %.`
+47:0-47:5	keyword.type	`%sort`
+47:6-47:11	constructor	`ceval`
+47:6-47:11	local.reference	`ceval`
+47:6-47:11	type	`ceval`
+47:37-47:39	keyword.return	`%.`
+48:6-48:9	constructor	`run`
+48:6-48:9	function	`run`
+48:6-48:9	local.reference	`run`
+48:6-48:9	variable.parameter	`run`
+48:9-49:4	operator	``
+49:5-49:6	punctuation.bracket	`(`
+49:6-49:8	constructor	`st`
+49:6-49:8	local.reference	`st`
+49:9-49:10	punctuation.bracket	`(`
+49:10-49:16	constructor	`emptys`
+49:10-49:16	local.reference	`emptys`
+49:17-49:19	local.reference	`;;`
+49:17-49:19	operator	`;;`
+49:20-49:21	constructor	`K`
+49:20-49:21	local.reference	`K`
+49:21-49:22	punctuation.bracket	`)`
+49:23-49:24	punctuation.bracket	`(`
+49:24-49:26	constructor	`ev`
+49:24-49:26	local.reference	`ev`
+49:27-49:28	constructor	`F`
+49:27-49:28	local.reference	`F`
+49:29-49:30	local.reference	`&`
+49:29-49:30	operator	`&`
+49:31-49:35	constructor	`done`
+49:31-49:35	local.reference	`done`
+49:35-49:36	punctuation.bracket	`)`
+49:37-49:42	constructor	`empty`
+49:37-49:42	local.reference	`empty`
+49:43-49:46	local.reference	`=>*`
+49:43-49:46	operator	`=>*`
+49:47-49:49	constructor	`st`
+49:47-49:49	local.reference	`st`
+49:50-49:56	constructor	`emptys`
+49:50-49:56	local.reference	`emptys`
+49:57-49:61	constructor	`done`
+49:57-49:61	local.reference	`done`
+49:62-49:63	punctuation.bracket	`(`
+49:63-49:68	constructor	`empty`
+49:63-49:68	local.reference	`empty`
+49:69-49:70	local.reference	`;`
+49:69-49:70	operator	`;`
+49:71-49:72	constructor	`W`
+49:71-49:72	local.reference	`W`
+49:72-49:73	punctuation.bracket	`)`
+49:73-49:74	punctuation.bracket	`)`
+50:1-50:4	operator	`%->`
+50:5-50:6	punctuation.bracket	`(`
+50:6-50:11	constructor	`ceval`
+50:6-50:11	local.reference	`ceval`
+50:12-50:13	constructor	`K`
+50:12-50:13	local.reference	`K`
+50:14-50:15	constructor	`F`
+50:14-50:15	local.reference	`F`
+50:16-50:17	constructor	`W`
+50:16-50:17	local.reference	`W`
+50:17-50:18	punctuation.bracket	`)`
+50:18-50:21	keyword.return	` %.`
+52:0-52:5	keyword.type	`%sort`
+52:6-52:10	local.reference	`>=>*`
+52:6-52:10	operator	`>=>*`
+52:6-52:10	type	`>=>*`
+52:31-52:33	keyword.return	`%.`
+53:6-53:11	keyword.modifier	`%none`
+53:12-53:14	number	`10`
+53:15-53:19	local.reference	`>=>*`
+53:15-53:19	operator	`>=>*`
+53:19-53:22	keyword.return	` %.`
+54:6-54:10	local.reference	`>=>*`
+54:6-54:10	operator	`>=>*`
+54:10-54:14	keyword.modifier	` %in`
+54:14-54:19	keyword.modifier	` %out`
+54:19-54:22	keyword.return	` %.`
+55:6-55:9	constructor	`id<`
+55:6-55:9	function	`id<`
+55:6-55:9	local.reference	`id<`
+55:6-55:9	variable.parameter	`id<`
+55:9-55:12	constructor	` St`
+55:9-55:12	local.reference	` St`
+55:12-55:17	local.reference	` >=>*`
+55:12-55:17	operator	` >=>*`
+55:17-55:20	constructor	` St`
+55:17-55:20	local.reference	` St`
+55:20-55:23	keyword.return	` %.`
+56:6-56:9	function	`<=<`
+56:6-56:9	local.reference	`<=<`
+56:6-56:9	operator	`<=<`
+56:6-56:9	variable.parameter	`<=<`
+56:9-56:13	operator	` %pi`
+56:14-56:15	punctuation.bracket	`(`
+56:15-56:17	constructor	`St`
+56:15-56:17	local.reference	`St`
+56:18-56:22	local.reference	`>=>*`
+56:18-56:22	operator	`>=>*`
+56:23-56:27	constructor	`St''`
+56:23-56:27	local.reference	`St''`
+56:27-56:28	punctuation.bracket	`)`
+56:29-56:32	operator	`%<-`
+56:33-56:34	punctuation.bracket	`(`
+56:34-56:36	constructor	`St`
+56:34-56:36	local.reference	`St`
+56:37-56:39	local.reference	`=>`
+56:37-56:39	operator	`=>`
+56:40-56:43	constructor	`St'`
+56:40-56:43	local.reference	`St'`
+56:43-56:44	punctuation.bracket	`)`
+56:44-56:48	operator	` %<-`
+56:49-56:50	punctuation.bracket	`(`
+56:50-56:53	constructor	`St'`
+56:50-56:53	local.reference	`St'`
+56:54-56:58	local.reference	`>=>*`
+56:54-56:58	operator	`>=>*`
+56:59-56:63	constructor	`St''`
+56:59-56:63	local.reference	`St''`
+56:63-56:64	punctuation.bracket	`)`
+56:64-56:67	keyword.return	` %.`
+57:6-57:11	keyword.modifier	`%left`
+57:12-57:14	number	`10`
+57:15-57:18	local.reference	`<=<`
+57:15-57:18	operator	`<=<`
+57:18-57:21	keyword.return	` %.`
+57:21-58:5	keyword.type	``
+58:6-58:12	constructor	`>ceval`
+58:6-58:12	local.reference	`>ceval`
+58:6-58:12	type	`>ceval`
+58:38-58:40	keyword.return	`%.`
+59:6-59:12	constructor	`>ceval`
+59:6-59:12	local.reference	`>ceval`
+59:12-59:16	keyword.modifier	` %in`
+59:16-59:20	keyword.modifier	` %in`
+59:20-59:25	keyword.modifier	` %out`
+59:25-59:28	keyword.return	` %.`
+60:6-60:10	constructor	`>run`
+60:6-60:10	function	`>run`
+60:6-60:10	local.reference	`>run`
+60:6-60:10	variable.parameter	`>run`
+60:10-61:4	operator	``
+61:5-61:6	punctuation.bracket	`(`
+61:6-61:12	constructor	`>ceval`
+61:6-61:12	local.reference	`>ceval`
+61:13-61:14	constructor	`K`
+61:13-61:14	local.reference	`K`
+61:15-61:16	constructor	`F`
+61:15-61:16	local.reference	`F`
+61:17-61:18	constructor	`W`
+61:17-61:18	local.reference	`W`
+61:18-61:19	punctuation.bracket	`)`
+62:1-62:4	operator	`%<-`
+62:5-62:6	punctuation.bracket	`(`
+62:6-62:8	constructor	`st`
+62:6-62:8	local.reference	`st`
+62:9-62:10	punctuation.bracket	`(`
+62:10-62:16	constructor	`emptys`
+62:10-62:16	local.reference	`emptys`
+62:17-62:19	local.reference	`;;`
+62:17-62:19	operator	`;;`
+62:20-62:21	constructor	`K`
+62:20-62:21	local.reference	`K`
+62:21-62:22	punctuation.bracket	`)`
+62:23-62:24	punctuation.bracket	`(`
+62:24-62:26	constructor	`ev`
+62:24-62:26	local.reference	`ev`
+62:27-62:28	constructor	`F`
+62:27-62:28	local.reference	`F`
+62:29-62:30	local.reference	`&`
+62:29-62:30	operator	`&`
+62:31-62:35	constructor	`done`
+62:31-62:35	local.reference	`done`
+62:35-62:36	punctuation.bracket	`)`
+62:37-62:42	constructor	`empty`
+62:37-62:42	local.reference	`empty`
+62:43-62:47	local.reference	`>=>*`
+62:43-62:47	operator	`>=>*`
+62:48-62:50	constructor	`st`
+62:48-62:50	local.reference	`st`
+62:51-62:57	constructor	`emptys`
+62:51-62:57	local.reference	`emptys`
+62:58-62:62	constructor	`done`
+62:58-62:62	local.reference	`done`
+62:63-62:64	punctuation.bracket	`(`
+62:64-62:69	constructor	`empty`
+62:64-62:69	local.reference	`empty`
+62:70-62:71	local.reference	`;`
+62:70-62:71	operator	`;`
+62:72-62:73	constructor	`W`
+62:72-62:73	local.reference	`W`
+62:73-62:74	punctuation.bracket	`)`
+62:74-62:75	punctuation.bracket	`)`
+62:75-62:78	keyword.return	` %.`

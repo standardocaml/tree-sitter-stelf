@@ -1,5 +1,5 @@
 %                              
-%{! \{\{needswork|Incomplete commentary; furthermore, a consensus needs to exist around this document before we present it generally\}\}
+%[[ \{\{needswork|Incomplete commentary; furthermore, a consensus needs to exist around this document before we present it generally\}\}
 
 These are **naming conventions** for Twelf code. This article should be considered an appendix to/chapter of the [style guide](/wiki/twelf-style-guide/).
 
@@ -9,10 +9,10 @@ These are **naming conventions** for Twelf code. This article should be consider
 
 Defining an uninhabited type is important for [reasoning from false](/wiki/reasoning-from-false/) - however, the name of that type varies from user to user, with ``void``, ``false``, and ``absurd`` perhaps being the most common.
 
-Standard usage is to use ``void``, and to freeze the type immediately after its introduction, like this: !}%
+Standard usage is to use ``void``, and to freeze the type immediately after its introduction, like this: %]]
 %sort void %.
 %freeze void %.
-%{! ## Judgments
+%[[ ## Judgments
 
 ### Factored judgments
 
@@ -99,4 +99,4 @@ plus-nat-unique : plus-nat N1 N2 N3
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Naming_conventions).
-!}%
+%]]

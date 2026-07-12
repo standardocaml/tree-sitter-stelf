@@ -1,6 +1,6 @@
 %                                 
-%{! A little proof of cut eliminiation for the logic FF in an unpublished paper by Reed and Pfenning. !}%
-%{! (options removed from twelftag: check="true") !}%
+%[[ A little proof of cut eliminiation for the logic FF in an unpublished paper by Reed and Pfenning. %]]
+%[[ (options removed from twelftag: check="true") %]]
 % Termination metric
 %sort lo %.
 %sort hi %.
@@ -101,9 +101,9 @@
 %total LE1 (trans LE1 LE2 LE3) %.
 %total (RI1 LF1) (mono/rinv LE RI1 RI2) (mono/lfoc LE' LF1 LF2) %.
 %total {(B A A') (N1 N2 N3) [(RF RI RI') (PFRF1 PFRI1 LF)]} (cut/rfoc B N1 RF PFRF1 PFRF2) (cut/rinv A N2 RI PFRI1 PFRI2) (cut/pc A' N3 RI' LF RI'') %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/ConstructiveSemantics).
-!}%
+%]]

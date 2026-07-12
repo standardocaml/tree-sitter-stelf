@@ -1,0 +1,137 @@
+0:0-0:5	keyword.type	`%sort`
+0:6-0:10	constructor	`node`
+0:6-0:10	local.reference	`node`
+0:6-0:10	type	`node`
+0:10-0:13	keyword.return	` %.`
+1:6-1:7	constructor	`a`
+1:6-1:7	function	`a`
+1:6-1:7	local.reference	`a`
+1:6-1:7	variable.parameter	`a`
+1:7-1:12	constructor	` node`
+1:7-1:12	local.reference	` node`
+1:12-1:15	keyword.return	` %.`
+2:6-2:7	constructor	`b`
+2:6-2:7	function	`b`
+2:6-2:7	local.reference	`b`
+2:6-2:7	variable.parameter	`b`
+2:7-2:12	constructor	` node`
+2:7-2:12	local.reference	` node`
+2:12-2:15	keyword.return	` %.`
+2:15-3:5	keyword.type	``
+3:6-3:7	constructor	`p`
+3:6-3:7	local.reference	`p`
+3:6-3:7	type	`p`
+3:17-3:19	keyword.return	`%.`
+4:10-4:12	keyword.return	`%.`
+5:6-5:8	constructor	`p1`
+5:6-5:8	function	`p1`
+5:6-5:8	local.reference	`p1`
+5:6-5:8	variable.parameter	`p1`
+5:8-5:10	constructor	` p`
+5:8-5:10	local.reference	` p`
+5:10-5:12	constructor	` a`
+5:10-5:12	local.reference	` a`
+5:12-5:15	keyword.return	` %.`
+6:6-6:8	constructor	`p2`
+6:6-6:8	function	`p2`
+6:6-6:8	local.reference	`p2`
+6:6-6:8	variable.parameter	`p2`
+6:8-6:12	operator	` %pi`
+6:13-6:14	punctuation.bracket	`(`
+6:14-6:15	constructor	`p`
+6:14-6:15	local.reference	`p`
+6:16-6:17	constructor	`a`
+6:16-6:17	local.reference	`a`
+6:17-6:18	punctuation.bracket	`)`
+6:19-6:22	operator	`%<-`
+6:23-6:24	punctuation.bracket	`(`
+6:24-6:25	constructor	`p`
+6:24-6:25	local.reference	`p`
+6:26-6:27	constructor	`b`
+6:26-6:27	local.reference	`b`
+6:27-6:28	punctuation.bracket	`)`
+6:28-6:31	keyword.return	` %.`
+7:6-7:8	constructor	`p3`
+7:6-7:8	function	`p3`
+7:6-7:8	local.reference	`p3`
+7:6-7:8	variable.parameter	`p3`
+7:8-7:12	operator	` %pi`
+7:13-7:14	punctuation.bracket	`(`
+7:14-7:15	constructor	`p`
+7:14-7:15	local.reference	`p`
+7:16-7:17	constructor	`b`
+7:16-7:17	local.reference	`b`
+7:17-7:18	punctuation.bracket	`)`
+7:19-7:22	operator	`%<-`
+7:23-7:24	punctuation.bracket	`(`
+7:24-7:25	constructor	`p`
+7:24-7:25	local.reference	`p`
+7:26-7:27	constructor	`a`
+7:26-7:27	local.reference	`a`
+7:27-7:28	punctuation.bracket	`)`
+7:28-7:31	keyword.return	` %.`
+8:13-8:14	variable.parameter.builtin	`_`
+8:15-8:16	number	`5`
+8:17-8:21	keyword.operator	`%the`
+8:22-8:23	punctuation.bracket	`(`
+8:26-8:27	punctuation.bracket	`)`
+8:30-8:32	keyword.return	`%.`
+8:32-9:5	keyword.type	``
+9:6-9:7	constructor	`q`
+9:6-9:7	local.reference	`q`
+9:6-9:7	type	`q`
+9:17-9:19	keyword.return	`%.`
+10:10-10:12	keyword.return	`%.`
+11:6-11:8	constructor	`q2`
+11:6-11:8	function	`q2`
+11:6-11:8	local.reference	`q2`
+11:6-11:8	variable.parameter	`q2`
+11:8-11:12	operator	` %pi`
+11:13-11:14	punctuation.bracket	`(`
+11:14-11:15	constructor	`q`
+11:14-11:15	local.reference	`q`
+11:16-11:17	constructor	`a`
+11:16-11:17	local.reference	`a`
+11:17-11:18	punctuation.bracket	`)`
+11:19-11:22	operator	`%<-`
+11:23-11:24	punctuation.bracket	`(`
+11:24-11:25	constructor	`q`
+11:24-11:25	local.reference	`q`
+11:26-11:27	constructor	`b`
+11:26-11:27	local.reference	`b`
+11:27-11:28	punctuation.bracket	`)`
+11:28-11:31	keyword.return	` %.`
+12:6-12:8	constructor	`q3`
+12:6-12:8	function	`q3`
+12:6-12:8	local.reference	`q3`
+12:6-12:8	variable.parameter	`q3`
+12:8-12:12	operator	` %pi`
+12:13-12:14	punctuation.bracket	`(`
+12:14-12:15	constructor	`q`
+12:14-12:15	local.reference	`q`
+12:16-12:17	constructor	`b`
+12:16-12:17	local.reference	`b`
+12:17-12:18	punctuation.bracket	`)`
+12:19-12:22	operator	`%<-`
+12:23-12:24	punctuation.bracket	`(`
+12:24-12:25	constructor	`q`
+12:24-12:25	local.reference	`q`
+12:26-12:27	constructor	`a`
+12:26-12:27	local.reference	`a`
+12:27-12:28	punctuation.bracket	`)`
+12:28-12:31	keyword.return	` %.`
+13:6-13:8	constructor	`q1`
+13:6-13:8	function	`q1`
+13:6-13:8	local.reference	`q1`
+13:6-13:8	variable.parameter	`q1`
+13:8-13:10	constructor	` q`
+13:8-13:10	local.reference	` q`
+13:10-13:12	constructor	` a`
+13:10-13:12	local.reference	` a`
+13:12-13:15	keyword.return	` %.`
+14:13-14:14	variable.parameter.builtin	`_`
+14:15-14:16	number	`5`
+14:17-14:21	keyword.operator	`%the`
+14:22-14:23	punctuation.bracket	`(`
+14:26-14:27	punctuation.bracket	`)`
+14:30-14:32	keyword.return	`%.`

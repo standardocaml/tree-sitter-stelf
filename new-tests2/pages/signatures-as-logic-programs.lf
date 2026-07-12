@@ -1,5 +1,5 @@
 %                                        
-%{! Recall from the previous section the signature for representing the days of the week, the "next day" function, and the "day after tomorrow" function: !}%
+%[[ Recall from the previous section the signature for representing the days of the week, the "next day" function, and the "day after tomorrow" function: %]]
 % Days of the week
 %sort day %.
 %term sunday day %.
@@ -21,7 +21,7 @@
 % Day after tomorrow function
 %sort dat {_ day} {_ day} %.
 %term dat_def %pi (next_day D1 D2) %-> (next_day D2 D3) %-> (dat D1 D3) %.
-%{! Readers familiar with logic programming may have noticed a strong similarity between this signature and how the relations "next day" and "day after tomorrow" might be defined in Prolog.  This is no coincidence.  Indeed, consider the following Prolog definitions for these two relations:
+%[[ Readers familiar with logic programming may have noticed a strong similarity between this signature and how the relations "next day" and "day after tomorrow" might be defined in Prolog.  This is no coincidence.  Indeed, consider the following Prolog definitions for these two relations:
 
 ```prolog
 % Prolog definitions of next_day and dat
@@ -77,20 +77,20 @@ Look for at least one solution to "dat X X", FAILS!
 
 ### The ``%solve`` and ``%define`` directives
 
-The format of a ``%solve`` declaration is ``%solve`` _ident_ ``:`` _type_.  This directive will search for a solution to the query (i.e., an element of the type) _type_, and define _ident_ to be this element.  Any logic variables in _type_ will be instantiated, and you can seen them in the type when Twelf echoes the definition in its output, but they are not reported separately, as they are with the ``%query`` directive.  If you want to capture these instantiations of free variables as definitions, you can prefix the ``%solve`` directive with one or more ``%define`` directives, the format of which is ``%define`` _ident_ ``=`` _var_ ``:`` _type_, where _ident_ is the identifier to be defined, _var_ is the free variable in the subsequent ``%solve`` declaration whose instantiation you want to capture, and _type_ is the type of that variable.  Please note that the ``%define`` directives do not end in a period ("``.``") but are the beginning part of a single ``%solve`` directive.  Here are some examples, the first of which repeats the definition of ``dat_sunday`` above, except that Twelf figures out the element (or "evidence") itself: !}%
-%{!! begin checked !!}%
+The format of a ``%solve`` declaration is ``%solve`` _ident_ ``:`` _type_.  This directive will search for a solution to the query (i.e., an element of the type) _type_, and define _ident_ to be this element.  Any logic variables in _type_ will be instantiated, and you can seen them in the type when Twelf echoes the definition in its output, but they are not reported separately, as they are with the ``%query`` directive.  If you want to capture these instantiations of free variables as definitions, you can prefix the ``%solve`` directive with one or more ``%define`` directives, the format of which is ``%define`` _ident_ ``=`` _var_ ``:`` _type_, where _ident_ is the identifier to be defined, _var_ is the free variable in the subsequent ``%solve`` declaration whose instantiation you want to capture, and _type_ is the type of that variable.  Please note that the ``%define`` directives do not end in a period ("``.``") but are the beginning part of a single ``%solve`` directive.  Here are some examples, the first of which repeats the definition of ``dat_sunday`` above, except that Twelf figures out the element (or "evidence") itself: %]]
+%[[! begin checked !%]]
 %solve dat_sunday : dat sunday tuesday %.
-%{!! end checked !!}%
-%{!! begin checked !!}%
+%[[! end checked !%]]
+%[[! begin checked !%]]
 %solve dat_monday : dat monday X %.
-%{!! end checked !!}%
-%{!! begin checked !!}%
+%[[! end checked !%]]
+%[[! begin checked !%]]
 %define d = X : day %solve dat_tuesday : dat tuesday X %.
-%{!! end checked !!}%
-%{!! begin checked !!}%
+%[[! end checked !%]]
+%[[! begin checked !%]]
 %define first_day = X : day %define second_day = Y : day %solve dat_first_second : dat X Y %.
-%{!! end checked !!}%
-%{! In the first ``%solve``, the identifier ``dat_sunday`` gets bound to ``dat_def next_day_sun next_day_mon``.  In the second, ``X`` gets instantiated to ``wednesday`` (which we can see in the type ``dat monday wednesday``) and ``dat_monday`` gets bound to ``dat_def next_day_mon next_day_tue``.  In the next query, ``d`` gets bound to ``thursday``, since this is what ``X`` gets instantiated to in the ``%solve``, and ``dat_tuesday`` gets bound to ``dat_def next_day_tue next_day_wed``.  Finally, in the last query, ``X`` and ``Y`` get instantiated to ``saturday`` and ``monday`` respectively, and ``first_day`` and ``second_day`` get bound to these, while ``dat_first_second`` gets bound to ``dat_def next_day_sat next_day_sun``.
+%[[! end checked !%]]
+%[[ In the first ``%solve``, the identifier ``dat_sunday`` gets bound to ``dat_def next_day_sun next_day_mon``.  In the second, ``X`` gets instantiated to ``wednesday`` (which we can see in the type ``dat monday wednesday``) and ``dat_monday`` gets bound to ``dat_def next_day_mon next_day_tue``.  In the next query, ``d`` gets bound to ``thursday``, since this is what ``X`` gets instantiated to in the ``%solve``, and ``dat_tuesday`` gets bound to ``dat_def next_day_tue next_day_wed``.  Finally, in the last query, ``X`` and ``Y`` get instantiated to ``saturday`` and ``monday`` respectively, and ``first_day`` and ``second_day`` get bound to these, while ``dat_first_second`` gets bound to ``dat_def next_day_sat next_day_sun``.
 
 ### Operational Semantics
 
@@ -118,10 +118,10 @@ Twelf also maintains a list of equational _constraints_ that arise during unific
     2. If no more clauses can be found to match the current subgoal, then backtrack: pop the stack of backtrack points and resume the previous search for a clause from that point
     3. If the stack of backtracking points is empty, then fail.
 
-Note, again, that this method is very similar to the method Prolog uses to solve a query.  The main difference is that each clause that gets used in a search results in its constructor becoming part of the partial term that is being constructed, so that when the search succeeds, we not only have an instantiation of the free variables in the query but also a term of the given type. !}%
-%{!
+Note, again, that this method is very similar to the method Prolog uses to solve a query.  The main difference is that each clause that gets used in a search results in its constructor becoming part of the partial term that is being constructed, so that when the search succeeds, we not only have an instantiation of the free variables in the query but also a term of the given type. %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Signatures_as_logic_programs).
-!}%
+%]]

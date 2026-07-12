@@ -1,0 +1,125 @@
+0:0-0:50	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+1:0-1:45	comment	`%%%%% BNF of continuation-passing style terms`
+2:0-2:50	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:11	constructor	`croot`
+3:6-3:11	local.reference	`croot`
+3:6-3:11	type	`croot`
+3:11-3:14	keyword.return	` %.`
+3:14-4:11	attribute	``
+4:6-4:11	constructor	`croot`
+4:6-4:11	local.reference	`croot`
+4:6-4:11	variable	`croot`
+4:11-4:14	keyword.return	` %.`
+4:14-5:5	keyword.type	``
+5:6-5:10	constructor	`cexp`
+5:6-5:10	local.reference	`cexp`
+5:6-5:10	type	`cexp`
+5:10-5:13	keyword.return	` %.`
+5:13-6:10	attribute	``
+6:6-6:10	constructor	`cexp`
+6:6-6:10	local.reference	`cexp`
+6:6-6:10	variable	`cexp`
+6:10-6:13	keyword.return	` %.`
+6:13-7:5	keyword.type	``
+7:6-7:11	constructor	`ctriv`
+7:6-7:11	local.reference	`ctriv`
+7:6-7:11	type	`ctriv`
+7:11-7:14	keyword.return	` %.`
+7:14-8:11	attribute	``
+8:6-8:11	constructor	`ctriv`
+8:6-8:11	local.reference	`ctriv`
+8:6-8:11	variable	`ctriv`
+8:11-8:14	keyword.return	` %.`
+8:14-9:5	keyword.type	``
+9:6-9:11	constructor	`ccont`
+9:6-9:11	local.reference	`ccont`
+9:6-9:11	type	`ccont`
+9:11-9:14	keyword.return	` %.`
+9:14-10:11	attribute	``
+10:6-10:11	constructor	`ccont`
+10:6-10:11	local.reference	`ccont`
+10:6-10:11	variable	`ccont`
+10:11-10:14	keyword.return	` %.`
+11:6-11:10	constructor	`klam`
+11:6-11:10	function	`klam`
+11:6-11:10	local.reference	`klam`
+11:6-11:10	variable.parameter	`klam`
+11:10-11:14	operator	` %pi`
+11:15-11:16	punctuation.bracket	`(`
+11:16-11:19	operator	`%pi`
+11:20-11:25	constructor	`ccont`
+11:20-11:25	local.reference	`ccont`
+11:26-11:29	operator	`%->`
+11:30-11:34	constructor	`cexp`
+11:30-11:34	local.reference	`cexp`
+11:34-11:35	punctuation.bracket	`)`
+11:36-11:39	operator	`%->`
+11:40-11:45	constructor	`croot`
+11:40-11:45	local.reference	`croot`
+11:45-11:48	keyword.return	` %.`
+12:6-12:10	constructor	`capp`
+12:6-12:10	function	`capp`
+12:6-12:10	local.reference	`capp`
+12:6-12:10	variable.parameter	`capp`
+12:10-12:14	operator	` %pi`
+12:15-12:20	constructor	`ctriv`
+12:15-12:20	local.reference	`ctriv`
+12:21-12:24	operator	`%->`
+12:25-12:30	constructor	`ctriv`
+12:25-12:30	local.reference	`ctriv`
+12:30-12:34	operator	` %->`
+12:35-12:40	constructor	`ccont`
+12:35-12:40	local.reference	`ccont`
+12:40-12:44	operator	` %->`
+12:45-12:49	constructor	`cexp`
+12:45-12:49	local.reference	`cexp`
+12:49-12:52	keyword.return	` %.`
+13:6-13:10	constructor	`cret`
+13:6-13:10	function	`cret`
+13:6-13:10	local.reference	`cret`
+13:6-13:10	variable.parameter	`cret`
+13:10-13:14	operator	` %pi`
+13:15-13:20	constructor	`ccont`
+13:15-13:20	local.reference	`ccont`
+13:21-13:24	operator	`%->`
+13:25-13:30	constructor	`ctriv`
+13:25-13:30	local.reference	`ctriv`
+13:30-13:34	operator	` %->`
+13:35-13:39	constructor	`cexp`
+13:35-13:39	local.reference	`cexp`
+13:39-13:42	keyword.return	` %.`
+14:6-14:10	constructor	`xlam`
+14:6-14:10	function	`xlam`
+14:6-14:10	local.reference	`xlam`
+14:6-14:10	variable.parameter	`xlam`
+14:10-14:14	operator	` %pi`
+14:15-14:16	punctuation.bracket	`(`
+14:16-14:19	operator	`%pi`
+14:20-14:25	constructor	`ctriv`
+14:20-14:25	local.reference	`ctriv`
+14:26-14:29	operator	`%->`
+14:30-14:35	constructor	`croot`
+14:30-14:35	local.reference	`croot`
+14:35-14:36	punctuation.bracket	`)`
+14:37-14:40	operator	`%->`
+14:41-14:46	constructor	`ctriv`
+14:41-14:46	local.reference	`ctriv`
+14:46-14:49	keyword.return	` %.`
+15:6-15:10	constructor	`vlam`
+15:6-15:10	function	`vlam`
+15:6-15:10	local.reference	`vlam`
+15:6-15:10	variable.parameter	`vlam`
+15:10-15:14	operator	` %pi`
+15:15-15:16	punctuation.bracket	`(`
+15:16-15:19	operator	`%pi`
+15:20-15:25	constructor	`ctriv`
+15:20-15:25	local.reference	`ctriv`
+15:26-15:29	operator	`%->`
+15:30-15:34	constructor	`cexp`
+15:30-15:34	local.reference	`cexp`
+15:34-15:35	punctuation.bracket	`)`
+15:36-15:39	operator	`%->`
+15:40-15:45	constructor	`ccont`
+15:40-15:45	local.reference	`ccont`
+15:45-15:48	keyword.return	` %.`

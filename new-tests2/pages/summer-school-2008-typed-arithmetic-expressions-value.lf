@@ -1,5 +1,5 @@
 %                                                                   
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Typed arithmetic expressions
@@ -9,7 +9,7 @@
 
 Arithmetic expressions, where the answer type is values. 
 
-!}%
+%]]
 %sort nat %.
 %name nat %.
 %term z nat %.
@@ -34,11 +34,11 @@ Arithmetic expressions, where the answer type is values.
 %term cat/c %pi (cat (cons X S1) S2 (cons X S3)) %<- (cat S1 S2 S3) %.
 %worlds () (cat _ _ _) %.
 %total S (cat S _ _) %.
-%{! 
+%[[ 
 
 ## Typed expressions
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term number tp %.
@@ -55,11 +55,11 @@ Arithmetic expressions, where the answer type is values.
 %term plus %pi (number exp) %-> (number exp) %-> (number exp) %.
 %term append %pi (string exp) %-> (string exp) %-> (string exp) %.
 %term let %pi (T exp) %-> (%pi (T val) %-> (U exp)) %-> (U exp) %.
-%{! 
+%[[ 
 
 For simplicity, take answers to be values. 
 
-!}%
+%]]
 %sort eval {_ T exp} {_ T val} %.
 %mode eval %in %out %.
 %term eval/val eval (ret V) V %.
@@ -76,7 +76,7 @@ For simplicity, take answers to be values.
 %term eval/let %pi (eval (let E1 ([x] E2 x)) A) %<- (eval E1 V) %<- (eval (E2 V) A) %.
 %worlds () (eval _ _) %.
 %total E (eval E _) %.
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Typed arithmetic expressions
@@ -84,10 +84,10 @@ For simplicity, take answers to be values.
   |nonext=
 \}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Typed_arithmetic_expressions_(value)).
-!}%
+%]]

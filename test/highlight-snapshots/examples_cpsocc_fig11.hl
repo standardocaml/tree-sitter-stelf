@@ -1,0 +1,74 @@
+0:0-0:40	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+1:0-1:39	comment	`%%%%% Figure 11 : Var-valid data stacks`
+2:0-2:40	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:12	constructor	`vvalDS`
+3:6-3:12	local.reference	`vvalDS`
+3:6-3:12	type	`vvalDS`
+3:33-3:35	keyword.return	`%.`
+4:6-4:17	constructor	`vvalDS_init`
+4:6-4:17	function	`vvalDS_init`
+4:6-4:17	local.reference	`vvalDS_init`
+4:6-4:17	variable.parameter	`vvalDS_init`
+4:17-4:24	constructor	` vvalDS`
+4:17-4:24	local.reference	` vvalDS`
+4:24-4:28	constructor	` dot`
+4:24-4:28	local.reference	` dot`
+4:28-4:32	constructor	` dot`
+4:28-4:32	local.reference	` dot`
+4:32-4:35	keyword.return	` %.`
+5:6-5:18	constructor	`vvalDS_stack`
+5:6-5:18	function	`vvalDS_stack`
+5:6-5:18	local.reference	`vvalDS_stack`
+5:6-5:18	variable.parameter	`vvalDS_stack`
+5:18-5:22	operator	` %pi`
+5:23-5:24	punctuation.bracket	`(`
+5:24-5:30	constructor	`vvalDS`
+5:24-5:30	local.reference	`vvalDS`
+5:31-5:32	punctuation.bracket	`(`
+5:32-5:35	constructor	`XXi`
+5:32-5:35	local.reference	`XXi`
+5:36-5:37	local.reference	`,`
+5:36-5:37	operator	`,`
+5:38-5:39	constructor	`V`
+5:38-5:39	local.reference	`V`
+5:39-5:40	punctuation.bracket	`)`
+5:41-5:42	punctuation.bracket	`(`
+5:42-5:44	constructor	`Xi`
+5:42-5:44	local.reference	`Xi`
+5:45-5:46	local.reference	`,`
+5:45-5:46	operator	`,`
+5:47-5:48	constructor	`T`
+5:47-5:48	local.reference	`T`
+5:48-5:49	punctuation.bracket	`)`
+5:49-5:50	punctuation.bracket	`)`
+5:51-5:54	operator	`%<-`
+5:55-5:56	punctuation.bracket	`(`
+5:56-5:56	local.reference	``
+5:56-5:56	operator	``
+5:56-5:57	punctuation.bracket	`{`
+5:57-5:59	constructor	`xi`
+5:57-5:59	local.reference	`xi`
+5:57-5:59	variable.parameter	`xi`
+5:60-5:65	constructor	`stack`
+5:60-5:65	local.reference	`stack`
+5:65-5:66	punctuation.bracket	`}`
+5:67-5:72	constructor	`vvalT`
+5:67-5:72	local.reference	`vvalT`
+5:73-5:75	constructor	`xi`
+5:73-5:75	local.reference	`xi`
+5:76-5:77	constructor	`T`
+5:76-5:77	local.reference	`T`
+5:78-5:80	constructor	`xi`
+5:78-5:80	local.reference	`xi`
+5:80-5:81	punctuation.bracket	`)`
+5:81-5:85	operator	` %<-`
+5:86-5:87	punctuation.bracket	`(`
+5:87-5:93	constructor	`vvalDS`
+5:87-5:93	local.reference	`vvalDS`
+5:94-5:97	constructor	`XXi`
+5:94-5:97	local.reference	`XXi`
+5:98-5:100	constructor	`Xi`
+5:98-5:100	local.reference	`Xi`
+5:100-5:101	punctuation.bracket	`)`
+5:101-5:104	keyword.return	` %.`

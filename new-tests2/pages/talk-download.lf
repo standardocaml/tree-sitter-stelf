@@ -1,5 +1,5 @@
 %                         
-%{! Perhaps this will be controversial, but I think the software page should have instructions about how to get/install Twelf CVS. %trustme is commonly used by myself, Karl, and Dan Licata in our Twelf code development, and occasionally Twelf code that requires it is publically released. --[DanielKLee](/wiki/user-danielklee/) 21:46, 5 September 2006 (MST)
+%[[ Perhaps this will be controversial, but I think the software page should have instructions about how to get/install Twelf CVS. %trustme is commonly used by myself, Karl, and Dan Licata in our Twelf code development, and occasionally Twelf code that requires it is publically released. --[DanielKLee](/wiki/user-danielklee/) 21:46, 5 September 2006 (MST)
 
 * I completely agree. In fact, that's a decent way of giving this page a purpose - to say "either go to the static software page over here, or get stuff from the CVS repository here". Does the repository have read-only anon. access? I'm actually using 1.5R1 :-P. [Rsimmons](/wiki/user-rsimmons/) 06:48, 6 September 2006 (MST)
 
@@ -51,10 +51,10 @@ Is it possible to get the "CVS build" links right on this page? I'd do it myself
 
 Twelf cannot be built with latest MLTon, which complains about invalid file suffix, “.cm”.
 
-By the way, the binary archive cannot work on current Linux distributions, which does not provide libgmp 3 anymore, only libgmp 10. !}%
-%{!
+By the way, the binary archive cannot work on current Linux distributions, which does not provide libgmp 3 anymore, only libgmp 10. %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Talk:Download).
-!}%
+%]]

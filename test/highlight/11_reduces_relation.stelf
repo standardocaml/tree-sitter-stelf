@@ -1,0 +1,5 @@
+%reduces <= X Y add X Y zero
+%reduces >= X Y add X Y zero
+%reduces < X Y add X Y zero
+%reduces > X Y add X Y zero
+%reduces = X Y add X Y zero

@@ -1,5 +1,5 @@
 %                                                                       
-%{! Thanks Dan, very useful.
+%[[ Thanks Dan, very useful.
 
 Here's two other inductive properties of complete development:  
 
@@ -31,10 +31,10 @@ This simplifies the proof of "sound" too.
 
 : Good idea---it makes sense to localize the binding here.  I've seen situations where this move actually gives you less information (e.g., a typed beta-reduction rule in a calculus with a definitional equality rule---you can't invert the derivation of (lam M : A -&gt; B) to get a hypothetical), but for this tutorial it makes sense.  [Drl](/wiki/user-drl/) 16:08, 3 March 2008 (EST)
 
-:: Actually, there's one downside to this reformulation: in the original version, Twelf can prove =&gt; total automatically, but in the new version, it gets tripped up by the inversion that if (lam M) =&gt; N then N is (lam N1).  I changed the definition back because I want to let Twelf prove this totality for me in [Church-Rosser via Complete Development](/wiki/church-rosser-via-complete-development/), and I want the code here to stay synchronized with that.  [Drl](/wiki/user-drl/) 10:34, 4 March 2008 (EST) !}%
-%{!
+:: Actually, there's one downside to this reformulation: in the original version, Twelf can prove =&gt; total automatically, but in the new version, it gets tripped up by the inversion that if (lam M) =&gt; N then N is (lam N1).  I changed the definition back because I want to let Twelf prove this totality for me in [Church-Rosser via Complete Development](/wiki/church-rosser-via-complete-development/), and I want the code here to stay synchronized with that.  [Drl](/wiki/user-drl/) 10:34, 4 March 2008 (EST) %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Talk:Reformulating_languages_to_use_hypothetical_judgements).
-!}%
+%]]

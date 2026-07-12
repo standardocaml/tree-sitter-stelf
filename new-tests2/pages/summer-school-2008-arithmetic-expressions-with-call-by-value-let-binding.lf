@@ -1,5 +1,5 @@
 %                                                                                    
-%{! 
+%[[ 
 
 \{\{Summer school 2008
    |prev=Arithmetic expressions with let-binding
@@ -13,7 +13,7 @@ Twelf to prove termination of evaluation.
 
 Natural numbers and addition are defined as before.
 
-|hidden="true" !}%
+|hidden="true" %]]
 %sort nat %.
 %name nat %.
 %term z nat %.
@@ -24,7 +24,7 @@ Natural numbers and addition are defined as before.
 %term add/s %pi (add (s M) N (s P)) %<- (add M N P) %.
 %worlds () (add _ _ _) %.
 %total M (add M _ _) %.
-%{! 
+%[[ 
 
 ## Call-by-value arithmetic expressions
 
@@ -32,20 +32,20 @@ First, we define a type of ``open values``, which are either a
 numeral or a variable.  Numerals are represented by a constant
 ``num``; variables are represented by LF variables.  
 
-!}%
+%]]
 %sort val %.
 %name val %.
 %term num %pi nat %-> val %.
-%{! 
+%[[ 
 Next, we define expressions, with a constant ``ret`` including
 values into expressions.
-!}%
+%]]
 %sort exp %.
 %name exp %.
 %term ret %pi val %-> exp %.
 %term plus %pi exp %-> exp %-> exp %.
 %term let %pi exp %-> (%pi val %-> exp) %-> exp %.
-%{! 
+%[[ 
 
 Note that the ``let``-bound variable stands for a value.  
 
@@ -54,7 +54,7 @@ Note that the ``let``-bound variable stands for a value.
 As before, the type of answers includes only numerals.  The code for
 evaluation is exactly the same as [before](/wiki/summer-school-2008-arithmetic-expressions-with-let-binding/).  
 
-!}%
+%]]
 %sort ans %.
 %name ans %.
 %term anum %pi nat %-> ans %.
@@ -67,14 +67,14 @@ evaluation is exactly the same as [before](/wiki/summer-school-2008-arithmetic-e
 	%<- (eval E2 (anum N2))
 	%<- (add N1 N2 N) %.
 %term eval/let %pi (eval (let E1 ([x] E2 x)) A) %<- (eval E1 (anum N)) %<- (eval (E2 (num N)) A) %.
-%{! 
+%[[ 
 
 But now, Twelf can prove evaluation total:
 
-!}%
+%]]
 %worlds () (eval _ _) %.
 %total E (eval E _) %.
-%{! 
+%[[ 
 
 Why does this work?  When termination-checking ``eval/let``, Twelf
 observes that no expressions can appear in variables (this observation
@@ -92,10 +92,10 @@ variable = 1.
    |next=Arithmetic expressions with let-binding (hypothetical evaluation)
    |nextname=Defining evaluation with a hypothetical judgement\}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Arithmetic_expressions_with_call-by-value_let-binding).
-!}%
+%]]

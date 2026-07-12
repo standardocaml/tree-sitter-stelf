@@ -1,64 +1,64 @@
 %                                        
-%{! 
+%[[ 
 
 ## Natural numbers
 
-!}%
+%]]
 %sort nat %.
 %term zero nat %.
 %term succ %pi nat %-> nat %.
-%{! 
+%[[ 
 
 ## Addition
 
-!}%
+%]]
 %sort add {_ nat} {_ nat} {_ nat} %.
 %term add/z add zero N N %.
 %term add/s %pi (add (succ M) N (succ P)) %<- (add M N P) %.
-%{! 
+%[[ 
 
 ### Example derivations
 
-!}%
+%]]
 %define 1 nat succ zero %.
 %define 2 nat succ 1 %.
 %define 1+1is2 (add 1 1 2) add/s add/z %.
-%{! 
+%[[ 
 
 ## Exercise: Multiplication
 
-!}%
+%]]
 %sort mult {_ nat} {_ nat} {_ nat} %.
 %% The syntax '% .' (without the space)
 %% causes Twelf to stop processing the file at this point
 %% remove once you have completed the exercise
 %% note that the arguments are "backwards"
-%{! 
+%[[ 
 
 ## Mode, worlds total
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Right-hand zero
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Right-hand succ
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Exercise: Prove that addition is commutative
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Basics_Starter).
-!}%
+%]]
 %.
 
 %% note that the arguments are "backwards"

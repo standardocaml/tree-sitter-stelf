@@ -1,0 +1,207 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:14	comment	`%%% safety.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:48	comment	`%%% Safety: If |- M1 and M1 ==>* M2, then M2 ok.`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword.type	`%sort`
+6:6-6:12	constructor	`safety`
+6:6-6:12	local.reference	`safety`
+6:6-6:12	type	`safety`
+6:84-6:86	keyword.return	`%.`
+7:6-7:12	constructor	`safety`
+7:6-7:12	local.reference	`safety`
+7:12-7:16	keyword.modifier	` %in`
+7:16-7:20	keyword.modifier	` %in`
+7:20-7:24	keyword.modifier	` %in`
+7:24-7:29	keyword.modifier	` %out`
+7:29-7:32	keyword.return	` %.`
+8:7-8:13	constructor	`safety`
+8:7-8:13	local.reference	`safety`
+8:7-8:13	module	`safety`
+8:14-8:19	keyword	`%term`
+8:20-8:24	constructor	`refl`
+8:20-8:24	function	`refl`
+8:20-8:24	local.reference	`refl`
+8:20-8:24	variable.parameter	`refl`
+8:24-8:28	operator	` %pi`
+8:29-8:30	punctuation.bracket	`(`
+8:30-8:36	constructor	`safety`
+8:30-8:36	local.reference	`safety`
+8:37-8:44	constructor	`DStTcWf`
+8:37-8:44	local.reference	`DStTcWf`
+8:45-8:51	constructor	`DExpTc`
+8:45-8:51	local.reference	`DExpTc`
+8:52-8:62	constructor	`refl_step*`
+8:52-8:62	local.reference	`refl_step*`
+8:63-8:70	constructor	`DMachOk`
+8:63-8:70	local.reference	`DMachOk`
+8:70-8:71	punctuation.bracket	`)`
+8:72-8:75	operator	`%<-`
+8:76-8:77	punctuation.bracket	`(`
+8:77-8:81	constructor	`prog`
+8:77-8:81	local.reference	`prog`
+8:82-8:89	constructor	`DStTcWf`
+8:82-8:89	local.reference	`DStTcWf`
+8:90-8:96	constructor	`DExpTc`
+8:90-8:96	local.reference	`DExpTc`
+8:97-8:104	constructor	`DMachOk`
+8:97-8:104	local.reference	`DMachOk`
+8:104-8:105	punctuation.bracket	`)`
+8:105-8:108	keyword.return	` %.`
+9:6-9:11	constructor	`trans`
+9:6-9:11	function	`trans`
+9:6-9:11	local.reference	`trans`
+9:6-9:11	variable.parameter	`trans`
+9:11-10:4	operator	``
+10:5-10:6	punctuation.bracket	`(`
+10:6-10:12	constructor	`safety`
+10:6-10:12	local.reference	`safety`
+10:13-10:20	constructor	`DStTcWf`
+10:13-10:20	local.reference	`DStTcWf`
+10:21-10:27	constructor	`DExpTc`
+10:21-10:27	local.reference	`DExpTc`
+10:28-10:29	punctuation.bracket	`(`
+10:29-10:40	constructor	`trans_step*`
+10:29-10:40	local.reference	`trans_step*`
+10:41-10:49	constructor	`DSteps23`
+10:41-10:49	local.reference	`DSteps23`
+10:50-10:58	constructor	`DSteps12`
+10:50-10:58	local.reference	`DSteps12`
+10:58-10:59	punctuation.bracket	`)`
+10:60-10:68	constructor	`DMachOk3`
+10:60-10:68	local.reference	`DMachOk3`
+10:68-10:69	punctuation.bracket	`)`
+11:1-11:4	operator	`%<-`
+11:5-11:6	punctuation.bracket	`(`
+11:6-11:11	constructor	`pres*`
+11:6-11:11	local.reference	`pres*`
+11:12-11:20	constructor	`DSteps12`
+11:12-11:20	local.reference	`DSteps12`
+11:21-11:28	constructor	`DStTcWf`
+11:21-11:28	local.reference	`DStTcWf`
+11:29-11:35	constructor	`DExpTc`
+11:29-11:35	local.reference	`DExpTc`
+11:36-11:37	constructor	`_`
+11:36-11:37	local.reference	`_`
+11:36-11:37	variable.parameter	`_`
+11:38-11:46	constructor	`DStTcWf2`
+11:38-11:46	local.reference	`DStTcWf2`
+11:47-11:54	constructor	`DExpTc2`
+11:47-11:54	local.reference	`DExpTc2`
+11:54-11:55	punctuation.bracket	`)`
+11:55-12:4	operator	``
+12:5-12:6	punctuation.bracket	`(`
+12:6-12:12	constructor	`safety`
+12:6-12:12	local.reference	`safety`
+12:13-12:21	constructor	`DStTcWf2`
+12:13-12:21	local.reference	`DStTcWf2`
+12:22-12:29	constructor	`DExpTc2`
+12:22-12:29	local.reference	`DExpTc2`
+12:30-12:38	constructor	`DSteps23`
+12:30-12:38	local.reference	`DSteps23`
+12:39-12:47	constructor	`DMachOk3`
+12:39-12:47	local.reference	`DMachOk3`
+12:47-12:48	punctuation.bracket	`)`
+12:48-12:51	keyword.return	` %.`
+13:7-13:13	constructor	`safety`
+13:7-13:13	local.reference	`safety`
+13:7-13:13	module	`safety`
+13:14-13:19	keyword	`%term`
+13:20-13:24	constructor	`step`
+13:20-13:24	function	`step`
+13:20-13:24	local.reference	`step`
+13:20-13:24	variable.parameter	`step`
+13:24-14:4	operator	``
+14:5-14:6	punctuation.bracket	`(`
+14:6-14:12	constructor	`safety`
+14:6-14:12	local.reference	`safety`
+14:13-14:20	constructor	`DStTcWf`
+14:13-14:20	local.reference	`DStTcWf`
+14:21-14:27	constructor	`DExpTc`
+14:21-14:27	local.reference	`DExpTc`
+14:28-14:29	punctuation.bracket	`(`
+14:29-14:39	constructor	`step_step*`
+14:29-14:39	local.reference	`step_step*`
+14:40-14:45	constructor	`DStep`
+14:40-14:45	local.reference	`DStep`
+14:45-14:46	punctuation.bracket	`)`
+14:47-14:55	constructor	`DMachOk'`
+14:47-14:55	local.reference	`DMachOk'`
+14:55-14:56	punctuation.bracket	`)`
+15:1-15:4	operator	`%<-`
+15:5-15:6	punctuation.bracket	`(`
+15:6-15:10	constructor	`pres`
+15:6-15:10	local.reference	`pres`
+15:11-15:16	constructor	`DStep`
+15:11-15:16	local.reference	`DStep`
+15:17-15:24	constructor	`DStTcWf`
+15:17-15:24	local.reference	`DStTcWf`
+15:25-15:31	constructor	`DExpTc`
+15:25-15:31	local.reference	`DExpTc`
+15:32-15:43	constructor	`DSttpExtend`
+15:32-15:43	local.reference	`DSttpExtend`
+15:44-15:52	constructor	`DStTcWf'`
+15:44-15:52	local.reference	`DStTcWf'`
+15:53-15:60	constructor	`DExpTc'`
+15:53-15:60	local.reference	`DExpTc'`
+15:60-15:61	punctuation.bracket	`)`
+15:61-16:4	operator	``
+16:5-16:6	punctuation.bracket	`(`
+16:6-16:10	constructor	`prog`
+16:6-16:10	local.reference	`prog`
+16:11-16:19	constructor	`DStTcWf'`
+16:11-16:19	local.reference	`DStTcWf'`
+16:20-16:27	constructor	`DExpTc'`
+16:20-16:27	local.reference	`DExpTc'`
+16:28-16:36	constructor	`DMachOk'`
+16:28-16:36	local.reference	`DMachOk'`
+16:36-16:37	punctuation.bracket	`)`
+16:37-16:40	keyword.return	` %.`
+17:12-17:18	constructor	`DSteps`
+17:12-17:18	local.reference	`DSteps`
+17:41-17:43	keyword.return	`%.`
+18:8-18:9	punctuation.bracket	`(`
+18:9-18:10	punctuation.bracket	`)`
+18:11-18:12	punctuation.bracket	`(`
+18:12-18:18	constructor	`safety`
+18:12-18:18	local.reference	`safety`
+18:19-18:20	constructor	`_`
+18:19-18:20	local.reference	`_`
+18:19-18:20	variable.parameter	`_`
+18:21-18:22	constructor	`_`
+18:21-18:22	local.reference	`_`
+18:21-18:22	variable.parameter	`_`
+18:23-18:24	constructor	`_`
+18:23-18:24	local.reference	`_`
+18:23-18:24	variable.parameter	`_`
+18:25-18:26	constructor	`_`
+18:25-18:26	local.reference	`_`
+18:25-18:26	variable.parameter	`_`
+18:26-18:27	punctuation.bracket	`)`
+18:27-18:30	keyword.return	` %.`
+19:8-19:14	constructor	`safety`
+19:8-19:14	local.reference	`safety`
+19:14-19:18	keyword.modifier	` %in`
+19:18-19:22	keyword.modifier	` %in`
+19:22-19:26	keyword.modifier	` %in`
+19:26-19:31	keyword.modifier	` %out`
+19:31-19:34	keyword.return	` %.`
+20:7-20:13	constructor	`DSteps`
+20:7-20:13	local.reference	`DSteps`
+20:14-20:15	punctuation.bracket	`(`
+20:15-20:21	constructor	`safety`
+20:15-20:21	local.reference	`safety`
+20:22-20:23	constructor	`_`
+20:22-20:23	local.reference	`_`
+20:22-20:23	variable.parameter	`_`
+20:24-20:25	constructor	`_`
+20:24-20:25	local.reference	`_`
+20:24-20:25	variable.parameter	`_`
+20:26-20:32	constructor	`DSteps`
+20:26-20:32	local.reference	`DSteps`
+20:33-20:34	constructor	`_`
+20:33-20:34	local.reference	`_`
+20:33-20:34	variable.parameter	`_`
+20:34-20:35	punctuation.bracket	`)`
+20:35-20:38	keyword.return	` %.`

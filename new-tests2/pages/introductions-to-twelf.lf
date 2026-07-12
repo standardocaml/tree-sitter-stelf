@@ -1,6 +1,6 @@
 %                                  
 %              
-%{! 
+%[[ 
 
 ### Recommended 
 
@@ -57,4 +57,4 @@ The Twelf [User's Guide](/wiki/users-guide/) was the basic reference manual
 for Twelf prior to the Twelf Wiki, and is still the authoritative source for
 some topics.
 
-!}%
+%]]

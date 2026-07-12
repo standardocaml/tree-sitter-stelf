@@ -1,0 +1,32 @@
+0:0-0:5	keyword.type	`%sort`
+0:6-0:10	constructor	`prop`
+0:6-0:10	local.reference	`prop`
+0:6-0:10	type	`prop`
+1:6-1:10	constructor	`true`
+1:6-1:10	function	`true`
+1:6-1:10	local.reference	`true`
+1:6-1:10	variable.parameter	`true`
+1:10-1:15	constructor	` prop`
+1:10-1:15	local.reference	` prop`
+2:6-2:11	constructor	`false`
+2:6-2:11	function	`false`
+2:6-2:11	local.reference	`false`
+2:6-2:11	variable.parameter	`false`
+2:11-2:16	constructor	` prop`
+2:11-2:16	local.reference	` prop`
+3:8-3:16	constructor	`not_true`
+3:8-3:16	function	`not_true`
+3:8-3:16	local.reference	`not_true`
+3:17-3:21	constructor	`prop`
+3:17-3:21	local.reference	`prop`
+3:22-3:26	constructor	`true`
+3:22-3:26	local.reference	`true`
+4:8-4:17	constructor	`zero_succ`
+4:8-4:17	function	`zero_succ`
+4:8-4:17	local.reference	`zero_succ`
+4:18-4:19	punctuation.bracket	`(`
+4:19-4:23	constructor	`succ`
+4:19-4:23	local.reference	`succ`
+4:24-4:28	constructor	`zero`
+4:24-4:28	local.reference	`zero`
+4:28-4:29	punctuation.bracket	`)`

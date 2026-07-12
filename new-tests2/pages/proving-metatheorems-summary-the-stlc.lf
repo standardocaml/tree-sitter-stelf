@@ -6,7 +6,7 @@
 %        
 %                                                                
 %                                                                                           
-%{!
+%[[
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -116,4 +116,4 @@ Add these to your formalization of the simply-typed lambda calculus and extend t
 
 You now have everything you need to start proving metatheorems with Twelf! The [proof techniques covered in the tutorials](/wiki/tutorials/) are likely to be valuable as you continue. If you're interested in proving progress for the simply typed lambda calculus formulation, you'll do well to start by learning about [output factoring](/wiki/output-factoring/).
 
-!}%
+%]]

@@ -1,7 +1,7 @@
 %                           
-%{! This [case study](/wiki/case-studies/) is an encoding of **Zermelo Frankel** (**ZFC**) set theory.
+%[[ This [case study](/wiki/case-studies/) is an encoding of **Zermelo Frankel** (**ZFC**) set theory.
 
-\{\{needs|some explanatory text\}\} !}%
+\{\{needs|some explanatory text\}\} %]]
 %% ZFC 
 %% by Daniel C. Wang
 %% Transliterated from AUTOMATH definition 
@@ -61,11 +61,11 @@
 %term omega_ax pf (and (omega_closed omega) (all ([o] imp (omega_closed o) (subset omega o)))) %.
 %% C
 %term choice_ax pf (imp (all ([y1] imp (in y1 X) (all ([y2] imp (in y2 X) (disjoint y1 y2))))) (ex ([x'] all ([y] imp (in y X) (ex_unique ([y'] and (in y' x') (in y' y))))))) %.
-%{! [Category:Twelf code](/wiki/category-twelf-code/)
-\{\{case study\}\} !}%
-%{!
+%[[ [Category:Twelf code](/wiki/category-twelf-code/)
+\{\{case study\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Zermelo_Frankel).
-!}%
+%]]

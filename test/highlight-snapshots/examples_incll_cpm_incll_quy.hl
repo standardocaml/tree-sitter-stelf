@@ -1,0 +1,47 @@
+2:0-2:17	comment	`% Example queries`
+5:0-5:35	comment	`% ceval (app (lam [x] (vl x)) z) V.`
+6:0-6:56	comment	`% %query 1 * (sqnt rnil rnil rnil rnil (^(return V) =>> `
+7:0-7:37	comment	`%	^(ev (appm (lamm [x] (vl x)) z)))).`
+8:0-8:6	keyword	`%query`
+8:7-8:8	number	`1`
+8:9-8:10	number	`1`
+8:11-8:12	variable.parameter.builtin	`_`
+8:13-8:17	constructor	`sqnt`
+8:13-8:17	local.reference	`sqnt`
+8:17-8:22	constructor	` rnil`
+8:17-8:22	local.reference	` rnil`
+8:22-8:27	constructor	` rnil`
+8:22-8:27	local.reference	` rnil`
+8:27-8:32	constructor	` rnil`
+8:27-8:32	local.reference	` rnil`
+8:32-8:37	constructor	` rnil`
+8:32-8:37	local.reference	` rnil`
+8:91-8:93	keyword.return	`%.`
+8:93-9:12	comment	``
+9:12-10:35	comment	``
+10:35-11:28	comment	``
+11:28-12:63	comment	``
+12:63-13:4	comment	``
+16:0-16:74	comment	`% this query has successfully completed on my machine (~ 4 minutes to run)`
+19:0-19:56	comment	`% %query 1 * (sqnt rnil rnil rnil rnil (^(return V) =>> `
+20:0-20:36	comment	`% 	^(ev (appm (fix [double] lamm [x]`
+21:0-21:28	comment	`%              case (vl x) z`
+22:0-22:68	comment	`%              [x'] s (s (appm double (vl x')))) (s (s (s z)))) ))).`
+23:0-23:17	comment	`% Computing 2 * 3`
+24:0-24:40	comment	`% ceval (letv (lam [x] fix [add] lam [y]`
+25:0-25:66	comment	`%               case (vl y) (vl x) [y'] s (app add (vl y'))) [add]`
+26:0-26:43	comment	`%         (letv (lam [x] fix [mult] lam [y]`
+27:0-27:65	comment	`%                  case (vl y) z ([y'] (app (app (vl add) (vl x))`
+28:0-28:70	comment	`%                                         (app mult (vl y'))))) [mult]`
+29:0-29:60	comment	`%            (app (app (vl mult) (s (s z))) (s (s (s z))))))`
+30:0-30:4	comment	`% V.`
+33:0-33:79	comment	`% this has produced one right answer, but after 2 hours it still hadn't decided`
+34:0-34:43	comment	`%   if there were any others on my machine.`
+37:0-37:41	comment	`% has successfully run, in about 5 hours.`
+40:0-40:56	comment	`% %query 1 * (sqnt rnil rnil rnil rnil (^(return V) =>> `
+41:0-41:41	comment	`%	^(ev (letv (lamm [x] fix [add] lamm [y]`
+42:0-42:67	comment	`%               case (vl y) (vl x) [y'] s (appm add (vl y'))) [add]`
+43:0-43:45	comment	`%         (letv (lamm [x] fix [mult] lamm [y]`
+44:0-44:67	comment	`%                  case (vl y) z ([y'] (appm (appm (vl add) (vl x))`
+45:0-45:71	comment	`%                                         (appm mult (vl y'))))) [mult]`
+46:0-46:67	comment	`%            (appm (appm (vl mult) (s (s z))) (s (s (s z)))))) ))).`

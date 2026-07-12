@@ -1,6 +1,6 @@
 %                                        
 %                                                                                                                                                            
-%{! The **simply-typed lambda calculus** (or STLC) is a common example of a simple typed programming language. This article discusses its encoding in Twelf. 
+%[[ The **simply-typed lambda calculus** (or STLC) is a common example of a simple typed programming language. This article discusses its encoding in Twelf. 
 
 If you're trying to learn Twelf from this example, you may wish to read the discussion starting in ["Representing the syntax of the STLC" from the Introduction to Proving Metatheorems in Twelf](/wiki/proving-metatheorems-representing-the-syntax-of-the-stlc/).  That introductory guide discusses this representation of the STLC and why it works in more detail.  This page summarizes the judgements of the STLC and the corresponding LF code for reference, but does not explain them in detail.
 
@@ -17,24 +17,24 @@ The types of the simply typed lambda calculus are simply the unit type and the a
 ```math
 \tau ::= \mathsf{unit} \mid \tau_1 \rightarrow \tau_2
 ```
-!}%
+%]]
 %sort tp %.
 %term arrow %pi tp %-> tp %-> tp %.
 %term unit tp %.
 %worlds () (tp) %.
-%{! The terms are the variable <Math formula="x"/>, the empty pair (which has type <Math formula="\mathsf{unit}"/>), lambda abstraction (with a type annotation), and application.
+%[[ The terms are the variable <Math formula="x"/>, the empty pair (which has type <Math formula="\mathsf{unit}"/>), lambda abstraction (with a type annotation), and application.
 
 ```math
 e ::= x \mid \langle\rangle \mid \lambda x{:}\tau.e \mid e_1\,e_2
 ```
- !}%
+ %]]
 %sort tm %.
 %term empty tm %.
 %term app %pi tm %-> tm %-> tm %.
 %term lam %pi tp %-> (%pi tm %-> tm) %-> tm %.
 %block tmvar [x tm]%.
 %worlds (tmvar) (tm) %.
-%{! ## Encoding of judgments
+%[[ ## Encoding of judgments
 
 ### Static semantics
 
@@ -68,7 +68,7 @@ The typing rules for the simply typed lambda calculus use a typing context <Math
 }\mathit{of\textit{-}app}
 ```
 
-This judgement is represented by the following LF signature: !}%
+This judgement is represented by the following LF signature: %]]
 %sort of {_ tm} {_ tp} %.
 %term of-empty of empty unit %.
 %term of-lam 
@@ -77,7 +77,7 @@ This judgement is represented by the following LF signature: !}%
 %term of-app %pi (of (app E1 E2) T) %<- (of E1 (arrow T2 T)) %<- (of E2 T2) %.
 %block tmof {T tp} [x tm] [d of x T]%.
 %worlds (tmof) (of _ _) %.
-%{! Assumptions <Math formula="x : \tau"/> in the typing context <Math formula="\gamma"/> are represented as a pair of objects `x:tm` and `d: of x T` in the LF context <Math formula="\Gamma"/> (where `T` is the LF representation of some type <Math formula="\tau"/>).  This can be seen in the encoding of the judgment ``of-lam``. There is no need to write out the equivalent of the `of-var` rule, because the necessary judgment is directly assumed by the ``of-lam`` rule. This method avoids the need for a [substitution lemma](/wiki/substitution-lemma/): the article on that subject discusses the matter further.
+%[[ Assumptions <Math formula="x : \tau"/> in the typing context <Math formula="\gamma"/> are represented as a pair of objects `x:tm` and `d: of x T` in the LF context <Math formula="\Gamma"/> (where `T` is the LF representation of some type <Math formula="\tau"/>).  This can be seen in the encoding of the judgment ``of-lam``. There is no need to write out the equivalent of the `of-var` rule, because the necessary judgment is directly assumed by the ``of-lam`` rule. This method avoids the need for a [substitution lemma](/wiki/substitution-lemma/): the article on that subject discusses the matter further.
 
 ### Dynamic semantics
 
@@ -122,7 +122,7 @@ Next, we define the operational semantics with a judgement <Math formula="e \map
 }\mathit{step\textit{-}app\textit{-}beta}
 ```
 
-These judgments are represented by the following Twelf signature: !}%
+These judgments are represented by the following Twelf signature: %]]
 %sort value {_ tm} %.
 %term value-empty value empty %.
 %term value-lam value (lam T ([x] E x)) %.
@@ -131,7 +131,7 @@ These judgments are represented by the following Twelf signature: !}%
 %term step-app-2 %pi (step (app E1 E2) (app E1 E2')) %<- (value E1) %<- (step E2 E2') %.
 %term step-app-beta %pi (step (app (lam T2 ([x] E x)) E2) (E E2)) %<- (value E2) %.
 %worlds () (value _) (step _ _) %.
-%{!
+%[[
 ## Metatheorems
 
 Several metatheorems about this formulation of the simply typed lambda-calculus are proved on this wiki.  See, for example:
@@ -141,4 +141,4 @@ Several metatheorems about this formulation of the simply typed lambda-calculus 
 * [Proving totality assertions in non-empty contexts](/wiki/proving-metatheorems-proving-totality-assertions-in-non-empty-contexts/) for a height judgement
 * [Proving metatheorems in non-empty contexts](/wiki/proving-metatheorems-proving-metatheorems-in-non-empty-contexts/) for a proof that the height of a term can only be increased by substitution.
 
-!}%
+%]]

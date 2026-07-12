@@ -1,6 +1,6 @@
 %                 
 %                                                                                                                                              
-%{! The **``%mode``** declaration specifies the way in which a relation is intended to be used, by specifying those arguments that are _inputs_ or _outputs_. Twelf then checks that all constants defining the relation respect the mode specified (are "well-moded").
+%[[ The **``%mode``** declaration specifies the way in which a relation is intended to be used, by specifying those arguments that are _inputs_ or _outputs_. Twelf then checks that all constants defining the relation respect the mode specified (are "well-moded").
 
 The ``%mode`` declaration is an important part of the specification of a [totality assertion](/wiki/totality-assertion/). In the "for all/exists" statement about a relation, the "for all" terms are the input arguments to the relation, and the "exists" terms are its outputs.
 
@@ -49,4 +49,4 @@ plus : nat -> nat -> nat -> type.
 
 <Keyword />
 
-!}%
+%]]

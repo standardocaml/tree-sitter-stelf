@@ -1,6 +1,6 @@
 %                                                                  
 %                                                                                                                                                                               
-%{! It's easy to represent [hypothetical judgements](/wiki/hypothetical-judgment/) in LF, exploiting [higher-order](/wiki/higher-order-judgements/) representation techniques.  This tutorial presents some object-language judgements which are **not** typically phrased as hypothetical judgements, but can easily be reformulated as such, making the correspondence with their LF representation quite clear. In particular, we discuss parallel reduction and complete development for the lambda-calculus; thanks to Randy Pollack for suggesting this example.
+%[[ It's easy to represent [hypothetical judgements](/wiki/hypothetical-judgment/) in LF, exploiting [higher-order](/wiki/higher-order-judgements/) representation techniques.  This tutorial presents some object-language judgements which are **not** typically phrased as hypothetical judgements, but can easily be reformulated as such, making the correspondence with their LF representation quite clear. In particular, we discuss parallel reduction and complete development for the lambda-calculus; thanks to Randy Pollack for suggesting this example.
 
 Before reading this tutorial, you should learn about hypothetical judgements and their representation in LF:
 
@@ -75,11 +75,11 @@ When you're working with an inherently scoped type of binding trees, you can't g
 where the first rule means "all those trees that happen to be variables are terms": it would break the abstraction of variables-as-scoped-data to state a rule about all those trees that happen to be variables.    
 
 The moral of the story is that syntax with binding can be thought of as a hypothetical judgement.
-The LF encoding of this syntax can be thought of as an [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/) of the above judgement <Math formula="\Gamma \vdash M\,\mathtt{trm}"/>. LF provides _typed_ binding trees, so we can define terms by specifying typed operators, rather than a predicate over untyped trees: !}%
+The LF encoding of this syntax can be thought of as an [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/) of the above judgement <Math formula="\Gamma \vdash M\,\mathtt{trm}"/>. LF provides _typed_ binding trees, so we can define terms by specifying typed operators, rather than a predicate over untyped trees: %]]
 %sort trm %.
 %term lam %pi (%pi trm %-> trm) %-> trm %.
 %term app %pi trm %-> trm %-> trm %.
-%{! Then this judgement: 
+%[[ Then this judgement: 
 
 ```math
 x_1\,\mathtt{trm} \; \ldots \; x_n\,\mathtt{trm} \vdash M\,\mathtt{trm} 
@@ -207,7 +207,7 @@ While a rule that says "derive <Math formula="\Gamma \vdash J'"/> if <Math formu
 
 In this presentation, the  <Math formula="\mathit{var}"/>  rule is totally unobjectionable.  In the premies of the rules  <Math formula="\mathit{beta}"/>  and  <Math formula="\mathit{lam}"/> , which deal with binding forms, the context is extended with the assumption that  <Math formula="x \Rightarrow x"/>  for the bound variable  <Math formula="x"/> .  The derivations of this version are isomorphic to the first definition of  <Math formula="\Gamma \vdash M \Rightarrow N"/> , but the <Math formula="\mathit{var}"/> rule here works as a use of hypothetical judgements. 
 
-The LF representation of this formulation is quite direct: !}%
+The LF representation of this formulation is quite direct: %]]
 %sort => {_ trm} {_ trm} %.
 %prec %none 10 => %.
 %term =>/beta 
@@ -218,7 +218,7 @@ The LF representation of this formulation is quite direct: !}%
 %term =>/lam %pi (lam M => lam M') %<- ({x trm} %pi (x => x) %-> (M x => M' x)) %.
 %block =>b [x trm] [=>/x x => x]%.
 %worlds (=>b) (=> _ _) %.
-%{! Derivations using <Math formula="\mathit{var}"/> are represented by LF variables representing the reduction assumptions in <Math formula="\Gamma"/>.  The Twelf ``%worlds`` declaration documents the form of <Math formula="\Gamma"/>  in our informal definition.
+%[[ Derivations using <Math formula="\mathit{var}"/> are represented by LF variables representing the reduction assumptions in <Math formula="\Gamma"/>.  The Twelf ``%worlds`` declaration documents the form of <Math formula="\Gamma"/>  in our informal definition.
 
 #### Adequacy
 
@@ -286,7 +286,7 @@ Another option is to change the definition of the judgement so that it doesn't h
 This is a _different definition_ than the informal one we started with: derivations
 with the rules subscripted <Math formula="2"/> are _not_ isomorphic to those subscripted  <Math formula="1"/>. However, the while this change changes the possible derivations, it does not change the relation <Math formula="M \Rightarrow N"/>, because reflexivity was admissible before. Maybe that's an acceptable change, that actually simplifies the definition.
 
-The LF representation looks like this: !}%
+The LF representation looks like this: %]]
 %sort => {_ trm} {_ trm} %.
 %prec %none 10 => %.
 %term =>/refl M => M %.
@@ -295,7 +295,7 @@ The LF representation looks like this: !}%
 %term =>/lam %pi (lam M => lam M') %<- ({x trm} M x => M' x) %.
 %block trmb [x trm]%.
 %worlds (trmb) (=> _ _) %.
-%{!
+%[[
 
 #### Substitution
 
@@ -366,7 +366,7 @@ When all is said and done, this actually looks a lot like the first reformulatio
 
 Unlike the first reformulation, where the <Math formula="\mathit{var}_1"/> rule came "for free" from LF, this formulation has four rules. The rule looks a little different in LF than in the on-paper derivation, because we use the uppercase `M` in LF instead of the lowercase <Math formula="x"/> in <Math formula="\mathit{var}_3"/>, but the meaning is the same, since we will only ever derive a term of type `isvar M` when `M` is a variable in the context.
 
-!}%
+%]]
 %sort => {_ trm} {_ trm} %.
 %prec %none 10 => %.
 %sort isvar {_ trm} %.
@@ -379,7 +379,7 @@ Unlike the first reformulation, where the <Math formula="\mathit{var}_1"/> rule 
 %term =>/lam %pi (lam M => lam M') %<- ({x trm} %pi (isvar x) %-> (M x => M' x)) %.
 %block isvarb [x trm] [isvar/x isvar x]%.
 %worlds (isvarb) (isvar _) (=> _ _) %.
-%{!
+%[[
 
 #### Substitution
 
@@ -392,7 +392,7 @@ As always when we are defining judgments in non-closed worlds, LF provides us a 
 
 We only ever get to prove <Math formula="\Gamma \vdash M'\,\mathtt{isvar}"/> when <Math formula="M'"/> is a variable! The for-free substitution properties in the last two formulations actually told us something, but here we've got. It _is_ possible to prove the substitution theorem that we expect --- the same substitution theorem that LF gave for free in the first reformulation --- but we have to prove a metatheorem to do so. It's quite a bit of development for what is, at the end of the day, a straightforward proof by induction:
 
-!}%
+%]]
 %sort subst {_ {x trm} {d isvar x} M x => N x} {_ M' => M'} {_ M M' => N M'} %.
 %mode subst %in %in %out %.
 %term _ subst ([x] [dx isvar x] =>/var dx) (%the (M' => M') D2) D2 %.
@@ -408,12 +408,12 @@ We only ever get to prove <Math formula="\Gamma \vdash M'\,\mathtt{isvar}"/> whe
 %term _ 
 	%pi (subst ([x] [dx isvar x] =>/lam ([y] [dy isvar y] %the (M x y => N x y) (D1 x dx y dy))) (%the (M' => M') D2) (%the (lam ([y] M M' y) => (lam ([y] N M' y))) (=>/lam D3)))
 	%<- ({y} {dy isvar y} subst ([x] [dx isvar x] D1 x dx y dy) D2 (%the (M M' y => N M' y) (D3 y dy))) %.
-%{! The `%worlds` for the metatheorem is the same `isvarb` block used in the third reformulation. !}%
-%{!! begin checked !!}%
+%[[ The `%worlds` for the metatheorem is the same `isvarb` block used in the third reformulation. %]]
+%[[! begin checked !%]]
 %worlds (isvarb) (subst _ _ _) %.
 %total T (subst T _ _) %.
-%{!! end checked !!}%
-%{!
+%[[! end checked !%]]
+%[[
 
 ### Conclusion: the cost of losing substitution 
 
@@ -500,14 +500,14 @@ Then complete development is easy to define:
 }\mathit{lam}_c
 ```
 
-The LF representation is direct: !}%
+The LF representation is direct: %]]
 %sort notlam {_ trm} %.
 %term notlam/app notlam (app _ _) %.
 %block nlb [x trm] [nlx notlam x]%.
 %worlds (nlb) (notlam _) %.
-%{! Whenever we add a ``trm`` assumption to the LF context, we assume that it is not a lambda.  The Twelf ``%worlds`` declaration documents this fact, and causes Twelf to complain if we ever violate this convention.  
+%[[ Whenever we add a ``trm`` assumption to the LF context, we assume that it is not a lambda.  The Twelf ``%worlds`` declaration documents this fact, and causes Twelf to complain if we ever violate this convention.  
 
-Then complete development is a simple twist on parallel reduction: !}%
+Then complete development is a simple twist on parallel reduction: %]]
 %sort ==> {_ trm} {_ trm} %.
 %prec %none 10 ==> %.
 %term ==>/beta 
@@ -520,7 +520,7 @@ Then complete development is a simple twist on parallel reduction: !}%
 	%<- ({x trm} %pi (notlam x) %-> (x ==> x) %-> (M x ==> M' x)) %.
 %block ==>b [x trm] [nlx notlam x] [==>/x x ==> x]%.
 %worlds (==>b) (==> _ _) %.
-%{! Every time we extend the context, we add an assumption ``notlam x`` for that variable.  We also add a reflexivity assumption for each variable because the informal definition of complete development still has a reflexivity rule for variables (even though the relation is not reflexive in general).  
+%[[ Every time we extend the context, we add an assumption ``notlam x`` for that variable.  We also add a reflexivity assumption for each variable because the informal definition of complete development still has a reflexivity rule for variables (even though the relation is not reflexive in general).  
 
 #### Substitution
 
@@ -538,16 +538,16 @@ The form of the context ensures that we need a derivation of <Math formula="M\,\
 
 We can give a few examples of parallel reduction in action using the [`%query`](/wiki/percent-query/) mechanism.
 
-!}%
-%{!! begin checked !!}%
+%]]
+%[[! begin checked !%]]
 %query 1 _ _ app (lam ([x] app x x)) (lam ([x] app x x)) ==> N %.
-%{!! end checked !!}%
-%{!! begin checked !!}%
+%[[! end checked !%]]
+%[[! begin checked !%]]
 %define z lam ([f] lam ([x] x)) %.
 %define s lam ([n] lam ([f] lam ([x] app f (app (app n f) x)))) %.
 %query 1 _ _ app (app s z) (lam ([f] lam ([x] app f (app f x)))) ==> N %.
-%{!! end checked !!}%
-%{!
+%[[! end checked !%]]
+%[[
 
 ## See also
 
@@ -555,4 +555,4 @@ We can give a few examples of parallel reduction in action using the [`%query`](
 * [Higher-order judgements](/wiki/higher-order-judgements/)
 * The case study on [Church-Rosser via complete development](/wiki/church-rosser-via-complete-development/) for some proofs about the judgements defined here, illustrating the use of [regular worlds](/wiki/percent-worlds/).
 
-!}%
+%]]

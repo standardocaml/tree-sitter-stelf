@@ -1,6 +1,6 @@
 %                                      
-%{! # Bijection from indexed HOAS to natural numbers !}%
-%{! 
+%[[ # Bijection from indexed HOAS to natural numbers %]]
+%[[ 
 This file shows an *indexed* HOAS term type and a mapping from these
 terms to the natural numbers.  It depends on John Boyland's
 library signatures, in particular void, bool, nat, natpair and multiset.
@@ -9,8 +9,8 @@ This file shows some of the extensions needed to handle indexed HOAS
 terms above and beyond those of "regular" HOAS terms (which is the topic of
 the [HOAS_nat_bijection] page).  In the comments here, I emphasize those 
 different aspects rather than repeat the same discussion.
-!}%
-%{! | hidden = true !}%
+%]]
+%[[ | hidden = true %]]
 % contents included from ../library/std.elf
 %%%%%% Proposed Twelf Standard Library
 %%%%%% John Boyland
@@ -29,7 +29,7 @@ different aspects rather than repeat the same discussion.
 %term greater comp %.
 %term equal comp %.
 %freeze comp %.
-%{! | hidden = true !}%
+%[[ | hidden = true %]]
 % contents included from ../library/bool.elf
 %%%%% bool.elf
 %%%%% Boolean literals
@@ -168,7 +168,7 @@ different aspects rather than repeat the same discussion.
 %inline bool`and-total and-total %.
 %inline bool`or-total* or-total* %.
 %inline bool`or-total or-total %.
-%{! | hidden = true !}%
+%[[ | hidden = true %]]
 % contents included from ../library/nat.elf
 %%%%% Natural numbers
 %%%%% John Boyland
@@ -3210,7 +3210,7 @@ different aspects rather than repeat the same discussion.
 %inline nat`succ-preserves-min-converse succ-preserves-min-converse %.
 %inline nat`succ-preserves-max succ-preserves-max %.
 %inline nat`succ-preserves-max-converse succ-preserves-max-converse %.
-%{! | hidden = true !}%
+%[[ | hidden = true %]]
 % contents included from ../library/natpair.elf
 %%%%% natpair.elf
 %%%%% Pairs of natural numbers
@@ -3715,7 +3715,7 @@ different aspects rather than repeat the same discussion.
 %inline natpair`constrained2-pair2nat-unbounded constrained2-pair2nat-unbounded %.
 %inline natpair`natpair natpair %.
 %inline natpair`natpair/ natpair/ %.
-%{! | hidden = true !}%
+%[[ | hidden = true %]]
 % contents included from ../library/multiset.elf
 %%%%%% Multisets of natural numbers
 %%%%%% John Boyland
@@ -8069,9 +8069,9 @@ different aspects rather than repeat the same discussion.
 %inline multiset`not-member-member-implies-ne not-member-member-implies-ne %.
 %inline multiset`in-implies-member in-implies-member %.
 %inline multiset`member-respects-eq member-respects-eq %.
-%{! ## Definitions !}%
-%{! ### The syntax !}%
-%{! 
+%[[ ## Definitions %]]
+%[[ ### The syntax %]]
+%[[ 
 Here we define multi-arity functions that are typed to avoid 
 type errors (hence, no higher-order functions in the syntax --
 but see "rec" which is the typed Y combinator).  This syntax is
@@ -8081,7 +8081,7 @@ technical issues.  It would still change al he arithmetic parts of
 the proofs dramatically.  For this reason, I would like to
 implement a tool that would generate such proofs for any HOAS family
 of terms.
-!}%
+%]]
 %sort term {_ nat} %.
 %inline t term z %.
 %term lit %pi nat %-> t %.
@@ -8089,21 +8089,21 @@ of terms.
 %term lam %pi (%pi t %-> (term N)) %-> (term (s N)) %.
 %term rec %pi (%pi (term (s N)) %-> (term (s N))) %-> (term (s N)) %.
 %block blocksimple {n} [v term n]%.
-%{! ### Equality !}%
+%[[ ### Equality %]]
 %sort eq {_ term N1} {_ term N2} %.
 %term eq/ eq T T %.
-%{! ### Variable levels !}%
-%{! 
+%[[ ### Variable levels %]]
+%[[ 
 As with the non-indexed case, 
 a variable level is the (nonzero) natural number for a variable.
 But unlike before 'varlevel' is now an abbreviation for a more
 complex relation that permits adjustment of the index level.
-!}%
+%]]
 %sort varadjlevel {_ term N} {_ nat} {_ nat} %.
 %inline varlevel (%pi (term N) %-> nat %-> %type) [T] [L] varadjlevel T N L %.
 %block blockvar {n} {l} [v term n] [vl varlevel v (s l)]%.
-%{! ### Mapping !}%
-%{! 
+%[[ ### Mapping %]]
+%[[ 
 The bijection from terms to nat is called "tonat".    There
 is a separate mapping for each index, which makes sense
 becaue each index represents a different type.
@@ -8125,7 +8125,7 @@ for variables, where (unlike before) VN depends on the index.
 Ignoring variables, `lit' takes the veen numbers and `app' takes the odd
 numbers for the 0-indexed terms.  For the nonzero-indexed terms, app
 takes the odd numbers (of course) and lam and rec share the even numbers.
-!}%
+%]]
 %sort tonat* {N} {_ multiset} {_ term N} {_ nat} %.
 %inline tonat tonat* _ multiset/0 %.
 %term tonat/var %pi (count MS N VN) %-> (varlevel V L) %-> (plus M L VN) %-> (tonat* N MS V M) %.
@@ -8157,12 +8157,12 @@ takes the odd numbers (of course) and lam and rec share the even numbers.
 	%-> (times (s (s (s (s z)))) M TM)
 	%-> (plus VN (s (s TM)) M')
 	%-> (tonat* (s N) MS (rec F) M') %.
-%{! ### Utility lemmas !}%
-%{! 
+%[[ ### Utility lemmas %]]
+%[[ 
 The following theorems prove obvious simple things about the
 basic relations.  They following the conventions established in
 John Boyland's library signatures.
-!}%
+%]]
 %theorem false-implies-eq : forall* {N1} {N2} {T1 term N1} {T2 term N2} forall {F void} exists {EQ eq T1 T2} true %.
 %worlds (blocksimple) (false-implies-eq _ _) %.
 %total () (false-implies-eq _ _) %.
@@ -8180,8 +8180,8 @@ John Boyland's library signatures.
 %term _ tonat-respects-eq TN multiset`eq/ eq/ nat`eq/ TN %.
 %worlds (blocksimple blockvar) (tonat-respects-eq _ _ _ _ _) %.
 %total () (tonat-respects-eq _ _ _ _ _) %.
-%{! ## Proof of totality of tonat !}%
-%{! 
+%[[ ## Proof of totality of tonat %]]
+%[[ 
 As with the non-indexed case, proving totality is
 surprisingly tricky.  The problem is that when we get to
 a variable, we need to make sure that (1) the variable
@@ -8194,13 +8194,13 @@ no way to connect the context with the current nesting level.
 For this proof, I generalized/extended the "case" technique
 to handle indexed variables.  The proof is almost the same.
 The multisets add extra paremeters but the basic structure is the same.
-!}%
-%{! ### Auxiliary definitions !}%
-%{! #### raw variables !}%
-%{! 
+%]]
+%[[ ### Auxiliary definitions %]]
+%[[ #### raw variables %]]
+%[[ 
 A variable is raw if we haven't verified that it has a level in range.
 Non variables are not raw.
-!}%
+%]]
 %sort israw* {N} {_ term N} {_ bool} %.
 %inline israw israw* _ %.
 %inline rawvar [T] israw T true %.
@@ -8208,12 +8208,12 @@ Non variables are not raw.
 %term israw/app israw (app _ _) false %.
 %term israw/lam israw (lam _) false %.
 %term israw/rec israw (rec _) false %.
-%{! #### case analysis !}%
-%{! 
+%[[ #### case analysis %]]
+%[[ 
 We case analysis terms with two cases for variables.
 The raw case is used only internally and can be ignored in
 "clients" that don't use israw.
-!}%
+%]]
 %sort case* {N} {_ multiset} {_ term N} %.
 %inline case case* _ %.
 %term case/lit case _ (lit _) %.
@@ -8230,7 +8230,7 @@ The raw case is used only internally and can be ignored in
 	%-> (case* (s N) MS (rec F)) %.
 %term case/var %pi (count MS N VN) %-> (varlevel V FL) %-> (nat`ge VN FL) %-> (case* N MS V) %.
 %term case/raw %pi (rawvar V) %-> (case _ V) %.
-%{! ### Theorems about auxiliary definitions !}%
+%[[ ### Theorems about auxiliary definitions %]]
 %theorem israw-total* : forall* {N} forall {T term N} exists {B} {I israw T B} true %.
 %inline israw-total israw-total* _ _ %.
 %term _ israw-total israw/lit %.
@@ -8243,14 +8243,14 @@ The raw case is used only internally and can be ignored in
 %block blockraw {n} [v term n] [rv rawvar v] [irt israw-total rv]%.
 %worlds (blockraw) (israw-total* _ _ _) %.
 %total () (israw-total* _ _ _) %.
-%{! 
+%[[ 
 The following theorem handles one variable converting it from raw to
 handle a level that is in the required range.  This is an important
 technique for handle variables in Twelf: one at a time.  Unlike the
 one2one theorem (see later), we don't have to do extraordinary things
 to handle having multiple types.  (Although we do need some extra lemmas
 to ahndle facts about multisets.)
-!}%
+%]]
 %theorem var-gets-level : forall* {M} {N} {VN} {T %pi (term M) %-> (term N)} {L} {MS} forall {F {v term M} {rv rawvar v} {i israw-total rv} case MS (T v)} {MC count MS M VN} {GE nat`ge VN L} exists {F' {v term M} %pi (varlevel v L) %-> (case MS (T v))} true %.
 %term _ var-gets-level ([f] [r] [i] case/raw r) MC GE ([f] [fl] case/var MC fl GE) %.
 %term _ var-gets-level ([f] [r] [i] case/raw R) _ _ ([f] [fl] case/raw R) %.
@@ -8282,10 +8282,10 @@ to ahndle facts about multisets.)
 	%<- ({f'} {fl'} var-gets-level (C f' fl') MS'^N=FN'' FN''>=L (C' f' fl')) %.
 %worlds (blockvar blockraw) (var-gets-level _ _ _ _) %.
 %total F (var-gets-level F _ _ _) %.
-%{! 
+%[[ 
 We are now ready to prove that we can always "case" a term.
 This works almost the same as for non-indexed terms.
-!}%
+%]]
 %theorem case-total* : forall* {N} forall {T term N} exists {C case multiset/0 T} true %.
 %inline case-total case-total* _ %.
 %theorem case-total/L : forall* {B} {N} {MS} forall {T term N} {I israw T B} exists {C case MS T} true %.
@@ -8318,12 +8318,12 @@ This works almost the same as for non-indexed terms.
 %term _ %pi (case-total* T C) %<- (israw-total I) %<- (case-total/L T I C) %.
 %worlds () (case-total* _ _) %.
 %total () (case-total* _ _) %.
-%{! ### Main theorem !}%
-%{! 
+%[[ ### Main theorem %]]
+%[[ 
 We are ready now to prove totality of the relation.
 We case the term first and then have everything we need
 to push through totality.
-!}%
+%]]
 %theorem tonat-total* : forall* {N} forall {T term N} exists {M nat} {D tonat T M} true %.
 %inline tonat-total tonat-total* _ _ %.
 %theorem tonat-total/L : forall* {N nat} {T term N} {MS} forall {C case MS T} exists {M nat} {D tonat* N MS T M} true %.
@@ -8359,15 +8359,15 @@ to push through totality.
 %term _ %pi (tonat-total TN) %<- (case-total C) %<- (tonat-total/L C _ TN) %.
 %worlds () (tonat-total* _ _ _) %.
 %total () (tonat-total* _ _ _) %.
-%{! ## Proof of the determinicity of the mapping !}%
-%{! 
+%[[ ## Proof of the determinicity of the mapping %]]
+%[[ 
 As with the non-indexed case, this aspect is easy to prove.
-!}%
-%{! ### Auxiliary theorems !}%
-%{! 
+%]]
+%[[ ### Auxiliary theorems %]]
+%[[ 
 We prove that variable levels are "unique" and that they are never zero.
 The proofs are trivial: Twelf can accept them from the context alone.
-!}%
+%]]
 %theorem varlevel-deterministic : forall* {N} {V term N} {L1} {L2} forall {VL1 varlevel V L1} {VL2 varlevel V L2} exists {E nat`eq L1 L2} true %.
 %term _ varlevel-deterministic _ _ nat`eq/ %.
 %worlds (blockvar) (varlevel-deterministic _ _ _) %.
@@ -8375,7 +8375,7 @@ The proofs are trivial: Twelf can accept them from the context alone.
 %theorem varlevel-contradiction : forall* {N} {V term N} {L} forall {VL varlevel V L} {E nat`eq L z} exists {F void} true %.
 %worlds (blockvar) (varlevel-contradiction _ _ _) %.
 %total () (varlevel-contradiction _ _ _) %.
-%{! ### Main Theorem !}%
+%[[ ### Main Theorem %]]
 %theorem tonat-deterministic : forall* {N1} {N2} {T1 term N1} {T2 term N2} {M1} {M2} forall {TN1 tonat T1 M1} {TN2 tonat T2 M2} {E eq T1 T2} exists {E nat`eq M1 M2} true %.
 %theorem tonat-deterministic/L : forall* {N} {T term N} {MS1} {MS2} {M1} {M2} forall {TN1 tonat* N MS1 T M1} {TN2 tonat* N MS2 T M2} {E multiset`eq MS1 MS2} exists {E nat`eq M1 M2} true %.
 %term _ 
@@ -8428,16 +8428,16 @@ The proofs are trivial: Twelf can accept them from the context alone.
 	%<- (tonat-deterministic/L TN1 TN2 multiset`eq/ N1=N2) %.
 %worlds () (tonat-deterministic _ _ _ _) %.
 %total () (tonat-deterministic _ _ _ _) %.
-%{! ## Proving that the mapping is onto. !}%
-%{! 
+%[[ ## Proving that the mapping is onto. %]]
+%[[ 
 Again, this aspect has the same structure as with non-indexed terms.
-!}%
-%{! ### Auxiliary definitions !}%
-%{! 
+%]]
+%[[ ### Auxiliary definitions %]]
+%[[ 
 We define a relation that builds on the context relation.
 In the non-indexed case, it took a nat, here it takes the
 multiset representing the levels of variables in the context.
-!}%
+%]]
 %sort upto {_ multiset} %.
 %term upto/0 upto multiset/0 %.
 %term upto/+ 
@@ -8446,17 +8446,17 @@ multiset representing the levels of variables in the context.
 	%-> (varlevel (%the (term N) V) (s FN))
 	%-> (multiset`add MS N MS')
 	%-> (upto MS') %.
-%{! ### Lemmas about regular definitions !}%
+%[[ ### Lemmas about regular definitions %]]
 %theorem term-inhabited : forall {N} exists {T term N} true %.
 %term _ term-inhabited _ (lit z) %.
 %term _ %pi (term-inhabited _ (lam ([x] T))) %<- (term-inhabited _ T) %.
 %worlds (blockvar) (term-inhabited _ _) %.
 %total (N) (term-inhabited N _) %.
-%{! ### Theorems about auxiliary definitions !}%
-%{! 
+%[[ ### Theorems about auxiliary definitions %]]
+%[[ 
 The obvious lemma that makes use of the main purpose of the relation:
 that a variable is always available.
-!}%
+%]]
 %theorem upto-implies-varlevel : forall* {MS} {N} {L} {FN} forall {U upto MS} {MC multiset`count MS N FN} {LT nat`gt FN L} exists {V term N} {VL varlevel V (s L)} true %.
 %term _ 
 	%pi (upto-implies-varlevel upto/0 MC FN>L T FL)
@@ -8489,15 +8489,15 @@ that a variable is always available.
 	%<- (upto-implies-varlevel/L U MC1 FL1 MA MC2 GT EQ? _ FL) %.
 %worlds (blockvar) (upto-implies-varlevel/L _ _ _ _ _ _ _ _ _) (upto-implies-varlevel _ _ _ _ _) %.
 %total (U V) (upto-implies-varlevel U _ _ _ _) (upto-implies-varlevel/L V _ _ _ _ _ _ _ _) %.
-%{! ### Main theorem !}%
-%{! 
+%[[ ### Main theorem %]]
+%[[ 
 We prove the main result using two lemmas that do the case
 analysis on the number against the nesting level and the
 parity.  (In general, one would use a divisor counting all
 cases that are recursive.)  The proofs are long but simply
 arithmetic manipulation.  Proving termination uses meta-gt
 for strong induction over the natural numbers.
-!}%
+%]]
 %theorem tonat-onto* : forall* {N} forall {M nat} exists {T term N} {TN tonat T M} true %.
 %inline tonat-onto tonat-onto* _ _ %.
 %theorem tonat-onto/L : forall* {N} {MS multiset} forall {U upto MS} {M nat} exists {T term N} {TN tonat* _ MS T M} true %.
@@ -8625,8 +8625,8 @@ for strong induction over the natural numbers.
 	%<- ({v} {vl} tonat-onto/L (upto/+ U MCz vl MA) _ _ (TN v vl)) %.
 %worlds (blockvar) (tonat-onto/L2 _ _ _ _ _ _ _ _ _ _) (tonat-onto/L1 _ _ _ _ _ _ _ _ _) (tonat-onto/L0 _ _ _ _ _ _) (tonat-onto/L _ _ _ _) %.
 %total (M2 M1 M0 M) (tonat-onto/L2 _ M2 _ _ _ _ _ _ _ _) (tonat-onto/L1 _ M1 _ _ _ _ _ _ _) (tonat-onto/L0 _ M0 _ _ _ _) (tonat-onto/L _ M _ _) %.
-%{! ## Proof that mapping is "one to one" !}%
-%{! 
+%[[ ## Proof that mapping is "one to one" %]]
+%[[ 
 As with the simple HOAS syntax, this is the hardest of the four theorems 
 to prove.  As before, the basic structure is the same: we first show
 that the terms that result in the same number must be identical
@@ -8652,23 +8652,23 @@ for non-indexed terms while removing all variables of adjusted index
 zero (M = z).  Then when these are all removed, we can adjust the indices 
 one more step until there are no more variables of any index needing
 levels.
-!}%
-%{! ### Auxiliary definitions !}%
-%{! 
+%]]
+%[[ ### Auxiliary definitions %]]
+%[[ 
 In this section, we use the full generality of varadjlevel
 because we need to recurse in two different directions:
 the original var level and the term level.
-!}%
+%]]
 %block blockvaradj {m} {n} {l} [v term n] [vl varadjlevel v m (s l)]%.
-%{! #### Equality (permitting variables with the same level). !}%
-%{! 
+%[[ #### Equality (permitting variables with the same level). %]]
+%[[ 
 Some variables are are bound with levels, others are not given levels.
 We do this in order to gradually squeeze out those that need levels.
 The lam1 and rec1 cases use variables that don't need levels, whereas
 the lam2, rec2 cases handle variables that still need level.
 We also take a natural number A that indicates the minimum term level
 that will be used.  Notice that lam2 is only legal while A is still zero.
-!}%
+%]]
 %sort eql* {N} {A nat} {_ multiset} {_ term N} {_ term N} %.
 %inline eql eql* _ %.
 %term eql/eq %pi (eq T1 T2) %-> (eql A MS T1 T2) %.
@@ -8691,8 +8691,8 @@ that will be used.  Notice that lam2 is only legal while A is still zero.
 	%-> (varadjlevel V1 M L)
 	%-> (varadjlevel V2 M L)
 	%-> (eql* N A MS V1 V2) %.
-%{! #### Measure of eql sizes. !}%
-%{! 
+%[[ #### Measure of eql sizes. %]]
+%[[ 
 We use this measure to be able to prove termination.
 We need eqlsize/var = eqlsize/eq, eqlsize/lam1 = eqlsize/lam2.
 (Less than is ok in each case but would require that we
@@ -8718,7 +8718,7 @@ at indices eventually terminates: M is the maximum adjusted
 index used.  Once M drops to zero, it means no variables
 need levels for equality and we can convert to an 'eq' proof
 easily.
-!}%
+%]]
 %sort eqlsize {_ eql* A N MS T1 T2} {_ nat} {_ nat} {_ nat} %.
 %term eqlsize/eq eqlsize (eql/eq _) z (s z) z %.
 %term eqlsize/app 
@@ -8740,12 +8740,12 @@ easily.
 	%-> (nat`max (s M) M1 M2)
 	%-> (eqlsize (eql/rec2 _ _ _ E) (s N) B2 M2) %.
 %term eqlsize/var eqlsize (eql/var _ _ _) z (s z) z %.
-%{! #### Copied definitions !}%
-%{! 
+%[[ #### Copied definitions %]]
+%[[ 
 As with the non-indexed case, we need to use an alternate form
 for levels as we shift them down or adjust them down.
 (Remember there are two dimensions to a level!)
-!}%
+%]]
 %sort varadjlevel' {_ term N} {_ nat} {_ nat} %.
 %sort eql*' {N} {A nat} {_ multiset} {_ term N} {_ term N} %.
 %inline eql' eql*' _ %.
@@ -8793,11 +8793,11 @@ for levels as we shift them down or adjust them down.
 	%-> (nat`max (s M) M1 M2)
 	%-> (eqlsize' (eql'/rec2 _ _ _ E) (s N) B2 M2) %.
 %term eqlsize'/var eqlsize' (eql'/var _ _ _) z (s z) z %.
-%{! ### Theorems about auxiliary definitions !}%
-%{! 
+%[[ ### Theorems about auxiliary definitions %]]
+%[[ 
 Some of the lemmas that would normally belong here are
 proved later when we have more blocks available.
-!}%
+%]]
 %theorem false-implies-eql : forall* {MS} {N} {A} {T1} {T2} forall {F void} exists {E eql* N A MS T1 T2} true %.
 %worlds (blocksimple blockvaradj) (false-implies-eql _ _) %.
 %total () (false-implies-eql _ _) %.
@@ -8828,8 +8828,8 @@ proved later when we have more blocks available.
 %term _ eqlsize-total eqlsize/var %.
 %worlds (blocksimple blockvaradj) (eqlsize-total* _ _ _ _ _) %.
 %total (E) (eqlsize-total* E _ _ _ _) %.
-%{! ### Shifting varlevels down !}%
-%{! 
+%[[ ### Shifting varlevels down %]]
+%[[ 
 Now as with the non-indexed case, we shift variable levels down.
 As before, we need to use the alternate definitions.
 
@@ -8839,7 +8839,7 @@ over.  Instead we handle a double context "noshift" that handles
 both directions.  That's because when these lemmas are used
 to shift levels down, the outer context may have non-zero (adjusted)
 index that will need to handle being shifted in both directions.
-!}%
+%]]
 %theorem varlevel-zero-shifts-down : forall* {N} {V term N} {L} forall {VL varadjlevel V z (s (s L))} exists {VL' varadjlevel' V z (s L)} true %.
 %theorem varlevel-nonzero-shifts-over : forall* {N} {V term N} {M} {L} forall {VL varadjlevel V (s M) (s L)} exists {VL' varadjlevel' V (s M) (s L)} true %.
 %theorem varlevel-shifts-back : forall* {N} {V term N} {M} {L} forall {VL' varadjlevel' V M (s L)} exists {VL varadjlevel V M (s L)} true %.
@@ -8926,9 +8926,9 @@ index that will need to handle being shifted in both directions.
 	%<- (varlevel-shifts-back VL2 VL2') %.
 %worlds (blocksimple shiftback noshift) (shift-varlevel/L2 _ _ _ _) %.
 %total (E) (shift-varlevel/L2 E _ _ _) %.
-%{! 
+%[[ 
 Now we put these two parts into one that hides the alternative definitions.
-!}%
+%]]
 %theorem shift-varlevel : forall* {N} {A} {M0} {M1} {T1} {T2} {S} {MN} {MM} forall {E eql* N A M1 T1 T2} {ES eqlsize E S MN MM} {MA multiset`add M0 z M1} exists {E' eql* N A M0 T1 T2} {ES' eqlsize E' S MN MM} true %.
 %term _ 
 	%pi (shift-varlevel E1 ES1 MA E3 ES3)
@@ -8936,12 +8936,12 @@ Now we put these two parts into one that hides the alternative definitions.
 	%<- (shift-varlevel/L2 E2 ES2 E3 ES3) %.
 %worlds (blocksimple noshift) (shift-varlevel _ _ _ _ _) %.
 %total () (shift-varlevel _ _ _ _ _) %.
-%{! 
+%[[ 
 Now the whole reason for the two stage var-levels:
 we have a lemma that says we can adjust the M of
 all variables down if the minimum varlevel used is greater than zero.
 First we need some helper lemmas and the ubiquitous blocks.
-!}%
+%]]
 %theorem varlevel-adjusts-down : forall* {N} {V term N} {M} {L} forall {VL varadjlevel V (s M) (s L)} exists {VL' varadjlevel' V M (s L)} true %.
 %block adjustdown {n} {m} {l} [v term n] [vl varadjlevel v (s m) (s l)] [vl' varadjlevel' v m (s l)] [vsd varlevel-adjusts-down vl vl']%.
 %sort fake %.
@@ -9100,14 +9100,14 @@ First we need some helper lemmas and the ubiquitous blocks.
 	%<- (shift-varlevel/L2 E' ES' E'' ES'') %.
 %worlds (blocksimple) (adjust-varlevel _ _ _ _ _ _) %.
 %total () (adjust-varlevel _ _ _ _ _ _) %.
-%{! ### Removing variable levels altogether !}%
-%{! 
+%[[ ### Removing variable levels altogether %]]
+%[[ 
 The following blocks are used when we remove the level for
 the outermost (level 1) variable of adjusted index zero.
 All other variables are at least level 2 or non-zero adjusted index.  
 "blockvar2" and "blockvaradj" makes this context explicit.
 (I probably could substitute noshift for blockvaradj
-!}%
+%]]
 %block blockvar2 {l} {n} [v term n] [vl varadjlevel v z (s (s l))]%.
 %block blockvaradj {m} {l} {n} [v term n] [vl varadjlevel v (s m) (s l)]%.
 %theorem remove-one-var : forall* {N} {N'} {F1} {F2} {S} {A} {M} {NZ} {MN} {MM} forall {E {v term N} {vl varadjlevel v z (s z)} eql* N' A M (F1 v) (F2 v)} {ES {v} {vl} eqlsize (E v vl) S MN MM} {MC multiset`count M z (s NZ)} exists {E' {v term N} eql A M (F1 v) (F2 v)} {ES' {v} eqlsize (E' v) S MN MM} true %.
@@ -9144,10 +9144,10 @@ All other variables are at least level 2 or non-zero adjusted index.
 %term _ remove-one-var ([v] [vl] eql/var P VL1 VL2) ([v] [vl] eqlsize/var) _ ([v] eql/var P VL1 VL2) ([v] eqlsize/var) %.
 %worlds (blocksimple blockvar2 blockvaradj noshift) (remove-one-var _ _ _ _ _) (remove-one-var/lam2 _ _ _ _ _ _ _) %.
 %total (E El) (remove-one-var E _ _ _ _) (remove-one-var/lam2 El _ _ _ _ _ _) %.
-%{! 
+%[[ 
 We now have the machinery needed to get rid of all level 0 variables
 in one recursive sweep.
-!}%
+%]]
 %theorem remove-zero-index-vars : forall* {N} {A} {MS} {T1} {T2} {MN} {MM} forall {E eql* N A MS T1 T2} {S} {ES eqlsize E S MN MM} {MC multiset`count MS z z} exists {E' eql* N A MS T1 T2} {MN'} {MM'} {ES' eqlsize E' S (s MN') MM'} {G nat`ge MM MM'} true %.
 %term _ remove-zero-index-vars (eql/eq E) _ eqlsize/eq _ (eql/eq E) _ _ eqlsize/eq (nat`ge/= nat`eq/) %.
 %term _ 
@@ -9231,12 +9231,12 @@ in one recursive sweep.
 %term _ rec-preserves-eq ([v] eq/) eq/ %.
 %worlds (blocksimple) (rec-preserves-eq _ _) %.
 %total () (rec-preserves-eq _ _) %.
-%{! 
+%[[ 
 Next the main lemma that says we can avoid looking at varlevels in checking
 equality.  We remove the outside variable, shift remaining variables,
 and then recurse (hence the need for tracking eqlsize).  Note that we
 never put var levels in the context.
-!}%
+%]]
 %theorem eql-implies-eq : forall* {N} {T1 term N} {T2 term N} forall {E eql z multiset`map/0 T1 T2} exists {E' eq T1 T2} true %.
 %theorem eql-implies-eq/L0 : forall* {N} {A} {MS} {T1} {T2} {S} {MN} forall {E eql* N A MS T1 T2} {ES eqlsize E S MN z} exists {E eq T1 T2} true %.
 %term _ eql-implies-eq/L0 (eql/eq E) _ E %.
@@ -9292,8 +9292,8 @@ never put var levels in the context.
 %term _ %pi (eql-implies-eq E E') %<- (eqlsize-total ES) %<- (eql-implies-eq/L1 E _ ES E') %.
 %worlds () (eql-implies-eq _ _) %.
 %total () (eql-implies-eq _ _) %.
-%{! ### Main Theorem !}%
-%{! 
+%[[ ### Main Theorem %]]
+%[[ 
 Finally the statement of the main theorem of this section.
 As with the non-indexed case, it is proved by using eql as a between station.
 Again, as with the non-indexed code, this theorem (or rather 
@@ -9302,7 +9302,7 @@ cases cannot be distinguished by Twelf's case analysis.
 It also uses the "divrem" part of the nat signature extensively
 as well as theorems about plus and times.  The proofs of the cases are
 uninteresting arithmetic fiddling.
-!}%
+%]]
 %theorem tonat-one2one : forall* {N} {T1 term N} {N1} {T2 term N} {N2} forall {TN1 tonat T1 N1} {TN2 tonat T2 N2} {E nat`eq N1 N2} exists {ET eq T1 T2} true %.
 %theorem tonat-one2one/L : forall* {N} {MS} {T1} {M1} {T2} {M2} forall {TN1 tonat* N MS T1 M1} {TN2 tonat* N MS T2 M2} {E nat`eq M1 M2} exists {ET eql* N z MS T1 T2} true %.
 %term _ 
@@ -9568,9 +9568,9 @@ uninteresting arithmetic fiddling.
 	%<- (eql-implies-eq EQL TEQ) %.
 %worlds () (tonat-one2one _ _ _ _) %.
 %total () (tonat-one2one _ _ _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Indexed_HOAS_nat_bijection).
-!}%
+%]]

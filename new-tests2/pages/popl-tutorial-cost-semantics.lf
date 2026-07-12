@@ -1,5 +1,5 @@
 %                                        
-%{! ## Syntax !}%
+%[[ ## Syntax %]]
 %sort tp %.
 %name tp %.
 %term tunit tp %.
@@ -9,7 +9,7 @@
 %term unit exp %.
 %term fun %pi tp %-> tp %-> (%pi exp %-> exp %-> exp) %-> exp %.
 %term app %pi exp %-> exp %-> exp %.
-%{! ## Series-parallel graphs !}%
+%[[ ## Series-parallel graphs %]]
 %sort graph %.
 %term 0 graph %.
 %term 1 graph %.
@@ -17,11 +17,11 @@
 %prec %right 5 + %.
 %term * %pi graph %-> graph %-> graph %.
 %prec %right 5 * %.
-%{!  !}%
+%[[  %]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
-%{! ### Size of graphs !}%
+%[[ ### Size of graphs %]]
 %sort plus {_ nat} {_ nat} {_ nat} %.
 %term plus/z plus z N N %.
 %term plus/s %pi (plus (s N1) N2 (s N3)) %<- (plus N1 N2 N3) %.
@@ -30,7 +30,7 @@
 %term sizeof/1 sizeof 1 (s z) %.
 %term sizeof/+ %pi (sizeof (G1 + G2) C3) %<- (sizeof G1 C1) %<- (sizeof G2 C2) %<- (plus C2 C1 C3) %.
 %term sizeof/* %pi (sizeof (G1 * G2) C3) %<- (sizeof G1 C1) %<- (sizeof G2 C2) %<- (plus C2 C1 C3) %.
-%{! ### Depth of graphs !}%
+%[[ ### Depth of graphs %]]
 %sort max {_ nat} {_ nat} {_ nat} %.
 %term max/zz max z z z %.
 %term max/sz %pi (max (s N) z (s M)) %<- (max N z M) %.
@@ -45,7 +45,7 @@
 	%<- (depthof G2 C2)
 	%<- (plus C1 C2 C) %.
 %term depthof/* %pi (depthof (G1 * G2) C) %<- (depthof G1 C1) %<- (depthof G2 C2) %<- (max C1 C2 C) %.
-%{! ## Cost Semantics !}%
+%[[ ## Cost Semantics %]]
 %sort evcost {_ exp} {_ exp} {_ graph} %.
 %term evcost/unit evcost unit unit 0 %.
 %term evcost/fun evcost (fun T1 T2 E) (fun T1 T2 E) 0 %.
@@ -54,7 +54,7 @@
 	%<- (evcost E1 (fun T1 T2 ([f] [x] E f x)) G1)
 	%<- (evcost E2 V2 G2)
 	%<- (evcost (E (fun T1 T2 ([f] [x] E f x)) V2) V G) %.
-%{! ## Sequential Evaluation !}%
+%[[ ## Sequential Evaluation %]]
 %sort value {_ exp} %.
 %name value %.
 %mode value %in %.
@@ -68,12 +68,12 @@
 %term step/app/beta-v 
 	%pi (step (app (fun T1 T2 ([f] [x] E f x)) E2) (E (fun T1 T2 ([f] [x] E f x)) E2))
 	%<- (value E2) %.
-%{!  !}%
+%[[  %]]
 %sort steps {_ exp} {_ exp} {_ nat} %.
 %mode steps %in %out %out %.
 %term steps/refl steps E E z %.
 %term steps/trans %pi (steps E E'' (s C)) %<- (step E E') %<- (steps E' E'' C) %.
-%{! ## Parallel Evaluation !}%
+%[[ ## Parallel Evaluation %]]
 %sort pstep {_ exp} {_ exp} %.
 %term pstep/app/ %pi (pstep (app E1 E2) (app E1' E2')) %<- (pstep E1 E1') %<- (pstep E2 E2') %.
 %term pstep/app/fun %pi (pstep (app E1 E2) (app E1' E2)) %<- (pstep E1 E1') %<- (value E2) %.
@@ -81,11 +81,11 @@
 %term pstep/app/beta-v 
 	%pi (pstep (app (fun T1 T2 ([f] [x] E f x)) E2) (E (fun T1 T2 ([f] [x] E f x)) E2))
 	%<- (value E2) %.
-%{!  !}%
+%[[  %]]
 %sort psteps {_ exp} {_ exp} {_ nat} %.
 %term psteps/refl psteps E E z %.
 %term psteps/trans %pi (psteps E E'' (s C)) %<- (pstep E E') %<- (psteps E' E'' C) %.
-%{! ### Cost of parallel evaluation !}%
+%[[ ### Cost of parallel evaluation %]]
 %sort par_app {_ max C1 C2 Cmax} {_ psteps E1 V1 C1} {_ value V1} {_ psteps E2 V2 C2} {_ value V2} {_ psteps (app E1 E2) (app V1 V2) Cmax} %.
 %mode par_app %in %in %in %in %in %out %.
 %term _ par_app max/zz psteps/refl Val1 psteps/refl Val2 psteps/refl %.
@@ -121,7 +121,7 @@
 	%<- (compose Dplus Dstep' (psteps/trans Dstep (pstep/app/beta-v Val2)) (%the (psteps (app E1 E2) V Depth) Dstep'')) %.
 %worlds () (schedule_parallel _ _ _ _) %.
 %total T (schedule_parallel T _ _ _) %.
-%{! ### Random Plus Lemmas !}%
+%[[ ### Random Plus Lemmas %]]
 %sort plus_lemma {_ plus (s N1) N2 N3} {_ plus N1 (s N2) N3} %.
 %mode plus_lemma %out %in %.
 %term _ %pi (plus_lemma (plus/s Dplus) (plus/s Dplus')) %<- (plus_lemma Dplus Dplus') %.
@@ -149,7 +149,7 @@
 %term _ %pi (plus_commute plus/z Dplus) %<- (plus_zero _ Dplus) %.
 %worlds () (plus_commute _ _) %.
 %total [D] (plus_commute D _) %.
-%{! ### Cost of sequential evaluation !}%
+%[[ ### Cost of sequential evaluation %]]
 %sort steps_lemma {_ steps E E' C} {_ step E' E''} {_ steps E E'' (s C)} %.
 %mode steps_lemma %in %in %out %.
 %term _ steps_lemma steps/refl E'step (steps/trans steps/refl E'step) %.
@@ -200,9 +200,9 @@
 	%<- (plus_commute (plus/s plus/z) Dplus'') %.
 %worlds () (schedule_serial _ _ _ _) %.
 %total [D] (schedule_serial D _ _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Cost_semantics).
-!}%
+%]]

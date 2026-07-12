@@ -1,0 +1,175 @@
+0:0-0:9	comment	`%%%%%%%%%`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:10	constructor	`node`
+2:6-2:10	local.reference	`node`
+2:6-2:10	type	`node`
+2:10-2:13	keyword.return	` %.`
+3:6-3:7	constructor	`a`
+3:6-3:7	function	`a`
+3:6-3:7	local.reference	`a`
+3:6-3:7	variable.parameter	`a`
+3:7-3:12	constructor	` node`
+3:7-3:12	local.reference	` node`
+3:12-3:15	keyword.return	` %.`
+4:6-4:7	constructor	`b`
+4:6-4:7	function	`b`
+4:6-4:7	local.reference	`b`
+4:6-4:7	variable.parameter	`b`
+4:7-4:12	constructor	` node`
+4:7-4:12	local.reference	` node`
+4:12-4:15	keyword.return	` %.`
+5:6-5:7	constructor	`c`
+5:6-5:7	function	`c`
+5:6-5:7	local.reference	`c`
+5:6-5:7	variable.parameter	`c`
+5:7-5:12	constructor	` node`
+5:7-5:12	local.reference	` node`
+5:12-5:15	keyword.return	` %.`
+6:6-6:7	constructor	`d`
+6:6-6:7	function	`d`
+6:6-6:7	local.reference	`d`
+6:6-6:7	variable.parameter	`d`
+6:7-6:12	constructor	` node`
+6:7-6:12	local.reference	` node`
+6:12-6:15	keyword.return	` %.`
+6:15-7:5	keyword.type	``
+7:6-7:8	constructor	`pt`
+7:6-7:8	local.reference	`pt`
+7:6-7:8	type	`pt`
+7:27-7:29	keyword.return	`%.`
+7:29-8:5	keyword.type	``
+8:6-8:8	constructor	`et`
+8:6-8:8	local.reference	`et`
+8:6-8:8	type	`et`
+8:27-8:29	keyword.return	`%.`
+8:29-9:5	keyword.type	``
+9:6-9:8	constructor	`qt`
+9:6-9:8	local.reference	`qt`
+9:6-9:8	type	`qt`
+9:18-9:20	keyword.return	`%.`
+10:11-10:13	keyword.return	`%.`
+11:6-11:8	constructor	`p2`
+11:6-11:8	function	`p2`
+11:6-11:8	local.reference	`p2`
+11:6-11:8	variable.parameter	`p2`
+11:8-11:12	operator	` %pi`
+11:13-11:14	punctuation.bracket	`(`
+11:14-11:16	constructor	`pt`
+11:14-11:16	local.reference	`pt`
+11:17-11:18	constructor	`X`
+11:17-11:18	local.reference	`X`
+11:19-11:20	constructor	`Z`
+11:19-11:20	local.reference	`Z`
+11:20-11:21	punctuation.bracket	`)`
+11:22-11:25	operator	`%<-`
+11:26-11:27	punctuation.bracket	`(`
+11:27-11:29	constructor	`et`
+11:27-11:29	local.reference	`et`
+11:30-11:31	constructor	`X`
+11:30-11:31	local.reference	`X`
+11:32-11:33	constructor	`Z`
+11:32-11:33	local.reference	`Z`
+11:33-11:34	punctuation.bracket	`)`
+11:34-11:38	operator	` %<-`
+11:39-11:40	punctuation.bracket	`(`
+11:40-11:42	constructor	`qt`
+11:40-11:42	local.reference	`qt`
+11:43-11:44	constructor	`Z`
+11:43-11:44	local.reference	`Z`
+11:44-11:45	punctuation.bracket	`)`
+11:45-11:48	keyword.return	` %.`
+12:6-12:8	constructor	`p1`
+12:6-12:8	function	`p1`
+12:6-12:8	local.reference	`p1`
+12:6-12:8	variable.parameter	`p1`
+12:8-12:12	operator	` %pi`
+12:13-12:14	punctuation.bracket	`(`
+12:14-12:16	constructor	`pt`
+12:14-12:16	local.reference	`pt`
+12:17-12:18	constructor	`X`
+12:17-12:18	local.reference	`X`
+12:19-12:20	constructor	`Z`
+12:19-12:20	local.reference	`Z`
+12:20-12:21	punctuation.bracket	`)`
+12:22-12:25	operator	`%<-`
+12:26-12:27	punctuation.bracket	`(`
+12:27-12:29	constructor	`pt`
+12:27-12:29	local.reference	`pt`
+12:30-12:31	constructor	`X`
+12:30-12:31	local.reference	`X`
+12:32-12:33	constructor	`Y`
+12:32-12:33	local.reference	`Y`
+12:33-12:34	punctuation.bracket	`)`
+12:34-12:38	operator	` %<-`
+12:39-12:40	punctuation.bracket	`(`
+12:40-12:42	constructor	`pt`
+12:40-12:42	local.reference	`pt`
+12:43-12:44	constructor	`Y`
+12:43-12:44	local.reference	`Y`
+12:45-12:46	constructor	`Z`
+12:45-12:46	local.reference	`Z`
+12:46-12:47	punctuation.bracket	`)`
+12:47-12:50	keyword.return	` %.`
+13:6-13:8	constructor	`e1`
+13:6-13:8	function	`e1`
+13:6-13:8	local.reference	`e1`
+13:6-13:8	variable.parameter	`e1`
+13:8-13:11	constructor	` et`
+13:8-13:11	local.reference	` et`
+13:11-13:13	constructor	` a`
+13:11-13:13	local.reference	` a`
+13:13-13:15	constructor	` b`
+13:13-13:15	local.reference	` b`
+13:15-13:18	keyword.return	` %.`
+14:6-14:8	constructor	`e2`
+14:6-14:8	function	`e2`
+14:6-14:8	local.reference	`e2`
+14:6-14:8	variable.parameter	`e2`
+14:8-14:11	constructor	` et`
+14:8-14:11	local.reference	` et`
+14:11-14:13	constructor	` a`
+14:11-14:13	local.reference	` a`
+14:13-14:15	constructor	` d`
+14:13-14:15	local.reference	` d`
+14:15-14:18	keyword.return	` %.`
+15:6-15:8	constructor	`e3`
+15:6-15:8	function	`e3`
+15:6-15:8	local.reference	`e3`
+15:6-15:8	variable.parameter	`e3`
+15:8-15:11	constructor	` et`
+15:8-15:11	local.reference	` et`
+15:11-15:13	constructor	` b`
+15:11-15:13	local.reference	` b`
+15:13-15:15	constructor	` c`
+15:13-15:15	local.reference	` c`
+15:15-15:18	keyword.return	` %.`
+16:6-16:8	constructor	`q1`
+16:6-16:8	function	`q1`
+16:6-16:8	local.reference	`q1`
+16:6-16:8	variable.parameter	`q1`
+16:8-16:11	constructor	` qt`
+16:8-16:11	local.reference	` qt`
+16:11-16:13	constructor	` a`
+16:11-16:13	local.reference	` a`
+16:13-16:16	keyword.return	` %.`
+17:6-17:8	constructor	`q2`
+17:6-17:8	function	`q2`
+17:6-17:8	local.reference	`q2`
+17:6-17:8	variable.parameter	`q2`
+17:8-17:11	constructor	` qt`
+17:8-17:11	local.reference	` qt`
+17:11-17:13	constructor	` b`
+17:11-17:13	local.reference	` b`
+17:13-17:16	keyword.return	` %.`
+18:6-18:8	constructor	`q3`
+18:6-18:8	function	`q3`
+18:6-18:8	local.reference	`q3`
+18:6-18:8	variable.parameter	`q3`
+18:8-18:11	constructor	` qt`
+18:8-18:11	local.reference	` qt`
+18:11-18:13	constructor	` c`
+18:11-18:13	local.reference	` c`
+18:13-18:16	keyword.return	` %.`
+19:13-19:14	variable.parameter.builtin	`_`
+19:15-19:16	number	`6`
+19:24-19:26	keyword.return	`%.`

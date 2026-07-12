@@ -1,5 +1,5 @@
 %                                                                     
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Typed arithmetic expressions
@@ -11,7 +11,7 @@ Arithmetic expressions with pairs and sums, where the answer type is values.
 
 For an alternate version of sums that doesn't involve output factoring, see [Chris's solution](/wiki/summer-school-2008-alternate-typed-arithmetic-expressions-with-sums/).  For a version that uses output factoring but avoids identity types, see [William's solution](/wiki/summer-school-2008-typed-arithmetic-expressions-with-sums-2/).
 
-!}%
+%]]
 %sort nat %.
 %name nat %.
 %term z nat %.
@@ -36,11 +36,11 @@ For an alternate version of sums that doesn't involve output factoring, see [Chr
 %term cat/c %pi (cat (cons X S1) S2 (cons X S3)) %<- (cat S1 S2 S3) %.
 %worlds () (cat _ _ _) %.
 %total S (cat S _ _) %.
-%{! 
+%[[ 
 
 ## Typed expressions
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term number tp %.
@@ -71,13 +71,13 @@ For an alternate version of sums that doesn't involve output factoring, see [Chr
 	%-> (%pi (T val) %-> (V exp))
 	%-> (%pi (U val) %-> (V exp))
 	%-> (V exp) %.
-%{! 
+%[[ 
 
 ## Evaluation
 
 For simplicity, take answers to be values. 
 
-!}%
+%]]
 %sort eval {_ T exp} {_ T val} %.
 %mode eval %in %out %.
 %% eval
@@ -98,7 +98,7 @@ For simplicity, take answers to be values.
 %term eval/case/inl %pi (eval (case E E1 E2) A') %<- (eval E (inl A1)) %<- (eval (E1 A1) A') %.
 %term eval/case/inr %pi (eval (case E E1 E2) A') %<- (eval E (inr A2)) %<- (eval (E2 A2) A') %.
 %worlds () (eval _ _) %.
-%{! 
+%[[ 
 
 We can write the obvious rules for evaluation, but Twelf can't prove
 this definition total.  The reason is that the [output coverage](/wiki/coverage-checking/)
@@ -116,7 +116,7 @@ because it doesn't notice that the next constant,
 
 ## Output factored evaluation
 
-!}%
+%]]
 %sort id {_ A exp} {_ A exp} %.
 %term refl id E E %.
 %sort eval'-case {E' V exp} {E sum T U exp} {E1} {E2} {_ id E' (case E E1 E2)} {_ sum T U val} {_ V val} %.
@@ -147,7 +147,7 @@ because it doesn't notice that the next constant,
 	%<- (eval'-case (case E E1 E2) E E1 E2 refl A A') %.
 %worlds () (eval' _ _) (eval'-case _ _ _ _ _ _ _) %.
 %total (E E') (eval'-case E' _ _ _ _ _ _) (eval' E _) %.
-%{! 
+%[[ 
 
 The constant ``eval'/case`` uses [output factoring](/wiki/output-factoring/): the
 subsidiary case-analysis of the result of ``eval' E A`` is broken
@@ -198,10 +198,10 @@ This explains the somewhat-convoluted code above.
   |nonext=
 \}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Typed_arithmetic_expressions_with_sums).
-!}%
+%]]

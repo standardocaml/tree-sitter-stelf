@@ -1,0 +1,97 @@
+0:0-0:24	comment	`%%% Definition of Values`
+1:0-1:62	comment	`%%% Author: Frank Pfenning, based on [Michaylov & Pfenning 92]`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:11	constructor	`value`
+2:6-2:11	local.reference	`value`
+2:6-2:11	type	`value`
+2:20-2:22	keyword.return	`%.`
+2:22-3:11	attribute	``
+3:6-3:11	constructor	`value`
+3:6-3:11	local.reference	`value`
+3:6-3:11	variable	`value`
+3:11-3:14	keyword.return	` %.`
+4:6-4:11	constructor	`value`
+4:6-4:11	local.reference	`value`
+4:11-4:15	keyword.modifier	` %in`
+4:15-4:18	keyword.return	` %.`
+5:6-5:11	constructor	`val_z`
+5:6-5:11	function	`val_z`
+5:6-5:11	local.reference	`val_z`
+5:6-5:11	variable.parameter	`val_z`
+5:11-5:17	constructor	` value`
+5:11-5:17	local.reference	` value`
+5:17-5:19	constructor	` z`
+5:17-5:19	local.reference	` z`
+5:19-5:22	keyword.return	` %.`
+6:6-6:13	constructor	`val_lam`
+6:6-6:13	function	`val_lam`
+6:6-6:13	local.reference	`val_lam`
+6:6-6:13	variable.parameter	`val_lam`
+6:13-6:19	constructor	` value`
+6:13-6:19	local.reference	` value`
+6:28-6:30	keyword.return	`%.`
+7:6-7:11	constructor	`val_s`
+7:6-7:11	function	`val_s`
+7:6-7:11	local.reference	`val_s`
+7:6-7:11	variable.parameter	`val_s`
+7:11-7:15	operator	` %pi`
+7:16-7:17	punctuation.bracket	`(`
+7:17-7:22	constructor	`value`
+7:17-7:22	local.reference	`value`
+7:23-7:24	punctuation.bracket	`(`
+7:24-7:25	constructor	`s`
+7:24-7:25	local.reference	`s`
+7:26-7:27	constructor	`V`
+7:26-7:27	local.reference	`V`
+7:27-7:28	punctuation.bracket	`)`
+7:28-7:29	punctuation.bracket	`)`
+7:30-7:33	operator	`%<-`
+7:34-7:35	punctuation.bracket	`(`
+7:35-7:40	constructor	`value`
+7:35-7:40	local.reference	`value`
+7:41-7:42	constructor	`V`
+7:41-7:42	local.reference	`V`
+7:42-7:43	punctuation.bracket	`)`
+7:43-7:46	keyword.return	` %.`
+8:6-8:14	constructor	`val_pair`
+8:6-8:14	function	`val_pair`
+8:6-8:14	local.reference	`val_pair`
+8:6-8:14	variable.parameter	`val_pair`
+8:14-8:18	operator	` %pi`
+8:19-8:20	punctuation.bracket	`(`
+8:20-8:25	constructor	`value`
+8:20-8:25	local.reference	`value`
+8:26-8:27	punctuation.bracket	`(`
+8:27-8:31	constructor	`pair`
+8:27-8:31	local.reference	`pair`
+8:32-8:34	constructor	`V1`
+8:32-8:34	local.reference	`V1`
+8:35-8:37	constructor	`V2`
+8:35-8:37	local.reference	`V2`
+8:37-8:38	punctuation.bracket	`)`
+8:38-8:39	punctuation.bracket	`)`
+8:40-8:43	operator	`%<-`
+8:44-8:45	punctuation.bracket	`(`
+8:45-8:50	constructor	`value`
+8:45-8:50	local.reference	`value`
+8:51-8:53	constructor	`V1`
+8:51-8:53	local.reference	`V1`
+8:53-8:54	punctuation.bracket	`)`
+8:54-8:58	operator	` %<-`
+8:59-8:60	punctuation.bracket	`(`
+8:60-8:65	constructor	`value`
+8:60-8:65	local.reference	`value`
+8:66-8:68	constructor	`V2`
+8:66-8:68	local.reference	`V2`
+8:68-8:69	punctuation.bracket	`)`
+8:69-8:72	keyword.return	` %.`
+8:72-9:25	comment	``
+10:8-10:9	punctuation.bracket	`(`
+10:9-10:10	punctuation.bracket	`)`
+10:11-10:12	punctuation.bracket	`(`
+10:12-10:17	constructor	`value`
+10:12-10:17	local.reference	`value`
+10:18-10:19	constructor	`D`
+10:18-10:19	local.reference	`D`
+10:19-10:20	punctuation.bracket	`)`
+10:20-10:23	keyword.return	` %.`

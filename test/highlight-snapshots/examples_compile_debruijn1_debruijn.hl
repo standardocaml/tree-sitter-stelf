@@ -1,0 +1,123 @@
+0:0-0:53	comment	`%%% Expression representation using de Bruijn indices`
+1:0-1:46	comment	`%%% Version restricted to pure lambda-calculus`
+2:0-2:59	comment	`%%% Author: Frank Pfenning, based on [Hannan & Pfenning 92]`
+3:0-3:13	comment	`% Expressions`
+4:0-4:5	keyword.type	`%sort`
+4:6-4:10	constructor	`exp'`
+4:6-4:10	local.reference	`exp'`
+4:6-4:10	type	`exp'`
+4:10-4:13	keyword.return	` %.`
+4:13-5:10	attribute	``
+5:6-5:10	constructor	`exp'`
+5:6-5:10	local.reference	`exp'`
+5:6-5:10	variable	`exp'`
+5:10-5:13	keyword.return	` %.`
+6:6-6:7	constructor	`1`
+6:6-6:7	function	`1`
+6:6-6:7	local.reference	`1`
+6:6-6:7	variable.parameter	`1`
+6:7-6:12	constructor	` exp'`
+6:7-6:12	local.reference	` exp'`
+6:12-6:15	keyword.return	` %.`
+7:6-7:7	function	`^`
+7:6-7:7	local.reference	`^`
+7:6-7:7	operator	`^`
+7:6-7:7	variable.parameter	`^`
+7:7-7:11	operator	` %pi`
+7:12-7:16	constructor	`exp'`
+7:12-7:16	local.reference	`exp'`
+7:17-7:20	operator	`%->`
+7:21-7:25	constructor	`exp'`
+7:21-7:25	local.reference	`exp'`
+7:25-7:28	keyword.return	` %.`
+8:6-8:14	keyword.modifier	`%postfix`
+8:15-8:17	number	`20`
+8:18-8:19	local.reference	`^`
+8:18-8:19	operator	`^`
+8:19-8:22	keyword.return	` %.`
+9:6-9:10	constructor	`lam'`
+9:6-9:10	function	`lam'`
+9:6-9:10	local.reference	`lam'`
+9:6-9:10	variable.parameter	`lam'`
+9:10-9:14	operator	` %pi`
+9:15-9:19	constructor	`exp'`
+9:15-9:19	local.reference	`exp'`
+9:20-9:23	operator	`%->`
+9:24-9:28	constructor	`exp'`
+9:24-9:28	local.reference	`exp'`
+9:28-9:31	keyword.return	` %.`
+10:6-10:10	constructor	`app'`
+10:6-10:10	function	`app'`
+10:6-10:10	local.reference	`app'`
+10:6-10:10	variable.parameter	`app'`
+10:10-10:14	operator	` %pi`
+10:15-10:19	constructor	`exp'`
+10:15-10:19	local.reference	`exp'`
+10:20-10:23	operator	`%->`
+10:24-10:28	constructor	`exp'`
+10:24-10:28	local.reference	`exp'`
+10:28-10:32	operator	` %->`
+10:33-10:37	constructor	`exp'`
+10:33-10:37	local.reference	`exp'`
+10:37-10:40	keyword.return	` %.`
+10:40-11:25	comment	``
+11:25-12:5	keyword.type	``
+12:6-12:9	constructor	`env`
+12:6-12:9	local.reference	`env`
+12:6-12:9	type	`env`
+12:9-12:12	keyword.return	` %.`
+12:12-13:9	attribute	``
+13:6-13:9	constructor	`env`
+13:6-13:9	local.reference	`env`
+13:6-13:9	variable	`env`
+13:9-13:12	keyword.return	` %.`
+13:12-14:5	keyword.type	``
+14:6-14:9	constructor	`val`
+14:6-14:9	local.reference	`val`
+14:6-14:9	type	`val`
+14:9-14:12	keyword.return	` %.`
+14:12-15:9	attribute	``
+15:6-15:9	constructor	`val`
+15:6-15:9	local.reference	`val`
+15:6-15:9	variable	`val`
+15:9-15:12	keyword.return	` %.`
+16:6-16:11	constructor	`empty`
+16:6-16:11	function	`empty`
+16:6-16:11	local.reference	`empty`
+16:6-16:11	variable.parameter	`empty`
+16:11-16:15	constructor	` env`
+16:11-16:15	local.reference	` env`
+16:15-16:18	keyword.return	` %.`
+17:6-17:7	function	`;`
+17:6-17:7	local.reference	`;`
+17:6-17:7	operator	`;`
+17:6-17:7	variable.parameter	`;`
+17:7-17:11	operator	` %pi`
+17:12-17:15	constructor	`env`
+17:12-17:15	local.reference	`env`
+17:16-17:19	operator	`%->`
+17:20-17:23	constructor	`val`
+17:20-17:23	local.reference	`val`
+17:23-17:27	operator	` %->`
+17:28-17:31	constructor	`env`
+17:28-17:31	local.reference	`env`
+17:31-17:34	keyword.return	` %.`
+18:6-18:11	keyword.modifier	`%left`
+18:12-18:14	number	`10`
+18:15-18:16	local.reference	`;`
+18:15-18:16	operator	`;`
+18:16-18:19	keyword.return	` %.`
+19:6-19:9	constructor	`clo`
+19:6-19:9	function	`clo`
+19:6-19:9	local.reference	`clo`
+19:6-19:9	variable.parameter	`clo`
+19:9-19:13	operator	` %pi`
+19:14-19:17	constructor	`env`
+19:14-19:17	local.reference	`env`
+19:18-19:21	operator	`%->`
+19:22-19:26	constructor	`exp'`
+19:22-19:26	local.reference	`exp'`
+19:26-19:30	operator	` %->`
+19:31-19:34	constructor	`val`
+19:31-19:34	local.reference	`val`
+19:34-19:37	keyword.return	` %.`

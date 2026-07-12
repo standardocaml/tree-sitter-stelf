@@ -1,0 +1,90 @@
+0:0-0:37	comment	`% terminated after 2 stages (variant)`
+1:0-1:41	comment	`% terminated after 2 stages (subsumption)`
+2:0-2:12	keyword	`%querytabled`
+2:13-2:14	variable.parameter.builtin	`_`
+2:15-2:16	number	`5`
+2:21-2:22	punctuation.bracket	`(`
+2:26-2:27	punctuation.bracket	`(`
+2:27-2:28	punctuation.bracket	`[`
+2:29-2:30	punctuation.bracket	`]`
+2:38-2:39	punctuation.bracket	`)`
+2:39-2:40	punctuation.bracket	`)`
+2:41-2:42	punctuation.bracket	`(`
+2:46-2:47	punctuation.bracket	`(`
+2:47-2:48	punctuation.bracket	`[`
+2:49-2:50	punctuation.bracket	`]`
+2:52-2:53	punctuation.bracket	`)`
+2:53-2:54	punctuation.bracket	`)`
+2:63-2:65	keyword.return	`%.`
+3:0-3:37	comment	`% terminated after 3 stages (variant)`
+4:0-4:41	comment	`% terminated after 3 stages (subsumption)`
+5:0-5:12	keyword	`%querytabled`
+5:13-5:14	variable.parameter.builtin	`_`
+5:15-5:16	number	`6`
+5:21-5:22	punctuation.bracket	`(`
+5:26-5:27	punctuation.bracket	`(`
+5:27-5:28	punctuation.bracket	`[`
+5:29-5:30	punctuation.bracket	`]`
+5:38-5:39	punctuation.bracket	`)`
+5:39-5:40	punctuation.bracket	`)`
+5:41-5:42	punctuation.bracket	`(`
+5:46-5:47	punctuation.bracket	`(`
+5:51-5:52	punctuation.bracket	`(`
+5:52-5:53	punctuation.bracket	`[`
+5:54-5:55	punctuation.bracket	`]`
+5:57-5:58	punctuation.bracket	`)`
+5:58-5:59	punctuation.bracket	`)`
+5:60-5:61	punctuation.bracket	`(`
+5:65-5:66	punctuation.bracket	`(`
+5:66-5:67	punctuation.bracket	`[`
+5:68-5:69	punctuation.bracket	`]`
+5:71-5:72	punctuation.bracket	`)`
+5:72-5:73	punctuation.bracket	`)`
+5:73-5:74	punctuation.bracket	`)`
+5:83-5:85	keyword.return	`%.`
+6:0-6:31	comment	`% Parallel multi-step reduction`
+7:0-7:36	comment	`% terminate after 4 stages (variant)`
+8:0-8:41	comment	`% terminated after 4 stages (subsumption)`
+9:0-9:12	keyword	`%querytabled`
+9:13-9:14	variable.parameter.builtin	`_`
+9:15-9:17	number	`10`
+9:22-9:23	punctuation.bracket	`(`
+9:27-9:28	punctuation.bracket	`(`
+9:28-9:29	punctuation.bracket	`[`
+9:30-9:31	punctuation.bracket	`]`
+9:39-9:40	punctuation.bracket	`)`
+9:40-9:41	punctuation.bracket	`)`
+9:42-9:43	punctuation.bracket	`(`
+9:47-9:48	punctuation.bracket	`(`
+9:48-9:49	punctuation.bracket	`[`
+9:50-9:51	punctuation.bracket	`]`
+9:53-9:54	punctuation.bracket	`)`
+9:54-9:55	punctuation.bracket	`)`
+9:63-9:65	keyword.return	`%.`
+10:0-10:37	comment	`% terminated after 5 stages (variant)`
+11:0-11:41	comment	`% terminated after 5 stages (subsumption)`
+12:0-12:12	keyword	`%querytabled`
+12:13-12:14	variable.parameter.builtin	`_`
+12:15-12:16	number	`5`
+12:21-12:22	punctuation.bracket	`(`
+12:26-12:27	punctuation.bracket	`(`
+12:27-12:28	punctuation.bracket	`[`
+12:29-12:30	punctuation.bracket	`]`
+12:38-12:39	punctuation.bracket	`)`
+12:39-12:40	punctuation.bracket	`)`
+12:41-12:42	punctuation.bracket	`(`
+12:46-12:47	punctuation.bracket	`(`
+12:51-12:52	punctuation.bracket	`(`
+12:52-12:53	punctuation.bracket	`[`
+12:54-12:55	punctuation.bracket	`]`
+12:57-12:58	punctuation.bracket	`)`
+12:58-12:59	punctuation.bracket	`)`
+12:60-12:61	punctuation.bracket	`(`
+12:65-12:66	punctuation.bracket	`(`
+12:66-12:67	punctuation.bracket	`[`
+12:68-12:69	punctuation.bracket	`]`
+12:71-12:72	punctuation.bracket	`)`
+12:72-12:73	punctuation.bracket	`)`
+12:73-12:74	punctuation.bracket	`)`
+12:82-12:84	keyword.return	`%.`
+13:0-13:21	comment	`% parallel conversion`

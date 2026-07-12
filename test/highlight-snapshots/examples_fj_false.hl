@@ -1,0 +1,17 @@
+0:0-0:2	punctuation.bracket	`%{`
+0:66-0:67	punctuation.bracket	`(`
+1:33-1:34	punctuation.bracket	`)`
+3:42-3:43	punctuation.bracket	`}`
+4:0-4:22	comment	`% Library about false.`
+5:0-5:5	keyword.type	`%sort`
+5:6-5:11	constructor	`false`
+5:6-5:11	local.reference	`false`
+5:6-5:11	type	`false`
+5:12-5:14	keyword.return	`%.`
+6:0-6:5	keyword	`%name`
+6:0-6:11	attribute	`%name false`
+6:6-6:11	constructor	`false`
+6:6-6:11	local.reference	`false`
+6:6-6:11	variable	`false`
+6:12-6:14	keyword.return	`%.`
+6:14-6:14	punctuation.bracket	``

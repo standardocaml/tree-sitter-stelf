@@ -1,5 +1,5 @@
 %                         
-%{! 
+%[[ 
 This article presents a simple language with mutable state—it has 
 ``let``-statements but, unlike many other examples such as the 
 [simply-typed lambda calculus](/wiki/simply-typed-lambda-calculus/), it does not have functions, though this is for simplicity and is not an inherent limitation. It is based on 
@@ -18,7 +18,7 @@ Chapter 2 of [Rob Simmons's](/wiki/user-rsimmons/) undergraduate thesis,&lt;ref&
 First we need [natural numbers](/wiki/natural-numbers/), which we will use in the object language 
 to represent both locations and actual numbers (this is why we define 
 ``sum`` as well.)
-!}%
+%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -28,7 +28,7 @@ to represent both locations and actual numbers (this is why we define
 %term sum-s %pi (sum (s N1) N2 (s N3)) %<- (sum N1 N2 N3) %.
 %worlds () (sum A B C) %.
 %total A (sum A B C) %.
-%{! 
+%[[ 
 ### Syntax
 
 Using this we can define the syntax of the language; natural numbers will be 
@@ -44,7 +44,7 @@ be added.
 * ``gets E1 E2`` - updating a reference cell, <Math formula="\texttt{}e_1 := e_2"/>
 * ``loc L`` - locations (not available to the programmer), <Math formula="\mathsf{loc}(l)"/>, where <Math formula="\texttt{}l"/> is an abstract location.
 * ``let E1 ([x] E2 x)`` - let statements <Math formula="\mathsf{let~} x = e_1 \mathsf{~in~} e_2"/>
-!}%
+%]]
 %inline location nat %.
 %sort exp %.
 %term n %pi nat %-> exp %.
@@ -55,20 +55,20 @@ be added.
 %term gets %pi exp %-> exp %-> exp %.
 %term loc %pi location %-> exp %.
 %term let %pi exp %-> (%pi exp %-> exp) %-> exp %.
-%{! 
+%[[ 
 ### Types
 
 Because we do not have functions, our language has a very simple language of types, only integers and references to other types.
-!}%
+%]]
 %sort tp %.
 %term int-tp tp %.
 %term ref-tp %pi tp %-> tp %.
-%{! 
+%[[ 
 ### Lists
 
 We will represent the store as a list of expressions, and define several 
 operations on lists—projecting the _n_th element from a list, appending a new element to the end of a list, updating the _n_th element of the list, and having a list that is the subset of another list. We also define a similar list of types that is omitted.
-!}%
+%]]
 %sort explist %.
 %term $exp %pi exp %-> explist %-> explist %.
 %prec %right 5 $exp %.
@@ -89,7 +89,7 @@ operations on lists—projecting the _n_th element from a list, appending a new 
 %mode update-exp %in %in %in %out %.
 %term update-exp-z update-exp (E $exp EL) z E' (E' $exp EL) %.
 %term update-exp-s %pi (update-exp (E $exp EL) (s N) E' (E $exp EL')) %<- (update-exp EL N E' EL') %.
-%{! |hidden=true !}%
+%[[ |hidden=true %]]
 %sort tplist %.
 %term $tp %pi tp %-> tplist %-> tplist %.
 %prec %right 5 $tp %.
@@ -109,17 +109,17 @@ operations on lists—projecting the _n_th element from a list, appending a new 
 %mode update-tp %in %in %in %out %.
 %term update-tp-z update-tp (T $tp TL) z T' (T' $tp TL) %.
 %term update-tp-s %pi (update-tp (T $tp TL) (s N) T' (T $tp TL')) %<- (update-tp TL N T' TL') %.
-%{! 
+%[[ 
 We create abbreviations to indicate that we are using expression
 lists to represent stores and type lists to represent store typings.
-!}%
+%]]
 %inline store explist %.
 %inline storetp tplist %.
-%{! 
+%[[ 
 ### Values and evaluation
 
 The predicate ``isval`` 
-!}%
+%]]
 %sort isval {_ exp} %.
 %mode isval %in %.
 %term v-int isval (n N) %.
@@ -142,7 +142,7 @@ The predicate ``isval``
 %term e-gets %pi (eval S (gets (loc L1) E) S' E) %<- (isval E) %<- (update-exp S L1 E S') %.
 %term s-let %pi (eval S (let E EF) S’ (let E’ EF)) %<- (eval S E S’ E’) %.
 %term e-let %pi (eval S (let E EF) S (EF E)) %<- (isval E) %.
-%{! 
+%[[ 
 ### Typing judgment
 
 As we do in the article on [strengthening](/wiki/strengthening/), we need to define a separate 
@@ -150,7 +150,7 @@ judgment ``var-of`` that we will use to represent hypothetical typing
 judgments—the hypothetical judgment simply associates an expression with 
 a type, whereas the typing judgment ``of`` associates an expression with
 a type in a specific store typing.
-!}%
+%]]
 %sort var-of {_ exp} {_ tp} %.
 %mode var-of %in %out %.
 %sort of {_ storetp} {_ exp} {_ tp} %.
@@ -170,30 +170,30 @@ a type in a specific store typing.
 	%<- (of ST E T’)
 	%<- ({x} %pi (var-of x T’) %-> (of ST (EF x) T)) %.
 %term t-var %pi (of ST E T) %<- (var-of E T) %.
-%{! The typing judgment exists in an LF context where new expression
+%[[ The typing judgment exists in an LF context where new expression
 variables can be introduced if they are related with ``var-of``
 to a well-formed type. This requirement is expressed by the [block](/wiki/percent-block/) 
-``var-tp``. !}%
+``var-tp``. %]]
 %block var-tp {T tp} [x exp] [v var-of x T]%.
-%{! 
+%[[ 
 We also define a judgment ``of-store``, that expresses a store being
 well-typed and containing only values.
-!}%
+%]]
 %sort of-store {_ storetp} {_ store} %.
 %term &of-store %pi (of-store TL EL) %<- (isval-list EL) %<- (of-list TL EL TL) %.
-%{! ### Multi-step evaluation !}%
+%[[ ### Multi-step evaluation %]]
 %sort run {_ store} {_ exp} {_ store} {_ exp} %.
 %mode run %in %in %out %out %.
 %term run-step %pi (run S E S’’ E’’) %<- (eval S E S’ E’) %<- (run S’ E’ S’’ E’’) %.
 %term run-end run S E S E %.
-%{! ## Language theory !}%
-%{! 
+%[[ ## Language theory %]]
+%[[ 
 ### Effectiveness lemmas
 
 We need a few [effectiveness lemmas](/wiki/effectiveness-lemma/) that show that the ``sum`` and ``append`` judgments are always derivable. 
 
 The ``can-update`` theorem is slightly different, establishing that if a particular store has a particular type, then any index that has a corresponding type can be updated.
-!}%
+%]]
 %sort can-sum {A nat} {B nat} {_ sum A B C} %.
 %mode can-sum %in %in %out %.
 %term & can-sum z N sum-z %.
@@ -208,7 +208,7 @@ The ``can-update`` theorem is slightly different, establishing that if a particu
 	%<- (can-append-exp EL E' APPEND) %.
 %worlds () (can-append-exp _ _ _) %.
 %total T (can-append-exp T _ _) %.
-%{! ### Other auxillary lemmas !}%
+%[[ ### Other auxillary lemmas %]]
 %sort of-projection {_ of-list ST EL TL} {_ proj-tp TL N T} {_ proj-exp EL N E} {_ of ST E T} %.
 %mode of-projection %in %in %out %out %.
 %term & of-projection (tl-s TL T) proj-tp-z proj-exp-z T %.
@@ -263,25 +263,25 @@ The ``can-update`` theorem is slightly different, establishing that if a particu
 	%<- (update-lemma V T VL TL P UE VL' TL') %.
 %worlds () (update-lemma _ _ _ _ _ _ _ _) %.
 %total T (update-lemma _ _ T _ _ _ _ _) %.
-%{! 
+%[[ 
 ### Progress
 
 Progress, as usual, relies on an auxillary notion of what it means for an
 expression to not be stuck that is captured by the judgement ``notstuck``,
 which states that in a certain store ``S`` an expression ``E`` is 
 either a value or can take a step.
-!}%
+%]]
 %sort notstuck {_ store} {_ exp} %.
 %term ns-steps %pi (notstuck S E) %<- (eval S E S’ E’) %.
 %term ns-isval %pi (notstuck S E) %<- (isval E) %.
-%{! The statement of the progress theorem then utilizes the progress
-theorem in a straightforward manner. !}%
+%[[ The statement of the progress theorem then utilizes the progress
+theorem in a straightforward manner. %]]
 %sort progress {_ of ST E T} {_ of-store ST S} {_ notstuck S E} %.
 %mode progress %in %in %out %.
-%{! A natural number is already a value !}%
+%[[ A natural number is already a value %]]
 %term prog-int progress t-int _ (ns-isval v-int) %.
-%{! To show progress for references, we show that a new reference cell can
-always be created on the end of the list we use to represent the heap. !}%
+%[[ To show progress for references, we show that a new reference cell can
+always be created on the end of the list we use to represent the heap. %]]
 %sort lemma {_ notstuck S E} {_ notstuck S (ref E)} %.
 %mode lemma %in %out %.
 %term & lemma (ns-steps E) (ns-steps (s-ref E)) %.
@@ -291,7 +291,7 @@ always be created on the end of the list we use to represent the heap. !}%
 %worlds () (lemma _ _) %.
 %total NS (lemma NS _) %.
 %term prog-ref %pi (progress (t-ref T) TS NS) %<- (progress T TS NS1) %<- (lemma NS1 NS) %.
-%{! To prove progress for addition, we will need to use the fact that the subexpressions both have type ``int-tp``—that way, once they are reduced to values, they must be numbers, not locations. !}%
+%[[ To prove progress for addition, we will need to use the fact that the subexpressions both have type ``int-tp``—that way, once they are reduced to values, they must be numbers, not locations. %]]
 %sort lemma {_ of ST E1 int-tp} {_ notstuck S E1} {_ of ST E2 int-tp} {_ notstuck S E2} {_ notstuck S (E1 + E2)} %.
 %mode lemma %in %in %in %in %out %.
 %term & lemma _ (ns-steps E) _ _ (ns-steps (s1-add E)) %.
@@ -306,7 +306,7 @@ always be created on the end of the list we use to represent the heap. !}%
 	%<- (progress T1 TS NS1)
 	%<- (progress T2 TS NS2)
 	%<- (lemma T1 NS1 T2 NS2 NS) %.
-%{! We use both the notstuckness of the subexpressions and the ability to always project from a well-typed store (``of-projection``) to prove the ``gets`` case. !}%
+%[[ We use both the notstuckness of the subexpressions and the ability to always project from a well-typed store (``of-projection``) to prove the ``gets`` case. %]]
 %sort lemma {_ of-store ST S} {_ of ST E (ref-tp T)} {_ notstuck S E} {_ notstuck S (! E)} %.
 %mode lemma %in %in %in %out %.
 %term & lemma _ _ (ns-steps E) (ns-steps (s-bang E)) %.
@@ -316,9 +316,9 @@ always be created on the end of the list we use to represent the heap. !}%
 %worlds () (lemma _ _ _ _) %.
 %total NS1 (lemma ST T NS1 NS) %.
 %term prog-bang %pi (progress (t-bang T) TS NS) %<- (progress T TS NS1) %<- (lemma TS T NS1 NS) %.
-%{! A location is already a value. !}%
+%[[ A location is already a value. %]]
 %term prog-loc progress (t-loc PROJ-T) TS (ns-isval v-loc) %.
-%{! We use both the notstuckness of the subexpressions and the ability to always update from a well-typed store (``of-update``) to prove the ``gets`` case. !}%
+%[[ We use both the notstuckness of the subexpressions and the ability to always update from a well-typed store (``of-update``) to prove the ``gets`` case. %]]
 %sort lemma {_ of-store ST S} {_ of ST E1 (ref-tp T)} {_ notstuck S E1} {_ notstuck S E2} {_ notstuck S (gets E1 E2)} %.
 %mode lemma %in %in %in %in %out %.
 %term & lemma _ _ (ns-steps E) _ (ns-steps (s1-gets E)) %.
@@ -333,7 +333,7 @@ always be created on the end of the list we use to represent the heap. !}%
 	%<- (progress T1 TS NS1)
 	%<- (progress T2 TS NS2)
 	%<- (lemma TS T1 NS1 NS2 NS) %.
-%{! We use a lemma about the nonstuckness of the subexpression to prove the ``let`` case. !}%
+%[[ We use a lemma about the nonstuckness of the subexpression to prove the ``let`` case. %]]
 %sort lemma {EF %pi exp %-> exp} {_ notstuck S E} {_ notstuck S (let E EF)} %.
 %mode lemma %in %in %out %.
 %term & lemma _ (ns-steps E) (ns-steps (s-let E)) %.
@@ -343,11 +343,11 @@ always be created on the end of the list we use to represent the heap. !}%
 %term prog-let %pi (progress (t-let _ T) TS NS) %<- (progress T TS NS1) %<- (lemma EF NS1 NS) %.
 %worlds () (progress _ _ _) %.
 %total T (progress T TS NS) %.
-%{! 
+%[[ 
 ### Substitution
 
 As in the article on [strengthening](/wiki/strengthening/), progress will need to appeal to a simple substitution lemma.
-!}%
+%]]
 %sort substitute {_ {x} %pi (var-of x Tp) %-> (of ST (EF x) T)} {_ of ST E Tp} {_ of ST (EF E) T} %.
 %mode substitute %in %in %out %.
 %term sub-refl substitute ([x] [v var-of x Tp] T) T* T %.
@@ -372,13 +372,13 @@ As in the article on [strengthening](/wiki/strengthening/), progress will need t
 %term sub-var substitute ([x] [v var-of x Tp] t-var v) T* T* %.
 %worlds (var-tp) (substitute _ _ _) %.
 %total F (substitute F T T’) %.
-%{! 
+%[[ 
 ### Weakening
 
 In order to be able to evaluate reference cells, we need to be able to show 
 that adding new things to the store typing will leave all current programs 
 well-typed. The only interesting case is ``weak-loc``.
-!}%
+%]]
 %sort weakening {_ of ST E T} {_ subset-tp ST ST’} {_ of ST’ E T} %.
 %mode weakening %in %in %out %.
 %term weak-var weakening (t-var V) _ (t-var V) %.
@@ -402,7 +402,7 @@ well-typed. The only interesting case is ``weak-loc``.
 	%<- ({x} {v var-of x Tp} weakening (F x v) S (F’ x v)) %.
 %worlds (var-tp) (weakening _ _ _) %.
 %total T (weakening T S T’) %.
-%{! A comparable notion of weakening must be defined for lists: !}%
+%[[ A comparable notion of weakening must be defined for lists: %]]
 %sort weakening-list {_ of-list ST EL TL} {_ subset-tp ST ST’} {_ of-list ST’ EL TL} %.
 %mode weakening-list %in %in %out %.
 %term weak-z weakening-list tl-z S tl-z %.
@@ -412,13 +412,13 @@ well-typed. The only interesting case is ``weak-loc``.
 	%<- (weakening-list TL S TL’) %.
 %worlds () (weakening-list _ _ _) %.
 %total T (weakening-list T S T’) %.
-%{! 
+%[[ 
 ### Preservation
 
-!}%
+%]]
 %sort preservation {_ of ST E T} {_ of-store ST S} {_ eval S E S’ E’} {_ subset-tp ST ST’} {_ of ST’ E’ T} {_ of-store ST’ S’} %.
 %mode preservation %in %in %in %out %out %out %.
-%{! In the cases where evaluation is passed on to a later step, the cases are mostly a straightforward call to the induction hypothesis and the weakening lemma. !}%
+%[[ In the cases where evaluation is passed on to a later step, the cases are mostly a straightforward call to the induction hypothesis and the weakening lemma. %]]
 %term pres-s1-add 
 	%pi (preservation (t-add T2 T1) ST (s1-add E) S (t-add T2’ T1’) ST’)
 	%<- (preservation T1 ST E S T1’ ST’)
@@ -445,7 +445,7 @@ well-typed. The only interesting case is ``weak-loc``.
 	%pi (preservation (t-let F T) ST (s-let E) S (t-let F’ T’) ST’)
 	%<- (preservation T ST E S T’ ST’)
 	%<- ({x} {v} weakening (F x v) S (F’ x v)) %.
-%{! The cases where evaluation happens are more involved—for instance, the ``ref`` case relies on the very involved ``append-lemma`` from the auxillary lemmas. !}%
+%[[ The cases where evaluation happens are more involved—for instance, the ``ref`` case relies on the very involved ``append-lemma`` from the auxillary lemmas. %]]
 %term pres-e-add 
 	%pi (preservation (t-add t-int t-int) ST (e-add SUM) S t-int ST)
 	%<- (subset-refl _ S) %.
@@ -467,7 +467,7 @@ well-typed. The only interesting case is ``weak-loc``.
 	%<- (subset-refl _ S) %.
 %worlds () (preservation _ _ _ _ _ _) %.
 %total T (preservation T ST E S T’ ST’) %.
-%{! ### Safety !}%
+%[[ ### Safety %]]
 %sort safety {_ of ST E T} {_ of-store ST S} {_ run S E S’ E’} {_ notstuck S’ E’} %.
 %mode safety %in %in %in %out %.
 %term safe-end %pi (safety T ST run-end NS) %<- (progress T ST NS) %.
@@ -477,24 +477,24 @@ well-typed. The only interesting case is ``weak-loc``.
 	%<- (safety T’ ST’ R NS) %.
 %worlds () (safety _ _ _ _) %.
 %total R (safety T TS R NS) %.
-%{! 
+%[[ 
 ## Example
 
 We will define the following simple program as ``prog1``, and use Twelf's [logic programming](/wiki/logic-programming/) abilities to actually run the typechecker ``of E T`` and multi-step evaluation ``run S E S' E'``. Because ``gets`` returns the result of the assignment in the same way C does, <Math formula="\texttt{}y"/> should have the same value as <Math formula="\texttt{}!x"/> at the end of the program, namely 4.
 
 <DisplayMath formula="\begin{array}{l}\mathsf{let~}x = \mathsf{ref}(2 + 1) \mathsf{~in}\\ \mathsf{let~}y = x := !x + 1\mathsf{~in~}\\ !x + 1\end{array}"/>
-!}%
+%]]
 %define prog1 let (ref (n (s (s z)) + n (s z))) ([x] let (gets x (! x + n (s z))) ([y] ! x + n (s z))) %.
-%{! We can typecheck the program (in the empty store typing ``nil-tp``). The syntax we use for [``%query``](/wiki/percent-query/) indicates that we only expect there to be one solution (because type checking should be syntax directed): |check=decl !}%
+%[[ We can typecheck the program (in the empty store typing ``nil-tp``). The syntax we use for [``%query``](/wiki/percent-query/) indicates that we only expect there to be one solution (because type checking should be syntax directed): |check=decl %]]
 %query 1 _ _ of nil-tp prog1 T %.
-%{! We can then run the program to completion (starting in the empty store ``nil-exp``). We expect the final state ``S`` to include the number 4, and we expect the program to evaluate to value ``V`` 5. The multi-step evaluation judgment ``run`` is defined to run arbitrarily until stopping, so we only want the first solution—it will be the solution resulting in running ``run-step`` as many times as possible: |check=decl !}%
+%[[ We can then run the program to completion (starting in the empty store ``nil-exp``). We expect the final state ``S`` to include the number 4, and we expect the program to evaluate to value ``V`` 5. The multi-step evaluation judgment ``run`` is defined to run arbitrarily until stopping, so we only want the first solution—it will be the solution resulting in running ``run-step`` as many times as possible: |check=decl %]]
 %query 1 1 _ run nil-exp prog1 S V %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Mutable_state).
-!}%
+%]]
 %.
 
 == References ==

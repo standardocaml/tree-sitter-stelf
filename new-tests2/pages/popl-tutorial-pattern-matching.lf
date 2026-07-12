@@ -1,7 +1,7 @@
 %                                          
-%{! 
+%[[ 
 This is a case study on pattern matching using Twelf.
-!}%
+%]]
 % 
 %sort nat %.
 %term z nat %.
@@ -36,7 +36,7 @@ This is a case study on pattern matching using Twelf.
 %term oexp/o %pi (%pi exp %-> oexp) %-> oexp %.
 %term match/nil match %.
 %term match/cons %pi pat %-> oexp %-> match %-> match %.
-%{! static semantics !}%
+%[[ static semantics %]]
 %sort tplist-append {_ tplist} {_ tplist} {_ tplist} %.
 %term tplist-append/nil tplist-append tplist/nil TL TL %.
 %term tplist-append/cons 
@@ -271,15 +271,15 @@ This is a case study on pattern matching using Twelf.
 %term _ preservation (of-exp/handle D2 D1) (step/handle-fail _) D2 %.
 %worlds () (preservation _ _ _) %.
 %total (D1) (preservation _ D1 _) %.
-%{! 
+%[[ 
 --[DanielKLee](/wiki/user-danielklee/) 01:46, 11 October 2007 (EDT)
 
 TODO: Finish commentary.
 \{\{stub\}\}
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Pattern_matching).
-!}%
+%]]

@@ -5,7 +5,7 @@
 %        
 %                                                      
 %                                                                                 
-%{! 
+%[[ 
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -13,8 +13,8 @@ So far, we have only proved relations total in the empty LF context.  In this se
 
 ## Definition of Size
 
-The definition of size uses the definitions of [natural numbers](/wiki/proving-metatheorems-representing-the-syntax-of-the-natural-numbers/), [addition judgement](/wiki/proving-metatheorems-representing-the-judgements-of-the-natural-numbers/), and [STLC term syntax](/wiki/proving-metatheorems-representing-the-syntax-of-the-stlc/) from earlier in this introduction: !}%
-%{!! begin hidden !!}%
+The definition of size uses the definitions of [natural numbers](/wiki/proving-metatheorems-representing-the-syntax-of-the-natural-numbers/), [addition judgement](/wiki/proving-metatheorems-representing-the-judgements-of-the-natural-numbers/), and [STLC term syntax](/wiki/proving-metatheorems-representing-the-syntax-of-the-stlc/) from earlier in this introduction: %]]
+%[[! begin hidden !%]]
 %sort tp %.
 %term unit tp %.
 %term arrow %pi tp %-> tp %-> tp %.
@@ -31,22 +31,22 @@ The definition of size uses the definitions of [natural numbers](/wiki/proving-m
 %term plus-s %pi (plus (s N1) N2 (s N3)) %<- (plus N1 N2 N3) %.
 %worlds () (plus _ _ _) %.
 %total N (plus N _ _) %.
-%{!! end hidden !!}%
-%{! Informally, we define the size of a term as follows:
+%[[! end hidden !%]]
+%[[ Informally, we define the size of a term as follows:
 * <Math formula="|x| = 1"/>
 * <Math formula="|\langle\rangle| = 1"/>
 * <Math formula="|e_1 \, e_2| = 1 + |e_1| + |e_2"/>
 * <Math formula="|\lambda x{:}\tau.e| = 1 + |e|"/>
 
-We define this function in LF using the following judgement: !}%
-%{!! begin checked !!}%
+We define this function in LF using the following judgement: %]]
+%[[! begin checked !%]]
 %sort size {_ tm} {_ nat} %.
 %mode size %in %out %.
 %term size-empty size empty (s z) %.
 %term size-lam %pi (size (lam _ E) (s N)) %<- ({x tm} {_ size x (s z)} size (E x) N) %.
 %term size-app %pi (size (app E1 E2) (s N)) %<- (size E1 N1) %<- (size E2 N2) %<- (plus N1 N2 N) %.
-%{!! end checked !!}%
-%{! The only subtlety in this judgement is that we have recast size as a hypothetical judgement: each variable ``x:tm`` in the context is assumed to have size 1.  Correspondingly, the premise of the ``lam`` case extends the context with such an assumption for the bound variable.  
+%[[! end checked !%]]
+%[[ The only subtlety in this judgement is that we have recast size as a hypothetical judgement: each variable ``x:tm`` in the context is assumed to have size 1.  Correspondingly, the premise of the ``lam`` case extends the context with such an assumption for the bound variable.  
 
 ## World Declarations
 
@@ -58,10 +58,10 @@ We would like to assert that every term has a size.  However, because the defini
 
 The worlds declaration fails because ``size`` does not stay in the empty context.
 
-To give an appropriate worlds declaration for this type family, we must first specify the form of the contexts in which we consider it.  We do so with a block declaration: !}%
+To give an appropriate worlds declaration for this type family, we must first specify the form of the contexts in which we consider it.  We do so with a block declaration: %]]
 %block size-block [x tm] [_ size x (s z)]%.
 %worlds (size-block) (size _ _) %.
-%{! The block declaration names a context block comprised of the assumptions ``x:tm, _:size x (s z)``.  The world declaration declares ``size`` for any context composed of any number of ``size-blocks``.  That
+%[[ The block declaration names a context block comprised of the assumptions ``x:tm, _:size x (s z)``.  The world declaration declares ``size`` for any context composed of any number of ``size-blocks``.  That
 is, it specifies that we consider ``size`` in the [regular world](/wiki/percent-worlds/) ``(size-block)*``.  
 
 In general, Twelf permits regular world declarations of the form ``(b1 | b2 | ... | bn)*`` for blocks ``b1`` through ``bn`` defined by ``%block`` declarations.
@@ -116,11 +116,11 @@ There are two things to note about this totality assertion:
 
 Twelf verifies totality assertions in non-empty contexts in the same manner as before.  If a type family world checks, then the inductive hypothesis of a totality relation for a recursive premise (or the previously established totality assertion for a prior type family) will never fail to apply because of the form of the context.  Thus, the only differences in checking totality assertions for general contexts are that world checking may fail, and that coverage checking must account for variables from the context.  
 
-In this case, Twelf succeeds in proving the totality of ``size``. !}%
-%{!! begin checked !!}%
+In this case, Twelf succeeds in proving the totality of ``size``. %]]
+%[[! begin checked !%]]
 %total E (size E _) %.
-%{!! end checked !!}%
-%{! ## Example world errors
+%[[! end checked !%]]
+%[[ ## Example world errors
 
 In this section, we show some example world errors.  For comparison, we collect the complete correct definition of ``size`` here:
 
@@ -147,14 +147,14 @@ size-app   : size (app E1 E2) (s N)
 
 One possible world error is to write a premise whose local context extensions do not stay in the appropriate world.   For example, if we forgot the ``size`` assumption in the ``lam`` case, Twelf would report an error: 
 
-!}%
-%{!! begin hidden !!}%
+%]]
+%[[! begin hidden !%]]
 %sort size {_ tm} {_ nat} %.
 %mode size %in %out %.
 %term size-empty size empty (s z) %.
 %term size-app %pi (size (app E1 E2) (s N)) %<- (size E1 N1) %<- (size E2 N2) %<- (plus N1 N2 N) %.
-%{!! end hidden !!}%
-%{!
+%[[! end hidden !%]]
+%[[
 
 ```checkedtwelf
 size-lam   : size (lam _ E) (s N)
@@ -168,15 +168,15 @@ size-lam   : size (lam _ E) (s N)
 
 Another possible world error is that world subsumption could fail.  For example, if ``size`` were stated for a  world containing natural number assumptions (which of course ruins the adequacy of ``nat`` for the natural numbers), it would not be permissible to call ``plus``:
 
-!}%
-%{!! begin hidden !!}%
+%]]
+%[[! begin hidden !%]]
 %sort size {_ tm} {_ nat} %.
 %mode size %in %out %.
 %term size-empty size empty (s z) %.
 %term size-lam %pi (size (lam _ E) (s N)) %<- ({x tm} {_ size x (s z)} size (E x) N) %.
 %term size-app %pi (size (app E1 E2) (s N)) %<- (size E1 N1) %<- (size E2 N2) %<- (plus N1 N2 N) %.
-%{!! end hidden !!}%
-%{!
+%[[! end hidden !%]]
+%[[
 
 ```checkedtwelf
 %block size-block : block {x : tm} {_ : size x (s z)}.
@@ -208,4 +208,4 @@ size-app   : size (app E1 E2) (s N)
 This definition world checks because the context in ``size-lam`` is of the form specified by the world declaration.  However, the type family ``size`` does not define a total relation because it does not cover 
 variables ``x:tm`` in the LF context.  A total relation must cover both the LF constants in the signature and the LF variables in all contexts in the world.
 
-!}%
+%]]

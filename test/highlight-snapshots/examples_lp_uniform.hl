@@ -1,0 +1,311 @@
+0:0-0:23	comment	`%%% Uniform Derivations`
+1:0-1:26	comment	`%%% Author: Frank Pfenning`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:11	constructor	`solve`
+2:6-2:11	local.reference	`solve`
+2:6-2:11	type	`solve`
+2:18-2:20	keyword.return	`%.`
+2:20-3:21	comment	``
+3:21-4:5	keyword.type	``
+4:6-4:12	constructor	`assume`
+4:6-4:12	local.reference	`assume`
+4:6-4:12	type	`assume`
+4:19-4:21	keyword.return	`%.`
+4:21-5:25	comment	``
+5:25-6:5	keyword.type	``
+6:6-6:8	local.reference	`>>`
+6:6-6:8	operator	`>>`
+6:6-6:8	type	`>>`
+6:21-6:23	keyword.return	`%.`
+6:23-7:22	comment	``
+8:6-8:11	keyword.modifier	`%none`
+8:12-8:13	number	`8`
+8:14-8:16	local.reference	`>>`
+8:14-8:16	operator	`>>`
+8:16-8:19	keyword.return	` %.`
+8:19-9:11	attribute	``
+9:6-9:11	constructor	`solve`
+9:6-9:11	local.reference	`solve`
+9:6-9:11	variable	`solve`
+9:11-9:14	keyword.return	` %.`
+9:14-10:12	attribute	``
+10:6-10:12	constructor	`assume`
+10:6-10:12	local.reference	`assume`
+10:6-10:12	variable	`assume`
+10:12-10:15	keyword.return	` %.`
+10:15-11:8	attribute	``
+11:6-11:8	local.reference	`>>`
+11:6-11:8	operator	`>>`
+11:6-11:8	variable	`>>`
+11:8-11:11	keyword.return	` %.`
+12:6-12:11	constructor	`solve`
+12:6-12:11	local.reference	`solve`
+12:11-12:17	keyword.modifier	` %star`
+12:17-12:20	keyword.return	` %.`
+13:6-13:12	constructor	`assume`
+13:6-13:12	local.reference	`assume`
+13:12-13:18	keyword.modifier	` %star`
+13:18-13:21	keyword.return	` %.`
+14:6-14:8	local.reference	`>>`
+14:6-14:8	operator	`>>`
+14:8-14:14	keyword.modifier	` %star`
+14:14-14:20	keyword.modifier	` %star`
+14:20-14:23	keyword.return	` %.`
+15:6-15:11	constructor	`s_and`
+15:6-15:11	function	`s_and`
+15:6-15:11	local.reference	`s_and`
+15:6-15:11	variable.parameter	`s_and`
+15:11-15:15	operator	` %pi`
+15:16-15:17	punctuation.bracket	`(`
+15:17-15:22	constructor	`solve`
+15:17-15:22	local.reference	`solve`
+15:23-15:24	punctuation.bracket	`(`
+15:24-15:26	constructor	`A1`
+15:24-15:26	local.reference	`A1`
+15:27-15:30	constructor	`and`
+15:27-15:30	local.reference	`and`
+15:31-15:33	constructor	`A2`
+15:31-15:33	local.reference	`A2`
+15:33-15:34	punctuation.bracket	`)`
+15:34-15:35	punctuation.bracket	`)`
+15:36-15:39	operator	`%<-`
+15:40-15:41	punctuation.bracket	`(`
+15:41-15:46	constructor	`solve`
+15:41-15:46	local.reference	`solve`
+15:47-15:49	constructor	`A1`
+15:47-15:49	local.reference	`A1`
+15:49-15:50	punctuation.bracket	`)`
+15:50-15:54	operator	` %<-`
+15:55-15:56	punctuation.bracket	`(`
+15:56-15:61	constructor	`solve`
+15:56-15:61	local.reference	`solve`
+15:62-15:64	constructor	`A2`
+15:62-15:64	local.reference	`A2`
+15:64-15:65	punctuation.bracket	`)`
+15:65-15:68	keyword.return	` %.`
+16:6-16:11	constructor	`s_imp`
+16:6-16:11	function	`s_imp`
+16:6-16:11	local.reference	`s_imp`
+16:6-16:11	variable.parameter	`s_imp`
+16:11-16:15	operator	` %pi`
+16:16-16:17	punctuation.bracket	`(`
+16:17-16:22	constructor	`solve`
+16:17-16:22	local.reference	`solve`
+16:23-16:24	punctuation.bracket	`(`
+16:24-16:26	constructor	`A2`
+16:24-16:26	local.reference	`A2`
+16:27-16:30	constructor	`imp`
+16:27-16:30	local.reference	`imp`
+16:31-16:33	constructor	`A1`
+16:31-16:33	local.reference	`A1`
+16:33-16:34	punctuation.bracket	`)`
+16:34-16:35	punctuation.bracket	`)`
+16:36-16:39	operator	`%<-`
+16:40-16:41	punctuation.bracket	`(`
+16:41-16:44	operator	`%pi`
+16:45-16:46	punctuation.bracket	`(`
+16:46-16:52	constructor	`assume`
+16:46-16:52	local.reference	`assume`
+16:53-16:55	constructor	`A2`
+16:53-16:55	local.reference	`A2`
+16:55-16:56	punctuation.bracket	`)`
+16:57-16:60	operator	`%->`
+16:61-16:62	punctuation.bracket	`(`
+16:62-16:67	constructor	`solve`
+16:62-16:67	local.reference	`solve`
+16:68-16:70	constructor	`A1`
+16:68-16:70	local.reference	`A1`
+16:70-16:71	punctuation.bracket	`)`
+16:71-16:72	punctuation.bracket	`)`
+16:72-16:75	keyword.return	` %.`
+17:6-17:12	constructor	`s_true`
+17:6-17:12	function	`s_true`
+17:6-17:12	local.reference	`s_true`
+17:6-17:12	variable.parameter	`s_true`
+17:12-17:18	constructor	` solve`
+17:12-17:18	local.reference	` solve`
+17:18-17:23	constructor	` true`
+17:18-17:23	local.reference	` true`
+17:23-17:26	keyword.return	` %.`
+18:6-18:14	constructor	`s_forall`
+18:6-18:14	function	`s_forall`
+18:6-18:14	local.reference	`s_forall`
+18:6-18:14	variable.parameter	`s_forall`
+18:14-18:18	operator	` %pi`
+18:19-18:20	punctuation.bracket	`(`
+18:20-18:25	constructor	`solve`
+18:20-18:25	local.reference	`solve`
+18:26-18:27	punctuation.bracket	`(`
+18:27-18:33	constructor	`forall`
+18:27-18:33	local.reference	`forall`
+18:34-18:36	constructor	`A1`
+18:34-18:36	local.reference	`A1`
+18:36-18:37	punctuation.bracket	`)`
+18:37-18:38	punctuation.bracket	`)`
+18:39-18:42	operator	`%<-`
+18:43-18:44	punctuation.bracket	`(`
+18:44-18:44	local.reference	``
+18:44-18:44	operator	``
+18:44-18:45	punctuation.bracket	`{`
+18:45-18:46	constructor	`a`
+18:45-18:46	local.reference	`a`
+18:45-18:46	variable.parameter	`a`
+18:47-18:48	constructor	`i`
+18:47-18:48	local.reference	`i`
+18:48-18:49	punctuation.bracket	`}`
+18:50-18:55	constructor	`solve`
+18:50-18:55	local.reference	`solve`
+18:56-18:57	punctuation.bracket	`(`
+18:57-18:59	constructor	`A1`
+18:57-18:59	local.reference	`A1`
+18:60-18:61	constructor	`a`
+18:60-18:61	local.reference	`a`
+18:61-18:62	punctuation.bracket	`)`
+18:62-18:63	punctuation.bracket	`)`
+18:63-18:66	keyword.return	` %.`
+19:6-19:12	constructor	`s_atom`
+19:6-19:12	function	`s_atom`
+19:6-19:12	local.reference	`s_atom`
+19:6-19:12	variable.parameter	`s_atom`
+19:12-19:16	operator	` %pi`
+19:17-19:18	punctuation.bracket	`(`
+19:18-19:23	constructor	`solve`
+19:18-19:23	local.reference	`solve`
+19:24-19:25	punctuation.bracket	`(`
+19:25-19:29	constructor	`atom`
+19:25-19:29	local.reference	`atom`
+19:30-19:31	constructor	`P`
+19:30-19:31	local.reference	`P`
+19:31-19:32	punctuation.bracket	`)`
+19:32-19:33	punctuation.bracket	`)`
+19:34-19:37	operator	`%<-`
+19:38-19:39	punctuation.bracket	`(`
+19:39-19:45	constructor	`assume`
+19:39-19:45	local.reference	`assume`
+19:46-19:47	constructor	`A`
+19:46-19:47	local.reference	`A`
+19:47-19:48	punctuation.bracket	`)`
+19:48-19:52	operator	` %<-`
+19:53-19:54	punctuation.bracket	`(`
+19:54-19:55	constructor	`A`
+19:54-19:55	local.reference	`A`
+19:56-19:58	local.reference	`>>`
+19:56-19:58	operator	`>>`
+19:59-19:60	constructor	`P`
+19:59-19:60	local.reference	`P`
+19:60-19:61	punctuation.bracket	`)`
+19:61-19:64	keyword.return	` %.`
+20:6-20:12	constructor	`i_andl`
+20:6-20:12	function	`i_andl`
+20:6-20:12	local.reference	`i_andl`
+20:6-20:12	variable.parameter	`i_andl`
+20:12-20:16	operator	` %pi`
+20:17-20:18	punctuation.bracket	`(`
+20:18-20:20	constructor	`A1`
+20:18-20:20	local.reference	`A1`
+20:21-20:24	constructor	`and`
+20:21-20:24	local.reference	`and`
+20:25-20:27	constructor	`A2`
+20:25-20:27	local.reference	`A2`
+20:28-20:30	local.reference	`>>`
+20:28-20:30	operator	`>>`
+20:31-20:32	constructor	`P`
+20:31-20:32	local.reference	`P`
+20:32-20:33	punctuation.bracket	`)`
+20:34-20:37	operator	`%<-`
+20:38-20:39	punctuation.bracket	`(`
+20:39-20:41	constructor	`A1`
+20:39-20:41	local.reference	`A1`
+20:42-20:44	local.reference	`>>`
+20:42-20:44	operator	`>>`
+20:45-20:46	constructor	`P`
+20:45-20:46	local.reference	`P`
+20:46-20:47	punctuation.bracket	`)`
+20:47-20:50	keyword.return	` %.`
+21:6-21:12	constructor	`i_andr`
+21:6-21:12	function	`i_andr`
+21:6-21:12	local.reference	`i_andr`
+21:6-21:12	variable.parameter	`i_andr`
+21:12-21:16	operator	` %pi`
+21:17-21:18	punctuation.bracket	`(`
+21:18-21:20	constructor	`A1`
+21:18-21:20	local.reference	`A1`
+21:21-21:24	constructor	`and`
+21:21-21:24	local.reference	`and`
+21:25-21:27	constructor	`A2`
+21:25-21:27	local.reference	`A2`
+21:28-21:30	local.reference	`>>`
+21:28-21:30	operator	`>>`
+21:31-21:32	constructor	`P`
+21:31-21:32	local.reference	`P`
+21:32-21:33	punctuation.bracket	`)`
+21:34-21:37	operator	`%<-`
+21:38-21:39	punctuation.bracket	`(`
+21:39-21:41	constructor	`A2`
+21:39-21:41	local.reference	`A2`
+21:42-21:44	local.reference	`>>`
+21:42-21:44	operator	`>>`
+21:45-21:46	constructor	`P`
+21:45-21:46	local.reference	`P`
+21:46-21:47	punctuation.bracket	`)`
+21:47-21:50	keyword.return	` %.`
+22:6-22:11	constructor	`i_imp`
+22:6-22:11	function	`i_imp`
+22:6-22:11	local.reference	`i_imp`
+22:6-22:11	variable.parameter	`i_imp`
+22:11-22:15	operator	` %pi`
+22:16-22:17	punctuation.bracket	`(`
+22:17-22:19	constructor	`A2`
+22:17-22:19	local.reference	`A2`
+22:20-22:23	constructor	`imp`
+22:20-22:23	local.reference	`imp`
+22:24-22:26	constructor	`A1`
+22:24-22:26	local.reference	`A1`
+22:27-22:29	local.reference	`>>`
+22:27-22:29	operator	`>>`
+22:30-22:31	constructor	`P`
+22:30-22:31	local.reference	`P`
+22:31-22:32	punctuation.bracket	`)`
+22:33-22:36	operator	`%<-`
+22:37-22:38	punctuation.bracket	`(`
+22:38-22:40	constructor	`A1`
+22:38-22:40	local.reference	`A1`
+22:41-22:43	local.reference	`>>`
+22:41-22:43	operator	`>>`
+22:44-22:45	constructor	`P`
+22:44-22:45	local.reference	`P`
+22:45-22:46	punctuation.bracket	`)`
+22:46-22:50	operator	` %<-`
+22:51-22:52	punctuation.bracket	`(`
+22:52-22:57	constructor	`solve`
+22:52-22:57	local.reference	`solve`
+22:58-22:60	constructor	`A2`
+22:58-22:60	local.reference	`A2`
+22:60-22:61	punctuation.bracket	`)`
+22:61-22:64	keyword.return	` %.`
+23:6-23:14	constructor	`i_forall`
+23:6-23:14	function	`i_forall`
+23:6-23:14	local.reference	`i_forall`
+23:6-23:14	variable.parameter	`i_forall`
+23:21-23:24	operator	`%pi`
+23:25-23:26	punctuation.bracket	`(`
+23:34-23:35	number	`1`
+23:40-23:41	punctuation.bracket	`)`
+23:42-23:45	operator	`%<-`
+23:46-23:47	punctuation.bracket	`(`
+23:48-23:49	number	`1`
+23:56-23:57	punctuation.bracket	`)`
+23:58-23:60	keyword.return	`%.`
+24:6-24:12	constructor	`i_atom`
+24:6-24:12	function	`i_atom`
+24:6-24:12	local.reference	`i_atom`
+24:6-24:12	variable.parameter	`i_atom`
+24:12-24:17	constructor	` atom`
+24:12-24:17	local.reference	` atom`
+24:17-24:19	constructor	` P`
+24:17-24:19	local.reference	` P`
+24:19-24:22	local.reference	` >>`
+24:19-24:22	operator	` >>`
+24:22-24:24	constructor	` P`
+24:22-24:24	local.reference	` P`
+24:24-24:27	keyword.return	` %.`

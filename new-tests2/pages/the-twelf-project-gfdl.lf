@@ -1,5 +1,5 @@
 %                                  
-%{! For any page marked with the tag &lt;nowiki&gt;\{\{license-gfdl\}\}&lt;/nowiki&gt;, permission is granted to copy, distribute and/or modify the document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts.  A copy of the license is included in the section entitled "GNU Free Documentation License".
+%[[ For any page marked with the tag &lt;nowiki&gt;\{\{license-gfdl\}\}&lt;/nowiki&gt;, permission is granted to copy, distribute and/or modify the document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts.  A copy of the license is included in the section entitled "GNU Free Documentation License".
 
 See [[Project:Copyright]] for more information.
 
@@ -401,10 +401,10 @@ situation.
 If your document contains nontrivial examples of program code, we
 recommend releasing these examples in parallel under your choice of
 free software license, such as the GNU General Public License,
-to permit their use in free software.&lt;/code&gt; !}%
-%{!
+to permit their use in free software.&lt;/code&gt; %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/The_Twelf_Project:GFDL).
-!}%
+%]]

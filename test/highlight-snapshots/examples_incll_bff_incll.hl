@@ -1,0 +1,192 @@
+0:0-0:3	comment	`%%%`
+1:0-1:39	comment	`%%% A Breadth-First Numbering Algorithm`
+2:0-2:26	comment	`%%% Author: Frank Pfenning`
+3:0-3:65	comment	`%%% See C. Okasaki: Breadth-First Numbering, ICFP'00, pp. 131-136`
+4:0-4:3	comment	`%%%`
+5:0-5:5	keyword	`%name`
+5:0-5:9	attribute	`%name trm`
+5:6-5:9	constructor	`trm`
+5:6-5:9	local.reference	`trm`
+5:6-5:9	variable	`trm`
+5:9-5:12	keyword.return	` %.`
+5:12-6:9	attribute	``
+6:6-6:9	constructor	`atm`
+6:6-6:9	local.reference	`atm`
+6:6-6:9	variable	`atm`
+6:9-6:12	keyword.return	` %.`
+7:6-7:9	constructor	`int`
+7:6-7:9	function	`int`
+7:6-7:9	local.reference	`int`
+7:6-7:9	variable.parameter	`int`
+7:9-7:14	constructor	` sort`
+7:9-7:14	local.reference	` sort`
+7:14-7:17	keyword.return	` %.`
+8:6-8:7	constructor	`z`
+8:6-8:7	function	`z`
+8:6-8:7	local.reference	`z`
+8:6-8:7	variable.parameter	`z`
+8:7-8:11	constructor	` trm`
+8:7-8:11	local.reference	` trm`
+8:11-8:15	constructor	` int`
+8:11-8:15	local.reference	` int`
+8:15-8:18	keyword.return	` %.`
+9:6-9:7	constructor	`s`
+9:6-9:7	function	`s`
+9:6-9:7	local.reference	`s`
+9:6-9:7	variable.parameter	`s`
+9:7-9:11	operator	` %pi`
+9:12-9:13	punctuation.bracket	`(`
+9:13-9:16	constructor	`trm`
+9:13-9:16	local.reference	`trm`
+9:17-9:20	constructor	`int`
+9:17-9:20	local.reference	`int`
+9:20-9:21	punctuation.bracket	`)`
+9:22-9:25	operator	`%->`
+9:26-9:27	punctuation.bracket	`(`
+9:27-9:30	constructor	`trm`
+9:27-9:30	local.reference	`trm`
+9:31-9:34	constructor	`int`
+9:31-9:34	local.reference	`int`
+9:34-9:35	punctuation.bracket	`)`
+9:35-9:38	keyword.return	` %.`
+10:6-10:13	keyword.modifier	`%prefix`
+10:14-10:16	number	`10`
+10:17-10:18	constructor	`s`
+10:17-10:18	local.reference	`s`
+10:18-10:21	keyword.return	` %.`
+11:6-11:10	constructor	`tree`
+11:6-11:10	function	`tree`
+11:6-11:10	local.reference	`tree`
+11:6-11:10	variable.parameter	`tree`
+11:10-11:15	constructor	` sort`
+11:10-11:15	local.reference	` sort`
+11:15-11:18	keyword.return	` %.`
+12:6-12:7	constructor	`e`
+12:6-12:7	function	`e`
+12:6-12:7	local.reference	`e`
+12:6-12:7	variable.parameter	`e`
+12:7-12:11	constructor	` trm`
+12:7-12:11	local.reference	` trm`
+12:11-12:16	constructor	` tree`
+12:11-12:16	local.reference	` tree`
+12:16-12:19	keyword.return	` %.`
+13:6-13:7	constructor	`t`
+13:6-13:7	function	`t`
+13:6-13:7	local.reference	`t`
+13:6-13:7	variable.parameter	`t`
+13:7-13:11	operator	` %pi`
+13:12-13:13	punctuation.bracket	`(`
+13:13-13:16	constructor	`trm`
+13:13-13:16	local.reference	`trm`
+13:17-13:20	constructor	`int`
+13:17-13:20	local.reference	`int`
+13:20-13:21	punctuation.bracket	`)`
+13:22-13:25	operator	`%->`
+13:26-13:27	punctuation.bracket	`(`
+13:27-13:30	constructor	`trm`
+13:27-13:30	local.reference	`trm`
+13:31-13:35	constructor	`tree`
+13:31-13:35	local.reference	`tree`
+13:35-13:36	punctuation.bracket	`)`
+13:36-13:40	operator	` %->`
+13:41-13:42	punctuation.bracket	`(`
+13:42-13:45	constructor	`trm`
+13:42-13:45	local.reference	`trm`
+13:46-13:50	constructor	`tree`
+13:46-13:50	local.reference	`tree`
+13:50-13:51	punctuation.bracket	`)`
+13:51-13:55	operator	` %->`
+13:56-13:57	punctuation.bracket	`(`
+13:57-13:60	constructor	`trm`
+13:57-13:60	local.reference	`trm`
+13:61-13:65	constructor	`tree`
+13:61-13:65	local.reference	`tree`
+13:65-13:66	punctuation.bracket	`)`
+13:66-13:69	keyword.return	` %.`
+14:6-14:8	constructor	`bf`
+14:6-14:8	function	`bf`
+14:6-14:8	local.reference	`bf`
+14:6-14:8	variable.parameter	`bf`
+14:8-14:12	operator	` %pi`
+14:13-14:14	punctuation.bracket	`(`
+14:14-14:17	constructor	`trm`
+14:14-14:17	local.reference	`trm`
+14:18-14:22	constructor	`tree`
+14:18-14:22	local.reference	`tree`
+14:22-14:23	punctuation.bracket	`)`
+14:24-14:27	operator	`%->`
+14:28-14:29	punctuation.bracket	`(`
+14:29-14:32	constructor	`trm`
+14:29-14:32	local.reference	`trm`
+14:33-14:37	constructor	`tree`
+14:33-14:37	local.reference	`tree`
+14:37-14:38	punctuation.bracket	`)`
+14:38-14:42	operator	` %->`
+14:43-14:46	constructor	`atm`
+14:43-14:46	local.reference	`atm`
+14:46-14:49	keyword.return	` %.`
+15:6-15:7	constructor	`n`
+15:6-15:7	function	`n`
+15:6-15:7	local.reference	`n`
+15:6-15:7	variable.parameter	`n`
+15:7-15:11	operator	` %pi`
+15:12-15:13	punctuation.bracket	`(`
+15:13-15:16	constructor	`trm`
+15:13-15:16	local.reference	`trm`
+15:17-15:21	constructor	`tree`
+15:17-15:21	local.reference	`tree`
+15:21-15:22	punctuation.bracket	`)`
+15:23-15:26	operator	`%->`
+15:27-15:28	punctuation.bracket	`(`
+15:28-15:31	constructor	`trm`
+15:28-15:31	local.reference	`trm`
+15:32-15:36	constructor	`tree`
+15:32-15:36	local.reference	`tree`
+15:36-15:37	punctuation.bracket	`)`
+15:37-15:41	operator	` %->`
+15:42-15:45	constructor	`atm`
+15:42-15:45	local.reference	`atm`
+15:45-15:48	keyword.return	` %.`
+16:6-16:9	constructor	`bff`
+16:6-16:9	function	`bff`
+16:6-16:9	local.reference	`bff`
+16:6-16:9	variable.parameter	`bff`
+16:9-16:13	operator	` %pi`
+16:14-16:15	punctuation.bracket	`(`
+16:15-16:18	constructor	`trm`
+16:15-16:18	local.reference	`trm`
+16:19-16:22	constructor	`int`
+16:19-16:22	local.reference	`int`
+16:22-16:23	punctuation.bracket	`)`
+16:24-16:27	operator	`%->`
+16:28-16:31	constructor	`atm`
+16:28-16:31	local.reference	`atm`
+16:31-16:34	keyword.return	` %.`
+17:6-17:9	constructor	`bf0`
+17:6-17:9	function	`bf0`
+17:6-17:9	local.reference	`bf0`
+17:6-17:9	variable.parameter	`bf0`
+17:9-17:14	constructor	` prog`
+17:9-17:14	local.reference	` prog`
+17:58-17:60	keyword.return	`%.`
+18:6-18:13	constructor	`bffdone`
+18:6-18:13	function	`bffdone`
+18:6-18:13	local.reference	`bffdone`
+18:6-18:13	variable.parameter	`bffdone`
+18:13-18:18	constructor	` prog`
+18:13-18:18	local.reference	` prog`
+18:29-18:31	keyword.return	`%.`
+19:6-19:10	constructor	`bffe`
+19:6-19:10	function	`bffe`
+19:6-19:10	local.reference	`bffe`
+19:6-19:10	variable.parameter	`bffe`
+19:10-19:15	constructor	` prog`
+19:10-19:15	local.reference	` prog`
+19:50-19:52	keyword.return	`%.`
+20:6-20:10	constructor	`bfft`
+20:6-20:10	function	`bfft`
+20:6-20:10	local.reference	`bfft`
+20:6-20:10	variable.parameter	`bfft`
+20:10-20:15	constructor	` prog`
+20:10-20:15	local.reference	` prog`
+20:100-20:102	keyword.return	`%.`

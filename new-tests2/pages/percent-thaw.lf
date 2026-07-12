@@ -1,13 +1,13 @@
 %                 
-%{! 
+%[[ 
 The **``%thaw``** directive allows previously [frozen](/wiki/percent-freeze/) type families to be extended with new [canonical forms](/wiki/canonical-form/). Because this can easily be used to invalidate [metatheorem](/wiki/metatheorem/)s, it is a directive that can only be used in [unsafe mode](/wiki/unsafe-mode/).
 
-If Twelf is in unsafe mode, the following code can be run to demonstrate **``%thaw``**: !}%
+If Twelf is in unsafe mode, the following code can be run to demonstrate **``%thaw``**: %]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
 %freeze nat %.
-%{! With `nat` frozen, it's impossible to extend `nat` without error.
+%[[ With `nat` frozen, it's impossible to extend `nat` without error.
 
 ```checkedtwelf
 veryS: nat -> nat -> nat.
@@ -25,4 +25,4 @@ q : nat.
 * [`%freeze`](/wiki/percent-freeze/)
 
 <Keyword />
-!}%
+%]]

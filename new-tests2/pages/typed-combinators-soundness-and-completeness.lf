@@ -1,5 +1,5 @@
 %                                                        
-%{! 
+%[[ 
 
 This is a case study translating the simply-typed lambda calculus into the SKI
 combinator calculus.  The correctness of the translation is proven in the
@@ -8,13 +8,13 @@ are beta-eta equal, and vice versa.
 
 [William Lovas](/wiki/user-william-lovas/)
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Syntax and static semantics
 
-!}%
-%{! 
+%]]
+%[[ 
 
 First we define the syntax of the two languages.  ``term A`` is the
 type of simply-typed lambda-calculus terms of type A; ``comb A`` is
@@ -32,7 +32,7 @@ theorems comparing a natural deduction presentation of propositional logic
 with a Hilbert-style axiomatic presentation, but none of the theorems depend
 on types, and would hold equally well of untyped terms.
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term o tp %.
@@ -54,23 +54,23 @@ on types, and would hold equally well of untyped terms.
 %term k comb (A => B => A) %.
 %term i comb (A => A) %.
 %term capp %pi (comb (A => B)) %-> (comb A) %-> (comb B) %.
-%{! 
+%[[ 
 
 We can use Twelf's [abbreviation mechanism](/wiki/abbrev-declaration/) and
 [fixity declarations](/wiki/fixity-declaration/) to specify convenient infix
 syntax for application.
 
-!}%
+%]]
 %inline @ app %.
 %prec %left 10 @ %.
 %inline @@ capp %.
 %prec %left 10 @@ %.
-%{! 
+%[[ 
 
 ## Equational theory
 
-!}%
-%{! 
+%]]
+%[[ 
 
 Then we define equality relations on both languages.  ``teq`` is
 definitional equality for lambda terms; ``ceq`` is definitional
@@ -78,7 +78,7 @@ equality for combinator terms.  In both cases, the equality relation
 amounts to beta-eta equivalence.  (We use extensionality instead of a
 rule based on eta-expansion.)
 
-!}%
+%]]
 % definitional equality on terms
 %sort teq {_ term A} {_ term A} %.
 % beta
@@ -92,16 +92,16 @@ rule based on eta-expansion.)
 %term eq/refl teq M M %.
 %term eq/symm %pi (teq M M') %<- (teq M' M) %.
 %term eq/trans %pi (teq M M'') %<- (teq M' M'') %<- (teq M M') %.
-%{! 
+%[[ 
 
 Infix syntax for transitivity is convenient when building derivations.
 
-!}%
+%]]
 %inline ; (%pi (teq N N') %-> (teq N' N'') %-> (teq N N'')) [d1] [d2] eq/trans d1 d2 %.
 %prec %right 5 ; %.
 %block term-block {A tp} [x term A]%.
 %worlds (term-block) (teq _ _) %.
-%{!  !}%
+%[[  %]]
 % definitional equality on combs
 %sort ceq {_ comb A} {_ comb A} %.
 % betas
@@ -120,12 +120,12 @@ Infix syntax for transitivity is convenient when building derivations.
 %prec %right 5 ;; %.
 %block comb-block {A tp} [y comb A]%.
 %worlds (comb-block) (ceq _ _) %.
-%{! 
+%[[ 
 
 ## Translation
 
-!}%
-%{! 
+%]]
+%[[ 
 
 We can now define a compositional translation from lambda terms to combinator
 terms in the standard way.  The translation appeals to a function called
@@ -165,7 +165,7 @@ relating LF-level abstractions in the combinator language to closed combinator
 terms, ``bracket ([x] N x) N``.  This definition is essentially an
 instance of [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
 
-!}%
+%]]
 %sort translate {_ term A} {_ comb A} %.
 %mode translate %in %out %.
 %name translate %.
@@ -176,14 +176,14 @@ instance of [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
 	%pi (translate (app M1 M2) (capp N1 N2))
 	%<- (translate M1 N1)
 	%<- (translate M2 N2) %.
-%{! 
+%[[ 
 
 The translation on lambda-abstractions has to work under an extended context
 with a lambda-term variable, a combinator-term variable, and an assumption
 that the one translates to the other.  See the ``%worlds`` declaration
 below.  (The block ``trans-block`` will form the basis of later blocks.)
 
-!}%
+%]]
 %term t/lam 
 	%pi (translate (lam ([x] M x)) N*)
 	%<- ({x term A} {y comb A} %pi (translate x y) %-> (translate (M x) (N y)))
@@ -197,18 +197,18 @@ below.  (The block ``trans-block`` will form the basis of later blocks.)
 %block trans-block {A tp} [x term A] [y comb A] [dtrans translate x y]%.
 %worlds (trans-block) (bracket _ _) %.
 %worlds (trans-block) (translate _ _) %.
-%{! 
+%[[ 
 
 Both relations are effective, though we cannot use this fact in proofs.
 
-!}%
+%]]
 %total N (bracket N _) %.
 %total M (translate M _) %.
-%{! 
+%[[ 
 
 Instead, we need explicitly prove effectiveness lemmas.
 
-!}%
+%]]
 %sort can-bracket {N %pi (comb A) %-> (comb B)} {_ bracket N N*} %.
 %mode can-bracket %in %out %.
 %sort can-translate {M term A} {_ translate M N} %.
@@ -232,17 +232,17 @@ Instead, we need explicitly prove effectiveness lemmas.
 %total N (can-bracket N _) %.
 %worlds (can-block) (can-translate _ _) %.
 %total M (can-translate M _) %.
-%{! 
+%[[ 
 
 ## Correctness of the translation
 
-!}%
-%{! 
+%]]
+%[[ 
 
 First, we prove the correctness of bracket abstraction itself: the
 application of a bracket abstraction is equivalent to a substitution.
 
-!}%
+%]]
 %sort subst {_ bracket ([x] N x) N*} {N0} {_ ceq (capp N* N0) (N N0)} %.
 %mode subst %in %in %out %.
 %term _ subst (%the (bracket ([x] x) i) b/i) N0 (%the (ceq (i @@ N0) N0) ceq/i) %.
@@ -254,12 +254,12 @@ application of a bracket abstraction is equivalent to a substitution.
 	%<- (subst B2 N0 (%the (ceq (N2' @@ N0) (N2 N0)) Dceq2)) %.
 %worlds (comb-block) (subst _ _ _) %.
 %total {B} (subst B _ _) %.
-%{! 
+%[[ 
 
 Next, we need to know that the translation of a term is unique up to
 equivalence.
 
-!}%
+%]]
 %sort translate-unique {_ translate M N} {_ translate M N'} {_ ceq N N'} %.
 %mode translate-unique %in %in %out %.
 %term _ 
@@ -274,14 +274,14 @@ equivalence.
 %block unique-block {A tp} [x term A] [y comb A] [dtrans translate x y] [thm translate-unique dtrans dtrans ceq/refl]%.
 %worlds (unique-block) (translate-unique _ _ _) %.
 %total D (translate-unique D _ _) %.
-%{! 
+%[[ 
 
 Then, we can prove simulation, the correctness of translation, by a
 straightforward induction on equality derivations in the lambda-calculus,
 using the correctness of bracket abstraction as a lemma in the case of a
 beta-reduction.
 
-!}%
+%]]
 %sort simulate {_ translate M N} {_ translate M' N'} {_ teq M M'} {_ ceq N N'} %.
 %mode simulate %in %in %in %out %.
 %term _ 
@@ -314,7 +314,7 @@ beta-reduction.
 %block simulate-block {A tp} [x term A] [y comb A] [dtrans translate x y] [thm-can can-translate x dtrans] [thm-unique translate-unique dtrans dtrans ceq/refl]%.
 %worlds (simulate-block) (simulate _ _ _ _) %.
 %total D (simulate _ _ D _) %.
-%{! 
+%[[ 
 
 ## Backward translation
 
@@ -326,7 +326,7 @@ to the original input term.
 Reification just replaces combinators with their definitions as
 lambda terms.
 
-!}%
+%]]
 %sort reify {_ comb A} {_ term A} %.
 %name reify %.
 %mode reify %in %out %.
@@ -334,24 +334,24 @@ lambda terms.
 %term r/k reify k (lam ([x] lam ([y] x))) %.
 %term r/i reify i (lam ([x] x)) %.
 %term r/capp %pi (reify (N1 @@ N2) (M1 @ M2)) %<- (reify N1 M1) %<- (reify N2 M2) %.
-%{! 
+%[[ 
 
 We consider reification in any world with free variables as long as there's
 a combinator variable for each lambda-term variable and an appropriate
 correspondence between them.
 
-!}%
+%]]
 %block reify-block {A tp} [x term A] [y comb A] [dreify reify y x]%.
 %worlds (reify-block) (reify _ _) %.
-%{! 
+%[[ 
 
 Twelf can verify that reification is total and that the result is unique
 up to identity,
 
-!}%
+%]]
 %total N (reify N _) %.
 %unique reify %in %out %.
-%{! 
+%[[ 
 
 but in order to use these facts in other metatheorems, we must prove them
 ourselves.
@@ -359,7 +359,7 @@ ourselves.
 The theorem ``can-reify`` shows the effectiveness of reification by
 constructing a ``reify`` derivation for any given combinator ``N``.
 
-!}%
+%]]
 %sort can-reify {N comb A} {_ reify N M} %.
 %mode can-reify %in %out %.
 %term _ can-reify s r/s %.
@@ -369,23 +369,23 @@ constructing a ``reify`` derivation for any given combinator ``N``.
 	%pi (can-reify (capp N1 N2) (r/capp Dreify2 Dreify1))
 	%<- (can-reify N1 Dreify1)
 	%<- (can-reify N2 Dreify2) %.
-%{! 
+%[[ 
 
 Note the use of a _theorem case_ in the block for ``can-reify``:
 since we prove reification with respect to an open world, we have to include
 proofs for the free variable cases.
 
-!}%
+%]]
 %block can-reify-block {A tp} [x term A] [y comb A] [dreify reify y x] [thm can-reify y dreify]%.
 %worlds (can-reify-block) (can-reify _ _) %.
 %total N (can-reify N _) %.
-%{! 
+%[[ 
 
 The theorem ``reify-unique`` shows the uniqueness of reification.
 For convenience, we demonstrate only that reifications are unique up to
 term equivalence.
 
-!}%
+%]]
 %sort reify-unique {_ reify N M} {_ reify N M'} {_ teq M M'} %.
 %mode reify-unique %in %in %out %.
 %term _ reify-unique r/i r/i eq/refl %.
@@ -398,12 +398,12 @@ term equivalence.
 %block reify-unique-block {A tp} [x term A] [y comb A] [dreify reify y x] [thm reify-unique dreify dreify eq/refl]%.
 %worlds (reify-unique-block) (reify-unique _ _ _) %.
 %total D (reify-unique D _ _) %.
-%{! 
+%[[ 
 
 The reification of a closed combinator term is a closed lambda-term, but
 we require the following strengthening lemma to show that this is the case.
 
-!}%
+%]]
 %sort strengthen-reify {_ {x} {y} %pi (reify y x) %-> (reify N (M! x))} {_ reify N M} {_ {x} teq M (M! x)} %.
 %mode strengthen-reify %in %out %out %.
 %term _ strengthen-reify ([x] [y] [dreify reify y x] r/s) r/s ([x] eq/refl) %.
@@ -416,7 +416,7 @@ we require the following strengthening lemma to show that this is the case.
 %block strengthen-reify-block {A tp} [x term A] [y comb A] [dreify reify y x] [thm {B tp} strengthen-reify ([x1 term B] [y1 comb B] [dreify1] dreify) dreify ([x1] eq/refl)]%.
 %worlds (strengthen-reify-block) (strengthen-reify _ _ _) %.
 %total D (strengthen-reify D _ _) %.
-%{! 
+%[[ 
 
 ## Correctness of the backward translation
 
@@ -425,38 +425,38 @@ of ``M`` has a reification to an equivalent ``M'``.  First, we show
 the following lemma, which says that bracket abstractions reify to lambda
 abstractions.
 
-!}%
+%]]
 %sort bracket-reify {_ bracket ([y] N y) N*} {_ {x} {y} %pi (reify y x) %-> (reify (N y) (M x))} {_ reify N* M*} {_ teq M* (lam ([x] M x))} %.
 %mode bracket-reify %in %in %out %out %.
 %term _ bracket-reify (%the (bracket ([y] y) i) b/i) ([x] [y] [dreify reify y x] dreify) (%the (reify i (lam ([x] x))) r/i) (%the (teq (lam ([x] x)) (lam ([x] x))) eq/refl) %.
-%{! 
+%[[ 
 
 In the case where bracket abstraction returns an application of the K
 combinator to a closed term, we require our strengthening lemma to show
 that the result of reification is also closed.
 
-!}%
+%]]
 %term _ 
 	%pi (bracket-reify (%the (bracket ([y] N) (k @@ N)) b/k) ([x] [y] [dreify reify y x] %the (reify N (M! x)) (Dreify! x y dreify)) (%the (reify (k @@ N) (lam ([x] lam ([y] x)) @ M)) (r/capp Dreify r/k)) (%the (teq (lam ([x] lam ([y] x)) @ M) (lam ([y] M! y))) (eq/beta ; eq/lam ([x] Deq x))))
 	%<- (strengthen-reify ([x] [y] [dreify reify y x] Dreify! x y dreify) (%the (reify N M) Dreify) ([x] %the (teq M (M! x)) (Deq x))) %.
-%{! 
+%[[ 
 
 The case for reifying an application of the S combinator is tedious, but
 straightforward.
 
-!}%
+%]]
 %term _ 
 	%pi (bracket-reify (%the (bracket ([y] N1 y @@ (N2 y)) (s @@ N1* @@ N2*)) (b/s (%the (bracket ([y] N2 y) N2*) Dbrack2) (%the (bracket ([y] N1 y) N1*) Dbrack1))) ([x] [y] [dreify reify y x] %the (reify (N1 y @@ (N2 y)) (M1 x @ (M2 x))) (r/capp (%the (reify (N2 y) (M2 x)) (Dreify2 x y dreify)) (%the (reify (N1 y) (M1 x)) (Dreify1 x y dreify)))) (%the (reify (s @@ N1* @@ N2*) (lam ([x] lam ([y] lam ([z] x @ z @ (y @ z)))) @ M1* @ M2*)) (r/capp (%the (reify N2* M2*) Dreify2*) (r/capp (%the (reify N1* M1*) Dreify1*) r/s))) (%the (teq (lam ([x] lam ([y] lam ([z] x @ z @ (y @ z)))) @ M1* @ M2*) (lam ([z] M1 z @ (M2 z)))) (eq/app (%the (teq M2* M2*) eq/refl) eq/beta ; eq/beta ; eq/lam ([x] eq/app (%the (teq (M2* @ x) (M2 x)) (eq/app (%the (teq x x) eq/refl) Deq2* ; eq/beta)) (%the (teq (M1* @ x) (M1 x)) (eq/app (%the (teq x x) eq/refl) Deq1* ; eq/beta))))))
 	%<- (bracket-reify Dbrack1 ([x] [y] [dreify reify y x] Dreify1 x y dreify) (%the (reify N1* M1*) Dreify1*) (%the (teq M1* (lam ([z] M1 z))) Deq1*))
 	%<- (bracket-reify Dbrack2 ([x] [y] [dreify reify y x] Dreify2 x y dreify) (%the (reify N2* M2*) Dreify2*) (%the (teq M2* (lam ([z] M2 z))) Deq2*)) %.
 %worlds (strengthen-reify-block) (bracket-reify _ _ _ _) %.
 %total D (bracket-reify D _ _ _) %.
-%{! 
+%[[ 
 
 Now we can prove that every translation reifies to an equivalent term,
 appealing to the above bracket abstraction lemma in the ``lam`` case.
 
-!}%
+%]]
 %sort translate-reify {_ translate M N} {_ reify N M'} {_ teq M M'} %.
 %mode translate-reify %in %out %out %.
 %term _ 
@@ -470,13 +470,13 @@ appealing to the above bracket abstraction lemma in the ``lam`` case.
 %block translate-reify-block {A tp} [x term A] [y comb A] [dtrans translate x y] [dreify reify y x] [thm-closed {B tp} strengthen-reify ([x1 term B] [y1 comb B] [dreify1] dreify) dreify ([x1] eq/refl)] [thm-translate translate-reify dtrans dreify eq/refl]%.
 %worlds (translate-reify-block) (translate-reify _ _ _) %.
 %total D (translate-reify D _ _) %.
-%{! 
+%[[ 
 
 Next, we prove a theorem similar to our earlier ``simulate`` theorem,
 but for reification: given two reification derivations from equivalent inputs,
 their outputs are equivalent.
 
-!}%
+%]]
 %sort reify-simulate {_ reify N M} {_ reify N' M'} {_ ceq N N'} {_ teq M M'} %.
 %mode reify-simulate %in %in %in %out %.
 %term _ 
@@ -512,7 +512,7 @@ their outputs are equivalent.
 %block reify-simulate-block {A tp} [x term A] [y comb A] [dreify reify y x] [thm-can can-reify y dreify] [thm-unique reify-unique dreify dreify eq/refl]%.
 %worlds (reify-simulate-block) (reify-simulate _ _ _ _) %.
 %total D (reify-simulate _ _ D _) %.
-%{! 
+%[[ 
 
 Finally, we can now prove the translation complete: every combinator
 equivalence hit by the translation comes from a lambda-calculus equivalence.
@@ -521,7 +521,7 @@ Given two translations, we get reifications for both.  By the above simulation
 theorem, we show that the reifications must be equal.  Then the desired result
 follows by transitivity.
 
-!}%
+%]]
 %sort complete {_ translate M N} {_ translate M' N'} {_ ceq N N'} {_ teq M M'} %.
 %mode complete %in %in %in %out %.
 %term _ 
@@ -529,18 +529,18 @@ follows by transitivity.
 	%<- (translate-reify Dtrans (%the (reify N M0) Dreify) (%the (teq M M0) Deq))
 	%<- (translate-reify Dtrans' (%the (reify N' M0') Dreify') (%the (teq M' M0') Deq'))
 	%<- (reify-simulate Dreify Dreify' Dceq (%the (teq M0 M0') Deq0)) %.
-%{! 
+%[[ 
 
 We can also make a copy of ``simulate`` called ``sound``, in order
 to be able check it in the same world as ``complete``.
 
-!}%
+%]]
 %sort sound {_ translate M N} {_ translate M' N'} {_ teq M M'} {_ ceq N N'} %.
 %mode sound %in %in %in %out %.
 %term _ 
 	%pi (sound (%the (translate M N) Dtrans) (%the (translate M' N') Dtrans') (%the (teq M M') Deq) Dceq)
 	%<- (simulate Dtrans Dtrans' Deq (%the (ceq N N') Dceq)) %.
-%{! 
+%[[ 
 
 We can make a master-block in which each of soundness and completeness hold.
 Terms under translation can have any free variables x, as long as they are
@@ -551,15 +551,15 @@ these new translation and reification assumptions.
 Note that for world subsumption to work correctly, it was necessary to always
 state x and y in the same order, even in the reification theorems.
 
-!}%
+%]]
 %block master-block {A tp} [x term A] [y comb A] [dtrans translate x y] [thm-can-tr can-translate x dtrans] [thm-tr-unique translate-unique dtrans dtrans ceq/refl] [dreify reify y x] [thm-can-re can-reify y dreify] [thm-re-unique reify-unique dreify dreify eq/refl] [thm-re-closed {B tp} strengthen-reify ([x1 term B] [y1 comb B] [dreify1] dreify) dreify ([x1] eq/refl)] [thm-tr-re translate-reify dtrans dreify eq/refl]%.
 %worlds (master-block) (complete _ _ _ _) %.
 %total () (complete _ _ _ _) %.
 %worlds (master-block) (sound _ _ _ _) %.
 %total () (sound _ _ _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Typed_combinators_soundness_and_completeness).
-!}%
+%]]

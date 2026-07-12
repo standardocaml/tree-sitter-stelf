@@ -1,5 +1,5 @@
 %                                                                         
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Type safety for MinML (intrinsic encoding)
@@ -14,16 +14,16 @@ Type safety for MinML: call-by-value, with recursive functions, in extrinsic for
 
 Types:
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term nat tp %.
 %term arr %pi tp %-> tp %-> tp %.
-%{! 
+%[[ 
 
 Raw expressions, which admit ill-typed terms
 
-!}%
+%]]
 %sort exp %.
 %name exp %.
 %term z exp %.
@@ -31,13 +31,13 @@ Raw expressions, which admit ill-typed terms
 %term ifz %pi exp %-> exp %-> (%pi exp %-> exp) %-> exp %.
 %term fun %pi tp %-> tp %-> (%pi exp %-> exp %-> exp) %-> exp %.
 %term app %pi exp %-> exp %-> exp %.
-%{! 
+%[[ 
 
 ## Static semantics
 
 A judgement picking out the well-typed terms:
 
-!}%
+%]]
 %sort of {_ exp} {_ tp} %.
 %name of %.
 %mode of %in %out %.
@@ -52,11 +52,11 @@ A judgement picking out the well-typed terms:
 	%pi (of (fun T1 T2 ([f] [x] E f x)) (arr T1 T2))
 	%<- ({f exp} %pi (of f (arr T1 T2)) %-> ({x exp} %pi (of x T1) %-> (of (E f x) T2))) %.
 %term of/app %pi (of (app E1 E2) T) %<- (of E1 (arr T2 T)) %<- (of E2 T2) %.
-%{! 
+%[[ 
 
 ## Dynamic semantics
 
-!}%
+%]]
 %sort value {_ exp} %.
 %name value %.
 %mode value %in %.
@@ -75,14 +75,14 @@ A judgement picking out the well-typed terms:
 %term step/app/beta-v 
 	%pi (step (app (fun T1 T2 ([f] [x] E f x)) E2) (E (fun T1 T2 ([f] [x] E f x)) E2))
 	%<- (value E2) %.
-%{! 
+%[[ 
 
 ## Preservation
 
 With this encoding, we have to prove preservation explicitly, as the
 type of ``step`` doesn't guarantee it.
 
-!}%
+%]]
 %sort pres {_ step E E'} {_ of E T} {_ of E' T} %.
 %name pres %.
 %mode pres %in %in %out %.
@@ -101,20 +101,20 @@ type of ``step`` doesn't guarantee it.
 %term _ pres (step/app/beta-v _) (of/app Dof2 (of/fun ([f] [df] [x] [dx] Dof1 f df x dx))) (Dof1 _ (of/fun ([f] [df] [x] [dx] Dof1 f df x dx)) _ Dof2) %.
 %worlds () (pres Dstep Dof Dof') %.
 %total Dstep (pres Dstep _ _) %.
-%{! 
+%[[ 
 
 ## Progress
 
-!}%
+%]]
 %sort val-or-step {_ exp} %.
 %name val-or-step %.
 %term vos/val %pi (val-or-step E) %<- (value E) %.
 %term vos/step %pi (val-or-step E) %<- (step E _) %.
-%{! 
+%[[ 
 
 ### [Factoring lemmas](/wiki/output-factoring/)
 
-!}%
+%]]
 %sort prog/s {_ val-or-step E} {_ val-or-step (s E)} %.
 %mode prog/s %in %out %.
 %term _ prog/s (vos/step Dstep) (vos/step (step/s Dstep)) %.
@@ -135,11 +135,11 @@ type of ``step`` doesn't guarantee it.
 %term _ prog/app _ (vos/val Dval1) (vos/val Dval2) (step/app/beta-v Dval2) %.
 %worlds () (prog/app _ _ _ _) %.
 %total () (prog/app _ _ _ _) %.
-%{! 
+%[[ 
 
 ### Main theorem
 
-!}%
+%]]
 %sort prog {_ of E T} {_ val-or-step E} %.
 %name prog %.
 %mode prog %in %out %.
@@ -157,32 +157,32 @@ type of ``step`` doesn't guarantee it.
 	%<- (prog/app Dof1 Dvos1 Dvos2 Dstep) %.
 %worlds () (prog _ _) %.
 %total Dof (prog Dof _) %.
-%{! 
+%[[ 
 
 And thus we have proved type safety for minml!
 
 ## Examples
 
-!}%
+%]]
 %inline plus (exp) fun nat (arr nat nat) ([plus] [x] ifz x (fun nat nat ([_] [y] y)) ([predx] fun nat nat ([_] [y] s (app (app plus predx) y)))) %.
 %solve D : of plus T %.
 %inline mult (exp) fun nat (arr nat nat) ([mult] [x] fun nat nat ([_] [y] ifz y z ([predy] app (app plus x) (app (app mult x) predy)))) %.
 %solve Dmult : of mult T %.
 %inline fact (exp) fun nat nat ([fact] [x] ifz x (s z) ([predx] app (app mult x) (app fact predx))) %.
-%{! 
-|check="decl" !}%
+%[[ 
+|check="decl" %]]
 %solve Dfact : of fact T %.
-%{!  !}%
+%[[  %]]
 %sort stepv {_ exp} {_ exp} %.
 %term stepv/v %pi (stepv E E) %<- (value E) %.
 %term stepv/s %pi (stepv E E'') %<- (step E E') %<- (stepv E' E'') %.
 %solve D : stepv (app (app plus (s (s z))) (s (s z))) E %.
 %solve D : stepv (app (app mult (s (s (s z)))) (s (s z))) E %.
-%{! 
-|check="decl" !}%
+%[[ 
+|check="decl" %]]
 %solve D : stepv (app fact (s (s (s z)))) E %.
-%{!  !}%
-%{! 
+%[[  %]]
+%[[ 
 
 \{\{Summer school 2008
   |prev=Type safety for MinML (intrinsic encoding)
@@ -191,10 +191,10 @@ And thus we have proved type safety for minml!
   |nextname=Exercises 3
 \}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Type_safety_for_MinML_(extrinsic_encoding)).
-!}%
+%]]

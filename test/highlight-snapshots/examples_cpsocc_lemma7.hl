@@ -1,0 +1,194 @@
+0:0-0:70	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+1:0-1:64	comment	`%%%%% Lemma 7 : Preservation of cont-validity under substitution`
+2:0-2:70	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:15	constructor	`lemma7_2b`
+3:6-3:15	local.reference	`lemma7_2b`
+3:6-3:15	type	`lemma7_2b`
+3:72-3:74	keyword.return	`%.`
+3:74-4:5	keyword.type	``
+4:6-4:15	constructor	`lemma7_2d`
+4:6-4:15	local.reference	`lemma7_2d`
+4:6-4:15	type	`lemma7_2d`
+4:72-4:74	keyword.return	`%.`
+5:6-5:15	constructor	`lemma7_2b`
+5:6-5:15	local.reference	`lemma7_2b`
+5:15-5:19	keyword.modifier	` %in`
+5:19-5:23	keyword.modifier	` %in`
+5:23-5:28	keyword.modifier	` %out`
+5:28-5:31	keyword.return	` %.`
+6:6-6:15	constructor	`lemma7_2d`
+6:6-6:15	local.reference	`lemma7_2d`
+6:15-6:19	keyword.modifier	` %in`
+6:19-6:23	keyword.modifier	` %in`
+6:23-6:28	keyword.modifier	` %out`
+6:28-6:31	keyword.return	` %.`
+7:6-7:20	constructor	`lemma7_2b_capp`
+7:6-7:20	function	`lemma7_2b_capp`
+7:6-7:20	local.reference	`lemma7_2b_capp`
+7:6-7:20	variable.parameter	`lemma7_2b_capp`
+7:20-8:4	operator	``
+8:5-8:6	punctuation.bracket	`(`
+8:6-8:15	constructor	`lemma7_2b`
+8:6-8:15	local.reference	`lemma7_2b`
+8:16-8:20	constructor	`CVC'`
+8:16-8:20	local.reference	`CVC'`
+8:21-8:22	punctuation.bracket	`(`
+8:22-8:31	constructor	`cval_capp`
+8:22-8:31	local.reference	`cval_capp`
+8:32-8:35	constructor	`CVC`
+8:32-8:35	local.reference	`CVC`
+8:36-8:40	constructor	`CVT0`
+8:36-8:40	local.reference	`CVT0`
+8:41-8:45	constructor	`CVT1`
+8:41-8:45	local.reference	`CVT1`
+8:45-8:46	punctuation.bracket	`)`
+8:47-8:48	punctuation.bracket	`(`
+8:48-8:57	constructor	`cval_capp`
+8:48-8:57	local.reference	`cval_capp`
+8:58-8:68	constructor	`CVCreplC'k`
+8:58-8:68	local.reference	`CVCreplC'k`
+8:69-8:73	constructor	`CVT0`
+8:69-8:73	local.reference	`CVT0`
+8:74-8:78	constructor	`CVT1`
+8:74-8:78	local.reference	`CVT1`
+8:78-8:79	punctuation.bracket	`)`
+8:79-8:80	punctuation.bracket	`)`
+9:1-9:4	operator	`%<-`
+9:5-9:6	punctuation.bracket	`(`
+9:6-9:15	constructor	`lemma7_2d`
+9:6-9:15	local.reference	`lemma7_2d`
+9:16-9:20	constructor	`CVC'`
+9:16-9:20	local.reference	`CVC'`
+9:21-9:24	constructor	`CVC`
+9:21-9:24	local.reference	`CVC`
+9:25-9:35	constructor	`CVCreplC'k`
+9:25-9:35	local.reference	`CVCreplC'k`
+9:35-9:36	punctuation.bracket	`)`
+9:36-9:39	keyword.return	` %.`
+10:6-10:20	constructor	`lemma7_2b_cret`
+10:6-10:20	function	`lemma7_2b_cret`
+10:6-10:20	local.reference	`lemma7_2b_cret`
+10:6-10:20	variable.parameter	`lemma7_2b_cret`
+10:20-11:4	operator	``
+11:5-11:6	punctuation.bracket	`(`
+11:6-11:15	constructor	`lemma7_2b`
+11:6-11:15	local.reference	`lemma7_2b`
+11:16-11:20	constructor	`CVC'`
+11:16-11:20	local.reference	`CVC'`
+11:21-11:22	punctuation.bracket	`(`
+11:22-11:31	constructor	`cval_cret`
+11:22-11:31	local.reference	`cval_cret`
+11:32-11:35	constructor	`CVC`
+11:32-11:35	local.reference	`CVC`
+11:36-11:38	constructor	`CT`
+11:36-11:38	local.reference	`CT`
+11:38-11:39	punctuation.bracket	`)`
+11:40-11:41	punctuation.bracket	`(`
+11:41-11:50	constructor	`cval_cret`
+11:41-11:50	local.reference	`cval_cret`
+11:51-11:61	constructor	`CVCreplC'k`
+11:51-11:61	local.reference	`CVCreplC'k`
+11:62-11:64	constructor	`CT`
+11:62-11:64	local.reference	`CT`
+11:64-11:65	punctuation.bracket	`)`
+11:65-11:66	punctuation.bracket	`)`
+12:1-12:4	operator	`%<-`
+12:5-12:6	punctuation.bracket	`(`
+12:6-12:15	constructor	`lemma7_2d`
+12:6-12:15	local.reference	`lemma7_2d`
+12:16-12:20	constructor	`CVC'`
+12:16-12:20	local.reference	`CVC'`
+12:21-12:24	constructor	`CVC`
+12:21-12:24	local.reference	`CVC`
+12:25-12:35	constructor	`CVCreplC'k`
+12:25-12:35	local.reference	`CVCreplC'k`
+12:35-12:36	punctuation.bracket	`)`
+12:36-12:39	keyword.return	` %.`
+13:6-13:17	constructor	`lemma7_2d_k`
+13:6-13:17	function	`lemma7_2d_k`
+13:6-13:17	local.reference	`lemma7_2d_k`
+13:6-13:17	variable.parameter	`lemma7_2d_k`
+13:17-13:27	constructor	` lemma7_2d`
+13:17-13:27	local.reference	` lemma7_2d`
+13:27-13:32	constructor	` CVC'`
+13:27-13:32	local.reference	` CVC'`
+13:32-13:39	constructor	` cval_k`
+13:32-13:39	local.reference	` cval_k`
+13:39-13:44	constructor	` CVC'`
+13:39-13:44	local.reference	` CVC'`
+13:44-13:47	keyword.return	` %.`
+14:6-14:20	constructor	`lemma7_2d_vlam`
+14:6-14:20	function	`lemma7_2d_vlam`
+14:6-14:20	local.reference	`lemma7_2d_vlam`
+14:6-14:20	variable.parameter	`lemma7_2d_vlam`
+14:20-15:4	operator	``
+15:5-15:6	punctuation.bracket	`(`
+15:6-15:15	constructor	`lemma7_2d`
+15:6-15:15	local.reference	`lemma7_2d`
+15:16-15:20	constructor	`CVC'`
+15:16-15:20	local.reference	`CVC'`
+15:21-15:22	punctuation.bracket	`(`
+15:22-15:31	constructor	`cval_vlam`
+15:22-15:31	local.reference	`cval_vlam`
+15:32-15:35	constructor	`CVE`
+15:32-15:35	local.reference	`CVE`
+15:35-15:36	punctuation.bracket	`)`
+15:37-15:38	punctuation.bracket	`(`
+15:38-15:47	constructor	`cval_vlam`
+15:38-15:47	local.reference	`cval_vlam`
+15:48-15:58	constructor	`CVEreplC'k`
+15:48-15:58	local.reference	`CVEreplC'k`
+15:58-15:59	punctuation.bracket	`)`
+15:59-15:60	punctuation.bracket	`)`
+16:1-16:4	operator	`%<-`
+16:5-16:6	punctuation.bracket	`(`
+16:6-16:6	local.reference	``
+16:6-16:6	operator	``
+16:6-16:7	punctuation.bracket	`{`
+16:7-16:8	constructor	`v`
+16:7-16:8	local.reference	`v`
+16:7-16:8	variable.parameter	`v`
+16:9-16:14	constructor	`ctriv`
+16:9-16:14	local.reference	`ctriv`
+16:14-16:15	punctuation.bracket	`}`
+16:15-16:15	local.reference	``
+16:15-16:15	operator	``
+16:16-16:17	punctuation.bracket	`{`
+16:17-16:20	constructor	`cvv`
+16:17-16:20	local.reference	`cvv`
+16:17-16:20	variable.parameter	`cvv`
+16:21-16:26	constructor	`cvalT`
+16:21-16:26	local.reference	`cvalT`
+16:27-16:28	constructor	`v`
+16:27-16:28	local.reference	`v`
+16:28-16:29	punctuation.bracket	`}`
+16:30-16:39	constructor	`lemma7_2b`
+16:30-16:39	local.reference	`lemma7_2b`
+16:40-16:44	constructor	`CVC'`
+16:40-16:44	local.reference	`CVC'`
+16:45-16:46	punctuation.bracket	`(`
+16:46-16:49	constructor	`CVE`
+16:46-16:49	local.reference	`CVE`
+16:50-16:51	constructor	`v`
+16:50-16:51	local.reference	`v`
+16:52-16:55	constructor	`cvv`
+16:52-16:55	local.reference	`cvv`
+16:55-16:56	punctuation.bracket	`)`
+16:57-16:58	punctuation.bracket	`(`
+16:58-16:68	constructor	`CVEreplC'k`
+16:58-16:68	local.reference	`CVEreplC'k`
+16:69-16:70	constructor	`v`
+16:69-16:70	local.reference	`v`
+16:71-16:74	constructor	`cvv`
+16:71-16:74	local.reference	`cvv`
+16:74-16:75	punctuation.bracket	`)`
+16:75-16:76	punctuation.bracket	`)`
+16:76-16:79	keyword.return	` %.`
+17:12-17:13	punctuation.bracket	`(`
+17:13-17:16	constructor	`CVE`
+17:13-17:16	local.reference	`CVE`
+17:17-17:20	constructor	`CVC`
+17:17-17:20	local.reference	`CVC`
+17:20-17:21	punctuation.bracket	`)`
+17:62-17:64	keyword.return	`%.`

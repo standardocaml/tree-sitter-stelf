@@ -1,5 +1,5 @@
 %                        
-%{! 
+%[[ 
 
 Twelf is a very flexible system that lends itself to a wide variety of [deductive systems](/wiki/object-logic/). This flexibility can be confusing, as different uses of Twelf look very different from one another. Here, we attempt to describe a number of the major modes of use of Twelf.
 
@@ -14,7 +14,7 @@ Most large projects integrate several of these modes of use. There are some limi
 
 The "theorem style" use of Twelf described in Andrew Appel's notes defines a deductive system, typically a **logic**: first a set of propositions (propositions often have type ``o`` for historical reasons), and then axioms about how propositions can be proven. Appel's FPCC project uses higher-order logic, but here we define a much simpler propositional logic.
 
-!}%
+%]]
 %sort o %.
 % Propositions
 %term true o %.
@@ -30,19 +30,19 @@ The "theorem style" use of Twelf described in Andrew Appel's notes defines a ded
 %term and-i %pi (pf A) %-> (pf B) %-> (pf (A and B)) %.
 %term and-e1 %pi (pf (A and B)) %-> (pf A) %.
 %term and-e2 %pi (pf (A and B)) %-> (pf B) %.
-%{! Having defined this a logic, the point of the exercise is to write out proofs by hand (perhaps with the assistance of [tactical theorem proving](/wiki/tactical-theorem-proving/)). These proofs can then be automatically verified by Twelf, or by an extremely small independent checker.
+%[[ Having defined this a logic, the point of the exercise is to write out proofs by hand (perhaps with the assistance of [tactical theorem proving](/wiki/tactical-theorem-proving/)). These proofs can then be automatically verified by Twelf, or by an extremely small independent checker.
 
-Here are some examples from the first lecture of Hints on Proving Theorems in Twelf: !}%
+Here are some examples from the first lecture of Hints on Proving Theorems in Twelf: %]]
 %define symm-and (%pi (pf (A and B)) %-> (pf (B and A))) [p1 pf (A and B)] and-i (and-e2 p1) (and-e1 p1) %.
 %define and-l (%pi (pf (A and B)) %-> (%pi (pf A) %-> (pf B) %-> (pf C)) %-> (pf C)) [p1 pf (A and B)] [p2 %pi (pf A) %-> (pf B) %-> (pf C)] imp-e (imp-e (imp-i ([p3] imp-i (p2 p3))) (and-e1 p1)) (and-e2 p1) %.
 %define example-abc (%pi (pf (A and B)) %-> (pf C) %-> (pf (B and C and (A and C)))) [p1 pf (A and B)] [p2 pf C] and-l p1 ([p3 pf A] [p4 pf B] and-i (and-i p4 p2) (and-i p3 p2)) %.
-%{! Even this logic allows us to prove a number of interesting theorems; the definition of a more complex logic (without much commentary)  can be found at [Zermelo Frankel](/wiki/zermelo-frankel/).
+%[[ Even this logic allows us to prove a number of interesting theorems; the definition of a more complex logic (without much commentary)  can be found at [Zermelo Frankel](/wiki/zermelo-frankel/).
 
 
 ## Proving properties about deductive systems
 
 The "metatheorem style" use of Twelf defines a deductive system, typically a **programming language**: first the abstract syntax of the language, and then the static and dynamic semantics. Here is an example of a simple lambda calculus with product types (we don't define the dynamic semantics here, see \{\{proving|title=Representing the judgements of the STLC\}\} for a similar example). 
-!}%
+%]]
 %sort exp %.
 %sort tp %.
 % Expressions
@@ -71,7 +71,7 @@ The "metatheorem style" use of Twelf defines a deductive system, typically a **p
 % Dynamic semantics
 %sort step {_ exp} {_ exp} %.
 % ... and so on
-%{! 
+%[[ 
 
 Having defined this programming language, we are generally interested in proving [metatheorems](/wiki/metatheorem/) relating that programming language to a particular dynamic semantics - showing, for instance, that a certain evaluation strategy will preserve the type of the terms it evaluates, and that if a closed can be given a type, it can either be reduced or it is already a value. We also may be interested in using the [logic programming](/wiki/logic-programming/) engine of Twelf to _run_ our typing judgments as a logic program, giving our language a reference type checker.
 
@@ -80,10 +80,10 @@ Having defined this programming language, we are generally interested in proving
 
 
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Modes_of_use).
-!}%
+%]]

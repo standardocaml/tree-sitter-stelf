@@ -1,11 +1,11 @@
 %                                         
-%{! _This page is a style guide for contributions to the Twelf Project Wiki. For a style guide for writing Twelf itself, see [Style guide](/wiki/twelf-style-guide/)_
+%[[ _This page is a style guide for contributions to the Twelf Project Wiki. For a style guide for writing Twelf itself, see [Style guide](/wiki/twelf-style-guide/)_
 
 ## Basic style points
 
 * _Twelf_ is always capitalized.
-* Always snippets of code more than one line long inside &lt;nowiki&gt; !}%
-%{! &lt;/nowiki&gt; tags. Constants, names of lemmas, and keywords like ``%total`` should be displayed in fixed-width fonts by inserting them into &lt;nowiki&gt;````&lt;/nowiki&gt; tags.
+* Always snippets of code more than one line long inside &lt;nowiki&gt; %]]
+%[[ &lt;/nowiki&gt; tags. Constants, names of lemmas, and keywords like ``%total`` should be displayed in fixed-width fonts by inserting them into &lt;nowiki&gt;````&lt;/nowiki&gt; tags.
 * Use lowercase for the titles of pages and &lt;nowiki&gt;==Section headers==&lt;/nowiki&gt;, except for the first character or where English otherwise requires capitalization. (Article titles are case-sensitive except for the first character.) This facilitates linking pages inline, such as "The %trustme declaration is often used to develop proofs with [holes in metatheorems](/wiki/incremental-metatheorem-development/)."
 
 ## Word usage
@@ -31,8 +31,8 @@ You can leave templates on pages by adding the tag &lt;nowiki&gt;\{\{template\}\
 
 ### Working with code (syntax highlighting)
 
-The Twelf Project has syntax highlighting enabled for most major programming languages, and has a custom module that can decently highlight most normal Twelf code. The short version is that you should surround any Twelf code you post with &lt;nowiki&gt; !}%
-%{! &lt;/nowiki&gt; tags. If you want things to be unhighlighted but still in monospaced, pre-formatted form, you can surround the content with &lt;nowiki&gt;&lt;code&gt;&lt;/code&gt;&lt;/nowiki&gt; tags.
+The Twelf Project has syntax highlighting enabled for most major programming languages, and has a custom module that can decently highlight most normal Twelf code. The short version is that you should surround any Twelf code you post with &lt;nowiki&gt; %]]
+%[[ &lt;/nowiki&gt; tags. If you want things to be unhighlighted but still in monospaced, pre-formatted form, you can surround the content with &lt;nowiki&gt;&lt;code&gt;&lt;/code&gt;&lt;/nowiki&gt; tags.
 
 The full story can be found at [[Project:Syntax Highlighting]].
 
@@ -76,10 +76,10 @@ You can add code that can be thought of as "standard library"-style code and can
 
 [http://cvresumewritingservices.org buy resume]
 
-[http://perfectessay.ca/ buy essay] !}%
-%{!
+[http://perfectessay.ca/ buy essay] %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/The_Twelf_Project:Style_guide).
-!}%
+%]]

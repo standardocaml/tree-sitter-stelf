@@ -1,0 +1,338 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:22	comment	`%%% inversion-prog.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:37	comment	`%%% Store Typing Inversion (Progress)`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword.type	`%sort`
+6:6-6:29	constructor	`prog_|-st_inversion_aux`
+6:6-6:29	local.reference	`prog_|-st_inversion_aux`
+6:6-6:29	type	`prog_|-st_inversion_aux`
+6:131-6:133	keyword.return	`%.`
+7:6-7:29	constructor	`prog_|-st_inversion_aux`
+7:6-7:29	local.reference	`prog_|-st_inversion_aux`
+7:29-7:33	keyword.modifier	` %in`
+7:33-7:37	keyword.modifier	` %in`
+7:37-7:41	keyword.modifier	` %in`
+7:41-7:45	keyword.modifier	` %in`
+7:45-7:50	keyword.modifier	` %out`
+7:50-7:55	keyword.modifier	` %out`
+7:55-7:58	keyword.return	` %.`
+8:7-8:30	constructor	`prog_|-st_inversion_aux`
+8:7-8:30	local.reference	`prog_|-st_inversion_aux`
+8:7-8:30	module	`prog_|-st_inversion_aux`
+8:31-8:36	keyword	`%term`
+8:37-8:40	constructor	`hit`
+8:37-8:40	function	`hit`
+8:37-8:40	local.reference	`hit`
+8:37-8:40	variable.parameter	`hit`
+8:40-9:4	operator	``
+9:5-9:6	punctuation.bracket	`(`
+9:6-9:29	constructor	`prog_|-st_inversion_aux`
+9:6-9:29	local.reference	`prog_|-st_inversion_aux`
+9:30-9:35	constructor	`DSTWf`
+9:30-9:35	local.reference	`DSTWf`
+9:36-9:40	constructor	`DSWf`
+9:36-9:40	local.reference	`DSWf`
+9:41-9:42	punctuation.bracket	`(`
+9:42-9:51	constructor	`|-st_cons`
+9:42-9:51	local.reference	`|-st_cons`
+9:52-9:59	constructor	`DValTc'`
+9:52-9:59	local.reference	`DValTc'`
+9:60-9:61	constructor	`_`
+9:60-9:61	local.reference	`_`
+9:60-9:61	variable.parameter	`_`
+9:61-9:62	punctuation.bracket	`)`
+9:63-9:78	constructor	`sttp_lookup_hit`
+9:63-9:78	local.reference	`sttp_lookup_hit`
+9:79-9:92	constructor	`st_lookup_hit`
+9:79-9:92	local.reference	`st_lookup_hit`
+9:93-9:99	constructor	`DValTc`
+9:93-9:99	local.reference	`DValTc`
+9:99-9:100	punctuation.bracket	`)`
+10:1-10:4	operator	`%<-`
+10:5-10:6	punctuation.bracket	`(`
+10:6-10:38	constructor	`sttp!wf_cons_implies_extend_cons`
+10:6-10:38	local.reference	`sttp!wf_cons_implies_extend_cons`
+10:39-10:44	constructor	`DSTWf`
+10:39-10:44	local.reference	`DSTWf`
+10:45-10:56	constructor	`DSttpExtend`
+10:45-10:56	local.reference	`DSttpExtend`
+10:56-10:57	punctuation.bracket	`)`
+10:57-11:4	operator	``
+11:5-11:6	punctuation.bracket	`(`
+11:6-11:21	constructor	`sttp_weak_|-val`
+11:6-11:21	local.reference	`sttp_weak_|-val`
+11:22-11:29	constructor	`DValTc'`
+11:22-11:29	local.reference	`DValTc'`
+11:30-11:41	constructor	`DSttpExtend`
+11:30-11:41	local.reference	`DSttpExtend`
+11:42-11:48	constructor	`DValTc`
+11:42-11:48	local.reference	`DValTc`
+11:48-11:49	punctuation.bracket	`)`
+11:49-11:52	keyword.return	` %.`
+12:6-12:10	constructor	`miss`
+12:6-12:10	function	`miss`
+12:6-12:10	local.reference	`miss`
+12:6-12:10	variable.parameter	`miss`
+12:10-13:4	operator	``
+13:5-13:6	punctuation.bracket	`(`
+13:6-13:29	constructor	`prog_|-st_inversion_aux`
+13:6-13:29	local.reference	`prog_|-st_inversion_aux`
+13:30-13:35	constructor	`DSTWf`
+13:30-13:35	local.reference	`DSTWf`
+13:36-13:40	constructor	`DSWf`
+13:36-13:40	local.reference	`DSWf`
+13:41-13:42	punctuation.bracket	`(`
+13:42-13:51	constructor	`|-st_cons`
+13:42-13:51	local.reference	`|-st_cons`
+13:52-13:53	constructor	`_`
+13:52-13:53	local.reference	`_`
+13:52-13:53	variable.parameter	`_`
+13:54-13:60	constructor	`DStTc'`
+13:54-13:60	local.reference	`DStTc'`
+13:60-13:61	punctuation.bracket	`)`
+13:62-13:63	punctuation.bracket	`(`
+13:63-13:79	constructor	`sttp_lookup_miss`
+13:63-13:79	local.reference	`sttp_lookup_miss`
+13:80-13:92	constructor	`DSttpLookup'`
+13:80-13:92	local.reference	`DSttpLookup'`
+13:93-13:99	constructor	`DLocLt`
+13:93-13:99	local.reference	`DLocLt`
+13:99-13:100	punctuation.bracket	`)`
+13:101-13:102	punctuation.bracket	`(`
+13:102-13:116	constructor	`st_lookup_miss`
+13:102-13:116	local.reference	`st_lookup_miss`
+13:117-13:127	constructor	`DStLookup'`
+13:117-13:127	local.reference	`DStLookup'`
+13:128-13:134	constructor	`DLocLt`
+13:128-13:134	local.reference	`DLocLt`
+13:134-13:135	punctuation.bracket	`)`
+13:136-13:142	constructor	`DValTc`
+13:136-13:142	local.reference	`DValTc`
+13:142-13:143	punctuation.bracket	`)`
+14:1-14:4	operator	`%<-`
+14:5-14:6	punctuation.bracket	`(`
+14:6-14:18	constructor	`sttp!wf_tail`
+14:6-14:18	local.reference	`sttp!wf_tail`
+14:19-14:24	constructor	`DSTWf`
+14:19-14:24	local.reference	`DSTWf`
+14:25-14:31	constructor	`DSTWf'`
+14:25-14:31	local.reference	`DSTWf'`
+14:31-14:32	punctuation.bracket	`)`
+14:32-15:4	operator	``
+15:5-15:6	punctuation.bracket	`(`
+15:6-15:16	constructor	`st!wf_tail`
+15:6-15:16	local.reference	`st!wf_tail`
+15:17-15:21	constructor	`DSWf`
+15:17-15:21	local.reference	`DSWf`
+15:22-15:27	constructor	`DSWf'`
+15:22-15:27	local.reference	`DSWf'`
+15:27-15:28	punctuation.bracket	`)`
+15:28-16:4	operator	``
+16:5-16:6	punctuation.bracket	`(`
+16:6-16:29	constructor	`prog_|-st_inversion_aux`
+16:6-16:29	local.reference	`prog_|-st_inversion_aux`
+16:30-16:36	constructor	`DSTWf'`
+16:30-16:36	local.reference	`DSTWf'`
+16:37-16:42	constructor	`DSWf'`
+16:37-16:42	local.reference	`DSWf'`
+16:43-16:49	constructor	`DStTc'`
+16:43-16:49	local.reference	`DStTc'`
+16:50-16:62	constructor	`DSttpLookup'`
+16:50-16:62	local.reference	`DSttpLookup'`
+16:63-16:73	constructor	`DStLookup'`
+16:63-16:73	local.reference	`DStLookup'`
+16:74-16:81	constructor	`DValTc'`
+16:74-16:81	local.reference	`DValTc'`
+16:81-16:82	punctuation.bracket	`)`
+16:82-17:4	operator	``
+17:5-17:6	punctuation.bracket	`(`
+17:6-17:38	constructor	`sttp!wf_cons_implies_extend_cons`
+17:6-17:38	local.reference	`sttp!wf_cons_implies_extend_cons`
+17:39-17:44	constructor	`DSTWf`
+17:39-17:44	local.reference	`DSTWf`
+17:45-17:57	constructor	`DSttpExtend'`
+17:45-17:57	local.reference	`DSttpExtend'`
+17:57-17:58	punctuation.bracket	`)`
+17:58-18:4	operator	``
+18:5-18:6	punctuation.bracket	`(`
+18:6-18:21	constructor	`sttp_weak_|-val`
+18:6-18:21	local.reference	`sttp_weak_|-val`
+18:22-18:29	constructor	`DValTc'`
+18:22-18:29	local.reference	`DValTc'`
+18:30-18:42	constructor	`DSttpExtend'`
+18:30-18:42	local.reference	`DSttpExtend'`
+18:43-18:49	constructor	`DValTc`
+18:43-18:49	local.reference	`DValTc`
+18:49-18:50	punctuation.bracket	`)`
+18:50-18:53	keyword.return	` %.`
+19:12-19:23	constructor	`DSttpLookup`
+19:12-19:23	local.reference	`DSttpLookup`
+19:72-19:74	keyword.return	`%.`
+20:8-20:9	punctuation.bracket	`(`
+20:9-20:10	punctuation.bracket	`)`
+20:11-20:12	punctuation.bracket	`(`
+20:12-20:35	constructor	`prog_|-st_inversion_aux`
+20:12-20:35	local.reference	`prog_|-st_inversion_aux`
+20:36-20:37	constructor	`_`
+20:36-20:37	local.reference	`_`
+20:36-20:37	variable.parameter	`_`
+20:38-20:39	constructor	`_`
+20:38-20:39	local.reference	`_`
+20:38-20:39	variable.parameter	`_`
+20:40-20:41	constructor	`_`
+20:40-20:41	local.reference	`_`
+20:40-20:41	variable.parameter	`_`
+20:42-20:43	constructor	`_`
+20:42-20:43	local.reference	`_`
+20:42-20:43	variable.parameter	`_`
+20:44-20:45	constructor	`_`
+20:44-20:45	local.reference	`_`
+20:44-20:45	variable.parameter	`_`
+20:46-20:47	constructor	`_`
+20:46-20:47	local.reference	`_`
+20:46-20:47	variable.parameter	`_`
+20:47-20:48	punctuation.bracket	`)`
+20:48-20:51	keyword.return	` %.`
+21:8-21:31	constructor	`prog_|-st_inversion_aux`
+21:8-21:31	local.reference	`prog_|-st_inversion_aux`
+21:31-21:35	keyword.modifier	` %in`
+21:35-21:39	keyword.modifier	` %in`
+21:39-21:43	keyword.modifier	` %in`
+21:43-21:48	keyword.modifier	` %out`
+21:48-21:52	keyword.modifier	` %in`
+21:52-21:57	keyword.modifier	` %out`
+21:57-21:60	keyword.return	` %.`
+22:7-22:18	constructor	`DSttpLookup`
+22:7-22:18	local.reference	`DSttpLookup`
+22:19-22:20	punctuation.bracket	`(`
+22:20-22:43	constructor	`prog_|-st_inversion_aux`
+22:20-22:43	local.reference	`prog_|-st_inversion_aux`
+22:44-22:45	constructor	`_`
+22:44-22:45	local.reference	`_`
+22:44-22:45	variable.parameter	`_`
+22:46-22:47	constructor	`_`
+22:46-22:47	local.reference	`_`
+22:46-22:47	variable.parameter	`_`
+22:48-22:49	constructor	`_`
+22:48-22:49	local.reference	`_`
+22:48-22:49	variable.parameter	`_`
+22:50-22:61	constructor	`DSttpLookup`
+22:50-22:61	local.reference	`DSttpLookup`
+22:62-22:63	constructor	`_`
+22:62-22:63	local.reference	`_`
+22:62-22:63	variable.parameter	`_`
+22:64-22:65	constructor	`_`
+22:64-22:65	local.reference	`_`
+22:64-22:65	variable.parameter	`_`
+22:65-22:66	punctuation.bracket	`)`
+22:66-22:69	keyword.return	` %.`
+22:69-23:67	comment	``
+23:67-24:5	keyword.type	``
+24:6-24:25	constructor	`prog_|-st_inversion`
+24:6-24:25	local.reference	`prog_|-st_inversion`
+24:6-24:25	type	`prog_|-st_inversion`
+24:102-24:104	keyword.return	`%.`
+25:6-25:25	constructor	`prog_|-st_inversion`
+25:6-25:25	local.reference	`prog_|-st_inversion`
+25:25-25:29	keyword.modifier	` %in`
+25:29-25:33	keyword.modifier	` %in`
+25:33-25:38	keyword.modifier	` %out`
+25:38-25:43	keyword.modifier	` %out`
+25:43-25:46	keyword.return	` %.`
+26:6-26:7	constructor	`_`
+26:6-26:7	function	`_`
+26:6-26:7	local.reference	`_`
+26:6-26:7	variable.parameter	`_`
+26:7-27:4	operator	``
+27:5-27:6	punctuation.bracket	`(`
+27:6-27:25	constructor	`prog_|-st_inversion`
+27:6-27:25	local.reference	`prog_|-st_inversion`
+27:26-27:27	punctuation.bracket	`(`
+27:27-27:34	constructor	`|-stwf_`
+27:27-27:34	local.reference	`|-stwf_`
+27:35-27:40	constructor	`DSTWf`
+27:35-27:40	local.reference	`DSTWf`
+27:41-27:45	constructor	`DSWf`
+27:41-27:45	local.reference	`DSWf`
+27:46-27:51	constructor	`DStTc`
+27:46-27:51	local.reference	`DStTc`
+27:51-27:52	punctuation.bracket	`)`
+27:53-27:64	constructor	`DSttpLookup`
+27:53-27:64	local.reference	`DSttpLookup`
+27:65-27:74	constructor	`DStLookup`
+27:65-27:74	local.reference	`DStLookup`
+27:75-27:81	constructor	`DValTc`
+27:75-27:81	local.reference	`DValTc`
+27:81-27:82	punctuation.bracket	`)`
+28:1-28:4	operator	`%<-`
+28:5-28:6	punctuation.bracket	`(`
+28:6-28:29	constructor	`prog_|-st_inversion_aux`
+28:6-28:29	local.reference	`prog_|-st_inversion_aux`
+28:30-28:35	constructor	`DSTWf`
+28:30-28:35	local.reference	`DSTWf`
+28:36-28:40	constructor	`DSWf`
+28:36-28:40	local.reference	`DSWf`
+28:41-28:46	constructor	`DStTc`
+28:41-28:46	local.reference	`DStTc`
+28:47-28:58	constructor	`DSttpLookup`
+28:47-28:58	local.reference	`DSttpLookup`
+28:59-28:68	constructor	`DStLookup`
+28:59-28:68	local.reference	`DStLookup`
+28:69-28:75	constructor	`DValTc`
+28:69-28:75	local.reference	`DValTc`
+28:75-28:76	punctuation.bracket	`)`
+28:76-28:79	keyword.return	` %.`
+29:12-29:13	punctuation.bracket	`{`
+29:13-29:13	local.reference	``
+29:13-29:13	operator	``
+29:13-29:14	punctuation.bracket	`}`
+29:45-29:47	keyword.return	`%.`
+30:8-30:9	punctuation.bracket	`(`
+30:9-30:10	punctuation.bracket	`)`
+30:11-30:12	punctuation.bracket	`(`
+30:12-30:31	constructor	`prog_|-st_inversion`
+30:12-30:31	local.reference	`prog_|-st_inversion`
+30:32-30:33	constructor	`_`
+30:32-30:33	local.reference	`_`
+30:32-30:33	variable.parameter	`_`
+30:34-30:35	constructor	`_`
+30:34-30:35	local.reference	`_`
+30:34-30:35	variable.parameter	`_`
+30:36-30:37	constructor	`_`
+30:36-30:37	local.reference	`_`
+30:36-30:37	variable.parameter	`_`
+30:38-30:39	constructor	`_`
+30:38-30:39	local.reference	`_`
+30:38-30:39	variable.parameter	`_`
+30:39-30:40	punctuation.bracket	`)`
+30:40-30:43	keyword.return	` %.`
+31:8-31:27	constructor	`prog_|-st_inversion`
+31:8-31:27	local.reference	`prog_|-st_inversion`
+31:27-31:31	keyword.modifier	` %in`
+31:31-31:35	keyword.modifier	` %in`
+31:35-31:40	keyword.modifier	` %out`
+31:40-31:45	keyword.modifier	` %out`
+31:45-31:48	keyword.return	` %.`
+32:7-32:8	punctuation.bracket	`(`
+32:8-32:8	local.reference	``
+32:8-32:8	operator	``
+32:8-32:9	punctuation.bracket	`)`
+32:10-32:11	punctuation.bracket	`(`
+32:11-32:30	constructor	`prog_|-st_inversion`
+32:11-32:30	local.reference	`prog_|-st_inversion`
+32:31-32:32	constructor	`_`
+32:31-32:32	local.reference	`_`
+32:31-32:32	variable.parameter	`_`
+32:33-32:34	constructor	`_`
+32:33-32:34	local.reference	`_`
+32:33-32:34	variable.parameter	`_`
+32:35-32:36	constructor	`_`
+32:35-32:36	local.reference	`_`
+32:35-32:36	variable.parameter	`_`
+32:37-32:38	constructor	`_`
+32:37-32:38	local.reference	`_`
+32:37-32:38	variable.parameter	`_`
+32:38-32:39	punctuation.bracket	`)`
+32:39-32:42	keyword.return	` %.`

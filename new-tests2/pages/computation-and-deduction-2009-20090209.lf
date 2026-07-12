@@ -1,5 +1,5 @@
 %                                                   
-%{! Code from class, February 9 
+%[[ Code from class, February 9 
 
 ```twelf
 
@@ -193,4 +193,4 @@ preservation : of E T -> step E E' -> of E' T -> type.
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Computation_and_Deduction_2009/20090209).
-!}%
+%]]

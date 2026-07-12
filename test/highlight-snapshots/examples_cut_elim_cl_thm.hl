@@ -1,0 +1,16 @@
+0:0-0:34	comment	`%%% Termination of cut-elimination`
+1:0-1:11	keyword	`%terminates`
+1:12-1:13	punctuation.bracket	`{`
+1:13-1:14	constructor	`A`
+1:13-1:14	local.reference	`A`
+1:15-1:16	punctuation.bracket	`[`
+1:16-1:17	constructor	`D`
+1:16-1:17	local.reference	`D`
+1:18-1:19	constructor	`E`
+1:18-1:19	local.reference	`E`
+1:19-1:20	punctuation.bracket	`]`
+1:20-1:21	punctuation.bracket	`}`
+1:36-1:38	keyword.return	`%.`
+2:12-2:13	constructor	`D`
+2:12-2:13	local.reference	`D`
+2:24-2:26	keyword.return	`%.`

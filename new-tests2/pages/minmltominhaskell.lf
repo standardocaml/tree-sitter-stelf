@@ -1,15 +1,15 @@
 %                             
-%{! 
+%[[ 
 
 Translation from MinML (unencapsulated effects) to MiniHaskell (monadic effects).
 Uses third-order coverage checking.
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## MiniHaskell
 
-!}%
+%]]
 %sort tp %.
 %term unit tp %.
 %term arr %pi tp %-> tp %-> tp %.
@@ -36,11 +36,11 @@ Uses third-order coverage checking.
 %term print %pi (| lax C) %-> (| lax C) %.
 %block trueb {A _} [x | true A]%.
 %worlds (trueb) (| _) %.
-%{! 
+%[[ 
 
 ## MinML
 
-!}%
+%]]
 %sort mtp %.
 %term munit mtp %.
 %term marr %pi mtp %-> mtp %-> mtp %.
@@ -57,11 +57,11 @@ Uses third-order coverage checking.
 	%-> (%pi (mtrue B) %-> (mtrue C))
 	%-> (mtrue C) %.
 %term mprint %pi (mtrue C) %-> (mtrue C) %.
-%{! 
+%[[ 
 
 ## Translation
 
-!}%
+%]]
 %sort tptrans {_ mtp} {_ tp} %.
 %mode tptrans %in %out %.
 %term tptrans/unit tptrans munit unit %.
@@ -130,9 +130,9 @@ Uses third-order coverage checking.
 	%<- (laxresp (return x') Did E'')]%.
 %worlds (transb) (trans _ _ _) %.
 %total E (trans E _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/MinMLToMinHaskell).
-!}%
+%]]

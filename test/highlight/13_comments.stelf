@@ -1,0 +1,5 @@
+% a plain line comment
+%; a Zed-style line comment
+%%% the wiki-style triple-percent comment
+%sort nat
+% trailing line comment

@@ -1,0 +1,24 @@
+2:0-2:62	comment	`% All of these run correctly (with both versions of grammar). `
+3:0-3:64	comment	`% I have commented out some queries because they take some time.`
+6:0-6:82	comment	`% %query 1 * (sqnt  rnil rnil rnil rnil (^ bob =>> ^ loves =>> ^ mary =>> ^ snt)).`
+7:0-7:128	comment	`% %query 1 * (sqnt  rnil rnil rnil rnil (^ mary =>> ^ loves =>> ^ the =>> ^ man =>> ^ whom =>> ^ jill =>> ^ married =>> ^ snt)).`
+8:0-8:173	comment	`% %query 1 * (sqnt  rnil rnil rnil rnil (^ mary =>> ^ loves =>> ^ the =>> ^ man =>> ^ whom =>> ^ the =>> ^ woman =>> ^ whom =>> ^ jill =>> ^ loves =>> ^ married =>> ^ snt)).`
+9:0-9:6	keyword	`%query`
+9:7-9:8	number	`1`
+9:9-9:10	number	`1`
+9:11-9:12	variable.parameter.builtin	`_`
+9:13-9:17	constructor	`sqnt`
+9:13-9:17	local.reference	`sqnt`
+9:17-9:22	constructor	` rnil`
+9:17-9:22	local.reference	` rnil`
+9:22-9:27	constructor	` rnil`
+9:22-9:27	local.reference	` rnil`
+9:27-9:32	constructor	` rnil`
+9:27-9:32	local.reference	` rnil`
+9:32-9:37	constructor	` rnil`
+9:32-9:37	local.reference	` rnil`
+9:170-9:172	keyword.return	`%.`
+9:172-10:173	comment	``
+10:173-11:139	comment	``
+11:139-12:117	comment	``
+12:117-13:128	comment	``

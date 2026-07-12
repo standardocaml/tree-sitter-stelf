@@ -1,6 +1,6 @@
 %                             
 %              
-%{! 
+%[[ 
 The style you use to write Twelf code should be consistent so that it is
 readable by others now and by you in the future. However, the general
 objectives of _consistency and readability of code_ is more important than
@@ -21,13 +21,13 @@ Proper use of whitespace, line breaks, and spacing is very important for promoti
 
 ### Object language syntax
 
-The declarations for the constants corresponding to a type for syntax of an object language should be grouped together. There should be an empty line between the declaration of the type and its constants. There should be a line break, but no empty lines, between each declaration. !}%
+The declarations for the constants corresponding to a type for syntax of an object language should be grouped together. There should be an empty line between the declaration of the type and its constants. There should be a line break, but no empty lines, between each declaration. %]]
 %sort color %.
 %term color/red color %.
 %term color/black color %.
-%{! ### Judgments
+%[[ ### Judgments
 
-The declarations for the constants corresponding to the inference rules for a particular judgment should be grouped together. There should be an empty line between the declaration of the judgment and its inference rules, as well as one empty line between the declaration of two inference rules. If a [`%mode`](/wiki/percent-mode/) declaration is used, it should be on the line immediately following the declaration of the judgment. !}%
+The declarations for the constants corresponding to the inference rules for a particular judgment should be grouped together. There should be an empty line between the declaration of the judgment and its inference rules, as well as one empty line between the declaration of two inference rules. If a [`%mode`](/wiki/percent-mode/) declaration is used, it should be on the line immediately following the declaration of the judgment. %]]
 %sort color-neq {_ color} {_ color} %.
 %term color-neq/red-black color-neq color/red color/black %.
 %term color-neq/black-red color-neq color/black color/red %.
@@ -35,16 +35,16 @@ The declarations for the constants corresponding to the inference rules for a pa
 %mode color-swap %in %out %.
 %term color-swap/red color-swap color/red color/black %.
 %term color-swap/black color-swap color/black color/red %.
-%{! ### Metatheorems
+%[[ ### Metatheorems
 
-The definitions for cases to a metatheorem should be grouped together. The ``%mode`` declaration should be on the line following the declaration of the type family for the metatheorem, with no line breaks in between. There should be an empty line following the mode declaration. There should be one empty line between each case. There should be an empty line preceding the ``%worlds`` declaration. The ``%total`` declaration should be on the following line. !}%
+The definitions for cases to a metatheorem should be grouped together. The ``%mode`` declaration should be on the line following the declaration of the type family for the metatheorem, with no line breaks in between. There should be an empty line following the mode declaration. There should be one empty line between each case. There should be an empty line preceding the ``%worlds`` declaration. The ``%total`` declaration should be on the following line. %]]
 %sort can-color-neq {C color} {_ color-neq C C'} %.
 %mode color-neq %in %out %.
 %term _ can-color-neq color/red color-neq/red-black %.
 %term _ can-color-neq color/black color-neq/black-red %.
 %worlds () (color-neq _ _) %.
 %total () (color-neq _ _) %.
-%{! ### Additional guidelines
+%[[ ### Additional guidelines
 
 * There should be at least 2 empty lines between any "groups", where a group is something on the scale of declarations for a type family or proof of a metatheorem. 4 or more empty lines should between super-groups of related groups, such as the proofs for a set of related lemmas.
 
@@ -60,7 +60,7 @@ Comments are at least as important a consideration when writing Twelf code inten
 
 * Each file should begin with single-line comments establishing a title and authorship. If several more lines about the purpose of the file are needed, those should go into a multi-line comment immediately underneath the title/author information.
 
-* Single line comments should annotate most "groups" and "super-groups" explaining, briefly, their purpose. They should be associated with a relatively strong visual indicator that is consistent across the file, but there aren't any standards here, and the following are all used: !}%
+* Single line comments should annotate most "groups" and "super-groups" explaining, briefly, their purpose. They should be associated with a relatively strong visual indicator that is consistent across the file, but there aren't any standards here, and the following are all used: %]]
 %%%%% Syntax %%%%%
 % ===== Type system ===== 
 %                                                
@@ -68,7 +68,7 @@ Comments are at least as important a consideration when writing Twelf code inten
 %%%%% Metatheorems about nat
 %%%%%%
 %{ Type preservation }%
-%{! Be conscious of the interaction of your comment style with the [Twelf Emacs mode](/wiki/twelf-with-emacs/) syntax highlighting – some comment styles which use percent signs at the end and the beginning of a line cause the syntax highlighting to behave unpredictably.
+%[[ Be conscious of the interaction of your comment style with the [Twelf Emacs mode](/wiki/twelf-with-emacs/) syntax highlighting – some comment styles which use percent signs at the end and the beginning of a line cause the syntax highlighting to behave unpredictably.
 
 * Comments are most useful as multi-line comments at the beginning of "groups" and "super-groups" as defined in the previous section. Listing the important metatheorems at the beginning of a long group of metatheorems is also helpful.
 
@@ -88,15 +88,15 @@ In this section, conventions will only be given as to how to structure identifie
 
 The [natural numbers](/wiki/natural-numbers/) will be used as a running example.
 
-### Object language syntax !}%
+### Object language syntax %]]
 %sort nat %.
 %sort list-nat %.
-%{! Type families are typically inhabited by constants that correspond to different pieces of syntax or inference rules. We use a slash ("/") between the name of the type family and the identifier for the individual rule. !}%
+%[[ Type families are typically inhabited by constants that correspond to different pieces of syntax or inference rules. We use a slash ("/") between the name of the type family and the identifier for the individual rule. %]]
 %term nat/z nat %.
 %term nat/s %pi nat %-> nat %.
 %term list-nat/nil list-nat %.
 %term list-nat/cons %pi nat %-> list-nat %-> list-nat %.
-%{! (Whether a list of natural numbers should be called ``list-nat`` or ``nat-list`` is a matter left to the [naming conventions](/wiki/naming-conventions/) article.)
+%[[ (Whether a list of natural numbers should be called ``list-nat`` or ``nat-list`` is a matter left to the [naming conventions](/wiki/naming-conventions/) article.)
 
 #### Abbreviations
 
@@ -105,48 +105,48 @@ The disadvantage of this representation is that identifier names can get relativ
 There are two solutions for this. One is that, if you are defining a language or logic, and not a library to be used in another project, you may want to consider a small number of pieces of syntax your "leaf cases" and simply leave off the part before the forward slash.
 Be careful if you are doing so; this will seem like a great idea until you realize that you need both an element of type and an element of syntax called ``cont`` or ``pair`` or ``tuple``.
 
-The other solution is to use an _abbreviation_ or a _notational definition_. !}%
+The other solution is to use an _abbreviation_ or a _notational definition_. %]]
 % Example of abbreviation
 %inline z nat/z %.
 %inline s nat/s %.
 % Example of notational definition
 %define z nat/z %.
 %define s nat/s %.
-%{! Abbreviations are probably better for large projects, because even if the abbreviated identifier gets redefined,  it appears in the unshadowed extended form in the Twelf buffer. Notational definitions are probably preferable for small projects - or projects which are being debugged - for the same reason: shorter, more informative identifiers will appear in the Twelf buffer.
+%[[ Abbreviations are probably better for large projects, because even if the abbreviated identifier gets redefined,  it appears in the unshadowed extended form in the Twelf buffer. Notational definitions are probably preferable for small projects - or projects which are being debugged - for the same reason: shorter, more informative identifiers will appear in the Twelf buffer.
 
 ### Judgments
 
-The naming conventions for judgments and their inference rules are similar to the ones for object syntax. The part after the forward slash, if it is associated with a piece of relevant syntax (i.e. ``/cons`` or ``/s``) should use the same modifier. !}%
+The naming conventions for judgments and their inference rules are similar to the ones for object syntax. The part after the forward slash, if it is associated with a piece of relevant syntax (i.e. ``/cons`` or ``/s``) should use the same modifier. %]]
 %sort plus-nat {_ nat} {_ nat} {_ nat} %.
 %mode plus-nat %in %in %out %.
 %term plus-nat/z plus-nat z N N %.
 %term plus-nat/s %pi (plus-nat (s N1) N2 (s N3)) %<- (plus-nat N1 N2 N3) %.
-%{! ### Metatheorems: Identifier names
+%[[ ### Metatheorems: Identifier names
 
 
-Each metatheorem is given a name in Twelf. There are two ways in which someone might consider naming their metatheorems. If you are defining a metatheorem that defines an admissible rule, it may be reasonable to use the convention used for showing inference rules: !}%
+Each metatheorem is given a name in Twelf. There are two ways in which someone might consider naming their metatheorems. If you are defining a metatheorem that defines an admissible rule, it may be reasonable to use the convention used for showing inference rules: %]]
 %sort plus-nat/z-alt {N} {_ plus-nat N z N} %.
 %mode plus-nat/z-alt %in %out %.
-%{! In most other cases, however, it is more reasonable to simply name the lemma using words and hyphens: !}%
+%[[ In most other cases, however, it is more reasonable to simply name the lemma using words and hyphens: %]]
 %sort plus-comm {_ plus-nat N1 N2 N3} {_ plus-nat N2 N1 N3} %.
 %mode plus-comm %in %out %.
-%{! ### Metatheorems: Case names
+%[[ ### Metatheorems: Case names
 
-The cases in a metatheoretic proof almost never need to be referred to, so it is common to name the labels for every individual case ``-``. This may, however, make it more difficult to correlate error messages with specific rules, and so should be done with care. !}%
+The cases in a metatheoretic proof almost never need to be referred to, so it is common to name the labels for every individual case ``-``. This may, however, make it more difficult to correlate error messages with specific rules, and so should be done with care. %]]
 %sort plus-nat/z-alt {N} {_ plus-nat N z N} %.
 %mode plus-nat/z-alt %in %out %.
 %term _ plus-nat/z-alt z plus-nat/z %.
 %term _ %pi (plus-nat/z-alt (s N) (plus-nat/s D)) %<- (plus-nat/z-alt N D) %.
 %worlds () (plus-nat/z-alt _ _) %.
 %total T (plus-nat/z-alt T _) %.
-%{! If it is preferable to give each case of a metatheorem a name, for debugging or clarity reasons, the convention is to put a ``-`` before an identifier for the case. For example, we could re-write the preceding theorem in the following way. !}%
+%[[ If it is preferable to give each case of a metatheorem a name, for debugging or clarity reasons, the convention is to put a ``-`` before an identifier for the case. For example, we could re-write the preceding theorem in the following way. %]]
 %sort plus-nat/z-alt {N} {_ plus-nat N z N} %.
 %mode plus-nat/z-alt %in %out %.
 %scope plus-nat/z-alt %term z plus-nat/z-alt z plus-nat/z %.
 %term s %pi (plus-nat/z-alt (s N) (plus-nat/s D)) %<- (plus-nat/z-alt N D) %.
 %worlds () (plus-nat/z-alt _ _) %.
 %total T (plus-nat/z-alt T _) %.
-%{! ## Example signature !}%
+%[[ ## Example signature %]]
 %% Demonstration of good Twelf style
 %% The Twelf Wiki authors, Febtober 19045
 %{

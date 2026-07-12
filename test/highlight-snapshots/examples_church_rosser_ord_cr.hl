@@ -1,0 +1,106 @@
+0:0-0:52	comment	`%%% The Church-Rosser theorem for ordinary reduction`
+1:0-1:26	comment	`%%% Author: Frank Pfenning`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:12	constructor	`cr_ord`
+2:6-2:12	local.reference	`cr_ord`
+2:6-2:12	type	`cr_ord`
+2:53-2:55	keyword.return	`%.`
+2:55-3:32	comment	``
+3:32-4:61	comment	``
+5:6-5:12	constructor	`cr_ord`
+5:6-5:12	local.reference	`cr_ord`
+5:12-5:16	keyword.modifier	` %in`
+5:16-5:21	keyword.modifier	` %out`
+5:21-5:26	keyword.modifier	` %out`
+5:26-5:29	keyword.return	` %.`
+6:6-6:12	constructor	`cr_all`
+6:6-6:12	function	`cr_all`
+6:6-6:12	local.reference	`cr_all`
+6:6-6:12	variable.parameter	`cr_all`
+6:12-7:4	operator	``
+7:5-7:6	punctuation.bracket	`(`
+7:6-7:12	constructor	`cr_ord`
+7:6-7:12	local.reference	`cr_ord`
+7:13-7:14	constructor	`C`
+7:13-7:14	local.reference	`C`
+7:15-7:17	constructor	`S*`
+7:15-7:17	local.reference	`S*`
+7:18-7:21	constructor	`S*'`
+7:18-7:21	local.reference	`S*'`
+7:21-7:22	punctuation.bracket	`)`
+8:1-8:4	operator	`%<-`
+8:5-8:6	punctuation.bracket	`(`
+8:6-8:9	constructor	`eq6`
+8:6-8:9	local.reference	`eq6`
+8:10-8:11	constructor	`C`
+8:10-8:11	local.reference	`C`
+8:12-8:14	constructor	`C'`
+8:12-8:14	local.reference	`C'`
+8:14-8:15	punctuation.bracket	`)`
+8:15-9:4	operator	``
+9:5-9:6	punctuation.bracket	`(`
+9:6-9:8	constructor	`cr`
+9:6-9:8	local.reference	`cr`
+9:9-9:11	constructor	`C'`
+9:9-9:11	local.reference	`C'`
+9:12-9:14	constructor	`R*`
+9:12-9:14	local.reference	`R*`
+9:15-9:18	constructor	`R*'`
+9:15-9:18	local.reference	`R*'`
+9:18-9:19	punctuation.bracket	`)`
+9:19-10:4	operator	``
+10:5-10:6	punctuation.bracket	`(`
+10:6-10:9	constructor	`eq4`
+10:6-10:9	local.reference	`eq4`
+10:10-10:12	constructor	`R*`
+10:10-10:12	local.reference	`R*`
+10:13-10:15	constructor	`S*`
+10:13-10:15	local.reference	`S*`
+10:15-10:16	punctuation.bracket	`)`
+10:16-11:4	operator	``
+11:5-11:6	punctuation.bracket	`(`
+11:6-11:9	constructor	`eq4`
+11:6-11:9	local.reference	`eq4`
+11:10-11:13	constructor	`R*'`
+11:10-11:13	local.reference	`R*'`
+11:14-11:17	constructor	`S*'`
+11:14-11:17	local.reference	`S*'`
+11:17-11:18	punctuation.bracket	`)`
+11:18-11:21	keyword.return	` %.`
+12:8-12:9	punctuation.bracket	`(`
+12:9-12:10	punctuation.bracket	`)`
+12:11-12:12	punctuation.bracket	`(`
+12:12-12:18	constructor	`cr_ord`
+12:12-12:18	local.reference	`cr_ord`
+12:19-12:20	constructor	`C`
+12:19-12:20	local.reference	`C`
+12:21-12:23	constructor	`S*`
+12:21-12:23	local.reference	`S*`
+12:24-12:27	constructor	`S*'`
+12:24-12:27	local.reference	`S*'`
+12:27-12:28	punctuation.bracket	`)`
+12:28-12:31	keyword.return	` %.`
+13:8-13:14	constructor	`cr_ord`
+13:8-13:14	local.reference	`cr_ord`
+13:14-13:18	keyword.modifier	` %in`
+13:18-13:23	keyword.modifier	` %out`
+13:23-13:28	keyword.modifier	` %out`
+13:28-13:31	keyword.return	` %.`
+14:12-14:13	constructor	`C`
+14:12-14:13	local.reference	`C`
+14:29-14:31	keyword.return	`%.`
+15:7-15:8	constructor	`C`
+15:7-15:8	local.reference	`C`
+15:9-15:10	punctuation.bracket	`(`
+15:10-15:16	constructor	`cr_ord`
+15:10-15:16	local.reference	`cr_ord`
+15:17-15:18	constructor	`C`
+15:17-15:18	local.reference	`C`
+15:19-15:20	constructor	`_`
+15:19-15:20	local.reference	`_`
+15:19-15:20	variable.parameter	`_`
+15:21-15:22	constructor	`_`
+15:21-15:22	local.reference	`_`
+15:21-15:22	variable.parameter	`_`
+15:22-15:23	punctuation.bracket	`)`
+15:23-15:26	keyword.return	` %.`

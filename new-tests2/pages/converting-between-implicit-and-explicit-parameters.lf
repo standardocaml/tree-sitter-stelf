@@ -1,8 +1,8 @@
 %                                                               
 %                     
-%{! When declaring a type family or constant, the Twelf programmer often has a choice between [implicit and explicit parameters](/wiki/implicit-and-explicit-parameters/) for some arguments. There is no reason to fret over this choice, for there is an easy technique for **converting between implicit and explicit parameters**.
+%[[ When declaring a type family or constant, the Twelf programmer often has a choice between [implicit and explicit parameters](/wiki/implicit-and-explicit-parameters/) for some arguments. There is no reason to fret over this choice, for there is an easy technique for **converting between implicit and explicit parameters**.
 
-Suppose we have a language defined as follows: !}%
+Suppose we have a language defined as follows: %]]
 %sort exp %.
 %sort typ %.
 %sort of {_ exp} {_ typ} %.
@@ -12,7 +12,7 @@ Suppose we have a language defined as follows: !}%
 %term void typ %.
 %term of1 of 1 bit %.
 %term of0 of 0 bit %.
-%{! We wish to define a translation between type derivations in this language, as a part of a source to source translation. The implicit and explicit versions are as follows: 
+%[[ We wish to define a translation between type derivations in this language, as a part of a source to source translation. The implicit and explicit versions are as follows: 
 
 ```twelf
 %% implicit version
@@ -27,7 +27,7 @@ translate-e : {m : exp}{a : typ} {m' : exp}
 
 ## Defining explicit in terms of implicit
 
-Suppose we choose the implicit version and implement it, but later decide we prefer the explicit version. We can then define the explicit version in terms of the implicit one by simply leaving out arguments: !}%
+Suppose we choose the implicit version and implement it, but later decide we prefer the explicit version. We can then define the explicit version in terms of the implicit one by simply leaving out arguments: %]]
 % implicit version
 %sort translate-i {_ of M A} {_ of M' A} %.
 %mode translate-i %in %out %.
@@ -40,9 +40,9 @@ Suppose we choose the implicit version and implement it, but later decide we pre
 %worlds () (translate-i _ _) (translate-e _ _ _ _ _) %.
 %total D (translate-i D _) %.
 %total D (translate-e _ _ _ D _) %.
-%{! ## Defining implicit in terms of explicit
+%[[ ## Defining implicit in terms of explicit
 
-Suppose we define the explicit version, and then choose to define the implicit version in terms of the explicit: !}%
+Suppose we define the explicit version, and then choose to define the implicit version in terms of the explicit: %]]
 % explicit version
 %sort translate2-e {m exp} {a typ} {m' exp} {_ of m a} {_ of m' a} %.
 %mode translate2-e %in %in %out %in %out %.
@@ -55,7 +55,7 @@ Suppose we define the explicit version, and then choose to define the implicit v
 %worlds () (translate2-i _ _) (translate2-e _ _ _ _ _) %.
 %total D (translate2-e _ _ _ D _) %.
 %total D (translate2-i D _) %.
-%{! Twelf is able to deduce via its term reconstruction algorithm what M, M' and A are, so this is [well-moded](/wiki/percent-mode/).
+%[[ Twelf is able to deduce via its term reconstruction algorithm what M, M' and A are, so this is [well-moded](/wiki/percent-mode/).
 
 ## Using annotations
 
@@ -71,4 +71,4 @@ Here we have access to the implicit inputs ``M`` and ``A``, gleaned from the dep
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Converting_between_implicit_and_explicit_parameters).
-!}%
+%]]

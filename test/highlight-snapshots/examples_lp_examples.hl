@@ -1,0 +1,119 @@
+0:0-0:38	comment	`% Needed to allow extension of p, i, o`
+1:0-1:32	comment	`% as of Twelf 1.5R2 (March 2005)`
+2:0-2:5	keyword	`%term`
+2:6-2:8	constructor	`q0`
+2:6-2:8	function	`q0`
+2:6-2:8	local.reference	`q0`
+2:6-2:8	variable.parameter	`q0`
+2:8-2:10	constructor	` p`
+2:8-2:10	local.reference	` p`
+2:10-2:13	keyword.return	` %.`
+3:6-3:8	constructor	`r0`
+3:6-3:8	function	`r0`
+3:6-3:8	local.reference	`r0`
+3:6-3:8	variable.parameter	`r0`
+3:8-3:10	constructor	` p`
+3:8-3:10	local.reference	` p`
+3:10-3:13	keyword.return	` %.`
+4:6-4:8	constructor	`s0`
+4:6-4:8	function	`s0`
+4:6-4:8	local.reference	`s0`
+4:6-4:8	variable.parameter	`s0`
+4:8-4:10	constructor	` p`
+4:8-4:10	local.reference	` p`
+4:10-4:13	keyword.return	` %.`
+5:6-5:7	constructor	`0`
+5:6-5:7	function	`0`
+5:6-5:7	local.reference	`0`
+5:6-5:7	variable.parameter	`0`
+5:7-5:9	constructor	` i`
+5:7-5:9	local.reference	` i`
+5:9-5:12	keyword.return	` %.`
+6:6-6:7	constructor	`s`
+6:6-6:7	function	`s`
+6:6-6:7	local.reference	`s`
+6:6-6:7	variable.parameter	`s`
+6:7-6:11	operator	` %pi`
+6:12-6:13	constructor	`i`
+6:12-6:13	local.reference	`i`
+6:14-6:17	operator	`%->`
+6:18-6:19	constructor	`i`
+6:18-6:19	local.reference	`i`
+6:19-6:22	keyword.return	` %.`
+7:6-7:9	constructor	`nat`
+7:6-7:9	function	`nat`
+7:6-7:9	local.reference	`nat`
+7:6-7:9	variable.parameter	`nat`
+7:9-7:13	operator	` %pi`
+7:14-7:15	constructor	`i`
+7:14-7:15	local.reference	`i`
+7:16-7:19	operator	`%->`
+7:20-7:21	constructor	`p`
+7:20-7:21	local.reference	`p`
+7:21-7:24	keyword.return	` %.`
+8:6-8:10	constructor	`natz`
+8:6-8:10	function	`natz`
+8:6-8:10	local.reference	`natz`
+8:6-8:10	variable.parameter	`natz`
+8:10-8:17	constructor	` assume`
+8:10-8:17	local.reference	` assume`
+8:33-8:35	keyword.return	`%.`
+9:6-9:10	constructor	`nats`
+9:6-9:10	function	`nats`
+9:6-9:10	local.reference	`nats`
+9:6-9:10	variable.parameter	`nats`
+9:10-9:17	constructor	` assume`
+9:10-9:17	local.reference	` assume`
+9:67-9:69	keyword.return	`%.`
+10:6-10:10	constructor	`plus`
+10:6-10:10	function	`plus`
+10:6-10:10	local.reference	`plus`
+10:6-10:10	variable.parameter	`plus`
+10:10-10:14	operator	` %pi`
+10:15-10:16	constructor	`i`
+10:15-10:16	local.reference	`i`
+10:17-10:20	operator	`%->`
+10:21-10:22	constructor	`i`
+10:21-10:22	local.reference	`i`
+10:22-10:26	operator	` %->`
+10:27-10:28	constructor	`i`
+10:27-10:28	local.reference	`i`
+10:28-10:32	operator	` %->`
+10:33-10:34	constructor	`p`
+10:33-10:34	local.reference	`p`
+10:34-10:37	keyword.return	` %.`
+11:6-11:9	constructor	`plz`
+11:6-11:9	function	`plz`
+11:6-11:9	local.reference	`plz`
+11:6-11:9	variable.parameter	`plz`
+11:9-11:16	constructor	` assume`
+11:9-11:16	local.reference	` assume`
+11:50-11:52	keyword.return	`%.`
+12:6-12:9	constructor	`pls`
+12:6-12:9	function	`pls`
+12:6-12:9	local.reference	`pls`
+12:6-12:9	variable.parameter	`pls`
+12:9-12:16	constructor	` assume`
+12:9-12:16	local.reference	` assume`
+12:106-12:108	keyword.return	`%.`
+13:6-13:12	constructor	`double`
+13:6-13:12	function	`double`
+13:6-13:12	local.reference	`double`
+13:6-13:12	variable.parameter	`double`
+13:12-13:16	operator	` %pi`
+13:17-13:18	constructor	`i`
+13:17-13:18	local.reference	`i`
+13:19-13:22	operator	`%->`
+13:23-13:24	constructor	`i`
+13:23-13:24	local.reference	`i`
+13:24-13:28	operator	` %->`
+13:29-13:30	constructor	`p`
+13:29-13:30	local.reference	`p`
+13:30-13:33	keyword.return	` %.`
+14:6-14:8	constructor	`db`
+14:6-14:8	function	`db`
+14:6-14:8	local.reference	`db`
+14:6-14:8	variable.parameter	`db`
+14:8-14:16	constructor	` assume'`
+14:8-14:16	local.reference	` assume'`
+14:128-14:130	keyword.return	`%.`

@@ -1,6 +1,6 @@
 %                  
 %                                                                                                        
-%{! The **``%query``** declarations specify a type (that corresponds to a judgment by the [judgments as types](/wiki/judgment/) principle), and tells Twelf's [logic programming](/wiki/logic-programming/) engine to search for a proof of that judgment.
+%[[ The **``%query``** declarations specify a type (that corresponds to a judgment by the [judgments as types](/wiki/judgment/) principle), and tells Twelf's [logic programming](/wiki/logic-programming/) engine to search for a proof of that judgment.
 
 A query declaration also takes two other inputs, which can either be a number or a star "``*``". The meaning of this is a bit awkward and counterintuitive:
 
@@ -17,7 +17,7 @@ It also means there are often multiple ways to write the same query, as the exam
 
 ## Examples
 
-We will use the example of list membership to demonstrate ``%query`` because there may be multiple ways to find an element in a list (if that element occurs multiple times). !}%
+We will use the example of list membership to demonstrate ``%query`` because there may be multiple ways to find an element in a list (if that element occurs multiple times). %]]
 %sort elem %.
 %term a elem %.
 %term b elem %.
@@ -31,7 +31,7 @@ We will use the example of list membership to demonstrate ``%query`` because the
 %sort member {_ elem} {_ list} %.
 %term member/hit member A (A , L) %.
 %term member/skip %pi (member A (B , L)) %<- (member A L) %.
-%{!
+%[[
 
 ### Confirming there is one "d" in the list 
 ```checkedtwelf
@@ -65,18 +65,18 @@ We will use the example of list membership to demonstrate ``%query`` because the
 
 ### Getting output from ``%query``
 
-Unlike [``%solve``](/wiki/percent-solve/), ``%query`` declarations do not allow you to insert the output of a query into the [signature](/wiki/twelf-signature/). However, you can inspect the output in the Twelf buffer. For example, if we leave the first argument of ``%query`` as a <Todo>metavariable</Todo>, the following query will output the first two elements it finds in the list (the first two elements in the list). !}%
-%{!! begin checked !!}%
+Unlike [``%solve``](/wiki/percent-solve/), ``%query`` declarations do not allow you to insert the output of a query into the [signature](/wiki/twelf-signature/). However, you can inspect the output in the Twelf buffer. For example, if we leave the first argument of ``%query`` as a <Todo>metavariable</Todo>, the following query will output the first two elements it finds in the list (the first two elements in the list). %]]
+%[[! begin checked !%]]
 %query _ 2 _ member E sample-list %.
-%{!! end checked !!}%
-%{! Furthermore, if you change the format of a query from ``%query 1 * ...`` to ``%query 1 * D : ...``, where ``D`` is some uppercase identifier, it will print the <Todo>proof term</Todo> that caused the query to succeed. The proof terms below indicate that the first two instances of ``b`` is located in the fourth position in the list (the search skips three times and then hits) and in the ninth position in the list (the search skips eight times and then hits). !}%
-%{!! begin checked !!}%
+%[[! end checked !%]]
+%[[ Furthermore, if you change the format of a query from ``%query 1 * ...`` to ``%query 1 * D : ...``, where ``D`` is some uppercase identifier, it will print the <Todo>proof term</Todo> that caused the query to succeed. The proof terms below indicate that the first two instances of ``b`` is located in the fourth position in the list (the search skips three times and then hits) and in the ninth position in the list (the search skips eight times and then hits). %]]
+%[[! begin checked !%]]
 %query _ 2 _ %the (member b sample-list) D %.
-%{!! end checked !!}%
-%{! ## See also
+%[[! end checked !%]]
+%[[ ## See also
 
 * <Guide chapter="5" section="23">Query Declaration</Guide>
 
 <Keyword />
 
-!}%
+%]]

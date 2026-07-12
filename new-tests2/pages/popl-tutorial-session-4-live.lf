@@ -1,5 +1,5 @@
 %                                        
-%{! 
+%[[ 
 
 **_Please fill [https://spreadsheets.google.com/viewform?key=p0-89EvFXQhUXF827jjk_Dg feedback form]**_
 
@@ -29,11 +29,11 @@ s : exp -> exp.
 ifz : exp -> exp -> (exp -> exp) -> exp.
 %% not: ifz : exp -> exp -> exp -> exp.
 
-%{! 
+%[[ 
 
 ## Typing
 
-!}%
+%]]
 
 %% Note: not total!  Not all terms are well-typed
 %% Don't need mode, worlds right now.
@@ -68,7 +68,7 @@ of/fun : of (fun T1 T2 ([f] [x] E f x)) (arr T1 T2)
 %% Task: give typing rules for
 %% s, ifz
 
-%{! 
+%[[ 
  e : nat
 ---------
 s e : nat
@@ -78,7 +78,7 @@ e0 : T
 x exp , x : nat |- e1 : T
 --------------------------
 ifz(e,e0,x.e1) : T
-!}%
+%]]
 
 of/s : of (s E) nat
 	<- of E nat.
@@ -89,11 +89,11 @@ of/ifz : of (ifz E E0 ([x] Es x)) T
 	  <- ({x : exp} of x nat
 		-> of (Es x) T).
 
-%{! 
+%[[ 
 
 ## Operational semantics
 
-!}%
+%]]
 
 %% Which expressions are values?
 %% Use a predicate
@@ -157,7 +157,7 @@ step/ifz/s : step
 	      (Es E) %% substitution
 	      <- value E.
 
-%{! 
+%[[ 
 
 ## Proof of type preservation
 
@@ -174,7 +174,7 @@ Relate: e : T  and  step e e'  to  e' : T
 
 Key idea: define total relations
 
-!}%
+%]]
 
 %% Type family:
 
@@ -232,4 +232,4 @@ pres : of E T
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Session_4_Live).
-!}%
+%]]

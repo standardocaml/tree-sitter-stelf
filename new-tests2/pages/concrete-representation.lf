@@ -1,5 +1,5 @@
 %                                   
-%{! The use of [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/), using Twelf's binding structure
+%[[ The use of [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/), using Twelf's binding structure
 to represent binding structure in an encoded language,
 is one of the more unique and convenient
 aspects of using Twelf. However, the fundamental nature of the binding 
@@ -47,12 +47,12 @@ into the type of a de Bruijn term. The proof could also be done with
 de Bruijn terms and a separate judgment relating a de Bruijn term to the
 structural metric it corresponds to, but in this example the intrinsic 
 approach made the proofs simpler.
-!}%
-%{! ## Preliminaries !}%
-%{! We will need the ability to use [reasoning from false](/wiki/reasoning-from-false/) at one place
+%]]
+%[[ ## Preliminaries %]]
+%[[ We will need the ability to use [reasoning from false](/wiki/reasoning-from-false/) at one place
 to avoid a spurious case that [coverage checking](/wiki/coverage-checking/) does not deal with
 correctly, and as is the case with many examples, we will utilize
-[natural numbers](/wiki/natural-numbers/) extensively.. !}%
+[natural numbers](/wiki/natural-numbers/) extensively.. %]]
 %sort uninhabited %.
 %freeze uninhabited %.
 %sort nat %.
@@ -60,10 +60,10 @@ correctly, and as is the case with many examples, we will utilize
 %term s %pi nat %-> nat %.
 %sort id-nat {_ nat} {_ nat} %.
 %term id-nat/refl id-nat N N %.
-%{! We will also need a less-than relation on numbers. For reasons that will
+%[[ We will also need a less-than relation on numbers. For reasons that will
 become clear, we will also need to define an [identity](/wiki/equality/) on less-than 
 derivations. Finally, we define ``lt12``, which allows us to take
-two numbers N &lt; M and case analyze on whether (s N) = M or (s N) &lt; M. !}%
+two numbers N &lt; M and case analyze on whether (s N) = M or (s N) &lt; M. %]]
 %sort lt {_ nat} {_ nat} %.
 %term lt/z lt z (s N) %.
 %term lt/s %pi (lt (s N1) (s N2)) %<- (lt N1 N2) %.
@@ -72,12 +72,12 @@ two numbers N &lt; M and case analyze on whether (s N) = M or (s N) &lt; M. !}%
 %sort lt12 {_ nat} {_ nat} %.
 %term lt12/1 lt12 N (s N) %.
 %term lt12/2 %pi (lt12 N (s M)) %<- (lt N M) %.
-%{! Finally, we define two helper functions ``lt+``, which produces
+%[[ Finally, we define two helper functions ``lt+``, which produces
 a derivation M &lt; (N + 1) from a derivation of M &lt; N, and ``lts``, which
 produces a derivation of N &lt; (s N) from any natural number N. Most
 of the tedious reasoning required for this example is about trivial 
 properties of these two helper functions; it is hidden here but
-can be revealed by clicking on the source code link at the top of the page. !}%
+can be revealed by clicking on the source code link at the top of the page. %]]
 %sort lt+ {_ lt M N} {_ lt M (s N)} %.
 %mode lt+ %in %out %.
 %term lt+/z lt+ lt/z lt/z %.
@@ -90,7 +90,7 @@ can be revealed by clicking on the source code link at the top of the page. !}%
 %term lts/s %pi (lts (s N) (lt/s D)) %<- (lts N D) %.
 %worlds () (lts _ _) %.
 %total T (lts T _) %.
-%{! | hidden=true !}%
+%[[ | hidden=true %]]
 %sort lt+-irrev {L1 lt N1 N2} {_ lt+ L1 L2} {L1' lt N1 N2} {_ lt+ L1' L2} %.
 %mode lt+-irrev %in %in %in %out %.
 %term _ lt+-irrev lt/z lt+/z lt/z lt+/z %.
@@ -180,14 +180,14 @@ can be revealed by clicking on the source code link at the top of the page. !}%
 %term _ %pi (lt-opt-excl (lt-opt/s LS L) (lt-opt/s LS' L') X) %<- (lt-opt-excl L L' X) %.
 %worlds () (lt-opt-excl _ _ _) %.
 %total T (lt-opt-excl T _ _) %.
-%{! ## HOAS lambda terms !}%
-%{! The representation of the untyped lambda calculus is extremely simple in
+%[[ ## HOAS lambda terms %]]
+%[[ The representation of the untyped lambda calculus is extremely simple in
 higher-order abstract syntax; we also define congruence lemmas for lam and app.
 
 What is interesting is the [``%block``](/wiki/percent-block/) 
 declaration of ``blocksimple``. This is a standard way of looking at the
 LF context when we are using HOAS lambda terms, but it is not the one we will 
-use in most cases. !}%
+use in most cases. %]]
 %sort exp %.
 %term lam %pi (%pi exp %-> exp) %-> exp %.
 %term app %pi exp %-> exp %-> exp %.
@@ -204,15 +204,15 @@ use in most cases. !}%
 %mode id-app-cong %in %in %out %.
 %worlds (blocksimple) (id-app-cong _ _ _) %.
 %total () (id-app-cong _ _ _) %.
-%{! The problem with ``blocksimple`` is that we will need, crucially, to
+%[[ The problem with ``blocksimple`` is that we will need, crucially, to
 be able to know when something is a variable (as opposed to an application or a 
 lambda term). The world ``blockvar`` achieves this by requiring that
 all variables be accompanied by a judgment ``isvar v``; because these
 judgments cannot be defined, they can only be introduced as hypothetical
-judgments, so having (isvar E) ensures that E is a variable. !}%
+judgments, so having (isvar E) ensures that E is a variable. %]]
 %sort isvar {_ exp} %.
 %block blockvar [v] [iv isvar v]%.
-%{! However, we will need one more block declaration to be able to do everything
+%[[ However, we will need one more block declaration to be able to do everything
 we need. In particular, the block ``blockvar`` is not enough to ensure that 
 we always will be able to determine whether an open lambda term is a lambda, an
 application, or a variable. In order to do this, we need a specialized block 
@@ -223,7 +223,7 @@ to the context, I add it along with a ``isvar`` hypothesis and a
 The definition of ``fake`` is a bit of a hack - we need to allow
 ``can-case`` to depend on ``can-case`` or we will run afoul of
 Twelf's [autofreeze](/wiki/percent-freeze/) feature. If you are running this proof on your
-own computer, try deleting the line to see Twelf's error message. !}%
+own computer, try deleting the line to see Twelf's error message. %]]
 %sort case {_ exp} %.
 %term case/lam case (lam ([x] E x)) %.
 %term case/app case (app E1 E2) %.
@@ -237,9 +237,9 @@ own computer, try deleting the line to see Twelf's error message. !}%
 %mode can-case %in %out %.
 %worlds (blockcases) (can-case _ _) %.
 %total T (can-case T _) %.
-%{! ## de Bruijn lambda terms !}%
-%{! ### Structural metric: Trees !}%
-%{! In order for the totality proof for the de Bruijn to HOAS translation to go
+%[[ ## de Bruijn lambda terms %]]
+%[[ ### Structural metric: Trees %]]
+%[[ In order for the totality proof for the de Bruijn to HOAS translation to go
 through, we will need to show that there is a metric by which ``unbind``
 does not change the size of a term. 
 
@@ -247,7 +247,7 @@ Because Twelf does not relate the sizes of bound variables and the free
 variables ``unbind`` replaces them with in any way, in order to achieve
 this we relate de Bruijn terms to an abstract tree representation;
 then, we can use that tree representation as the [structural metric](/wiki/structural-metrics/) to
-prove termination for the de Bruijn to HOAS translation. !}%
+prove termination for the de Bruijn to HOAS translation. %]]
 %sort etree %.
 %term etree/lam %pi etree %-> etree %.
 %term etree/app %pi etree %-> etree %-> etree %.
@@ -264,8 +264,8 @@ prove termination for the de Bruijn to HOAS translation. !}%
 %term _ id-etree/lam-cong id-etree/refl id-etree/refl %.
 %worlds () (id-etree/lam-cong _ _) %.
 %total () (id-etree/lam-cong _ _) %.
-%{! ### Encoding terms !}%
-%{! We choose an [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/) of de Bruijn terms so that every term
+%[[ ### Encoding terms %]]
+%[[ We choose an [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/) of de Bruijn terms so that every term
 that passes the LF type checker is well-formed - in particular, a term
 with ``exp^ N`` is a well-formed de Bruijn term inside of N lambdas.
 An earlier version of this encoding had a separate well-formedness judgment; 
@@ -273,13 +273,13 @@ the upshot of this encoding was that a lot of complexity got rephrased
 in terms of simple reasoning about relations like ``lt+``. 
 
 The structural metric is made a part of the intrinsic in order to simplify
-later proofs. !}%
+later proofs. %]]
 %sort exp^ {_ nat} {_ etree} %.
 %term lam^ %pi (exp^ (s N) Et) %-> (exp^ N (etree/lam Et)) %.
 %term app^ %pi (exp^ N Et1) %-> (exp^ N Et2) %-> (exp^ N (etree/app Et1 Et2)) %.
 %term fvar^ {x exp} %pi (isvar x) %-> (exp^ N etree/var) %.
 %term bvar^ {n nat} %pi (lt n M) %-> (exp^ M etree/var) %.
-%{! We will think of de Bruijn terms in two different ways depending on whether
+%[[ We will think of de Bruijn terms in two different ways depending on whether
 we are thinking in terms of a closed world or a world described by 
 ``blockvar``. Recall that
 in a closed world (i.e. an empty LF context) we cannot form anything with
@@ -288,7 +288,7 @@ type ``isvar V``, so in an empty context we cannot form a term with
 HOAS terms and de Bruijn terms, by incorporating variables from the
 HOAS representation directly inside of a de Bruijn term.
 
-We also define identity and congruence on de Bruijn terms. !}%
+We also define identity and congruence on de Bruijn terms. %]]
 %sort id-exp^ {_ exp^ N E1} {_ exp^ M E2} %.
 %term id-exp^/refl id-exp^ E E %.
 %sort id-bvar^-cong {_ id-nat N N'} {_ id-lt LT LT'} {_ id-exp^ (bvar^ N LT) (bvar^ N' LT')} %.
@@ -306,8 +306,8 @@ We also define identity and congruence on de Bruijn terms. !}%
 %mode id-lam^-cong %in %out %.
 %worlds (blockvar) (id-lam^-cong _ _) %.
 %total () (id-lam^-cong _ _) %.
-%{! ### Binding and unbinding !}%
-%{! The key operations on de Bruijn terms are a binding and unbinding
+%[[ ### Binding and unbinding %]]
+%[[ The key operations on de Bruijn terms are a binding and unbinding
 operation - essentially, bind takes a free (HOAS) variable and makes it
 a different free (de Bruijn) variable. 
 By way of an example, if we have <Math formula="x,y \vdash (\lambda 1 x) y"/>,
@@ -317,7 +317,7 @@ result in <Math formula="x \vdash (\lambda 1 x) 1"/>.
 
 Unfortunately, the structural metric ends up being included in both
 ``bind`` and ``unbind``, which complicates the otherwise relatively
-simple judgments significantly. !}%
+simple judgments significantly. %]]
 %sort bind {_ {v} %pi (isvar v) %-> (exp^ N Et)} {_ exp^ (s N) Et} %.
 %mode bind %in %out %.
 %term bind/match %pi (bind ([v] [iv] fvar^ v iv) (bvar^ N LT)) %<- (lts N LT) %.
@@ -330,7 +330,7 @@ simple judgments significantly. !}%
 %term bind/lam %pi (bind ([v] [iv] lam^ (E v iv)) (lam^ E')) %<- (bind ([v] [iv] E v iv) E') %.
 %worlds (blockvar) (bind _ _) %.
 %total T (bind T _) %.
-%{!  !}%
+%[[  %]]
 %sort unbind-bvar {_ lt12 M (s N)} {_ {v} %pi (isvar v) %-> (exp^ N etree/var)} %.
 %mode unbind-bvar %in %out %.
 %term unbind-bvar/match unbind-bvar lt12/1 ([v] [iv] fvar^ v iv) %.
@@ -353,8 +353,8 @@ simple judgments significantly. !}%
 	%<- (unbind E1 ([v] [iv] E1' v iv)) %.
 %worlds (blockvar) (unbind _ _) %.
 %total T (unbind T _) %.
-%{! ### Properties of bind and unbind !}%
-%{! Now we will show that bind and unbind are inverses of each other,
+%[[ ### Properties of bind and unbind %]]
+%[[ Now we will show that bind and unbind are inverses of each other,
 which mirrors the proof we will eventually prove about the ``exp->db``
 and ``db->exp`` being inverses of each other. In particular, in 
 ``unbind-uniq`` we need to use [reasoning from false](/wiki/reasoning-from-false/) along with a
@@ -362,7 +362,7 @@ special lemma.
 
 The theorem statements were difficult to get correct, but the proofs are
 relatively straightforward and are omitted (they are present in the full
-source code for this page). !}%
+source code for this page). %]]
 %sort bind-uniq {_ {v} {iv isvar v} id-exp^ (Ea v iv) (Ea' v iv)} {_ bind Ea Eb} {_ bind Ea' Eb'} {_ id-exp^ Eb Eb'} %.
 %mode bind-uniq %in %in %in %out %.
 %{}%
@@ -457,21 +457,21 @@ source code for this page). !}%
 %worlds (blockvar) (unbind-bind _ _) %.
 %total T (unbind-bind T _) %.
 %{}%
-%{! ## Relating HOAS and de Bruijn representations !}%
-%{! This is the penultimate section. What we want to prove, ultimately, is
+%[[ ## Relating HOAS and de Bruijn representations %]]
+%[[ This is the penultimate section. What we want to prove, ultimately, is
 a bijection between _closed_ HOAS terms and _closed_ de Bruijn terms;
 however, in order to get there we will prove a bijection between open
 HOAS terms and open de Bruijn terms, which is the subject of this section.
 Doing so requires reasoning with the structural metric, using the complex
 ``blockcases`` block description, and generally making a mess. The
 theorem about closed terms in the next session will be simpler, but will use 
-the more complex lemmas from this section. !}%
-%{! ### HOAS to de Bruijn !}%
-%{! It is here that we will need to use the ``blockcases`` block description
+the more complex lemmas from this section. %]]
+%[[ ### HOAS to de Bruijn %]]
+%[[ It is here that we will need to use the ``blockcases`` block description
 discussed above; even though it makes the translation more complicated, we
 directly prove the translation total in order to avoid writing a ton
 of [effectiveness lemmas](/wiki/effectiveness-lemma/); the uniqueness of this translation is simple,
-but dependent on the effectiveness of ``bind``. !}%
+but dependent on the effectiveness of ``bind``. %]]
 %sort exp->db {E} {_ case E} {Et} {_ exp^ z Et} %.
 %mode exp->db %in %in %out %out %.
 %term exp->db/var exp->db _ (case/var IV) etree/var (fvar^ V IV) %.
@@ -506,9 +506,9 @@ but dependent on the effectiveness of ``bind``. !}%
 	%<- (id-app^-cong ID^1 ID^2 ID^) %.
 %worlds (blockcases) (uniq->db _ _ _ _) %.
 %total T (uniq->db T _ _ _) %.
-%{! ### de Bruijn to HOAS !}%
-%{! It is here that we will need to use the ``etree`` [structural metric](/wiki/structural-metrics/)
-to provide a usable termination argument for ``db->exp``. !}%
+%[[ ### de Bruijn to HOAS %]]
+%[[ It is here that we will need to use the ``etree`` [structural metric](/wiki/structural-metrics/)
+to provide a usable termination argument for ``db->exp``. %]]
 %sort db->exp {Et} {_ exp^ z Et} {E} {_ case E} %.
 %mode db->exp %in %in %out %out %.
 %term db->exp/fvar db->exp etree/var (fvar^ V IV) V (case/var IV) %.
@@ -538,7 +538,7 @@ to provide a usable termination argument for ``db->exp``. !}%
 	%<- (id-app-cong ID1 ID2 ID) %.
 %worlds (blockcases) (uniq->exp _ _ _ _) %.
 %total T (uniq->exp _ T _ _) %.
-%{! ### Composition: HOAS -&gt; de Bruijn -&gt; HOAS !}%
+%[[ ### Composition: HOAS -&gt; de Bruijn -&gt; HOAS %]]
 %sort inverseEDE {_ exp->db E C Et E^} {_ db->exp Et E^ E C} %.
 %mode inverseEDE %in %out %.
 %term _ inverseEDE exp->db/var db->exp/fvar %.
@@ -553,10 +553,10 @@ to provide a usable termination argument for ``db->exp``. !}%
 %worlds (blockcases) (inverseEDE _ _) %.
 %total T (inverseEDE T _) %.
 %{}%
-%{! ### Composition: de Bruijn -&gt; HOAS -&gt; de Bruijn !}%
-%{! We need one last trick in order to make this proof go through in the
+%[[ ### Composition: de Bruijn -&gt; HOAS -&gt; de Bruijn %]]
+%[[ We need one last trick in order to make this proof go through in the
 opposite direction; we will need an effectiveness lemma on top of an
-effectiveness lemma! (Effectiveness lemmas can get out of control sometimes.) !}%
+effectiveness lemma! (Effectiveness lemmas can get out of control sometimes.) %]]
 %sort can-can-case {C case E} {_ can-case E C} %.
 %sort fake %.
 %term _ %pi fake %<- (%pi (can-can-case E V) %-> (can-can-case E' V')) %.
@@ -566,8 +566,8 @@ effectiveness lemma! (Effectiveness lemmas can get out of control sometimes.) !}
 %mode can-can-case %in %out %.
 %worlds (blockcancases) (can-can-case _ _) %.
 %total () (can-can-case _ _) %.
-%{! With our slightly absurd effectiveness effectiveness lemma in tow, we can
-complete the proof that composition in the other direction is the identity. !}%
+%[[ With our slightly absurd effectiveness effectiveness lemma in tow, we can
+complete the proof that composition in the other direction is the identity. %]]
 %sort inverseDED {_ db->exp Et E^ E C} {_ exp->db E C Et E^} %.
 %mode inverseDED %in %out %.
 %term _ inverseDED db->exp/fvar exp->db/var %.
@@ -585,14 +585,14 @@ complete the proof that composition in the other direction is the identity. !}%
 %worlds (blockcancases) (inverseDED _ _) %.
 %total T (inverseDED T _) %.
 %{}%
-%{! ## Wrapping up !}%
-%{! The one step that remains is to perform the above four steps for a
+%[[ ## Wrapping up %]]
+%[[ The one step that remains is to perform the above four steps for a
 simpler theorem statement in a closed world, since ultimately what we 
 want is a theorem about closed terms anyway. These theorems would likely
 be less useful in practice than the ones already proven because the 
 closed world assumption makes them less general, but they more concisely
-state what was done. !}%
-%{! * ``exp-->db`` is a total and unique relation between HOAS to de Bruijn terms, and can therefore be thought of as the function _e2d_. !}%
+state what was done. %]]
+%[[ * ``exp-->db`` is a total and unique relation between HOAS to de Bruijn terms, and can therefore be thought of as the function _e2d_. %]]
 %sort exp-->db {_ exp} {_ exp^ z Et} %.
 %term exp-->db/ 
 	%pi (exp-->db E E^)
@@ -606,7 +606,7 @@ state what was done. !}%
 %mode uniq-->db %in %in %out %.
 %worlds () (uniq-->db _ _ _) %.
 %total () (uniq-->db _ _ _) %.
-%{! * ``db-->exp`` is a total and unique relation between de Bruijn terms to HOAS, and can therefore be thought of as the function _d2e_. !}%
+%[[ * ``db-->exp`` is a total and unique relation between de Bruijn terms to HOAS, and can therefore be thought of as the function _d2e_. %]]
 %sort db-->exp {_ exp^ z Et} {_ exp} %.
 %term db-->exp/ %pi (db-->exp E^ E) %<- (db->exp Et E^ E _) %.
 %mode db-->exp %in %out %.
@@ -619,7 +619,7 @@ state what was done. !}%
 %mode uniq-->exp %in %in %out %.
 %worlds () (uniq-->exp _ _ _) %.
 %total () (uniq-->exp _ _ _) %.
-%{! * For all closed de Bruijn terms E, _d2e_(_e2d_ E) = E. !}%
+%[[ * For all closed de Bruijn terms E, _d2e_(_e2d_ E) = E. %]]
 %sort db-->exp-->db {_ db-->exp E^ E} {_ exp-->db E E^} %.
 %term _ 
 	%pi (db-->exp-->db (db-->exp/ DE) (exp-->db/ ED C))
@@ -628,24 +628,24 @@ state what was done. !}%
 %mode db-->exp-->db %in %out %.
 %worlds () (db-->exp-->db _ _) %.
 %total () (db-->exp-->db _ _) %.
-%{! * For all closed HOAS terms E, _e2d_ (_d2e_ E) = E. !}%
+%[[ * For all closed HOAS terms E, _e2d_ (_d2e_ E) = E. %]]
 %sort exp-->db-->exp {_ exp-->db E E^} {_ db-->exp E^ E} %.
 %term _ %pi (exp-->db-->exp (exp-->db/ ED C) (db-->exp/ DE)) %<- (inverseEDE ED DE) %.
 %mode exp-->db-->exp %in %out %.
 %worlds () (exp-->db-->exp _ _) %.
 %total () (exp-->db-->exp _ _) %.
 %{}%
-%{! ## Examples !}%
-%{! It's also a good idea to run a [``%query``](/wiki/percent-query/) on some examples as
+%[[ ## Examples %]]
+%[[ It's also a good idea to run a [``%query``](/wiki/percent-query/) on some examples as
 a sanity check. First, we translate the Church numeral "4," <Math formula="\lambda f.\lambda x.f(f(f(f x)))"/> from a
-HOAS to a de Bruijn index representation. |check=decl !}%
+HOAS to a de Bruijn index representation. |check=decl %]]
 %query 1 _ _ exp-->db (lam ([f] lam ([x] app f (app f (app f (app f x)))))) DB %.
-%{! Next, we translate the Church boolean operator "Not," <Math formula="\lambda p . p (\lambda x . \lambda y . y) (\lambda x . \lambda y . x)"/> from a
-Bruijn index to a HOAS representation. |check=decl !}%
+%[[ Next, we translate the Church boolean operator "Not," <Math formula="\lambda p . p (\lambda x . \lambda y . y) (\lambda x . \lambda y . x)"/> from a
+Bruijn index to a HOAS representation. |check=decl %]]
 %query 1 _ _ db-->exp (lam^ (app^ (app^ (bvar^ z lt/z) (lam^ (lam^ (bvar^ z lt/z)))) (lam^ (lam^ (bvar^ (s z) (lt/s lt/z)))))) HOAS %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Concrete_representation).
-!}%
+%]]

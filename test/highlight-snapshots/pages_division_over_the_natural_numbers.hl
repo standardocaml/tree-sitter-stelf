@@ -1,0 +1,1440 @@
+0:0-0:46	comment	`%                                             `
+1:1-1:2	punctuation.bracket	`[`
+1:2-1:3	punctuation.bracket	`[`
+1:14-1:15	punctuation.bracket	`[`
+1:25-1:26	punctuation.bracket	`]`
+1:26-1:27	punctuation.bracket	`(`
+1:46-1:47	punctuation.bracket	`)`
+1:313-1:314	punctuation.bracket	`[`
+1:334-1:335	punctuation.bracket	`]`
+1:335-1:336	punctuation.bracket	`(`
+1:363-1:364	punctuation.bracket	`)`
+1:379-1:380	punctuation.bracket	`[`
+1:380-1:388	keyword	`%reduces`
+1:388-1:389	punctuation.bracket	`]`
+1:389-1:390	punctuation.bracket	`(`
+1:412-1:413	punctuation.bracket	`)`
+3:57-3:58	punctuation.bracket	`]`
+3:58-3:59	punctuation.bracket	`]`
+4:0-4:5	keyword.type	`%sort`
+4:6-4:17	constructor	`uninhabited`
+4:6-4:17	local.reference	`uninhabited`
+4:6-4:17	type	`uninhabited`
+4:17-4:20	keyword.return	` %.`
+5:8-5:19	constructor	`uninhabited`
+5:8-5:19	local.reference	`uninhabited`
+5:19-5:22	keyword.return	` %.`
+5:22-6:5	keyword.type	``
+6:6-6:9	constructor	`nat`
+6:6-6:9	local.reference	`nat`
+6:6-6:9	type	`nat`
+6:9-6:12	keyword.return	` %.`
+7:6-7:11	constructor	`nat/z`
+7:6-7:11	function	`nat/z`
+7:6-7:11	local.reference	`nat/z`
+7:6-7:11	variable.parameter	`nat/z`
+7:11-7:15	constructor	` nat`
+7:11-7:15	local.reference	` nat`
+7:15-7:18	keyword.return	` %.`
+8:6-8:11	constructor	`nat/s`
+8:6-8:11	function	`nat/s`
+8:6-8:11	local.reference	`nat/s`
+8:6-8:11	variable.parameter	`nat/s`
+8:11-8:15	operator	` %pi`
+8:16-8:19	constructor	`nat`
+8:16-8:19	local.reference	`nat`
+8:20-8:23	operator	`%->`
+8:24-8:27	constructor	`nat`
+8:24-8:27	local.reference	`nat`
+8:27-8:30	keyword.return	` %.`
+9:1-9:2	punctuation.bracket	`[`
+9:2-9:3	punctuation.bracket	`[`
+9:90-9:91	punctuation.bracket	`]`
+9:91-9:92	punctuation.bracket	`]`
+10:0-10:5	keyword.type	`%sort`
+10:6-10:14	constructor	`nat-plus`
+10:6-10:14	local.reference	`nat-plus`
+10:6-10:14	type	`nat-plus`
+10:39-10:41	keyword.return	`%.`
+11:6-11:16	constructor	`nat-plus/z`
+11:6-11:16	function	`nat-plus/z`
+11:6-11:16	local.reference	`nat-plus/z`
+11:6-11:16	variable.parameter	`nat-plus/z`
+11:16-11:25	constructor	` nat-plus`
+11:16-11:25	local.reference	` nat-plus`
+11:25-11:31	constructor	` nat/z`
+11:25-11:31	local.reference	` nat/z`
+11:31-11:33	constructor	` N`
+11:31-11:33	local.reference	` N`
+11:33-11:35	constructor	` N`
+11:33-11:35	local.reference	` N`
+11:35-11:38	keyword.return	` %.`
+12:6-12:16	constructor	`nat-plus/s`
+12:6-12:16	function	`nat-plus/s`
+12:6-12:16	local.reference	`nat-plus/s`
+12:6-12:16	variable.parameter	`nat-plus/s`
+12:16-12:20	operator	` %pi`
+12:21-12:22	punctuation.bracket	`(`
+12:22-12:30	constructor	`nat-plus`
+12:22-12:30	local.reference	`nat-plus`
+12:31-12:32	punctuation.bracket	`(`
+12:32-12:37	constructor	`nat/s`
+12:32-12:37	local.reference	`nat/s`
+12:38-12:40	constructor	`N1`
+12:38-12:40	local.reference	`N1`
+12:40-12:41	punctuation.bracket	`)`
+12:42-12:44	constructor	`N2`
+12:42-12:44	local.reference	`N2`
+12:45-12:46	punctuation.bracket	`(`
+12:46-12:51	constructor	`nat/s`
+12:46-12:51	local.reference	`nat/s`
+12:52-12:54	constructor	`N3`
+12:52-12:54	local.reference	`N3`
+12:54-12:55	punctuation.bracket	`)`
+12:55-12:56	punctuation.bracket	`)`
+12:57-12:60	operator	`%<-`
+12:61-12:62	punctuation.bracket	`(`
+12:62-12:70	constructor	`nat-plus`
+12:62-12:70	local.reference	`nat-plus`
+12:71-12:73	constructor	`N1`
+12:71-12:73	local.reference	`N1`
+12:74-12:76	constructor	`N2`
+12:74-12:76	local.reference	`N2`
+12:77-12:79	constructor	`N3`
+12:77-12:79	local.reference	`N3`
+12:79-12:80	punctuation.bracket	`)`
+12:80-12:83	keyword.return	` %.`
+12:83-13:5	keyword.type	``
+13:6-13:14	constructor	`nat-mult`
+13:6-13:14	local.reference	`nat-mult`
+13:6-13:14	type	`nat-mult`
+13:39-13:41	keyword.return	`%.`
+14:6-14:16	constructor	`nat-mult/z`
+14:6-14:16	function	`nat-mult/z`
+14:6-14:16	local.reference	`nat-mult/z`
+14:6-14:16	variable.parameter	`nat-mult/z`
+14:16-14:25	constructor	` nat-mult`
+14:16-14:25	local.reference	` nat-mult`
+14:25-14:31	constructor	` nat/z`
+14:25-14:31	local.reference	` nat/z`
+14:31-14:33	constructor	` N`
+14:31-14:33	local.reference	` N`
+14:33-14:39	constructor	` nat/z`
+14:33-14:39	local.reference	` nat/z`
+14:39-14:42	keyword.return	` %.`
+15:6-15:16	constructor	`nat-mult/s`
+15:6-15:16	function	`nat-mult/s`
+15:6-15:16	local.reference	`nat-mult/s`
+15:6-15:16	variable.parameter	`nat-mult/s`
+15:16-15:20	operator	` %pi`
+15:21-15:22	punctuation.bracket	`(`
+15:22-15:30	constructor	`nat-mult`
+15:22-15:30	local.reference	`nat-mult`
+15:31-15:32	punctuation.bracket	`(`
+15:32-15:37	constructor	`nat/s`
+15:32-15:37	local.reference	`nat/s`
+15:38-15:40	constructor	`N1`
+15:38-15:40	local.reference	`N1`
+15:40-15:41	punctuation.bracket	`)`
+15:42-15:44	constructor	`N2`
+15:42-15:44	local.reference	`N2`
+15:45-15:48	constructor	`N3'`
+15:45-15:48	local.reference	`N3'`
+15:48-15:49	punctuation.bracket	`)`
+15:50-15:53	operator	`%<-`
+15:54-15:55	punctuation.bracket	`(`
+15:55-15:63	constructor	`nat-plus`
+15:55-15:63	local.reference	`nat-plus`
+15:64-15:66	constructor	`N2`
+15:64-15:66	local.reference	`N2`
+15:67-15:69	constructor	`N3`
+15:67-15:69	local.reference	`N3`
+15:70-15:73	constructor	`N3'`
+15:70-15:73	local.reference	`N3'`
+15:73-15:74	punctuation.bracket	`)`
+15:74-15:78	operator	` %<-`
+15:79-15:80	punctuation.bracket	`(`
+15:80-15:88	constructor	`nat-mult`
+15:80-15:88	local.reference	`nat-mult`
+15:89-15:91	constructor	`N1`
+15:89-15:91	local.reference	`N1`
+15:92-15:94	constructor	`N2`
+15:92-15:94	local.reference	`N2`
+15:95-15:97	constructor	`N3`
+15:95-15:97	local.reference	`N3`
+15:97-15:98	punctuation.bracket	`)`
+15:98-15:101	keyword.return	` %.`
+15:101-16:5	keyword.type	``
+16:6-16:14	constructor	`nat-less`
+16:6-16:14	local.reference	`nat-less`
+16:6-16:14	type	`nat-less`
+16:31-16:33	keyword.return	`%.`
+17:6-17:16	constructor	`nat-less/z`
+17:6-17:16	function	`nat-less/z`
+17:6-17:16	local.reference	`nat-less/z`
+17:6-17:16	variable.parameter	`nat-less/z`
+17:16-17:25	constructor	` nat-less`
+17:16-17:25	local.reference	` nat-less`
+17:25-17:31	constructor	` nat/z`
+17:25-17:31	local.reference	` nat/z`
+17:42-17:44	keyword.return	`%.`
+18:6-18:16	constructor	`nat-less/s`
+18:6-18:16	function	`nat-less/s`
+18:6-18:16	local.reference	`nat-less/s`
+18:6-18:16	variable.parameter	`nat-less/s`
+18:16-18:20	operator	` %pi`
+18:21-18:22	punctuation.bracket	`(`
+18:22-18:30	constructor	`nat-less`
+18:22-18:30	local.reference	`nat-less`
+18:31-18:32	punctuation.bracket	`(`
+18:32-18:37	constructor	`nat/s`
+18:32-18:37	local.reference	`nat/s`
+18:38-18:40	constructor	`N1`
+18:38-18:40	local.reference	`N1`
+18:40-18:41	punctuation.bracket	`)`
+18:42-18:43	punctuation.bracket	`(`
+18:43-18:48	constructor	`nat/s`
+18:43-18:48	local.reference	`nat/s`
+18:49-18:51	constructor	`N2`
+18:49-18:51	local.reference	`N2`
+18:51-18:52	punctuation.bracket	`)`
+18:52-18:53	punctuation.bracket	`)`
+18:54-18:57	operator	`%<-`
+18:58-18:59	punctuation.bracket	`(`
+18:59-18:67	constructor	`nat-less`
+18:59-18:67	local.reference	`nat-less`
+18:68-18:70	constructor	`N1`
+18:68-18:70	local.reference	`N1`
+18:71-18:73	constructor	`N2`
+18:71-18:73	local.reference	`N2`
+18:73-18:74	punctuation.bracket	`)`
+18:74-18:77	keyword.return	` %.`
+18:77-19:5	keyword.type	``
+19:6-19:13	constructor	`nat-leq`
+19:6-19:13	local.reference	`nat-leq`
+19:6-19:13	type	`nat-leq`
+19:30-19:32	keyword.return	`%.`
+20:6-20:15	constructor	`nat-leq/z`
+20:6-20:15	function	`nat-leq/z`
+20:6-20:15	local.reference	`nat-leq/z`
+20:6-20:15	variable.parameter	`nat-leq/z`
+20:15-20:23	constructor	` nat-leq`
+20:15-20:23	local.reference	` nat-leq`
+20:23-20:29	constructor	` nat/z`
+20:23-20:29	local.reference	` nat/z`
+20:29-20:31	constructor	` _`
+20:29-20:31	local.reference	` _`
+20:31-20:34	keyword.return	` %.`
+21:6-21:15	constructor	`nat-leq/s`
+21:6-21:15	function	`nat-leq/s`
+21:6-21:15	local.reference	`nat-leq/s`
+21:6-21:15	variable.parameter	`nat-leq/s`
+21:15-21:19	operator	` %pi`
+21:20-21:21	punctuation.bracket	`(`
+21:21-21:28	constructor	`nat-leq`
+21:21-21:28	local.reference	`nat-leq`
+21:29-21:30	punctuation.bracket	`(`
+21:30-21:35	constructor	`nat/s`
+21:30-21:35	local.reference	`nat/s`
+21:36-21:38	constructor	`N1`
+21:36-21:38	local.reference	`N1`
+21:38-21:39	punctuation.bracket	`)`
+21:40-21:41	punctuation.bracket	`(`
+21:41-21:46	constructor	`nat/s`
+21:41-21:46	local.reference	`nat/s`
+21:47-21:49	constructor	`N2`
+21:47-21:49	local.reference	`N2`
+21:49-21:50	punctuation.bracket	`)`
+21:50-21:51	punctuation.bracket	`)`
+21:52-21:55	operator	`%<-`
+21:56-21:57	punctuation.bracket	`(`
+21:57-21:64	constructor	`nat-leq`
+21:57-21:64	local.reference	`nat-leq`
+21:65-21:67	constructor	`N1`
+21:65-21:67	local.reference	`N1`
+21:68-21:70	constructor	`N2`
+21:68-21:70	local.reference	`N2`
+21:70-21:71	punctuation.bracket	`)`
+21:71-21:74	keyword.return	` %.`
+21:74-22:5	keyword.type	``
+22:6-22:17	constructor	`nat-compare`
+22:6-22:17	local.reference	`nat-compare`
+22:6-22:17	type	`nat-compare`
+22:34-22:36	keyword.return	`%.`
+23:6-23:22	constructor	`nat-compare/less`
+23:6-23:22	function	`nat-compare/less`
+23:6-23:22	local.reference	`nat-compare/less`
+23:6-23:22	variable.parameter	`nat-compare/less`
+23:22-23:26	operator	` %pi`
+23:27-23:28	punctuation.bracket	`(`
+23:28-23:39	constructor	`nat-compare`
+23:28-23:39	local.reference	`nat-compare`
+23:40-23:42	constructor	`N1`
+23:40-23:42	local.reference	`N1`
+23:43-23:45	constructor	`N2`
+23:43-23:45	local.reference	`N2`
+23:45-23:46	punctuation.bracket	`)`
+23:47-23:50	operator	`%<-`
+23:51-23:52	punctuation.bracket	`(`
+23:52-23:60	constructor	`nat-less`
+23:52-23:60	local.reference	`nat-less`
+23:61-23:63	constructor	`N1`
+23:61-23:63	local.reference	`N1`
+23:64-23:66	constructor	`N2`
+23:64-23:66	local.reference	`N2`
+23:66-23:67	punctuation.bracket	`)`
+23:67-23:70	keyword.return	` %.`
+24:6-24:21	constructor	`nat-compare/leq`
+24:6-24:21	function	`nat-compare/leq`
+24:6-24:21	local.reference	`nat-compare/leq`
+24:6-24:21	variable.parameter	`nat-compare/leq`
+24:21-24:25	operator	` %pi`
+24:26-24:27	punctuation.bracket	`(`
+24:27-24:38	constructor	`nat-compare`
+24:27-24:38	local.reference	`nat-compare`
+24:39-24:41	constructor	`N1`
+24:39-24:41	local.reference	`N1`
+24:42-24:44	constructor	`N2`
+24:42-24:44	local.reference	`N2`
+24:44-24:45	punctuation.bracket	`)`
+24:46-24:49	operator	`%<-`
+24:50-24:51	punctuation.bracket	`(`
+24:51-24:58	constructor	`nat-leq`
+24:51-24:58	local.reference	`nat-leq`
+24:59-24:61	constructor	`N2`
+24:59-24:61	local.reference	`N2`
+24:62-24:64	constructor	`N1`
+24:62-24:64	local.reference	`N1`
+24:64-24:65	punctuation.bracket	`)`
+24:65-24:68	keyword.return	` %.`
+24:68-25:48	comment	``
+25:48-26:5	keyword.type	``
+26:6-26:16	constructor	`nat-divmod`
+26:6-26:16	local.reference	`nat-divmod`
+26:6-26:16	type	`nat-divmod`
+26:49-26:51	keyword.return	`%.`
+27:6-27:21	constructor	`nat-divmod/base`
+27:6-27:21	function	`nat-divmod/base`
+27:6-27:21	local.reference	`nat-divmod/base`
+27:6-27:21	variable.parameter	`nat-divmod/base`
+27:21-27:25	operator	` %pi`
+27:26-27:27	punctuation.bracket	`(`
+27:27-27:37	constructor	`nat-divmod`
+27:27-27:37	local.reference	`nat-divmod`
+27:38-27:40	constructor	`N1`
+27:38-27:40	local.reference	`N1`
+27:41-27:43	constructor	`N2`
+27:41-27:43	local.reference	`N2`
+27:44-27:49	constructor	`nat/z`
+27:44-27:49	local.reference	`nat/z`
+27:50-27:52	constructor	`N1`
+27:50-27:52	local.reference	`N1`
+27:52-27:53	punctuation.bracket	`)`
+27:54-27:57	operator	`%<-`
+27:58-27:59	punctuation.bracket	`(`
+27:59-27:67	constructor	`nat-less`
+27:59-27:67	local.reference	`nat-less`
+27:68-27:70	constructor	`N1`
+27:68-27:70	local.reference	`N1`
+27:71-27:73	constructor	`N2`
+27:71-27:73	local.reference	`N2`
+27:73-27:74	punctuation.bracket	`)`
+27:74-27:77	keyword.return	` %.`
+28:6-28:20	constructor	`nat-divmod/rec`
+28:6-28:20	function	`nat-divmod/rec`
+28:6-28:20	local.reference	`nat-divmod/rec`
+28:6-28:20	variable.parameter	`nat-divmod/rec`
+28:20-29:4	operator	``
+29:5-29:6	punctuation.bracket	`(`
+29:6-29:16	constructor	`nat-divmod`
+29:6-29:16	local.reference	`nat-divmod`
+29:17-29:19	constructor	`N1`
+29:17-29:19	local.reference	`N1`
+29:20-29:22	constructor	`N2`
+29:20-29:22	local.reference	`N2`
+29:23-29:24	punctuation.bracket	`(`
+29:24-29:29	constructor	`nat/s`
+29:24-29:29	local.reference	`nat/s`
+29:30-29:32	constructor	`N3`
+29:30-29:32	local.reference	`N3`
+29:32-29:33	punctuation.bracket	`)`
+29:34-29:36	constructor	`N4`
+29:34-29:36	local.reference	`N4`
+29:36-29:37	punctuation.bracket	`)`
+30:1-30:4	operator	`%<-`
+30:5-30:6	punctuation.bracket	`(`
+30:6-30:16	constructor	`nat-divmod`
+30:6-30:16	local.reference	`nat-divmod`
+30:17-30:20	constructor	`N1'`
+30:17-30:20	local.reference	`N1'`
+30:21-30:23	constructor	`N2`
+30:21-30:23	local.reference	`N2`
+30:24-30:26	constructor	`N3`
+30:24-30:26	local.reference	`N3`
+30:27-30:29	constructor	`N4`
+30:27-30:29	local.reference	`N4`
+30:29-30:30	punctuation.bracket	`)`
+30:30-31:4	operator	``
+31:5-31:6	punctuation.bracket	`(`
+31:6-31:14	constructor	`nat-plus`
+31:6-31:14	local.reference	`nat-plus`
+31:15-31:17	constructor	`N2`
+31:15-31:17	local.reference	`N2`
+31:18-31:21	constructor	`N1'`
+31:18-31:21	local.reference	`N1'`
+31:22-31:24	constructor	`N1`
+31:22-31:24	local.reference	`N1`
+31:24-31:25	punctuation.bracket	`)`
+31:25-31:28	keyword.return	` %.`
+32:1-32:2	punctuation.bracket	`[`
+32:2-32:3	punctuation.bracket	`[`
+32:45-32:46	punctuation.bracket	`]`
+32:46-32:47	punctuation.bracket	`]`
+33:0-33:5	keyword.type	`%sort`
+33:6-33:18	constructor	`nat-leq-plus`
+33:6-33:18	local.reference	`nat-leq-plus`
+33:6-33:18	type	`nat-leq-plus`
+33:58-33:60	keyword.return	`%.`
+34:6-34:18	constructor	`nat-leq-plus`
+34:6-34:18	local.reference	`nat-leq-plus`
+34:18-34:22	keyword.modifier	` %in`
+34:22-34:27	keyword.modifier	` %out`
+34:27-34:30	keyword.return	` %.`
+35:6-35:7	constructor	`_`
+35:6-35:7	function	`_`
+35:6-35:7	local.reference	`_`
+35:6-35:7	variable.parameter	`_`
+35:7-35:20	constructor	` nat-leq-plus`
+35:7-35:20	local.reference	` nat-leq-plus`
+35:20-35:30	constructor	` nat-leq/z`
+35:20-35:30	local.reference	` nat-leq/z`
+35:30-35:41	constructor	` nat-plus/z`
+35:30-35:41	local.reference	` nat-plus/z`
+35:41-35:44	keyword.return	` %.`
+36:6-36:7	constructor	`_`
+36:6-36:7	function	`_`
+36:6-36:7	local.reference	`_`
+36:6-36:7	variable.parameter	`_`
+36:7-36:11	operator	` %pi`
+36:12-36:13	punctuation.bracket	`(`
+36:13-36:25	constructor	`nat-leq-plus`
+36:13-36:25	local.reference	`nat-leq-plus`
+36:26-36:27	punctuation.bracket	`(`
+36:27-36:36	constructor	`nat-leq/s`
+36:27-36:36	local.reference	`nat-leq/s`
+36:37-36:40	constructor	`DLQ`
+36:37-36:40	local.reference	`DLQ`
+36:40-36:41	punctuation.bracket	`)`
+36:42-36:43	punctuation.bracket	`(`
+36:43-36:53	constructor	`nat-plus/s`
+36:43-36:53	local.reference	`nat-plus/s`
+36:54-36:57	constructor	`DNP`
+36:54-36:57	local.reference	`DNP`
+36:57-36:58	punctuation.bracket	`)`
+36:58-36:59	punctuation.bracket	`)`
+36:60-36:63	operator	`%<-`
+36:64-36:65	punctuation.bracket	`(`
+36:65-36:77	constructor	`nat-leq-plus`
+36:65-36:77	local.reference	`nat-leq-plus`
+36:78-36:81	constructor	`DLQ`
+36:78-36:81	local.reference	`DLQ`
+36:82-36:85	constructor	`DNP`
+36:82-36:85	local.reference	`DNP`
+36:85-36:86	punctuation.bracket	`)`
+36:86-36:89	keyword.return	` %.`
+37:8-37:9	punctuation.bracket	`(`
+37:9-37:10	punctuation.bracket	`)`
+37:11-37:12	punctuation.bracket	`(`
+37:12-37:24	constructor	`nat-leq-plus`
+37:12-37:24	local.reference	`nat-leq-plus`
+37:25-37:26	constructor	`_`
+37:25-37:26	local.reference	`_`
+37:25-37:26	variable.parameter	`_`
+37:27-37:28	constructor	`_`
+37:27-37:28	local.reference	`_`
+37:27-37:28	variable.parameter	`_`
+37:28-37:29	punctuation.bracket	`)`
+37:29-37:32	keyword.return	` %.`
+38:7-38:8	punctuation.bracket	`{`
+38:8-38:10	constructor	`D1`
+38:8-38:10	local.reference	`D1`
+38:10-38:11	punctuation.bracket	`}`
+38:12-38:13	punctuation.bracket	`(`
+38:13-38:25	constructor	`nat-leq-plus`
+38:13-38:25	local.reference	`nat-leq-plus`
+38:26-38:28	constructor	`D1`
+38:26-38:28	local.reference	`D1`
+38:29-38:30	constructor	`_`
+38:29-38:30	local.reference	`_`
+38:29-38:30	variable.parameter	`_`
+38:30-38:31	punctuation.bracket	`)`
+38:31-38:34	keyword.return	` %.`
+38:34-39:5	keyword.type	``
+39:6-39:24	constructor	`nat-compare-resp-s`
+39:6-39:24	local.reference	`nat-compare-resp-s`
+39:6-39:24	type	`nat-compare-resp-s`
+39:85-39:87	keyword.return	`%.`
+40:6-40:24	constructor	`nat-compare-resp-s`
+40:6-40:24	local.reference	`nat-compare-resp-s`
+40:24-40:28	keyword.modifier	` %in`
+40:28-40:33	keyword.modifier	` %out`
+40:33-40:36	keyword.return	` %.`
+41:6-41:7	constructor	`_`
+41:6-41:7	function	`_`
+41:6-41:7	local.reference	`_`
+41:6-41:7	variable.parameter	`_`
+41:7-41:26	constructor	` nat-compare-resp-s`
+41:7-41:26	local.reference	` nat-compare-resp-s`
+41:84-41:86	keyword.return	`%.`
+42:6-42:7	constructor	`_`
+42:6-42:7	function	`_`
+42:6-42:7	local.reference	`_`
+42:6-42:7	variable.parameter	`_`
+42:7-42:26	constructor	` nat-compare-resp-s`
+42:7-42:26	local.reference	` nat-compare-resp-s`
+42:83-42:85	keyword.return	`%.`
+43:8-43:9	punctuation.bracket	`(`
+43:9-43:10	punctuation.bracket	`)`
+43:11-43:12	punctuation.bracket	`(`
+43:12-43:30	constructor	`nat-compare-resp-s`
+43:12-43:30	local.reference	`nat-compare-resp-s`
+43:31-43:32	constructor	`_`
+43:31-43:32	local.reference	`_`
+43:31-43:32	variable.parameter	`_`
+43:33-43:34	constructor	`_`
+43:33-43:34	local.reference	`_`
+43:33-43:34	variable.parameter	`_`
+43:34-43:35	punctuation.bracket	`)`
+43:35-43:38	keyword.return	` %.`
+44:7-44:8	punctuation.bracket	`(`
+44:8-44:8	local.reference	``
+44:8-44:8	operator	``
+44:8-44:9	punctuation.bracket	`)`
+44:10-44:11	punctuation.bracket	`(`
+44:11-44:29	constructor	`nat-compare-resp-s`
+44:11-44:29	local.reference	`nat-compare-resp-s`
+44:30-44:31	constructor	`_`
+44:30-44:31	local.reference	`_`
+44:30-44:31	variable.parameter	`_`
+44:32-44:33	constructor	`_`
+44:32-44:33	local.reference	`_`
+44:32-44:33	variable.parameter	`_`
+44:33-44:34	punctuation.bracket	`)`
+44:34-44:37	keyword.return	` %.`
+44:37-45:5	keyword.type	``
+45:6-45:21	constructor	`can-nat-compare`
+45:6-45:21	local.reference	`can-nat-compare`
+45:6-45:21	type	`can-nat-compare`
+45:54-45:56	keyword.return	`%.`
+46:6-46:21	constructor	`can-nat-compare`
+46:6-46:21	local.reference	`can-nat-compare`
+46:21-46:25	keyword.modifier	` %in`
+46:25-46:29	keyword.modifier	` %in`
+46:29-46:34	keyword.modifier	` %out`
+46:34-46:37	keyword.return	` %.`
+47:6-47:7	constructor	`_`
+47:6-47:7	function	`_`
+47:6-47:7	local.reference	`_`
+47:6-47:7	variable.parameter	`_`
+47:7-47:23	constructor	` can-nat-compare`
+47:7-47:23	local.reference	` can-nat-compare`
+47:23-47:25	constructor	` _`
+47:23-47:25	local.reference	` _`
+47:25-47:27	constructor	` _`
+47:25-47:27	local.reference	` _`
+47:58-47:60	keyword.return	`%.`
+48:6-48:7	constructor	`_`
+48:6-48:7	function	`_`
+48:6-48:7	local.reference	`_`
+48:6-48:7	variable.parameter	`_`
+48:7-48:23	constructor	` can-nat-compare`
+48:7-48:23	local.reference	` can-nat-compare`
+48:23-48:25	constructor	` _`
+48:23-48:25	local.reference	` _`
+48:25-48:27	constructor	` _`
+48:25-48:27	local.reference	` _`
+48:56-48:58	keyword.return	`%.`
+49:6-49:7	constructor	`_`
+49:6-49:7	function	`_`
+49:6-49:7	local.reference	`_`
+49:6-49:7	variable.parameter	`_`
+49:7-50:4	operator	``
+50:5-50:6	punctuation.bracket	`(`
+50:6-50:21	constructor	`can-nat-compare`
+50:6-50:21	local.reference	`can-nat-compare`
+50:22-50:23	punctuation.bracket	`(`
+50:23-50:28	constructor	`nat/s`
+50:23-50:28	local.reference	`nat/s`
+50:29-50:31	constructor	`N1`
+50:29-50:31	local.reference	`N1`
+50:31-50:32	punctuation.bracket	`)`
+50:33-50:34	punctuation.bracket	`(`
+50:34-50:39	constructor	`nat/s`
+50:34-50:39	local.reference	`nat/s`
+50:40-50:42	constructor	`N2`
+50:40-50:42	local.reference	`N2`
+50:42-50:43	punctuation.bracket	`)`
+50:44-50:47	constructor	`DC'`
+50:44-50:47	local.reference	`DC'`
+50:47-50:48	punctuation.bracket	`)`
+51:1-51:4	operator	`%<-`
+51:5-51:6	punctuation.bracket	`(`
+51:6-51:21	constructor	`can-nat-compare`
+51:6-51:21	local.reference	`can-nat-compare`
+51:22-51:24	constructor	`N1`
+51:22-51:24	local.reference	`N1`
+51:25-51:27	constructor	`N2`
+51:25-51:27	local.reference	`N2`
+51:28-51:30	constructor	`DC`
+51:28-51:30	local.reference	`DC`
+51:30-51:31	punctuation.bracket	`)`
+51:31-52:4	operator	``
+52:5-52:6	punctuation.bracket	`(`
+52:6-52:24	constructor	`nat-compare-resp-s`
+52:6-52:24	local.reference	`nat-compare-resp-s`
+52:25-52:27	constructor	`DC`
+52:25-52:27	local.reference	`DC`
+52:28-52:31	constructor	`DC'`
+52:28-52:31	local.reference	`DC'`
+52:31-52:32	punctuation.bracket	`)`
+52:32-52:35	keyword.return	` %.`
+53:8-53:9	punctuation.bracket	`(`
+53:9-53:10	punctuation.bracket	`)`
+53:11-53:12	punctuation.bracket	`(`
+53:12-53:27	constructor	`can-nat-compare`
+53:12-53:27	local.reference	`can-nat-compare`
+53:28-53:29	constructor	`_`
+53:28-53:29	local.reference	`_`
+53:28-53:29	variable.parameter	`_`
+53:30-53:31	constructor	`_`
+53:30-53:31	local.reference	`_`
+53:30-53:31	variable.parameter	`_`
+53:32-53:33	constructor	`_`
+53:32-53:33	local.reference	`_`
+53:32-53:33	variable.parameter	`_`
+53:33-53:34	punctuation.bracket	`)`
+53:34-53:37	keyword.return	` %.`
+54:7-54:8	punctuation.bracket	`{`
+54:8-54:10	constructor	`D1`
+54:8-54:10	local.reference	`D1`
+54:10-54:11	punctuation.bracket	`}`
+54:12-54:13	punctuation.bracket	`(`
+54:13-54:28	constructor	`can-nat-compare`
+54:13-54:28	local.reference	`can-nat-compare`
+54:29-54:31	constructor	`D1`
+54:29-54:31	local.reference	`D1`
+54:32-54:33	constructor	`_`
+54:32-54:33	local.reference	`_`
+54:32-54:33	variable.parameter	`_`
+54:34-54:35	constructor	`_`
+54:34-54:35	local.reference	`_`
+54:34-54:35	variable.parameter	`_`
+54:35-54:36	punctuation.bracket	`)`
+54:36-54:39	keyword.return	` %.`
+54:39-55:5	keyword.type	``
+55:6-55:18	constructor	`can-nat-plus`
+55:6-55:18	local.reference	`can-nat-plus`
+55:6-55:18	type	`can-nat-plus`
+55:51-55:53	keyword.return	`%.`
+56:6-56:18	constructor	`can-nat-plus`
+56:6-56:18	local.reference	`can-nat-plus`
+56:18-56:22	keyword.modifier	` %in`
+56:22-56:26	keyword.modifier	` %in`
+56:26-56:31	keyword.modifier	` %out`
+56:31-56:34	keyword.return	` %.`
+57:6-57:7	constructor	`_`
+57:6-57:7	function	`_`
+57:6-57:7	local.reference	`_`
+57:6-57:7	variable.parameter	`_`
+57:7-57:20	constructor	` can-nat-plus`
+57:7-57:20	local.reference	` can-nat-plus`
+57:20-57:22	constructor	` _`
+57:20-57:22	local.reference	` _`
+57:22-57:24	constructor	` _`
+57:22-57:24	local.reference	` _`
+57:24-57:35	constructor	` nat-plus/z`
+57:24-57:35	local.reference	` nat-plus/z`
+57:35-57:38	keyword.return	` %.`
+58:6-58:7	constructor	`_`
+58:6-58:7	function	`_`
+58:6-58:7	local.reference	`_`
+58:6-58:7	variable.parameter	`_`
+58:7-58:11	operator	` %pi`
+58:12-58:13	punctuation.bracket	`(`
+58:13-58:25	constructor	`can-nat-plus`
+58:13-58:25	local.reference	`can-nat-plus`
+58:26-58:27	constructor	`_`
+58:26-58:27	local.reference	`_`
+58:26-58:27	variable.parameter	`_`
+58:28-58:29	constructor	`_`
+58:28-58:29	local.reference	`_`
+58:28-58:29	variable.parameter	`_`
+58:30-58:31	punctuation.bracket	`(`
+58:31-58:41	constructor	`nat-plus/s`
+58:31-58:41	local.reference	`nat-plus/s`
+58:42-58:44	constructor	`DP`
+58:42-58:44	local.reference	`DP`
+58:44-58:45	punctuation.bracket	`)`
+58:45-58:46	punctuation.bracket	`)`
+58:47-58:50	operator	`%<-`
+58:51-58:52	punctuation.bracket	`(`
+58:52-58:64	constructor	`can-nat-plus`
+58:52-58:64	local.reference	`can-nat-plus`
+58:65-58:66	constructor	`_`
+58:65-58:66	local.reference	`_`
+58:65-58:66	variable.parameter	`_`
+58:67-58:68	constructor	`_`
+58:67-58:68	local.reference	`_`
+58:67-58:68	variable.parameter	`_`
+58:69-58:71	constructor	`DP`
+58:69-58:71	local.reference	`DP`
+58:71-58:72	punctuation.bracket	`)`
+58:72-58:75	keyword.return	` %.`
+59:8-59:9	punctuation.bracket	`(`
+59:9-59:10	punctuation.bracket	`)`
+59:11-59:12	punctuation.bracket	`(`
+59:12-59:24	constructor	`can-nat-plus`
+59:12-59:24	local.reference	`can-nat-plus`
+59:25-59:26	constructor	`_`
+59:25-59:26	local.reference	`_`
+59:25-59:26	variable.parameter	`_`
+59:27-59:28	constructor	`_`
+59:27-59:28	local.reference	`_`
+59:27-59:28	variable.parameter	`_`
+59:29-59:30	constructor	`_`
+59:29-59:30	local.reference	`_`
+59:29-59:30	variable.parameter	`_`
+59:30-59:31	punctuation.bracket	`)`
+59:31-59:34	keyword.return	` %.`
+60:7-60:8	punctuation.bracket	`(`
+60:8-60:10	constructor	`D1`
+60:8-60:10	local.reference	`D1`
+60:10-60:11	punctuation.bracket	`)`
+60:12-60:13	punctuation.bracket	`(`
+60:13-60:25	constructor	`can-nat-plus`
+60:13-60:25	local.reference	`can-nat-plus`
+60:26-60:28	constructor	`D1`
+60:26-60:28	local.reference	`D1`
+60:29-60:30	constructor	`_`
+60:29-60:30	local.reference	`_`
+60:29-60:30	variable.parameter	`_`
+60:31-60:32	constructor	`_`
+60:31-60:32	local.reference	`_`
+60:31-60:32	variable.parameter	`_`
+60:32-60:33	punctuation.bracket	`)`
+60:33-60:36	keyword.return	` %.`
+60:36-61:5	keyword.type	``
+61:6-61:20	constructor	`nat-plus-assoc`
+61:6-61:20	local.reference	`nat-plus-assoc`
+61:6-61:20	type	`nat-plus-assoc`
+61:117-61:119	keyword.return	`%.`
+62:6-62:20	constructor	`nat-plus-assoc`
+62:6-62:20	local.reference	`nat-plus-assoc`
+62:20-62:24	keyword.modifier	` %in`
+62:24-62:28	keyword.modifier	` %in`
+62:28-62:32	keyword.modifier	` %in`
+62:32-62:37	keyword.modifier	` %out`
+62:37-62:40	keyword.return	` %.`
+63:6-63:7	constructor	`_`
+63:6-63:7	function	`_`
+63:6-63:7	local.reference	`_`
+63:6-63:7	variable.parameter	`_`
+63:7-63:22	constructor	` nat-plus-assoc`
+63:7-63:22	local.reference	` nat-plus-assoc`
+63:22-63:33	constructor	` nat-plus/z`
+63:22-63:33	local.reference	` nat-plus/z`
+63:33-63:36	constructor	` DP`
+63:33-63:36	local.reference	` DP`
+63:36-63:47	constructor	` nat-plus/z`
+63:36-63:47	local.reference	` nat-plus/z`
+63:47-63:50	constructor	` DP`
+63:47-63:50	local.reference	` DP`
+63:50-63:53	keyword.return	` %.`
+64:6-64:7	constructor	`_`
+64:6-64:7	function	`_`
+64:6-64:7	local.reference	`_`
+64:6-64:7	variable.parameter	`_`
+64:7-65:4	operator	``
+65:5-65:6	punctuation.bracket	`(`
+65:6-65:20	constructor	`nat-plus-assoc`
+65:6-65:20	local.reference	`nat-plus-assoc`
+65:21-65:22	punctuation.bracket	`(`
+65:22-65:32	constructor	`nat-plus/s`
+65:22-65:32	local.reference	`nat-plus/s`
+65:33-65:36	constructor	`DP1`
+65:33-65:36	local.reference	`DP1`
+65:36-65:37	punctuation.bracket	`)`
+65:38-65:41	constructor	`DP2`
+65:38-65:41	local.reference	`DP2`
+65:42-65:43	punctuation.bracket	`(`
+65:43-65:53	constructor	`nat-plus/s`
+65:43-65:53	local.reference	`nat-plus/s`
+65:54-65:57	constructor	`DP3`
+65:54-65:57	local.reference	`DP3`
+65:57-65:58	punctuation.bracket	`)`
+65:59-65:60	punctuation.bracket	`(`
+65:60-65:70	constructor	`nat-plus/s`
+65:60-65:70	local.reference	`nat-plus/s`
+65:71-65:74	constructor	`DP4`
+65:71-65:74	local.reference	`DP4`
+65:74-65:75	punctuation.bracket	`)`
+65:75-65:76	punctuation.bracket	`)`
+66:1-66:4	operator	`%<-`
+66:5-66:6	punctuation.bracket	`(`
+66:6-66:20	constructor	`nat-plus-assoc`
+66:6-66:20	local.reference	`nat-plus-assoc`
+66:21-66:24	constructor	`DP1`
+66:21-66:24	local.reference	`DP1`
+66:25-66:28	constructor	`DP2`
+66:25-66:28	local.reference	`DP2`
+66:29-66:32	constructor	`DP3`
+66:29-66:32	local.reference	`DP3`
+66:33-66:36	constructor	`DP4`
+66:33-66:36	local.reference	`DP4`
+66:36-66:37	punctuation.bracket	`)`
+66:37-66:40	keyword.return	` %.`
+67:8-67:9	punctuation.bracket	`(`
+67:9-67:10	punctuation.bracket	`)`
+67:11-67:12	punctuation.bracket	`(`
+67:12-67:26	constructor	`nat-plus-assoc`
+67:12-67:26	local.reference	`nat-plus-assoc`
+67:27-67:28	constructor	`_`
+67:27-67:28	local.reference	`_`
+67:27-67:28	variable.parameter	`_`
+67:29-67:30	constructor	`_`
+67:29-67:30	local.reference	`_`
+67:29-67:30	variable.parameter	`_`
+67:31-67:32	constructor	`_`
+67:31-67:32	local.reference	`_`
+67:31-67:32	variable.parameter	`_`
+67:33-67:34	constructor	`_`
+67:33-67:34	local.reference	`_`
+67:33-67:34	variable.parameter	`_`
+67:34-67:35	punctuation.bracket	`)`
+67:35-67:38	keyword.return	` %.`
+68:7-68:8	punctuation.bracket	`(`
+68:8-68:10	constructor	`D1`
+68:8-68:10	local.reference	`D1`
+68:10-68:11	punctuation.bracket	`)`
+68:12-68:13	punctuation.bracket	`(`
+68:13-68:27	constructor	`nat-plus-assoc`
+68:13-68:27	local.reference	`nat-plus-assoc`
+68:28-68:30	constructor	`D1`
+68:28-68:30	local.reference	`D1`
+68:31-68:32	constructor	`_`
+68:31-68:32	local.reference	`_`
+68:31-68:32	variable.parameter	`_`
+68:33-68:34	constructor	`_`
+68:33-68:34	local.reference	`_`
+68:33-68:34	variable.parameter	`_`
+68:35-68:36	constructor	`_`
+68:35-68:36	local.reference	`_`
+68:35-68:36	variable.parameter	`_`
+68:36-68:37	punctuation.bracket	`)`
+68:37-68:40	keyword.return	` %.`
+69:1-69:2	punctuation.bracket	`[`
+69:2-69:3	punctuation.bracket	`[`
+69:77-69:78	punctuation.bracket	`]`
+69:78-69:79	punctuation.bracket	`]`
+70:0-70:5	keyword.type	`%sort`
+70:6-70:25	constructor	`nat-divmod-mod-less`
+70:6-70:25	local.reference	`nat-divmod-mod-less`
+70:6-70:25	type	`nat-divmod-mod-less`
+70:72-70:74	keyword.return	`%.`
+70:74-71:5	keyword.type	``
+71:6-71:25	constructor	`nat-divmod-mod-less`
+71:6-71:25	local.reference	`nat-divmod-mod-less`
+71:6-71:25	type	`nat-divmod-mod-less`
+71:72-71:74	keyword.return	`%.`
+72:6-72:25	constructor	`nat-divmod-mod-less`
+72:6-72:25	local.reference	`nat-divmod-mod-less`
+72:25-72:29	keyword.modifier	` %in`
+72:29-72:34	keyword.modifier	` %out`
+72:34-72:37	keyword.return	` %.`
+73:6-73:7	constructor	`_`
+73:6-73:7	function	`_`
+73:6-73:7	local.reference	`_`
+73:6-73:7	variable.parameter	`_`
+73:7-73:27	constructor	` nat-divmod-mod-less`
+73:7-73:27	local.reference	` nat-divmod-mod-less`
+73:52-73:54	keyword.return	`%.`
+74:6-74:7	constructor	`_`
+74:6-74:7	function	`_`
+74:6-74:7	local.reference	`_`
+74:6-74:7	variable.parameter	`_`
+74:7-75:4	operator	``
+75:5-75:6	punctuation.bracket	`(`
+75:6-75:25	constructor	`nat-divmod-mod-less`
+75:6-75:25	local.reference	`nat-divmod-mod-less`
+75:26-75:27	punctuation.bracket	`(`
+75:27-75:41	constructor	`nat-divmod/rec`
+75:27-75:41	local.reference	`nat-divmod/rec`
+75:42-75:43	constructor	`_`
+75:42-75:43	local.reference	`_`
+75:42-75:43	variable.parameter	`_`
+75:44-75:47	constructor	`DDM`
+75:44-75:47	local.reference	`DDM`
+75:47-75:48	punctuation.bracket	`)`
+75:49-75:51	constructor	`DL`
+75:49-75:51	local.reference	`DL`
+75:51-75:52	punctuation.bracket	`)`
+76:1-76:4	operator	`%<-`
+76:5-76:6	punctuation.bracket	`(`
+76:6-76:25	constructor	`nat-divmod-mod-less`
+76:6-76:25	local.reference	`nat-divmod-mod-less`
+76:26-76:29	constructor	`DDM`
+76:26-76:29	local.reference	`DDM`
+76:30-76:32	constructor	`DL`
+76:30-76:32	local.reference	`DL`
+76:32-76:33	punctuation.bracket	`)`
+76:33-76:36	keyword.return	` %.`
+77:8-77:9	punctuation.bracket	`(`
+77:9-77:10	punctuation.bracket	`)`
+77:11-77:12	punctuation.bracket	`(`
+77:12-77:31	constructor	`nat-divmod-mod-less`
+77:12-77:31	local.reference	`nat-divmod-mod-less`
+77:32-77:33	constructor	`_`
+77:32-77:33	local.reference	`_`
+77:32-77:33	variable.parameter	`_`
+77:34-77:35	constructor	`_`
+77:34-77:35	local.reference	`_`
+77:34-77:35	variable.parameter	`_`
+77:35-77:36	punctuation.bracket	`)`
+77:36-77:39	keyword.return	` %.`
+78:7-78:8	punctuation.bracket	`{`
+78:8-78:10	constructor	`D1`
+78:8-78:10	local.reference	`D1`
+78:10-78:11	punctuation.bracket	`}`
+78:12-78:13	punctuation.bracket	`(`
+78:13-78:32	constructor	`nat-divmod-mod-less`
+78:13-78:32	local.reference	`nat-divmod-mod-less`
+78:33-78:35	constructor	`D1`
+78:33-78:35	local.reference	`D1`
+78:36-78:37	constructor	`_`
+78:36-78:37	local.reference	`_`
+78:36-78:37	variable.parameter	`_`
+78:37-78:38	punctuation.bracket	`)`
+78:38-78:41	keyword.return	` %.`
+79:1-79:2	punctuation.bracket	`[`
+79:2-79:3	punctuation.bracket	`[`
+79:39-79:40	punctuation.bracket	`]`
+79:40-79:41	punctuation.bracket	`]`
+80:0-80:5	keyword.type	`%sort`
+80:6-80:30	constructor	`nat-divmod-z-uninhabited`
+80:6-80:30	local.reference	`nat-divmod-z-uninhabited`
+80:6-80:30	type	`nat-divmod-z-uninhabited`
+80:77-80:79	keyword.return	`%.`
+81:6-81:30	constructor	`nat-divmod-z-uninhabited`
+81:6-81:30	local.reference	`nat-divmod-z-uninhabited`
+81:30-81:34	keyword.modifier	` %in`
+81:34-81:39	keyword.modifier	` %out`
+81:39-81:42	keyword.return	` %.`
+82:6-82:7	constructor	`_`
+82:6-82:7	function	`_`
+82:6-82:7	local.reference	`_`
+82:6-82:7	variable.parameter	`_`
+82:7-83:4	operator	``
+83:5-83:6	punctuation.bracket	`(`
+83:6-83:30	constructor	`nat-divmod-z-uninhabited`
+83:6-83:30	local.reference	`nat-divmod-z-uninhabited`
+83:31-83:32	punctuation.bracket	`(`
+83:32-83:46	constructor	`nat-divmod/rec`
+83:32-83:46	local.reference	`nat-divmod/rec`
+83:47-83:57	constructor	`nat-plus/z`
+83:47-83:57	local.reference	`nat-plus/z`
+83:58-83:61	constructor	`DDM`
+83:58-83:61	local.reference	`DDM`
+83:61-83:62	punctuation.bracket	`)`
+83:63-83:65	constructor	`DU`
+83:63-83:65	local.reference	`DU`
+83:65-83:66	punctuation.bracket	`)`
+84:1-84:4	operator	`%<-`
+84:5-84:6	punctuation.bracket	`(`
+84:6-84:30	constructor	`nat-divmod-z-uninhabited`
+84:6-84:30	local.reference	`nat-divmod-z-uninhabited`
+84:31-84:34	constructor	`DDM`
+84:31-84:34	local.reference	`DDM`
+84:35-84:37	constructor	`DU`
+84:35-84:37	local.reference	`DU`
+84:37-84:38	punctuation.bracket	`)`
+84:38-84:41	keyword.return	` %.`
+85:8-85:9	punctuation.bracket	`(`
+85:9-85:10	punctuation.bracket	`)`
+85:11-85:12	punctuation.bracket	`(`
+85:12-85:36	constructor	`nat-divmod-z-uninhabited`
+85:12-85:36	local.reference	`nat-divmod-z-uninhabited`
+85:37-85:38	constructor	`_`
+85:37-85:38	local.reference	`_`
+85:37-85:38	variable.parameter	`_`
+85:39-85:40	constructor	`_`
+85:39-85:40	local.reference	`_`
+85:39-85:40	variable.parameter	`_`
+85:40-85:41	punctuation.bracket	`)`
+85:41-85:44	keyword.return	` %.`
+86:7-86:8	punctuation.bracket	`{`
+86:8-86:10	constructor	`D1`
+86:8-86:10	local.reference	`D1`
+86:10-86:11	punctuation.bracket	`}`
+86:12-86:13	punctuation.bracket	`(`
+86:13-86:37	constructor	`nat-divmod-z-uninhabited`
+86:13-86:37	local.reference	`nat-divmod-z-uninhabited`
+86:38-86:40	constructor	`D1`
+86:38-86:40	local.reference	`D1`
+86:41-86:42	constructor	`_`
+86:41-86:42	local.reference	`_`
+86:41-86:42	variable.parameter	`_`
+86:42-86:43	punctuation.bracket	`)`
+86:43-86:46	keyword.return	` %.`
+87:1-87:2	punctuation.bracket	`[`
+87:2-87:3	punctuation.bracket	`[`
+87:37-87:45	keyword	`%reduces`
+87:109-87:110	number	`2`
+87:157-87:158	number	`2`
+87:287-87:288	punctuation.bracket	`]`
+87:288-87:289	punctuation.bracket	`]`
+88:0-88:5	keyword.type	`%sort`
+88:6-88:24	constructor	`nat-plus-reduces-s`
+88:6-88:24	local.reference	`nat-plus-reduces-s`
+88:6-88:24	type	`nat-plus-reduces-s`
+88:65-88:67	keyword.return	`%.`
+89:6-89:24	constructor	`nat-plus-reduces-s`
+89:6-89:24	local.reference	`nat-plus-reduces-s`
+89:24-89:28	keyword.modifier	` %in`
+89:28-89:32	keyword.modifier	` %in`
+89:32-89:36	keyword.modifier	` %in`
+89:36-89:39	keyword.return	` %.`
+90:6-90:7	constructor	`_`
+90:6-90:7	function	`_`
+90:6-90:7	local.reference	`_`
+90:6-90:7	variable.parameter	`_`
+90:7-90:26	constructor	` nat-plus-reduces-s`
+90:7-90:26	local.reference	` nat-plus-reduces-s`
+90:26-90:28	constructor	` _`
+90:26-90:28	local.reference	` _`
+90:28-90:30	constructor	` _`
+90:28-90:30	local.reference	` _`
+90:55-90:57	keyword.return	`%.`
+91:6-91:7	constructor	`_`
+91:6-91:7	function	`_`
+91:6-91:7	local.reference	`_`
+91:6-91:7	variable.parameter	`_`
+91:7-91:11	operator	` %pi`
+91:12-91:13	punctuation.bracket	`(`
+91:13-91:31	constructor	`nat-plus-reduces-s`
+91:13-91:31	local.reference	`nat-plus-reduces-s`
+91:32-91:33	constructor	`_`
+91:32-91:33	local.reference	`_`
+91:32-91:33	variable.parameter	`_`
+91:34-91:35	constructor	`_`
+91:34-91:35	local.reference	`_`
+91:34-91:35	variable.parameter	`_`
+91:36-91:37	punctuation.bracket	`(`
+91:37-91:47	constructor	`nat-plus/s`
+91:37-91:47	local.reference	`nat-plus/s`
+91:48-91:50	constructor	`DL`
+91:48-91:50	local.reference	`DL`
+91:50-91:51	punctuation.bracket	`)`
+91:51-91:52	punctuation.bracket	`)`
+91:53-91:56	operator	`%<-`
+91:57-91:58	punctuation.bracket	`(`
+91:58-91:76	constructor	`nat-plus-reduces-s`
+91:58-91:76	local.reference	`nat-plus-reduces-s`
+91:77-91:78	constructor	`_`
+91:77-91:78	local.reference	`_`
+91:77-91:78	variable.parameter	`_`
+91:79-91:80	constructor	`_`
+91:79-91:80	local.reference	`_`
+91:79-91:80	variable.parameter	`_`
+91:81-91:83	constructor	`DL`
+91:81-91:83	local.reference	`DL`
+91:83-91:84	punctuation.bracket	`)`
+91:84-91:87	keyword.return	` %.`
+92:8-92:9	punctuation.bracket	`(`
+92:9-92:10	punctuation.bracket	`)`
+92:11-92:12	punctuation.bracket	`(`
+92:12-92:30	constructor	`nat-plus-reduces-s`
+92:12-92:30	local.reference	`nat-plus-reduces-s`
+92:31-92:32	constructor	`_`
+92:31-92:32	local.reference	`_`
+92:31-92:32	variable.parameter	`_`
+92:33-92:34	constructor	`_`
+92:33-92:34	local.reference	`_`
+92:33-92:34	variable.parameter	`_`
+92:35-92:36	constructor	`_`
+92:35-92:36	local.reference	`_`
+92:35-92:36	variable.parameter	`_`
+92:36-92:37	punctuation.bracket	`)`
+92:37-92:40	keyword.return	` %.`
+93:9-93:10	operator	`<`
+93:11-93:13	constructor	`N2`
+93:11-93:13	local.reference	`N2`
+93:13-93:16	constructor	` N3`
+93:13-93:16	local.reference	` N3`
+93:46-93:48	keyword.return	`%.`
+94:7-94:8	punctuation.bracket	`{`
+94:8-94:10	constructor	`D1`
+94:8-94:10	local.reference	`D1`
+94:10-94:11	punctuation.bracket	`}`
+94:12-94:13	punctuation.bracket	`(`
+94:13-94:31	constructor	`nat-plus-reduces-s`
+94:13-94:31	local.reference	`nat-plus-reduces-s`
+94:32-94:33	constructor	`_`
+94:32-94:33	local.reference	`_`
+94:32-94:33	variable.parameter	`_`
+94:34-94:35	constructor	`_`
+94:34-94:35	local.reference	`_`
+94:34-94:35	variable.parameter	`_`
+94:36-94:38	constructor	`D1`
+94:36-94:38	local.reference	`D1`
+94:38-94:39	punctuation.bracket	`)`
+94:39-94:42	keyword.return	` %.`
+95:1-95:2	punctuation.bracket	`[`
+95:2-95:3	punctuation.bracket	`[`
+95:356-95:357	punctuation.bracket	`]`
+95:357-95:358	punctuation.bracket	`]`
+96:0-96:5	keyword.type	`%sort`
+96:6-96:21	constructor	`can-nat-divmod*`
+96:6-96:21	local.reference	`can-nat-divmod*`
+96:6-96:21	type	`can-nat-divmod*`
+96:92-96:94	keyword.return	`%.`
+97:6-97:21	constructor	`can-nat-divmod*`
+97:6-97:21	local.reference	`can-nat-divmod*`
+97:21-97:25	keyword.modifier	` %in`
+97:25-97:29	keyword.modifier	` %in`
+97:29-97:34	keyword.modifier	` %out`
+97:34-97:37	keyword.return	` %.`
+98:6-98:7	constructor	`_`
+98:6-98:7	function	`_`
+98:6-98:7	local.reference	`_`
+98:6-98:7	variable.parameter	`_`
+98:7-98:23	constructor	` can-nat-divmod*`
+98:7-98:23	local.reference	` can-nat-divmod*`
+98:23-98:25	constructor	` _`
+98:23-98:25	local.reference	` _`
+98:69-98:71	keyword.return	`%.`
+99:6-99:7	constructor	`_`
+99:6-99:7	function	`_`
+99:6-99:7	local.reference	`_`
+99:6-99:7	variable.parameter	`_`
+99:7-100:4	operator	``
+100:5-100:6	punctuation.bracket	`(`
+100:6-100:21	constructor	`can-nat-divmod*`
+100:6-100:21	local.reference	`can-nat-divmod*`
+100:22-100:24	constructor	`N1`
+100:22-100:24	local.reference	`N1`
+100:25-100:26	punctuation.bracket	`(`
+100:26-100:41	constructor	`nat-compare/leq`
+100:26-100:41	local.reference	`nat-compare/leq`
+100:42-100:45	constructor	`DLQ`
+100:42-100:45	local.reference	`DLQ`
+100:45-100:46	punctuation.bracket	`)`
+100:47-100:48	punctuation.bracket	`(`
+100:48-100:62	constructor	`nat-divmod/rec`
+100:48-100:62	local.reference	`nat-divmod/rec`
+100:63-100:65	constructor	`DP`
+100:63-100:65	local.reference	`DP`
+100:66-100:69	constructor	`DDM`
+100:66-100:69	local.reference	`DDM`
+100:69-100:70	punctuation.bracket	`)`
+100:70-100:71	punctuation.bracket	`)`
+101:1-101:4	operator	`%<-`
+101:5-101:6	punctuation.bracket	`(`
+101:6-101:18	constructor	`nat-leq-plus`
+101:6-101:18	local.reference	`nat-leq-plus`
+101:19-101:22	constructor	`DLQ`
+101:19-101:22	local.reference	`DLQ`
+101:23-101:25	constructor	`DP`
+101:23-101:25	local.reference	`DP`
+101:25-101:26	punctuation.bracket	`)`
+101:26-102:4	operator	``
+102:5-102:6	punctuation.bracket	`(`
+102:6-102:24	constructor	`nat-plus-reduces-s`
+102:6-102:24	local.reference	`nat-plus-reduces-s`
+102:25-102:28	constructor	`N1'`
+102:25-102:28	local.reference	`N1'`
+102:29-102:31	constructor	`N1`
+102:29-102:31	local.reference	`N1`
+102:32-102:34	constructor	`DP`
+102:32-102:34	local.reference	`DP`
+102:34-102:35	punctuation.bracket	`)`
+102:35-103:4	operator	``
+103:5-103:6	punctuation.bracket	`(`
+103:6-103:21	constructor	`can-nat-compare`
+103:6-103:21	local.reference	`can-nat-compare`
+103:22-103:25	constructor	`N1'`
+103:22-103:25	local.reference	`N1'`
+103:26-103:27	punctuation.bracket	`(`
+103:27-103:32	constructor	`nat/s`
+103:27-103:32	local.reference	`nat/s`
+103:33-103:35	constructor	`N2`
+103:33-103:35	local.reference	`N2`
+103:35-103:36	punctuation.bracket	`)`
+103:37-103:39	constructor	`DC`
+103:37-103:39	local.reference	`DC`
+103:39-103:40	punctuation.bracket	`)`
+103:40-104:4	operator	``
+104:5-104:6	punctuation.bracket	`(`
+104:6-104:21	constructor	`can-nat-divmod*`
+104:6-104:21	local.reference	`can-nat-divmod*`
+104:22-104:25	constructor	`N1'`
+104:22-104:25	local.reference	`N1'`
+104:26-104:28	constructor	`DC`
+104:26-104:28	local.reference	`DC`
+104:29-104:32	constructor	`DDM`
+104:29-104:32	local.reference	`DDM`
+104:32-104:33	punctuation.bracket	`)`
+104:33-104:36	keyword.return	` %.`
+105:8-105:9	punctuation.bracket	`(`
+105:9-105:10	punctuation.bracket	`)`
+105:11-105:12	punctuation.bracket	`(`
+105:12-105:27	constructor	`can-nat-divmod*`
+105:12-105:27	local.reference	`can-nat-divmod*`
+105:28-105:29	constructor	`_`
+105:28-105:29	local.reference	`_`
+105:28-105:29	variable.parameter	`_`
+105:30-105:31	constructor	`_`
+105:30-105:31	local.reference	`_`
+105:30-105:31	variable.parameter	`_`
+105:32-105:33	constructor	`_`
+105:32-105:33	local.reference	`_`
+105:32-105:33	variable.parameter	`_`
+105:33-105:34	punctuation.bracket	`)`
+105:34-105:37	keyword.return	` %.`
+106:7-106:8	punctuation.bracket	`{`
+106:8-106:10	constructor	`D1`
+106:8-106:10	local.reference	`D1`
+106:10-106:11	punctuation.bracket	`}`
+106:12-106:13	punctuation.bracket	`(`
+106:13-106:28	constructor	`can-nat-divmod*`
+106:13-106:28	local.reference	`can-nat-divmod*`
+106:29-106:31	constructor	`D1`
+106:29-106:31	local.reference	`D1`
+106:32-106:33	constructor	`_`
+106:32-106:33	local.reference	`_`
+106:32-106:33	variable.parameter	`_`
+106:34-106:35	constructor	`_`
+106:34-106:35	local.reference	`_`
+106:34-106:35	variable.parameter	`_`
+106:35-106:36	punctuation.bracket	`)`
+106:36-106:39	keyword.return	` %.`
+106:39-107:5	keyword.type	``
+107:6-107:20	constructor	`can-nat-divmod`
+107:6-107:20	local.reference	`can-nat-divmod`
+107:6-107:20	type	`can-nat-divmod`
+107:66-107:68	keyword.return	`%.`
+108:6-108:20	constructor	`can-nat-divmod`
+108:6-108:20	local.reference	`can-nat-divmod`
+108:20-108:24	keyword.modifier	` %in`
+108:24-108:28	keyword.modifier	` %in`
+108:28-108:33	keyword.modifier	` %out`
+108:33-108:36	keyword.return	` %.`
+109:6-109:7	constructor	`_`
+109:6-109:7	function	`_`
+109:6-109:7	local.reference	`_`
+109:6-109:7	variable.parameter	`_`
+109:7-110:4	operator	``
+110:5-110:6	punctuation.bracket	`(`
+110:6-110:20	constructor	`can-nat-divmod`
+110:6-110:20	local.reference	`can-nat-divmod`
+110:21-110:23	constructor	`N1`
+110:21-110:23	local.reference	`N1`
+110:24-110:26	constructor	`N2`
+110:24-110:26	local.reference	`N2`
+110:27-110:30	constructor	`DDM`
+110:27-110:30	local.reference	`DDM`
+110:30-110:31	punctuation.bracket	`)`
+111:1-111:4	operator	`%<-`
+111:5-111:6	punctuation.bracket	`(`
+111:6-111:21	constructor	`can-nat-compare`
+111:6-111:21	local.reference	`can-nat-compare`
+111:22-111:24	constructor	`N1`
+111:22-111:24	local.reference	`N1`
+111:25-111:26	punctuation.bracket	`(`
+111:26-111:31	constructor	`nat/s`
+111:26-111:31	local.reference	`nat/s`
+111:32-111:34	constructor	`N2`
+111:32-111:34	local.reference	`N2`
+111:34-111:35	punctuation.bracket	`)`
+111:36-111:38	constructor	`DC`
+111:36-111:38	local.reference	`DC`
+111:38-111:39	punctuation.bracket	`)`
+111:39-112:4	operator	``
+112:5-112:6	punctuation.bracket	`(`
+112:6-112:21	constructor	`can-nat-divmod*`
+112:6-112:21	local.reference	`can-nat-divmod*`
+112:22-112:24	constructor	`N1`
+112:22-112:24	local.reference	`N1`
+112:25-112:27	constructor	`DC`
+112:25-112:27	local.reference	`DC`
+112:28-112:31	constructor	`DDM`
+112:28-112:31	local.reference	`DDM`
+112:31-112:32	punctuation.bracket	`)`
+112:32-112:35	keyword.return	` %.`
+113:8-113:9	punctuation.bracket	`(`
+113:9-113:10	punctuation.bracket	`)`
+113:11-113:12	punctuation.bracket	`(`
+113:12-113:26	constructor	`can-nat-divmod`
+113:12-113:26	local.reference	`can-nat-divmod`
+113:27-113:28	constructor	`_`
+113:27-113:28	local.reference	`_`
+113:27-113:28	variable.parameter	`_`
+113:29-113:30	constructor	`_`
+113:29-113:30	local.reference	`_`
+113:29-113:30	variable.parameter	`_`
+113:31-113:32	constructor	`_`
+113:31-113:32	local.reference	`_`
+113:31-113:32	variable.parameter	`_`
+113:32-113:33	punctuation.bracket	`)`
+113:33-113:36	keyword.return	` %.`
+114:7-114:8	punctuation.bracket	`(`
+114:8-114:8	local.reference	``
+114:8-114:8	operator	``
+114:8-114:9	punctuation.bracket	`)`
+114:10-114:11	punctuation.bracket	`(`
+114:11-114:25	constructor	`can-nat-divmod`
+114:11-114:25	local.reference	`can-nat-divmod`
+114:26-114:27	constructor	`_`
+114:26-114:27	local.reference	`_`
+114:26-114:27	variable.parameter	`_`
+114:28-114:29	constructor	`_`
+114:28-114:29	local.reference	`_`
+114:28-114:29	variable.parameter	`_`
+114:30-114:31	constructor	`_`
+114:30-114:31	local.reference	`_`
+114:30-114:31	variable.parameter	`_`
+114:31-114:32	punctuation.bracket	`)`
+114:32-114:35	keyword.return	` %.`
+115:1-115:2	punctuation.bracket	`[`
+115:2-115:3	punctuation.bracket	`[`
+115:101-115:102	punctuation.bracket	`]`
+115:102-115:103	punctuation.bracket	`]`
+116:1-116:2	punctuation.bracket	`[`
+116:2-116:3	punctuation.bracket	`[`
+116:21-116:22	punctuation.bracket	`]`
+116:22-116:23	punctuation.bracket	`]`
+117:0-117:5	keyword.type	`%sort`
+117:6-117:24	constructor	`nat-divmod-correct`
+117:6-117:24	local.reference	`nat-divmod-correct`
+117:6-117:24	type	`nat-divmod-correct`
+117:98-117:100	keyword.return	`%.`
+118:6-118:24	constructor	`nat-divmod-correct`
+118:6-118:24	local.reference	`nat-divmod-correct`
+118:24-118:28	keyword.modifier	` %in`
+118:28-118:33	keyword.modifier	` %out`
+118:33-118:38	keyword.modifier	` %out`
+118:38-118:41	keyword.return	` %.`
+119:6-119:7	constructor	`_`
+119:6-119:7	function	`_`
+119:6-119:7	local.reference	`_`
+119:6-119:7	variable.parameter	`_`
+119:7-119:26	constructor	` nat-divmod-correct`
+119:7-119:26	local.reference	` nat-divmod-correct`
+119:69-119:71	keyword.return	`%.`
+120:6-120:7	constructor	`_`
+120:6-120:7	function	`_`
+120:6-120:7	local.reference	`_`
+120:6-120:7	variable.parameter	`_`
+120:7-121:4	operator	``
+121:5-121:6	punctuation.bracket	`(`
+121:6-121:24	constructor	`nat-divmod-correct`
+121:6-121:24	local.reference	`nat-divmod-correct`
+121:25-121:26	punctuation.bracket	`(`
+121:26-121:40	constructor	`nat-divmod/rec`
+121:26-121:40	local.reference	`nat-divmod/rec`
+121:41-121:43	constructor	`DP`
+121:41-121:43	local.reference	`DP`
+121:44-121:46	constructor	`DD`
+121:44-121:46	local.reference	`DD`
+121:46-121:47	punctuation.bracket	`)`
+121:48-121:49	punctuation.bracket	`(`
+121:49-121:59	constructor	`nat-mult/s`
+121:49-121:59	local.reference	`nat-mult/s`
+121:60-121:62	constructor	`DM`
+121:60-121:62	local.reference	`DM`
+121:63-121:67	constructor	`DP''`
+121:63-121:67	local.reference	`DP''`
+121:67-121:68	punctuation.bracket	`)`
+121:69-121:74	constructor	`DP'''`
+121:69-121:74	local.reference	`DP'''`
+121:74-121:75	punctuation.bracket	`)`
+122:1-122:4	operator	`%<-`
+122:5-122:6	punctuation.bracket	`(`
+122:6-122:24	constructor	`nat-divmod-correct`
+122:6-122:24	local.reference	`nat-divmod-correct`
+122:25-122:27	constructor	`DD`
+122:25-122:27	local.reference	`DD`
+122:28-122:30	constructor	`DM`
+122:28-122:30	local.reference	`DM`
+122:31-122:34	constructor	`DP'`
+122:31-122:34	local.reference	`DP'`
+122:34-122:35	punctuation.bracket	`)`
+122:35-123:4	operator	``
+123:5-123:6	punctuation.bracket	`(`
+123:6-123:18	constructor	`can-nat-plus`
+123:6-123:18	local.reference	`can-nat-plus`
+123:19-123:21	constructor	`N2`
+123:19-123:21	local.reference	`N2`
+123:22-123:25	constructor	`N3'`
+123:22-123:25	local.reference	`N3'`
+123:26-123:30	constructor	`DP''`
+123:26-123:30	local.reference	`DP''`
+123:30-123:31	punctuation.bracket	`)`
+123:31-124:4	operator	``
+124:5-124:6	punctuation.bracket	`(`
+124:6-124:20	constructor	`nat-plus-assoc`
+124:6-124:20	local.reference	`nat-plus-assoc`
+124:21-124:25	constructor	`DP''`
+124:21-124:25	local.reference	`DP''`
+124:26-124:29	constructor	`DP'`
+124:26-124:29	local.reference	`DP'`
+124:30-124:32	constructor	`DP`
+124:30-124:32	local.reference	`DP`
+124:33-124:38	constructor	`DP'''`
+124:33-124:38	local.reference	`DP'''`
+124:38-124:39	punctuation.bracket	`)`
+124:39-124:42	keyword.return	` %.`
+125:8-125:9	punctuation.bracket	`(`
+125:9-125:10	punctuation.bracket	`)`
+125:11-125:12	punctuation.bracket	`(`
+125:12-125:30	constructor	`nat-divmod-correct`
+125:12-125:30	local.reference	`nat-divmod-correct`
+125:31-125:32	constructor	`_`
+125:31-125:32	local.reference	`_`
+125:31-125:32	variable.parameter	`_`
+125:33-125:34	constructor	`_`
+125:33-125:34	local.reference	`_`
+125:33-125:34	variable.parameter	`_`
+125:35-125:36	constructor	`_`
+125:35-125:36	local.reference	`_`
+125:35-125:36	variable.parameter	`_`
+125:36-125:37	punctuation.bracket	`)`
+125:37-125:40	keyword.return	` %.`
+126:7-126:8	punctuation.bracket	`(`
+126:8-126:10	constructor	`D1`
+126:8-126:10	local.reference	`D1`
+126:10-126:11	punctuation.bracket	`)`
+126:12-126:13	punctuation.bracket	`(`
+126:13-126:31	constructor	`nat-divmod-correct`
+126:13-126:31	local.reference	`nat-divmod-correct`
+126:32-126:34	constructor	`D1`
+126:32-126:34	local.reference	`D1`
+126:35-126:36	constructor	`_`
+126:35-126:36	local.reference	`_`
+126:35-126:36	variable.parameter	`_`
+126:37-126:38	constructor	`_`
+126:37-126:38	local.reference	`_`
+126:37-126:38	variable.parameter	`_`
+126:38-126:39	punctuation.bracket	`)`
+126:39-126:42	keyword.return	` %.`
+127:1-127:2	punctuation.bracket	`[`
+127:2-127:3	punctuation.bracket	`[`
+127:19-127:20	punctuation.bracket	`]`
+127:20-127:21	punctuation.bracket	`]`
+128:1-128:2	punctuation.bracket	`[`
+128:2-128:3	punctuation.bracket	`[`
+128:308-128:309	punctuation.bracket	`[`
+128:328-128:329	punctuation.bracket	`]`
+128:329-128:330	punctuation.bracket	`(`
+128:356-128:357	punctuation.bracket	`)`
+130:1-130:2	punctuation.bracket	`]`
+130:2-130:3	punctuation.bracket	`]`

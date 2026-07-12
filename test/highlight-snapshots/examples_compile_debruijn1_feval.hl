@@ -1,0 +1,139 @@
+0:0-0:29	comment	`%%% Mini-ML Natural Semantics`
+1:0-1:46	comment	`%%% Version restricted to pure lambda-calculus`
+2:0-2:62	comment	`%%% Author: Frank Pfenning, based on [Michaylov & Pfenning 92]`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:11	constructor	`feval`
+3:6-3:11	local.reference	`feval`
+3:6-3:11	type	`feval`
+3:37-3:39	keyword.return	`%.`
+3:39-4:11	attribute	``
+4:6-4:11	constructor	`feval`
+4:6-4:11	local.reference	`feval`
+4:6-4:11	variable	`feval`
+4:11-4:14	keyword.return	` %.`
+4:14-5:11	comment	``
+6:6-6:11	constructor	`fev_1`
+6:6-6:11	function	`fev_1`
+6:6-6:11	local.reference	`fev_1`
+6:6-6:11	variable.parameter	`fev_1`
+6:11-6:17	constructor	` feval`
+6:11-6:17	local.reference	` feval`
+6:30-6:32	keyword.return	`%.`
+7:6-7:11	constructor	`fev_^`
+7:6-7:11	function	`fev_^`
+7:6-7:11	local.reference	`fev_^`
+7:6-7:11	variable.parameter	`fev_^`
+7:11-7:15	operator	` %pi`
+7:16-7:17	punctuation.bracket	`(`
+7:17-7:22	constructor	`feval`
+7:17-7:22	local.reference	`feval`
+7:23-7:24	punctuation.bracket	`(`
+7:24-7:25	constructor	`K`
+7:24-7:25	local.reference	`K`
+7:26-7:27	local.reference	`;`
+7:26-7:27	operator	`;`
+7:28-7:30	constructor	`W'`
+7:28-7:30	local.reference	`W'`
+7:30-7:31	punctuation.bracket	`)`
+7:32-7:33	punctuation.bracket	`(`
+7:33-7:34	constructor	`F`
+7:33-7:34	local.reference	`F`
+7:35-7:36	local.reference	`^`
+7:35-7:36	operator	`^`
+7:36-7:37	punctuation.bracket	`)`
+7:38-7:39	constructor	`W`
+7:38-7:39	local.reference	`W`
+7:39-7:40	punctuation.bracket	`)`
+7:41-7:44	operator	`%<-`
+7:45-7:46	punctuation.bracket	`(`
+7:46-7:51	constructor	`feval`
+7:46-7:51	local.reference	`feval`
+7:52-7:53	constructor	`K`
+7:52-7:53	local.reference	`K`
+7:54-7:55	constructor	`F`
+7:54-7:55	local.reference	`F`
+7:56-7:57	constructor	`W`
+7:56-7:57	local.reference	`W`
+7:57-7:58	punctuation.bracket	`)`
+7:58-7:61	keyword.return	` %.`
+7:61-8:11	comment	``
+9:6-9:13	constructor	`fev_lam`
+9:6-9:13	function	`fev_lam`
+9:6-9:13	local.reference	`fev_lam`
+9:6-9:13	variable.parameter	`fev_lam`
+9:13-9:19	constructor	` feval`
+9:13-9:19	local.reference	` feval`
+9:19-9:21	constructor	` K`
+9:19-9:21	local.reference	` K`
+9:48-9:50	keyword.return	`%.`
+10:6-10:13	constructor	`fev_app`
+10:6-10:13	function	`fev_app`
+10:6-10:13	local.reference	`fev_app`
+10:6-10:13	variable.parameter	`fev_app`
+10:13-11:4	operator	``
+11:5-11:6	punctuation.bracket	`(`
+11:6-11:11	constructor	`feval`
+11:6-11:11	local.reference	`feval`
+11:12-11:13	constructor	`K`
+11:12-11:13	local.reference	`K`
+11:14-11:15	punctuation.bracket	`(`
+11:15-11:19	constructor	`app'`
+11:15-11:19	local.reference	`app'`
+11:20-11:22	constructor	`F1`
+11:20-11:22	local.reference	`F1`
+11:23-11:25	constructor	`F2`
+11:23-11:25	local.reference	`F2`
+11:25-11:26	punctuation.bracket	`)`
+11:27-11:28	constructor	`W`
+11:27-11:28	local.reference	`W`
+11:28-11:29	punctuation.bracket	`)`
+12:1-12:4	operator	`%<-`
+12:5-12:6	punctuation.bracket	`(`
+12:6-12:11	constructor	`feval`
+12:6-12:11	local.reference	`feval`
+12:12-12:13	constructor	`K`
+12:12-12:13	local.reference	`K`
+12:14-12:16	constructor	`F1`
+12:14-12:16	local.reference	`F1`
+12:17-12:18	punctuation.bracket	`(`
+12:18-12:21	constructor	`clo`
+12:18-12:21	local.reference	`clo`
+12:22-12:24	constructor	`K'`
+12:22-12:24	local.reference	`K'`
+12:25-12:26	punctuation.bracket	`(`
+12:26-12:30	constructor	`lam'`
+12:26-12:30	local.reference	`lam'`
+12:31-12:34	constructor	`F1'`
+12:31-12:34	local.reference	`F1'`
+12:34-12:35	punctuation.bracket	`)`
+12:35-12:36	punctuation.bracket	`)`
+12:36-12:37	punctuation.bracket	`)`
+12:37-13:4	operator	``
+13:5-13:6	punctuation.bracket	`(`
+13:6-13:11	constructor	`feval`
+13:6-13:11	local.reference	`feval`
+13:12-13:13	constructor	`K`
+13:12-13:13	local.reference	`K`
+13:14-13:16	constructor	`F2`
+13:14-13:16	local.reference	`F2`
+13:17-13:19	constructor	`W2`
+13:17-13:19	local.reference	`W2`
+13:19-13:20	punctuation.bracket	`)`
+13:20-14:4	operator	``
+14:5-14:6	punctuation.bracket	`(`
+14:6-14:11	constructor	`feval`
+14:6-14:11	local.reference	`feval`
+14:12-14:13	punctuation.bracket	`(`
+14:13-14:15	constructor	`K'`
+14:13-14:15	local.reference	`K'`
+14:16-14:17	local.reference	`;`
+14:16-14:17	operator	`;`
+14:18-14:20	constructor	`W2`
+14:18-14:20	local.reference	`W2`
+14:20-14:21	punctuation.bracket	`)`
+14:22-14:25	constructor	`F1'`
+14:22-14:25	local.reference	`F1'`
+14:26-14:27	constructor	`W`
+14:26-14:27	local.reference	`W`
+14:27-14:28	punctuation.bracket	`)`
+14:28-14:31	keyword.return	` %.`

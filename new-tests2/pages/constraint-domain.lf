@@ -1,5 +1,5 @@
 %                             
-%{! A **constraint domain**, also called a **Twelf(X) extension**, is an extension to Twelf that allow users to work easily with an object, such as the integers, that can be tedious or inefficient to explicitly formalize within Twelf. Constraint domains are introduced with the [``%use``](/wiki/percent-use/) declaration.
+%[[ A **constraint domain**, also called a **Twelf(X) extension**, is an extension to Twelf that allow users to work easily with an object, such as the integers, that can be tedious or inefficient to explicitly formalize within Twelf. Constraint domains are introduced with the [``%use``](/wiki/percent-use/) declaration.
 
 You should never use [constraint domains and coverage checking](/wiki/constraint-domains-and-coverage-checking/) in the same signature, but they are useful when using Twelf as a logic programming system or when reasoning _in_ an [object language](/wiki/object-logic/). This document shows brief examples of each of the constraint domains, which are treated more formally in the chapter on <Guide chapter="6" section="32">constraint domains</Guide>.
 
@@ -80,4 +80,4 @@ myproof = 3+15.
 This page was copied from the MediaWiki version of the Twelf Wiki.
 You can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Constraint_domain).
-!}%
+%]]

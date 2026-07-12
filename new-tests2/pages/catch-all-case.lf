@@ -1,10 +1,10 @@
 %                          
-%{! When defining relations in non-empty contexts, it is often necessary to put a case of the relation in the LF context. In some circumstances, it is possible to avoid doing so by writing a **catch-all case** instead. 
+%[[ When defining relations in non-empty contexts, it is often necessary to put a case of the relation in the LF context. In some circumstances, it is possible to avoid doing so by writing a **catch-all case** instead. 
 This technique works when you can cover the space of the relation that would be covered by a context case without mentioning any variables from the context explicitly.  
 
 Using a catch-all case leads to simpler Twelf code because it saves you from having to repeat the context case at a variety of context extension points.  
 
-As a motivating example, we use the theorem about the size of a STLC term from \{\{proving|title=Proving metatheorems in non-empty contexts\}\}.  For review, here are the relevant judgements: !}%
+As a motivating example, we use the theorem about the size of a STLC term from \{\{proving|title=Proving metatheorems in non-empty contexts\}\}.  For review, here are the relevant judgements: %]]
 %sort tp %.
 %term unit tp %.
 %term arrow %pi tp %-> tp %-> tp %.
@@ -21,8 +21,8 @@ As a motivating example, we use the theorem about the size of a STLC term from \
 %term plus-s %pi (plus (s N1) N2 (s N3)) %<- (plus N1 N2 N3) %.
 %worlds () (plus _ _ _) %.
 %total N (plus N _ _) %.
-%{!  !}%
-%{! (options removed from twelftag: hidden="true") !}%
+%[[  %]]
+%[[ (options removed from twelftag: hidden="true") %]]
 %sort plus-exists {N1} {N2} {_ plus N1 N2 N3} %.
 %mode plus-exists %in %in %out %.
 %term _ plus-exists z _ plus-z %.
@@ -116,8 +116,8 @@ As a motivating example, we use the theorem about the size of a STLC term from \
 	%<- (plus-commute Dres Dres') %.
 %worlds () (lemma _ _ _ _ _) %.
 %total () (lemma _ _ _ _ _) %.
-%{!  !}%
-%{! (options removed from twelftag: check="true") !}%
+%[[  %]]
+%[[ (options removed from twelftag: check="true") %]]
 %sort size {_ tm} {_ nat} %.
 %mode size %in %out %.
 %term size-empty size empty (s z) %.
@@ -126,33 +126,33 @@ As a motivating example, we use the theorem about the size of a STLC term from \
 %block size-block [x tm] [dx size x (s z)]%.
 %worlds (size-block) (size _ _) %.
 %total E (size E _) %.
-%{! ## Original proof !}%
-%{! (options removed from twelftag: hidden="true") !}%
+%[[ ## Original proof %]]
+%[[ (options removed from twelftag: hidden="true") %]]
 %sort size-at-least-one {_ size E N} {_ plus (s z) N' N} %.
 %mode size-at-least-one %in %out %.
 %term _ size-at-least-one _ (plus-s plus-z) %.
 %worlds (size-block) (size-at-least-one _ _) %.
 %total () (size-at-least-one _ _) %.
-%{! In \{\{proving|title=Proving metatheorems in non-empty contexts\}\}, we proved the following theorem: !}%
+%[[ In \{\{proving|title=Proving metatheorems in non-empty contexts\}\}, we proved the following theorem: %]]
 %sort subst-size {E' tm} {_ {x tm} %pi (size x (s z)) %-> (size (E x) N)} {_ size (E E') N'} {_ plus Ndiff N N'} %.
 %mode subst-size %in %in %in %out %.
 %block sdblock [y tm] [dy size y (s z)] [_ {E' tm} subst-size E' ([x] [dx] dy) dy plus-z]%.
 %worlds (sdblock) (subst-size _ _ _ _) %.
-%{! The ``%block`` declaration includes a case of the theorem for the variable ``dy`` declared in the context.  
+%[[ The ``%block`` declaration includes a case of the theorem for the variable ``dy`` declared in the context.  
 
 ## Alternate proof using a catch-all case
 
-In this instance, it is possible to avoid putting the theorem case in the context.  How?  We instead write a catch-all case that covers the context variable case **without mentioning the context variable explicitly**: !}%
-%{! (options removed from twelftag: check="true") !}%
+In this instance, it is possible to avoid putting the theorem case in the context.  How?  We instead write a catch-all case that covers the context variable case **without mentioning the context variable explicitly**: %]]
+%[[ (options removed from twelftag: check="true") %]]
 %sort subst-size-ca {E' tm} {_ {x tm} %pi (size x (s z)) %-> (size (E x) N)} {_ size (E E') N'} {_ plus Ndiff N N'} %.
 %mode subst-size-ca %in %in %in %out %.
 %term _ subst-size-ca E' ([x] [dx] D) D plus-z %.
-%{! This case covers any first-argument derivation ``D`` that does not mention the bound variables ``x`` and ``dx``, as long as the second argument is also that derivation ``D``.  Note that the context case in the previous proof has this form.  To complete the proof for these inputs, we simply use ``plus-z : plus z N N`` to derive the result. This technique works because we do not actually need to use any reasoning specific to the variable from the context.
+%[[ This case covers any first-argument derivation ``D`` that does not mention the bound variables ``x`` and ``dx``, as long as the second argument is also that derivation ``D``.  Note that the context case in the previous proof has this form.  To complete the proof for these inputs, we simply use ``plus-z : plus z N N`` to derive the result. This technique works because we do not actually need to use any reasoning specific to the variable from the context.
 
 The remaining cases are the same as in the previous proof, except that 
 * the catch-all case happens to cover the case for ``size-empty`` as well, so we can elide it.
-* the case for ``size-lam`` no longer adds the theorem case to the context. !}%
-%{! (options removed from twelftag: check="true") !}%
+* the case for ``size-lam`` no longer adds the theorem case to the context. %]]
+%[[ (options removed from twelftag: check="true") %]]
 %term _ 
 	%pi (subst-size-ca E' ([x] [dx] dx) D Dplus')
 	%<- (size-at-least-one D Dplus)
@@ -169,10 +169,10 @@ The remaining cases are the same as in the previous proof, except that
 	%<- (plus-s-rh DplusRes DplusRes') %.
 %worlds (size-block) (subst-size-ca _ _ _ _) %.
 %total D (subst-size-ca _ D _ _) %.
-%{! \{\{tutorial\}\} !}%
-%{!
+%[[ \{\{tutorial\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Catch-all_case).
-!}%
+%]]

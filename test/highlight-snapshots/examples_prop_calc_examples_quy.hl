@@ -1,0 +1,33 @@
+0:0-0:28	comment	`% Translating A & B => B & A`
+1:0-1:6	keyword	`%query`
+1:7-1:8	number	`1`
+1:9-1:10	variable.parameter.builtin	`_`
+1:11-1:12	variable.parameter.builtin	`_`
+1:12-1:12	local.reference	``
+1:12-1:12	operator	``
+1:90-1:92	keyword.return	`%.`
+1:92-2:52	comment	``
+3:7-3:8	number	`1`
+3:9-3:10	variable.parameter.builtin	`_`
+3:11-3:12	variable.parameter.builtin	`_`
+3:13-3:21	constructor	`combdefn`
+3:13-3:21	local.reference	`combdefn`
+3:141-3:143	keyword.return	`%.`
+3:143-4:15	comment	``
+5:7-5:8	number	`1`
+5:9-5:10	variable.parameter.builtin	`_`
+5:11-5:12	variable.parameter.builtin	`_`
+5:13-5:21	constructor	`combdefn`
+5:13-5:21	local.reference	`combdefn`
+5:21-5:23	constructor	` S`
+5:21-5:23	local.reference	` S`
+5:23-5:25	constructor	` D`
+5:23-5:25	local.reference	` D`
+5:25-5:28	keyword.return	` %.`
+5:28-6:46	comment	``
+7:7-7:8	number	`1`
+7:9-7:10	variable.parameter.builtin	`_`
+7:11-7:12	variable.parameter.builtin	`_`
+7:13-7:17	constructor	`comb`
+7:13-7:17	local.reference	`comb`
+7:139-7:141	keyword.return	`%.`

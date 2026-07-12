@@ -1,5 +1,5 @@
 %                          
-%{! This page lists many **error messages** that may be encountered using Twelf.  The explanations given below are not a complete but will hopefully be helpful when using Twelf as described in this wiki.
+%[[ This page lists many **error messages** that may be encountered using Twelf.  The explanations given below are not a complete but will hopefully be helpful when using Twelf as described in this wiki.
 
 ;**Ambiguous reconstruction** 
 :This error may indicate not passing enough “parameters” to a theorem.
@@ -55,10 +55,10 @@
 
 In general, trying to find the exact cause of the error in a long proof may require binary search (ending the proof early and seeing at what point the error changes from "output not ground" to the error in question).
 
-\{\{needs|a more complete list of errors and better explanations\}\} !}%
-%{!
+\{\{needs|a more complete list of errors and better explanations\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Error_messages).
-!}%
+%]]

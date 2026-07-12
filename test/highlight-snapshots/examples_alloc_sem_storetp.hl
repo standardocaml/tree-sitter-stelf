@@ -1,0 +1,420 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:15	comment	`%%% storetp.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:17	comment	`%%% Store Typings`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword	`%term`
+6:6-6:14	constructor	`nil_sttp`
+6:6-6:14	function	`nil_sttp`
+6:6-6:14	local.reference	`nil_sttp`
+6:6-6:14	variable.parameter	`nil_sttp`
+6:14-6:19	constructor	` sttp`
+6:14-6:19	local.reference	` sttp`
+6:19-6:22	keyword.return	` %.`
+7:6-7:15	constructor	`cons_sttp`
+7:6-7:15	function	`cons_sttp`
+7:6-7:15	local.reference	`cons_sttp`
+7:6-7:15	variable.parameter	`cons_sttp`
+7:15-7:19	operator	` %pi`
+7:20-7:23	constructor	`loc`
+7:20-7:23	local.reference	`loc`
+7:24-7:27	operator	`%->`
+7:28-7:30	constructor	`tp`
+7:28-7:30	local.reference	`tp`
+7:30-7:34	operator	` %->`
+7:35-7:39	constructor	`sttp`
+7:35-7:39	local.reference	`sttp`
+7:39-7:43	operator	` %->`
+7:44-7:48	constructor	`sttp`
+7:44-7:48	local.reference	`sttp`
+7:48-7:51	keyword.return	` %.`
+7:51-8:67	comment	``
+11:0-11:5	keyword.type	`%sort`
+11:6-11:13	constructor	`sttp_wf`
+11:6-11:13	local.reference	`sttp_wf`
+11:6-11:13	type	`sttp_wf`
+11:23-11:25	keyword.return	`%.`
+12:6-12:13	constructor	`sttp_wf`
+12:6-12:13	local.reference	`sttp_wf`
+12:13-12:17	keyword.modifier	` %in`
+12:17-12:20	keyword.return	` %.`
+13:6-13:17	constructor	`sttp_wf_nil`
+13:6-13:17	function	`sttp_wf_nil`
+13:6-13:17	local.reference	`sttp_wf_nil`
+13:6-13:17	variable.parameter	`sttp_wf_nil`
+13:17-13:25	constructor	` sttp_wf`
+13:17-13:25	local.reference	` sttp_wf`
+13:25-13:34	constructor	` nil_sttp`
+13:25-13:34	local.reference	` nil_sttp`
+13:34-13:37	keyword.return	` %.`
+14:6-14:22	constructor	`sttp_wf_cons_nil`
+14:6-14:22	function	`sttp_wf_cons_nil`
+14:6-14:22	local.reference	`sttp_wf_cons_nil`
+14:6-14:22	variable.parameter	`sttp_wf_cons_nil`
+14:22-14:30	constructor	` sttp_wf`
+14:22-14:30	local.reference	` sttp_wf`
+14:56-14:58	keyword.return	`%.`
+15:6-15:23	constructor	`sttp_wf_cons_cons`
+15:6-15:23	function	`sttp_wf_cons_cons`
+15:6-15:23	local.reference	`sttp_wf_cons_cons`
+15:6-15:23	variable.parameter	`sttp_wf_cons_cons`
+15:23-16:4	operator	``
+16:5-16:6	punctuation.bracket	`(`
+16:6-16:13	constructor	`sttp_wf`
+16:6-16:13	local.reference	`sttp_wf`
+16:14-16:15	punctuation.bracket	`(`
+16:15-16:24	constructor	`cons_sttp`
+16:15-16:24	local.reference	`cons_sttp`
+16:25-16:27	constructor	`L'`
+16:25-16:27	local.reference	`L'`
+16:28-16:30	constructor	`T'`
+16:28-16:30	local.reference	`T'`
+16:31-16:35	constructor	`ST''`
+16:31-16:35	local.reference	`ST''`
+16:35-16:36	punctuation.bracket	`)`
+16:36-16:37	punctuation.bracket	`)`
+17:1-17:4	operator	`%->`
+17:5-17:6	punctuation.bracket	`(`
+17:6-17:12	constructor	`loc_lt`
+17:6-17:12	local.reference	`loc_lt`
+17:13-17:15	constructor	`L'`
+17:13-17:15	local.reference	`L'`
+17:16-17:17	constructor	`L`
+17:16-17:17	local.reference	`L`
+17:17-17:18	punctuation.bracket	`)`
+17:18-18:4	operator	``
+18:5-18:6	punctuation.bracket	`(`
+18:6-18:13	constructor	`sttp_wf`
+18:6-18:13	local.reference	`sttp_wf`
+18:14-18:15	punctuation.bracket	`(`
+18:15-18:24	constructor	`cons_sttp`
+18:15-18:24	local.reference	`cons_sttp`
+18:25-18:26	constructor	`L`
+18:25-18:26	local.reference	`L`
+18:27-18:28	constructor	`T`
+18:27-18:28	local.reference	`T`
+18:29-18:30	punctuation.bracket	`(`
+18:30-18:39	constructor	`cons_sttp`
+18:30-18:39	local.reference	`cons_sttp`
+18:40-18:42	constructor	`L'`
+18:40-18:42	local.reference	`L'`
+18:43-18:45	constructor	`T'`
+18:43-18:45	local.reference	`T'`
+18:46-18:50	constructor	`ST''`
+18:46-18:50	local.reference	`ST''`
+18:50-18:51	punctuation.bracket	`)`
+18:51-18:52	punctuation.bracket	`)`
+18:52-18:53	punctuation.bracket	`)`
+18:53-18:56	keyword.return	` %.`
+19:12-19:14	constructor	`ST`
+19:12-19:14	local.reference	`ST`
+19:28-19:30	keyword.return	`%.`
+20:8-20:9	punctuation.bracket	`(`
+20:9-20:10	punctuation.bracket	`)`
+20:11-20:12	punctuation.bracket	`(`
+20:12-20:19	constructor	`sttp_wf`
+20:12-20:19	local.reference	`sttp_wf`
+20:20-20:21	constructor	`_`
+20:20-20:21	local.reference	`_`
+20:20-20:21	variable.parameter	`_`
+20:21-20:22	punctuation.bracket	`)`
+20:22-20:25	keyword.return	` %.`
+21:8-21:15	constructor	`sttp_wf`
+21:8-21:15	local.reference	`sttp_wf`
+21:15-21:19	keyword.modifier	` %in`
+21:19-21:22	keyword.return	` %.`
+21:22-22:67	comment	``
+25:0-25:5	keyword.type	`%sort`
+25:6-25:17	constructor	`sttp_lookup`
+25:6-25:17	local.reference	`sttp_lookup`
+25:6-25:17	type	`sttp_lookup`
+25:42-25:44	keyword.return	`%.`
+26:6-26:17	constructor	`sttp_lookup`
+26:6-26:17	local.reference	`sttp_lookup`
+26:17-26:21	keyword.modifier	` %in`
+26:21-26:25	keyword.modifier	` %in`
+26:25-26:30	keyword.modifier	` %out`
+26:30-26:33	keyword.return	` %.`
+27:6-27:21	constructor	`sttp_lookup_hit`
+27:6-27:21	function	`sttp_lookup_hit`
+27:6-27:21	local.reference	`sttp_lookup_hit`
+27:6-27:21	variable.parameter	`sttp_lookup_hit`
+27:21-27:33	constructor	` sttp_lookup`
+27:21-27:33	local.reference	` sttp_lookup`
+27:56-27:58	keyword.return	`%.`
+28:6-28:22	constructor	`sttp_lookup_miss`
+28:6-28:22	function	`sttp_lookup_miss`
+28:6-28:22	local.reference	`sttp_lookup_miss`
+28:6-28:22	variable.parameter	`sttp_lookup_miss`
+28:22-29:4	operator	``
+29:5-29:6	punctuation.bracket	`(`
+29:6-29:17	constructor	`sttp_lookup`
+29:6-29:17	local.reference	`sttp_lookup`
+29:18-29:21	constructor	`ST'`
+29:18-29:21	local.reference	`ST'`
+29:22-29:23	constructor	`L`
+29:22-29:23	local.reference	`L`
+29:24-29:25	constructor	`T`
+29:24-29:25	local.reference	`T`
+29:25-29:26	punctuation.bracket	`)`
+30:1-30:4	operator	`%->`
+30:5-30:6	punctuation.bracket	`(`
+30:6-30:12	constructor	`loc_lt`
+30:6-30:12	local.reference	`loc_lt`
+30:13-30:14	constructor	`L`
+30:13-30:14	local.reference	`L`
+30:15-30:17	constructor	`L'`
+30:15-30:17	local.reference	`L'`
+30:17-30:18	punctuation.bracket	`)`
+30:18-31:4	operator	``
+31:5-31:6	punctuation.bracket	`(`
+31:6-31:17	constructor	`sttp_lookup`
+31:6-31:17	local.reference	`sttp_lookup`
+31:18-31:19	punctuation.bracket	`(`
+31:19-31:28	constructor	`cons_sttp`
+31:19-31:28	local.reference	`cons_sttp`
+31:29-31:31	constructor	`L'`
+31:29-31:31	local.reference	`L'`
+31:32-31:33	constructor	`_`
+31:32-31:33	local.reference	`_`
+31:32-31:33	variable.parameter	`_`
+31:34-31:37	constructor	`ST'`
+31:34-31:37	local.reference	`ST'`
+31:37-31:38	punctuation.bracket	`)`
+31:39-31:40	constructor	`L`
+31:39-31:40	local.reference	`L`
+31:41-31:42	constructor	`T`
+31:41-31:42	local.reference	`T`
+31:42-31:43	punctuation.bracket	`)`
+31:43-31:46	keyword.return	` %.`
+32:12-32:14	constructor	`ST`
+32:12-32:14	local.reference	`ST`
+32:36-32:38	keyword.return	`%.`
+33:8-33:9	punctuation.bracket	`(`
+33:9-33:10	punctuation.bracket	`)`
+33:11-33:12	punctuation.bracket	`(`
+33:12-33:23	constructor	`sttp_lookup`
+33:12-33:23	local.reference	`sttp_lookup`
+33:24-33:25	constructor	`_`
+33:24-33:25	local.reference	`_`
+33:24-33:25	variable.parameter	`_`
+33:26-33:27	constructor	`_`
+33:26-33:27	local.reference	`_`
+33:26-33:27	variable.parameter	`_`
+33:28-33:29	constructor	`_`
+33:28-33:29	local.reference	`_`
+33:28-33:29	variable.parameter	`_`
+33:29-33:30	punctuation.bracket	`)`
+33:30-33:33	keyword.return	` %.`
+33:33-34:67	comment	``
+37:0-37:5	keyword.type	`%sort`
+37:6-37:16	constructor	`sttp_alloc`
+37:6-37:16	local.reference	`sttp_alloc`
+37:6-37:16	type	`sttp_alloc`
+37:50-37:52	keyword.return	`%.`
+38:6-38:16	constructor	`sttp_alloc`
+38:6-38:16	local.reference	`sttp_alloc`
+38:16-38:20	keyword.modifier	` %in`
+38:20-38:24	keyword.modifier	` %in`
+38:24-38:29	keyword.modifier	` %out`
+38:29-38:34	keyword.modifier	` %out`
+38:34-38:37	keyword.return	` %.`
+39:6-39:20	constructor	`sttp_alloc_nil`
+39:6-39:20	function	`sttp_alloc_nil`
+39:6-39:20	local.reference	`sttp_alloc_nil`
+39:6-39:20	variable.parameter	`sttp_alloc_nil`
+39:20-39:31	constructor	` sttp_alloc`
+39:20-39:31	local.reference	` sttp_alloc`
+39:31-39:40	constructor	` nil_sttp`
+39:31-39:40	local.reference	` nil_sttp`
+39:40-39:44	constructor	` T''`
+39:40-39:44	local.reference	` T''`
+39:98-39:100	keyword.return	`%.`
+40:6-40:21	constructor	`sttp_alloc_cons`
+40:6-40:21	function	`sttp_alloc_cons`
+40:6-40:21	local.reference	`sttp_alloc_cons`
+40:6-40:21	variable.parameter	`sttp_alloc_cons`
+40:21-40:32	constructor	` sttp_alloc`
+40:21-40:32	local.reference	` sttp_alloc`
+40:143-40:145	keyword.return	`%.`
+41:12-41:14	constructor	`ST`
+41:12-41:14	local.reference	`ST`
+41:37-41:39	keyword.return	`%.`
+42:8-42:9	punctuation.bracket	`(`
+42:9-42:10	punctuation.bracket	`)`
+42:11-42:12	punctuation.bracket	`(`
+42:12-42:22	constructor	`sttp_alloc`
+42:12-42:22	local.reference	`sttp_alloc`
+42:23-42:24	constructor	`_`
+42:23-42:24	local.reference	`_`
+42:23-42:24	variable.parameter	`_`
+42:25-42:26	constructor	`_`
+42:25-42:26	local.reference	`_`
+42:25-42:26	variable.parameter	`_`
+42:27-42:28	constructor	`_`
+42:27-42:28	local.reference	`_`
+42:27-42:28	variable.parameter	`_`
+42:29-42:30	constructor	`_`
+42:29-42:30	local.reference	`_`
+42:29-42:30	variable.parameter	`_`
+42:30-42:31	punctuation.bracket	`)`
+42:31-42:34	keyword.return	` %.`
+43:8-43:18	constructor	`sttp_alloc`
+43:8-43:18	local.reference	`sttp_alloc`
+43:18-43:22	keyword.modifier	` %in`
+43:22-43:26	keyword.modifier	` %in`
+43:26-43:31	keyword.modifier	` %out`
+43:31-43:36	keyword.modifier	` %out`
+43:36-43:39	keyword.return	` %.`
+44:7-44:9	constructor	`ST`
+44:7-44:9	local.reference	`ST`
+44:10-44:11	punctuation.bracket	`(`
+44:11-44:21	constructor	`sttp_alloc`
+44:11-44:21	local.reference	`sttp_alloc`
+44:22-44:24	constructor	`ST`
+44:22-44:24	local.reference	`ST`
+44:25-44:26	constructor	`_`
+44:25-44:26	local.reference	`_`
+44:25-44:26	variable.parameter	`_`
+44:27-44:28	constructor	`_`
+44:27-44:28	local.reference	`_`
+44:27-44:28	variable.parameter	`_`
+44:29-44:30	constructor	`_`
+44:29-44:30	local.reference	`_`
+44:29-44:30	variable.parameter	`_`
+44:30-44:31	punctuation.bracket	`)`
+44:31-44:34	keyword.return	` %.`
+44:34-45:67	comment	``
+48:0-48:5	keyword.type	`%sort`
+48:6-48:17	constructor	`sttp_extend`
+48:6-48:17	local.reference	`sttp_extend`
+48:6-48:17	type	`sttp_extend`
+48:36-48:38	keyword.return	`%.`
+49:6-49:17	constructor	`sttp_extend`
+49:6-49:17	local.reference	`sttp_extend`
+49:17-49:21	keyword.modifier	` %in`
+49:21-49:25	keyword.modifier	` %in`
+49:25-49:28	keyword.return	` %.`
+50:6-50:21	constructor	`sttp_extend_nil`
+50:6-50:21	function	`sttp_extend_nil`
+50:6-50:21	local.reference	`sttp_extend_nil`
+50:6-50:21	variable.parameter	`sttp_extend_nil`
+50:21-50:33	constructor	` sttp_extend`
+50:21-50:33	local.reference	` sttp_extend`
+50:33-50:42	constructor	` nil_sttp`
+50:33-50:42	local.reference	` nil_sttp`
+50:42-50:46	constructor	` ST2`
+50:42-50:46	local.reference	` ST2`
+50:46-50:49	keyword.return	` %.`
+51:6-51:26	constructor	`sttp_extend_cons_hit`
+51:6-51:26	function	`sttp_extend_cons_hit`
+51:6-51:26	local.reference	`sttp_extend_cons_hit`
+51:6-51:26	variable.parameter	`sttp_extend_cons_hit`
+51:26-52:4	operator	``
+52:5-52:6	punctuation.bracket	`(`
+52:6-52:17	constructor	`sttp_extend`
+52:6-52:17	local.reference	`sttp_extend`
+52:18-52:22	constructor	`ST1'`
+52:18-52:22	local.reference	`ST1'`
+52:23-52:27	constructor	`ST2'`
+52:23-52:27	local.reference	`ST2'`
+52:27-52:28	punctuation.bracket	`)`
+53:1-53:4	operator	`%->`
+53:5-53:6	punctuation.bracket	`(`
+53:6-53:17	constructor	`sttp_extend`
+53:6-53:17	local.reference	`sttp_extend`
+53:18-53:19	punctuation.bracket	`(`
+53:19-53:28	constructor	`cons_sttp`
+53:19-53:28	local.reference	`cons_sttp`
+53:29-53:30	constructor	`L`
+53:29-53:30	local.reference	`L`
+53:31-53:32	constructor	`T`
+53:31-53:32	local.reference	`T`
+53:33-53:37	constructor	`ST1'`
+53:33-53:37	local.reference	`ST1'`
+53:37-53:38	punctuation.bracket	`)`
+53:39-53:40	punctuation.bracket	`(`
+53:40-53:49	constructor	`cons_sttp`
+53:40-53:49	local.reference	`cons_sttp`
+53:50-53:51	constructor	`L`
+53:50-53:51	local.reference	`L`
+53:52-53:53	constructor	`T`
+53:52-53:53	local.reference	`T`
+53:54-53:58	constructor	`ST2'`
+53:54-53:58	local.reference	`ST2'`
+53:58-53:59	punctuation.bracket	`)`
+53:59-53:60	punctuation.bracket	`)`
+53:60-53:63	keyword.return	` %.`
+54:6-54:27	constructor	`sttp_extend_cons_miss`
+54:6-54:27	function	`sttp_extend_cons_miss`
+54:6-54:27	local.reference	`sttp_extend_cons_miss`
+54:6-54:27	variable.parameter	`sttp_extend_cons_miss`
+54:27-55:4	operator	``
+55:5-55:6	punctuation.bracket	`(`
+55:6-55:17	constructor	`sttp_extend`
+55:6-55:17	local.reference	`sttp_extend`
+55:18-55:19	punctuation.bracket	`(`
+55:19-55:28	constructor	`cons_sttp`
+55:19-55:28	local.reference	`cons_sttp`
+55:29-55:31	constructor	`L1`
+55:29-55:31	local.reference	`L1`
+55:32-55:34	constructor	`T1`
+55:32-55:34	local.reference	`T1`
+55:35-55:39	constructor	`ST1'`
+55:35-55:39	local.reference	`ST1'`
+55:39-55:40	punctuation.bracket	`)`
+55:41-55:45	constructor	`ST2'`
+55:41-55:45	local.reference	`ST2'`
+55:45-55:46	punctuation.bracket	`)`
+56:1-56:4	operator	`%->`
+56:5-56:6	punctuation.bracket	`(`
+56:6-56:12	constructor	`loc_lt`
+56:6-56:12	local.reference	`loc_lt`
+56:13-56:15	constructor	`L1`
+56:13-56:15	local.reference	`L1`
+56:16-56:18	constructor	`L2`
+56:16-56:18	local.reference	`L2`
+56:18-56:19	punctuation.bracket	`)`
+56:19-57:4	operator	``
+57:5-57:6	punctuation.bracket	`(`
+57:6-57:17	constructor	`sttp_extend`
+57:6-57:17	local.reference	`sttp_extend`
+57:18-57:19	punctuation.bracket	`(`
+57:19-57:28	constructor	`cons_sttp`
+57:19-57:28	local.reference	`cons_sttp`
+57:29-57:31	constructor	`L1`
+57:29-57:31	local.reference	`L1`
+57:32-57:34	constructor	`T1`
+57:32-57:34	local.reference	`T1`
+57:35-57:39	constructor	`ST1'`
+57:35-57:39	local.reference	`ST1'`
+57:39-57:40	punctuation.bracket	`)`
+57:41-57:42	punctuation.bracket	`(`
+57:42-57:51	constructor	`cons_sttp`
+57:42-57:51	local.reference	`cons_sttp`
+57:52-57:54	constructor	`L2`
+57:52-57:54	local.reference	`L2`
+57:55-57:57	constructor	`T2`
+57:55-57:57	local.reference	`T2`
+57:58-57:62	constructor	`ST2'`
+57:58-57:62	local.reference	`ST2'`
+57:62-57:63	punctuation.bracket	`)`
+57:63-57:64	punctuation.bracket	`)`
+57:64-57:67	keyword.return	` %.`
+58:12-58:15	constructor	`ST2`
+58:12-58:15	local.reference	`ST2`
+58:36-58:38	keyword.return	`%.`
+59:8-59:9	punctuation.bracket	`(`
+59:9-59:10	punctuation.bracket	`)`
+59:11-59:12	punctuation.bracket	`(`
+59:12-59:23	constructor	`sttp_extend`
+59:12-59:23	local.reference	`sttp_extend`
+59:24-59:25	constructor	`_`
+59:24-59:25	local.reference	`_`
+59:24-59:25	variable.parameter	`_`
+59:26-59:27	constructor	`_`
+59:26-59:27	local.reference	`_`
+59:26-59:27	variable.parameter	`_`
+59:27-59:28	punctuation.bracket	`)`
+59:28-59:31	keyword.return	` %.`

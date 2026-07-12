@@ -1,6 +1,6 @@
 %                   
 %                                                                                    
-%{!
+%[[
 The **``%subord``** declaration adds edges to the [subordination](/wiki/subordination/) relation. 
 
 ## Syntax
@@ -16,4 +16,4 @@ The type families ``ti'`` will then be treated as being dependent on the type fa
 
 <Keyword />
 
-!}%
+%]]

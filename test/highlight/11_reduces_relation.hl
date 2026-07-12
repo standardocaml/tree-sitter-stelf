@@ -1,0 +1,66 @@
+0:0-0:8	keyword	`%reduces`
+0:9-0:11	operator	`<=`
+0:12-0:13	constructor	`X`
+0:12-0:13	local.reference	`X`
+0:13-0:15	constructor	` Y`
+0:13-0:15	local.reference	` Y`
+0:15-0:19	constructor	` add`
+0:15-0:19	local.reference	` add`
+0:19-0:21	constructor	` X`
+0:19-0:21	local.reference	` X`
+0:21-0:23	constructor	` Y`
+0:21-0:23	local.reference	` Y`
+0:23-0:28	constructor	` zero`
+0:23-0:28	local.reference	` zero`
+1:9-1:11	operator	`>=`
+1:12-1:13	constructor	`X`
+1:12-1:13	local.reference	`X`
+1:13-1:15	constructor	` Y`
+1:13-1:15	local.reference	` Y`
+1:15-1:19	constructor	` add`
+1:15-1:19	local.reference	` add`
+1:19-1:21	constructor	` X`
+1:19-1:21	local.reference	` X`
+1:21-1:23	constructor	` Y`
+1:21-1:23	local.reference	` Y`
+1:23-1:28	constructor	` zero`
+1:23-1:28	local.reference	` zero`
+2:9-2:10	operator	`<`
+2:11-2:12	constructor	`X`
+2:11-2:12	local.reference	`X`
+2:12-2:14	constructor	` Y`
+2:12-2:14	local.reference	` Y`
+2:14-2:18	constructor	` add`
+2:14-2:18	local.reference	` add`
+2:18-2:20	constructor	` X`
+2:18-2:20	local.reference	` X`
+2:20-2:22	constructor	` Y`
+2:20-2:22	local.reference	` Y`
+2:22-2:27	constructor	` zero`
+2:22-2:27	local.reference	` zero`
+3:9-3:10	operator	`>`
+3:11-3:12	constructor	`X`
+3:11-3:12	local.reference	`X`
+3:12-3:14	constructor	` Y`
+3:12-3:14	local.reference	` Y`
+3:14-3:18	constructor	` add`
+3:14-3:18	local.reference	` add`
+3:18-3:20	constructor	` X`
+3:18-3:20	local.reference	` X`
+3:20-3:22	constructor	` Y`
+3:20-3:22	local.reference	` Y`
+3:22-3:27	constructor	` zero`
+3:22-3:27	local.reference	` zero`
+4:9-4:10	operator	`=`
+4:11-4:12	constructor	`X`
+4:11-4:12	local.reference	`X`
+4:12-4:14	constructor	` Y`
+4:12-4:14	local.reference	` Y`
+4:14-4:18	constructor	` add`
+4:14-4:18	local.reference	` add`
+4:18-4:20	constructor	` X`
+4:18-4:20	local.reference	` X`
+4:20-4:22	constructor	` Y`
+4:20-4:22	local.reference	` Y`
+4:22-4:27	constructor	` zero`
+4:22-4:27	local.reference	` zero`

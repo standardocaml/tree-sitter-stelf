@@ -1,9 +1,9 @@
 %                                          
-%{! 
+%[[ 
 
 ## Arithmetic primitives
 
-!}%
+%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -13,7 +13,7 @@
 %term add/s %pi (add (s M) N (s P)) %<- (add M N P) %.
 %worlds () (add _ _ _) %.
 %total M (add M _ _) %.
-%{! 
+%[[ 
 
 ## Multiplication
 
@@ -21,11 +21,11 @@
 
 Answer:
 
-!}%
+%]]
 %sort mult {_ nat} {_ nat} {_ nat} %.
 %term mult/z mult z N z %.
 %term mult/s %pi (mult (s M) N Q) %<- (mult M N P) %<- (add P N Q) %.
-%{! 
+%[[ 
 
 Now let's check that multiplication is total.
 
@@ -34,26 +34,26 @@ arguments are outputs?
 
 Answer:
 
-!}%
+%]]
 %mode mult %in %in %out %.
-%{! 
+%[[ 
 
 + means input (univeral); - means output (existential).  
 
 Next the world:
 
-!}%
+%]]
 %worlds () (mult _ _ _) %.
-%{! 
+%[[ 
 
 This means we consider terms of type mult in the empty LF context only.
 
 Finally, we ask Twelf to check that it is total by induction over the
 first argument:
 
-!}%
+%]]
 %total M (mult M _ _) %.
-%{! 
+%[[ 
 
 What does this really mean? "For any two LF terms M and N in the empty
 context, there exists a term P and a deriation of ``mult M N P`` in
@@ -265,12 +265,12 @@ This separation allows you to, for example, check that each constant in a family
 
 If any constant in a type family fails mode, worlds, or output coverage, then mode, worlds, or totality checking fails for the whole type family.  One could imagine that Twelf instead would just disregard the offending constant: it is possible that the type family as a whole satisfies a totality assertion without that constant, and, in a mathematical sense, adding additional constants never invalidates the fact a totality assertion is true of a family.    The reason Twelf does not work this way is that ``%total`` actually has a more specific meaning, as we discuss in the next section.
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Expressions from before
 
-!}%
+%]]
 %sort val %.
 %term num %pi nat %-> val %.
 %sort exp %.
@@ -288,13 +288,13 @@ If any constant in a type family fails mode, worlds, or output coverage, then mo
 %term eval/let %pi (eval (let E1 ([x] E2 x)) A) %<- (eval E1 V) %<- (eval (E2 V) A) %.
 %worlds () (eval _ _) %.
 %total E (eval E _) %.
-%{! 
+%[[ 
 
 ## Expressions with times
 
 We'll add syntax for 'times' and an evaluation rule
 
-!}%
+%]]
 %sort val %.
 %term num %pi nat %-> val %.
 %sort exp %.
@@ -320,11 +320,11 @@ We'll add syntax for 'times' and an evaluation rule
 	%<- (mult N1 N2 N) %.
 %worlds () (eval _ _) %.
 %total E (eval E _) %.
-%{! 
+%[[ 
 
 ## Expressions with pairs
 
-!}%
+%]]
 %sort val %.
 %term num %pi nat %-> val %.
 %% NEW
@@ -356,7 +356,7 @@ We'll add syntax for 'times' and an evaluation rule
 %% NEW
 %term eval/snd %pi (eval (snd E) V2) %<- (eval E (pair V1 V2)) %.
 %worlds () (eval _ _) %.
-%{! 
+%[[ 
 
 &lt;twelf name="evalnottotal" check="decl"&gt;
 %total E (eval E _).
@@ -370,7 +370,7 @@ Why? Not every expression evaluates to a ``num``, e.g. ``(plus (ret (pair 6 7)) 
 
 We'll introduce a typing judgement.  
 
-!}%
+%]]
 %sort tp %.
 %term natural tp %.
 %term prod %pi tp %-> tp %-> tp %.
@@ -389,7 +389,7 @@ We'll introduce a typing judgement.
 %term of/fst %pi (of (fst E) T1) %<- (of E (prod T1 T2)) %.
 %term of/snd %pi (of (snd E) T2) %<- (of E (prod T1 T2)) %.
 %term of/let %pi (of (let E1 ([x] E2 x)) T) %<- (of E1 T1) %<- ({x val} of (E2 x) T) %.
-%{! 
+%[[ 
 
 &lt;twelf check="decl" name="badworlds"&gt;
 %worlds () (of _ _).
@@ -399,7 +399,7 @@ We promised we'd stay in the empty LF context, but we don't.
 
 ## Typing 2a
 
-!}%
+%]]
 %% relates a value to a type.
 %sort of-val {_ val} {_ tp} %.
 %term of-val/num of-val (num N) natural %.
@@ -416,7 +416,7 @@ We promised we'd stay in the empty LF context, but we don't.
 %term of/let %pi (of (let E1 ([x] E2 x)) T) %<- (of E1 T1) %<- ({x val} of (E2 x) T) %.
 %mode of %in %out %.
 %block valb [x val]%.
-%{! 
+%[[ 
 
 &lt;twelf name="worldsubserror" check="decl"&gt;
 %worlds (valb) (of _ _).
@@ -424,7 +424,7 @@ We promised we'd stay in the empty LF context, but we don't.
 
 ## Typing 2
 
-!}%
+%]]
 %% relates a value to a type.
 %sort of-val {_ val} {_ tp} %.
 %term of-val/num of-val (num N) natural %.
@@ -442,7 +442,7 @@ We promised we'd stay in the empty LF context, but we don't.
 %term of/let %pi (of (let E1 ([x] E2 x)) T) %<- (of E1 T1) %<- ({x val} of (E2 x) T) %.
 %mode of %in %out %.
 %worlds (valb) (of _ _) %.
-%{! 
+%[[ 
 
 ## Typing 3
 
@@ -453,7 +453,7 @@ example : of (let (ret (num z)) ([y] (ret y))) natural
 
 We need a derivation of  ``of-val x natural``!
 
-!}%
+%]]
 %sort of-val {_ val} {_ tp} %.
 %term of-val/num of-val (num N) natural %.
 %term of-val/pair %pi (of-val (pair V1 V2) (prod T1 T2)) %<- (of-val V1 T1) %<- (of-val V2 T2) %.
@@ -474,9 +474,9 @@ We need a derivation of  ``of-val x natural``!
 %worlds (valb) (of _ _) %.
 %% now we can finish it:
 %define example (of (let (ret (num z)) ([y] ret y)) natural) of/let ([x] [dx of-val x natural] of/ret dx) (of/ret of-val/num) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Session_2_Answer).
-!}%
+%]]

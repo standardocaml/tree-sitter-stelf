@@ -1,0 +1,5 @@
+%query _ _ 1 add zero zero zero
+%query 5 4 _ nat
+%querytabled 3 3 3 pred zero
+%prec %left 10 add
+%prec %right 25 imp

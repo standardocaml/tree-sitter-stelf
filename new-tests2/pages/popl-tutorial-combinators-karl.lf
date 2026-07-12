@@ -1,21 +1,21 @@
 %                                            
-%{! ## Lambda Terms !}%
+%[[ ## Lambda Terms %]]
 %sort exp %.
 %name exp %.
 %term lam %pi (%pi exp %-> exp) %-> exp %.
 %term app %pi exp %-> exp %-> exp %.
-%{! ## Reduction !}%
+%[[ ## Reduction %]]
 %sort reduce {_ exp} {_ exp} %.
 %term reduce/refl reduce E E %.
 %term reduce/trans %pi (reduce E1 E3) %<- (reduce E1 E2) %<- (reduce E2 E3) %.
 %term reduce/lam %pi (reduce (lam ([x] E x)) (lam ([x] E' x))) %<- ({x} reduce (E x) (E' x)) %.
 %term reduce/app %pi (reduce (app E1 E2) (app E1' E2')) %<- (reduce E1 E1') %<- (reduce E2 E2') %.
 %term reduce/beta reduce (app (lam ([x] E1 x)) E2) (E1 E2) %.
-%{! ## Combinators !}%
+%[[ ## Combinators %]]
 %define s exp lam ([a] lam ([b] lam ([x] app (app a x) (app b x)))) %.
 %define k exp lam ([x] lam ([y] x)) %.
 %define i exp lam ([x] x) %.
-%{! ## Bracket Abstraction !}%
+%[[ ## Bracket Abstraction %]]
 %sort abstract {_ %pi exp %-> exp} {_ exp} %.
 %mode abstract %in %out %.
 %term abstract/var abstract ([x] x) i %.
@@ -34,7 +34,7 @@
 	%pi (translate (app E1 E2) (app E1' E2'))
 	%<- (translate E1 E1')
 	%<- (translate E2 E2') %.
-%{! ## Soundness !}%
+%[[ ## Soundness %]]
 %sort abstract-sound {_ abstract ([x] E x) E'} {_ reduce E' (lam ([x] E x))} %.
 %mode abstract-sound %in %out %.
 %block abstract-sound-block [x exp]%.
@@ -61,7 +61,7 @@
 	%<- (translate-sound Dtranslate2 (%the (reduce E2' E2) Dreduce2)) %.
 %worlds (translate-sound-block) (translate-sound _ _) %.
 %total D (translate-sound D _) %.
-%{! ## Completeness !}%
+%[[ ## Completeness %]]
 %sort clean {_ exp} %.
 %term clean/s clean s %.
 %term clean/k clean k %.
@@ -123,9 +123,9 @@
 	%<- (can-translate E2 (%the (translate E2 E2') Dtranslate2)) %.
 %worlds (can-translate-block) (can-translate _ _) %.
 %total E (can-translate E _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Combinators_(karl)).
-!}%
+%]]

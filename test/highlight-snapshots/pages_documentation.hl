@@ -1,0 +1,9 @@
+0:0-0:35	comment	`%                                  `
+1:1-1:2	punctuation.bracket	`[`
+1:2-1:3	punctuation.bracket	`[`
+3:4-3:5	punctuation.bracket	`[`
+3:27-3:28	punctuation.bracket	`]`
+3:28-3:29	punctuation.bracket	`(`
+3:58-3:59	punctuation.bracket	`)`
+5:1-5:2	punctuation.bracket	`]`
+5:2-5:3	punctuation.bracket	`]`

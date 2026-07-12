@@ -1,9 +1,9 @@
 %                        
-%{! This [case study](/wiki/case-studies/) concerns the formalization of the [modal logic](/wiki/modal-logic/) **Classical S5** in the particular way it is done in _[http://www.cs.cmu.edu/~tom7/papers/csl05-19-distributed.pdf Distributed Control Flow with Classical Modal Logic]_ (Murphy, Harper, Crary; CSL 2005). The natural deduction calculus **C5** is a nonstandard variation on the "obvious" classical S5 natural deduction which we chose for its operational interpretation, so that it can be used as a programming language. In the Twelf code below we prove that that C5 is equivalent to the "obvious" S5 by proving it equivalent to a standard [cut-free](/wiki/admissibility-of-cut/) sequent calculus for classical S5.
+%[[ This [case study](/wiki/case-studies/) concerns the formalization of the [modal logic](/wiki/modal-logic/) **Classical S5** in the particular way it is done in _[http://www.cs.cmu.edu/~tom7/papers/csl05-19-distributed.pdf Distributed Control Flow with Classical Modal Logic]_ (Murphy, Harper, Crary; CSL 2005). The natural deduction calculus **C5** is a nonstandard variation on the "obvious" classical S5 natural deduction which we chose for its operational interpretation, so that it can be used as a programming language. In the Twelf code below we prove that that C5 is equivalent to the "obvious" S5 by proving it equivalent to a standard [cut-free](/wiki/admissibility-of-cut/) sequent calculus for classical S5.
 
 Twelf excels for this kind of proof. The only difficulty is that the most natural definition of falsehood assumptions leads to a third-order relation, which Twelf's termination checker did not support at the time this code was developed. Instead, we have an explicit substitution theorem for such assumptions.
 
-## Natural deduction !}%
+## Natural deduction %]]
 %% Classical Judgmental S5
 %% Tom Murphy VII
 %% Thanks: Frank Pfenning and Jason Reed
@@ -21,13 +21,13 @@ Twelf excels for this kind of proof. The only difficulty is that the most natura
 %sort * {_ prop} {_ world} %.
 %name * %.
 %prec %none 1 * %.
-%{! We have two judgments: _A true @ W_ and _A false * W_. We abbreviate these to ``A @ W`` and ``A * W``. !}%
+%[[ We have two judgments: _A true @ W_ and _A false * W_. We abbreviate these to ``A @ W`` and ``A * W``. %]]
 % Implication
 %term => %pi prop %-> prop %-> prop %.
 %prec %right 8 => %.
 %term =>I %pi (%pi (A @ W) %-> (B @ W)) %-> (A => B @ W) %.
 %term =>E %pi (A => B @ W) %-> (A @ W) %-> (B @ W) %.
-%{! This is an [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/): Derivations of well-formedness play the role of proof terms in the logic. !}%
+%[[ This is an [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/): Derivations of well-formedness play the role of proof terms in the logic. %]]
 % Necessity
 %term ! %pi prop %-> prop %.
 %prec %prefix 9 ! %.
@@ -40,7 +40,7 @@ Twelf excels for this kind of proof. The only difficulty is that the most natura
 %term ?I %pi (A @ W) %-> (? A @ W) %.
 %term ?E %pi (? A @ W) %-> ({o world} %pi (A @ o) %-> (C @ W)) %-> (C @ W) %.
 %term ?G %pi (? A @ W') %-> (? A @ W) %.
-%{! There are two modal connectives: <Math formula="\Box A"/>, written ``!A`` and <Math formula="\Diamond A"/>, written ``?A``. These two connectives are expressed in a non-standard way. The introduction and elimination forms all take place at the same world, and we give mobility forms ``!G`` and ``?G`` that allow us to move modal terms from world to world. !}%
+%[[ There are two modal connectives: <Math formula="\Box A"/>, written ``!A`` and <Math formula="\Diamond A"/>, written ``?A``. These two connectives are expressed in a non-standard way. The introduction and elimination forms all take place at the same world, and we give mobility forms ``!G`` and ``?G`` that allow us to move modal terms from world to world. %]]
 % Conjunction
 %term & %pi prop %-> prop %-> prop %.
 %prec %none 9 & %.
@@ -53,18 +53,18 @@ Twelf excels for this kind of proof. The only difficulty is that the most natura
 % Structural Rules
 %term letcc %pi (%pi (A * W) %-> (A @ W)) %-> (A @ W) %.
 %term throw %pi (A @ W) %-> (A * W) %-> (C @ W') %.
-%{! The calculus is classical, which we achieve by including ``letcc`` (which binds the current continuation) and ``throw`` (which throws an expression, perhaps remotely, to a continuation). There are no terms of falsehood type, except for variables ``u`` bound by ``letcc``. Those are not represented explicitly because we use [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/). !}%
+%[[ The calculus is classical, which we achieve by including ``letcc`` (which binds the current continuation) and ``throw`` (which throws an expression, perhaps remotely, to a continuation). There are no terms of falsehood type, except for variables ``u`` bound by ``letcc``. Those are not represented explicitly because we use [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/). %]]
 % here : world.
-%{! In order for some propositions to exist, we may wish to declare some world constant. Otherwise, our metatheorems may be vacuously true due to empty quantification. Alternatively, we choose to prove our metatheorems with respect to a (LF level) [regular world](/wiki/percent-worlds/) where (object language) hypothetical worlds may occur in the context. See the declaration of ``blockw`` below.
+%[[ In order for some propositions to exist, we may wish to declare some world constant. Otherwise, our metatheorems may be vacuously true due to empty quantification. Alternatively, we choose to prove our metatheorems with respect to a (LF level) [regular world](/wiki/percent-worlds/) where (object language) hypothetical worlds may occur in the context. See the declaration of ``blockw`` below.
 
-## Sequent calculus !}%
+## Sequent calculus %]]
 %%% Sequent calculus
 %sort true {_ prop} {_ world} %.
 %name true %.
 %sort false {_ prop} {_ world} %.
 %name false %.
 %sort # %.
-%{! Sequents in the sequent calculus are represented by the judgment ``#``, read as "contradiction." Sequents are derived in a context with ``true`` and ``false`` assumptions. For instance, the initial sequent says that if A is both true and false at the same world, then a contradiction arises: !}%
+%[[ Sequents in the sequent calculus are represented by the judgment ``#``, read as "contradiction." Sequents are derived in a context with ``true`` and ``false`` assumptions. For instance, the initial sequent says that if A is both true and false at the same world, then a contradiction arises: %]]
 % initial sequent
 %term contra %pi (true A W) %-> (false A W) %-> # %.
 % arrow
@@ -76,17 +76,17 @@ Twelf excels for this kind of proof. The only difficulty is that the most natura
 % dia
 %term ?T %pi ({w world} %pi (true A w) %-> #) %-> (true (? A) W) %-> # %.
 %term ?F %pi (%pi (false A W') %-> #) %-> (false (? A) W) %-> # %.
-%{! Unlike the natural deduction, this presentation of the □ and ⋄ connectives is completely standard. !}%
+%[[ Unlike the natural deduction, this presentation of the □ and ⋄ connectives is completely standard. %]]
 % conjunction
 %term &T %pi (%pi (true A W) %-> (true B W) %-> #) %-> (true (A & B) W) %-> # %.
 %term &F %pi (%pi (false A W) %-> #) %-> (%pi (false B W) %-> #) %-> (false (A & B) W) %-> # %.
 % falsehood
 %scope &F %term |_T %pi (true _|_ W) %-> # %.
-%{! ## Cut elimination !}%
+%[[ ## Cut elimination %]]
 % admissibility of excluded middle (cut)
 %sort xm {A prop} {W world} {_ %pi (true A W) %-> #} {_ %pi (false A W) %-> #} {_ #} %.
 %mode xm %in %in %in %in %out %.
-%{! Cut elimination for a classical sequent calculus is the law of the excluded middle: If in some ambient context, the assumption that ``A`` is true is contradictory, and the assumption that ``A`` is false is also contradictory, then the ambient context is also contradictory. The proof proceeds mostly like [cut elimination for intuitionistic logic](/wiki/admissibility-of-cut/). !}%
+%[[ Cut elimination for a classical sequent calculus is the law of the excluded middle: If in some ambient context, the assumption that ``A`` is true is contradictory, and the assumption that ``A`` is false is also contradictory, then the ambient context is also contradictory. The proof proceeds mostly like [cut elimination for intuitionistic logic](/wiki/admissibility-of-cut/). %]]
 % initial cuts
 %term xt_init xm A W ([xt] contra xt D) ([xf] E xf) (E D) %.
 %term xf_init xm A W ([xt] D xt) ([xf] contra E xf) (D E) %.
@@ -192,9 +192,9 @@ Twelf excels for this kind of proof. The only difficulty is that the most natura
 %block blockf {A prop} {W world} [ff false A W]%.
 %worlds (blockw blockt blockf) (xm A W D E F) %.
 %total {A [D E]} (xm A W D E F) %.
-%{! ## Natural deduction to sequent calculus
+%[[ ## Natural deduction to sequent calculus
 
-The admissibility of excluded middle allows us to straightforwardly translate natural deduction proofs to sequent calculus proofs. The theorem we prove is that if Γ;Δ ⊦ A @ W then Γ # A * W, Δ. Operationally, we can think of this as follows: if we have a program of type _A_, then we can pass the result of that program to a continuation expecting _A_ to get a contradiction. !}%
+The admissibility of excluded middle allows us to straightforwardly translate natural deduction proofs to sequent calculus proofs. The theorem we prove is that if Γ;Δ ⊦ A @ W then Γ # A * W, Δ. Operationally, we can think of this as follows: if we have a program of type _A_, then we can pass the result of that program to a continuation expecting _A_ to get a contradiction. %]]
 %%% Translation from natural deduction to sequent calculus.
 % G;D |- A @ W    then   G # D,A * W
 %sort ndseq {_ A @ W} {_ %pi (false A W) %-> #} %.
@@ -265,10 +265,10 @@ The admissibility of excluded middle allows us to straightforwardly translate na
 %worlds (blockw blockh block*) (ndseq D F) %.
 %total D (contfalse D F) %.
 %total D (ndseq D F) %.
-%{! ## Continuation substitution
+%[[ ## Continuation substitution
 
 We must prove a substitution theorem for falsehood assumptions, because we did not use the most [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/) encoding for them. Nonetheless, the theorem is interesting. It says that if we have a term _M_ with a hypothesis for a (true) term of type _A_, and we have a term _N_ with a hypothesis for a (false) continuation expecting type _A_, then our substitution operation can substitute M into N to satisfy the hypothesis. _M_ must be well-typed at all types and all worlds.
-&lt;!-- explanation could be better, but it is pretty subtle... --&gt; !}%
+&lt;!-- explanation could be better, but it is pretty subtle... --&gt; %]]
 %% Continuation Substitution (excluded middle) for natural deduction
 % if   G,x:A@W; D |- M : *
 % and  G; D,u:A@W |- N : B
@@ -318,9 +318,9 @@ We must prove a substitution theorem for falsehood assumptions, because we did n
 % they infect each other somewhat, but the worlds decls for
 % xs are not substantially different than if it is checked
 % alone (there are just some extra unrelated additions)
-%{! ## Sequent calculus to natural deduction
+%[[ ## Sequent calculus to natural deduction
 
-With substitution defined, we can now translate sequent calculus proofs back into C5 natural deduction. The theorem we prove is that if Γ # Δ then ∀C. ∀ω. Γ; Δ ⊦ C @ ω. !}%
+With substitution defined, we can now translate sequent calculus proofs back into C5 natural deduction. The theorem we prove is that if Γ # Δ then ∀C. ∀ω. Γ; Δ ⊦ C @ ω. %]]
 %%% Translation from Sequent Calculus to Natural Deduction
 %       G # D     then   G ; D |- M : * 
 %sort seqnd {_ #} {_ {a} {w} a @ w} %.
@@ -364,7 +364,7 @@ With substitution defined, we can now translate sequent calculus proofs back int
 	%<- ({af} {a*} %pi (falsend af a*) %-> (seqnd (D1 af) ([c] [w] F1 a* c w)))
 	%<- ({bt} {b} %pi (truend bt b) %-> (seqnd (D2 bt) ([c] [w] F2 b c w)))
 	%<- ({cc} {ww} xs ([c] [w] [a] F2 (=>E N=> a) c w) ([a*] F1 a* cc ww) (FF cc ww)) %.
-%{! There are two ways to translate the ``=>F`` rule; we can avoid using ``letcc`` if we like. We give both, taking advantage of the fact that LF relations need not be deterministic functions. !}%
+%[[ There are two ways to translate the ``=>F`` rule; we can avoid using ``letcc`` if we like. We give both, taking advantage of the fact that LF relations need not be deterministic functions. %]]
 % letcc-free version
 % u : A=>B |- throw \x:A . [[ c:B. throw \unused:A.c to u / ... ]](IH) to u
 %term sn-=>F 
@@ -404,7 +404,7 @@ With substitution defined, we can now translate sequent calculus proofs back int
 	%<- (falsend F? N?)
 	%<- ({af' false A W'} {a*' A * W'} %pi (falsend af' a*') %-> (seqnd (D af') ([c] [w] F1 a*' c w)))
 	%<- ({cc} {ww} xs ([c] [w] [a'] throw (?G (?I a')) N?) ([a*'] F1 a*' cc ww) (FF cc ww)) %.
-%{! Finally, we can declare the [worlds](/wiki/percent-worlds/) for our metatheorems and ask Twelf to check them: !}%
+%[[ Finally, we can declare the [worlds](/wiki/percent-worlds/) for our metatheorems and ask Twelf to check them: %]]
 % for xs
 %block blocku {A prop} {W world} [u A * W]%.
 %block blocka {A prop} {W world} [u A @ W]%.
@@ -415,13 +415,13 @@ With substitution defined, we can now translate sequent calculus proofs back int
 %worlds (blockw blocka blocknt blocknf blocku blockp) (xs D E F) (seqnd D F) (truend D F) (falsend D F) %.
 %total E (xs D E F) %.
 %total (D T F) (seqnd D FF) (truend T N) (falsend F M) %.
-%{! ``>All code from this case study``. `` check="true">Twelf's output from this case study``.
+%[[ ``>All code from this case study``. `` check="true">Twelf's output from this case study``.
 
 [Category:Twelf code](/wiki/category-twelf-code/)
-\{\{case study\}\} !}%
-%{!
+\{\{case study\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Classical_S5).
-!}%
+%]]

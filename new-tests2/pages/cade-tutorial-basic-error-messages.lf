@@ -1,5 +1,5 @@
 %                                              
-%{! ## How Twelf checks assertions
+%[[ ## How Twelf checks assertions
 
 Twelf proves a totality assertion for a type family such as
 ``mult`` by checking several properties.  These properties, taken
@@ -8,7 +8,7 @@ type family defines a total relation.
 
 ### Running Example
 
-We'll start from the following code: !}%
+We'll start from the following code: %]]
 %sort nat %.
 %term zero nat %.
 %term succ %pi nat %-> nat %.
@@ -22,7 +22,7 @@ We'll start from the following code: !}%
 %mode mult %in %in %out %.
 %term mult/z mult zero N zero %.
 %term mult/s %pi (mult (succ M) N P') %<- (mult M N P) %<- (add N P P') %.
-%{! ### Mode
+%[[ ### Mode
 
 Twelf checks that each constant inhabiting the type family is
 _well-moded_.  Roughly, this means that the inputs to the conclusion
@@ -218,10 +218,10 @@ To a first approximation, you can think of the ``%mode`` and ``%worlds`` declara
 
 This separation allows you to, for example, check that each constant in a family is well-moded (i.e., takes specified inputs to specified outputs) without checking that the entire type family is total.  You can also use the declarations [%terminates](/wiki/percent-terminates/) and [%covers](/wiki/percent-covers/) to check termination and input coverage independently.
 
-If any constant in a type family fails mode, worlds, or output coverage, then mode, worlds, or totality checking fails for the whole type family.  One could imagine that Twelf instead would just disregard the offending constant: it is possible that the type family as a whole satisfies a totality assertion without that constant, and, in a mathematical sense, adding additional constants never invalidates the fact a totality assertion is true of a family.    The reason Twelf does not work this way is that ``%total`` actually has a more specific meaning, as we discuss in the next section. !}%
-%{!
+If any constant in a type family fails mode, worlds, or output coverage, then mode, worlds, or totality checking fails for the whole type family.  One could imagine that Twelf instead would just disregard the offending constant: it is possible that the type family as a whole satisfies a totality assertion without that constant, and, in a mathematical sense, adding additional constants never invalidates the fact a totality assertion is true of a family.    The reason Twelf does not work this way is that ``%total`` actually has a more specific meaning, as we discuss in the next section. %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 You can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/CADE_Tutorial/Basic_error_messages).
-!}%
+%]]

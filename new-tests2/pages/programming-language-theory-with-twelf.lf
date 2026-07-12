@@ -1,5 +1,5 @@
 %                                                  
-%{! ## Preface
+%[[ ## Preface
 
 The study of programming languages generally proceeds in two parallel directions.  In one direction,
 students are introduced to several specific programming languages representing different
@@ -68,10 +68,10 @@ Part 2:  [[Logical Foundations of Programming Languages]]
 - [[LFPL:Chapter 15|Chapter 15]]: Gödel's System T
 - [[LFPL:Chapter 16|Chapter 16]]: Plotkin's PCF
 
-Part 3: [[Types and Programming Languages]] !}%
-%{!
+Part 3: [[Types and Programming Languages]] %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Programming_language_theory_with_Twelf).
-!}%
+%]]

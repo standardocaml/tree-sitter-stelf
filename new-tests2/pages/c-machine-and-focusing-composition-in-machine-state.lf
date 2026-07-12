@@ -1,8 +1,8 @@
 %                                                                 
-%{! 
+%[[ 
 C Machine and Focusing
-!}%
-%{! ## Syntax !}%
+%]]
+%[[ ## Syntax %]]
 %sort pos %.
 %name pos %.
 %sort neg %.
@@ -17,7 +17,7 @@ C Machine and Focusing
 %term with %pi neg %-> neg %-> neg %.
 %term top neg %.
 %inline conc neg %.
-%{! 
+%[[ 
 
 ### Proofs
 
@@ -30,7 +30,7 @@ distinguish the redices.
 Unlike higher-order focusing, neutral sequents are "pos entails neg",
 and the shifts hand around until we choose to focus on a formula.
 
-!}%
+%]]
 %sort val+ {_ pos} %.
 %sort cont- {_ neg} {_ conc} %.
 %sort cont+ {_ pos} {_ conc} %.
@@ -72,23 +72,23 @@ and the shifts hand around until we choose to focus on a formula.
 %term cut+ %pi (val+ A+) %-> (cont+ A+ C) %-> (exp C) %.
 %% internalize exp / cont composition
 %term compose %pi (exp A-) %-> (cont- A- C-) %-> (exp C-) %.
-%{! ### Stack Machine
+%[[ ### Stack Machine
 
 Lists of continuations:
 
-!}%
+%]]
 %sort conts- {_ neg} {_ conc} %.
 %term conts-/cons %pi (cont- A B) %-> (conts- B C) %-> (conts- A C) %.
 %term conts-/nil conts- A A %.
 %sort conts+ {_ pos} {_ conc} %.
 %term conts+/cons %pi (cont+ A B) %-> (conts- B C) %-> (conts+ A C) %.
-%{! 
+%[[ 
 
 Machine states are basically expressions, except (1) they have lists of
 continuations in place of continuations and (2) they distinguish
 exp/cont composition states from negative redex states.
 
-!}%
+%]]
 %sort state {_ conc} %.
 %term done %pi (val- A) %-> (state A) %.
 %% answer
@@ -98,14 +98,14 @@ exp/cont composition states from negative redex states.
 %% negative cut
 %term stv+ %pi (val+ A) %-> (conts+ A C) %-> (state C) %.
 %% positive cut
-%{! 
+%[[ 
 
 The sum type that you'd define for progress is (val C) + (exp C) so
 let's just abuse exp C for this sum and write the operational semantics
 as the progress proof.  The only downside is that you can't tell whether
 an expression took a real step towards a value or already was a value.
 
-!}%
+%]]
 %sort step {_ state C} {_ state C} %.
 %mode step %in %out %.
 %term step/return step (done V) (done V) %.
@@ -125,9 +125,9 @@ an expression took a real step towards a value or already was a value.
 %term step/cut+ step (st- (cut+ V K) Ks) (stv+ V (conts+/cons K Ks)) %.
 %worlds () (step _ _) %.
 %total D (step D _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/C_machine_and_focusing_(composition_in_machine_state)).
-!}%
+%]]

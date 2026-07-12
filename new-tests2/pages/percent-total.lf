@@ -1,6 +1,6 @@
 %                  
 %                                                                                                                                                                                              
-%{! In Twelf, a [totality assertion](/wiki/totality-assertion/) for an LF [type family](/wiki/type-family/) is specified by a [``%mode``](/wiki/percent-mode/) declaration and a [``%worlds``](/wiki/percent-worlds/) declarations. A **``%total``** declaration for a type family causes Twelf to attempt to verify the specified totality assertion.  Twelf does so by attempting to prove that the type family defines a total logic program.  The ``%total`` declaration is used both to verify properties of object-language [judgment](/wiki/judgment/)s and to check proofs of general [metatheorem](/wiki/metatheorem/)s.  
+%[[ In Twelf, a [totality assertion](/wiki/totality-assertion/) for an LF [type family](/wiki/type-family/) is specified by a [``%mode``](/wiki/percent-mode/) declaration and a [``%worlds``](/wiki/percent-worlds/) declarations. A **``%total``** declaration for a type family causes Twelf to attempt to verify the specified totality assertion.  Twelf does so by attempting to prove that the type family defines a total logic program.  The ``%total`` declaration is used both to verify properties of object-language [judgment](/wiki/judgment/)s and to check proofs of general [metatheorem](/wiki/metatheorem/)s.  
 
 A ``%total`` declaration requires that [`%mode`](/wiki/percent-mode/) checking and [`%worlds`](/wiki/percent-worlds/) checking have already succeeded.  
 Then a **``%total``** declaration causes Twelf to run a number of analyses:
@@ -19,4 +19,4 @@ Taken together, these analyses verify that if the type family is run as a [logic
 
 <Keyword />
 
-!}%
+%]]

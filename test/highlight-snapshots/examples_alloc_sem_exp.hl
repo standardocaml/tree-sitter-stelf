@@ -1,0 +1,142 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:11	comment	`%%% exp.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:15	comment	`%%% Expressions`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword	`%term`
+6:6-6:11	constructor	`loc_e`
+6:6-6:11	function	`loc_e`
+6:6-6:11	local.reference	`loc_e`
+6:6-6:11	variable.parameter	`loc_e`
+6:11-6:15	operator	` %pi`
+6:16-6:19	constructor	`loc`
+6:16-6:19	local.reference	`loc`
+6:20-6:23	operator	`%->`
+6:24-6:27	constructor	`exp`
+6:24-6:27	local.reference	`exp`
+6:27-6:30	keyword.return	` %.`
+7:6-7:11	constructor	`lam_e`
+7:6-7:11	function	`lam_e`
+7:6-7:11	local.reference	`lam_e`
+7:6-7:11	variable.parameter	`lam_e`
+7:11-7:15	operator	` %pi`
+7:16-7:18	constructor	`tp`
+7:16-7:18	local.reference	`tp`
+7:19-7:22	operator	`%->`
+7:23-7:24	punctuation.bracket	`(`
+7:24-7:27	operator	`%pi`
+7:28-7:31	constructor	`exp`
+7:28-7:31	local.reference	`exp`
+7:32-7:35	operator	`%->`
+7:36-7:39	constructor	`exp`
+7:36-7:39	local.reference	`exp`
+7:39-7:40	punctuation.bracket	`)`
+7:40-7:44	operator	` %->`
+7:45-7:48	constructor	`exp`
+7:45-7:48	local.reference	`exp`
+7:48-7:51	keyword.return	` %.`
+8:6-8:11	constructor	`app_e`
+8:6-8:11	function	`app_e`
+8:6-8:11	local.reference	`app_e`
+8:6-8:11	variable.parameter	`app_e`
+8:11-8:15	operator	` %pi`
+8:16-8:19	constructor	`exp`
+8:16-8:19	local.reference	`exp`
+8:20-8:23	operator	`%->`
+8:24-8:27	constructor	`exp`
+8:24-8:27	local.reference	`exp`
+8:27-8:31	operator	` %->`
+8:32-8:35	constructor	`exp`
+8:32-8:35	local.reference	`exp`
+8:35-8:38	keyword.return	` %.`
+9:6-9:12	constructor	`unit_e`
+9:6-9:12	function	`unit_e`
+9:6-9:12	local.reference	`unit_e`
+9:6-9:12	variable.parameter	`unit_e`
+9:12-9:16	constructor	` exp`
+9:12-9:16	local.reference	` exp`
+9:16-9:19	keyword.return	` %.`
+10:6-10:15	constructor	`letunit_e`
+10:6-10:15	function	`letunit_e`
+10:6-10:15	local.reference	`letunit_e`
+10:6-10:15	variable.parameter	`letunit_e`
+10:15-10:19	operator	` %pi`
+10:20-10:23	constructor	`exp`
+10:20-10:23	local.reference	`exp`
+10:24-10:27	operator	`%->`
+10:28-10:31	constructor	`exp`
+10:28-10:31	local.reference	`exp`
+10:31-10:35	operator	` %->`
+10:36-10:39	constructor	`exp`
+10:36-10:39	local.reference	`exp`
+10:39-10:42	keyword.return	` %.`
+11:6-11:12	constructor	`pair_e`
+11:6-11:12	function	`pair_e`
+11:6-11:12	local.reference	`pair_e`
+11:6-11:12	variable.parameter	`pair_e`
+11:12-11:16	operator	` %pi`
+11:17-11:20	constructor	`exp`
+11:17-11:20	local.reference	`exp`
+11:21-11:24	operator	`%->`
+11:25-11:28	constructor	`exp`
+11:25-11:28	local.reference	`exp`
+11:28-11:32	operator	` %->`
+11:33-11:36	constructor	`exp`
+11:33-11:36	local.reference	`exp`
+11:36-11:39	keyword.return	` %.`
+12:6-12:15	constructor	`letpair_e`
+12:6-12:15	function	`letpair_e`
+12:6-12:15	local.reference	`letpair_e`
+12:6-12:15	variable.parameter	`letpair_e`
+12:15-12:19	operator	` %pi`
+12:20-12:23	constructor	`exp`
+12:20-12:23	local.reference	`exp`
+12:24-12:27	operator	`%->`
+12:28-12:29	punctuation.bracket	`(`
+12:29-12:32	operator	`%pi`
+12:33-12:36	constructor	`exp`
+12:33-12:36	local.reference	`exp`
+12:37-12:40	operator	`%->`
+12:41-12:44	constructor	`exp`
+12:41-12:44	local.reference	`exp`
+12:45-12:48	operator	`%->`
+12:49-12:52	constructor	`exp`
+12:49-12:52	local.reference	`exp`
+12:52-12:53	punctuation.bracket	`)`
+12:53-12:57	operator	` %->`
+12:58-12:61	constructor	`exp`
+12:58-12:61	local.reference	`exp`
+12:61-12:64	keyword.return	` %.`
+12:64-13:67	comment	``
+13:67-14:5	keyword.type	``
+14:6-14:15	constructor	`exp_irred`
+14:6-14:15	local.reference	`exp_irred`
+14:6-14:15	type	`exp_irred`
+14:24-14:26	keyword.return	`%.`
+15:6-15:15	constructor	`exp_irred`
+15:6-15:15	local.reference	`exp_irred`
+15:15-15:19	keyword.modifier	` %in`
+15:19-15:22	keyword.return	` %.`
+16:6-16:19	constructor	`exp_irred_loc`
+16:6-16:19	function	`exp_irred_loc`
+16:6-16:19	local.reference	`exp_irred_loc`
+16:6-16:19	variable.parameter	`exp_irred_loc`
+16:19-16:29	constructor	` exp_irred`
+16:19-16:29	local.reference	` exp_irred`
+16:40-16:42	keyword.return	`%.`
+17:12-17:13	punctuation.bracket	`{`
+17:13-17:13	local.reference	``
+17:13-17:13	operator	``
+17:13-17:14	punctuation.bracket	`}`
+17:29-17:31	keyword.return	`%.`
+18:8-18:9	punctuation.bracket	`(`
+18:9-18:10	punctuation.bracket	`)`
+18:11-18:12	punctuation.bracket	`(`
+18:12-18:21	constructor	`exp_irred`
+18:12-18:21	local.reference	`exp_irred`
+18:22-18:23	constructor	`_`
+18:22-18:23	local.reference	`_`
+18:22-18:23	variable.parameter	`_`
+18:23-18:24	punctuation.bracket	`)`
+18:24-18:27	keyword.return	` %.`

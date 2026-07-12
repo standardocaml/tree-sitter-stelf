@@ -1,6 +1,6 @@
 %                                                        
-%{! This is the solution to [this exercise](/wiki/popl-tutorial-big-step-small-step/).
-|hidden = true !}%
+%[[ This is the solution to [this exercise](/wiki/popl-tutorial-big-step-small-step/).
+|hidden = true %]]
 %% Syntax %%
 %sort tp %.
 %name tp %.
@@ -75,8 +75,8 @@
 %term _ val-eval value/fn eval/fn %.
 %worlds () (val-eval _ _) %.
 %total D (val-eval D _) %.
-%{! ## Big-step implies multi-step !}%
-%{! ### Compatibility lemmas === |hidden=true !}%
+%[[ ## Big-step implies multi-step %]]
+%[[ ### Compatibility lemmas === |hidden=true %]]
 %sort step*/s {_ step* E E'} {_ step* (s E) (s E')} %.
 %mode step*/s %in %out %.
 %term _ step*/s (step*/step (%the (step E E') D)) (step*/step (step/s D)) %.
@@ -107,7 +107,7 @@
 	%<- (step*/app/fn D*' D*'app) %.
 %worlds () (step*/app/fn _ _) %.
 %total D (step*/app/fn D _) %.
-%{! #### TASK 1: Fill in the cases of the unfinished compatibility proof !}%
+%[[ #### TASK 1: Fill in the cases of the unfinished compatibility proof %]]
 %sort step*/app/arg {_ step* E2 E2'} {_ value V1} {_ step* (app V1 E2) (app V1 E2')} %.
 %mode step*/app/arg %in %in %out %.
 %term _ step*/app/arg (step*/step (%the (step E2 E2') D2)) (%the (value V1) DvalV1) (step*/step (step/app/arg D2 DvalV1)) %.
@@ -118,12 +118,12 @@
 	%<- (step*/app/arg D*' DvalV1 D*'app) %.
 %worlds () (step*/app/arg _ _ _) %.
 %total D (step*/app/arg D _ _) %.
-%{! |hidden=true !}%
-%{! ### Main theorem !}%
-%{! #### TASK 2: Fill in the missing cases of the theorem !}%
+%[[ |hidden=true %]]
+%[[ ### Main theorem %]]
+%[[ #### TASK 2: Fill in the missing cases of the theorem %]]
 %sort eval-multi {_ eval E V} {_ step* E V} %.
 %mode eval-multi %in %out %.
-%{! |hidden=true !}%
+%[[ |hidden=true %]]
 %term _ eval-multi (%the (eval z z) eval/z) step*/refl %.
 %term _ 
 	%pi (eval-multi (%the (eval (s E) (s V)) (eval/s D)) D*s)
@@ -140,7 +140,7 @@
 	%<- (eval-multi D1 (%the (step* (E1 V) V1) D1*))
 	%<- (step*/ifz/arg Ds* (%the (step* (ifz E E0 ([x] E1 x)) (ifz (s V) E0 ([x] E1 x))) Difz*))
 	%<- (eval-val Ds (value/s (%the (value V) DvalV))) %.
-%{! ...snip... !}%
+%[[ ...snip... %]]
 %term _ eval-multi eval/fn step*/refl %.
 %term _ 
 	%pi (eval-multi (eval/app (%the (eval (E V2) V) Dsub) (%the (eval E2 V2) D2) (%the (eval E1 (fn T1 ([x] E x))) D1)) (Dfun* @ Darg* @ step*/step (step/app/beta DvalV2) @ Dsub*))
@@ -152,7 +152,7 @@
 	%<- (eval-val D2 DvalV2) %.
 %worlds () (eval-multi _ _) %.
 %total D (eval-multi D _) %.
-%{! ## Multi-step implies big step == |hidden=true !}%
+%[[ ## Multi-step implies big step == |hidden=true %]]
 %sort step** {_ exp} {_ exp} %.
 %name step** %.
 %term step**/refl step** E E %.
@@ -176,22 +176,22 @@
 	%<- (step**/trans D1** D2** (%the (step** E E'') D**)) %.
 %worlds () (multi-step** _ _) %.
 %total D (multi-step** D _) %.
-%{! ### Expansion lemma !}%
-%{! #### TASK 3: Prove the three missing cases of the expansion lemma !}%
+%[[ ### Expansion lemma %]]
+%[[ #### TASK 3: Prove the three missing cases of the expansion lemma %]]
 %sort expansion {_ eval E' V} {_ step E E'} {_ eval E V} %.
 %mode expansion %in %in %out %.
-%{! |hidden=true !}%
+%[[ |hidden=true %]]
 %term _ 
 	%pi (expansion (%the (eval (s E') (s V)) (eval/s (%the (eval E' V) Deval'))) (%the (step (s E) (s E')) (step/s (%the (step E E') Dstep))) (%the (eval (s E) (s V)) (eval/s (%the (eval E V) Deval))))
 	%<- (expansion Deval' Dstep (%the (eval E V) Deval)) %.
 %term _ 
 	%pi (expansion (%the (eval (ifz E' E0 ([x] E1 x)) V0) (eval/ifz/z (%the (eval E0 V0) D0) (%the (eval E' z) Dz'))) (%the (step (ifz E E0 ([x] E1 x)) (ifz E' E0 ([x] E1 x))) (step/ifz/arg (%the (step E E') Dstep))) (%the (eval (ifz E E0 ([x] E1 x)) V0) (eval/ifz/z D0 Dz)))
 	%<- (expansion Dz' Dstep (%the (eval E z) Dz)) %.
-%{! ...snip... !}%
+%[[ ...snip... %]]
 %term _ 
 	%pi (expansion (%the (eval (ifz E' E0 ([x] E1 x)) V1) (eval/ifz/s (%the (eval (E1 V) V1) D1) (%the (eval E' (s V)) Ds'))) (%the (step (ifz E E0 ([x] E1 x)) (ifz E' E0 ([x] E1 x))) (step/ifz/arg (%the (step E E') Dstep))) (%the (eval (ifz E E0 ([x] E1 x)) V1) (eval/ifz/s D1 Ds)))
 	%<- (expansion Ds' Dstep (%the (eval E (s V)) Ds)) %.
-%{! |hidden=true !}%
+%[[ |hidden=true %]]
 %term _ expansion (%the (eval E0 V0) Deval') (%the (step (ifz z E0 ([x] E1 x)) E0) step/ifz/z) (eval/ifz/z Deval' eval/z) %.
 %term _ 
 	%pi (expansion (%the (eval (E1 V) V1) Deval') (%the (step (ifz (s V) E0 ([x] E1 x)) (E1 V)) (step/ifz/s (%the (value V) Dval))) (eval/ifz/s Deval' (eval/s DevalV)))
@@ -202,7 +202,7 @@
 %term _ 
 	%pi (expansion (%the (eval (app E1' E2) V) (eval/app (%the (eval (E V2) V) Dsub) (%the (eval E2 V2) D2) (%the (eval E1' (fn T1 ([x] E x))) D1'))) (%the (step (app E1 E2) (app E1' E2)) (step/app/fn (%the (step E1 E1') Dstep1))) (eval/app Dsub D2 D1))
 	%<- (expansion D1' Dstep1 (%the (eval E1 (fn T1 ([x] E x))) D1)) %.
-%{! ...snip... !}%
+%[[ ...snip... %]]
 %term _ 
 	%pi (expansion (%the (eval (app V1 E2') V) (eval/app (%the (eval (E V2) V) Dsub) (%the (eval E2' V2) D2') (%the (eval V1 (fn T1 ([x] E x))) D1))) (%the (step (app V1 E2) (app V1 E2')) (step/app/arg (%the (step E2 E2') Dstep2) (%the (value V1) Dval1))) (eval/app Dsub D2 D1))
 	%<- (expansion D2' Dstep2 (%the (eval E2 V2) D2)) %.
@@ -211,8 +211,8 @@
 	%<- (val-eval Dval2 (%the (eval V2 V2) DevalV2)) %.
 %worlds () (expansion _ _ _) %.
 %total D (expansion _ D _) %.
-%{! ### Main theorem !}%
-%{! #### TASK 4: Prove main theorem in the forward direction !}%
+%[[ ### Main theorem %]]
+%[[ #### TASK 4: Prove main theorem in the forward direction %]]
 %sort multi**-eval {_ step** E V} {_ value V} {_ eval E V} %.
 %mode multi**-eval %in %in %out %.
 %term _ 
@@ -224,7 +224,7 @@
 	%<- (expansion Deval' Dstep (%the (eval E V) Deval)) %.
 %worlds () (multi**-eval _ _ _) %.
 %total D (multi**-eval D _ _) %.
-%{! #### TASK 5: Complete proof by composing previous lemmas !}%
+%[[ #### TASK 5: Complete proof by composing previous lemmas %]]
 %sort multi-eval {_ step* E V} {_ value V} {_ eval E V} %.
 %mode multi-eval %in %in %out %.
 %term _ 
@@ -233,9 +233,9 @@
 	%<- (multi**-eval D** Dval (%the (eval E V) Dev)) %.
 %worlds () (multi-eval _ _ _) %.
 %total () (multi-eval _ _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Big_step,_small_step:_Solution).
-!}%
+%]]

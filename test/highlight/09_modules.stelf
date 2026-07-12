@@ -1,0 +1,3 @@
+%open Peano (zero succ)
+%use Nat Peano (add mul)
+%scope Local %term inner nat

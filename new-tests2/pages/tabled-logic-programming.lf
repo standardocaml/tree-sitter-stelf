@@ -1,5 +1,5 @@
 %                                    
-%{! 
+%[[ 
 The operational semantics of Twelf are similar to those of Prolog, 
 a style known as _backward chaining_ or _goal-directed_ proof 
 search. **Tabled logic programming**, which uses Twelf's 
@@ -26,9 +26,9 @@ definition of subtyping that uses transitivity.
 This article will use as its example a path-finding algorithm 
 on an undirected graphs. 
 
-!}%
-%{! ## Defining the graph !}%
-%{! ### Nodes !}%
+%]]
+%[[ ## Defining the graph %]]
+%[[ ### Nodes %]]
 %sort node %.
 %term a node %.
 %term b node %.
@@ -38,9 +38,9 @@ on an undirected graphs.
 %term f node %.
 %term g node %.
 %term h node %.
-%{! ### Edges !}%
-%{! While we will consider edges in our graph to be undirected,
-we will only define the edge in one, arbitrary, direction. !}%
+%[[ ### Edges %]]
+%[[ While we will consider edges in our graph to be undirected,
+we will only define the edge in one, arbitrary, direction. %]]
 %sort edge {_ node} {_ node} %.
 %term ab edge a b %.
 %term ac edge a c %.
@@ -51,8 +51,8 @@ we will only define the edge in one, arbitrary, direction. !}%
 %term de edge d e %.
 %term df edge d f %.
 %term fg edge f g %.
-%{! ### Paths in the graph !}%
-%{! 
+%[[ ### Paths in the graph %]]
+%[[ 
 This is normally where we would get into trouble; in standard 
 logic programming, it is difficult if not impossible to avoid 
 non-terminating behavior when writing a judgment defining a 
@@ -62,14 +62,14 @@ to use [``%querytabled``](/wiki/percent-querytabled/) directives to cause each i
 of ``path A B`` to be derived at most once during the course 
 of a search: the result is a query that terminates rapidly, 
 instead of not at all.
-!}%
+%]]
 %sort path {_ node} {_ node} %.
 %tabled path %.
 %term path/link %pi (edge A B) %-> (path A B) %.
 %term path/refl %pi (path A B) %-> (path B A) %.
 %term path/trans %pi (path A B) %-> (path B C) %-> (path A C) %.
-%{! ## Searching the graph !}%
-%{! 
+%[[ ## Searching the graph %]]
+%[[ 
 It is crucial that we use [``%querytabled``](/wiki/percent-querytabled/) rather than 
 [``%query``](/wiki/percent-query/) in our queries if we wish for them to terminate. 
 Even though we ask Twelf for as many solutions as it can find, the 
@@ -80,19 +80,19 @@ actually appears three times here - if we use parenthesis to show the order in w
 tabled search connected paths, the path that is found is
 ``a`` - ((``b`` - ((``a`` - ``b`` - ``d``) - ``f``)) 
 - ``g``).
-|check=decl discard=true !}%
+|check=decl discard=true %]]
 %querytabled _ _ %the (path a g) D %.
-%{! 
+%[[ 
 We can also run a terminating search for a path that does not exist, 
 such as one from ``a`` to ``h``.
-|check=decl discard=true !}%
+|check=decl discard=true %]]
 %querytabled _ _ %the (path a h) D %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Tabled_logic_programming).
-!}%
+%]]
 %.
 
 == See also ==

@@ -1,5 +1,5 @@
 %                                                                      
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Exercises 1
@@ -11,7 +11,7 @@ Arithmetic expressions with pairs.
 
 Numbers and strings are unchanged.
 
-|hidden="true" !}%
+|hidden="true" %]]
 %sort nat %.
 %name nat %.
 %term z nat %.
@@ -36,23 +36,23 @@ Numbers and strings are unchanged.
 %term cat/c %pi (cat (cons X S1) S2 (cons X S3)) %<- (cat S1 S2 S3) %.
 %worlds () (cat _ _ _) %.
 %total S (cat S _ _) %.
-%{! 
+%[[ 
 
 ## Typed expressions
 
 Add a type for products:
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term number tp %.
 %term string tp %.
 %term prod %pi tp %-> tp %-> tp %.
-%{! 
+%[[ 
 
 Add pairs as a value, projections as expressions:
 
-!}%
+%]]
 %sort val {_ tp} %.
 %name val %.
 %prec %postfix 1 val %.
@@ -68,13 +68,13 @@ Add pairs as a value, projections as expressions:
 %term let %pi (T exp) %-> (%pi (T val) %-> (U exp)) %-> (U exp) %.
 %term fst %pi (prod T U exp) %-> (T exp) %.
 %term snd %pi (prod T U exp) %-> (U exp) %.
-%{! 
+%[[ 
 
 For simplicity, take answers to be values. 
 
 And we add cases to eval:
 
-!}%
+%]]
 %sort eval {_ T exp} {_ T val} %.
 %mode eval %in %out %.
 %term eval/val eval (ret V) V %.
@@ -93,7 +93,7 @@ And we add cases to eval:
 %term eval/snd %pi (eval (snd E) B) %<- (eval E (pair _ B)) %.
 %worlds () (eval _ _) %.
 %total E (eval E _) %.
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Exercises 1
@@ -101,10 +101,10 @@ And we add cases to eval:
   |nonext=
 \}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Typed_arithmetic_expressions_with_pairs).
-!}%
+%]]

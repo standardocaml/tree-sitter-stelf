@@ -1,15 +1,15 @@
 %                                
-%{! We represent many equivalence relations in Twelf.  The page on [equality](/wiki/equality/) discusses how to represent syntactic equality of LF terms as an LF type family.  This page presents examples of other equivalence relations.  
+%[[ We represent many equivalence relations in Twelf.  The page on [equality](/wiki/equality/) discusses how to represent syntactic equality of LF terms as an LF type family.  This page presents examples of other equivalence relations.  
 
 ## Example: trees with unordered children
 
-Generally we think of trees as having "left" and "right" subtrees, but imagine we wish to ignore that distinction, so that two trees are equal if they have the same colored root and their subtrees are equal, but we don't insist that the "first" or "left" subtree of one tree is equal to the first subtree of the other tree. In this notion of equality, the following two trees would be equal. !}%
+Generally we think of trees as having "left" and "right" subtrees, but imagine we wish to ignore that distinction, so that two trees are equal if they have the same colored root and their subtrees are equal, but we don't insist that the "first" or "left" subtree of one tree is equal to the first subtree of the other tree. In this notion of equality, the following two trees would be equal. %]]
 %sort tree %.
 %term leaf tree %.
 %term node %pi tree %-> tree %-> tree %.
 %define tree1 tree node leaf (node leaf leaf) %.
 %define tree2 tree node (node leaf leaf) leaf %.
-%{! We define a notion of equality that is compatible with this definition: !}%
+%[[ We define a notion of equality that is compatible with this definition: %]]
 %sort eq-rot-tree {_ tree} {_ tree} %.
 %term eq-rot-tree/node eq-rot-tree leaf leaf %.
 %term eq-rot-tree/match 
@@ -21,7 +21,7 @@ Generally we think of trees as having "left" and "right" subtrees, but imagine w
 	%<- (eq-rot-tree T1 T1')
 	%<- (eq-rot-tree T2 T2') %.
 %query 2 _ _ eq-rot-tree tree1 tree2 %.
-%{! ## Equality by canonical representative
+%[[ ## Equality by canonical representative
 
 Equality by canonical representative is another approach to equality by means of an equivalence relation. A total, deterministic relation is defined that reduces every term to its canonical form, and the equivalence relation consideres two terms equivalent if they have identical canonical forms.
 
@@ -31,10 +31,10 @@ The previous definition for equality over trees is unsatisfying in certian ways,
 
 \{\{needs|An example of this is not put together; one would be nice.\}\}
 
-\{\{stub\}\} !}%
-%{!
+\{\{stub\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Equivalence_relation).
-!}%
+%]]

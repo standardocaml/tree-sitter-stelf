@@ -1,5 +1,5 @@
 %                                                   
-%{! 
+%[[ 
 Code from class, March 4.
 
 Translates lambda calculus into combinator calculus to illustrate non-trivial worlds.
@@ -30,11 +30,11 @@ capp : comb -> comb -> comb.
 %block comb-block : block {y:comb}.
 %worlds (comb-block) (comb).
 
-%{! 
+%[[ 
 
 ## Translation
 
-!}%
+%]]
 
 % bracket abstraction
 
@@ -79,13 +79,13 @@ translate/lam : translate (lam ([x] M x)) A'
 %worlds (translate-block) (translate _ _).
 %total M (translate M _).
 
-%{! 
+%[[ 
 
 ## Equational theory
 
 Lambda term equality was discussed only briefly.  Combinator equality was presented for the ``subst`` lemma, below.
 
-!}%
+%]]
 
 % lambda term equality
 
@@ -151,11 +151,11 @@ ceq/trans : ceq A A'
 
 
 
-%{! 
+%[[ 
 
 ## Correctness of the translation
 
-!}%
+%]]
 
 % substitution lemma
 
@@ -189,4 +189,4 @@ subst : bracket ([y] A y) A' -> {C:comb} ceq (capp A' C) (A C) -> type.
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Computation_and_Deduction_2009/20090304).
-!}%
+%]]

@@ -1,5 +1,5 @@
 %                                                                    
-%{! 
+%[[ 
 
 This is a case study translating the simply lambda calculus into S, K, and I
 combinatory logic.  The correctness of the translation is proven in the
@@ -8,13 +8,13 @@ are beta-eta equal.
 
 [William Lovas](/wiki/user-william-lovas/)
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Syntax and static semantics
 
-!}%
-%{! 
+%]]
+%[[ 
 
 First we define the syntax of the two languages.  ``term A`` is the
 type of simply-typed lambda-calculus terms of type A; ``comb A`` is
@@ -27,7 +27,7 @@ Note that since we're using an
 [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/), these syntax
 definitions double as definitions of the languages' static semantics.
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term o tp %.
@@ -47,22 +47,22 @@ definitions double as definitions of the languages' static semantics.
 %term k comb (A => B => A) %.
 %term i comb (A => A) %.
 %term capp %pi (comb (A => B)) %-> (comb A) %-> (comb B) %.
-%{! 
+%[[ 
 
 We can use Twelf's [abbreviation mechanism](/wiki/abbrev-declaration/) and
 [fixity declarations](/wiki/fixity-declaration/) to obtain some cute syntax.
 
-!}%
+%]]
 %inline @ app %.
 %prec %left 10 @ %.
 %inline @@ capp %.
 %prec %left 10 @@ %.
-%{! 
+%[[ 
 
 ## Equational theory
 
-!}%
-%{! 
+%]]
+%[[ 
 
 Then we define equality relations on both languages.  ``teq`` is
 definitional equality for lambda terms; ``ceq`` is definitional
@@ -70,7 +70,7 @@ equality for combinator terms.  In both cases, the equality relation
 amounts to beta-eta equivalence.  (We use extensionality instead of a
 rule based on eta-expansion.)
 
-!}%
+%]]
 % definitional equality on terms (better name?)
 %sort teq {_ term A} {_ term A} %.
 %mode teq %star %star %.
@@ -108,12 +108,12 @@ rule based on eta-expansion.)
 %prec %right 5 ; %.
 %block ceq-block {A tp} [y comb A]%.
 %worlds (ceq-block) (ceq _ _) %.
-%{! 
+%[[ 
 
 ## Translation
 
-!}%
-%{! 
+%]]
+%[[ 
 
 We can now define a compositional translation from lambda terms to combinator
 terms in the standard way.  The translation appeals to a function called
@@ -153,7 +153,7 @@ relating LF-level abstractions in the combinator language to closed combinator
 terms, ``bracket ([x] N x) N``.  This definition is essentially an
 instance of [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
 
-!}%
+%]]
 %sort translate {_ term A} {_ comb A} %.
 %mode translate %in %out %.
 %name translate %.
@@ -164,14 +164,14 @@ instance of [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
 	%pi (translate (app M1 M2) (capp N1 N2))
 	%<- (translate M1 N1)
 	%<- (translate M2 N2) %.
-%{! 
+%[[ 
 
 The translation on lambda-abstractions has to work under an extended context
 with a lambda-term variable, a combinator-term variable, and an assumption
 that the one translates to the other.  See the ``%worlds`` declaration
 below.
 
-!}%
+%]]
 %term t/lam 
 	%pi (translate (lam ([x] M x)) N*)
 	%<- ({x term A} {y comb A} %pi (translate x y) %-> (translate (M x) (N y)))
@@ -185,18 +185,18 @@ below.
 %block trans-block {A tp} [x term A] [y comb A] [dtrans translate x y]%.
 %worlds (trans-block) (bracket _ _) %.
 %worlds (trans-block) (translate _ _) %.
-%{! 
+%[[ 
 
 Both relations are effective (though we cannot use this fact in proofs).
 
-!}%
+%]]
 %total N (bracket N _) %.
 %total M (translate M _) %.
-%{! 
+%[[ 
 
 Instead, we need effectiveness lemmas.  XXX explain this better...
 
-!}%
+%]]
 %sort can-bracket {N %pi (comb A) %-> (comb B)} {_ bracket N N*} %.
 %mode can-bracket %in %out %.
 %sort can-translate {M term A} {_ translate M N} %.
@@ -220,17 +220,17 @@ Instead, we need effectiveness lemmas.  XXX explain this better...
 %total N (can-bracket N _) %.
 %worlds (can-block) (can-translate _ _) %.
 %total M (can-translate M _) %.
-%{! 
+%[[ 
 
 ## Correctness of the translation
 
-!}%
-%{! 
+%]]
+%[[ 
 
 First, we prove the correctness of bracket abstraction itself:
 the application of a bracket abstraction reduces to a substitution.
 
-!}%
+%]]
 %sort subst {_ bracket ([x] N x) N*} {N0} {_ ceq (capp N* N0) (N N0)} %.
 %mode subst %in %in %out %.
 %term _ subst (%the (bracket ([x] x) i) b/i) N0 (%the (ceq (i @@ N0) N0) ceq/i) %.
@@ -242,12 +242,12 @@ the application of a bracket abstraction reduces to a substitution.
 	%<- (subst B2 N0 (%the (ceq (N2' @@ N0) (N2 N0)) Dceq2)) %.
 %worlds (ceq-block) (subst _ _ _) %.
 %total {B} (subst B _ _) %.
-%{! 
+%[[ 
 
 Next, we need to know that the translation of a term is unique up to
 equivalence.
 
-!}%
+%]]
 %sort translate-unique {_ translate M N} {_ translate M N'} {_ ceq N N'} %.
 %mode translate-unique %in %in %out %.
 %term _ 
@@ -262,14 +262,14 @@ equivalence.
 %block unique-block {A tp} [x term A] [y comb A] [dtrans translate x y] [thm translate-unique dtrans dtrans ceq/refl]%.
 %worlds (unique-block) (translate-unique _ _ _) %.
 %total D (translate-unique D _ _) %.
-%{! 
+%[[ 
 
 Then, we can prove simulation, the correctness of translation, by a
 straightforward induction on equality derivations in the lambda-calculus,
 using the correctness of bracket abstraction as a lemma in the case of a
 beta-reduction.
 
-!}%
+%]]
 %sort simulate' {_ translate M N} {_ translate M' N'} {_ teq M M'} {_ ceq N N'} %.
 %mode simulate' %in %in %in %out %.
 %inline simulate (%pi (teq M M') %-> (translate M N) %-> (translate M' N') %-> (ceq N N') %-> %type) [deq] [dt] [dt'] [ceq] simulate' dt dt' deq ceq %.
@@ -304,9 +304,9 @@ beta-reduction.
 %block simulate-block {A tp} [x term A] [y comb A] [dtrans translate x y] [thm-can can-translate x dtrans] [thm-unique translate-unique dtrans dtrans ceq/refl] [thm-simulate simulate' dtrans dtrans eq/refl ceq/refl]%.
 %worlds (simulate-block) (simulate' _ _ _ _) %.
 %total D (simulate' _ _ D _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Typed_bracket_abstraction_with_equivalence).
-!}%
+%]]

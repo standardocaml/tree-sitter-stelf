@@ -1,5 +1,5 @@
 %                                                    
-%{! 
+%[[ 
 
 In this exercise, we prove the preservation theorem for the MinML langauge we worked with before.
 
@@ -12,16 +12,16 @@ The solution is [here](/wiki/popl-tutorial-minml-preservation-theorem-solution/)
 
 Types:
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term nat tp %.
 %term arr %pi tp %-> tp %-> tp %.
-%{! 
+%[[ 
 
 Expressions
 
-!}%
+%]]
 %sort exp %.
 %name exp %.
 %term fn %pi tp %-> (%pi exp %-> exp) %-> exp %.
@@ -29,11 +29,11 @@ Expressions
 %term z exp %.
 %term s %pi exp %-> exp %.
 %term ifz %pi exp %-> exp %-> (%pi exp %-> exp) %-> exp %.
-%{! 
+%[[ 
 
 ## Static semantics
 
-!}%
+%]]
 %sort of {_ exp} {_ tp} %.
 %name of %.
 %mode of %in %out %.
@@ -48,11 +48,11 @@ Expressions
 	%<- (of E nat)
 	%<- (of E1 T)
 	%<- ({x exp} %pi (of x nat) %-> (of (E2 x) T)) %.
-%{! 
+%[[ 
 
 ## Dynamic semantics
 
-!}%
+%]]
 %sort value {_ exp} %.
 %name value %.
 %mode value %in %.
@@ -69,22 +69,22 @@ Expressions
 %term step/ifz/arg %pi (step (ifz E E1 ([x] E2 x)) (ifz E' E1 ([x] E2 x))) %<- (step E E') %.
 %term step/ifz/z step (ifz z E1 ([x] E2 x)) E1 %.
 %term step/ifz/s %pi (step (ifz (s E) E1 ([x] E2 x)) (E2 E)) %<- (value E) %.
-%{! 
+%[[ 
 
 ## Preservation
 
 #### TASK 1: Fill in missing cases
 
-!}%
+%]]
 %sort pres {_ step E E'} {_ of E T} {_ of E' T} %.
 %name pres %.
 %mode pres %in %in %out %.
 % fill in here.
 %worlds () (pres Dstep Dof Dof') %.
 %total Dstep (pres Dstep _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/MinML_Preservation_Theorem).
-!}%
+%]]

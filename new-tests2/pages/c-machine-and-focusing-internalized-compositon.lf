@@ -1,8 +1,8 @@
 %                                                            
-%{! 
+%[[ 
 C Machine and Focusing
-!}%
-%{! ## Syntax !}%
+%]]
+%[[ ## Syntax %]]
 %sort pos %.
 %name pos %.
 %sort neg %.
@@ -63,7 +63,7 @@ C Machine and Focusing
 %% non-canonical
 %term cut- %pi (val- A-) %-> (cont- A- C) %-> (exp C) %.
 %term compe- %pi (exp A-) %-> (cont- A- C-) %-> (exp C-) %.
-%{! ### Stack Machine !}%
+%[[ ### Stack Machine %]]
 %% the sum type that you'd define for progress is
 %% (val C) + (exp C)
 %% so let's just abuse exp C for this sum and write the
@@ -102,9 +102,9 @@ C Machine and Focusing
 %term step/comp--/id step (cut- V1 (comp-- (comp-- K1 K2) K)) (cut- V1 (comp-- K1 (comp-- K2 K))) %.
 %worlds () (step _ _) %.
 %total D (step D _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/C_machine_and_focusing_(internalized_compositon)).
-!}%
+%]]

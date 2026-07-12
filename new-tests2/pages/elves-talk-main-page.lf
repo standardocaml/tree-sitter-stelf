@@ -1,5 +1,5 @@
 %                                
-%{! __FORCETOC__
+%[[ __FORCETOC__
 ## A Contest?
 
 Everyone seemed intriuged by the idea of getting a contest going. How could we make something like this work, and perhaps produce something useful. [Rsimmons](/wiki/user-rsimmons/) 20:21, 1 September 2006 (MST)
@@ -13,7 +13,7 @@ I'd like to see categories for "twelf tricks"; things like putting a case in you
 
 I have been confused about this, and it makes more sense (to me) as a question than asking about [http://fp.logosphere.cs.cmu.edu/twelf/?n=Answers.Equality lebinitz equality] in the metalogic (this was answered, the answer just wasn't linked to from the question so I thought previously that it had not been answered. Is there a way to make the last metatheorem work? If not, is there a good explanation why not that we can put here?
 
-Also, I don't think I know how to do the equivalent of the _first_ metalemma in the higher order case, say the untyped lambda calculus, and even if it's not unbelievably difficult, if it's doable it seems like the thing that has been done. If the second metalemma is doable in the first order case, what about in the higher order case? Is one of these definitions of equality superior? My intuition is to want to trust an inductiely defined definition more... — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 17:36, 7 September 2006 (MST) !}%
+Also, I don't think I know how to do the equivalent of the _first_ metalemma in the higher order case, say the untyped lambda calculus, and even if it's not unbelievably difficult, if it's doable it seems like the thing that has been done. If the second metalemma is doable in the first order case, what about in the higher order case? Is one of these definitions of equality superior? My intuition is to want to trust an inductiely defined definition more... — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 17:36, 7 September 2006 (MST) %]]
 %sort tp %.
 %term base tp %.
 %term pair %pi tp %-> tp %-> tp %.
@@ -41,7 +41,7 @@ Also, I don't think I know how to do the equivalent of the _first_ metalemma in 
 %term _ %pi (eq2=>1 (eq2/list D) eq1/i) %<- (eq2=>1 D eq1/i) %.
 %worlds () (eq2=>1 _ _) %.
 % total T (eq2=>1 T _). FAILS (for some obvious reasons)
-%{! : Here are the proofs of the equivalence of the two definitions. In practice, eq1 is more commonly used (and very flexible), because it is much easier to use the equivalence once you have it (the proofs have one case for eq1/i instead of having to be inductive over the structure of T). I threw in forall, to show how eq2 works in the higher-order case. You need a special block to make the proof of eq1=&gt;2 go through. The trick to showing eq2=&gt;1 is to also have lemmas that are equivalent to the eq2 intro rules. --[DanielKLee](/wiki/user-danielklee/) 22:59, 7 September 2006 (MST) !}%
+%[[ : Here are the proofs of the equivalence of the two definitions. In practice, eq1 is more commonly used (and very flexible), because it is much easier to use the equivalence once you have it (the proofs have one case for eq1/i instead of having to be inductive over the structure of T). I threw in forall, to show how eq2 works in the higher-order case. You need a special block to make the proof of eq1=&gt;2 go through. The trick to showing eq2=&gt;1 is to also have lemmas that are equivalent to the eq2 intro rules. --[DanielKLee](/wiki/user-danielklee/) 22:59, 7 September 2006 (MST) %]]
 %sort tp %.
 %term base tp %.
 %term pair %pi tp %-> tp %-> tp %.
@@ -101,7 +101,7 @@ Also, I don't think I know how to do the equivalent of the _first_ metalemma in 
 	%<- (eq1-resp-forall D' D'') %.
 %worlds (eq2-block) (eq2=>1 _ _) %.
 %total T (eq2=>1 T _) %.
-%{! ::: Thank you thank you! I'll tutorial-fy this because I'll understand it better if I do :). — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 23:36, 7 September 2006 (MST)
+%[[ ::: Thank you thank you! I'll tutorial-fy this because I'll understand it better if I do :). — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 23:36, 7 September 2006 (MST)
 
 ## CMMChallenge and POPLMark and CIVMark oh my
 
@@ -121,11 +121,11 @@ Did anyone else know this existed? [http://cocorico.cs.ru.nl/coqwiki/Cocorico%21
 
 ## Announcement - changing tag system
 
-I'm changing the tag system slightly. This *shouldn't* break anything for more than ten minutes, with one exception. If you used &lt;nowiki&gt;&lt;php&gt;, &lt;perl&gt;, &lt;javascript&gt;&lt;/nowiki&gt; or any other syntax highlighting tags, those have to be changed to &lt;nowiki&gt;&lt;code php&gt;&lt;/code&gt;, &lt;code javascript&gt;&lt;/code&gt;&lt;/nowiki&gt; tags. &lt;nowiki&gt; !}%
-%{! &lt;/nowiki&gt; tags will still work, I'm making these changes to be able to have more control over the Twelf tag-ness. — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 17:46, 4 October 2006 (EDT) !}%
-%{!
+I'm changing the tag system slightly. This *shouldn't* break anything for more than ten minutes, with one exception. If you used &lt;nowiki&gt;&lt;php&gt;, &lt;perl&gt;, &lt;javascript&gt;&lt;/nowiki&gt; or any other syntax highlighting tags, those have to be changed to &lt;nowiki&gt;&lt;code php&gt;&lt;/code&gt;, &lt;code javascript&gt;&lt;/code&gt;&lt;/nowiki&gt; tags. &lt;nowiki&gt; %]]
+%[[ &lt;/nowiki&gt; tags will still work, I'm making these changes to be able to have more control over the Twelf tag-ness. — [Rob](/wiki/user-rsimmons/) (and his [talk](/wiki/user-talk-rsimmons/)) 17:46, 4 October 2006 (EDT) %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Elves_talk:Main_Page).
-!}%
+%]]

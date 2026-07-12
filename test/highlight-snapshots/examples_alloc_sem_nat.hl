@@ -1,0 +1,101 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:11	comment	`%%% nat.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:12	comment	`%%% Naturals`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword.type	`%sort`
+6:6-6:9	constructor	`nat`
+6:6-6:9	local.reference	`nat`
+6:6-6:9	type	`nat`
+6:9-6:12	keyword.return	` %.`
+6:12-7:9	attribute	``
+7:6-7:9	constructor	`nat`
+7:6-7:9	local.reference	`nat`
+7:6-7:9	variable	`nat`
+7:9-7:12	keyword.return	` %.`
+8:6-8:11	constructor	`z_nat`
+8:6-8:11	function	`z_nat`
+8:6-8:11	local.reference	`z_nat`
+8:6-8:11	variable.parameter	`z_nat`
+8:11-8:15	constructor	` nat`
+8:11-8:15	local.reference	` nat`
+8:15-8:18	keyword.return	` %.`
+9:6-9:11	constructor	`s_nat`
+9:6-9:11	function	`s_nat`
+9:6-9:11	local.reference	`s_nat`
+9:6-9:11	variable.parameter	`s_nat`
+9:11-9:15	operator	` %pi`
+9:16-9:19	constructor	`nat`
+9:16-9:19	local.reference	`nat`
+9:20-9:23	operator	`%->`
+9:24-9:27	constructor	`nat`
+9:24-9:27	local.reference	`nat`
+9:27-9:30	keyword.return	` %.`
+9:30-10:67	comment	``
+13:0-13:5	keyword.type	`%sort`
+13:6-13:12	constructor	`nat_lt`
+13:6-13:12	local.reference	`nat_lt`
+13:6-13:12	type	`nat_lt`
+13:29-13:31	keyword.return	`%.`
+14:6-14:12	constructor	`nat_lt`
+14:6-14:12	local.reference	`nat_lt`
+14:12-14:16	keyword.modifier	` %in`
+14:16-14:20	keyword.modifier	` %in`
+14:20-14:23	keyword.return	` %.`
+15:6-15:14	constructor	`nat_lt_z`
+15:6-15:14	function	`nat_lt_z`
+15:6-15:14	local.reference	`nat_lt_z`
+15:6-15:14	variable.parameter	`nat_lt_z`
+15:14-15:21	constructor	` nat_lt`
+15:14-15:21	local.reference	` nat_lt`
+15:21-15:27	constructor	` z_nat`
+15:21-15:27	local.reference	` z_nat`
+15:38-15:40	keyword.return	`%.`
+16:6-16:14	constructor	`nat_lt_s`
+16:6-16:14	function	`nat_lt_s`
+16:6-16:14	local.reference	`nat_lt_s`
+16:6-16:14	variable.parameter	`nat_lt_s`
+16:14-16:18	operator	` %pi`
+16:19-16:20	punctuation.bracket	`(`
+16:20-16:26	constructor	`nat_lt`
+16:20-16:26	local.reference	`nat_lt`
+16:27-16:28	punctuation.bracket	`(`
+16:28-16:33	constructor	`s_nat`
+16:28-16:33	local.reference	`s_nat`
+16:34-16:36	constructor	`N1`
+16:34-16:36	local.reference	`N1`
+16:36-16:37	punctuation.bracket	`)`
+16:38-16:39	punctuation.bracket	`(`
+16:39-16:44	constructor	`s_nat`
+16:39-16:44	local.reference	`s_nat`
+16:45-16:47	constructor	`N2`
+16:45-16:47	local.reference	`N2`
+16:47-16:48	punctuation.bracket	`)`
+16:48-16:49	punctuation.bracket	`)`
+16:50-16:53	operator	`%<-`
+16:54-16:55	punctuation.bracket	`(`
+16:55-16:61	constructor	`nat_lt`
+16:55-16:61	local.reference	`nat_lt`
+16:62-16:64	constructor	`N1`
+16:62-16:64	local.reference	`N1`
+16:65-16:67	constructor	`N2`
+16:65-16:67	local.reference	`N2`
+16:67-16:68	punctuation.bracket	`)`
+16:68-16:71	keyword.return	` %.`
+17:12-17:14	constructor	`N1`
+17:12-17:14	local.reference	`N1`
+17:29-17:31	keyword.return	`%.`
+18:8-18:9	punctuation.bracket	`(`
+18:9-18:10	punctuation.bracket	`)`
+18:11-18:12	punctuation.bracket	`(`
+18:12-18:18	constructor	`nat_lt`
+18:12-18:18	local.reference	`nat_lt`
+18:19-18:20	constructor	`_`
+18:19-18:20	local.reference	`_`
+18:19-18:20	variable.parameter	`_`
+18:21-18:22	constructor	`_`
+18:21-18:22	local.reference	`_`
+18:21-18:22	variable.parameter	`_`
+18:22-18:23	punctuation.bracket	`)`
+18:23-18:26	keyword.return	` %.`

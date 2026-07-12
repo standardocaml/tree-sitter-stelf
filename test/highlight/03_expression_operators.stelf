@@ -1,0 +1,3 @@
+%define ascribe nat %the nat zero
+%term arr %pi nat %-> nat %-> nat
+%term rev %pi nat %<- nat %<- nat

@@ -1,0 +1,181 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:20	comment	`%%% store-lemmas.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:19	comment	`%%% Store WF Lemmas`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword.type	`%sort`
+6:6-6:16	constructor	`st!wf_tail`
+6:6-6:16	local.reference	`st!wf_tail`
+6:6-6:16	type	`st!wf_tail`
+6:57-6:59	keyword.return	`%.`
+7:6-7:16	constructor	`st!wf_tail`
+7:6-7:16	local.reference	`st!wf_tail`
+7:16-7:20	keyword.modifier	` %in`
+7:20-7:25	keyword.modifier	` %out`
+7:25-7:28	keyword.return	` %.`
+8:7-8:17	constructor	`st!wf_tail`
+8:7-8:17	local.reference	`st!wf_tail`
+8:7-8:17	module	`st!wf_tail`
+8:18-8:23	keyword	`%term`
+8:24-8:32	constructor	`cons_nil`
+8:24-8:32	function	`cons_nil`
+8:24-8:32	local.reference	`cons_nil`
+8:24-8:32	variable.parameter	`cons_nil`
+8:32-8:43	constructor	` st!wf_tail`
+8:32-8:43	local.reference	` st!wf_tail`
+8:43-8:58	constructor	` st_wf_cons_nil`
+8:43-8:58	local.reference	` st_wf_cons_nil`
+8:58-8:68	constructor	` st_wf_nil`
+8:58-8:68	local.reference	` st_wf_nil`
+8:68-8:71	keyword.return	` %.`
+9:6-9:15	constructor	`cons_cons`
+9:6-9:15	function	`cons_cons`
+9:6-9:15	local.reference	`cons_cons`
+9:6-9:15	variable.parameter	`cons_cons`
+9:15-9:26	constructor	` st!wf_tail`
+9:15-9:26	local.reference	` st!wf_tail`
+9:59-9:61	keyword.return	`%.`
+10:12-10:13	punctuation.bracket	`{`
+10:13-10:13	local.reference	``
+10:13-10:13	operator	``
+10:13-10:14	punctuation.bracket	`}`
+10:32-10:34	keyword.return	`%.`
+11:8-11:9	punctuation.bracket	`(`
+11:9-11:10	punctuation.bracket	`)`
+11:11-11:12	punctuation.bracket	`(`
+11:12-11:22	constructor	`st!wf_tail`
+11:12-11:22	local.reference	`st!wf_tail`
+11:23-11:24	constructor	`_`
+11:23-11:24	local.reference	`_`
+11:23-11:24	variable.parameter	`_`
+11:25-11:26	constructor	`_`
+11:25-11:26	local.reference	`_`
+11:25-11:26	variable.parameter	`_`
+11:26-11:27	punctuation.bracket	`)`
+11:27-11:30	keyword.return	` %.`
+12:8-12:18	constructor	`st!wf_tail`
+12:8-12:18	local.reference	`st!wf_tail`
+12:18-12:22	keyword.modifier	` %in`
+12:22-12:27	keyword.modifier	` %out`
+12:27-12:30	keyword.return	` %.`
+13:7-13:8	punctuation.bracket	`(`
+13:8-13:8	local.reference	``
+13:8-13:8	operator	``
+13:8-13:9	punctuation.bracket	`)`
+13:10-13:11	punctuation.bracket	`(`
+13:11-13:21	constructor	`st!wf_tail`
+13:11-13:21	local.reference	`st!wf_tail`
+13:22-13:23	constructor	`_`
+13:22-13:23	local.reference	`_`
+13:22-13:23	variable.parameter	`_`
+13:24-13:25	constructor	`_`
+13:24-13:25	local.reference	`_`
+13:24-13:25	variable.parameter	`_`
+13:25-13:26	punctuation.bracket	`)`
+13:26-13:29	keyword.return	` %.`
+13:29-14:67	comment	``
+17:0-17:5	keyword.type	`%sort`
+17:6-17:27	constructor	`st!alloc_preserves_wf`
+17:6-17:27	local.reference	`st!alloc_preserves_wf`
+17:6-17:27	type	`st!alloc_preserves_wf`
+17:77-17:79	keyword.return	`%.`
+18:6-18:27	constructor	`st!alloc_preserves_wf`
+18:6-18:27	local.reference	`st!alloc_preserves_wf`
+18:27-18:31	keyword.modifier	` %in`
+18:31-18:35	keyword.modifier	` %in`
+18:35-18:40	keyword.modifier	` %out`
+18:40-18:43	keyword.return	` %.`
+19:7-19:28	constructor	`st!alloc_preserves_wf`
+19:7-19:28	local.reference	`st!alloc_preserves_wf`
+19:7-19:28	module	`st!alloc_preserves_wf`
+19:29-19:34	keyword	`%term`
+19:35-19:38	constructor	`nil`
+19:35-19:38	function	`nil`
+19:35-19:38	local.reference	`nil`
+19:35-19:38	variable.parameter	`nil`
+19:38-19:60	constructor	` st!alloc_preserves_wf`
+19:38-19:60	local.reference	` st!alloc_preserves_wf`
+19:60-19:70	constructor	` st_wf_nil`
+19:60-19:70	local.reference	` st_wf_nil`
+19:70-19:83	constructor	` st_alloc_nil`
+19:70-19:83	local.reference	` st_alloc_nil`
+19:83-19:98	constructor	` st_wf_cons_nil`
+19:83-19:98	local.reference	` st_wf_cons_nil`
+19:98-19:101	keyword.return	` %.`
+20:6-20:10	constructor	`cons`
+20:6-20:10	function	`cons`
+20:6-20:10	local.reference	`cons`
+20:6-20:10	variable.parameter	`cons`
+20:10-21:4	operator	``
+21:5-21:6	punctuation.bracket	`(`
+21:6-21:27	constructor	`st!alloc_preserves_wf`
+21:6-21:27	local.reference	`st!alloc_preserves_wf`
+21:28-21:32	constructor	`DSWf`
+21:28-21:32	local.reference	`DSWf`
+21:33-21:46	constructor	`st_alloc_cons`
+21:33-21:46	local.reference	`st_alloc_cons`
+21:47-21:48	punctuation.bracket	`(`
+21:48-21:63	constructor	`st_wf_cons_cons`
+21:48-21:63	local.reference	`st_wf_cons_cons`
+21:64-21:68	constructor	`DSWf`
+21:64-21:68	local.reference	`DSWf`
+21:69-21:70	punctuation.bracket	`(`
+21:70-21:77	constructor	`loc_lt_`
+21:70-21:77	local.reference	`loc_lt_`
+21:78-21:84	constructor	`DNatLt`
+21:78-21:84	local.reference	`DNatLt`
+21:84-21:85	punctuation.bracket	`)`
+21:85-21:86	punctuation.bracket	`)`
+21:86-21:87	punctuation.bracket	`)`
+22:1-22:4	operator	`%<-`
+22:5-22:6	punctuation.bracket	`(`
+22:6-22:17	constructor	`nat!N_lt_sN`
+22:6-22:17	local.reference	`nat!N_lt_sN`
+22:18-22:19	constructor	`_`
+22:18-22:19	local.reference	`_`
+22:18-22:19	variable.parameter	`_`
+22:20-22:26	constructor	`DNatLt`
+22:20-22:26	local.reference	`DNatLt`
+22:26-22:27	punctuation.bracket	`)`
+22:27-22:30	keyword.return	` %.`
+23:12-23:20	constructor	`DStAlloc`
+23:12-23:20	local.reference	`DStAlloc`
+23:58-23:60	keyword.return	`%.`
+24:8-24:9	punctuation.bracket	`(`
+24:9-24:10	punctuation.bracket	`)`
+24:11-24:12	punctuation.bracket	`(`
+24:12-24:33	constructor	`st!alloc_preserves_wf`
+24:12-24:33	local.reference	`st!alloc_preserves_wf`
+24:34-24:35	constructor	`_`
+24:34-24:35	local.reference	`_`
+24:34-24:35	variable.parameter	`_`
+24:36-24:37	constructor	`_`
+24:36-24:37	local.reference	`_`
+24:36-24:37	variable.parameter	`_`
+24:38-24:39	constructor	`_`
+24:38-24:39	local.reference	`_`
+24:38-24:39	variable.parameter	`_`
+24:39-24:40	punctuation.bracket	`)`
+24:40-24:43	keyword.return	` %.`
+25:8-25:29	constructor	`st!alloc_preserves_wf`
+25:8-25:29	local.reference	`st!alloc_preserves_wf`
+25:29-25:33	keyword.modifier	` %in`
+25:33-25:37	keyword.modifier	` %in`
+25:37-25:42	keyword.modifier	` %out`
+25:42-25:45	keyword.return	` %.`
+26:7-26:15	constructor	`DStAlloc`
+26:7-26:15	local.reference	`DStAlloc`
+26:16-26:17	punctuation.bracket	`(`
+26:17-26:38	constructor	`st!alloc_preserves_wf`
+26:17-26:38	local.reference	`st!alloc_preserves_wf`
+26:39-26:40	constructor	`_`
+26:39-26:40	local.reference	`_`
+26:39-26:40	variable.parameter	`_`
+26:41-26:49	constructor	`DStAlloc`
+26:41-26:49	local.reference	`DStAlloc`
+26:50-26:51	constructor	`_`
+26:50-26:51	local.reference	`_`
+26:50-26:51	variable.parameter	`_`
+26:51-26:52	punctuation.bracket	`)`
+26:52-26:55	keyword.return	` %.`

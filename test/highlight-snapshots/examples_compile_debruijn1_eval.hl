@@ -1,0 +1,76 @@
+0:0-0:29	comment	`%%% Mini-ML Natural Semantics`
+1:0-1:46	comment	`%%% Version restricted to pure lambda-calculus`
+2:0-2:62	comment	`%%% Author: Frank Pfenning, based on [Michaylov & Pfenning 92]`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:10	constructor	`eval`
+3:6-3:10	local.reference	`eval`
+3:6-3:10	type	`eval`
+3:27-3:29	keyword.return	`%.`
+3:29-4:10	attribute	``
+4:6-4:10	constructor	`eval`
+4:6-4:10	local.reference	`eval`
+4:6-4:10	variable	`eval`
+4:10-4:13	keyword.return	` %.`
+4:13-5:11	comment	``
+6:6-6:12	constructor	`ev_lam`
+6:6-6:12	function	`ev_lam`
+6:6-6:12	local.reference	`ev_lam`
+6:6-6:12	variable.parameter	`ev_lam`
+6:12-6:17	constructor	` eval`
+6:12-6:17	local.reference	` eval`
+6:34-6:36	keyword.return	`%.`
+7:6-7:12	constructor	`ev_app`
+7:6-7:12	function	`ev_app`
+7:6-7:12	local.reference	`ev_app`
+7:6-7:12	variable.parameter	`ev_app`
+7:12-8:4	operator	``
+8:5-8:6	punctuation.bracket	`(`
+8:6-8:10	constructor	`eval`
+8:6-8:10	local.reference	`eval`
+8:11-8:12	punctuation.bracket	`(`
+8:12-8:15	constructor	`app`
+8:12-8:15	local.reference	`app`
+8:16-8:18	constructor	`E1`
+8:16-8:18	local.reference	`E1`
+8:19-8:21	constructor	`E2`
+8:19-8:21	local.reference	`E2`
+8:21-8:22	punctuation.bracket	`)`
+8:23-8:24	constructor	`V`
+8:23-8:24	local.reference	`V`
+8:24-8:25	punctuation.bracket	`)`
+9:1-9:4	operator	`%<-`
+9:5-9:6	punctuation.bracket	`(`
+9:6-9:10	constructor	`eval`
+9:6-9:10	local.reference	`eval`
+9:11-9:13	constructor	`E1`
+9:11-9:13	local.reference	`E1`
+9:14-9:15	punctuation.bracket	`(`
+9:15-9:18	constructor	`lam`
+9:15-9:18	local.reference	`lam`
+9:19-9:22	constructor	`E1'`
+9:19-9:22	local.reference	`E1'`
+9:22-9:23	punctuation.bracket	`)`
+9:23-9:24	punctuation.bracket	`)`
+9:24-10:4	operator	``
+10:5-10:6	punctuation.bracket	`(`
+10:6-10:10	constructor	`eval`
+10:6-10:10	local.reference	`eval`
+10:11-10:13	constructor	`E2`
+10:11-10:13	local.reference	`E2`
+10:14-10:16	constructor	`V2`
+10:14-10:16	local.reference	`V2`
+10:16-10:17	punctuation.bracket	`)`
+10:17-11:4	operator	``
+11:5-11:6	punctuation.bracket	`(`
+11:6-11:10	constructor	`eval`
+11:6-11:10	local.reference	`eval`
+11:11-11:12	punctuation.bracket	`(`
+11:12-11:15	constructor	`E1'`
+11:12-11:15	local.reference	`E1'`
+11:16-11:18	constructor	`V2`
+11:16-11:18	local.reference	`V2`
+11:18-11:19	punctuation.bracket	`)`
+11:20-11:21	constructor	`V`
+11:20-11:21	local.reference	`V`
+11:21-11:22	punctuation.bracket	`)`
+11:22-11:25	keyword.return	` %.`

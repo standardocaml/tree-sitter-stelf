@@ -1,0 +1,527 @@
+0:0-0:5	keyword.type	`%sort`
+0:6-0:9	local.reference	`==>`
+0:6-0:9	operator	`==>`
+0:6-0:9	type	`==>`
+0:26-0:28	keyword.return	`%.`
+0:28-1:9	attribute	``
+1:6-1:9	local.reference	`==>`
+1:6-1:9	operator	`==>`
+1:6-1:9	variable	`==>`
+1:9-1:12	keyword.return	` %.`
+2:6-2:11	keyword.modifier	`%none`
+2:12-2:14	number	`10`
+2:15-2:18	local.reference	`==>`
+2:15-2:18	operator	`==>`
+2:18-2:21	keyword.return	` %.`
+3:6-3:9	local.reference	`==>`
+3:6-3:9	operator	`==>`
+3:9-3:13	keyword.modifier	` %in`
+3:13-3:18	keyword.modifier	` %out`
+3:18-3:21	keyword.return	` %.`
+4:6-4:11	constructor	`red_z`
+4:6-4:11	function	`red_z`
+4:6-4:11	local.reference	`red_z`
+4:6-4:11	variable.parameter	`red_z`
+4:11-4:16	constructor	` case`
+4:11-4:16	local.reference	` case`
+4:16-4:18	constructor	` z`
+4:16-4:18	local.reference	` z`
+4:18-4:21	constructor	` E1`
+4:18-4:21	local.reference	` E1`
+4:21-4:24	constructor	` E2`
+4:21-4:24	local.reference	` E2`
+4:24-4:28	local.reference	` ==>`
+4:24-4:28	operator	` ==>`
+4:28-4:31	constructor	` E1`
+4:28-4:31	local.reference	` E1`
+4:31-4:34	keyword.return	` %.`
+5:6-5:11	constructor	`red_s`
+5:6-5:11	function	`red_s`
+5:6-5:11	local.reference	`red_s`
+5:6-5:11	variable.parameter	`red_s`
+5:11-5:16	constructor	` case`
+5:11-5:16	local.reference	` case`
+5:38-5:40	keyword.return	`%.`
+6:6-6:13	constructor	`red_fst`
+6:6-6:13	function	`red_fst`
+6:6-6:13	local.reference	`red_fst`
+6:6-6:13	variable.parameter	`red_fst`
+6:13-6:17	constructor	` fst`
+6:13-6:17	local.reference	` fst`
+6:38-6:40	keyword.return	`%.`
+7:6-7:13	constructor	`red_snd`
+7:6-7:13	function	`red_snd`
+7:6-7:13	local.reference	`red_snd`
+7:6-7:13	variable.parameter	`red_snd`
+7:13-7:17	constructor	` snd`
+7:13-7:17	local.reference	` snd`
+7:38-7:40	keyword.return	`%.`
+8:6-8:13	constructor	`red_app`
+8:6-8:13	function	`red_app`
+8:6-8:13	local.reference	`red_app`
+8:6-8:13	variable.parameter	`red_app`
+8:13-8:17	constructor	` app`
+8:13-8:17	local.reference	` app`
+8:40-8:42	keyword.return	`%.`
+9:6-9:14	constructor	`red_letv`
+9:6-9:14	function	`red_letv`
+9:6-9:14	local.reference	`red_letv`
+9:6-9:14	variable.parameter	`red_letv`
+9:14-9:19	constructor	` letv`
+9:14-9:19	local.reference	` letv`
+9:19-9:22	constructor	` E1`
+9:19-9:22	local.reference	` E1`
+9:22-9:25	constructor	` E2`
+9:22-9:25	local.reference	` E2`
+9:25-9:29	local.reference	` ==>`
+9:25-9:29	operator	` ==>`
+9:29-9:32	constructor	` E2`
+9:29-9:32	local.reference	` E2`
+9:32-9:35	constructor	` E1`
+9:32-9:35	local.reference	` E1`
+9:35-9:38	keyword.return	` %.`
+10:6-10:14	constructor	`red_letn`
+10:6-10:14	function	`red_letn`
+10:6-10:14	local.reference	`red_letn`
+10:6-10:14	variable.parameter	`red_letn`
+10:14-10:19	constructor	` letn`
+10:14-10:19	local.reference	` letn`
+10:19-10:22	constructor	` E1`
+10:19-10:22	local.reference	` E1`
+10:22-10:25	constructor	` E2`
+10:22-10:25	local.reference	` E2`
+10:25-10:29	local.reference	` ==>`
+10:25-10:29	operator	` ==>`
+10:29-10:32	constructor	` E2`
+10:29-10:32	local.reference	` E2`
+10:32-10:35	constructor	` E1`
+10:32-10:35	local.reference	` E1`
+10:35-10:38	keyword.return	` %.`
+11:6-11:13	constructor	`red_fix`
+11:6-11:13	function	`red_fix`
+11:6-11:13	local.reference	`red_fix`
+11:6-11:13	variable.parameter	`red_fix`
+11:13-11:17	constructor	` fix`
+11:13-11:17	local.reference	` fix`
+11:17-11:19	constructor	` E`
+11:17-11:19	local.reference	` E`
+11:19-11:23	local.reference	` ==>`
+11:19-11:23	operator	` ==>`
+11:23-11:25	constructor	` E`
+11:23-11:25	local.reference	` E`
+11:34-11:36	keyword.return	`%.`
+12:8-12:9	punctuation.bracket	`(`
+12:9-12:10	punctuation.bracket	`)`
+12:11-12:12	punctuation.bracket	`(`
+12:12-12:15	local.reference	`==>`
+12:12-12:15	operator	`==>`
+12:16-12:17	constructor	`D`
+12:16-12:17	local.reference	`D`
+12:18-12:19	constructor	`P`
+12:18-12:19	local.reference	`P`
+12:19-12:20	punctuation.bracket	`)`
+12:20-12:23	keyword.return	` %.`
+12:23-13:61	comment	``
+13:61-14:5	keyword.type	``
+14:6-14:10	local.reference	`==>*`
+14:6-14:10	operator	`==>*`
+14:6-14:10	type	`==>*`
+14:27-14:29	keyword.return	`%.`
+14:29-15:10	attribute	``
+15:6-15:10	local.reference	`==>*`
+15:6-15:10	operator	`==>*`
+15:6-15:10	variable	`==>*`
+15:10-15:13	keyword.return	` %.`
+16:6-16:11	keyword.modifier	`%none`
+16:12-16:14	number	`10`
+16:15-16:19	local.reference	`==>*`
+16:15-16:19	operator	`==>*`
+16:19-16:22	keyword.return	` %.`
+17:6-17:10	local.reference	`==>*`
+17:6-17:10	operator	`==>*`
+17:10-17:14	keyword.modifier	` %in`
+17:14-17:19	keyword.modifier	` %out`
+17:19-17:22	keyword.return	` %.`
+17:22-18:13	comment	``
+18:13-19:11	comment	``
+20:6-20:12	constructor	`red*_s`
+20:6-20:12	function	`red*_s`
+20:6-20:12	local.reference	`red*_s`
+20:6-20:12	variable.parameter	`red*_s`
+20:12-20:16	operator	` %pi`
+20:17-20:18	punctuation.bracket	`(`
+20:18-20:19	constructor	`s`
+20:18-20:19	local.reference	`s`
+20:20-20:21	constructor	`E`
+20:20-20:21	local.reference	`E`
+20:22-20:26	local.reference	`==>*`
+20:22-20:26	operator	`==>*`
+20:27-20:28	constructor	`s`
+20:27-20:28	local.reference	`s`
+20:29-20:31	constructor	`E'`
+20:29-20:31	local.reference	`E'`
+20:31-20:32	punctuation.bracket	`)`
+20:33-20:36	operator	`%<-`
+20:37-20:38	punctuation.bracket	`(`
+20:38-20:39	constructor	`E`
+20:38-20:39	local.reference	`E`
+20:40-20:44	local.reference	`==>*`
+20:40-20:44	operator	`==>*`
+20:45-20:47	constructor	`E'`
+20:45-20:47	local.reference	`E'`
+20:47-20:48	punctuation.bracket	`)`
+20:48-20:51	keyword.return	` %.`
+21:6-21:15	constructor	`red*_case`
+21:6-21:15	function	`red*_case`
+21:6-21:15	local.reference	`red*_case`
+21:6-21:15	variable.parameter	`red*_case`
+21:15-21:19	operator	` %pi`
+21:20-21:21	punctuation.bracket	`(`
+21:21-21:25	constructor	`case`
+21:21-21:25	local.reference	`case`
+21:26-21:28	constructor	`E1`
+21:26-21:28	local.reference	`E1`
+21:29-21:31	constructor	`E2`
+21:29-21:31	local.reference	`E2`
+21:32-21:34	constructor	`E3`
+21:32-21:34	local.reference	`E3`
+21:35-21:39	local.reference	`==>*`
+21:35-21:39	operator	`==>*`
+21:40-21:44	constructor	`case`
+21:40-21:44	local.reference	`case`
+21:45-21:48	constructor	`E1'`
+21:45-21:48	local.reference	`E1'`
+21:49-21:51	constructor	`E2`
+21:49-21:51	local.reference	`E2`
+21:52-21:54	constructor	`E3`
+21:52-21:54	local.reference	`E3`
+21:54-21:55	punctuation.bracket	`)`
+21:56-21:59	operator	`%<-`
+21:60-21:61	punctuation.bracket	`(`
+21:61-21:63	constructor	`E1`
+21:61-21:63	local.reference	`E1`
+21:64-21:68	local.reference	`==>*`
+21:64-21:68	operator	`==>*`
+21:69-21:72	constructor	`E1'`
+21:69-21:72	local.reference	`E1'`
+21:72-21:73	punctuation.bracket	`)`
+21:73-21:76	keyword.return	` %.`
+22:6-22:16	constructor	`red*_pair1`
+22:6-22:16	function	`red*_pair1`
+22:6-22:16	local.reference	`red*_pair1`
+22:6-22:16	variable.parameter	`red*_pair1`
+22:16-22:20	operator	` %pi`
+22:21-22:22	punctuation.bracket	`(`
+22:22-22:26	constructor	`pair`
+22:22-22:26	local.reference	`pair`
+22:27-22:29	constructor	`E1`
+22:27-22:29	local.reference	`E1`
+22:30-22:32	constructor	`E2`
+22:30-22:32	local.reference	`E2`
+22:33-22:37	local.reference	`==>*`
+22:33-22:37	operator	`==>*`
+22:38-22:42	constructor	`pair`
+22:38-22:42	local.reference	`pair`
+22:43-22:46	constructor	`E1'`
+22:43-22:46	local.reference	`E1'`
+22:47-22:49	constructor	`E2`
+22:47-22:49	local.reference	`E2`
+22:49-22:50	punctuation.bracket	`)`
+22:51-22:54	operator	`%<-`
+22:55-22:56	punctuation.bracket	`(`
+22:56-22:58	constructor	`E1`
+22:56-22:58	local.reference	`E1`
+22:59-22:63	local.reference	`==>*`
+22:59-22:63	operator	`==>*`
+22:64-22:67	constructor	`E1'`
+22:64-22:67	local.reference	`E1'`
+22:67-22:68	punctuation.bracket	`)`
+22:68-22:71	keyword.return	` %.`
+23:6-23:16	constructor	`red*_pair2`
+23:6-23:16	function	`red*_pair2`
+23:6-23:16	local.reference	`red*_pair2`
+23:6-23:16	variable.parameter	`red*_pair2`
+23:16-23:20	operator	` %pi`
+23:21-23:22	punctuation.bracket	`(`
+23:22-23:26	constructor	`pair`
+23:22-23:26	local.reference	`pair`
+23:27-23:29	constructor	`E1`
+23:27-23:29	local.reference	`E1`
+23:30-23:32	constructor	`E2`
+23:30-23:32	local.reference	`E2`
+23:33-23:37	local.reference	`==>*`
+23:33-23:37	operator	`==>*`
+23:38-23:42	constructor	`pair`
+23:38-23:42	local.reference	`pair`
+23:43-23:45	constructor	`E1`
+23:43-23:45	local.reference	`E1`
+23:46-23:49	constructor	`E2'`
+23:46-23:49	local.reference	`E2'`
+23:49-23:50	punctuation.bracket	`)`
+23:51-23:54	operator	`%<-`
+23:55-23:56	punctuation.bracket	`(`
+23:56-23:58	constructor	`E2`
+23:56-23:58	local.reference	`E2`
+23:59-23:63	local.reference	`==>*`
+23:59-23:63	operator	`==>*`
+23:64-23:67	constructor	`E2'`
+23:64-23:67	local.reference	`E2'`
+23:67-23:68	punctuation.bracket	`)`
+23:68-23:71	keyword.return	` %.`
+24:6-24:14	constructor	`red*_fst`
+24:6-24:14	function	`red*_fst`
+24:6-24:14	local.reference	`red*_fst`
+24:6-24:14	variable.parameter	`red*_fst`
+24:14-24:18	operator	` %pi`
+24:19-24:20	punctuation.bracket	`(`
+24:20-24:23	constructor	`fst`
+24:20-24:23	local.reference	`fst`
+24:24-24:25	constructor	`E`
+24:24-24:25	local.reference	`E`
+24:26-24:30	local.reference	`==>*`
+24:26-24:30	operator	`==>*`
+24:31-24:34	constructor	`fst`
+24:31-24:34	local.reference	`fst`
+24:35-24:37	constructor	`E'`
+24:35-24:37	local.reference	`E'`
+24:37-24:38	punctuation.bracket	`)`
+24:39-24:42	operator	`%<-`
+24:43-24:44	punctuation.bracket	`(`
+24:44-24:45	constructor	`E`
+24:44-24:45	local.reference	`E`
+24:46-24:50	local.reference	`==>*`
+24:46-24:50	operator	`==>*`
+24:51-24:53	constructor	`E'`
+24:51-24:53	local.reference	`E'`
+24:53-24:54	punctuation.bracket	`)`
+24:54-24:57	keyword.return	` %.`
+25:6-25:14	constructor	`red*_snd`
+25:6-25:14	function	`red*_snd`
+25:6-25:14	local.reference	`red*_snd`
+25:6-25:14	variable.parameter	`red*_snd`
+25:14-25:18	operator	` %pi`
+25:19-25:20	punctuation.bracket	`(`
+25:20-25:23	constructor	`snd`
+25:20-25:23	local.reference	`snd`
+25:24-25:25	constructor	`E`
+25:24-25:25	local.reference	`E`
+25:26-25:30	local.reference	`==>*`
+25:26-25:30	operator	`==>*`
+25:31-25:34	constructor	`snd`
+25:31-25:34	local.reference	`snd`
+25:35-25:37	constructor	`E'`
+25:35-25:37	local.reference	`E'`
+25:37-25:38	punctuation.bracket	`)`
+25:39-25:42	operator	`%<-`
+25:43-25:44	punctuation.bracket	`(`
+25:44-25:45	constructor	`E`
+25:44-25:45	local.reference	`E`
+25:46-25:50	local.reference	`==>*`
+25:46-25:50	operator	`==>*`
+25:51-25:53	constructor	`E'`
+25:51-25:53	local.reference	`E'`
+25:53-25:54	punctuation.bracket	`)`
+25:54-25:57	keyword.return	` %.`
+25:57-26:13	comment	``
+27:6-27:15	constructor	`red*_app1`
+27:6-27:15	function	`red*_app1`
+27:6-27:15	local.reference	`red*_app1`
+27:6-27:15	variable.parameter	`red*_app1`
+27:15-27:19	operator	` %pi`
+27:20-27:21	punctuation.bracket	`(`
+27:21-27:24	constructor	`app`
+27:21-27:24	local.reference	`app`
+27:25-27:27	constructor	`E1`
+27:25-27:27	local.reference	`E1`
+27:28-27:30	constructor	`E2`
+27:28-27:30	local.reference	`E2`
+27:31-27:35	local.reference	`==>*`
+27:31-27:35	operator	`==>*`
+27:36-27:39	constructor	`app`
+27:36-27:39	local.reference	`app`
+27:40-27:43	constructor	`E1'`
+27:40-27:43	local.reference	`E1'`
+27:44-27:46	constructor	`E2`
+27:44-27:46	local.reference	`E2`
+27:46-27:47	punctuation.bracket	`)`
+27:48-27:51	operator	`%<-`
+27:52-27:53	punctuation.bracket	`(`
+27:53-27:55	constructor	`E1`
+27:53-27:55	local.reference	`E1`
+27:56-27:60	local.reference	`==>*`
+27:56-27:60	operator	`==>*`
+27:61-27:64	constructor	`E1'`
+27:61-27:64	local.reference	`E1'`
+27:64-27:65	punctuation.bracket	`)`
+27:65-27:68	keyword.return	` %.`
+28:6-28:15	constructor	`red*_app2`
+28:6-28:15	function	`red*_app2`
+28:6-28:15	local.reference	`red*_app2`
+28:6-28:15	variable.parameter	`red*_app2`
+28:15-28:19	operator	` %pi`
+28:20-28:21	punctuation.bracket	`(`
+28:21-28:24	constructor	`app`
+28:21-28:24	local.reference	`app`
+28:25-28:27	constructor	`E1`
+28:25-28:27	local.reference	`E1`
+28:28-28:30	constructor	`E2`
+28:28-28:30	local.reference	`E2`
+28:31-28:35	local.reference	`==>*`
+28:31-28:35	operator	`==>*`
+28:36-28:39	constructor	`app`
+28:36-28:39	local.reference	`app`
+28:40-28:42	constructor	`E1`
+28:40-28:42	local.reference	`E1`
+28:43-28:46	constructor	`E2'`
+28:43-28:46	local.reference	`E2'`
+28:46-28:47	punctuation.bracket	`)`
+28:48-28:51	operator	`%<-`
+28:52-28:53	punctuation.bracket	`(`
+28:53-28:55	constructor	`E2`
+28:53-28:55	local.reference	`E2`
+28:56-28:60	local.reference	`==>*`
+28:56-28:60	operator	`==>*`
+28:61-28:64	constructor	`E2'`
+28:61-28:64	local.reference	`E2'`
+28:64-28:65	punctuation.bracket	`)`
+28:65-28:68	keyword.return	` %.`
+29:6-29:15	constructor	`red*_letv`
+29:6-29:15	function	`red*_letv`
+29:6-29:15	local.reference	`red*_letv`
+29:6-29:15	variable.parameter	`red*_letv`
+29:15-29:19	operator	` %pi`
+29:20-29:21	punctuation.bracket	`(`
+29:21-29:25	constructor	`letv`
+29:21-29:25	local.reference	`letv`
+29:26-29:28	constructor	`E1`
+29:26-29:28	local.reference	`E1`
+29:29-29:31	constructor	`E2`
+29:29-29:31	local.reference	`E2`
+29:32-29:36	local.reference	`==>*`
+29:32-29:36	operator	`==>*`
+29:37-29:41	constructor	`letv`
+29:37-29:41	local.reference	`letv`
+29:42-29:45	constructor	`E1'`
+29:42-29:45	local.reference	`E1'`
+29:46-29:48	constructor	`E2`
+29:46-29:48	local.reference	`E2`
+29:48-29:49	punctuation.bracket	`)`
+29:50-29:53	operator	`%<-`
+29:54-29:55	punctuation.bracket	`(`
+29:55-29:57	constructor	`E1`
+29:55-29:57	local.reference	`E1`
+29:58-29:62	local.reference	`==>*`
+29:58-29:62	operator	`==>*`
+29:63-29:66	constructor	`E1'`
+29:63-29:66	local.reference	`E1'`
+29:66-29:67	punctuation.bracket	`)`
+29:67-29:70	keyword.return	` %.`
+30:6-30:15	constructor	`red*_letn`
+30:6-30:15	function	`red*_letn`
+30:6-30:15	local.reference	`red*_letn`
+30:6-30:15	variable.parameter	`red*_letn`
+30:15-30:19	operator	` %pi`
+30:20-30:21	punctuation.bracket	`(`
+30:21-30:25	constructor	`letn`
+30:21-30:25	local.reference	`letn`
+30:26-30:28	constructor	`E1`
+30:26-30:28	local.reference	`E1`
+30:29-30:31	constructor	`E2`
+30:29-30:31	local.reference	`E2`
+30:32-30:36	local.reference	`==>*`
+30:32-30:36	operator	`==>*`
+30:37-30:41	constructor	`letn`
+30:37-30:41	local.reference	`letn`
+30:42-30:45	constructor	`E1'`
+30:42-30:45	local.reference	`E1'`
+30:46-30:48	constructor	`E2`
+30:46-30:48	local.reference	`E2`
+30:48-30:49	punctuation.bracket	`)`
+30:50-30:53	operator	`%<-`
+30:54-30:55	punctuation.bracket	`(`
+30:55-30:57	constructor	`E1`
+30:55-30:57	local.reference	`E1`
+30:58-30:62	local.reference	`==>*`
+30:58-30:62	operator	`==>*`
+30:63-30:66	constructor	`E1'`
+30:63-30:66	local.reference	`E1'`
+30:66-30:67	punctuation.bracket	`)`
+30:67-30:70	keyword.return	` %.`
+30:70-31:13	comment	``
+32:6-32:15	constructor	`red*_beta`
+32:6-32:15	function	`red*_beta`
+32:6-32:15	local.reference	`red*_beta`
+32:6-32:15	variable.parameter	`red*_beta`
+32:15-32:19	operator	` %pi`
+32:20-32:21	punctuation.bracket	`(`
+32:21-32:22	constructor	`E`
+32:21-32:22	local.reference	`E`
+32:23-32:27	local.reference	`==>*`
+32:23-32:27	operator	`==>*`
+32:28-32:30	constructor	`E'`
+32:28-32:30	local.reference	`E'`
+32:30-32:31	punctuation.bracket	`)`
+32:32-32:35	operator	`%<-`
+32:36-32:37	punctuation.bracket	`(`
+32:37-32:38	constructor	`E`
+32:37-32:38	local.reference	`E`
+32:39-32:42	local.reference	`==>`
+32:39-32:42	operator	`==>`
+32:43-32:45	constructor	`E'`
+32:43-32:45	local.reference	`E'`
+32:45-32:46	punctuation.bracket	`)`
+32:46-32:49	keyword.return	` %.`
+33:6-33:15	constructor	`red*_refl`
+33:6-33:15	function	`red*_refl`
+33:6-33:15	local.reference	`red*_refl`
+33:6-33:15	variable.parameter	`red*_refl`
+33:15-33:17	constructor	` E`
+33:15-33:17	local.reference	` E`
+33:17-33:22	local.reference	` ==>*`
+33:17-33:22	operator	` ==>*`
+33:22-33:24	constructor	` E`
+33:22-33:24	local.reference	` E`
+33:24-33:27	keyword.return	` %.`
+34:6-34:16	constructor	`red*_trans`
+34:6-34:16	function	`red*_trans`
+34:6-34:16	local.reference	`red*_trans`
+34:6-34:16	variable.parameter	`red*_trans`
+34:16-34:20	operator	` %pi`
+34:21-34:22	punctuation.bracket	`(`
+34:22-34:23	constructor	`E`
+34:22-34:23	local.reference	`E`
+34:24-34:28	local.reference	`==>*`
+34:24-34:28	operator	`==>*`
+34:29-34:32	constructor	`E''`
+34:29-34:32	local.reference	`E''`
+34:32-34:33	punctuation.bracket	`)`
+34:34-34:37	operator	`%<-`
+34:38-34:39	punctuation.bracket	`(`
+34:39-34:40	constructor	`E`
+34:39-34:40	local.reference	`E`
+34:41-34:45	local.reference	`==>*`
+34:41-34:45	operator	`==>*`
+34:46-34:48	constructor	`E'`
+34:46-34:48	local.reference	`E'`
+34:48-34:49	punctuation.bracket	`)`
+34:49-34:53	operator	` %<-`
+34:54-34:55	punctuation.bracket	`(`
+34:55-34:57	constructor	`E'`
+34:55-34:57	local.reference	`E'`
+34:58-34:62	local.reference	`==>*`
+34:58-34:62	operator	`==>*`
+34:63-34:66	constructor	`E''`
+34:63-34:66	local.reference	`E''`
+34:66-34:67	punctuation.bracket	`)`
+34:67-34:70	keyword.return	` %.`
+35:8-35:9	punctuation.bracket	`(`
+35:9-35:10	punctuation.bracket	`)`
+35:11-35:12	punctuation.bracket	`(`
+35:12-35:16	local.reference	`==>*`
+35:12-35:16	operator	`==>*`
+35:17-35:18	constructor	`D`
+35:17-35:18	local.reference	`D`
+35:19-35:20	constructor	`P`
+35:19-35:20	local.reference	`P`
+35:20-35:21	punctuation.bracket	`)`
+35:21-35:24	keyword.return	` %.`

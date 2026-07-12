@@ -1,0 +1,5 @@
+%sort prop
+%term true prop
+%term false prop
+%define not_true prop true
+%inline zero_succ (succ zero)

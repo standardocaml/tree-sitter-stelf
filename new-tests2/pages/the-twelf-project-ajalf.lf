@@ -1,5 +1,5 @@
 %                                   
-%{! **AJALF** is the technology used to power [Twelf Live](/wiki/twelf-live/) and the [[Project:TwelfTag#Quick_check|Quick Twelf Check]] button. It stands for "Asynchronous Javascript and LF."
+%[[ **AJALF** is the technology used to power [Twelf Live](/wiki/twelf-live/) and the [[Project:TwelfTag#Quick_check|Quick Twelf Check]] button. It stands for "Asynchronous Javascript and LF."
 
 ## Quick check
 
@@ -15,10 +15,10 @@ which gleans twelf code from the edit window and passes it to the Twelf server (
 * The output of Quick check appears to escape apostrophes for some reason.
 * The layout of the close and info buttons is terrible.
 
-\{\{stub\}\} !}%
-%{!
+\{\{stub\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/The_Twelf_Project:AJALF).
-!}%
+%]]

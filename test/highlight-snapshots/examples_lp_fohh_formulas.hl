@@ -1,0 +1,329 @@
+0:0-0:63	comment	`% Translating positive formulas to goal and program formulas.  `
+1:0-1:5	keyword.type	`%sort`
+1:6-1:8	constructor	`gl`
+1:6-1:8	local.reference	`gl`
+1:6-1:8	type	`gl`
+1:24-1:26	keyword.return	`%.`
+1:26-2:5	keyword.type	``
+2:6-2:8	constructor	`pg`
+2:6-2:8	local.reference	`pg`
+2:6-2:8	type	`pg`
+2:24-2:26	keyword.return	`%.`
+3:6-3:8	constructor	`gl`
+3:6-3:8	local.reference	`gl`
+3:8-3:12	keyword.modifier	` %in`
+3:12-3:17	keyword.modifier	` %out`
+3:17-3:20	keyword.return	` %.`
+4:6-4:8	constructor	`pg`
+4:6-4:8	local.reference	`pg`
+4:8-4:12	keyword.modifier	` %in`
+4:12-4:17	keyword.modifier	` %out`
+4:17-4:20	keyword.return	` %.`
+5:6-5:13	constructor	`gl_atom`
+5:6-5:13	function	`gl_atom`
+5:6-5:13	local.reference	`gl_atom`
+5:6-5:13	variable.parameter	`gl_atom`
+5:13-5:16	constructor	` gl`
+5:13-5:16	local.reference	` gl`
+5:36-5:38	keyword.return	`%.`
+6:6-6:12	constructor	`gl_and`
+6:6-6:12	function	`gl_and`
+6:6-6:12	local.reference	`gl_and`
+6:6-6:12	variable.parameter	`gl_and`
+6:12-6:16	operator	` %pi`
+6:17-6:18	punctuation.bracket	`(`
+6:18-6:20	constructor	`gl`
+6:18-6:20	local.reference	`gl`
+6:21-6:22	punctuation.bracket	`(`
+6:22-6:24	constructor	`A1`
+6:22-6:24	local.reference	`A1`
+6:25-6:28	constructor	`and`
+6:25-6:28	local.reference	`and`
+6:29-6:31	constructor	`A2`
+6:29-6:31	local.reference	`A2`
+6:31-6:32	punctuation.bracket	`)`
+6:33-6:34	punctuation.bracket	`(`
+6:34-6:36	constructor	`G1`
+6:34-6:36	local.reference	`G1`
+6:37-6:41	constructor	`and'`
+6:37-6:41	local.reference	`and'`
+6:42-6:44	constructor	`G2`
+6:42-6:44	local.reference	`G2`
+6:44-6:45	punctuation.bracket	`)`
+6:45-6:46	punctuation.bracket	`)`
+6:47-6:50	operator	`%<-`
+6:51-6:52	punctuation.bracket	`(`
+6:52-6:54	constructor	`gl`
+6:52-6:54	local.reference	`gl`
+6:55-6:57	constructor	`A1`
+6:55-6:57	local.reference	`A1`
+6:58-6:60	constructor	`G1`
+6:58-6:60	local.reference	`G1`
+6:60-6:61	punctuation.bracket	`)`
+6:61-6:65	operator	` %<-`
+6:66-6:67	punctuation.bracket	`(`
+6:67-6:69	constructor	`gl`
+6:67-6:69	local.reference	`gl`
+6:70-6:72	constructor	`A2`
+6:70-6:72	local.reference	`A2`
+6:73-6:75	constructor	`G2`
+6:73-6:75	local.reference	`G2`
+6:75-6:76	punctuation.bracket	`)`
+6:76-6:79	keyword.return	` %.`
+7:6-7:12	constructor	`gl_imp`
+7:6-7:12	function	`gl_imp`
+7:6-7:12	local.reference	`gl_imp`
+7:6-7:12	variable.parameter	`gl_imp`
+7:12-7:16	operator	` %pi`
+7:17-7:18	punctuation.bracket	`(`
+7:18-7:20	constructor	`gl`
+7:18-7:20	local.reference	`gl`
+7:21-7:22	punctuation.bracket	`(`
+7:22-7:24	constructor	`A2`
+7:22-7:24	local.reference	`A2`
+7:25-7:28	constructor	`imp`
+7:25-7:28	local.reference	`imp`
+7:29-7:31	constructor	`A1`
+7:29-7:31	local.reference	`A1`
+7:31-7:32	punctuation.bracket	`)`
+7:33-7:34	punctuation.bracket	`(`
+7:34-7:36	constructor	`D2`
+7:34-7:36	local.reference	`D2`
+7:37-7:41	constructor	`imp'`
+7:37-7:41	local.reference	`imp'`
+7:42-7:44	constructor	`G1`
+7:42-7:44	local.reference	`G1`
+7:44-7:45	punctuation.bracket	`)`
+7:45-7:46	punctuation.bracket	`)`
+7:47-7:50	operator	`%<-`
+7:51-7:52	punctuation.bracket	`(`
+7:52-7:54	constructor	`gl`
+7:52-7:54	local.reference	`gl`
+7:55-7:57	constructor	`A1`
+7:55-7:57	local.reference	`A1`
+7:58-7:60	constructor	`G1`
+7:58-7:60	local.reference	`G1`
+7:60-7:61	punctuation.bracket	`)`
+7:61-7:65	operator	` %<-`
+7:66-7:67	punctuation.bracket	`(`
+7:67-7:69	constructor	`pg`
+7:67-7:69	local.reference	`pg`
+7:70-7:72	constructor	`A2`
+7:70-7:72	local.reference	`A2`
+7:73-7:75	constructor	`D2`
+7:73-7:75	local.reference	`D2`
+7:75-7:76	punctuation.bracket	`)`
+7:76-7:79	keyword.return	` %.`
+8:6-8:13	constructor	`gl_true`
+8:6-8:13	function	`gl_true`
+8:6-8:13	local.reference	`gl_true`
+8:6-8:13	variable.parameter	`gl_true`
+8:13-8:16	constructor	` gl`
+8:13-8:16	local.reference	` gl`
+8:16-8:21	constructor	` true`
+8:16-8:21	local.reference	` true`
+8:21-8:27	constructor	` true'`
+8:21-8:27	local.reference	` true'`
+8:27-8:30	keyword.return	` %.`
+9:6-9:15	constructor	`gl_forall`
+9:6-9:15	function	`gl_forall`
+9:6-9:15	local.reference	`gl_forall`
+9:6-9:15	variable.parameter	`gl_forall`
+9:15-9:19	operator	` %pi`
+9:20-9:21	punctuation.bracket	`(`
+9:21-9:23	constructor	`gl`
+9:21-9:23	local.reference	`gl`
+9:24-9:25	punctuation.bracket	`(`
+9:25-9:31	constructor	`forall`
+9:25-9:31	local.reference	`forall`
+9:32-9:34	constructor	`A1`
+9:32-9:34	local.reference	`A1`
+9:34-9:35	punctuation.bracket	`)`
+9:36-9:37	punctuation.bracket	`(`
+9:37-9:44	constructor	`forall'`
+9:37-9:44	local.reference	`forall'`
+9:45-9:47	constructor	`G1`
+9:45-9:47	local.reference	`G1`
+9:47-9:48	punctuation.bracket	`)`
+9:48-9:49	punctuation.bracket	`)`
+9:50-9:53	operator	`%<-`
+9:54-9:55	punctuation.bracket	`(`
+9:55-9:55	local.reference	``
+9:55-9:55	operator	``
+9:55-9:56	punctuation.bracket	`{`
+9:56-9:57	constructor	`a`
+9:56-9:57	local.reference	`a`
+9:56-9:57	variable.parameter	`a`
+9:58-9:59	constructor	`i`
+9:58-9:59	local.reference	`i`
+9:59-9:60	punctuation.bracket	`}`
+9:61-9:63	constructor	`gl`
+9:61-9:63	local.reference	`gl`
+9:64-9:65	punctuation.bracket	`(`
+9:65-9:67	constructor	`A1`
+9:65-9:67	local.reference	`A1`
+9:68-9:69	constructor	`a`
+9:68-9:69	local.reference	`a`
+9:69-9:70	punctuation.bracket	`)`
+9:71-9:72	punctuation.bracket	`(`
+9:72-9:74	constructor	`G1`
+9:72-9:74	local.reference	`G1`
+9:75-9:76	constructor	`a`
+9:75-9:76	local.reference	`a`
+9:76-9:77	punctuation.bracket	`)`
+9:77-9:78	punctuation.bracket	`)`
+9:78-9:81	keyword.return	` %.`
+10:6-10:13	constructor	`pg_atom`
+10:6-10:13	function	`pg_atom`
+10:6-10:13	local.reference	`pg_atom`
+10:6-10:13	variable.parameter	`pg_atom`
+10:13-10:16	constructor	` pg`
+10:13-10:16	local.reference	` pg`
+10:36-10:38	keyword.return	`%.`
+11:6-11:12	constructor	`pg_and`
+11:6-11:12	function	`pg_and`
+11:6-11:12	local.reference	`pg_and`
+11:6-11:12	variable.parameter	`pg_and`
+11:12-11:16	operator	` %pi`
+11:17-11:18	punctuation.bracket	`(`
+11:18-11:20	constructor	`pg`
+11:18-11:20	local.reference	`pg`
+11:21-11:22	punctuation.bracket	`(`
+11:22-11:24	constructor	`A1`
+11:22-11:24	local.reference	`A1`
+11:25-11:28	constructor	`and`
+11:25-11:28	local.reference	`and`
+11:29-11:31	constructor	`A2`
+11:29-11:31	local.reference	`A2`
+11:31-11:32	punctuation.bracket	`)`
+11:33-11:34	punctuation.bracket	`(`
+11:34-11:36	constructor	`G1`
+11:34-11:36	local.reference	`G1`
+11:37-11:41	constructor	`and^`
+11:37-11:41	local.reference	`and^`
+11:42-11:44	constructor	`G2`
+11:42-11:44	local.reference	`G2`
+11:44-11:45	punctuation.bracket	`)`
+11:45-11:46	punctuation.bracket	`)`
+11:47-11:50	operator	`%<-`
+11:51-11:52	punctuation.bracket	`(`
+11:52-11:54	constructor	`pg`
+11:52-11:54	local.reference	`pg`
+11:55-11:57	constructor	`A1`
+11:55-11:57	local.reference	`A1`
+11:58-11:60	constructor	`G1`
+11:58-11:60	local.reference	`G1`
+11:60-11:61	punctuation.bracket	`)`
+11:61-11:65	operator	` %<-`
+11:66-11:67	punctuation.bracket	`(`
+11:67-11:69	constructor	`pg`
+11:67-11:69	local.reference	`pg`
+11:70-11:72	constructor	`A2`
+11:70-11:72	local.reference	`A2`
+11:73-11:75	constructor	`G2`
+11:73-11:75	local.reference	`G2`
+11:75-11:76	punctuation.bracket	`)`
+11:76-11:79	keyword.return	` %.`
+12:6-12:12	constructor	`pg_imp`
+12:6-12:12	function	`pg_imp`
+12:6-12:12	local.reference	`pg_imp`
+12:6-12:12	variable.parameter	`pg_imp`
+12:12-12:16	operator	` %pi`
+12:17-12:18	punctuation.bracket	`(`
+12:18-12:20	constructor	`pg`
+12:18-12:20	local.reference	`pg`
+12:21-12:22	punctuation.bracket	`(`
+12:22-12:24	constructor	`A2`
+12:22-12:24	local.reference	`A2`
+12:25-12:28	constructor	`imp`
+12:25-12:28	local.reference	`imp`
+12:29-12:31	constructor	`A1`
+12:29-12:31	local.reference	`A1`
+12:31-12:32	punctuation.bracket	`)`
+12:33-12:34	punctuation.bracket	`(`
+12:34-12:36	constructor	`G2`
+12:34-12:36	local.reference	`G2`
+12:37-12:41	constructor	`imp^`
+12:37-12:41	local.reference	`imp^`
+12:42-12:44	constructor	`D1`
+12:42-12:44	local.reference	`D1`
+12:44-12:45	punctuation.bracket	`)`
+12:45-12:46	punctuation.bracket	`)`
+12:47-12:50	operator	`%<-`
+12:51-12:52	punctuation.bracket	`(`
+12:52-12:54	constructor	`pg`
+12:52-12:54	local.reference	`pg`
+12:55-12:57	constructor	`A1`
+12:55-12:57	local.reference	`A1`
+12:58-12:60	constructor	`D1`
+12:58-12:60	local.reference	`D1`
+12:60-12:61	punctuation.bracket	`)`
+12:61-12:65	operator	` %<-`
+12:66-12:67	punctuation.bracket	`(`
+12:67-12:69	constructor	`gl`
+12:67-12:69	local.reference	`gl`
+12:70-12:72	constructor	`A2`
+12:70-12:72	local.reference	`A2`
+12:73-12:75	constructor	`G2`
+12:73-12:75	local.reference	`G2`
+12:75-12:76	punctuation.bracket	`)`
+12:76-12:79	keyword.return	` %.`
+13:6-13:13	constructor	`pg_true`
+13:6-13:13	function	`pg_true`
+13:6-13:13	local.reference	`pg_true`
+13:6-13:13	variable.parameter	`pg_true`
+13:13-13:16	constructor	` pg`
+13:13-13:16	local.reference	` pg`
+13:16-13:21	constructor	` true`
+13:16-13:21	local.reference	` true`
+13:21-13:27	constructor	` true^`
+13:21-13:27	local.reference	` true^`
+13:27-13:30	keyword.return	` %.`
+14:6-14:15	constructor	`pg_forall`
+14:6-14:15	function	`pg_forall`
+14:6-14:15	local.reference	`pg_forall`
+14:6-14:15	variable.parameter	`pg_forall`
+14:15-14:19	operator	` %pi`
+14:20-14:21	punctuation.bracket	`(`
+14:21-14:23	constructor	`pg`
+14:21-14:23	local.reference	`pg`
+14:24-14:25	punctuation.bracket	`(`
+14:25-14:31	constructor	`forall`
+14:25-14:31	local.reference	`forall`
+14:32-14:34	constructor	`A1`
+14:32-14:34	local.reference	`A1`
+14:34-14:35	punctuation.bracket	`)`
+14:36-14:37	punctuation.bracket	`(`
+14:37-14:44	constructor	`forall^`
+14:37-14:44	local.reference	`forall^`
+14:45-14:47	constructor	`D1`
+14:45-14:47	local.reference	`D1`
+14:47-14:48	punctuation.bracket	`)`
+14:48-14:49	punctuation.bracket	`)`
+14:50-14:53	operator	`%<-`
+14:54-14:55	punctuation.bracket	`(`
+14:55-14:55	local.reference	``
+14:55-14:55	operator	``
+14:55-14:56	punctuation.bracket	`{`
+14:56-14:57	constructor	`a`
+14:56-14:57	local.reference	`a`
+14:56-14:57	variable.parameter	`a`
+14:58-14:59	constructor	`i`
+14:58-14:59	local.reference	`i`
+14:59-14:60	punctuation.bracket	`}`
+14:61-14:63	constructor	`pg`
+14:61-14:63	local.reference	`pg`
+14:64-14:65	punctuation.bracket	`(`
+14:65-14:67	constructor	`A1`
+14:65-14:67	local.reference	`A1`
+14:68-14:69	constructor	`a`
+14:68-14:69	local.reference	`a`
+14:69-14:70	punctuation.bracket	`)`
+14:71-14:72	punctuation.bracket	`(`
+14:72-14:74	constructor	`D1`
+14:72-14:74	local.reference	`D1`
+14:75-14:76	constructor	`a`
+14:75-14:76	local.reference	`a`
+14:76-14:77	punctuation.bracket	`)`
+14:77-14:78	punctuation.bracket	`)`
+14:78-14:81	keyword.return	` %.`

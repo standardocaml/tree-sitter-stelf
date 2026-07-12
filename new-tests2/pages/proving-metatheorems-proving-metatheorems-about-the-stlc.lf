@@ -6,11 +6,11 @@
 %        
 %                                             
 %                                                       
-%{! 
+%[[ 
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
-In this section, we show how to prove type preservation for the STLC.  As you will see, this theorem is really no harder than the metatheorems about the natural numbers that we proved above.  For reference, we recap the entire LF signature representing the STLC, both the [syntax](/wiki/proving-metatheorems-representing-the-syntax-of-the-stlc/) and [judgements](/wiki/proving-metatheorems-representing-the-judgements-of-the-stlc/): !}%
+In this section, we show how to prove type preservation for the STLC.  As you will see, this theorem is really no harder than the metatheorems about the natural numbers that we proved above.  For reference, we recap the entire LF signature representing the STLC, both the [syntax](/wiki/proving-metatheorems-representing-the-syntax-of-the-stlc/) and [judgements](/wiki/proving-metatheorems-representing-the-judgements-of-the-stlc/): %]]
 %% Syntax
 %sort tp %.
 %term unit tp %.
@@ -34,9 +34,9 @@ In this section, we show how to prove type preservation for the STLC.  As you wi
 %term step-app-1 %pi (step (app E1 E2) (app E1' E2)) %<- (step E1 E1') %.
 %term step-app-2 %pi (step (app E1 E2) (app E1 E2')) %<- (value E1) %<- (step E2 E2') %.
 %term step-app-beta %pi (step (app (lam T2 ([x] E x)) E2) (E E2)) %<- (value E2) %.
-%{! ## Preservation
+%[[ ## Preservation
 
-Here is a complete Twelf proof of preservation for the STLC: !}%
+Here is a complete Twelf proof of preservation for the STLC: %]]
 %sort preserv {_ step E E'} {_ of E T} {_ of E' T} %.
 %mode preserv %in %in %out %.
 %term preserv-app-1 
@@ -46,11 +46,11 @@ Here is a complete Twelf proof of preservation for the STLC: !}%
 	%pi (preserv (step-app-2 (%the (step E2 E2') DstepE2) (%the (value E1) DvalE1)) (of-app (%the (of E2 T2) DofE2) (%the (of E1 (arrow T2 T)) DofE1)) (of-app DofE2' DofE1))
 	%<- (preserv DstepE2 DofE2 (%the (of E2' T2) DofE2')) %.
 %term preserv-app-beta preserv (step-app-beta (%the (value E2) Dval)) (of-app (%the (of E2 T2) DofE2) (of-lam (%the ({x tm} {dx of x T2} of (E x) T) ([x] [dx] DofE x dx)))) (DofE E2 DofE2) %.
-%{!! begin checked !!}%
+%[[! begin checked !%]]
 %worlds () (preserv _ _ _) %.
 %total D (preserv D _ _) %.
-%{!! end checked !!}%
-%{! Now, let's examine the pieces of the proof in more detail.
+%[[! end checked !%]]
+%[[ Now, let's examine the pieces of the proof in more detail.
 
 ### Correctness of the theorem statement.
 
@@ -80,4 +80,4 @@ Other properties of the STLC are proved elsewhere on this wiki.  Several [tutori
 
 The next section of this introduction describes one new piece of Twelf machinery: the ability to prove totality assertions for non-empty contexts.
 
-!}%
+%]]

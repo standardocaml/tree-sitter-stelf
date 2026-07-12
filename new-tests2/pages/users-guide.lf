@@ -1,5 +1,5 @@
 %                               
-%{! 
+%[[ 
 ## Twelf User's Guide
 
 The current version of the Twelf **User's Guide** is for Twelf version 1.4.
@@ -19,4 +19,4 @@ are not covered in the User's Guide:
 
 <Keyword />
 
-!}%
+%]]

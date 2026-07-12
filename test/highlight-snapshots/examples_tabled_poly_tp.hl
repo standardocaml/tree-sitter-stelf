@@ -1,0 +1,113 @@
+0:0-0:18	comment	`%%% Mini-ML types.`
+1:0-1:62	comment	`%%% Author: Frank Pfenning, based on [Michaylov & Pfenning 92]`
+2:0-2:5	keyword.type	`%sort`
+2:6-2:8	constructor	`tp`
+2:6-2:8	local.reference	`tp`
+2:6-2:8	type	`tp`
+2:8-2:11	keyword.return	` %.`
+2:11-3:8	attribute	``
+3:6-3:8	constructor	`tp`
+3:6-3:8	local.reference	`tp`
+3:6-3:8	variable	`tp`
+3:8-3:11	keyword.return	` %.`
+4:6-4:9	constructor	`nat`
+4:6-4:9	function	`nat`
+4:6-4:9	local.reference	`nat`
+4:6-4:9	variable.parameter	`nat`
+4:9-4:12	constructor	` tp`
+4:9-4:12	local.reference	` tp`
+4:12-4:15	keyword.return	` %.`
+4:15-5:17	comment	``
+6:6-6:11	constructor	`cross`
+6:6-6:11	function	`cross`
+6:6-6:11	local.reference	`cross`
+6:6-6:11	variable.parameter	`cross`
+6:11-6:15	operator	` %pi`
+6:16-6:18	constructor	`tp`
+6:16-6:18	local.reference	`tp`
+6:19-6:22	operator	`%->`
+6:23-6:25	constructor	`tp`
+6:23-6:25	local.reference	`tp`
+6:25-6:29	operator	` %->`
+6:30-6:32	constructor	`tp`
+6:30-6:32	local.reference	`tp`
+6:32-6:35	keyword.return	` %.`
+6:35-7:7	comment	``
+8:6-8:11	constructor	`arrow`
+8:6-8:11	function	`arrow`
+8:6-8:11	local.reference	`arrow`
+8:6-8:11	variable.parameter	`arrow`
+8:11-8:15	operator	` %pi`
+8:16-8:18	constructor	`tp`
+8:16-8:18	local.reference	`tp`
+8:19-8:22	operator	`%->`
+8:23-8:25	constructor	`tp`
+8:23-8:25	local.reference	`tp`
+8:25-8:29	operator	` %->`
+8:30-8:32	constructor	`tp`
+8:30-8:32	local.reference	`tp`
+8:32-8:35	keyword.return	` %.`
+8:35-9:11	comment	``
+10:6-10:9	constructor	`all`
+10:6-10:9	function	`all`
+10:6-10:9	local.reference	`all`
+10:6-10:9	variable.parameter	`all`
+10:9-10:13	operator	` %pi`
+10:14-10:15	punctuation.bracket	`(`
+10:15-10:18	operator	`%pi`
+10:19-10:21	constructor	`tp`
+10:19-10:21	local.reference	`tp`
+10:22-10:25	operator	`%->`
+10:26-10:28	constructor	`tp`
+10:26-10:28	local.reference	`tp`
+10:28-10:29	punctuation.bracket	`)`
+10:30-10:33	operator	`%->`
+10:34-10:36	constructor	`tp`
+10:34-10:36	local.reference	`tp`
+10:36-10:39	keyword.return	` %.`
+10:39-11:14	comment	``
+11:14-12:48	comment	``
+13:8-13:10	function	`=>`
+13:8-13:10	local.reference	`=>`
+13:8-13:10	operator	`=>`
+13:11-13:12	punctuation.bracket	`(`
+13:12-13:15	operator	`%pi`
+13:16-13:18	constructor	`tp`
+13:16-13:18	local.reference	`tp`
+13:19-13:22	operator	`%->`
+13:23-13:25	constructor	`tp`
+13:23-13:25	local.reference	`tp`
+13:26-13:29	operator	`%->`
+13:30-13:32	constructor	`tp`
+13:30-13:32	local.reference	`tp`
+13:32-13:33	punctuation.bracket	`)`
+13:33-13:33	local.reference	``
+13:33-13:33	operator	``
+13:52-13:54	keyword.return	`%.`
+14:6-14:12	keyword.modifier	`%right`
+14:13-14:15	number	`10`
+14:16-14:18	local.reference	`=>`
+14:16-14:18	operator	`=>`
+14:18-14:21	keyword.return	` %.`
+15:8-15:9	function	`*`
+15:8-15:9	local.reference	`*`
+15:8-15:9	operator	`*`
+15:10-15:11	punctuation.bracket	`(`
+15:11-15:14	operator	`%pi`
+15:15-15:17	constructor	`tp`
+15:15-15:17	local.reference	`tp`
+15:18-15:21	operator	`%->`
+15:22-15:24	constructor	`tp`
+15:22-15:24	local.reference	`tp`
+15:25-15:28	operator	`%->`
+15:29-15:31	constructor	`tp`
+15:29-15:31	local.reference	`tp`
+15:31-15:32	punctuation.bracket	`)`
+15:32-15:32	local.reference	``
+15:32-15:32	operator	``
+15:51-15:53	keyword.return	`%.`
+16:6-16:12	keyword.modifier	`%right`
+16:13-16:14	number	`9`
+16:15-16:16	local.reference	`*`
+16:15-16:16	operator	`*`
+16:16-16:19	keyword.return	` %.`

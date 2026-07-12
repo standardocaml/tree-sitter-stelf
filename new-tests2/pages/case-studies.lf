@@ -1,7 +1,7 @@
 %                        
 %              
 %              
-%{! The following **case studies** present interesting applications of Twelf.  Some of these case studies use proof techniques that are explained in the [tutorials](/wiki/tutorials/), so you may wish to read those first.  
+%[[ The following **case studies** present interesting applications of Twelf.  Some of these case studies use proof techniques that are explained in the [tutorials](/wiki/tutorials/), so you may wish to read those first.  
 
 Feel free to add your own case studies here.  We would welcome experience reports that document not just the Twelf code you wrote but your experience writing it. _(If the goal of your article is to teach a specific Twelf technique, it should instead be a [tutorial](/wiki/tutorials/), and if your Twelf code is off-site, you should instead add it to the list of [Research projects using Twelf](/wiki/research-projects-using-twelf/).)_
 
@@ -73,4 +73,4 @@ Feel free to add your own case studies here.  We would welcome experience report
 
   The Twelf formalization from Rob's 2014 paper on 
   [Structural Focalization](https://dl.acm.org/doi/10.1145/2629678).
-!}%
+%]]

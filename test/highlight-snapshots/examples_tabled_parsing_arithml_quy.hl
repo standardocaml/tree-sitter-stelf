@@ -1,0 +1,217 @@
+0:0-0:12	keyword	`%querytabled`
+0:13-0:14	variable.parameter.builtin	`_`
+0:15-0:16	variable.parameter.builtin	`_`
+0:23-0:24	punctuation.bracket	`(`
+0:49-0:50	number	`1`
+0:50-0:51	local.reference	`'`
+0:50-0:51	operator	`'`
+0:51-0:53	local.reference	` ;`
+0:51-0:53	operator	` ;`
+0:53-0:57	local.reference	` '@'`
+0:53-0:57	operator	` '@'`
+0:57-0:59	local.reference	` ;`
+0:57-0:59	operator	` ;`
+0:59-0:63	constructor	` 'x'`
+0:59-0:63	local.reference	` 'x'`
+0:63-0:65	local.reference	` ;`
+0:63-0:65	operator	` ;`
+0:65-0:74	constructor	` 'closeB'`
+0:65-0:74	local.reference	` 'closeB'`
+0:74-0:76	local.reference	` ;`
+0:74-0:76	operator	` ;`
+0:76-0:80	local.reference	` '@'`
+0:76-0:80	operator	` '@'`
+0:80-0:82	local.reference	` ;`
+0:80-0:82	operator	` ;`
+0:82-0:86	constructor	` '3'`
+0:82-0:86	local.reference	` '3'`
+0:86-0:88	local.reference	` ;`
+0:86-0:88	operator	` ;`
+0:88-0:92	constructor	` nil`
+0:88-0:92	local.reference	` nil`
+0:96-0:98	keyword.return	`%.`
+1:13-1:14	variable.parameter.builtin	`_`
+1:15-1:16	variable.parameter.builtin	`_`
+1:23-1:24	punctuation.bracket	`(`
+1:63-1:64	number	`3`
+1:64-1:65	local.reference	`'`
+1:64-1:65	operator	`'`
+1:65-1:67	local.reference	` ;`
+1:65-1:67	operator	` ;`
+1:67-1:71	local.reference	` '*'`
+1:67-1:71	operator	` '*'`
+1:71-1:73	local.reference	` ;`
+1:71-1:73	operator	` ;`
+1:73-1:77	constructor	` 'x'`
+1:73-1:77	local.reference	` 'x'`
+1:77-1:79	local.reference	` ;`
+1:77-1:79	operator	` ;`
+1:79-1:83	local.reference	` '+'`
+1:79-1:83	operator	` '+'`
+1:83-1:85	local.reference	` ;`
+1:83-1:85	operator	` ;`
+1:85-1:89	constructor	` 'y'`
+1:85-1:89	local.reference	` 'y'`
+1:89-1:91	local.reference	` ;`
+1:89-1:91	operator	` ;`
+1:91-1:95	local.reference	` '*'`
+1:91-1:95	operator	` '*'`
+1:95-1:97	local.reference	` ;`
+1:95-1:97	operator	` ;`
+1:97-1:101	constructor	` '2'`
+1:97-1:101	local.reference	` '2'`
+1:101-1:103	local.reference	` ;`
+1:101-1:103	operator	` ;`
+1:103-1:112	constructor	` 'closeB'`
+1:103-1:112	local.reference	` 'closeB'`
+1:112-1:114	local.reference	` ;`
+1:112-1:114	operator	` ;`
+1:114-1:118	local.reference	` '@'`
+1:114-1:118	operator	` '@'`
+1:118-1:120	local.reference	` ;`
+1:118-1:120	operator	` ;`
+1:120-1:124	constructor	` '9'`
+1:120-1:124	local.reference	` '9'`
+1:124-1:126	local.reference	` ;`
+1:124-1:126	operator	` ;`
+1:126-1:130	local.reference	` '@'`
+1:126-1:130	operator	` '@'`
+1:130-1:132	local.reference	` ;`
+1:130-1:132	operator	` ;`
+1:132-1:136	constructor	` '8'`
+1:132-1:136	local.reference	` '8'`
+1:136-1:138	local.reference	` ;`
+1:136-1:138	operator	` ;`
+1:138-1:142	constructor	` nil`
+1:138-1:142	local.reference	` nil`
+1:146-1:148	keyword.return	`%.`
+2:13-2:14	variable.parameter.builtin	`_`
+2:15-2:16	variable.parameter.builtin	`_`
+2:23-2:24	punctuation.bracket	`(`
+2:63-2:64	number	`3`
+2:64-2:65	local.reference	`'`
+2:64-2:65	operator	`'`
+2:65-2:67	local.reference	` ;`
+2:65-2:67	operator	` ;`
+2:67-2:71	local.reference	` '*'`
+2:67-2:71	operator	` '*'`
+2:71-2:73	local.reference	` ;`
+2:71-2:73	operator	` ;`
+2:73-2:77	constructor	` 'x'`
+2:73-2:77	local.reference	` 'x'`
+2:77-2:79	local.reference	` ;`
+2:77-2:79	operator	` ;`
+2:79-2:83	local.reference	` '+'`
+2:79-2:83	operator	` '+'`
+2:83-2:85	local.reference	` ;`
+2:83-2:85	operator	` ;`
+2:85-2:89	constructor	` 'y'`
+2:85-2:89	local.reference	` 'y'`
+2:89-2:91	local.reference	` ;`
+2:89-2:91	operator	` ;`
+2:91-2:95	local.reference	` '*'`
+2:91-2:95	operator	` '*'`
+2:95-2:97	local.reference	` ;`
+2:95-2:97	operator	` ;`
+2:97-2:101	constructor	` '2'`
+2:97-2:101	local.reference	` '2'`
+2:101-2:103	local.reference	` ;`
+2:101-2:103	operator	` ;`
+2:103-2:112	constructor	` 'closeB'`
+2:103-2:112	local.reference	` 'closeB'`
+2:112-2:114	local.reference	` ;`
+2:112-2:114	operator	` ;`
+2:114-2:118	local.reference	` '@'`
+2:114-2:118	operator	` '@'`
+2:118-2:120	local.reference	` ;`
+2:118-2:120	operator	` ;`
+2:120-2:124	constructor	` '9'`
+2:120-2:124	local.reference	` '9'`
+2:124-2:126	local.reference	` ;`
+2:124-2:126	operator	` ;`
+2:126-2:130	local.reference	` '@'`
+2:126-2:130	operator	` '@'`
+2:130-2:132	local.reference	` ;`
+2:130-2:132	operator	` ;`
+2:132-2:136	constructor	` '8'`
+2:132-2:136	local.reference	` '8'`
+2:136-2:138	local.reference	` ;`
+2:136-2:138	operator	` ;`
+2:138-2:142	constructor	` nil`
+2:138-2:142	local.reference	` nil`
+2:146-2:148	keyword.return	`%.`
+3:13-3:14	variable.parameter.builtin	`_`
+3:15-3:16	variable.parameter.builtin	`_`
+3:23-3:24	punctuation.bracket	`(`
+3:99-3:100	number	`1`
+3:100-3:101	local.reference	`'`
+3:100-3:101	operator	`'`
+3:101-3:103	local.reference	` ;`
+3:101-3:103	operator	` ;`
+3:103-3:107	local.reference	` '+'`
+3:103-3:107	operator	` '+'`
+3:107-3:109	local.reference	` ;`
+3:107-3:109	operator	` ;`
+3:109-3:113	constructor	` 'z'`
+3:109-3:113	local.reference	` 'z'`
+3:113-3:115	local.reference	` ;`
+3:113-3:115	operator	` ;`
+3:115-3:119	local.reference	` '+'`
+3:115-3:119	operator	` '+'`
+3:119-3:121	local.reference	` ;`
+3:119-3:121	operator	` ;`
+3:121-3:125	constructor	` '3'`
+3:121-3:125	local.reference	` '3'`
+3:125-3:127	local.reference	` ;`
+3:125-3:127	operator	` ;`
+3:127-3:131	local.reference	` '*'`
+3:127-3:131	operator	` '*'`
+3:131-3:133	local.reference	` ;`
+3:131-3:133	operator	` ;`
+3:133-3:137	constructor	` 'x'`
+3:133-3:137	local.reference	` 'x'`
+3:137-3:139	local.reference	` ;`
+3:137-3:139	operator	` ;`
+3:139-3:143	local.reference	` '+'`
+3:139-3:143	operator	` '+'`
+3:143-3:145	local.reference	` ;`
+3:143-3:145	operator	` ;`
+3:145-3:149	constructor	` 'y'`
+3:145-3:149	local.reference	` 'y'`
+3:149-3:151	local.reference	` ;`
+3:149-3:151	operator	` ;`
+3:151-3:155	local.reference	` '*'`
+3:151-3:155	operator	` '*'`
+3:155-3:157	local.reference	` ;`
+3:155-3:157	operator	` ;`
+3:157-3:161	constructor	` '2'`
+3:157-3:161	local.reference	` '2'`
+3:161-3:163	local.reference	` ;`
+3:161-3:163	operator	` ;`
+3:163-3:172	constructor	` 'closeB'`
+3:163-3:172	local.reference	` 'closeB'`
+3:172-3:174	local.reference	` ;`
+3:172-3:174	operator	` ;`
+3:174-3:183	constructor	` 'closeB'`
+3:174-3:183	local.reference	` 'closeB'`
+3:183-3:185	local.reference	` ;`
+3:183-3:185	operator	` ;`
+3:185-3:189	local.reference	` '@'`
+3:185-3:189	operator	` '@'`
+3:189-3:191	local.reference	` ;`
+3:189-3:191	operator	` ;`
+3:191-3:195	constructor	` '9'`
+3:191-3:195	local.reference	` '9'`
+3:195-3:197	local.reference	` ;`
+3:195-3:197	operator	` ;`
+3:197-3:201	local.reference	` '@'`
+3:197-3:201	operator	` '@'`
+3:201-3:203	local.reference	` ;`
+3:201-3:203	operator	` ;`
+3:203-3:207	constructor	` '8'`
+3:203-3:207	local.reference	` '8'`
+3:207-3:209	local.reference	` ;`
+3:207-3:209	operator	` ;`
+3:209-3:213	constructor	` nil`
+3:209-3:213	local.reference	` nil`
+3:217-3:219	keyword.return	`%.`

@@ -1,5 +1,5 @@
 %                                                   
-%{! Code from class, February 23. 
+%[[ Code from class, February 23. 
 
 ```twelf
 ttp : type. %name ttp T.
@@ -99,4 +99,4 @@ trans/lam : trans (lam T1 ([x] E x)) (arr T1 T2)
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Computation_and_Deduction_2009/20090223).
-!}%
+%]]

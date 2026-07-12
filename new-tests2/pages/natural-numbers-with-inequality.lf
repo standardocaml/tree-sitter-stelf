@@ -1,24 +1,24 @@
 %                                           
-%{! 
+%[[ 
 A signature for natural numbers, adapted from a number of sources,
 in particular the TALT project.
 There is no arithmetic, just the theory of inequality.
 This code uses an uninhabited type, "void", in order to express
 [proofs by reductio ad absurdum](/wiki/reasoning-from-false/).
-!}%
-%{! ## Syntax !}%
-%{! ### Natural numbers !}%
+%]]
+%[[ ## Syntax %]]
+%[[ ### Natural numbers %]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
-%{! ### The uninhabited type !}%
+%[[ ### The uninhabited type %]]
 %sort void %.
 %freeze void %.
-%{! ### Constants !}%
+%[[ ### Constants %]]
 %define 0 z %.
 %define 1 s 0 %.
-%{! ... and continuing on to 25 !}%
-%{!! begin hidden !!}%
+%[[ ... and continuing on to 25 %]]
+%[[! begin hidden !%]]
 %define 2 s 1 %.
 %define 3 s 2 %.
 %define 4 s 3 %.
@@ -43,9 +43,9 @@ This code uses an uninhabited type, "void", in order to express
 %define 23 s 22 %.
 %define 24 s 23 %.
 %define 25 s 24 %.
-%{!! end hidden !!}%
-%{! ## Equality and inequality !}%
-%{! ### Definitions !}%
+%[[! end hidden !%]]
+%[[ ## Equality and inequality %]]
+%[[ ### Definitions %]]
 %% equality
 %sort id-nat {_ nat} {_ nat} %.
 %term id-nat/refl id-nat N N %.
@@ -61,8 +61,8 @@ This code uses an uninhabited type, "void", in order to express
 %sort neq-nat {_ nat} {_ nat} %.
 %term neq-nat/gt %pi (neq-nat N1 N2) %<- (lt-nat N2 N1) %.
 %term neq-nat/lt %pi (neq-nat N1 N2) %<- (lt-nat N1 N2) %.
-%{! ### Theorems !}%
-%{! #### False implies anything !}%
+%[[ ### Theorems %]]
+%[[ #### False implies anything %]]
 %sort false-imp-id-nat {_ void} {N1} {N2} {_ id-nat N1 N2} %.
 %mode false-imp-id-nat %in %in %in %out %.
 %worlds () (false-imp-id-nat _ _ _ _) %.
@@ -79,14 +79,14 @@ This code uses an uninhabited type, "void", in order to express
 %mode false-imp-leq-nat %in %in %in %out %.
 %worlds () (false-imp-leq-nat _ _ _ _) %.
 %total () (false-imp-leq-nat _ _ _ _) %.
-%{! #### Basic properties !}%
+%[[ #### Basic properties %]]
 %sort lt-nat-succ {N} {_ lt-nat N (s N)} %.
 %mode lt-nat-succ %in %out %.
 %term _ lt-nat-succ z lt-nat/z %.
 %term _ %pi (lt-nat-succ (s N) (lt-nat/s D)) %<- (lt-nat-succ N D) %.
 %worlds () (lt-nat-succ _ _) %.
 %total T (lt-nat-succ T _) %.
-%{! #### Reflexivity and symmetry !}%
+%[[ #### Reflexivity and symmetry %]]
 %sort id-nat/symm {_ id-nat N1 N2} {_ id-nat N2 N1} %.
 %mode id-nat/symm %in %out %.
 %term _ id-nat/symm id-nat/refl id-nat/refl %.
@@ -120,9 +120,9 @@ This code uses an uninhabited type, "void", in order to express
 	%<- (lt-nat/trans D1 D2 D3) %.
 %worlds () (leq-nat/trans _ _ _) %.
 %total () (leq-nat/trans _ _ _) %.
-%{! #### Respects lemmas !}%
-%{! This is an instance of the generalization technique
-described in the page on [respects lemma](/wiki/respects-lemma/)s. !}%
+%[[ #### Respects lemmas %]]
+%[[ This is an instance of the generalization technique
+described in the page on [respects lemma](/wiki/respects-lemma/)s. %]]
 %sort id-nat/compat {F %pi nat %-> nat} {_ id-nat N1 N2} {_ id-nat (F N1) (F N2)} %.
 %mode id-nat/compat %in %in %out %.
 %term _ id-nat/compat _ id-nat/refl id-nat/refl %.
@@ -149,7 +149,7 @@ described in the page on [respects lemma](/wiki/respects-lemma/)s. !}%
 %term _ neq-nat-resp id-nat/refl id-nat/refl D D %.
 %worlds () (neq-nat-resp _ _ _ _) %.
 %total () (neq-nat-resp _ _ _ _) %.
-%{! #### Contradictions !}%
+%[[ #### Contradictions %]]
 %sort lt-nat-contr {_ lt-nat N N} {_ void} %.
 %mode lt-nat-contr %in %out %.
 %term _ %pi (lt-nat-contr (lt-nat/s D) F) %<- (lt-nat-contr D F) %.
@@ -172,10 +172,10 @@ described in the page on [respects lemma](/wiki/respects-lemma/)s. !}%
 %term _ %pi (lt-leq-nat-contr D1 (leq-nat/eq D2) F) %<- (lt-nat-contr D1 F) %.
 %worlds () (lt-leq-nat-contr _ _ _) %.
 %total T (lt-leq-nat-contr T _ _) %.
-%{! #### Dichotomy !}%
-%{! The property that any two numbers are comparable by lt, eq, or lt
+%[[ #### Dichotomy %]]
+%[[ The property that any two numbers are comparable by lt, eq, or lt
 the other way around. Because leq and neq are defined in terms of lt and eq,
-this should allow relatively simple assessment of these cases as well. !}%
+this should allow relatively simple assessment of these cases as well. %]]
 %sort dichotomy-nat {_ nat} {_ nat} %.
 %term dichotomy-nat/lt %pi (lt-nat N1 N2) %-> (dichotomy-nat N1 N2) %.
 %term dichotomy-nat/gt %pi (lt-nat N1 N2) %-> (dichotomy-nat N2 N1) %.

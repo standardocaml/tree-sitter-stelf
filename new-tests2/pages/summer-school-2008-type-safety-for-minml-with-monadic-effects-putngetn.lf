@@ -1,5 +1,5 @@
 %                                                                                    
-%{! 
+%[[ 
 
 \{\{Summer school 2008
   |prev=Exercises 3
@@ -9,24 +9,24 @@
 
 Type safety for MinML with monadic effects, with putn and getn primitives.
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Syntax / static semantics
 
 Types:
 
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term nat tp %.
 %term arr %pi tp %-> tp %-> tp %.
 %term circle %pi tp %-> tp %.
-%{! 
+%[[ 
 
 Typed expressions (i.e., typing derivations):
 
-!}%
+%]]
 %sort exp {_ tp} %.
 %name exp %.
 %prec %postfix 1 exp %.
@@ -43,13 +43,13 @@ Typed expressions (i.e., typing derivations):
 %term let %pi (circle T exp) %-> (%pi (T exp) %-> (U command)) %-> (U command) %.
 %term getn %pi (%pi (nat exp) %-> (U command)) %-> (U command) %.
 %term putn %pi (nat exp) %-> (U command) %-> (U command) %.
-%{! 
+%[[ 
 
 ## Dynamic semantics / preservation
 
 ### Values and final states
 
-!}%
+%]]
 %sort value {_ T exp} %.
 %name value %.
 %mode value %in %.
@@ -61,11 +61,11 @@ Typed expressions (i.e., typing derivations):
 %name final %.
 %mode final %in %.
 %term final/ret %pi (final (return E)) %<- (value E) %.
-%{! 
+%[[ 
 
 ### Transition relation for expressions
 
-!}%
+%]]
 %sort step {_ T exp} {_ T exp} %.
 %name step %.
 %mode step %in %out %.
@@ -78,11 +78,11 @@ Typed expressions (i.e., typing derivations):
 %term step/app/beta-v 
 	%pi (step (app (fun T1 T2 ([f] [x] E f x)) E2) (E (fun T1 T2 ([f] [x] E f x)) E2))
 	%<- (value E2) %.
-%{! 
+%[[ 
 
 ### Labelled transition relation for commands
 
-!}%
+%]]
 %sort label %.
 %name label %.
 %term label/read %pi (value (%the (nat exp) N)) %-> label %.
@@ -103,13 +103,13 @@ Typed expressions (i.e., typing derivations):
 %term mstep/getn mstep (getn ([x] M x)) (M E) (label/read (%the (value E) Dval)) %.
 %term mstep/putn %pi (mstep (putn E M) (putn E' M) label/sil) %<- (step E E') %.
 %term mstep/putn-put mstep (putn E M) M (label/write (%the (value E) Dval)) %.
-%{! 
+%[[ 
 
 ## Progress
 
 ### Return sums
 
-!}%
+%]]
 %sort val-or-step {_ T exp} %.
 %name val-or-step %.
 %term vos/val %pi (val-or-step E) %<- (value E) %.
@@ -118,11 +118,11 @@ Typed expressions (i.e., typing derivations):
 %name fin-or-mstep %.
 %term fos/fin %pi (fin-or-mstep M) %<- (final M) %.
 %term fos/step %pi (fin-or-mstep M) %<- (mstep M _ _) %.
-%{! 
+%[[ 
 
 ### [Factoring](/wiki/output-factoring/) lemmas
 
-!}%
+%]]
 %sort prog/s {_ val-or-step E} {_ val-or-step (s E)} %.
 %mode prog/s %in %out %.
 %term _ prog/s (vos/step Dstep) (vos/step (step/s Dstep)) %.
@@ -143,11 +143,11 @@ Typed expressions (i.e., typing derivations):
 %term _ prog/app (vos/val Dval1) (vos/val Dval2) (step/app/beta-v Dval2) %.
 %worlds () (prog/app _ _ _) %.
 %total () (prog/app _ _ _) %.
-%{! 
+%[[ 
 
 ### Progress for expressions
 
-!}%
+%]]
 %sort prog {E T exp} {_ val-or-step E} %.
 %name prog %.
 %mode prog %in %out %.
@@ -166,11 +166,11 @@ Typed expressions (i.e., typing derivations):
 %term _ prog (comp M) (vos/val value/comp) %.
 %worlds () (prog _ _) %.
 %total Dof (prog Dof _) %.
-%{! 
+%[[ 
 
 ### Factoring lemmas for commands
 
-!}%
+%]]
 %sort mprog/ret {_ val-or-step E} {_ fin-or-mstep (return E)} %.
 %mode mprog/ret %in %out %.
 %term _ mprog/ret (vos/val Dval) (fos/fin (final/ret Dval)) %.
@@ -189,13 +189,13 @@ Typed expressions (i.e., typing derivations):
 %term _ mprog/putn (vos/step Dstep) _ (mstep/putn Dstep) %.
 %worlds () (mprog/putn _ _ _) %.
 %total () (mprog/putn _ _ _) %.
-%{! 
+%[[ 
 
 ### Progress for commands
 
 One of the factoring lemmas is mutually recursive with the main theorem:
 
-!}%
+%]]
 %sort mprog/let {E circle T exp} {_ val-or-step E} {M %pi (T exp) %-> (U command)} {_ mstep (let E M) M' L} %.
 %mode mprog/let %in %in %in %out %.
 %sort mprog {M T command} {_ fin-or-mstep M} %.
@@ -221,7 +221,7 @@ One of the factoring lemmas is mutually recursive with the main theorem:
 	%<- (mprog/putn Dvos M Dmstep) %.
 %worlds () (mprog _ _) (mprog/let _ _ _ _) %.
 %total (M E) (mprog M _) (mprog/let E _ _ _) %.
-%{! 
+%[[ 
 And thus we have proved type safety for MinML with monadic effects!
 
 \{\{Summer school 2008
@@ -230,10 +230,10 @@ And thus we have proved type safety for MinML with monadic effects!
   |nonext=
 \}\}
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Type_safety_for_MinML_with_monadic_effects_(putngetn)).
-!}%
+%]]

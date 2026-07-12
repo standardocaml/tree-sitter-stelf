@@ -1,9 +1,9 @@
 %                                      
-%{! 
+%[[ 
 
 ## Arithmetic Primitives
 
-!}%
+%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -19,11 +19,11 @@
 %term mult/s %pi (mult (s M) N Q) %<- (mult M N P) %<- (add P N Q) %.
 %worlds () (mult _ _ _) %.
 %total M (mult M _ _) %.
-%{! 
+%[[ 
 
 ## Language Syntax
 
-!}%
+%]]
 %sort tp %.
 %term num tp %.
 %term arrow %pi tp %-> tp %-> tp %.
@@ -36,11 +36,11 @@
 %term app %pi exp %-> exp %-> exp %.
 %term pair %pi exp %-> exp %-> exp %.
 %term split %pi exp %-> (%pi exp %-> exp %-> exp) %-> exp %.
-%{! 
+%[[ 
 
 ## Dynamic Semantics
 
-!}%
+%]]
 %sort value {_ exp} %.
 %sort step {_ exp} {_ exp} %.
 %%% argh, too many rules!
@@ -67,11 +67,11 @@
 	%<- (value V2) %.
 %worlds () (value _) %.
 %worlds () (step _ _) %.
-%{! 
+%[[ 
 
 ## Static Semantics
 
-!}%
+%]]
 %sort of {_ exp} {_ tp} %.
 %term of/numeral of (numeral N) num %.
 %term of/plus %pi (of (plus E1 E2) num) %<- (of E1 num) %<- (of E2 num) %.
@@ -87,11 +87,11 @@
 	%<- ({x} %pi (of x T1) %-> ({y} %pi (of y T2) %-> (of (Ebody x y) T))) %.
 %block tbind {T tp} [x exp] [dx of x T]%.
 %worlds (tbind) (of _ _) %.
-%{! 
+%[[ 
 
 ## Progress
 
-!}%
+%]]
 %sort notstuck {_ exp} %.
 %term notstuck/value %pi (notstuck E) %<- (value E) %.
 %term notstuck/step %pi (notstuck E) %<- (step E E') %.
@@ -178,9 +178,9 @@
 	%<- (progress-split Dof1 Dns1 Ebody Dns2) %.
 %worlds () (progress _ _) %.
 %total (D1) (progress D1 _) %.
-%{! 
+%[[ 
 ## Preservation
-!}%
+%]]
 %sort preservation {_ of E1 T1} {_ step E1 E2} {_ of E2 T1} %.
 %mode preservation %in %in %out %.
 %term _ 
@@ -216,9 +216,9 @@
 %term _ preservation (of/app Dof2 (of/lam Dbody)) (step/app/beta Dval1) (Dbody E2 Dof2) %.
 %worlds () (preservation _ _ _) %.
 %total (D1) (preservation _ D1 _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/New_language).
-!}%
+%]]

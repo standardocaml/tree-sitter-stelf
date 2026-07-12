@@ -1,8 +1,8 @@
 %                                  
-%{! 
+%[[ 
 C Machine and Focusing
-!}%
-%{! ## Syntax !}%
+%]]
+%[[ ## Syntax %]]
 %sort pos %.
 %name pos %.
 %sort neg %.
@@ -63,8 +63,8 @@ C Machine and Focusing
 %% value variables can be used to stop right focus early
 %block valb {A} [x val+ A]%.
 %worlds (valb) (cont+ _ _) (cont- _ _) (val+ _) (exp _) (val- _) %.
-%{! ## Operational Semantics !}%
-%{! ### Composition !}%
+%[[ ## Operational Semantics %]]
+%[[ ### Composition %]]
 %sort comp+- {_ cont+ A+ B-} {_ cont- B- C-} {_ cont+ A+ C-} %.
 %mode comp+- %in %in %out %.
 %sort compe- {_ exp A-} {_ cont- A- C-} {_ exp C-} %.
@@ -91,7 +91,7 @@ C Machine and Focusing
 %term comp--/id comp-- id- K2 K2 %.
 %worlds (valb) (comp+- _ _ _) (comp-- _ _ _) (compe- _ _ _) %.
 %total (D1 D2 D3) (comp+- D1 _ _) (comp-- D3 _ _) (compe- D2 _ _) %.
-%{! ### Stack Machine !}%
+%[[ ### Stack Machine %]]
 %% the sum type that you'd define for progress is
 %% (val C) + (exp C)
 %% so let's just abuse exp C for this sum and write the
@@ -113,9 +113,9 @@ C Machine and Focusing
 %term step/id step (cut- V id-) (return V) %.
 %worlds () (step _ _) %.
 %total D (step D _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/C_machine_and_focusing).
-!}%
+%]]

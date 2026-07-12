@@ -1,6 +1,6 @@
 %                                                         
-%{! This is part 2 of the case study [Hereditary substitution for the STLC](/wiki/hereditary-substitution-for-the-stlc/). !}%
-%{! (options removed from twelftag: hidden="true") !}%
+%[[ This is part 2 of the case study [Hereditary substitution for the STLC](/wiki/hereditary-substitution-for-the-stlc/). %]]
+%[[ (options removed from twelftag: hidden="true") %]]
 %sort tp %.
 %term b tp %.
 %term arrow %pi tp %-> tp %-> tp %.
@@ -863,11 +863,11 @@
 	%<- (id/mtm_pair_cong DidF DidS DidPair) %.
 %worlds (rtm_block) (expand_unique _ _ _) %.
 %total D (expand_unique _ D _) %.
-%{! ## External language: syntax and judgements
+%[[ ## External language: syntax and judgements
 
 ### Syntax
 
-The external language syntax is a copy of the internal language, where we additionally include canonincal terms ``M`` into atomic terms ``R``.  To preserve the modes of the typing judgements, these canonical terms are annotated with the type that they should be checked against. !}%
+The external language syntax is a copy of the internal language, where we additionally include canonincal terms ``M`` into atomic terms ``R``.  To preserve the modes of the typing judgements, these canonical terms are annotated with the type that they should be checked against. %]]
 %sort el_rtm %.
 %sort el_mtm %.
 %term el_app %pi el_rtm %-> el_mtm %-> el_rtm %.
@@ -879,11 +879,11 @@ The external language syntax is a copy of the internal language, where we additi
 %term el_lam %pi (%pi el_rtm %-> el_mtm) %-> el_mtm %.
 %term el_pair %pi el_mtm %-> el_mtm %-> el_mtm %.
 %block el_rtm_block [x el_rtm]%.
-%{! Modulo the placement of type annotations, this grammar lets you write any term that you can write without the syntactic stratification.  
+%[[ Modulo the placement of type annotations, this grammar lets you write any term that you can write without the syntactic stratification.  
 
 ### Typing judgements
 
-The typing judgements for the external language extand the judgements for canonical forms with a rule ``synth_annot`` for synthesizing the type of an annotated term.  Additionally, the rules do not force terms to be η-long. !}%
+The typing judgements for the external language extand the judgements for canonical forms with a rule ``synth_annot`` for synthesizing the type of an annotated term.  Additionally, the rules do not force terms to be η-long. %]]
 %sort synth {_ el_rtm} {_ tp} %.
 %mode synth %in %out %.
 %sort check {_ el_mtm} {_ tp} %.
@@ -904,11 +904,11 @@ The typing judgements for the external language extand the judgements for canoni
 %term check_pair %pi (check (el_pair M1 M2) (prod A1 A2)) %<- (check M1 A1) %<- (check M2 A2) %.
 %block synth_block {A tp} [x el_rtm] [dx synth x A]%.
 %worlds (synth_block) (synth _ _) (check _ _) %.
-%{! It is possible to show that any well-typed term in a standard presentation of the λ-calculus can be translated into a term in this syntax that is well-typed by these rules.  However, we have not formulated this step here, choosing instead to take these rules as the definition of the external language.  
+%[[ It is possible to show that any well-typed term in a standard presentation of the λ-calculus can be translated into a term in this syntax that is well-typed by these rules.  However, we have not formulated this step here, choosing instead to take these rules as the definition of the external language.  
 
 ### Elaboration
 
-We now define elaboration.  We define three mutually recursive elaboration judgements, one for checked terms, and two for synthesizing terms.  The two judgements for synthesizing terms differ in whether the elaboration of the synthesizing term is an atomic term or a canonical term. !}%
+We now define elaboration.  We define three mutually recursive elaboration judgements, one for checked terms, and two for synthesizing terms.  The two judgements for synthesizing terms differ in whether the elaboration of the synthesizing term is an atomic term or a canonical term. %]]
 %sort elab_m {_ el_mtm} {_ mtm} {_ tp} %.
 %mode elab_m %in %out %in %.
 %sort elab_r_to_r {_ el_rtm} {_ rtm} {_ tp} %.
@@ -947,13 +947,13 @@ We now define elaboration.  We define three mutually recursive elaboration judge
 	%pi (elab_r_to_m (el_snd ER) M2 A2)
 	%<- (elab_r_to_m ER (pair M1 M2) (prod A1 A2)) %.
 %block elab_block {A tp} [el_x el_rtm] [x rtm] [dex elab_r_to_r el_x x A]%.
-%{! The inductive structure of the elaboration judgements is similar to the structure of hereditary substitution.  Elaboration uses hereditary substitution in the key rule ``elab_r_to_m_app`` to compute the canonical result of a function application.  Elaboration also uses expansion to expand atomic terms into canonical ones.
+%[[ The inductive structure of the elaboration judgements is similar to the structure of hereditary substitution.  Elaboration uses hereditary substitution in the key rule ``elab_r_to_m_app`` to compute the canonical result of a function application.  Elaboration also uses expansion to expand atomic terms into canonical ones.
 
 ## External Language: Metatheory
 
 ### Static Correctness of Elaboration
 
-First, we prove that the elaboration of a well-typed term is well-typed. !}%
+First, we prove that the elaboration of a well-typed term is well-typed. %]]
 %sort elab_m_reg {_ elab_m EM M A} {_ check EM A} {_ canon M A} %.
 %mode elab_m_reg %in %out %out %.
 %sort elab_r2r_reg {_ elab_r_to_r ER R A} {_ synth ER A} {_ atom R A} %.
@@ -1014,11 +1014,11 @@ First, we prove that the elaboration of a well-typed term is well-typed. !}%
 %block elab_reg_block {A tp} [el_x el_rtm] [delx synth el_x A] [x rtm] [dx atom x A] [delabx elab_r_to_r el_x x A] [_ elab_r2r_reg delabx delx dx]%.
 %worlds (elab_reg_block) (elab_m_reg _ _ _) (elab_r2r_reg _ _ _) (elab_r2m_reg _ _ _) %.
 %total (D1 D2 D3) (elab_m_reg D1 _ _) (elab_r2r_reg D2 _ _) (elab_r2m_reg D3 _ _) %.
-%{! The proof is a straightforward induction, using ``hsubst_m_exists`` and ``expand_exists``.  Because these two lemmas _output_ a hereditary substitution or expansion, along with the typing derivation for the result of the operation, we use uniqueness here to show well-typedness of the outputs of the hereditary substitution and expansion derivations given by elaboration.  In retrospect, we should have factored this reasoning into separate lemmas that are like ``hsubst_m_exists`` and ``expand_exists`` but take the the hereditary substitution or expansion as an input.
+%[[ The proof is a straightforward induction, using ``hsubst_m_exists`` and ``expand_exists``.  Because these two lemmas _output_ a hereditary substitution or expansion, along with the typing derivation for the result of the operation, we use uniqueness here to show well-typedness of the outputs of the hereditary substitution and expansion derivations given by elaboration.  In retrospect, we should have factored this reasoning into separate lemmas that are like ``hsubst_m_exists`` and ``expand_exists`` but take the the hereditary substitution or expansion as an input.
 
 ### Existence of elaboration
 
-We require one addtional [respects lemma](/wiki/respects-lemma/). !}%
+We require one addtional [respects lemma](/wiki/respects-lemma/). %]]
 %sort elab_r2m_respects_id {_ id/mtm M M'} {_ id/tp A A'} {_ elab_r_to_m R M A} {_ elab_r_to_m R M' A'} %.
 %mode elab_r2m_respects_id %in %in %in %out %.
 %term _ elab_r2m_respects_id _ _ D D %.
@@ -1026,13 +1026,13 @@ We require one addtional [respects lemma](/wiki/respects-lemma/). !}%
 %% bar in other block
 %total () (elab_r2m_respects_id _ _ _ _) %.
 %reduces = D1 D2 (elab_r2m_respects_id _ _ D2 D1) %.
-%{! The worlds of this lemma require a little explanation.  ``elab_reg_block`` should equal ``elab_block`` for this type family.  However, [world subsumption](/wiki/world-subsumption/) does not notice this relationship because doing so would require permutation.  Consequently, we prove the theorem for both blocks directly.
+%[[ The worlds of this lemma require a little explanation.  ``elab_reg_block`` should equal ``elab_block`` for this type family.  However, [world subsumption](/wiki/world-subsumption/) does not notice this relationship because doing so would require permutation.  Consequently, we prove the theorem for both blocks directly.
 
-Next, we prove that all well-typed terms elaborate.  Analogously to hereditary substitution, the theorem for synthesizing terms computes a sum of the two ways it could elaborate: !}%
+Next, we prove that all well-typed terms elaborate.  Analogously to hereditary substitution, the theorem for synthesizing terms computes a sum of the two ways it could elaborate: %]]
 %sort elab_r_exists_sum {_ el_rtm} {_ tp} %.
 %term elab_r_exists_sum_r2r %pi (elab_r_exists_sum ER A) %<- (elab_r_to_r ER R A) %.
 %term elab_r_exists_sum_r2m %pi (elab_r_exists_sum ER A) %<- (elab_r_to_m ER M A) %.
-%{! We begin with some [output factoring](/wiki/output-factoring/) and [canonical forms](/wiki/canonical-form/) lemmas: !}%
+%[[ We begin with some [output factoring](/wiki/output-factoring/) and [canonical forms](/wiki/canonical-form/) lemmas: %]]
 %sort elab_m_exists_asm {_ elab_r_exists_sum ER A} {_ elab_m (el_asm ER) M' A} %.
 %mode elab_m_exists_asm %in %out %.
 %term _ elab_m_exists_asm (elab_r_exists_sum_r2m DeR) (elab_m_asm_r2m DeR) %.
@@ -1085,7 +1085,7 @@ Next, we prove that all well-typed terms elaborate.  Analogously to hereditary s
 	%<- (hsubst_m_exists _ DcBody DcM2 Ds _) %.
 %worlds (elab_reg_block) (elab_r_exists_app _ _ _) %.
 %total () (elab_r_exists_app _ _ _) %.
-%{! Finally, we prove the main results: !}%
+%[[ Finally, we prove the main results: %]]
 %sort elab_m_exists {_ check EM A} {_ elab_m EM M A} %.
 %mode elab_m_exists %in %out %.
 %sort elab_r_exists {_ synth ER A} {_ elab_r_exists_sum ER A} %.
@@ -1124,13 +1124,13 @@ Next, we prove that all well-typed terms elaborate.  Analogously to hereditary s
 %block elab_exists_block {A tp} [el_x el_rtm] [delx synth el_x A] [x rtm] [dx atom x A] [delabx elab_r_to_r el_x x A] [_ elab_r2r_reg delabx delx dx] [_ elab_r_exists delx (elab_r_exists_sum_r2r delabx)]%.
 %worlds (elab_exists_block) (elab_m_exists _ _) (elab_r_exists _ _) %.
 %total (D1 D2) (elab_m_exists D1 _) (elab_r_exists D2 _) %.
-%{! ``>All Twelf code for this tutorial.``
+%[[ ``>All Twelf code for this tutorial.``
 `` check="true">See Twelf's output.``
 
-\{\{case study\}\} !}%
-%{!
+\{\{case study\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Hereditary_substitution_for_the_STLC_(part_2)).
-!}%
+%]]

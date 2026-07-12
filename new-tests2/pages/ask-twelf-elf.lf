@@ -13,7 +13,7 @@ Some responses to questions turn into other forms of [documentation](/wiki/docum
 
 * [Manipulating proof witnesses](/wiki/manipulating-proof-witnesses-as-inputs/) - running a [``%solve``](/wiki/percent-solve/) creates a proof object if it is successful. But what if you want to manipulate such proof objects within the context of a single ``%solve``? The cost of the ability to do this is writing a bunch of [effectiveness lemmas](/wiki/effectiveness-lemma/) - in this case, if you were working with relations which were not total functions, they could be called _effectiveness relations._
 
-* [Concrete representations](/wiki/concrete-representation/) - [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/) is a convenient way to approach languages with binding, but it is possible to imagine a problem where manipulating a fully concrete object without binding is simpler. In these cases, it is possible to establish a bijection between your HOAS terms and de Bruijn versions of the same terms. !}%
+* [Concrete representations](/wiki/concrete-representation/) - [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/) is a convenient way to approach languages with binding, but it is possible to imagine a problem where manipulating a fully concrete object without binding is simpler. In these cases, it is possible to establish a bijection between your HOAS terms and de Bruijn versions of the same terms. %]]
 
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.

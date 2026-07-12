@@ -1,0 +1,26 @@
+0:0-0:25	comment	`%                        `
+1:0-1:93	comment	`%                                                                                            `
+2:1-2:2	punctuation.bracket	`[`
+2:2-2:3	punctuation.bracket	`[`
+2:12-2:24	keyword	`%querytabled`
+2:68-2:69	punctuation.bracket	`[`
+2:93-2:94	punctuation.bracket	`]`
+2:94-2:95	punctuation.bracket	`(`
+2:126-2:127	punctuation.bracket	`)`
+2:183-2:184	punctuation.bracket	`[`
+2:195-2:196	punctuation.bracket	`]`
+2:196-2:197	punctuation.bracket	`(`
+2:218-2:219	punctuation.bracket	`)`
+2:311-2:312	punctuation.bracket	`[`
+2:314-2:320	keyword	`%query`
+2:322-2:323	punctuation.bracket	`]`
+2:323-2:324	punctuation.bracket	`(`
+2:344-2:345	punctuation.bracket	`)`
+6:2-6:3	punctuation.bracket	`[`
+6:27-6:28	punctuation.bracket	`]`
+6:28-6:29	punctuation.bracket	`(`
+6:60-6:61	punctuation.bracket	`)`
+7:18-7:19	number	`5`
+7:30-7:32	number	`31`
+10:1-10:2	punctuation.bracket	`]`
+10:2-10:3	punctuation.bracket	`]`

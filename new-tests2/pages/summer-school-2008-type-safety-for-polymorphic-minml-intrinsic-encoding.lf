@@ -1,18 +1,18 @@
 %                                                                                     
-%{! 
+%[[ 
 MinML: call-by-value, with recursive functions, using an intrinsic encoding
-!}%
-%{! 
+%]]
+%[[ 
 ## Types
-!}%
+%]]
 %sort tp %.
 %name tp %.
 %term nat tp %.
 %term arr %pi tp %-> tp %-> tp %.
 %term all %pi (%pi tp %-> tp) %-> tp %.
-%{! 
+%[[ 
 ## Syntax / static semantics
-!}%
+%]]
 %sort exp {_ tp} %.
 %name exp %.
 %term z exp nat %.
@@ -22,9 +22,9 @@ MinML: call-by-value, with recursive functions, using an intrinsic encoding
 %term app %pi (exp (arr T2 T)) %-> (exp T2) %-> (exp T) %.
 %term tfun %pi ({a tp} exp (T a)) %-> (exp (all ([a] T a))) %.
 %term tapp %pi (exp (all ([a] T a))) %-> ({T2 tp} exp (T T2)) %.
-%{! 
+%[[ 
 ## Dynamic Semantics / Preservation
-!}%
+%]]
 %sort value {_ exp T} %.
 %name value %.
 %mode value %in %.
@@ -46,19 +46,19 @@ MinML: call-by-value, with recursive functions, using an intrinsic encoding
 	%<- (value E2) %.
 %term step/tapp/tfun %pi (step (tapp E T) (tapp E' T)) %<- (step E E') %.
 %term step/tapp/beta step (tapp (tfun ([a] E a)) T) (E T) %.
-%{! 
+%[[ 
 ## Progress
-!}%
+%]]
 %sort val-or-step {_ exp T} %.
 %name val-or-step %.
 %term vos/val %pi (val-or-step E) %<- (value E) %.
 %term vos/step %pi (val-or-step E) %<- (step E _) %.
-%{! 
+%[[ 
 ### Factoring lemmas
 
 These are necessary for case-analyzing the results of recursive calls.
 
-!}%
+%]]
 %sort prog/s {_ val-or-step E} {_ val-or-step (s E)} %.
 %mode prog/s %in %out %.
 %term _ prog/s (vos/step Dstep) (vos/step (step/s Dstep)) %.
@@ -85,9 +85,9 @@ These are necessary for case-analyzing the results of recursive calls.
 %term _ prog/tapp (vos/val Dval) _ _ step/tapp/beta %.
 %worlds () (prog/tapp _ _ _ _) %.
 %total () (prog/tapp _ _ _ _) %.
-%{! 
+%[[ 
 ## Main theorem
-!}%
+%]]
 %sort prog {E exp T} {_ val-or-step E} %.
 %mode prog %in %out %.
 %term _ prog z (vos/val value/z) %.
@@ -109,12 +109,12 @@ These are necessary for case-analyzing the results of recursive calls.
 	%<- (prog/tapp Dvos _ _ Dstep) %.
 %worlds () (prog _ _) %.
 %total Dof (prog Dof _) %.
-%{! 
+%[[ 
 And thus we have proved type safety for MinML with polymorphism!
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Summer_school_2008:Type_safety_for_polymorphic_MinML_(intrinsic_encoding)).
-!}%
+%]]

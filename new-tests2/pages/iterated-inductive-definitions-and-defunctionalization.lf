@@ -57,9 +57,9 @@
 %covers eval %in %out %.
 %unique eval %in %out %.
 %query 1 _ _ eval (let (n (s s z)) ([two] let (n (s s s z)) ([three] @ plus two (@ times two three)))) N %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Iterated_inductive_definitions_and_defunctionalization).
-!}%
+%]]

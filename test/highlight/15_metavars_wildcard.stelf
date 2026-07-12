@@ -1,0 +1,4 @@
+%define poly nat {{X}} X
+%define k nat [_] zero
+%define f nat [x nat] x
+%decl (eq _X _Y)

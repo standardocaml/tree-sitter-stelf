@@ -1,5 +1,5 @@
 %                                   
-%{!
+%[[
 By [Rob Simmons](/wiki/user-rsimmons/).
 
 Focusing, introduced by Jean-Marc Andreoli in the context of classical linear
@@ -18,17 +18,17 @@ This version follows the on-paper version very directly; the cost is
 that the `id⁻` rule and the admissible `subst⁻` focal substitution
 principle have to be written out instead of given for free by LF substitution
 as the `id⁺` rule and `subst⁻` substitution principles are. 
-!}%
+%]]
 %sort small %.
 %sort big %.
 %term s small %.
 %term b %pi small %-> big %.
-%{! ## Syntax !}%
+%[[ ## Syntax %]]
 %sort pol %.
 %name pol %.
 %term ⁺ pol %.
 %term ⁻ pol %.
-%{! We define propositions in an environment with free atoms. !}%
+%[[ We define propositions in an environment with free atoms. %]]
 %sort atom {_ pol} %.
 %name atom %.
 %block atom⁺ [Q⁺ atom ⁺]%.
@@ -49,7 +49,7 @@ as the `id⁺` rule and `subst⁻` substitution principles are.
 %term ⊤⁻ typ ⁻ %.
 %term ∧⁻ %pi (typ ⁻) %-> (typ ⁻) %-> (typ ⁻) %.
 %prec %none 5 ∧⁻ %.
-%{! Succedents are things that come to the right of the turnstile. !}%
+%[[ Succedents are things that come to the right of the turnstile. %]]
 %sort suc %.
 %name suc %.
 %term inv %pi (typ ⁻) %-> suc %.
@@ -58,18 +58,18 @@ as the `id⁺` rule and `subst⁻` substitution principles are.
 %prec %postfix 3 true %.
 %term susp %pi (typ ⁻) %-> suc %.
 %prec %postfix 3 susp %.
-%{! Right-stable judgments are ones that are either positive or suspended. !}%
+%[[ Right-stable judgments are ones that are either positive or suspended. %]]
 %sort stable {_ suc} %.
 %name stable %.
 %term sp stable (A⁺ true) %.
 %term sn stable (A⁻ susp) %.
-%{! An inversion context ``Ω'' is a list of positive propositions. !}%
+%[[ An inversion context ``Ω'' is a list of positive propositions. %]]
 %sort pos %.
 %name pos %.
 %term · pos %.
 %term , %pi (typ ⁺) %-> pos %-> pos %.
 %prec %right 3 , %.
-%{! ## Sequent calculus !}%
+%[[ ## Sequent calculus %]]
 %sort seqform %.
 %name seqform %.
 %sort exp {_ seqform} %.
@@ -101,22 +101,22 @@ as the `id⁺` rule and `subst⁻` substitution principles are.
 %sort suspnormalF {_ seqform} %.
 %term snr suspnormalF (rfoc A⁺) %.
 %term snl %pi (suspnormalF (hasleft _ U)) %<- (suspnormal U) %.
-%{! ### Values !}%
-%{!
+%[[ ### Values %]]
+%[[
 ``V ::= z | thunk N | inl V | inr V | ⟨⟩⁺ | ⟨V₁,V₂⟩⁺``
 
 The rule `id⁺` corresponding to the proof term `z` comes for free
 from LF.
-!}%
+%]]
 %term ↓R %pi (term · (A⁻ inv)) %-> (value (↓ A⁻)) %.
 %term ∨R₁ %pi (value A⁺) %-> (value (A⁺ ∨ B⁺)) %.
 %term ∨R₂ %pi (value B⁺) %-> (value (A⁺ ∨ B⁺)) %.
 %term ⊤⁺R value ⊤⁺ %.
 %term ∧⁺R %pi (value A⁺) %-> (value B⁺) %-> (value (A⁺ ∧⁺ B⁺)) %.
-%{! ### Terms !}%
-%{! 
+%[[ ### Terms %]]
+%[[ 
 ``M ::= ret V | x • Sp | ⟨z⟩.N | x.N | abort | [N₁, N₂] | ⟨⟩.N | ×N | ⟨N⟩ | {N} | λN | ⟨⟩⁻ | ⟨N₁,N₂⟩⁻``
-!}%
+%]]
 %term focR %pi (value A⁺) %-> (term · (A⁺ true)) %.
 %term focL %pi (stable Suc) %-> (hyp A⁻) %-> (spine A⁻ Suc) %-> (term · Suc) %.
 %term η⁺ %pi (%pi (value (c Q⁺)) %-> (term _Ω Suc)) %-> (term (c Q⁺ , _Ω) Suc) %.
@@ -130,24 +130,24 @@ from LF.
 %term ⊃R %pi (term (A⁺ , ·) (B⁻ inv)) %-> (term · (A⁺ ⊃ B⁻ inv)) %.
 %term ⊤⁻R term · (⊤⁻ inv) %.
 %term ∧⁻R %pi (term · (A⁻ inv)) %-> (term · (B⁻ inv)) %-> (term · (A⁻ ∧⁻ B⁻ inv)) %.
-%{! ### Spines !}%
-%{! 
+%[[ ### Spines %]]
+%[[ 
 ``Sp ::= nil | pm N | V;Sp | π₁;Sp | π₂;Sp``
-!}%
+%]]
 %term id⁻ spine A⁻ (A⁻ susp) %.
 %term ↑L %pi (stable Suc) %-> (term (A⁺ , ·) Suc) %-> (spine (↑ A⁺) Suc) %.
 %term ⊃L %pi (value A⁺) %-> (spine B⁻ Suc) %-> (spine (A⁺ ⊃ B⁻) Suc) %.
 %term ∧⁻L₁ %pi (spine A⁻ Suc) %-> (spine (A⁻ ∧⁻ B⁻) Suc) %.
 %term ∧⁻L₂ %pi (spine B⁻ Suc) %-> (spine (A⁻ ∧⁻ B⁻) Suc) %.
-%{! ### Negative focal substitution !}%
-%{! Our encoding gives us positive focal substitution for free - it's
+%[[ ### Negative focal substitution %]]
+%[[ Our encoding gives us positive focal substitution for free - it's
 very natural to describe suspended propositions `⟨A⁺⟩` in the
 hypothetical context as variables of type `rfoc A⁺`, which is
 adequate and gives us the `id⁺` rule for free. By choosing a more
 traditional way of describing negative suspended propositions (instead
 of the complicated encoding that gives us `id⁻` for free), we have
 forced ourselves to prove a theorem, negative focal substitution, that
-we could have avoided. !}%
+we could have avoided. %]]
 %sort subst⁻ {_ stable U} {_ exp (hasleft L (A⁻ susp))} {_ spine A⁻ U} {_ exp (hasleft L U)} %.
 %mode subst⁻ %in %in %in %out %.
 %term _ %pi (subst⁻ Pf (focL _ X Sp0) Sp (focL Pf X Sp0')) %<- (subst⁻ Pf Sp0 Sp Sp0') %.
@@ -171,8 +171,8 @@ we could have avoided. !}%
 %term _ %pi (subst⁻ Pf (∧⁻L₂ Sp0) Sp (∧⁻L₂ Sp0')) %<- (subst⁻ Pf Sp0 Sp Sp0') %.
 %worlds (gamma) (subst⁻ _ _ _ _) %.
 %total E (subst⁻ _ E _ _) %.
-%{! ## Cut admissibility !}%
-%{! Cut admissibility has a couple of mutually inductive theorems, but
+%[[ ## Cut admissibility %]]
+%[[ Cut admissibility has a couple of mutually inductive theorems, but
 no more than is absolutely necessary given the syntactic classes we're
 dealing with. Furthermore, the different theorems we use neatly sort
 out the informal division of cases that we are used to dealing with
@@ -180,23 +180,23 @@ when proving cut admissibility theorems. The "principal" substitutions
 capture the principal cuts:
 
 * ``V • Ni`` - positive cut formula, and
-* ``N • Sp`` - negative cut formula. !}%
+* ``N • Sp`` - negative cut formula. %]]
 %sort cut⁺ {A⁺} {_ small} {_ suspnormal U} {_ value A⁺} {_ term (A⁺ , _Ω) U} {_ term _Ω U} %.
 %sort cut⁻ {A⁻} {_ small} {_ suspstable U} {_ term · (A⁻ inv)} {_ spine A⁻ U} {_ term · U} %.
 %mode cut⁺ %in %in %in %in %in %out %.
 %mode cut⁻ %in %in %in %in %in %out %.
-%{! The "rightist" substitution ``[[N/x]]E`` captures all right
+%[[ The "rightist" substitution ``[[N/x]]E`` captures all right
 commutative cuts. Each inductive call within this group decreases the
-size of the expression E that we are substituting into. !}%
+size of the expression E that we are substituting into. %]]
 %sort rsubst {A⁻} {_ big} {_ suspnormalF Form} {_ term · (A⁻ inv)} {_ %pi (hyp A⁻) %-> (exp Form)} {_ exp Form} %.
 %mode rsubst %in %in %in %in %in %out %.
-%{! The "leftist" substitution ``<<E>>N`` captures all left commutative
+%[[ The "leftist" substitution ``<<E>>N`` captures all left commutative
 cuts.  Each inductive call within this group decreases the size of the
-expression E that we are substituting in, hence "leftist." !}%
+expression E that we are substituting in, hence "leftist." %]]
 %sort lsubst {A⁺} {_ big} {_ suspstable U} {_ exp (hasleft L (A⁺ true))} {_ term (A⁺ , ·) U} {_ exp (hasleft L U)} %.
 %mode lsubst %in %in %in %in %in %out %.
-%{! ### Principal substitution/cuts !}%
-%{! ``(V • N) = N'`` !}%
+%[[ ### Principal substitution/cuts %]]
+%[[ ``(V • N) = N'`` %]]
 %term _ cut⁺ (c Q⁺) S _ X (η⁺ ([z] N z)) (N X) %.
 %term _ 
 	%pi (cut⁺ (↓ A⁻) s Pf (↓R M) (↓L N) N')
@@ -212,7 +212,7 @@ expression E that we are substituting in, hence "leftist." !}%
 	%pi (cut⁺ (A⁺ ∧⁺ B⁺) S Pf (∧⁺R V₁ V₂) (∧⁺L N) N')
 	%<- (cut⁺ A⁺ S Pf V₁ N (%the (term (B⁺ , _Ω) U) NB))
 	%<- (cut⁺ B⁺ S Pf V₂ NB (%the (term _Ω U) N')) %.
-%{! ``(M • Sp) = N'`` !}%
+%[[ ``(M • Sp) = N'`` %]]
 %term _ cut⁻ (c Q⁻) S Pf (η⁻ N) id⁻ N %.
 %term _ %pi (cut⁻ (↑ A⁺) s Pf (↑R N) (↑L _ M) N') %<- (lsubst A⁺ (b s) Pf N M N') %.
 %term _ 
@@ -225,8 +225,8 @@ expression E that we are substituting in, hence "leftist." !}%
 %term _ 
 	%pi (cut⁻ (A⁻ ∧⁻ B⁻) S Pf (∧⁻R N₁ N₂) (∧⁻L₂ Sp) N')
 	%<- (cut⁻ B⁻ S Pf N₂ Sp (%the (term · U) N')) %.
-%{! ### Rightist substitution (right commutative cuts) !}%
-%{! ``[[M/x]]V = V' `` !}%
+%[[ ### Rightist substitution (right commutative cuts) %]]
+%[[ ``[[M/x]]V = V' `` %]]
 %term _ rsubst A⁻ S snr M ([x] V) (%the (value (c Q⁺)) V) %.
 %term _ 
 	%pi (rsubst A⁻ S snr M ([x] ↓R (N x)) (↓R N'))
@@ -242,7 +242,7 @@ expression E that we are substituting in, hence "leftist." !}%
 	%pi (rsubst A⁻ S snr M ([x] ∧⁺R (V₁ x) (V₂ x)) (∧⁺R V₁' V₂'))
 	%<- (rsubst A⁻ S snr M ([x] V₁ x) (%the (value C₁⁺) V₁'))
 	%<- (rsubst A⁻ S snr M ([x] V₂ x) (%the (value C₂⁺) V₂')) %.
-%{! ``[[M/x]]N = N' `` !}%
+%[[ ``[[M/x]]N = N' `` %]]
 % Entering principal substitution (cut⁻)
 %term _ 
 	%pi (rsubst A⁻ (b s) (snl Pf) M ([x] focR (V x)) (focR V'))
@@ -285,7 +285,7 @@ expression E that we are substituting in, hence "leftist." !}%
 	%pi (rsubst A⁻ S (snl snn) M ([x] ∧⁻R (N₁ x) (N₂ x)) (∧⁻R N₁' N₂'))
 	%<- (rsubst A⁻ S (snl snn) M ([x] N₁ x) (%the (term · (C₁⁻ inv)) N₁'))
 	%<- (rsubst A⁻ S (snl snn) M ([x] N₂ x) (%the (term · (C₂⁻ inv)) N₂')) %.
-%{! ``[[M/x]]Sp = Sp' `` !}%
+%[[ ``[[M/x]]Sp = Sp' `` %]]
 %term _ rsubst A⁻ S (snl sna) M ([x] id⁻) id⁻ %.
 %term _ 
 	%pi (rsubst A⁻ S (snl Pf) M ([x] ↑L Pf' (N x)) (↑L Pf' N'))
@@ -300,8 +300,8 @@ expression E that we are substituting in, hence "leftist." !}%
 %term _ 
 	%pi (rsubst A⁻ S (snl Pf) M ([x] ∧⁻L₂ (Sp x)) (∧⁻L₂ Sp'))
 	%<- (rsubst A⁻ S (snl Pf) M ([x] Sp x) (%the (spine B₂⁻ U) Sp')) %.
-%{! ### Leftist substitution (left commutative cuts) !}%
-%{! ``<<M>>N = M' `` !}%
+%[[ ### Leftist substitution (left commutative cuts) %]]
+%[[ ``<<M>>N = M' `` %]]
 % Entering principal substitution (cut⁺)
 %term _ %pi (lsubst A⁺ (b s) (ss Pf Pf') (focR V) N N') %<- (cut⁺ A⁺ s Pf' V N N') %.
 %term _ 
@@ -324,7 +324,7 @@ expression E that we are substituting in, hence "leftist." !}%
 %term _ 
 	%pi (lsubst A⁺ S Pf (∧⁺L M) N (∧⁺L M'))
 	%<- (lsubst A⁺ S Pf M N (%the (term (B₁⁺ , B₂⁺ , _Ω) U) M')) %.
-%{! ``<<Sp>>N = Sp' `` !}%
+%[[ ``<<Sp>>N = Sp' `` %]]
 %term _ 
 	%pi (lsubst A⁺ S (ss Pf Pf') (↑L _ M) N (↑L Pf M'))
 	%<- (lsubst A⁺ S (ss Pf Pf') M N (%the (term (B⁺ , ·) U) M')) %.
@@ -337,26 +337,26 @@ expression E that we are substituting in, hence "leftist." !}%
 %term _ 
 	%pi (lsubst A⁺ S Pf (∧⁻L₂ Sp) N (∧⁻L₂ Sp'))
 	%<- (lsubst A⁺ S Pf Sp N (%the (spine B₂⁻ U) Sp')) %.
-%{! ### Wrap-up !}%
+%[[ ### Wrap-up %]]
 %worlds (gamma_suspnormal) (cut⁺ _ _ _ _ _ _) (cut⁻ _ _ _ _ _ _) (rsubst _ _ _ _ _ _) (lsubst _ _ _ _ _ _) %.
-%{! With the exception of the "big/small" metric that allows the
+%[[ With the exception of the "big/small" metric that allows the
 leftist and rightist substitutions to call principal substitutions at
 the same type, this is the usual induction metric for structural cut
-elimination arguments. !}%
+elimination arguments. %]]
 %total {(A1 A2 A3 A4) {(S1 S2 S3 S4) [(V N⁻ MR EL) (N⁺ S ER NL)]}} (cut⁺ A1 S1 _ V N⁺ _) (cut⁻ A2 S2 _ N⁻ S _) (rsubst A3 S3 _ MR ER _) (lsubst A4 S4 _ EL NL _) %.
-%{! The following simpler induction metric also works, emphasizing that
+%[[ The following simpler induction metric also works, emphasizing that
 the "derivation" metric matters not at all in the principal cases,
 that the rightist substitutions are structurally inductive over the
 second given derivation (the "right" derivation) and that the leftist
 substitutions are structurally inductive over the first given
-derivation (the "left" derivation). !}%
+derivation (the "left" derivation). %]]
 %total {(A1 A2 A3 A4) {(S1 S2 S3 S4) (S1 S2 ER EL)}} (cut⁻ A1 S1 _ _ _ _) (cut⁺ A2 S2 _ _ _ _) (rsubst A3 S3 _ _ ER _) (lsubst A4 S4 _ EL _ _) %.
-%{! ## Expansion !}%
+%[[ ## Expansion %]]
 %sort expand⁺ {A⁺} {_ %pi (value A⁺) %-> (term _Ω U)} {_ term (A⁺ , _Ω) U} %.
 %sort expand⁻ {A⁻} {_ term · (A⁻ susp)} {_ term · (A⁻ inv)} %.
 %mode expand⁺ %in %in %out %.
 %mode expand⁻ %in %in %out %.
-%{! ``η(z.N) = N' ``!}%
+%[[ ``η(z.N) = N' ``%]]
 %term _ expand⁺ (c Q⁺) ([z value (c Q⁺)] N z) (η⁺ ([z value (c Q⁺)] N z)) %.
 %term _ 
 	%pi (expand⁺ (↓ A⁻) ([z value (↓ A⁻)] N z) (↓L ([x hyp A⁻] N (↓R (N' x)))))
@@ -371,7 +371,7 @@ derivation (the "left" derivation). !}%
 	%pi (expand⁺ (A⁺ ∧⁺ B⁺) ([z value (A⁺ ∧⁺ B⁺)] N z) (∧⁺L N₂))
 	%<- ({z₁ value A⁺} expand⁺ B⁺ ([z₂ value B⁺] N (∧⁺R z₁ z₂)) (%the (term (B⁺ , _Ω) U) (N₁ z₁)))
 	%<- (expand⁺ A⁺ ([z₁ value A⁺] N₁ z₁) (%the (term (A⁺ , B⁺ , _Ω) U) N₂)) %.
-%{! ``η(s.N) = N' `` !}%
+%[[ ``η(s.N) = N' `` %]]
 %term _ expand⁻ (c Q⁻) N (η⁻ N) %.
 %term _ 
 	%pi (expand⁻ (↑ A⁺) N (↑R N''))
@@ -391,9 +391,9 @@ derivation (the "left" derivation). !}%
 	%<- (expand⁻ B⁻ N₂ (%the (term · (B⁻ inv)) N₂')) %.
 %worlds (gamma) (expand⁺ _ _ _) (expand⁻ _ _ _) %.
 %total (A⁺ A⁻) (expand⁺ A⁺ _ _) (expand⁻ A⁻ _ _) %.
-%{! Identity is a corollary, though we'll only use it at the very end
+%[[ Identity is a corollary, though we'll only use it at the very end
 when we prove the identity principle for the unfocused sequent
-calculus: !}%
+calculus: %]]
 %sort identity⁻ {_ %pi (hyp A⁻) %-> (term · (A⁻ inv))} %.
 %mode {%in A⁻} {%out N %pi (hyp A⁻) %-> (term · (A⁻ inv))} identity⁻ N %.
 %term _ 
@@ -408,16 +408,16 @@ calculus: !}%
 	%<- (expand⁺ A⁺ ([z value A⁺] focR z) (%the (term (A⁺ , ·) (A⁺ true)) N)) %.
 %worlds (gamma) (identity⁺ _) %.
 %total [] (identity⁺ _) %.
-%{! ## Unfocused admissibility !}%
-%{! The key lemmas for establishing the completeness of the focused
+%[[ ## Unfocused admissibility %]]
+%[[ The key lemmas for establishing the completeness of the focused
 sequent calculus are the "unfocused admissibility" lemmas, which
 establish that the normal rules of the sequent calculus are usable in
 the context of the focused calculus.
 
 These lemmas are all provable by use of the cut and identity
 principles; while the proofs are hardly straightforward, they share 
-a certain high-level structure. !}%
-%{! ### Initial rules !}%
+a certain high-level structure. %]]
+%[[ ### Initial rules %]]
 %sort adm-initsusp⁻ {_ %pi (hyp (c Q)) %-> (term · (c Q susp))} %.
 %mode {%in Q} {%out N %pi (hyp (c Q)) %-> (term · (c Q susp))} adm-initsusp⁻ N %.
 %term _ adm-initsusp⁻ ([x hyp (c Q)] focL sn x id⁻) %.
@@ -438,7 +438,7 @@ a certain high-level structure. !}%
 %term _ adm-init⁺ ([x hyp (↑ (c Q))] focL sp x (↑L sp (η⁺ ([z] focR z)))) %.
 %worlds (gamma_suspnormal) (adm-init⁺ _) %.
 %total [] (adm-init⁺ _) %.
-%{! ### Disjunction !}%
+%[[ ### Disjunction %]]
 %sort adm-⊥L {_ stable U} {_ %pi (hyp (↑ ⊥)) %-> (term · U)} %.
 %mode adm-⊥L %in %out %.
 %term _ adm-⊥L Pf ([x hyp (↑ ⊥)] focL Pf x (↑L Pf ⊥L)) %.
@@ -469,7 +469,7 @@ a certain high-level structure. !}%
 	%<- (lsubst (↓ (↑ A⁺) ∨ ↓ (↑ B⁺)) (b s) (ss Pf Pf') (∨L NId₁ NId₂) (∨L (↓L N₁) (↓L N₂)) (%the (term (A⁺ ∨ B⁺ , ·) U) N')) %.
 %worlds (gamma_suspnormal) (adm-∨L _ _ _ _) %.
 %total [] (adm-∨L _ _ _ _) %.
-%{! ### Positive conjunction !}%
+%[[ ### Positive conjunction %]]
 %sort adm-⊤⁺R {_ term · (⊤⁺ true)} %.
 %mode adm-⊤⁺R %out %.
 %term _ adm-⊤⁺R (focR ⊤⁺R) %.
@@ -499,7 +499,7 @@ a certain high-level structure. !}%
 	%<- (lsubst (↓ (↑ A⁺) ∧⁺ ↓ (↑ B⁺)) (b s) (ss Pf Pf') (∧⁺L NId) (∧⁺L (↓L ([x₁ hyp (↑ A⁺)] ↓L ([x₂ hyp (↑ B⁺)] N₁ x₁ x₂)))) (%the (term (A⁺ ∧⁺ B⁺ , ·) U) N')) %.
 %worlds (gamma_suspnormal) (adm-∧⁺L _ _ _) %.
 %total [] (adm-∧⁺L _ _ _) %.
-%{! ### Implication !}%
+%[[ ### Implication %]]
 %sort adm-⊃R {_ %pi (hyp (↑ A⁺)) %-> (term · (↓ B⁻ true))} {_ term · (↓ (A⁺ ⊃ B⁻) true)} %.
 %mode adm-⊃R %in %out %.
 %term _ 
@@ -519,7 +519,7 @@ a certain high-level structure. !}%
 	%<- ({x hyp (A⁺ ⊃ B⁻)} lsubst (↓ B⁻) (b s) (ss Pf Pf') (NB x) (↓L ([x₂ hyp B⁻] N₂ x₂)) (%the (term · U) (N' x))) %.
 %worlds (gamma_suspnormal) (adm-⊃L _ _ _ _) %.
 %total [] (adm-⊃L _ _ _ _) %.
-%{! ### Negative conjunction !}%
+%[[ ### Negative conjunction %]]
 %sort adm-⊤⁻R {_ term · (↓ ⊤⁻ true)} %.
 %mode adm-⊤⁻R %out %.
 %term _ adm-⊤⁻R (focR (↓R ⊤⁻R)) %.
@@ -550,8 +550,8 @@ a certain high-level structure. !}%
 	%<- ({x hyp (A⁻ ∧⁻ B⁻)} rsubst B⁻ (b s) (snl Pf) (NId x) N₂ (%the (term · U) (N' x))) %.
 %worlds (gamma_suspnormal) (adm-∧⁻L₂ _ _ _) %.
 %total [] (adm-∧⁻L₂ _ _ _) %.
-%{! ## Unfocused system !}%
-%{! ### Syntax !}%
+%[[ ## Unfocused system %]]
+%[[ ### Syntax %]]
 %sort prop %.
 %name prop %.
 %term a %pi (atom P) %-> prop %.
@@ -565,10 +565,10 @@ a certain high-level structure. !}%
 %term ○ props %.
 %term ; %pi prop %-> props %-> props %.
 %prec %right 3 ; %.
-%{! ### Erasure !}%
-%{! The judgment ``t P A`` relates unpolarized propositions ``P`` and
+%[[ ### Erasure %]]
+%[[ The judgment ``t P A`` relates unpolarized propositions ``P`` and
 polarized propositions ``A``. The judgment can be effectively run as
-an erasure function from polarized to unpolarized propositions. !}%
+an erasure function from polarized to unpolarized propositions. %]]
 %sort t {_ typ P} {_ prop} %.
 %name t %.
 %term tQ t (c Q) (a Q) %.
@@ -600,12 +600,12 @@ an erasure function from polarized to unpolarized propositions. !}%
 %term tV %pi (tseq (rfoc A⁺) ○ P) %<- (t A⁺ P) %.
 %term tN %pi (tseq (hasleft (ininv _Ω) U) _Ψ Q) %<- (tU U Q) %<- (tΩ _Ω _Ψ) %.
 %term tS %pi (tseq (hasleft (infoc A⁻) U) (P ; ○) Q) %<- (tU U Q) %<- (t A⁻ P) %.
-%{! ### Shift removal !}%
-%{! There may be a more elegant way to do this, but the last missing
+%[[ ### Shift removal %]]
+%[[ There may be a more elegant way to do this, but the last missing
 piece of our unfocused admissibility lemma - the last thing we need to
 know about the polarized calculus - is that if we need to prove (or
 use) a deeply-shifted proposition, then it suffices to prove (or use)
-a non-deeply-shifted proposition that erases to the same thing. !}%
+a non-deeply-shifted proposition that erases to the same thing. %]]
 %sort not-doubleshifted {_ typ Pol} %.
 %term ndQ not-doubleshifted (c Q) %.
 %term ndQ⁺ not-doubleshifted (↓ (c Q)) %.
@@ -656,7 +656,7 @@ a non-deeply-shifted proposition that erases to the same thing. !}%
 %term _ lshifty (t∧⁻ T₁ T₂) (t∧⁻ T₁ T₂) nd∧⁻⁻ ([u] [pf] [n] n) %.
 %worlds (gamma_suspnormal) (lshifty _ _ _ _) %.
 %total T (lshifty T _ _ _) %.
-%{! ### Sequent rules !}%
+%[[ ### Sequent rules %]]
 %sort left {_ prop} %.
 %name left %.
 %sort right {_ prop} %.
@@ -685,13 +685,13 @@ a non-deeply-shifted proposition that erases to the same thing. !}%
 	%-> (right Q) %.
 %term nil %pi (right P) %-> (right' ○ P) %.
 %term cons %pi (%pi (left P) %-> (right' _Ψ Q)) %-> (right' (P ; _Ψ) Q) %.
-%{! Syntactic identity on derivations is used for completeness -- it
-keeps the derivation size the same when we do case analysis. !}%
+%[[ Syntactic identity on derivations is used for completeness -- it
+keeps the derivation size the same when we do case analysis. %]]
 %sort id {_ right P} {_ right P} %.
 %term refl id D D %.
-%{! ## De-focalization (soundness) !}%
-%{! Soundness is established in a context where each polarized 
-hypothesis is mapped to its erasure. !}%
+%[[ ## De-focalization (soundness) %]]
+%[[ Soundness is established in a context where each polarized 
+hypothesis is mapped to its erasure. %]]
 %sort soundhyp {_ hyp A⁻} {_ t A⁻ P} {_ left P} %.
 %block soundhyps {A⁻} {P} {T t A⁻ P} [x hyp A⁻] [h left P] [_ soundhyp x T h]%.
 %sort soundsusp {_ value (c Q⁺)} {_ left (a Q⁺)} %.
@@ -788,11 +788,11 @@ hypothesis is mapped to its erasure. !}%
 	%<- (sound Sp (tS T₂ TCQ) (cons ([h₂ left P₂] nil (%the (right Q) (D h₂))))) %.
 %worlds (soundctx) (sound _ _ _) %.
 %total (E) (sound E _ _) %.
-%{! ## Focalization (completeness) !}%
-%{! Completeness is established in a context where each erased
+%[[ ## Focalization (completeness) %]]
+%[[ Completeness is established in a context where each erased
 hypothesis is mapped to some polarization. This is the almost same,
 type-wise, as the context for soundness, but the computational
-interpretation runs the opposite way 'round. !}%
+interpretation runs the opposite way 'round. %]]
 %sort completehyp_res {_ typ Pol} %.
 %term cn %pi (hyp A⁻) %-> (completehyp_res A⁻) %.
 %term ca %pi (value (c Q⁺)) %-> (completehyp_res (c Q⁺)) %.
@@ -812,7 +812,7 @@ interpretation runs the opposite way 'round. !}%
 %total [] (completehyp _ _ _) %.
 %sort complete {_ stable U} {_ right P} {_ tU U P} {_ term · U} %.
 %mode complete %in %in %in %out %.
-%{! ### Initial rules !}%
+%[[ ### Initial rules %]]
 %sort comp-init-susp {_ not-doubleshifted A'} {_ t A' (a Q)} {_ %pi (hyp A') %-> (term · (c Q susp))} %.
 %term _ %pi (comp-init-susp _ tQ M) %<- (adm-initsusp⁻ M) %.
 %mode comp-init-susp %in %in %out %.
@@ -843,7 +843,7 @@ interpretation runs the opposite way 'round. !}%
 	%<- (rshifty T (%the (t Aright' (a Q)) T') (%the (not-doubleshifted Aright') NDright) (%the (%pi (term · (Aright' true)) %-> (term · (Aright true))) NSright))
 	%<- (completehyp H (%the (t Aleft (a Q)) TH) (%the (completehyp_res Aleft) HypRes))
 	%<- (comp-init TH HypRes NDright T' M) %.
-%{! ### Disjunction !}%
+%[[ ### Disjunction %]]
 %sort comp-ffL {_ stable U} {_ not-doubleshifted A'} {_ t A' ff} {_ %pi (hyp A') %-> (term · U)} %.
 %term _ %pi (comp-ffL Pf nd⊥⁻ (t↑ t⊥) M) %<- (adm-⊥L Pf M) %.
 %mode comp-ffL %in %in %in %out %.
@@ -891,7 +891,7 @@ interpretation runs the opposite way 'round. !}%
 	%<- (completehyp H (%the (t A (or P₁ P₂)) TH) (cn (%the (hyp A) X)))
 	%<- (lshifty TH TH' ND NS)
 	%<- (comp-orL Pf (orL D₁ D₂ H) refl ND TH' T M) %.
-%{! ### Conjunction !}%
+%[[ ### Conjunction %]]
 %sort comp-ttR {D right tt} {_ id D ttR} {_ not-doubleshifted A'} {_ t A' tt} {_ term · (A' true)} %.
 %term _ %pi (comp-ttR ttR refl nd⊤⁺⁺ t⊤⁺ M) %<- (adm-⊤⁺R M) %.
 %term _ %pi (comp-ttR ttR refl nd⊤⁻⁺ (t↓ t⊤⁻) M) %<- (adm-⊤⁻R M) %.
@@ -956,7 +956,7 @@ interpretation runs the opposite way 'round. !}%
 	%<- (completehyp H (%the (t A (and P₁ P₂)) TH) (cn (%the (hyp A) X)))
 	%<- (lshifty TH TH' ND NS)
 	%<- (comp-andL₂ Pf (andL₂ D₂ H) refl ND TH' T M) %.
-%{! ### Implication !}%
+%[[ ### Implication %]]
 %sort comp-impR {D right (imp P₁ P₂)} {_ id D (impR D₁)} {_ not-doubleshifted A'} {_ t A' (imp P₁ P₂)} {_ term · (A' true)} %.
 %mode comp-impR %in %in %in %in %out %.
 %term _ 
@@ -982,13 +982,13 @@ interpretation runs the opposite way 'round. !}%
 	%<- (comp-impL Pf (impL D₁ D₂ H) refl ND TH' T M) %.
 %worlds (completectx) (comp-orR₁ _ _ _ _ _) (comp-orR₂ _ _ _ _ _) (comp-orL _ _ _ _ _ _ _) (comp-andR _ _ _ _ _) (comp-andL₁ _ _ _ _ _ _ _) (comp-andL₂ _ _ _ _ _ _ _) (comp-impR _ _ _ _ _) (comp-impL _ _ _ _ _ _ _) (complete _ _ _ _) %.
 %total (D D1 D2 D3 D4 D5 D6 D7 D8) (comp-orR₁ D1 _ _ _ _) (comp-orR₂ D2 _ _ _ _) (comp-orL _ D3 _ _ _ _ _) (comp-andR D4 _ _ _ _) (comp-andL₁ _ D5 _ _ _ _ _) (comp-andL₂ _ D6 _ _ _ _ _) (comp-impR D7 _ _ _ _) (comp-impL _ D8 _ _ _ _ _) (complete _ D _ _) %.
-%{! ## Inheriting the focused calculus's metatheory !}%
-%{! We need the existance of some polarization strategy; we intentionally pick
+%[[ ## Inheriting the focused calculus's metatheory %]]
+%[[ We need the existance of some polarization strategy; we intentionally pick
 a middling, undistinghished sort of translation that translates everything as
 a negative proposition. It will work great on hereditary Harrop formulas and
 not so good if you have lots of disjunction and positive propositions; the only
 interesting thing about it is that its results are reminiscent of Howe's 
-semi-focused lax logic. !}%
+semi-focused lax logic. %]]
 %sort polarize {P} {_ t (%the (typ ⁻) A⁻) P} %.
 %mode polarize %in %out %.
 %term _ polarize (a Q) tQ %.
@@ -1032,24 +1032,24 @@ semi-focused lax logic. !}%
 	%-> (sound (N x) (tN t· (tn TP)) (nil (%the (right P) (D h))))) %.
 %worlds (translate) (unfocused-identity _) %.
 %total [] (unfocused-identity _) %.
-%{! ## Running the theorems !}%
-%{! Here are two unfocused derivations of 
-`(p ∧ q) ⊃ (r ∧ s) ⊃ (p ∧ t)`. !}%
+%[[ ## Running the theorems %]]
+%[[ Here are two unfocused derivations of 
+`(p ∧ q) ⊃ (r ∧ s) ⊃ (p ∧ t)`. %]]
 %define d₁ ({P} {p atom P} {q atom P} {r atom P} {s atom P} right (imp (and (a p) (a q)) (imp (and (a r) (a s)) (and (a p) (a r))))) [P] [p] [q] [r] [s] impR ([h₁ left (and (a p) (a q))] impR ([h₂ left (and (a r) (a s))] andR (andL₁ ([h₁' left (a p)] init h₁') h₁) (andL₁ ([h₂' left (a r)] init h₂') h₂))) %.
 %define d₂ ({P} {p atom P} {q atom P} {r atom P} {s atom P} right (imp (and (a p) (a q)) (imp (and (a r) (a s)) (and (a p) (a r))))) [P] [p] [q] [r] [s] impR ([h₁ left (and (a p) (a q))] impR ([h₂ left (and (a r) (a s))] andL₁ ([h₁' left (a p)] andR (andL₂ ([_] andL₂ ([_] init h₁') h₁) h₁) (andL₁ ([h₂' left (a r)] init h₂') h₂)) h₁)) %.
-%{! Here are three different polarizations. !}%
+%[[ Here are three different polarizations. %]]
 %solve t⁻ : {p} {q} {r} {s} t (↓ (c p ∧⁻ c q) ⊃ (↓ (c r ∧⁻ c s) ⊃ (c p ∧⁻ c r))) _ %.
 %solve t⁺ : {p} {q} {r} {s} t (c p ∧⁺ c q ⊃ (c r ∧⁺ c s ⊃ ↑ (c p ∧⁺ c r))) _ %.
 %solve t⁼ : {p} {q} {r} {s} t (↓ (↑ (c p) ∧⁻ ↑ (c q)) ⊃ ↑ (↓ (↓ (↑ (c r) ∧⁻ ↑ (c s)) ⊃ ↑ (↓ (↑ (c p) ∧⁻ ↑ (c r)))))) _ %.
-%{! Under the same "good" polarization, different derivations translate to a
-single unique proof. !}%
-%{!! begin checked !!}%
+%[[ Under the same "good" polarization, different derivations translate to a
+single unique proof. %]]
+%[[! begin checked !%]]
 %query 1 _ _ {p} {q} {r} {s} complete _ (d₁ ⁻ p q r s) (tp (t↓ (t⁻ p q r s))) (N p q r s) %.
 %query 1 _ _ {p} {q} {r} {s} complete _ (d₂ ⁻ p q r s) (tp (t↓ (t⁻ p q r s))) (N p q r s) %.
-%{!! end checked !!}%
-%{! Different polarizations may lead to very differently shaped derivations. 
-!}%
-%{!! begin checked !!}%
+%[[! end checked !%]]
+%[[ Different polarizations may lead to very differently shaped derivations. 
+%]]
+%[[! begin checked !%]]
 %query 1 _ _ {p} {q} {r} {s} complete _ (d₂ ⁺ p q r s) (tp (t↓ (t⁺ p q r s))) (N p q r s) %.
 %query 1 _ _ {p} {q} {r} {s} complete _ (d₂ ⁺ p q r s) (tp (t↓ (t⁼ p q r s))) (N p q r s) %.
-%{!! end checked !!}%
+%[[! end checked !%]]

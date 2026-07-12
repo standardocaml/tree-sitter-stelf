@@ -1,0 +1,33 @@
+0:0-0:5	keyword.import	`%open`
+0:6-0:11	constructor	`Peano`
+0:6-0:11	local.reference	`Peano`
+0:6-0:11	module	`Peano`
+0:12-0:13	punctuation.bracket	`(`
+0:13-0:17	constructor	`zero`
+0:13-0:17	local.reference	`zero`
+0:18-0:22	constructor	`succ`
+0:18-0:22	local.reference	`succ`
+0:22-0:23	punctuation.bracket	`)`
+0:23-1:4	keyword.import	``
+1:5-1:8	constructor	`Nat`
+1:5-1:8	local.reference	`Nat`
+1:5-1:8	module	`Nat`
+1:9-1:14	constructor	`Peano`
+1:9-1:14	local.reference	`Peano`
+1:9-1:14	module	`Peano`
+1:15-1:16	punctuation.bracket	`(`
+1:16-1:19	constructor	`add`
+1:16-1:19	local.reference	`add`
+1:20-1:23	constructor	`mul`
+1:20-1:23	local.reference	`mul`
+1:23-1:24	punctuation.bracket	`)`
+2:7-2:12	constructor	`Local`
+2:7-2:12	local.reference	`Local`
+2:7-2:12	module	`Local`
+2:13-2:18	keyword	`%term`
+2:19-2:24	constructor	`inner`
+2:19-2:24	function	`inner`
+2:19-2:24	local.reference	`inner`
+2:19-2:24	variable.parameter	`inner`
+2:24-2:28	constructor	` nat`
+2:24-2:28	local.reference	` nat`

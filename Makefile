@@ -112,4 +112,9 @@ clean:
 test:
 	$(TS) test
 
-.PHONY: all install uninstall clean test
+# Verify committed highlight snapshots still match current output.
+# Regenerate them with `python scripts/gen_highlight_snapshots.py`.
+snapshots:
+	python3 scripts/check_highlight_snapshots.py
+
+.PHONY: all install uninstall clean test snapshots

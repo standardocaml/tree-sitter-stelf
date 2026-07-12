@@ -1,0 +1,231 @@
+0:0-0:39	comment	`% Generalizing the language of goals to`
+1:0-1:56	comment	`% allow residuation of disjuction, failure, existential,`
+2:0-2:15	comment	`% and equality.`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:10	constructor	`goal`
+3:6-3:10	local.reference	`goal`
+3:6-3:10	type	`goal`
+3:10-3:13	keyword.return	` %.`
+3:13-4:5	keyword.type	``
+4:6-4:10	constructor	`prog`
+4:6-4:10	local.reference	`prog`
+4:6-4:10	type	`prog`
+4:10-4:13	keyword.return	` %.`
+4:13-5:10	attribute	``
+5:6-5:10	constructor	`goal`
+5:6-5:10	local.reference	`goal`
+5:6-5:10	variable	`goal`
+5:10-5:13	keyword.return	` %.`
+5:13-6:10	attribute	``
+6:6-6:10	constructor	`prog`
+6:6-6:10	local.reference	`prog`
+6:6-6:10	variable	`prog`
+6:10-6:13	keyword.return	` %.`
+7:6-7:11	constructor	`atom'`
+7:6-7:11	function	`atom'`
+7:6-7:11	local.reference	`atom'`
+7:6-7:11	variable.parameter	`atom'`
+7:11-7:15	operator	` %pi`
+7:16-7:17	constructor	`p`
+7:16-7:17	local.reference	`p`
+7:18-7:21	operator	`%->`
+7:22-7:26	constructor	`goal`
+7:22-7:26	local.reference	`goal`
+7:26-7:29	keyword.return	` %.`
+8:6-8:10	constructor	`and'`
+8:6-8:10	function	`and'`
+8:6-8:10	local.reference	`and'`
+8:6-8:10	variable.parameter	`and'`
+8:10-8:14	operator	` %pi`
+8:15-8:19	constructor	`goal`
+8:15-8:19	local.reference	`goal`
+8:20-8:23	operator	`%->`
+8:24-8:28	constructor	`goal`
+8:24-8:28	local.reference	`goal`
+8:28-8:32	operator	` %->`
+8:33-8:37	constructor	`goal`
+8:33-8:37	local.reference	`goal`
+8:37-8:40	keyword.return	` %.`
+9:6-9:12	keyword.modifier	`%right`
+9:13-9:15	number	`11`
+9:16-9:20	constructor	`and'`
+9:16-9:20	local.reference	`and'`
+9:20-9:23	keyword.return	` %.`
+10:6-10:10	constructor	`imp'`
+10:6-10:10	function	`imp'`
+10:6-10:10	local.reference	`imp'`
+10:6-10:10	variable.parameter	`imp'`
+10:10-10:14	operator	` %pi`
+10:15-10:19	constructor	`prog`
+10:15-10:19	local.reference	`prog`
+10:20-10:23	operator	`%->`
+10:24-10:28	constructor	`goal`
+10:24-10:28	local.reference	`goal`
+10:28-10:32	operator	` %->`
+10:33-10:37	constructor	`goal`
+10:33-10:37	local.reference	`goal`
+10:37-10:40	keyword.return	` %.`
+11:6-11:12	keyword.modifier	`%right`
+11:13-11:15	number	`10`
+11:16-11:20	constructor	`imp'`
+11:16-11:20	local.reference	`imp'`
+11:20-11:23	keyword.return	` %.`
+12:6-12:11	constructor	`true'`
+12:6-12:11	function	`true'`
+12:6-12:11	local.reference	`true'`
+12:6-12:11	variable.parameter	`true'`
+12:11-12:16	constructor	` goal`
+12:11-12:16	local.reference	` goal`
+12:16-12:19	keyword.return	` %.`
+13:6-13:13	constructor	`forall'`
+13:6-13:13	function	`forall'`
+13:6-13:13	local.reference	`forall'`
+13:6-13:13	variable.parameter	`forall'`
+13:13-13:17	operator	` %pi`
+13:18-13:19	punctuation.bracket	`(`
+13:19-13:22	operator	`%pi`
+13:23-13:24	constructor	`i`
+13:23-13:24	local.reference	`i`
+13:25-13:28	operator	`%->`
+13:29-13:33	constructor	`goal`
+13:29-13:33	local.reference	`goal`
+13:33-13:34	punctuation.bracket	`)`
+13:35-13:38	operator	`%->`
+13:39-13:43	constructor	`goal`
+13:39-13:43	local.reference	`goal`
+13:43-13:46	keyword.return	` %.`
+14:6-14:9	constructor	`or'`
+14:6-14:9	function	`or'`
+14:6-14:9	local.reference	`or'`
+14:6-14:9	variable.parameter	`or'`
+14:9-14:13	operator	` %pi`
+14:14-14:18	constructor	`goal`
+14:14-14:18	local.reference	`goal`
+14:19-14:22	operator	`%->`
+14:23-14:27	constructor	`goal`
+14:23-14:27	local.reference	`goal`
+14:27-14:31	operator	` %->`
+14:32-14:36	constructor	`goal`
+14:32-14:36	local.reference	`goal`
+14:36-14:39	keyword.return	` %.`
+15:6-15:12	keyword.modifier	`%right`
+15:13-15:15	number	`11`
+15:16-15:19	constructor	`or'`
+15:16-15:19	local.reference	`or'`
+15:19-15:22	keyword.return	` %.`
+16:6-16:12	constructor	`false'`
+16:6-16:12	function	`false'`
+16:6-16:12	local.reference	`false'`
+16:6-16:12	variable.parameter	`false'`
+16:12-16:17	constructor	` goal`
+16:12-16:17	local.reference	` goal`
+16:17-16:20	keyword.return	` %.`
+17:6-17:13	constructor	`exists'`
+17:6-17:13	function	`exists'`
+17:6-17:13	local.reference	`exists'`
+17:6-17:13	variable.parameter	`exists'`
+17:13-17:17	operator	` %pi`
+17:18-17:19	punctuation.bracket	`(`
+17:19-17:22	operator	`%pi`
+17:23-17:24	constructor	`i`
+17:23-17:24	local.reference	`i`
+17:25-17:28	operator	`%->`
+17:29-17:33	constructor	`goal`
+17:29-17:33	local.reference	`goal`
+17:33-17:34	punctuation.bracket	`)`
+17:35-17:38	operator	`%->`
+17:39-17:43	constructor	`goal`
+17:39-17:43	local.reference	`goal`
+17:43-17:46	keyword.return	` %.`
+18:6-18:8	function	`==`
+18:6-18:8	local.reference	`==`
+18:6-18:8	operator	`==`
+18:6-18:8	variable.parameter	`==`
+18:8-18:12	operator	` %pi`
+18:13-18:14	constructor	`p`
+18:13-18:14	local.reference	`p`
+18:15-18:18	operator	`%->`
+18:19-18:20	constructor	`p`
+18:19-18:20	local.reference	`p`
+18:20-18:24	operator	` %->`
+18:25-18:29	constructor	`goal`
+18:25-18:29	local.reference	`goal`
+18:29-18:32	keyword.return	` %.`
+19:6-19:11	keyword.modifier	`%none`
+19:12-19:14	number	`12`
+19:15-19:17	local.reference	`==`
+19:15-19:17	operator	`==`
+19:17-19:20	keyword.return	` %.`
+20:6-20:11	constructor	`atom^`
+20:6-20:11	function	`atom^`
+20:6-20:11	local.reference	`atom^`
+20:6-20:11	variable.parameter	`atom^`
+20:11-20:15	operator	` %pi`
+20:16-20:17	constructor	`p`
+20:16-20:17	local.reference	`p`
+20:18-20:21	operator	`%->`
+20:22-20:26	constructor	`prog`
+20:22-20:26	local.reference	`prog`
+20:26-20:29	keyword.return	` %.`
+21:6-21:10	constructor	`and^`
+21:6-21:10	function	`and^`
+21:6-21:10	local.reference	`and^`
+21:6-21:10	variable.parameter	`and^`
+21:10-21:14	operator	` %pi`
+21:15-21:19	constructor	`prog`
+21:15-21:19	local.reference	`prog`
+21:20-21:23	operator	`%->`
+21:24-21:28	constructor	`prog`
+21:24-21:28	local.reference	`prog`
+21:28-21:32	operator	` %->`
+21:33-21:37	constructor	`prog`
+21:33-21:37	local.reference	`prog`
+21:37-21:40	keyword.return	` %.`
+22:6-22:12	keyword.modifier	`%right`
+22:13-22:15	number	`11`
+22:16-22:20	constructor	`and^`
+22:16-22:20	local.reference	`and^`
+22:20-22:23	keyword.return	` %.`
+23:6-23:10	constructor	`imp^`
+23:6-23:10	function	`imp^`
+23:6-23:10	local.reference	`imp^`
+23:6-23:10	variable.parameter	`imp^`
+23:10-23:14	operator	` %pi`
+23:15-23:19	constructor	`goal`
+23:15-23:19	local.reference	`goal`
+23:20-23:23	operator	`%->`
+23:24-23:28	constructor	`prog`
+23:24-23:28	local.reference	`prog`
+23:28-23:32	operator	` %->`
+23:33-23:37	constructor	`prog`
+23:33-23:37	local.reference	`prog`
+23:37-23:40	keyword.return	` %.`
+24:6-24:12	keyword.modifier	`%right`
+24:13-24:15	number	`10`
+24:16-24:20	constructor	`imp^`
+24:16-24:20	local.reference	`imp^`
+24:20-24:23	keyword.return	` %.`
+25:6-25:11	constructor	`true^`
+25:6-25:11	function	`true^`
+25:6-25:11	local.reference	`true^`
+25:6-25:11	variable.parameter	`true^`
+25:11-25:16	constructor	` prog`
+25:11-25:16	local.reference	` prog`
+25:16-25:19	keyword.return	` %.`
+26:6-26:13	constructor	`forall^`
+26:6-26:13	function	`forall^`
+26:6-26:13	local.reference	`forall^`
+26:6-26:13	variable.parameter	`forall^`
+26:13-26:17	operator	` %pi`
+26:18-26:19	punctuation.bracket	`(`
+26:19-26:22	operator	`%pi`
+26:23-26:24	constructor	`i`
+26:23-26:24	local.reference	`i`
+26:25-26:28	operator	`%->`
+26:29-26:33	constructor	`prog`
+26:29-26:33	local.reference	`prog`
+26:33-26:34	punctuation.bracket	`)`
+26:35-26:38	operator	`%->`
+26:39-26:43	constructor	`prog`
+26:39-26:43	local.reference	`prog`
+26:43-26:46	keyword.return	` %.`

@@ -1,0 +1,842 @@
+0:0-0:26	comment	`%                         `
+1:1-1:2	punctuation.bracket	`[`
+1:2-1:3	punctuation.bracket	`[`
+1:6-1:7	punctuation.bracket	`]`
+1:7-1:8	punctuation.bracket	`]`
+2:1-2:2	punctuation.bracket	`[`
+2:2-2:3	punctuation.bracket	`[`
+2:4-2:5	punctuation.bracket	`(`
+2:46-2:47	punctuation.bracket	`)`
+2:49-2:50	punctuation.bracket	`]`
+2:50-2:51	punctuation.bracket	`]`
+3:0-3:7	comment	`% Lists`
+4:0-4:25	comment	`% By Carsten Varming 2006`
+5:0-5:5	keyword.type	`%sort`
+5:6-5:8	constructor	`tp`
+5:6-5:8	local.reference	`tp`
+5:6-5:8	type	`tp`
+5:8-5:11	keyword.return	` %.`
+5:11-6:8	attribute	``
+6:6-6:8	constructor	`tp`
+6:6-6:8	local.reference	`tp`
+6:6-6:8	variable	`tp`
+6:8-6:11	keyword.return	` %.`
+6:11-7:5	keyword.type	``
+7:6-7:10	constructor	`list`
+7:6-7:10	local.reference	`list`
+7:6-7:10	type	`list`
+7:18-7:20	keyword.return	`%.`
+7:20-8:10	attribute	``
+8:6-8:10	constructor	`list`
+8:6-8:10	local.reference	`list`
+8:6-8:10	variable	`list`
+8:10-8:13	keyword.return	` %.`
+9:6-9:11	constructor	`stuff`
+9:6-9:11	function	`stuff`
+9:6-9:11	local.reference	`stuff`
+9:6-9:11	variable.parameter	`stuff`
+9:11-9:14	constructor	` tp`
+9:11-9:14	local.reference	` tp`
+9:14-9:17	keyword.return	` %.`
+10:8-10:10	constructor	`tp`
+10:8-10:10	local.reference	`tp`
+10:10-10:13	keyword.return	` %.`
+11:6-11:10	constructor	`cons`
+11:6-11:10	function	`cons`
+11:6-11:10	local.reference	`cons`
+11:6-11:10	variable.parameter	`cons`
+11:16-11:19	operator	`%pi`
+11:20-11:21	punctuation.bracket	`(`
+11:28-11:29	punctuation.bracket	`)`
+11:30-11:33	operator	`%->`
+11:34-11:35	punctuation.bracket	`(`
+11:42-11:43	punctuation.bracket	`)`
+11:44-11:46	keyword.return	`%.`
+12:6-12:9	constructor	`nil`
+12:6-12:9	function	`nil`
+12:6-12:9	local.reference	`nil`
+12:6-12:9	variable.parameter	`nil`
+12:23-12:25	keyword.return	`%.`
+13:8-13:12	constructor	`list`
+13:8-13:12	local.reference	`list`
+13:12-13:15	keyword.return	` %.`
+13:15-14:5	keyword.type	``
+14:6-14:8	constructor	`eq`
+14:6-14:8	local.reference	`eq`
+14:6-14:8	type	`eq`
+14:33-14:35	keyword.return	`%.`
+15:6-15:8	constructor	`eq`
+15:6-15:8	local.reference	`eq`
+15:8-15:12	keyword.modifier	` %in`
+15:12-15:17	keyword.modifier	` %out`
+15:17-15:20	keyword.return	` %.`
+16:6-16:12	constructor	`eq_ref`
+16:6-16:12	function	`eq_ref`
+16:6-16:12	local.reference	`eq_ref`
+16:6-16:12	variable.parameter	`eq_ref`
+16:12-16:15	constructor	` eq`
+16:12-16:15	local.reference	` eq`
+16:15-16:18	constructor	` Ls`
+16:15-16:18	local.reference	` Ls`
+16:18-16:21	constructor	` Ls`
+16:18-16:21	local.reference	` Ls`
+16:21-16:24	keyword.return	` %.`
+17:8-17:9	punctuation.bracket	`(`
+17:9-17:10	punctuation.bracket	`)`
+17:11-17:12	punctuation.bracket	`(`
+17:12-17:14	constructor	`eq`
+17:12-17:14	local.reference	`eq`
+17:15-17:16	constructor	`_`
+17:15-17:16	local.reference	`_`
+17:15-17:16	variable.parameter	`_`
+17:17-17:18	constructor	`_`
+17:17-17:18	local.reference	`_`
+17:17-17:18	variable.parameter	`_`
+17:18-17:19	punctuation.bracket	`)`
+17:19-17:22	keyword.return	` %.`
+18:8-18:10	constructor	`eq`
+18:8-18:10	local.reference	`eq`
+18:10-18:13	keyword.return	` %.`
+18:13-19:5	keyword.type	``
+19:6-19:13	constructor	`eq_symm`
+19:6-19:13	local.reference	`eq_symm`
+19:6-19:13	type	`eq_symm`
+19:42-19:44	keyword.return	`%.`
+20:6-20:13	constructor	`eq_symm`
+20:6-20:13	local.reference	`eq_symm`
+20:13-20:17	keyword.modifier	` %in`
+20:17-20:22	keyword.modifier	` %out`
+20:22-20:25	keyword.return	` %.`
+21:6-21:18	constructor	`eq_symm_rule`
+21:6-21:18	function	`eq_symm_rule`
+21:6-21:18	local.reference	`eq_symm_rule`
+21:6-21:18	variable.parameter	`eq_symm_rule`
+21:18-21:26	constructor	` eq_symm`
+21:18-21:26	local.reference	` eq_symm`
+21:26-21:33	constructor	` eq_ref`
+21:26-21:33	local.reference	` eq_ref`
+21:33-21:40	constructor	` eq_ref`
+21:33-21:40	local.reference	` eq_ref`
+21:40-21:43	keyword.return	` %.`
+22:8-22:9	punctuation.bracket	`(`
+22:9-22:10	punctuation.bracket	`)`
+22:11-22:12	punctuation.bracket	`(`
+22:12-22:19	constructor	`eq_symm`
+22:12-22:19	local.reference	`eq_symm`
+22:20-22:21	constructor	`_`
+22:20-22:21	local.reference	`_`
+22:20-22:21	variable.parameter	`_`
+22:22-22:23	constructor	`_`
+22:22-22:23	local.reference	`_`
+22:22-22:23	variable.parameter	`_`
+22:23-22:24	punctuation.bracket	`)`
+22:24-22:27	keyword.return	` %.`
+23:8-23:15	constructor	`eq_symm`
+23:8-23:15	local.reference	`eq_symm`
+23:15-23:18	keyword.return	` %.`
+24:7-24:8	punctuation.bracket	`(`
+24:8-24:8	local.reference	``
+24:8-24:8	operator	``
+24:8-24:9	punctuation.bracket	`)`
+24:10-24:11	punctuation.bracket	`(`
+24:11-24:18	constructor	`eq_symm`
+24:11-24:18	local.reference	`eq_symm`
+24:19-24:20	constructor	`_`
+24:19-24:20	local.reference	`_`
+24:19-24:20	variable.parameter	`_`
+24:21-24:22	constructor	`_`
+24:21-24:22	local.reference	`_`
+24:21-24:22	variable.parameter	`_`
+24:22-24:23	punctuation.bracket	`)`
+24:23-24:26	keyword.return	` %.`
+24:26-25:5	keyword.type	``
+25:6-25:14	constructor	`eq_trans`
+25:6-25:14	local.reference	`eq_trans`
+25:6-25:14	type	`eq_trans`
+25:60-25:62	keyword.return	`%.`
+26:6-26:14	constructor	`eq_trans`
+26:6-26:14	local.reference	`eq_trans`
+26:14-26:18	keyword.modifier	` %in`
+26:18-26:22	keyword.modifier	` %in`
+26:22-26:27	keyword.modifier	` %out`
+26:27-26:30	keyword.return	` %.`
+27:6-27:19	constructor	`eq_trans_rule`
+27:6-27:19	function	`eq_trans_rule`
+27:6-27:19	local.reference	`eq_trans_rule`
+27:6-27:19	variable.parameter	`eq_trans_rule`
+27:19-27:28	constructor	` eq_trans`
+27:19-27:28	local.reference	` eq_trans`
+27:28-27:35	constructor	` eq_ref`
+27:28-27:35	local.reference	` eq_ref`
+27:35-27:42	constructor	` eq_ref`
+27:35-27:42	local.reference	` eq_ref`
+27:42-27:49	constructor	` eq_ref`
+27:42-27:49	local.reference	` eq_ref`
+27:49-27:52	keyword.return	` %.`
+28:8-28:9	punctuation.bracket	`(`
+28:9-28:10	punctuation.bracket	`)`
+28:11-28:12	punctuation.bracket	`(`
+28:12-28:20	constructor	`eq_trans`
+28:12-28:20	local.reference	`eq_trans`
+28:21-28:22	constructor	`_`
+28:21-28:22	local.reference	`_`
+28:21-28:22	variable.parameter	`_`
+28:23-28:24	constructor	`_`
+28:23-28:24	local.reference	`_`
+28:23-28:24	variable.parameter	`_`
+28:25-28:26	constructor	`_`
+28:25-28:26	local.reference	`_`
+28:25-28:26	variable.parameter	`_`
+28:26-28:27	punctuation.bracket	`)`
+28:27-28:30	keyword.return	` %.`
+29:8-29:16	constructor	`eq_trans`
+29:8-29:16	local.reference	`eq_trans`
+29:16-29:19	keyword.return	` %.`
+30:7-30:8	punctuation.bracket	`(`
+30:8-30:8	local.reference	``
+30:8-30:8	operator	``
+30:8-30:9	punctuation.bracket	`)`
+30:10-30:11	punctuation.bracket	`(`
+30:11-30:19	constructor	`eq_trans`
+30:11-30:19	local.reference	`eq_trans`
+30:20-30:21	constructor	`_`
+30:20-30:21	local.reference	`_`
+30:20-30:21	variable.parameter	`_`
+30:22-30:23	constructor	`_`
+30:22-30:23	local.reference	`_`
+30:22-30:23	variable.parameter	`_`
+30:24-30:25	constructor	`_`
+30:24-30:25	local.reference	`_`
+30:24-30:25	variable.parameter	`_`
+30:25-30:26	punctuation.bracket	`)`
+30:26-30:29	keyword.return	` %.`
+30:29-31:5	keyword.type	``
+31:6-31:9	constructor	`rev`
+31:6-31:9	local.reference	`rev`
+31:6-31:9	type	`rev`
+31:46-31:48	keyword.return	`%.`
+32:6-32:9	constructor	`rev`
+32:6-32:9	local.reference	`rev`
+32:9-32:13	keyword.modifier	` %in`
+32:13-32:17	keyword.modifier	` %in`
+32:17-32:22	keyword.modifier	` %out`
+32:22-32:25	keyword.return	` %.`
+33:6-33:13	constructor	`rev_nil`
+33:6-33:13	function	`rev_nil`
+33:6-33:13	local.reference	`rev_nil`
+33:6-33:13	variable.parameter	`rev_nil`
+33:13-33:17	constructor	` rev`
+33:13-33:17	local.reference	` rev`
+33:34-33:36	keyword.return	`%.`
+34:6-34:14	constructor	`rev_cons`
+34:6-34:14	function	`rev_cons`
+34:6-34:14	local.reference	`rev_cons`
+34:6-34:14	variable.parameter	`rev_cons`
+34:14-34:18	operator	` %pi`
+34:19-34:20	punctuation.bracket	`(`
+34:20-34:23	constructor	`rev`
+34:20-34:23	local.reference	`rev`
+34:24-34:25	punctuation.bracket	`(`
+34:25-34:29	constructor	`cons`
+34:25-34:29	local.reference	`cons`
+34:30-34:31	constructor	`E`
+34:30-34:31	local.reference	`E`
+34:32-34:34	constructor	`Ls`
+34:32-34:34	local.reference	`Ls`
+34:34-34:35	punctuation.bracket	`)`
+34:36-34:40	constructor	`Ls''`
+34:36-34:40	local.reference	`Ls''`
+34:41-34:44	constructor	`Ls'`
+34:41-34:44	local.reference	`Ls'`
+34:44-34:45	punctuation.bracket	`)`
+34:46-34:49	operator	`%<-`
+34:50-34:51	punctuation.bracket	`(`
+34:51-34:54	constructor	`rev`
+34:51-34:54	local.reference	`rev`
+34:55-34:57	constructor	`Ls`
+34:55-34:57	local.reference	`Ls`
+34:58-34:59	punctuation.bracket	`(`
+34:59-34:63	constructor	`cons`
+34:59-34:63	local.reference	`cons`
+34:64-34:65	constructor	`E`
+34:64-34:65	local.reference	`E`
+34:66-34:70	constructor	`Ls''`
+34:66-34:70	local.reference	`Ls''`
+34:70-34:71	punctuation.bracket	`)`
+34:72-34:75	constructor	`Ls'`
+34:72-34:75	local.reference	`Ls'`
+34:75-34:76	punctuation.bracket	`)`
+34:76-34:79	keyword.return	` %.`
+35:8-35:9	punctuation.bracket	`(`
+35:9-35:10	punctuation.bracket	`)`
+35:11-35:12	punctuation.bracket	`(`
+35:12-35:15	constructor	`rev`
+35:12-35:15	local.reference	`rev`
+35:16-35:17	constructor	`_`
+35:16-35:17	local.reference	`_`
+35:16-35:17	variable.parameter	`_`
+35:18-35:19	constructor	`_`
+35:18-35:19	local.reference	`_`
+35:18-35:19	variable.parameter	`_`
+35:20-35:21	constructor	`_`
+35:20-35:21	local.reference	`_`
+35:20-35:21	variable.parameter	`_`
+35:21-35:22	punctuation.bracket	`)`
+35:22-35:25	keyword.return	` %.`
+36:8-36:11	constructor	`rev`
+36:8-36:11	local.reference	`rev`
+36:11-36:14	keyword.return	` %.`
+37:7-37:8	constructor	`D`
+37:7-37:8	local.reference	`D`
+37:9-37:10	punctuation.bracket	`(`
+37:10-37:13	constructor	`rev`
+37:10-37:13	local.reference	`rev`
+37:14-37:15	constructor	`D`
+37:14-37:15	local.reference	`D`
+37:16-37:17	constructor	`_`
+37:16-37:17	local.reference	`_`
+37:16-37:17	variable.parameter	`_`
+37:18-37:19	constructor	`_`
+37:18-37:19	local.reference	`_`
+37:18-37:19	variable.parameter	`_`
+37:19-37:20	punctuation.bracket	`)`
+37:20-37:23	keyword.return	` %.`
+37:23-38:5	keyword.type	``
+38:6-38:16	constructor	`rev_exists`
+38:6-38:16	local.reference	`rev_exists`
+38:6-38:16	type	`rev_exists`
+38:48-38:50	keyword.return	`%.`
+39:6-39:16	constructor	`rev_exists`
+39:6-39:16	local.reference	`rev_exists`
+39:16-39:20	keyword.modifier	` %in`
+39:20-39:24	keyword.modifier	` %in`
+39:24-39:29	keyword.modifier	` %out`
+39:29-39:32	keyword.return	` %.`
+40:6-40:20	constructor	`rev_exists_nil`
+40:6-40:20	function	`rev_exists_nil`
+40:6-40:20	local.reference	`rev_exists_nil`
+40:6-40:20	variable.parameter	`rev_exists_nil`
+40:20-40:31	constructor	` rev_exists`
+40:20-40:31	local.reference	` rev_exists`
+40:50-40:52	keyword.return	`%.`
+41:6-41:21	constructor	`rev_exists_cons`
+41:6-41:21	function	`rev_exists_cons`
+41:6-41:21	local.reference	`rev_exists_cons`
+41:6-41:21	variable.parameter	`rev_exists_cons`
+41:21-42:4	operator	``
+42:5-42:6	punctuation.bracket	`(`
+42:6-42:16	constructor	`rev_exists`
+42:6-42:16	local.reference	`rev_exists`
+42:17-42:18	punctuation.bracket	`(`
+42:18-42:22	constructor	`cons`
+42:18-42:22	local.reference	`cons`
+42:23-42:24	constructor	`E`
+42:23-42:24	local.reference	`E`
+42:25-42:27	constructor	`Ls`
+42:25-42:27	local.reference	`Ls`
+42:27-42:28	punctuation.bracket	`)`
+42:29-42:32	constructor	`Ls'`
+42:29-42:32	local.reference	`Ls'`
+42:33-42:34	punctuation.bracket	`(`
+42:34-42:42	constructor	`rev_cons`
+42:34-42:42	local.reference	`rev_cons`
+42:43-42:47	constructor	`Ls''`
+42:43-42:47	local.reference	`Ls''`
+42:47-42:48	punctuation.bracket	`)`
+42:48-42:49	punctuation.bracket	`)`
+43:1-43:4	operator	`%<-`
+43:5-43:6	punctuation.bracket	`(`
+43:6-43:16	constructor	`rev_exists`
+43:6-43:16	local.reference	`rev_exists`
+43:17-43:19	constructor	`Ls`
+43:17-43:19	local.reference	`Ls`
+43:20-43:21	punctuation.bracket	`(`
+43:21-43:25	constructor	`cons`
+43:21-43:25	local.reference	`cons`
+43:26-43:27	constructor	`E`
+43:26-43:27	local.reference	`E`
+43:28-43:31	constructor	`Ls'`
+43:28-43:31	local.reference	`Ls'`
+43:31-43:32	punctuation.bracket	`)`
+43:33-43:37	constructor	`Ls''`
+43:33-43:37	local.reference	`Ls''`
+43:37-43:38	punctuation.bracket	`)`
+43:38-43:41	keyword.return	` %.`
+44:8-44:9	punctuation.bracket	`(`
+44:9-44:10	punctuation.bracket	`)`
+44:11-44:12	punctuation.bracket	`(`
+44:12-44:22	constructor	`rev_exists`
+44:12-44:22	local.reference	`rev_exists`
+44:23-44:24	constructor	`_`
+44:23-44:24	local.reference	`_`
+44:23-44:24	variable.parameter	`_`
+44:25-44:26	constructor	`_`
+44:25-44:26	local.reference	`_`
+44:25-44:26	variable.parameter	`_`
+44:27-44:28	constructor	`_`
+44:27-44:28	local.reference	`_`
+44:27-44:28	variable.parameter	`_`
+44:28-44:29	punctuation.bracket	`)`
+44:29-44:32	keyword.return	` %.`
+45:8-45:18	constructor	`rev_exists`
+45:8-45:18	local.reference	`rev_exists`
+45:18-45:21	keyword.return	` %.`
+46:7-46:8	constructor	`D`
+46:7-46:8	local.reference	`D`
+46:9-46:10	punctuation.bracket	`(`
+46:10-46:20	constructor	`rev_exists`
+46:10-46:20	local.reference	`rev_exists`
+46:21-46:22	constructor	`D`
+46:21-46:22	local.reference	`D`
+46:23-46:24	constructor	`_`
+46:23-46:24	local.reference	`_`
+46:23-46:24	variable.parameter	`_`
+46:25-46:26	constructor	`_`
+46:25-46:26	local.reference	`_`
+46:25-46:26	variable.parameter	`_`
+46:26-46:27	punctuation.bracket	`)`
+46:27-46:30	keyword.return	` %.`
+46:30-47:5	keyword.type	``
+47:6-47:12	constructor	`revDet`
+47:6-47:12	local.reference	`revDet`
+47:6-47:12	type	`revDet`
+47:66-47:68	keyword.return	`%.`
+48:6-48:12	constructor	`revDet`
+48:6-48:12	local.reference	`revDet`
+48:12-48:16	keyword.modifier	` %in`
+48:16-48:20	keyword.modifier	` %in`
+48:20-48:25	keyword.modifier	` %out`
+48:25-48:28	keyword.return	` %.`
+49:6-49:16	constructor	`revDet_nil`
+49:6-49:16	function	`revDet_nil`
+49:6-49:16	local.reference	`revDet_nil`
+49:6-49:16	variable.parameter	`revDet_nil`
+49:16-49:23	constructor	` revDet`
+49:16-49:23	local.reference	` revDet`
+49:23-49:31	constructor	` rev_nil`
+49:23-49:31	local.reference	` rev_nil`
+49:31-49:33	constructor	` _`
+49:31-49:33	local.reference	` _`
+49:33-49:40	constructor	` eq_ref`
+49:33-49:40	local.reference	` eq_ref`
+49:40-49:43	keyword.return	` %.`
+50:6-50:17	constructor	`revDet_cons`
+50:6-50:17	function	`revDet_cons`
+50:6-50:17	local.reference	`revDet_cons`
+50:6-50:17	variable.parameter	`revDet_cons`
+50:17-50:21	operator	` %pi`
+50:22-50:23	punctuation.bracket	`(`
+50:23-50:29	constructor	`revDet`
+50:23-50:29	local.reference	`revDet`
+50:30-50:31	punctuation.bracket	`(`
+50:31-50:39	constructor	`rev_cons`
+50:31-50:39	local.reference	`rev_cons`
+50:40-50:41	constructor	`R`
+50:40-50:41	local.reference	`R`
+50:41-50:42	punctuation.bracket	`)`
+50:43-50:44	punctuation.bracket	`(`
+50:44-50:52	constructor	`rev_cons`
+50:44-50:52	local.reference	`rev_cons`
+50:53-50:55	constructor	`R'`
+50:53-50:55	local.reference	`R'`
+50:55-50:56	punctuation.bracket	`)`
+50:57-50:58	constructor	`Q`
+50:57-50:58	local.reference	`Q`
+50:58-50:59	punctuation.bracket	`)`
+50:60-50:63	operator	`%<-`
+50:64-50:65	punctuation.bracket	`(`
+50:65-50:71	constructor	`revDet`
+50:65-50:71	local.reference	`revDet`
+50:72-50:73	constructor	`R`
+50:72-50:73	local.reference	`R`
+50:74-50:76	constructor	`R'`
+50:74-50:76	local.reference	`R'`
+50:77-50:78	constructor	`Q`
+50:77-50:78	local.reference	`Q`
+50:78-50:79	punctuation.bracket	`)`
+50:79-50:82	keyword.return	` %.`
+51:8-51:9	punctuation.bracket	`(`
+51:9-51:10	punctuation.bracket	`)`
+51:11-51:12	punctuation.bracket	`(`
+51:12-51:18	constructor	`revDet`
+51:12-51:18	local.reference	`revDet`
+51:19-51:20	constructor	`_`
+51:19-51:20	local.reference	`_`
+51:19-51:20	variable.parameter	`_`
+51:21-51:22	constructor	`_`
+51:21-51:22	local.reference	`_`
+51:21-51:22	variable.parameter	`_`
+51:23-51:24	constructor	`_`
+51:23-51:24	local.reference	`_`
+51:23-51:24	variable.parameter	`_`
+51:24-51:25	punctuation.bracket	`)`
+51:25-51:28	keyword.return	` %.`
+52:8-52:14	constructor	`revDet`
+52:8-52:14	local.reference	`revDet`
+52:14-52:17	keyword.return	` %.`
+53:7-53:8	constructor	`D`
+53:7-53:8	local.reference	`D`
+53:9-53:10	punctuation.bracket	`(`
+53:10-53:16	constructor	`revDet`
+53:10-53:16	local.reference	`revDet`
+53:17-53:18	constructor	`D`
+53:17-53:18	local.reference	`D`
+53:19-53:20	constructor	`_`
+53:19-53:20	local.reference	`_`
+53:19-53:20	variable.parameter	`_`
+53:21-53:22	constructor	`_`
+53:21-53:22	local.reference	`_`
+53:21-53:22	variable.parameter	`_`
+53:22-53:23	punctuation.bracket	`)`
+53:23-53:26	keyword.return	` %.`
+53:26-54:5	keyword.type	``
+54:6-54:19	constructor	`revrev_id_lem`
+54:6-54:19	local.reference	`revrev_id_lem`
+54:6-54:19	type	`revrev_id_lem`
+54:99-54:101	keyword.return	`%.`
+55:6-55:19	constructor	`revrev_id_lem`
+55:6-55:19	local.reference	`revrev_id_lem`
+55:19-55:23	keyword.modifier	` %in`
+55:23-55:27	keyword.modifier	` %in`
+55:27-55:31	keyword.modifier	` %in`
+55:31-55:36	keyword.modifier	` %out`
+55:36-55:39	keyword.return	` %.`
+56:6-56:23	constructor	`revrev_id_lem_nil`
+56:6-56:23	function	`revrev_id_lem_nil`
+56:6-56:23	local.reference	`revrev_id_lem_nil`
+56:6-56:23	variable.parameter	`revrev_id_lem_nil`
+56:23-56:27	operator	` %pi`
+56:28-56:29	punctuation.bracket	`(`
+56:29-56:42	constructor	`revrev_id_lem`
+56:29-56:42	local.reference	`revrev_id_lem`
+56:43-56:50	constructor	`rev_nil`
+56:43-56:50	local.reference	`rev_nil`
+56:51-56:52	constructor	`F`
+56:51-56:52	local.reference	`F`
+56:53-56:55	constructor	`F'`
+56:53-56:55	local.reference	`F'`
+56:56-56:57	constructor	`Q`
+56:56-56:57	local.reference	`Q`
+56:57-56:58	punctuation.bracket	`)`
+56:59-56:62	operator	`%<-`
+56:63-56:64	punctuation.bracket	`(`
+56:64-56:70	constructor	`revDet`
+56:64-56:70	local.reference	`revDet`
+56:71-56:73	constructor	`F'`
+56:71-56:73	local.reference	`F'`
+56:74-56:75	constructor	`F`
+56:74-56:75	local.reference	`F`
+56:76-56:77	constructor	`Q`
+56:76-56:77	local.reference	`Q`
+56:77-56:78	punctuation.bracket	`)`
+56:78-56:81	keyword.return	` %.`
+57:6-57:24	constructor	`revrev_id_lem_cons`
+57:6-57:24	function	`revrev_id_lem_cons`
+57:6-57:24	local.reference	`revrev_id_lem_cons`
+57:6-57:24	variable.parameter	`revrev_id_lem_cons`
+57:24-58:4	operator	``
+58:5-58:6	punctuation.bracket	`(`
+58:6-58:19	constructor	`revrev_id_lem`
+58:6-58:19	local.reference	`revrev_id_lem`
+58:20-58:21	punctuation.bracket	`(`
+58:21-58:29	constructor	`rev_cons`
+58:21-58:29	local.reference	`rev_cons`
+58:30-58:31	constructor	`R`
+58:30-58:31	local.reference	`R`
+58:31-58:32	punctuation.bracket	`)`
+58:33-58:35	constructor	`R'`
+58:33-58:35	local.reference	`R'`
+58:36-58:39	constructor	`R''`
+58:36-58:39	local.reference	`R''`
+58:40-58:41	constructor	`Q`
+58:40-58:41	local.reference	`Q`
+58:41-58:42	punctuation.bracket	`)`
+59:1-59:4	operator	`%<-`
+59:5-59:6	punctuation.bracket	`(`
+59:6-59:19	constructor	`revrev_id_lem`
+59:6-59:19	local.reference	`revrev_id_lem`
+59:20-59:21	constructor	`R`
+59:20-59:21	local.reference	`R`
+59:22-59:24	constructor	`R'`
+59:22-59:24	local.reference	`R'`
+59:25-59:26	punctuation.bracket	`(`
+59:26-59:34	constructor	`rev_cons`
+59:26-59:34	local.reference	`rev_cons`
+59:35-59:38	constructor	`R''`
+59:35-59:38	local.reference	`R''`
+59:38-59:39	punctuation.bracket	`)`
+59:40-59:41	constructor	`Q`
+59:40-59:41	local.reference	`Q`
+59:41-59:42	punctuation.bracket	`)`
+59:42-59:45	keyword.return	` %.`
+60:8-60:9	punctuation.bracket	`(`
+60:9-60:10	punctuation.bracket	`)`
+60:11-60:12	punctuation.bracket	`(`
+60:12-60:25	constructor	`revrev_id_lem`
+60:12-60:25	local.reference	`revrev_id_lem`
+60:26-60:27	constructor	`_`
+60:26-60:27	local.reference	`_`
+60:26-60:27	variable.parameter	`_`
+60:28-60:29	constructor	`_`
+60:28-60:29	local.reference	`_`
+60:28-60:29	variable.parameter	`_`
+60:30-60:31	constructor	`_`
+60:30-60:31	local.reference	`_`
+60:30-60:31	variable.parameter	`_`
+60:32-60:33	constructor	`_`
+60:32-60:33	local.reference	`_`
+60:32-60:33	variable.parameter	`_`
+60:33-60:34	punctuation.bracket	`)`
+60:34-60:37	keyword.return	` %.`
+61:8-61:21	constructor	`revrev_id_lem`
+61:8-61:21	local.reference	`revrev_id_lem`
+61:21-61:24	keyword.return	` %.`
+62:7-62:8	constructor	`D`
+62:7-62:8	local.reference	`D`
+62:9-62:10	punctuation.bracket	`(`
+62:10-62:23	constructor	`revrev_id_lem`
+62:10-62:23	local.reference	`revrev_id_lem`
+62:24-62:25	constructor	`D`
+62:24-62:25	local.reference	`D`
+62:26-62:27	constructor	`_`
+62:26-62:27	local.reference	`_`
+62:26-62:27	variable.parameter	`_`
+62:28-62:29	constructor	`_`
+62:28-62:29	local.reference	`_`
+62:28-62:29	variable.parameter	`_`
+62:30-62:31	constructor	`_`
+62:30-62:31	local.reference	`_`
+62:30-62:31	variable.parameter	`_`
+62:31-62:32	punctuation.bracket	`)`
+62:32-62:35	keyword.return	` %.`
+62:35-63:5	keyword.type	``
+63:6-63:15	constructor	`revrev_id`
+63:6-63:15	local.reference	`revrev_id`
+63:6-63:15	type	`revrev_id`
+63:81-63:83	keyword.return	`%.`
+64:6-64:15	constructor	`revrev_id`
+64:6-64:15	local.reference	`revrev_id`
+64:15-64:19	keyword.modifier	` %in`
+64:19-64:23	keyword.modifier	` %in`
+64:23-64:28	keyword.modifier	` %out`
+64:28-64:31	keyword.return	` %.`
+65:6-65:20	constructor	`revrev_id_rule`
+65:6-65:20	function	`revrev_id_rule`
+65:6-65:20	local.reference	`revrev_id_rule`
+65:6-65:20	variable.parameter	`revrev_id_rule`
+65:20-65:24	operator	` %pi`
+65:25-65:26	punctuation.bracket	`(`
+65:26-65:35	constructor	`revrev_id`
+65:26-65:35	local.reference	`revrev_id`
+65:36-65:37	constructor	`R`
+65:36-65:37	local.reference	`R`
+65:38-65:40	constructor	`R'`
+65:38-65:40	local.reference	`R'`
+65:41-65:42	constructor	`Q`
+65:41-65:42	local.reference	`Q`
+65:42-65:43	punctuation.bracket	`)`
+65:44-65:47	operator	`%<-`
+65:48-65:49	punctuation.bracket	`(`
+65:49-65:62	constructor	`revrev_id_lem`
+65:49-65:62	local.reference	`revrev_id_lem`
+65:63-65:64	constructor	`R`
+65:63-65:64	local.reference	`R`
+65:65-65:67	constructor	`R'`
+65:65-65:67	local.reference	`R'`
+65:68-65:75	constructor	`rev_nil`
+65:68-65:75	local.reference	`rev_nil`
+65:76-65:77	constructor	`Q`
+65:76-65:77	local.reference	`Q`
+65:77-65:78	punctuation.bracket	`)`
+65:78-65:81	keyword.return	` %.`
+66:8-66:9	punctuation.bracket	`(`
+66:9-66:10	punctuation.bracket	`)`
+66:11-66:12	punctuation.bracket	`(`
+66:12-66:21	constructor	`revrev_id`
+66:12-66:21	local.reference	`revrev_id`
+66:22-66:23	constructor	`_`
+66:22-66:23	local.reference	`_`
+66:22-66:23	variable.parameter	`_`
+66:24-66:25	constructor	`_`
+66:24-66:25	local.reference	`_`
+66:24-66:25	variable.parameter	`_`
+66:26-66:27	constructor	`_`
+66:26-66:27	local.reference	`_`
+66:26-66:27	variable.parameter	`_`
+66:27-66:28	punctuation.bracket	`)`
+66:28-66:31	keyword.return	` %.`
+67:8-67:17	constructor	`revrev_id`
+67:8-67:17	local.reference	`revrev_id`
+67:17-67:20	keyword.return	` %.`
+68:7-68:8	punctuation.bracket	`(`
+68:8-68:8	local.reference	``
+68:8-68:8	operator	``
+68:8-68:9	punctuation.bracket	`)`
+68:10-68:11	punctuation.bracket	`(`
+68:11-68:20	constructor	`revrev_id`
+68:11-68:20	local.reference	`revrev_id`
+68:21-68:22	constructor	`_`
+68:21-68:22	local.reference	`_`
+68:21-68:22	variable.parameter	`_`
+68:23-68:24	constructor	`_`
+68:23-68:24	local.reference	`_`
+68:23-68:24	variable.parameter	`_`
+68:25-68:26	constructor	`_`
+68:25-68:26	local.reference	`_`
+68:25-68:26	variable.parameter	`_`
+68:26-68:27	punctuation.bracket	`)`
+68:27-68:30	keyword.return	` %.`
+68:30-69:5	keyword.type	``
+69:6-69:19	constructor	`rev_injective`
+69:6-69:19	local.reference	`rev_injective`
+69:6-69:19	type	`rev_injective`
+69:85-69:87	keyword.return	`%.`
+70:6-70:19	constructor	`rev_injective`
+70:6-70:19	local.reference	`rev_injective`
+70:19-70:23	keyword.modifier	` %in`
+70:23-70:27	keyword.modifier	` %in`
+70:27-70:32	keyword.modifier	` %out`
+70:32-70:35	keyword.return	` %.`
+71:6-71:24	constructor	`rev_injective_rule`
+71:6-71:24	function	`rev_injective_rule`
+71:6-71:24	local.reference	`rev_injective_rule`
+71:6-71:24	variable.parameter	`rev_injective_rule`
+71:24-72:4	operator	``
+72:5-72:6	punctuation.bracket	`(`
+72:6-72:19	constructor	`rev_injective`
+72:6-72:19	local.reference	`rev_injective`
+72:20-72:21	punctuation.bracket	`(`
+72:21-72:25	keyword.operator	`%the`
+72:26-72:27	punctuation.bracket	`(`
+72:27-72:30	constructor	`rev`
+72:27-72:30	local.reference	`rev`
+72:31-72:33	constructor	`Ls`
+72:31-72:33	local.reference	`Ls`
+72:34-72:35	punctuation.bracket	`(`
+72:35-72:38	constructor	`nil`
+72:35-72:38	local.reference	`nil`
+72:39-72:41	constructor	`Tp`
+72:39-72:41	local.reference	`Tp`
+72:41-72:42	punctuation.bracket	`)`
+72:43-72:46	constructor	`Ls'`
+72:43-72:46	local.reference	`Ls'`
+72:46-72:47	punctuation.bracket	`)`
+72:48-72:49	constructor	`R`
+72:48-72:49	local.reference	`R`
+72:49-72:50	punctuation.bracket	`)`
+72:51-72:53	constructor	`R'`
+72:51-72:53	local.reference	`R'`
+72:54-72:55	constructor	`Q`
+72:54-72:55	local.reference	`Q`
+72:55-72:56	punctuation.bracket	`)`
+73:1-73:4	operator	`%<-`
+73:5-73:6	punctuation.bracket	`(`
+73:6-73:16	constructor	`rev_exists`
+73:6-73:16	local.reference	`rev_exists`
+73:17-73:20	constructor	`Ls'`
+73:17-73:20	local.reference	`Ls'`
+73:21-73:22	punctuation.bracket	`(`
+73:22-73:25	constructor	`nil`
+73:22-73:25	local.reference	`nil`
+73:26-73:28	constructor	`Tp`
+73:26-73:28	local.reference	`Tp`
+73:28-73:29	punctuation.bracket	`)`
+73:30-73:33	constructor	`Rev`
+73:30-73:33	local.reference	`Rev`
+73:33-73:34	punctuation.bracket	`)`
+73:34-74:4	operator	``
+74:5-74:6	punctuation.bracket	`(`
+74:6-74:15	constructor	`revrev_id`
+74:6-74:15	local.reference	`revrev_id`
+74:16-74:17	constructor	`R`
+74:16-74:17	local.reference	`R`
+74:18-74:21	constructor	`Rev`
+74:18-74:21	local.reference	`Rev`
+74:22-74:24	constructor	`Q'`
+74:22-74:24	local.reference	`Q'`
+74:24-74:25	punctuation.bracket	`)`
+74:25-75:4	operator	``
+75:5-75:6	punctuation.bracket	`(`
+75:6-75:13	constructor	`eq_symm`
+75:6-75:13	local.reference	`eq_symm`
+75:14-75:16	constructor	`Q'`
+75:14-75:16	local.reference	`Q'`
+75:17-75:21	constructor	`Q'''`
+75:17-75:21	local.reference	`Q'''`
+75:21-75:22	punctuation.bracket	`)`
+75:22-76:4	operator	``
+76:5-76:6	punctuation.bracket	`(`
+76:6-76:15	constructor	`revrev_id`
+76:6-76:15	local.reference	`revrev_id`
+76:16-76:18	constructor	`R'`
+76:16-76:18	local.reference	`R'`
+76:19-76:22	constructor	`Rev`
+76:19-76:22	local.reference	`Rev`
+76:23-76:26	constructor	`Q''`
+76:23-76:26	local.reference	`Q''`
+76:26-76:27	punctuation.bracket	`)`
+76:27-77:4	operator	``
+77:5-77:6	punctuation.bracket	`(`
+77:6-77:14	constructor	`eq_trans`
+77:6-77:14	local.reference	`eq_trans`
+77:15-77:18	constructor	`Q''`
+77:15-77:18	local.reference	`Q''`
+77:19-77:23	constructor	`Q'''`
+77:19-77:23	local.reference	`Q'''`
+77:24-77:26	constructor	`Q1`
+77:24-77:26	local.reference	`Q1`
+77:26-77:27	punctuation.bracket	`)`
+77:27-78:4	operator	``
+78:5-78:6	punctuation.bracket	`(`
+78:6-78:13	constructor	`eq_symm`
+78:6-78:13	local.reference	`eq_symm`
+78:14-78:16	constructor	`Q1`
+78:14-78:16	local.reference	`Q1`
+78:17-78:18	constructor	`Q`
+78:17-78:18	local.reference	`Q`
+78:18-78:19	punctuation.bracket	`)`
+78:19-78:22	keyword.return	` %.`
+79:8-79:9	punctuation.bracket	`(`
+79:9-79:10	punctuation.bracket	`)`
+79:11-79:12	punctuation.bracket	`(`
+79:12-79:25	constructor	`rev_injective`
+79:12-79:25	local.reference	`rev_injective`
+79:26-79:27	constructor	`_`
+79:26-79:27	local.reference	`_`
+79:26-79:27	variable.parameter	`_`
+79:28-79:29	constructor	`_`
+79:28-79:29	local.reference	`_`
+79:28-79:29	variable.parameter	`_`
+79:30-79:31	constructor	`_`
+79:30-79:31	local.reference	`_`
+79:30-79:31	variable.parameter	`_`
+79:31-79:32	punctuation.bracket	`)`
+79:32-79:35	keyword.return	` %.`
+80:8-80:21	constructor	`rev_injective`
+80:8-80:21	local.reference	`rev_injective`
+80:21-80:24	keyword.return	` %.`
+81:7-81:8	constructor	`D`
+81:7-81:8	local.reference	`D`
+81:9-81:10	punctuation.bracket	`(`
+81:10-81:23	constructor	`rev_injective`
+81:10-81:23	local.reference	`rev_injective`
+81:24-81:25	constructor	`D`
+81:24-81:25	local.reference	`D`
+81:26-81:27	constructor	`_`
+81:26-81:27	local.reference	`_`
+81:26-81:27	variable.parameter	`_`
+81:28-81:29	constructor	`_`
+81:28-81:29	local.reference	`_`
+81:28-81:29	variable.parameter	`_`
+81:29-81:30	punctuation.bracket	`)`
+81:30-81:33	keyword.return	` %.`
+82:1-82:2	punctuation.bracket	`[`
+82:2-82:3	punctuation.bracket	`[`
+86:0-86:1	punctuation.bracket	`[`
+86:31-86:32	punctuation.bracket	`]`
+86:32-86:33	punctuation.bracket	`(`
+86:61-86:75	number	`20240303030303`
+86:105-86:106	variable.parameter.builtin	`_`
+86:111-86:112	punctuation.bracket	`)`
+87:1-87:2	punctuation.bracket	`]`
+87:2-87:3	punctuation.bracket	`]`

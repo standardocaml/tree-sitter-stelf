@@ -1,5 +1,5 @@
 %                                                
-%{! _You may wish to read the tutorial on [admissibility of cut](/wiki/admissibility-of-cut/) and/or the article on [verifications and uses](/wiki/verifications-and-uses/) first._
+%[[ _You may wish to read the tutorial on [admissibility of cut](/wiki/admissibility-of-cut/) and/or the article on [verifications and uses](/wiki/verifications-and-uses/) first._
 
 In this tutorial, we recast the proof of cut admissibility as an algorithm for normalizing terms in the simply-typed λ-calculus.  This algorithm is called _hereditary substitution_; it is used in the definition of LF itself, as well as in many other type theories.  To apply hereditary substitution, it is necessary to:
 - Define a language of [canonical form](/wiki/canonical-form/)s.  In programming language terms, canonical forms correspond to terms that are not β-reducible ([beta-normal](/wiki/beta-equivalence/)) and then are η-expanded as much as possible ([eta-long](/wiki/eta-equivalence/)); logically, canonical forms correspond to the cut-free sequent calculus proofs.
@@ -31,7 +31,7 @@ The canonical forms language is described on this page; the external language an
 
 ### Syntax
 
-We consider a calculus with function and pair types, as well as a single base type: !}%
+We consider a calculus with function and pair types, as well as a single base type: %]]
 %sort tp %.
 %term b tp %.
 %term arrow %pi tp %-> tp %-> tp %.
@@ -47,13 +47,13 @@ We consider a calculus with function and pair types, as well as a single base ty
 %term pair %pi mtm %-> mtm %-> mtm %.
 %block rtm_block [x rtm]%.
 %worlds (rtm_block) (tp) (rtm) (mtm) %.
-%{! The syntax of types is standard.  There are a few subtleties in the syntax of terms:
+%[[ The syntax of types is standard.  There are a few subtleties in the syntax of terms:
 * The syntax of terms is stratified into atomic terms ``rtm`` and canonical terms ``mtm`` in order to syntactically prevent β-redices.  For example, pairs are canonical but the argument of a projection (``fst`` and ``snd``) is atomic, so we can never project from a term that is syntactically a pair.  
 * We name the syntactic classes ``rtm`` and ``mtm`` after the metavariables ``R`` and ``M`` that we will use to refer to them.
 * Because variables are considered to be atomic terms, the body of a ``lam`` binds a variable of type ``rtm``.  This means that the substitution operation that we get "for free" from the encoding is only the substitution of an ``rtm`` for a variable; hereditary substitution defines the substitution of an  ``mtm`` for a variable.
 * The constant ``asm`` represents an injection from ``rtm`` into ``mtm``.
 
-### Typing judgements !}%
+### Typing judgements %]]
 %sort atom {_ rtm} {_ tp} %.
 %mode atom %in %out %.
 %sort canon {_ mtm} {_ tp} %.
@@ -72,7 +72,7 @@ We consider a calculus with function and pair types, as well as a single base ty
 %block atom_block {A tp} [x rtm] [dx atom x A]%.
 %worlds (atom_block) (atom _ _) (canon _ _) %.
 %terminates (R M) (atom R _) (canon M _) %.
-%{! We define two mutually-recursive judgements, ``atom R A`` and ``canon M A``.  The typing judgements for the two syntactic categories have a bidirectional operational interpretation: an ``mtm`` is checked against a type, whereas an ``rtm`` synthesizes a type.  The rules are the standard typing rules for the λ-calculus,  modified to follow the restrictions of the syntax.  Additionally, the rule ``canon_asm`` applies only at base type, which forces an ``mtm`` to be η-long.
+%[[ We define two mutually-recursive judgements, ``atom R A`` and ``canon M A``.  The typing judgements for the two syntactic categories have a bidirectional operational interpretation: an ``mtm`` is checked against a type, whereas an ``rtm`` synthesizes a type.  The rules are the standard typing rules for the λ-calculus,  modified to follow the restrictions of the syntax.  Additionally, the rule ``canon_asm`` applies only at base type, which forces an ``mtm`` to be η-long.
 
 These judgements are manifestly terminating, which we verify with the ``%terminates``.
 
@@ -98,7 +98,7 @@ Intuitively, we substitute  ``(lam ([x] (pair c c)))`` to get ``fst (app (lam ([
 
 ``hsubst_rr`` also computes the type of the canonical form it produces, which is needed for the termination metric for hereditary substitution. 
 
-Here are the judgements: !}%
+Here are the judgements: %]]
 %sort hsubst_m {_ mtm} {_ tp} {_ %pi rtm %-> mtm} {_ mtm} %.
 %mode hsubst_m %in %in %in %out %.
 %sort hsubst_r {_ mtm} {_ tp} {_ %pi rtm %-> rtm} {_ rtm} %.
@@ -139,7 +139,7 @@ Here are the judgements: !}%
 %worlds (rtm_block) (hsubst_m _ _ _ _) (hsubst_r _ _ _ _) (hsubst_rr _ _ _ _ _) %.
 %reduces <= A' A0 (hsubst_rr _ A0 _ _ A') %.
 %terminates {(A0 A0' A0'') (M R R')} (hsubst_m _ A0 M _) (hsubst_r _ A0' R _) (hsubst_rr _ A0'' R' _ _) %.
-%{! The rule ``hsubst_r_closed`` is similar to a [catch-all case](/wiki/catch-all-case/): rather than putting cases of hereditary substitution into the LF context, we give a single rule that applies whenever the variable is not free in the term we are substituting into.  This covers both the variables ``y:rtm`` in the context and the constant ``c``, as well as any series of applications or projections made up from these terms—so the downside is that we have made hereditary substitution non-deterministic.  However, keeping hereditary substitution out of the context simplifies some proofs below.
+%[[ The rule ``hsubst_r_closed`` is similar to a [catch-all case](/wiki/catch-all-case/): rather than putting cases of hereditary substitution into the LF context, we give a single rule that applies whenever the variable is not free in the term we are substituting into.  This covers both the variables ``y:rtm`` in the context and the constant ``c``, as well as any series of applications or projections made up from these terms—so the downside is that we have made hereditary substitution non-deterministic.  However, keeping hereditary substitution out of the context simplifies some proofs below.
 
 Other than that, the judgements ``hsubst_m`` and ``hsubst_r`` are defined in the straightforward compositional manner.  The interesting judgement is ``hsubst_rr``, which in each case performs some reduction on the output of the recursive call in order to compute a new canonical form.  The most interesting rule is ``hsubst_rr_app``, which continues the hereditary substitution into the body of the function.
 
@@ -147,7 +147,7 @@ When processing the ``%terminates`` declaration, Twelf proves that it is decidab
 
 ### Expansion
 
-Expansion shows that we can turn an atomic term of any type into a canonical term of that type.  It is a total judgement defined by induction on the structure of the type: !}%
+Expansion shows that we can turn an atomic term of any type into a canonical term of that type.  It is a total judgement defined by induction on the structure of the type: %]]
 %sort expand {_ tp} {_ rtm} {_ mtm} %.
 %mode expand %in %in %out %.
 %term expand_b expand b R (asm R) %.
@@ -161,7 +161,7 @@ Expansion shows that we can turn an atomic term of any type into a canonical ter
 	%<- (expand A2 (snd R) M2) %.
 %worlds (rtm_block) (expand _ _ _) %.
 %total A (expand A _ _) %.
-%{! In the ``expand_arrow`` case, we first expand a variable at the argument type, and then we expand the application at the result type.
+%[[ In the ``expand_arrow`` case, we first expand a variable at the argument type, and then we expand the application at the result type.
 
 ## Canonical forms language: Metatheory
 
@@ -169,7 +169,7 @@ Expansion shows that we can turn an atomic term of any type into a canonical ter
 
 #### Existence of hereditary substitution
 
-Even though we annotated ``hsubst_rr`` with a [%reduces](/wiki/percent-reduces/) above, we will need an [effectiveness lemma](/wiki/effectiveness-lemma/) version of this [%reduces](/wiki/percent-reduces/) to use that fact in the proof below. !}%
+Even though we annotated ``hsubst_rr`` with a [%reduces](/wiki/percent-reduces/) above, we will need an [effectiveness lemma](/wiki/effectiveness-lemma/) version of this [%reduces](/wiki/percent-reduces/) to use that fact in the proof below. %]]
 %sort hsubst_rr_size {A2} {A'} {_ hsubst_rr M2 A2 R M' A'} %.
 %mode hsubst_rr_size %in %in %in %.
 %term _ hsubst_rr_size A2 A2 hsubst_rr_var %.
@@ -185,16 +185,16 @@ Even though we annotated ``hsubst_rr`` with a [%reduces](/wiki/percent-reduces/)
 %worlds (rtm_block) (hsubst_rr_size _ _ _) %.
 %total D (hsubst_rr_size _ _ D) %.
 %reduces <= A' A2 (hsubst_rr_size A2 A' _) %.
-%{! All the terms are inputs; the only output is the ``%reduces``.
+%[[ All the terms are inputs; the only output is the ``%reduces``.
 
-The main theorem proves that under the appropriate typing conditions, hereditary substitutions exist and preserve types.  For atomic terms, this means that one of the two kinds of hereditary substitutions exists.  Thus, we define the following sum type: !}%
+The main theorem proves that under the appropriate typing conditions, hereditary substitutions exist and preserve types.  For atomic terms, this means that one of the two kinds of hereditary substitutions exists.  Thus, we define the following sum type: %]]
 %sort hsubst_r_exists_sum {_ mtm} {_ tp} {_ %pi rtm %-> rtm} {_ tp} %.
 %term hsubst_r_exists_sum_r %pi (hsubst_r_exists_sum M2 A2 R A) %<- (hsubst_r M2 A2 R R') %<- (atom R' A) %.
 %term hsubst_r_exists_sum_rr 
 	%pi (hsubst_r_exists_sum M2 A2 R A')
 	%<- (hsubst_rr M2 A2 R M' A')
 	%<- (canon M' A') %.
-%{! Because we are proving a theorem that concludes a disjunction, it should not be surprising that we need some [output factoring](/wiki/output-factoring/) lemmas.  The following lemmas may be proved independently: !}%
+%[[ Because we are proving a theorem that concludes a disjunction, it should not be surprising that we need some [output factoring](/wiki/output-factoring/) lemmas.  The following lemmas may be proved independently: %]]
 %sort hsubst_m_exists_asm {_ hsubst_r_exists_sum M2 A2 R b} {_ hsubst_m M2 A2 ([x] asm (R x)) M'} {_ canon M' b} %.
 %mode hsubst_m_exists_asm %in %out %out %.
 %term _ hsubst_m_exists_asm (hsubst_r_exists_sum_r DaR' DsR) (hsubst_m_r DsR) (canon_asm DaR') %.
@@ -213,8 +213,8 @@ The main theorem proves that under the appropriate typing conditions, hereditary
 %term _ hsubst_r_exists_snd (hsubst_r_exists_sum_rr (canon_pair DcMr' _) DsR) (hsubst_r_exists_sum_rr DcMr' (hsubst_rr_snd DsR)) %.
 %worlds (atom_block) (hsubst_r_exists_snd _ _) %.
 %total () (hsubst_r_exists_snd _ _) %.
-%{! Next, we prove the overall theorems, as well as a factoring lemma for application.  This last factoring lemma 
-must be in the mutually recursive loop with the main theorems because of the final premise of ``hsubst_rr_app``, which continues the hereditary substitution. !}%
+%[[ Next, we prove the overall theorems, as well as a factoring lemma for application.  This last factoring lemma 
+must be in the mutually recursive loop with the main theorems because of the final premise of ``hsubst_rr_app``, which continues the hereditary substitution. %]]
 %sort hsubst_m_exists {A2} {_ {y rtm} {dy atom y A2} canon (M y) A} {_ canon M2 A2} {_ hsubst_m M2 A2 M M'} {_ canon M' A} %.
 %mode hsubst_m_exists %in %in %in %out %out %.
 %sort hsubst_r_exists {A2} {_ {y rtm} {dx atom y A2} atom (R y) A} {_ canon M2 A2} {_ hsubst_r_exists_sum M2 A2 R A} %.
@@ -257,19 +257,19 @@ must be in the mutually recursive loop with the main theorems because of the fin
 	%<- (hsubst_m_exists A3 DcM4' DcM3 DsM4' DcM4'') %.
 %worlds (atom_block) (hsubst_m_exists_app _ _ _ _ _ _) (hsubst_r_exists _ _ _ _) (hsubst_m_exists _ _ _ _ _) %.
 %total {(A2 A2' A2'') (D D' D'')} (hsubst_m_exists A2' D' _ _ _) (hsubst_m_exists_app A2'' D'' _ _ _ _) (hsubst_r_exists A2 D _ _) %.
-%{! As you can see, the proof is a straightforward induction, where in each case we use the appropriate factoring lemma.  In the final case of the application factoring lemma, we use the ``hsubst_rr_size`` lemma for its "side effect" of justifying the recursive call back to ``hsubst_m_exists``.  The mutual lexicographic termination metric is the same as before.
+%[[ As you can see, the proof is a straightforward induction, where in each case we use the appropriate factoring lemma.  In the final case of the application factoring lemma, we use the ``hsubst_rr_size`` lemma for its "side effect" of justifying the recursive call back to ``hsubst_m_exists``.  The mutual lexicographic termination metric is the same as before.
 
 #### Uniqueness of hereditary substitution
 
-As usual for a [uniqueness lemma](/wiki/uniqueness-lemma/), we must begin by defining the appropriate identity types: !}%
+As usual for a [uniqueness lemma](/wiki/uniqueness-lemma/), we must begin by defining the appropriate identity types: %]]
 %sort id/mtm {_ mtm} {_ mtm} %.
 %term id/mtm_refl id/mtm M M %.
 %sort id/rtm {_ rtm} {_ rtm} %.
 %term id/rtm_refl id/rtm R R %.
 %sort id/tp {_ tp} {_ tp} %.
 %term id/tp_refl id/tp A A %.
-%{! We elide the trivial proofs of the equivalence relation, congruence, inversion, and respects lemmas; see the complete Twelf code at the end for their statements. !}%
-%{!! begin hidden !!}%
+%[[ We elide the trivial proofs of the equivalence relation, congruence, inversion, and respects lemmas; see the complete Twelf code at the end for their statements. %]]
+%[[! begin hidden !%]]
 %sort id/rtm_sym {_ id/rtm R R'} {_ id/rtm R' R} %.
 %mode id/rtm_sym %in %out %.
 %term _ id/rtm_sym id/rtm_refl id/rtm_refl %.
@@ -343,11 +343,11 @@ As usual for a [uniqueness lemma](/wiki/uniqueness-lemma/), we must begin by def
 %term _ id/mtm_asm_cong _ id/mtm_refl %.
 %worlds (rtm_block) (id/mtm_asm_cong _ _) %.
 %total () (id/mtm_asm_cong _ _) %.
-%{!! end hidden !!}%
-%{! The hardest part of proving uniqueness of hereditary substitution is proving that the rules ``hsubst_m_r`` and ``hsubst_m_rr`` are mutually exclusive.  We do by using [reasoning with contradiction](/wiki/reasoning-from-false/). !}%
+%[[! end hidden !%]]
+%[[ The hardest part of proving uniqueness of hereditary substitution is proving that the rules ``hsubst_m_r`` and ``hsubst_m_rr`` are mutually exclusive.  We do by using [reasoning with contradiction](/wiki/reasoning-from-false/). %]]
 %sort false %.
 %freeze false %.
-%{! First, we prove that ``hsubst_rr`` is never inhabited when the variable is not free in the term being substituted into: !}%
+%[[ First, we prove that ``hsubst_rr`` is never inhabited when the variable is not free in the term being substituted into: %]]
 %sort hsubst_rr_closed_contra {_ hsubst_rr M2 A2 ([_] R) M' A'} {_ false} %.
 %mode hsubst_rr_closed_contra %in %out %.
 %term _ 
@@ -361,9 +361,9 @@ As usual for a [uniqueness lemma](/wiki/uniqueness-lemma/), we must begin by def
 	%<- (hsubst_rr_closed_contra D X) %.
 %worlds (rtm_block) (hsubst_rr_closed_contra _ _) %.
 %total D (hsubst_rr_closed_contra D _) %.
-%{! This is an example of deriving a contradiction by induction—the coverage checker rules out all the base cases.
+%[[ This is an example of deriving a contradiction by induction—the coverage checker rules out all the base cases.
 
-Next, we show that the two atomic term judgements are exclusive.  In the only base case that is not ruled out by coverage checking, we use the previous lemma. !}%
+Next, we show that the two atomic term judgements are exclusive.  In the only base case that is not ruled out by coverage checking, we use the previous lemma. %]]
 %% contradiction of root and non-root
 %sort hsubst_r_rr_contra {_ hsubst_r M2 A2 R R'} {_ hsubst_rr M2 A2 R M' A'} {_ false} %.
 %mode hsubst_r_rr_contra %in %in %out %.
@@ -382,14 +382,14 @@ Next, we show that the two atomic term judgements are exclusive.  In the only ba
 %worlds (rtm_block) (hsubst_r_rr_contra _ _ _) %.
 %% bar in extra block for lemma below's future use
 %total (D) (hsubst_r_rr_contra D _ _) %.
-%{! Next, we write a little lemma showing that ``false`` implies any identity that we need. !}%
+%[[ Next, we write a little lemma showing that ``false`` implies any identity that we need. %]]
 %% false implies id
 %sort false_implies_id/mtm {M} {M'} {_ false} {_ id/mtm M M'} %.
 %mode false_implies_id/mtm %in %in %in %out %.
 %worlds (rtm_block) (false_implies_id/mtm _ _ _ _) %.
 %% bar in extra block for lemma below's future use
 %total () (false_implies_id/mtm _ _ _ _) %.
-%{! The cost of defining hereditary substitution in a non-deterministic manner, which we did to avoid putting cases of hereditary substitution in the context, is that we now need to prove the following lemmas.  These lemmas establish that any way of deriving a hereditary substitution for a closed term produces the same result as ``hsubst_r_closed``. !}%
+%[[ The cost of defining hereditary substitution in a non-deterministic manner, which we did to avoid putting cases of hereditary substitution in the context, is that we now need to prove the following lemmas.  These lemmas establish that any way of deriving a hereditary substitution for a closed term produces the same result as ``hsubst_r_closed``. %]]
 %sort hsubst_r_vacuous_id {_ hsubst_r M2 A2 ([_] R) R'} {_ id/rtm R' R} %.
 %mode hsubst_r_vacuous_id %in %out %.
 %sort hsubst_m_vacuous_id {_ hsubst_m M2 A2 ([_] M) M'} {_ id/mtm M' M} %.
@@ -429,7 +429,7 @@ Next, we show that the two atomic term judgements are exclusive.  In the only ba
 	%<- (id/mtm_pair_cong Did1 Did2 Did') %.
 %worlds (rtm_block) (hsubst_r_vacuous_id _ _) (hsubst_m_vacuous_id _ _) %.
 %total (D1 D2) (hsubst_r_vacuous_id D1 _) (hsubst_m_vacuous_id D2 _) %.
-%{! Now, we prove the top-level results: !}%
+%[[ Now, we prove the top-level results: %]]
 %sort hsubst_m_unique {_ hsubst_m M2 A2 M M'} {_ hsubst_m M2 A2 M M''} {_ id/mtm M' M''} %.
 %mode hsubst_m_unique %in %in %out %.
 %sort hsubst_r_unique {_ hsubst_r M2 A2 R R'} {_ hsubst_r M2 A2 R R''} {_ id/rtm R' R''} %.
@@ -507,11 +507,11 @@ Next, we show that the two atomic term judgements are exclusive.  In the only ba
 	%<- (id/mtm_pair_inv DidPair _ DidMr) %.
 %worlds (rtm_block) (hsubst_m_unique _ _ _) (hsubst_r_unique _ _ _) (hsubst_rr_unique _ _ _ _) %.
 %total (D1 D2 D3) (hsubst_r_unique D2 _ _) (hsubst_rr_unique D3 _ _ _) (hsubst_m_unique D1 _ _) %.
-%{! ### Expansion
+%[[ ### Expansion
 
 #### Existence of expansion
 
-This lemma is in part an [effectiveness lemma](/wiki/effectiveness-lemma/) for expansion, but it also shows that expansion preserves types. !}%
+This lemma is in part an [effectiveness lemma](/wiki/effectiveness-lemma/) for expansion, but it also shows that expansion preserves types. %]]
 %sort expand_exists {A} {_ atom R A} {_ expand A R M} {_ canon M A} %.
 %mode expand_exists %in %in %out %out %.
 %term _ expand_exists b D expand_b (canon_asm D) %.
@@ -525,9 +525,9 @@ This lemma is in part an [effectiveness lemma](/wiki/effectiveness-lemma/) for e
 	%<- (expand_exists A2 (atom_snd DaR) DeS DcS) %.
 %worlds (atom_block) (expand_exists _ _ _ _) %.
 %total D (expand_exists D _ _ _) %.
-%{! #### Uniqueness of expansion
+%[[ #### Uniqueness of expansion
 
-Uniqueness is proved by a straightforward induction using some identity lemmas: !}%
+Uniqueness is proved by a straightforward induction using some identity lemmas: %]]
 %sort expand_unique {_ expand A R M} {_ expand A R M'} {_ id/mtm M M'} %.
 %mode expand_unique %in %in %out %.
 %term _ expand_unique expand_b expand_b id/mtm_refl %.
@@ -545,7 +545,7 @@ Uniqueness is proved by a straightforward induction using some identity lemmas: 
 	%<- (id/mtm_pair_cong DidF DidS DidPair) %.
 %worlds (rtm_block) (expand_unique _ _ _) %.
 %total D (expand_unique _ D _) %.
-%{! ## Elaboration
+%[[ ## Elaboration
 
 In [part 2](/wiki/hereditary-substitution-for-the-stlc-part-2/), we discuss elaboration.  
 
@@ -555,4 +555,4 @@ The complete Twelf code for this tutorial contains the identity lemmas that we e
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Hereditary_substitution_for_the_STLC).
-!}%
+%]]

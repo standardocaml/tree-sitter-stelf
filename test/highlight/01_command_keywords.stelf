@@ -1,0 +1,6 @@
+%sort nat
+%term zero nat
+%define foo nat zero
+%mode add %in %in %out
+%use M N ()
+%open M (n)

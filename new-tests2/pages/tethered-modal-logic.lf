@@ -1,5 +1,5 @@
 %                                
-%{! Alex Simpson's thesis shows how to encode a variety of constructive
+%[[ Alex Simpson's thesis shows how to encode a variety of constructive
 modal logics by making box and diamond into universal and existential
 quantifiers over accessible Kripke worlds and orthogonally allowing
 axiomatization of the accessibility relation.
@@ -20,7 +20,7 @@ is
 
 (Author: Jason Reed, based on Pfenning's encoding of intuitionistic
 logic with cut admissibility)
-!}%
+%]]
 %sort w %.
 % worlds
 %name w %.
@@ -232,9 +232,9 @@ logic with cut admissibility)
 %mode ca %in %in %in %in %out %.
 %mode cag %in %in %in %in %out %.
 %total {(A' A) (M' M) [(D' D) (E' E)]} (cag M' A' D' E' _) (ca M A D E _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Tethered_modal_logic).
-!}%
+%]]

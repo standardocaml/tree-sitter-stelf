@@ -1,5 +1,5 @@
 %                         
-%{! ## Polarized logic !}%
+%[[ ## Polarized logic %]]
 %sort polarity %.
 %name polarity %.
 %term pos polarity %.
@@ -19,13 +19,13 @@
 %prec %right 8 -o %.
 %block bl_atmpos [qp atm pos]%.
 %block bl_atmneg [qn atm neg]%.
-%{! ## Sequent calculus for polarized logic !}%
-%{! ### Logic definition !}%
-%{! 
+%[[ ## Sequent calculus for polarized logic %]]
+%[[ ### Logic definition %]]
+%[[ 
 A sequent is written
  h1: hyp A1, ..., hn: hyp An |- conc A 
  A1, ..., An |- A
-!}%
+%]]
 %sort hyp {_ prop S} %.
 %name hyp %.
 %sort conc {_ prop S} %.
@@ -48,9 +48,9 @@ A sequent is written
 %scope +L %term oR %pi (%pi (hyp P) %-> (conc N)) %-> (conc (P -o N)) %.
 %term oL %pi (conc P) %-> (%pi (hyp N) %-> (conc C)) %-> (hyp (P -o N)) %-> (conc C) %.
 %worlds (bl_atmpos bl_atmneg bl_hyp) (hyp A) (conc C) %.
-%{! ## Focused sequent calculus !}%
-%{! ### Logic definition !}%
-%{! 
+%[[ ## Focused sequent calculus %]]
+%[[ ### Logic definition %]]
+%[[ 
 Neutral sequent:
  l1:left P1, ..., ln:left Pn |- right N
  P1, ..., Pn |- N
@@ -66,7 +66,7 @@ Right-focused sequent:
 These can be generically expressed as:
  l1:left P1, ..., ln:left Pn |- conseq C
  P1, ..., Pn |- C
-!}%
+%]]
 %sort left {_ prop pos} %.
 %name left %.
 %sort conclusion %.
@@ -102,17 +102,17 @@ These can be generically expressed as:
 %term oL' %pi (rfoc P) %-> (lfoc N N') %-> (lfoc (P -o N) N') %.
 %worlds (bl_atmpos bl_atmneg bl_left) (left P) (conseq C) %.
 % = (right N) (left N N') (rfoc P).
-%{! ### Cut admissibility !}%
+%[[ ### Cut admissibility %]]
 %sort cut< {N} {_ lfoc N' N} {_ lfoc N NC} {_ lfoc N' NC} %.
 %sort cut- {N} {_ right N} {_ lfoc N NC} {_ right NC} %.
 %sort cut+ {P} {_ rfoc P} {_ %pi (left P) %-> (conseq C)} {_ conseq C} %.
 %mode cut< %in %in %in %out %.
 %mode cut- %in %in %in %out %.
 %mode cut+ %in %in %in %out %.
-%{! #### Identity cuts !}%
+%[[ #### Identity cuts %]]
 %term _ cut+ (atom Qp) (initR' D) ([l] initR' l) (initR' D) %.
 %term _ cut< (atom Qn) initL' initL' initL' %.
-%{! #### Principal cuts !}%
+%[[ #### Principal cuts %]]
 %term _ 
 	%pi (cut- (up P) (upR' (%the (rfoc P) D)) (upL' (%the (%pi (left P) %-> (right N)) E)) F)
 	%<- (cut+ P D E (%the (right N) F)) %.
@@ -137,7 +137,7 @@ These can be generically expressed as:
 	%pi (cut- (N -o P) (-oR' (%the (%pi (left N) %-> (right P)) D1)) (-oL' (%the (rfoc N) E1) (%the (lfoc P NC) E2)) F)
 	%<- (cut+ N E1 D1 (%the (right P) F1))
 	%<- (cut- P F1 E2 (%the (right NC) F)) %.
-%{! #### Left commutative cuts !}%
+%[[ #### Left commutative cuts %]]
 %term _ %pi (cut< N (upL' D) E (upL' F)) %<- ({l1} cut- N (D l1) E (F l1)) %.
 %term _ %pi (cut- N (downL' D L) E (downL' F L)) %<- (cut< N D E F) %.
 %term _ %pi (cut- N (*L' D L) E (*L' F L)) %<- ({l1} {l2} cut- N (D l1 l2) E (F l1 l2)) %.
@@ -146,7 +146,7 @@ These can be generically expressed as:
 	%<- ({l1} cut- N (D1 l1) E (F1 l1))
 	%<- ({l2} cut- N (D2 l2) E (F2 l2)) %.
 %term _ %pi (cut< N (-oL' D1 D2) E (-oL' D1 F2)) %<- (cut< N D2 E F2) %.
-%{! #### Right commutative cuts !}%
+%[[ #### Right commutative cuts %]]
 %term _ cut+ P D ([l] initR' L) (initR' L) %.
 %term _ cut+ P D ([l] initL') initL' %.
 %term _ %pi (cut+ P D ([l] upR' (E l)) (upR' F)) %<- (cut+ P D ([l] E l) F) %.
@@ -175,7 +175,7 @@ These can be generically expressed as:
 	%<- (cut+ P D ([l] E2 l) F2) %.
 %worlds (bl_atmpos bl_atmneg bl_left) (cut< _ _ _ _) (cut- _ _ _ _) (cut+ _ _ _ _) %.
 %total {(N1 N2 P3) [(D1 D2 D3) (E1 E2 E3)]} (cut< N1 D1 E1 _) (cut+ N2 D2 E2 _) (cut- P3 D3 E3 _) %.
-%{! #### Corollary - unfocused cut !}%
+%[[ #### Corollary - unfocused cut %]]
 %sort cut-unfoc+ {_ right (up P)} {_ %pi (left P) %-> (right N)} {_ right N} %.
 %mode cut-unfoc+ %in %in %out %.
 %term _ %pi (cut-unfoc+ D E F) %<- (cut- (up P) D (upL' E) F) %.
@@ -186,8 +186,8 @@ These can be generically expressed as:
 %term _ %pi (cut-unfoc- D E F) %<- (cut+ (down A) (downR' D) E F) %.
 %worlds (bl_atmpos bl_atmneg bl_left) (cut-unfoc- _ _ _) %.
 %total [] (cut-unfoc- _ _ _) %.
-%{! ### Identity !}%
-%{! #### Eta expansion lemmas !}%
+%[[ ### Identity %]]
+%[[ #### Eta expansion lemmas %]]
 %sort eta- {N prop neg} {_ {N' prop neg} %pi (lfoc N N') %-> (right N')} {_ right N} %.
 %sort eta+ {P prop pos} {_ %pi (rfoc P) %-> (right N')} {_ %pi (left P) %-> (right N')} %.
 %mode eta- %in %in %out %.
@@ -215,7 +215,7 @@ These can be generically expressed as:
 	%<- (eta+ P1 ([rf1] R2 rf1) ([l1] R1 l1)) %.
 %worlds (bl_atmpos bl_atmneg bl_left bl_rfoc) (eta- N R R') (eta+ P R R') %.
 %total (N P) (eta- N _ _) (eta+ P _ _) %.
-%{! #### Identity corollaries !}%
+%[[ #### Identity corollaries %]]
 %sort idp {P prop pos} {_ %pi (left P) %-> (right (up P))} %.
 %mode idp %in %out %.
 %term _ %pi (idp P R) %<- (eta+ P ([rf] upR' rf) R) %.
@@ -228,7 +228,7 @@ These can be generically expressed as:
 	%<- ({l left (down N)} eta- N ([qn] [lf] downL' lf l) (R l)) %.
 %worlds (bl_atmpos bl_atmneg bl_left bl_rfoc) (idn _ _) %.
 %total [] (idn _ _) %.
-%{! ## Soundness !}%
+%[[ ## Soundness %]]
 %sort sdR {_ right N} {_ conc N} %.
 %sort sd+ {_ rfoc P} {_ conc P} %.
 %sort sd- {_ lfoc N N'} {_ %pi (hyp N) %-> (conc N')} %.
@@ -268,8 +268,8 @@ These can be generically expressed as:
 %worlds (bl_atmpos bl_atmneg bl_sdL) (sdR _ _) (sd+ _ _) (sd- _ _) (sdL _ _) %.
 %total [] (sdL _ _) %.
 %total (R1 R2 R3) (sdR R1 _) (sd+ R2 _) (sd- R3 _) %.
-%{! ## Completeness !}%
-%{! ### Unfocused admissibility !}%
+%[[ ## Completeness %]]
+%[[ ### Unfocused admissibility %]]
 %sort adm*R {_ right (up P1)} {_ right (up P2)} {_ right (up (P1 * P2))} %.
 %mode adm*R %in %in %out %.
 %term _ 
@@ -306,7 +306,7 @@ These can be generically expressed as:
 	%<- ({l} cut-unfoc+ R1 ([l1] R5 l l1) (R l)) %.
 %worlds (bl_atmpos bl_atmneg bl_left) (adm-oL _ _ _) %.
 %total [] (adm-oL _ _ _) %.
-%{! ### Completeness !}%
+%[[ ### Completeness %]]
 %sort cph+ {_ hyp P} {_ left P} %.
 %sort cph- {_ hyp N} {_ left (down N)} %.
 %sort cp- {_ conc N} {_ right N} %.
@@ -381,51 +381,51 @@ These can be generically expressed as:
 %total [] (cph+ Hp _) %.
 %total [] (cph- Hn _) %.
 %total (Dn Dp) (cp- Dn _) (cp+ Dp _) %.
-%{! ## Translating into focused logic !}%
-%{! A simple proof which is isomorphic in the unfocused and
+%[[ ## Translating into focused logic %]]
+%[[ A simple proof which is isomorphic in the unfocused and
 focused system, establishing ``|- a * b -o b * a``
-for positive a and b. !}%
+for positive a and b. %]]
 %inline ' [q] atom q %.
 %define r0 ({a atm pos} {b atm pos} right (' a * ' b -o up (' b * ' a))) [a] [b] -oR' ([lab] *L' ([la] [lb] upR' (*R' (initR' lb) (initR' la))) lab) %.
 %define d0 ({a atm pos} {b atm pos} conc (' a * ' b -o up (' b * ' a))) [a] [b] -oR ([hab] *L ([ha] [hb] upR (*R (init hb) (init ha))) hab) %.
-%{! |check=decl !}%
+%[[ |check=decl %]]
 %query 1 _ _ {a} {b} sdR (r0 a b) (D0 a b) %.
-%{! |check=decl !}%
+%[[ |check=decl %]]
 %query 1 _ _ {a} {b} cp- (d0 a b) (R0 a b) %.
-%{! ### Reducing the number of proofs !}%
-%{! This first example is already in "focused form" - invertible rules
+%[[ ### Reducing the number of proofs %]]
+%[[ This first example is already in "focused form" - invertible rules
 are applied only "before" upR is applied to prove 
-``|- (a + b) -> up (a + b)`` |check=decl !}%
+``|- (a + b) -> up (a + b)`` |check=decl %]]
 %query 1 _ _ {a atm pos} {b atm pos} cp- (-oR ([h hyp (atom a + atom b)] +L ([ha hyp (atom a)] upR (+R1 (init ha))) ([hb hyp (atom b)] upR (+R2 (init hb))) h)) (D a b) %.
-%{! This a proof of the same sequent, but upR is applied before +L, which
+%[[ This a proof of the same sequent, but upR is applied before +L, which
 is fine in the unfocused system but not in the focused system, where upR
 starts a focusing phase and makes it impossible to apply invertible rules like
 +L. Translation produces the same focused proof from these two different
-unfocused proofs. |check=decl !}%
+unfocused proofs. |check=decl %]]
 %query 1 _ _ {a atm pos} {b atm pos} cp- (-oR ([h hyp (atom a + atom b)] upR (+L ([ha hyp (atom a)] +R1 (init ha)) ([hb hyp (atom b)] +R2 (init hb)) h))) (D a b) %.
-%{! ### Forward and backward chaining !}%
-%{! Finally, consder the following unfocused sequent proof. The proof
+%[[ ### Forward and backward chaining %]]
+%[[ Finally, consder the following unfocused sequent proof. The proof
 proceeds in what we generally consider a "forward-chaining" manner, using
 the hypothesis (atom A) to obtain the hypothesis (atom B), which is then
 used to obtain the hypothesis (atom C), which is then used to obtain
-the hypothesis (atom D), which is finally used to finish. !}%
+the hypothesis (atom D), which is finally used to finish. %]]
 %define implies-proof [A atm neg] [B atm neg] [C atm neg] [D atm neg] -oR (downL ([ha hyp (atom A)] -oR (downL ([hab hyp (down (atom A) -o (atom B))] -oR (downL ([hbc hyp (down (atom B) -o (atom C))] -oR (downL ([hcd hyp (down (atom C) -o (atom D))] -oL (downR (init ha)) ([hb hyp (atom B)] -oL (downR (init hb)) ([hc hyp (atom C)] -oL (downR (init hc)) ([hd hyp (atom D)] init hd) hcd) hbc) hab)))))))) %.
-%{! Because negative polarity forces search to be goal directed, translating
+%[[ Because negative polarity forces search to be goal directed, translating
 this proof into the focused system will flip the order in which the 
 implications are considered, and no facts (beyond the four in the implication)
-will ever be added to the context. | check=decl !}%
+will ever be added to the context. | check=decl %]]
 %query 1 _ _ {a atm neg} {b atm neg} {c atm neg} {d atm neg} cp- (implies-proof a b c d) _ %.
-%{! Finally, we can show the proof of a successful attempt to prove
+%[[ Finally, we can show the proof of a successful attempt to prove
 ``right (A -o (A -o B) -o (B -o C) -o C)`` in the weakly focused system.
 In general, this could cause an infinite loop as Twelf has no problem
 with deriving multiple copies of the same fact, but here we use all
 negative atoms, and the resulting backward-chaining semantics
 corresponds nicely to Twelf's built-in backward-chaining semantics. 
-|check=decl !}%
+|check=decl %]]
 %solve p : {a atm neg} {b atm neg} {c atm neg} right (down (' a) -o down (down (' a) -o ' b) -o down (down (' b) -o ' c) -o ' c) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Weak_focusing).
-!}%
+%]]

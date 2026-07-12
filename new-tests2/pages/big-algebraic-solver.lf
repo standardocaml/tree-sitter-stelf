@@ -1,9 +1,9 @@
 %                                
-%{! 
+%[[ 
 The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem-proving/) written as a Twelf [logic program](/wiki/logic-programming/) by [Rob](/wiki/user-rsimmons/) at Princeton University as part of the Foundational Proof Carrying Code system. It is quite inefficient due to the fact that it doesn't try to order variables. The [http://wiki.portal.chalmers.se/agda/pmwiki.php?n=Libraries.UsingTheRingSolver RingSolver] in the Agda standard library is an example of a more efficient solver.
-!}%
-%{! ## Preexisting logic !}%
-%{! In the Princeton FPCC project where this was developed, many of the definitions below were more general (for instance, equality was on anything, not just numbers) and many things stated here as axioms were lemmas that had corresponding proofs. These are just the definitions and lemmas that were used within the solver. !}%
+%]]
+%[[ ## Preexisting logic %]]
+%[[ In the Princeton FPCC project where this was developed, many of the definitions below were more general (for instance, equality was on anything, not just numbers) and many things stated here as axioms were lemmas that had corresponding proofs. These are just the definitions and lemmas that were used within the solver. %]]
 %sort tnum %.
 %sort tform %.
 %sort pf {_ tform} %.
@@ -125,13 +125,13 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %define cancel_-a+a+b' (pf (neg A + (A + B) == B)) trans assoc_plus cancel_-a+a+b %.
 %define cancel_-a+b+a (pf (neg A + B + A == B)) trans4 plus_assoc (plus_cong2 comm_plus) assoc_plus cancel_-a+a+b %.
 %define cancel_-a+b+a' (pf (neg A + (B + A) == B)) trans assoc_plus cancel_-a+b+a %.
-%{! ## Parts of the solver !}%
+%[[ ## Parts of the solver %]]
 %define nomatch zero %.
 %define match one %.
 %define listify (%pi tnum %-> tnum %-> tnum %-> %type) [a] [pos] [neg] pf (a == pos - neg) %.
 %deterministic listify %.
 %mode listify %in %out %out %.
-%{! ### Normalization !}%
+%[[ ### Normalization %]]
 %define plusify (%pi tnum %-> tnum %-> tnum %-> %type) [a] [x] [y] pf (a == x - y) %.
 %deterministic plusify %.
 %mode plusify %in %out %out %.
@@ -141,7 +141,7 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %define catchtimes (%pi tnum %-> tnum %-> tnum %-> tnum %-> tnum %-> tnum %-> tnum %-> %type) [a] [b] [x] [y] [sign] [pos] [neg] pf (b * sign == x * y imp a + b == pos - neg) %.
 %deterministic catchtimes %.
 %mode catchtimes %in %in %in %in %in %out %out %.
-%{! ### Matching !}%
+%[[ ### Matching %]]
 %define trim (%pi tnum %-> tnum %-> tnum %-> tnum %-> %type) [a] [b] [c] [d] pf (a - b == c - d) %.
 %deterministic trim %.
 %mode trim %in %in %out %out %.
@@ -151,7 +151,7 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %define rearrange (%pi tnum %-> tnum %-> tnum %-> tnum %-> %type) [a] [b] [c] [d] pf (a - b == c - d) %.
 %deterministic rearrange %.
 %mode rearrange %in %in %in %in %.
-%{! ### Main solver interface !}%
+%[[ ### Main solver interface %]]
 %define algebra_solver (%pi tform %-> %type) [a] pf a %.
 %deterministic algebra_solver %.
 %define algebra_fact (%pi tform %-> %type) [a] pf a %.
@@ -162,13 +162,13 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %mode algebra_times_hint_intern %out %out %.
 %define algebra_times_hint (%pi tnum %-> %type) [a] pf (a == a) %.
 %mode algebra_times_hint %out %.
-%{! ## Implementation !}%
-%{! ### Normalization !}%
-%{! #### Listify !}%
-%{! Decomposes equations into list form ``0 + (1 * A * B * C) + D - E + (1 * F * G) +...`` !}%
+%[[ ## Implementation %]]
+%[[ ### Normalization %]]
+%[[ #### Listify %]]
+%[[ Decomposes equations into list form ``0 + (1 * A * B * C) + D - E + (1 * F * G) +...`` %]]
 %clause listify_imp (%pi (listify A Pos Neg) %<- (plusify (zero + A) Pos Neg)) [p1 pf (zero + A == Pos - Neg)] trans3 (symm plus_zero) comm_plus p1 %.
-%{! #### Timesify !}%
-%{! ``timesify B X S Z`` - Creates a one-terminated list ``(1 * A * B * C * ...)``
+%[[ #### Timesify %]]
+%[[ ``timesify B X S Z`` - Creates a one-terminated list ``(1 * A * B * C * ...)``
 
 * B - the input
 * X - the output list
@@ -176,7 +176,7 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 **       zero if a zero is encountered and the term is equal to zero
 **       (P + Q) if a sum is encountered and the product needs to be distributed
 **       one if the list is successfully processed
-* Sign - takes on all change-of-sign information !}%
+* Sign - takes on all change-of-sign information %]]
 %clause timesify_neg (%pi (timesify (B * (neg C)) X Y (neg Sign)) %<- (timesify (B * C) X Y Sign)) [p1 pf (B * C * Sign == X * Y)] trans4 times_assoc (times_cong2 neg_times) (symm times_assoc) p1 %.
 %clause timesify_swap (%pi (timesify (B * (C * D)) X Y Sign) %<- (timesify (B * C * D) X Y Sign)) [p1] trans (times_cong1 (symm times_assoc)) p1 %.
 %clause timesify_zero (timesify (B * zero) one zero one) trans3 times_one times_zero (symm times_zero) %.
@@ -184,8 +184,8 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %clause timesify_end_plus (timesify (B * (P + Q)) B (P + Q) one) times_one %.
 %clause timesify_step (%pi (timesify (B * C) (X * C) Y Sign) %<- (timesify B X Y Sign)) [p1 pf (B * Sign == X * Y)] trans3 (trans3 times_assoc (times_cong2 comm_times) assoc_times) (times_cong1 p1) (trans3 times_assoc (times_cong2 comm_times) assoc_times) %.
 %clause timesify_end_one (timesify one one one one) refl %.
-%{! #### Catchtimes !}%
-%{! ``catchtimes A B X Y Sign Pos Neg`` - unravels to the correct sign
+%[[ #### Catchtimes %]]
+%[[ ``catchtimes A B X Y Sign Pos Neg`` - unravels to the correct sign
 * A - The as-yet unprocessed bit of the equation
 * B - The single term that was passed to timesify
 * X - The list returned from timesify
@@ -193,7 +193,7 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 * Sign - the correct sign
 * Pos - The master positive term list
 * Neg - The master negative term list
-!}%
+%]]
 %clause catch_neg1 (
 	%pi (catchtimes A B (neg X) Y (neg Sign) Pos Neg)
 	%<- (catchtimes A B X Y Sign Pos Neg)) [p1 pf (B * Sign == X * Y imp A + B == Pos - Neg)] imp_i ([p2 pf (B * neg Sign == neg X * Y)] cut (trans3 (symm neg_times2) p2 neg_times1) ([p3 pf (neg (B * Sign) == neg (X * Y))] imp_e p1 (neg_elim p3))) %.
@@ -206,8 +206,8 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %clause catch_break (
 	%pi (catchtimes A B X (P + Q) one Pos Neg)
 	%<- (plusify (A + X * P + X * Q) Pos Neg)) [p1 pf (A + X * P + X * Q == Pos - Neg)] imp_i ([p2 pf (B * one == X * (P + Q))] cut (trans3 (symm times_one) p2 distrib) ([p3 pf (B == X * P + X * Q)] trans3 (plus_cong2 p3) assoc_plus p1)) %.
-%{! #### Plusify !}%
-%{! ``plusify`` - Creates a zero-termiated list (0 + A + B + C +...) !}%
+%[[ #### Plusify %]]
+%[[ ``plusify`` - Creates a zero-termiated list (0 + A + B + C +...) %]]
 %clause plusify_minus (%pi (plusify (A - (B + C)) Pos Neg) %<- (plusify (A - B - C) Pos Neg)) [p1] trans3 (plus_cong2 (symm neg_plus)) assoc_plus p1 %.
 %clause plusify_swap (%pi (plusify (A + (B + C)) Pos Neg) %<- (plusify (A + B + C) Pos Neg)) [p1] trans assoc_plus p1 %.
 %clause plusify_neg_one (%pi (plusify (A + neg one * B) Pos Neg) %<- (plusify (A - B) Pos Neg)) [p1] trans (plus_cong2 (trans neg_times1 (neg_cong one_times))) p1 %.
@@ -228,7 +228,7 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %clause plusify_step_neg (%pi (plusify (A - B) Pos (Neg + (one * B))) %<- (plusify A Pos Neg)) [p1 pf (A == Pos - Neg)] trans3 (plus_cong p1 (neg_cong (symm one_times))) plus_assoc (plus_cong2 neg_plus) %.
 %clause plusify_step (%pi (plusify (A + B) (Pos + (one * B)) Neg) %<- (plusify A Pos Neg)) [p1 pf (A == Pos - Neg)] trans (plus_cong p1 (symm one_times)) (trans3 plus_assoc (plus_cong2 comm_plus) assoc_plus) %.
 %clause plusify_zero (plusify zero zero zero) symm plus_inv %.
-%{! #### Testing !}%
+%[[ #### Testing %]]
 %solve __P : {a} {b} listify (a * (b - one)) _ _ %.
 %solve __P : {a} listify (succ a * pred a) _ _ %.
 % 
@@ -254,16 +254,16 @@ The big algebraic software is a [tactical theorem prover](/wiki/tactical-theorem
 %solve __P : listify (neg (neg (neg (neg (neg (neg zero))))) * one + zero) _ _ %.
 %solve __P : {a} {b} timesify (one * (a + b)) _ _ _ %.
 %solve __P : {a} listify (pred a * succ a) _ _ %.
-%{! ### Matching !}%
-%{! #### Trim !}%
-%{! TRIM - takes two lists, and makes a single pass at removing items from the
+%[[ ### Matching %]]
+%[[ #### Trim %]]
+%[[ TRIM - takes two lists, and makes a single pass at removing items from the
 first list and putting them in the second list. Fails unless at least one
-element (the top element in the first list) is trimmed. !}%
+element (the top element in the first list) is trimmed. %]]
 %clause trim_get (trim (A + C) (B + C) A B) cut (trans plus_assoc (plus_cong2 (plus_cong2 (symm neg_plus)))) ([p2 pf (A + C - (B + C) == A + (C + (neg B - C)))] cut (trans (plus_cong2 assoc_plus) (plus_cong2 cancel_a+b-a)) ([p3 pf (A + (C + (neg B - C)) == A - B)] trans p2 p3)) %.
 %clause trim_getmult (%pi (trim (A + C) (B + D) A B) %<- (findarr_mult C D one nomatch)) [p2 pf (C == D * one and zero == zero)] cut (trans (and_e1 p2) times_one) ([p3 pf (C == D)] cut (congr ([i] C - B - i == neg B) (symm p3) cancel_a+b-a) ([p4 pf (C - B - D == neg B)] cut (trans3 (plus_cong2 (symm neg_plus)) assoc_plus p4) ([p5 pf (C - (B + D) == neg B)] trans plus_assoc (plus_cong2 p5)))) %.
 %clause trim_step1 (%pi (trim (A + C) B (X + C) Y) %<- (trim A B X Y)) [p1 pf (A - B == X - Y)] cut (trans3 (trans3 plus_assoc (plus_cong2 comm_plus) assoc_plus) (plus_cong1 p1) (trans3 plus_assoc (plus_cong2 comm_plus) assoc_plus)) ([p2 pf (A + C - B == X + C - Y)] p2) %.
 %clause trim_step2 (%pi (trim A (B + C) X (Y + C)) %<- (trim A B X Y)) [p1 pf (A - B == X - Y)] trans3 (plus_cong2 (symm neg_plus)) (trans3 assoc_plus (plus_cong1 p1) plus_assoc) (plus_cong2 neg_plus) %.
-%{! #### Findarr_mult !}%
+%[[ #### Findarr_mult %]]
 % FINDARR_MULT - more complex than trim, cycles through a product to 
 % Uses a quadratic algorithm, but in most cases the length of the proof
 % is dominated by the list creation, not the 
@@ -280,7 +280,7 @@ element (the top element in the first list) is trimmed. !}%
 %clause fam_swap (%pi (findarr_mult X (Y * B) Z M) %<- (findarr_mult X Y (Z * B) M)) [p1 pf (X == Y * (Z * B) and M == M)] cut p1 ([_] and_i (trans3 (and_e1 p1) (times_cong2 comm_times) (symm times_assoc)) refl) %.
 %clause fam_finish (findarr_mult one one one M) and_i (symm times_one) refl %.
 %clause fam_one (%pi (findarr_mult X one Y match) %<- (findarr_mult X Y one nomatch)) [p1 pf (X == Y * one and nomatch == nomatch)] and_i (trans (and_e1 p1) comm_times) refl %.
-%{! #### Rearrange !}%
+%[[ #### Rearrange %]]
 % REARRANGE
 % Handles the finishing steps of the solver
 %clause rearr_finish (rearrange zero zero zero zero) refl %.
@@ -373,7 +373,7 @@ element (the top element in the first list) is trimmed. !}%
 	%<- (algebra_solver (A * X + D * Y == C * Y + B * X))) [p1] [p2] [p3] [p4] cut p4 ([_] imp_i ([p5] cut3 p1 p2 p3 ([_] [_] [_] cut (imp_e (solver_geq p1) (geq_times_cong1_neg p3 p5)) ([p6 pf (C * Y >= D * Y)] geq_times_elim2_neg p2 p6)))) %.
 %clause solver_neq (%pi (algebra_solver (A != B imp C != D)) %<- (algebra_solver (C == D imp A == B))) [p1] imp_i ([p2] not_eie p2 (imp_e p1)) %.
 %clause solver_gt (%pi (algebra_solver (A < B imp C < D)) %<- (algebra_solver (C >= D imp A >= B))) [p1] imp_i ([p2] not_ein p2 (imp_e p1)) %.
-%{! ## Test cases for the solver !}%
+%[[ ## Test cases for the solver %]]
 %solve __P : {a} {b} {c} algebra_solver (a > b imp a + c > c + b) %.
 %solve __P : {a} {b} {c} algebra_solver (a - b + c >= zero imp a >= b - c) %.
 %solve __P : {a} {b} {c} algebra_solver (a >= b imp neg a + c <= neg b + c) %.
@@ -467,9 +467,9 @@ element (the top element in the first list) is trimmed. !}%
 	%-> (pf (B >= zero))
 	%-> (pf (C * A >= A * (D + zero)))
 	%-> (pf (B * C * one <= B * D))) [p1] [p2] [p3] imp_e (ex_29 A B C D refl p1 refl p2) p3 %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Big_algebraic_solver).
-!}%
+%]]

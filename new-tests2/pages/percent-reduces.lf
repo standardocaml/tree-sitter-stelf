@@ -1,6 +1,6 @@
 %                    
 %                                                                                   
-%{! 
+%[[ 
 
 The **``%reduces``** declaration checks a specified subderivation relationship between two derivations in a judgment. Once a ``%reduces`` relationship has been established for a judgment, the termination checker can use that information to verify that inductive calls are always on smaller derivations. Its primary use is for termination checking in inductive proofs that induct on the output of some other judgment, rather than directly on a subderivation.
 
@@ -10,4 +10,4 @@ The **``%reduces``** declaration checks a specified subderivation relationship b
 
 
 <Keyword/>
-!}%
+%]]

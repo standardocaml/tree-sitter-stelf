@@ -1,0 +1,104 @@
+0:0-0:60	comment	`%%% into a proof in the Hilbert-style system and vice versa.`
+1:0-1:49	comment	`%%% Expresses the equivalence of the two systems.`
+2:0-2:26	comment	`%%% Author: Frank Pfenning`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:9	constructor	`abs`
+3:6-3:9	local.reference	`abs`
+3:6-3:9	type	`abs`
+3:13-3:16	operator	`%pi`
+3:17-3:18	punctuation.bracket	`(`
+3:22-3:23	punctuation.bracket	`)`
+3:24-3:27	operator	`%->`
+3:28-3:29	punctuation.bracket	`(`
+3:33-3:34	punctuation.bracket	`)`
+3:34-3:35	punctuation.bracket	`}`
+3:36-3:37	punctuation.bracket	`{`
+3:37-3:38	variable.parameter.builtin	`_`
+3:48-3:49	punctuation.bracket	`}`
+3:50-3:52	keyword.return	`%.`
+4:6-4:9	constructor	`aID`
+4:6-4:9	function	`aID`
+4:6-4:9	local.reference	`aID`
+4:6-4:9	variable.parameter	`aID`
+4:9-4:13	constructor	` abs`
+4:9-4:13	local.reference	` abs`
+4:38-4:40	keyword.return	`%.`
+5:6-5:8	constructor	`aK`
+5:6-5:8	function	`aK`
+5:6-5:8	local.reference	`aK`
+5:6-5:8	variable.parameter	`aK`
+5:8-5:12	constructor	` abs`
+5:8-5:12	local.reference	` abs`
+5:30-5:32	keyword.return	`%.`
+6:6-6:8	constructor	`aS`
+6:6-6:8	function	`aS`
+6:6-6:8	local.reference	`aS`
+6:6-6:8	variable.parameter	`aS`
+6:8-6:12	constructor	` abs`
+6:8-6:12	local.reference	` abs`
+6:30-6:32	keyword.return	`%.`
+7:6-7:9	constructor	`aMP`
+7:6-7:9	function	`aMP`
+7:6-7:9	local.reference	`aMP`
+7:6-7:9	variable.parameter	`aMP`
+7:9-7:13	operator	` %pi`
+7:14-7:15	punctuation.bracket	`(`
+7:15-7:18	constructor	`abs`
+7:15-7:18	local.reference	`abs`
+7:19-7:20	punctuation.bracket	`(`
+7:20-7:20	local.reference	``
+7:20-7:20	operator	``
+7:20-7:21	punctuation.bracket	`[`
+7:21-7:22	constructor	`x`
+7:21-7:22	local.reference	`x`
+7:21-7:22	variable.parameter	`x`
+7:22-7:23	punctuation.bracket	`]`
+7:24-7:26	constructor	`MP`
+7:24-7:26	local.reference	`MP`
+7:27-7:28	punctuation.bracket	`(`
+7:28-7:29	constructor	`P`
+7:28-7:29	local.reference	`P`
+7:30-7:31	constructor	`x`
+7:30-7:31	local.reference	`x`
+7:31-7:32	punctuation.bracket	`)`
+7:33-7:34	punctuation.bracket	`(`
+7:34-7:35	constructor	`Q`
+7:34-7:35	local.reference	`Q`
+7:36-7:37	constructor	`x`
+7:36-7:37	local.reference	`x`
+7:37-7:38	punctuation.bracket	`)`
+7:38-7:39	punctuation.bracket	`)`
+7:40-7:41	punctuation.bracket	`(`
+7:41-7:43	constructor	`MP`
+7:41-7:43	local.reference	`MP`
+7:44-7:45	punctuation.bracket	`(`
+7:45-7:47	constructor	`MP`
+7:45-7:47	local.reference	`MP`
+7:48-7:49	constructor	`S`
+7:48-7:49	local.reference	`S`
+7:50-7:52	constructor	`P'`
+7:50-7:52	local.reference	`P'`
+7:52-7:53	punctuation.bracket	`)`
+7:54-7:56	constructor	`Q'`
+7:54-7:56	local.reference	`Q'`
+7:56-7:57	punctuation.bracket	`)`
+7:57-7:58	punctuation.bracket	`)`
+7:59-7:62	operator	`%<-`
+7:63-7:64	punctuation.bracket	`(`
+7:64-7:67	constructor	`abs`
+7:64-7:67	local.reference	`abs`
+7:68-7:69	constructor	`P`
+7:68-7:69	local.reference	`P`
+7:70-7:72	constructor	`P'`
+7:70-7:72	local.reference	`P'`
+7:72-7:73	punctuation.bracket	`)`
+7:73-7:77	operator	` %<-`
+7:78-7:79	punctuation.bracket	`(`
+7:79-7:82	constructor	`abs`
+7:79-7:82	local.reference	`abs`
+7:83-7:84	constructor	`Q`
+7:83-7:84	local.reference	`Q`
+7:85-7:87	constructor	`Q'`
+7:85-7:87	local.reference	`Q'`
+7:87-7:88	punctuation.bracket	`)`
+7:88-7:91	keyword.return	` %.`

@@ -1,5 +1,5 @@
 %                           
-%{! The **abstract syntax** of a programming language is an unambiguous representation of the syntax of a language; most compilers and most language definitions work in terms of the abstract syntax of a language as opposed to the **concrete syntax** of a language, which is what the programmer actually writes down. Twelf can encode the abstract syntax of a language, and can furthermore gracefully encode the idea of _binding_ by using [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
+%[[ The **abstract syntax** of a programming language is an unambiguous representation of the syntax of a language; most compilers and most language definitions work in terms of the abstract syntax of a language as opposed to the **concrete syntax** of a language, which is what the programmer actually writes down. Twelf can encode the abstract syntax of a language, and can furthermore gracefully encode the idea of _binding_ by using [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
 
 ## Example
 
@@ -25,4 +25,4 @@ and the same abstract syntax in a language like Twelf might look like this:
 
 ## See also
 
-[Higher-order abstract syntax](/wiki/higher-order-abstract-syntax/) !}%
+[Higher-order abstract syntax](/wiki/higher-order-abstract-syntax/) %]]

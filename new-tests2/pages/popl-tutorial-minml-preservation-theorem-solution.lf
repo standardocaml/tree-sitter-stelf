@@ -1,9 +1,9 @@
 %                                                              
-%{! This is the solution to [this exercise](/wiki/popl-tutorial-minml-preservation-theorem/).
+%[[ This is the solution to [this exercise](/wiki/popl-tutorial-minml-preservation-theorem/).
 
 Type safety for MinML
 
-|hidden = true !}%
+|hidden = true %]]
 %% Syntax %%
 %sort tp %.
 %name tp %.
@@ -49,11 +49,11 @@ Type safety for MinML
 %term step/ifz/arg %pi (step (ifz E E1 ([x] E2 x)) (ifz E' E1 ([x] E2 x))) %<- (step E E') %.
 %term step/ifz/z step (ifz z E1 ([x] E2 x)) E1 %.
 %term step/ifz/s %pi (step (ifz (s E) E1 ([x] E2 x)) (E2 E)) %<- (value E) %.
-%{! 
+%[[ 
 
 ## Preservation
 
-!}%
+%]]
 %sort pres {_ step E E'} {_ of E T} {_ of E' T} %.
 %name pres %.
 %mode pres %in %in %out %.
@@ -72,9 +72,9 @@ Type safety for MinML
 %term _ pres (step/app/beta _) (of/app Dof2 (of/fn ([x] [dx] Dof1 x dx))) (Dof1 _ Dof2) %.
 %worlds () (pres Dstep Dof Dof') %.
 %total Dstep (pres Dstep _ _) %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/MinML_Preservation_Theorem:_Solution).
-!}%
+%]]

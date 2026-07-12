@@ -1,6 +1,6 @@
 %                                   
 %                                                                                     
-%{! When representing [judgment](/wiki/judgment/)s in [LF](/wiki/lf/), it is often possible to represent [hypothetical judgment](/wiki/hypothetical-judgment/)s using LF binding.  We call this representation technique _higher-order judgments_ because judgments are represented using higher-order types in LF.  Higher-order representations are advantageous because hypothetical judgment properties such as [weakening](/wiki/weakening-lemma/), [exchange](/wiki/exchange-lemma/), and [substitution](/wiki/substitution-lemma/) are inherited "for free" from the corresponding properties of LF.
+%[[ When representing [judgment](/wiki/judgment/)s in [LF](/wiki/lf/), it is often possible to represent [hypothetical judgment](/wiki/hypothetical-judgment/)s using LF binding.  We call this representation technique _higher-order judgments_ because judgments are represented using higher-order types in LF.  Higher-order representations are advantageous because hypothetical judgment properties such as [weakening](/wiki/weakening-lemma/), [exchange](/wiki/exchange-lemma/), and [substitution](/wiki/substitution-lemma/) are inherited "for free" from the corresponding properties of LF.
 
 ## Example
 
@@ -56,7 +56,7 @@ Hypothesis is derivable by the rule <Math formula="\textit{of-var}"/>.  Weakenin
 
 ### LF representation
 
-We represent the syntax of this calculus with the following LF signature: !}%
+We represent the syntax of this calculus with the following LF signature: %]]
 %sort tp %.
 %term arrow %pi tp %-> tp %-> tp %.
 %term unit tp %.
@@ -64,16 +64,16 @@ We represent the syntax of this calculus with the following LF signature: !}%
 %term empty tm %.
 %term app %pi tm %-> tm %-> tm %.
 %term lam %pi tp %-> (%pi tm %-> tm) %-> tm %.
-%{! Terms are represented using [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
+%[[ Terms are represented using [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
 
-As an example of higher-order representations of judgments, we use LF binding to represent the object-language typing judgement.  The following LF signature represents the above judgement <Math formula="\gamma \vdash e : \tau"/> with the LF type family ``of``. !}%
+As an example of higher-order representations of judgments, we use LF binding to represent the object-language typing judgement.  The following LF signature represents the above judgement <Math formula="\gamma \vdash e : \tau"/> with the LF type family ``of``. %]]
 %sort of {_ tm} {_ tp} %.
 %term of-empty of empty unit %.
 %term of-lam 
 	%pi (of (lam T2 ([x] E x)) (arrow T2 T))
 	%<- ({x tm} %pi (of x T2) %-> (of (E x) T)) %.
 %term of-app %pi (of (app E1 E2) T) %<- (of E1 (arrow T2 T)) %<- (of E2 T2) %.
-%{! The first thing to note is that the type family is indexed by a ``tm`` and a ``tp`` but **not** a representation of the context <Math formula="\gamma"/>;.  The reason for this is that we identify the object-language context with the LF context.  Specifically, an object-language assumption <Math formula="x:\tau"/> does two things:
+%[[ The first thing to note is that the type family is indexed by a ``tm`` and a ``tp`` but **not** a representation of the context <Math formula="\gamma"/>;.  The reason for this is that we identify the object-language context with the LF context.  Specifically, an object-language assumption <Math formula="x:\tau"/> does two things:
 * It binds the variable <Math formula="x"/>.
 * It declares a typing assumption <Math formula="x : \tau"/>.
 
@@ -96,4 +96,4 @@ The constants ``of-empty`` and ``of-app`` correspond to the informal inference r
 * [Reformulating languages to use hypothetical judgements](/wiki/reformulating-languages-to-use-hypothetical-judgements/)
 * [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/)
 
-!}%
+%]]

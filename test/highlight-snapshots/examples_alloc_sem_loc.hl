@@ -1,0 +1,78 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:11	comment	`%%% loc.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:13	comment	`%%% Locations`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword	`%term`
+6:6-6:11	constructor	`mkLoc`
+6:6-6:11	function	`mkLoc`
+6:6-6:11	local.reference	`mkLoc`
+6:6-6:11	variable.parameter	`mkLoc`
+6:11-6:15	operator	` %pi`
+6:16-6:19	constructor	`nat`
+6:16-6:19	local.reference	`nat`
+6:20-6:23	operator	`%->`
+6:24-6:27	constructor	`loc`
+6:24-6:27	local.reference	`loc`
+6:27-6:30	keyword.return	` %.`
+6:30-7:67	comment	``
+10:0-10:5	keyword.type	`%sort`
+10:6-10:12	constructor	`loc_lt`
+10:6-10:12	local.reference	`loc_lt`
+10:6-10:12	type	`loc_lt`
+10:29-10:31	keyword.return	`%.`
+11:6-11:12	constructor	`loc_lt`
+11:6-11:12	local.reference	`loc_lt`
+11:12-11:16	keyword.modifier	` %in`
+11:16-11:20	keyword.modifier	` %in`
+11:20-11:23	keyword.return	` %.`
+12:6-12:13	constructor	`loc_lt_`
+12:6-12:13	function	`loc_lt_`
+12:6-12:13	local.reference	`loc_lt_`
+12:6-12:13	variable.parameter	`loc_lt_`
+12:13-12:17	operator	` %pi`
+12:18-12:19	punctuation.bracket	`(`
+12:19-12:25	constructor	`loc_lt`
+12:19-12:25	local.reference	`loc_lt`
+12:26-12:27	punctuation.bracket	`(`
+12:27-12:32	constructor	`mkLoc`
+12:27-12:32	local.reference	`mkLoc`
+12:33-12:35	constructor	`N1`
+12:33-12:35	local.reference	`N1`
+12:35-12:36	punctuation.bracket	`)`
+12:37-12:38	punctuation.bracket	`(`
+12:38-12:43	constructor	`mkLoc`
+12:38-12:43	local.reference	`mkLoc`
+12:44-12:46	constructor	`N2`
+12:44-12:46	local.reference	`N2`
+12:46-12:47	punctuation.bracket	`)`
+12:47-12:48	punctuation.bracket	`)`
+12:49-12:52	operator	`%<-`
+12:53-12:54	punctuation.bracket	`(`
+12:54-12:60	constructor	`nat_lt`
+12:54-12:60	local.reference	`nat_lt`
+12:61-12:63	constructor	`N1`
+12:61-12:63	local.reference	`N1`
+12:64-12:66	constructor	`N2`
+12:64-12:66	local.reference	`N2`
+12:66-12:67	punctuation.bracket	`)`
+12:67-12:70	keyword.return	` %.`
+13:12-13:13	punctuation.bracket	`{`
+13:13-13:13	local.reference	``
+13:13-13:13	operator	``
+13:13-13:14	punctuation.bracket	`}`
+13:28-13:30	keyword.return	`%.`
+14:8-14:9	punctuation.bracket	`(`
+14:9-14:10	punctuation.bracket	`)`
+14:11-14:12	punctuation.bracket	`(`
+14:12-14:18	constructor	`loc_lt`
+14:12-14:18	local.reference	`loc_lt`
+14:19-14:20	constructor	`_`
+14:19-14:20	local.reference	`_`
+14:19-14:20	variable.parameter	`_`
+14:21-14:22	constructor	`_`
+14:21-14:22	local.reference	`_`
+14:21-14:22	variable.parameter	`_`
+14:22-14:23	punctuation.bracket	`)`
+14:23-14:26	keyword.return	` %.`

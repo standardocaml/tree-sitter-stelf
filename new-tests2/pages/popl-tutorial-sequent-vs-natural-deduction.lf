@@ -1,5 +1,5 @@
 %                                                      
-%{! 
+%[[ 
 
 In this exercise, we will present rules for natural deduction and for a sequent calculus presentation of intuitionistic logic, and give an two incomplete proofs. The first establishes that derivability in natural deduction implies derivability in the sequent calculus, the second establishes the converse.
 
@@ -11,32 +11,32 @@ The solution is [here](/wiki/popl-tutorial-sequent-vs-natural-deduction-solution
 
 ## Syntax for Propositions
 
-!}%
+%]]
 %sort prop %.
 %name prop %.
 %term top prop %.
 %term and %pi prop %-> prop %-> prop %.
 %term imp %pi prop %-> prop %-> prop %.
-%{! 
+%[[ 
 
 ## Natural Deduction Inference Rules
 
 Natural deduction deals with a single judgment, <Math formula="\texttt{true}~A"/>.
 
-!}%
+%]]
 %sort true {_ prop} %.
-%{! 
+%[[ 
 
 Six rules describe a natural deduction system for the language considered here.
 
-!}%
+%]]
 %term topI true top %.
 %term andI %pi (true (and A B)) %<- (true B) %<- (true A) %.
 %term andE1 %pi (true A) %<- (true (and A B)) %.
 %term andE2 %pi (true B) %<- (true (and A B)) %.
 %term impI %pi (true (imp A B)) %<- (%pi (true A) %-> (true B)) %.
 %term impE %pi (true B) %<- (true (imp A B)) %<- (true A) %.
-%{! 
+%[[ 
 
 ## Sequent Calculus
 
@@ -44,16 +44,16 @@ With the same grammar of propositions, we can define a sequent
 calculus with different judgments for the left and the right of
 the sequent (<Math formula="\texttt{hyp}~A"/> for the left and <Math formula="\texttt{conc}~A"/> for the right).
 
-!}%
+%]]
 %sort hyp {_ prop} %.
 %sort conc {_ prop} %.
-%{! 
+%[[ 
 
 This particular sequent calculus includes the cut rule. We can show
 separately that it is possible to eliminate all uses of cut by proving
 the [admissibility of cut](/wiki/admissibility-of-cut/).
 
-!}%
+%]]
 %term init %pi (conc A) %<- (hyp A) %.
 %term topR conc top %.
 %term andL %pi (%pi (hyp (and A B)) %-> (conc C)) %<- (%pi (hyp A) %-> (hyp B) %-> (conc C)) %.
@@ -61,13 +61,13 @@ the [admissibility of cut](/wiki/admissibility-of-cut/).
 %term impL %pi (%pi (hyp (imp A B)) %-> (conc C)) %<- (conc A) %<- (%pi (hyp B) %-> (conc C)) %.
 %term impR %pi (conc (imp A B)) %<- (%pi (hyp A) %-> (conc B)) %.
 %term cut %pi (conc B) %<- (conc A) %<- (%pi (hyp A) %-> (conc B)) %.
-%{! 
+%[[ 
 
 The natural deduction system exists in a world with arbitrary assumptions <Math formula="\texttt{hyp}~A"/>.
 
-!}%
+%]]
 %block bhyp {A prop} [H hyp A]%.
-%{! 
+%[[ 
 
 ## Translation: Natural Deduction to Sequent Calculus
 
@@ -81,7 +81,7 @@ something similar in the translation for the other direction.
 
 #### TASK 1: Fill in the three missing cases for conjunction
 
-!}%
+%]]
 %sort nd-to-seq {_ true A} {_ conc A} %.
 %mode nd-to-seq %in %out %.
 %scope nd-to-seq %term top nd-to-seq topI topR %.
@@ -101,7 +101,7 @@ something similar in the translation for the other direction.
 %block truetohyp {A prop} [DA true A] [HA hyp A] [Dtrans nd-to-seq DA (init HA)]%.
 %worlds (truetohyp) (nd-to-seq _ _) %.
 %total D (nd-to-seq D _) %.
-%{! 
+%[[ 
 
 ## Translation: Sequent Calculus to Natural Deduction
 
@@ -110,7 +110,7 @@ The following (incomplete) proof establishes that whenever a proposition is deri
 
 #### TASK 2: Complete the theorem with cases for implication and cut
 
-!}%
+%]]
 %sort hyp-to-true {_ hyp A} {_ true A} %.
 %mode hyp-to-true %in %out %.
 %block hyptotrue {A prop} [HA hyp A] [DA true A] [Dtrans hyp-to-true HA DA]%.
@@ -138,12 +138,12 @@ The following (incomplete) proof establishes that whenever a proposition is deri
 %scope seq-to-nd %term cut seq-to-nd (cut ([hA hyp A] %the (conc B) (DconcB hA)) (%the (conc A) DconcA)) XXX %.
 %worlds (hyptotrue) (seq-to-nd _ _) %.
 %total D (seq-to-nd D _) %.
-%{! 
+%[[ 
 [Solution](/wiki/popl-tutorial-sequent-vs-natural-deduction-solution/)
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Sequent_vs_Natural_Deduction).
-!}%
+%]]

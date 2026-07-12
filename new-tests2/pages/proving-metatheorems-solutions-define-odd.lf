@@ -1,6 +1,6 @@
 %                                              
 %                                                                                                      
-%{!
+%[[
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -8,7 +8,7 @@ Exercise 2 from [the part 1 exercises](/wiki/proving-metatheorems-summary-the-na
 
 Starting with the preliminaries:
 
-!}%
+%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
@@ -18,7 +18,7 @@ Starting with the preliminaries:
 %sort even {_ nat} %.
 %term even-z even z %.
 %term even-s %pi (even (s (s N))) %<- (even N) %.
-%{! The definition of `odd` looks much like the definition of `even`. !}%
+%[[ The definition of `odd` looks much like the definition of `even`. %]]
 %sort odd {_ nat} %.
 %term odd-1 odd (s z) %.
 %term odd-s %pi (odd N) %-> (odd (s (s N))) %.

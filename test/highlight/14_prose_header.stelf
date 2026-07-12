@@ -1,0 +1,6 @@
+%prose markdown
+this is markdown text between commands
+%sort nat
+%prose latex
+$x = y^2$ inside a LaTeX region
+%term zero nat

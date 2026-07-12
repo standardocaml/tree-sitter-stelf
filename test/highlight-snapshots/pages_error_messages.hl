@@ -1,0 +1,89 @@
+0:0-0:27	comment	`%                          `
+1:1-1:2	punctuation.bracket	`[`
+1:2-1:3	punctuation.bracket	`[`
+7:57-7:58	punctuation.bracket	`(`
+7:77-7:78	punctuation.bracket	`)`
+10:64-10:65	punctuation.bracket	`[`
+10:65-10:70	keyword	`%mode`
+10:70-10:71	punctuation.bracket	`]`
+10:71-10:72	punctuation.bracket	`(`
+10:72-10:91	constructor	`/wiki/percent-mode/`
+10:72-10:91	local.reference	`/wiki/percent-mode/`
+10:91-10:92	punctuation.bracket	`)`
+10:92-10:93	local.reference	`.`
+10:92-10:93	operator	`.`
+10:93-12:11	constructor	``
+10:93-12:11	local.reference	``
+12:11-12:16	constructor	` type`
+12:11-12:16	local.reference	` type`
+12:16-12:24	constructor	` family,`
+12:16-12:24	local.reference	` family,`
+12:24-12:30	constructor	` found`
+12:24-12:30	local.reference	` found`
+12:30-12:37	constructor	` object`
+12:30-12:37	local.reference	` object`
+12:37-12:48	constructor	` constant**`
+12:37-12:48	local.reference	` constant**`
+12:48-13:5	constructor	``
+12:48-13:5	local.reference	``
+13:5-13:9	constructor	` can`
+13:5-13:9	local.reference	` can`
+13:9-13:15	constructor	` occur`
+13:9-13:15	local.reference	` occur`
+13:15-13:20	constructor	` when`
+13:15-13:20	local.reference	` when`
+13:20-13:24	constructor	` you`
+13:20-13:24	local.reference	` you`
+13:24-13:31	constructor	` define`
+13:24-13:31	local.reference	` define`
+13:31-13:33	constructor	` a`
+13:31-13:33	local.reference	` a`
+13:33-13:42	constructor	` judgment`
+13:33-13:42	local.reference	` judgment`
+13:42-13:46	constructor	` but`
+13:42-13:46	local.reference	` but`
+13:46-13:53	constructor	` forget`
+13:46-13:53	local.reference	` forget`
+13:53-13:60	constructor	` "-&gt;`
+13:53-13:60	local.reference	` "-&gt;`
+13:60-13:67	constructor	` type".`
+13:60-13:67	local.reference	` type".`
+19:86-19:93	keyword	`%freeze`
+19:93-19:94	punctuation.bracket	`]`
+19:94-19:95	punctuation.bracket	`(`
+19:95-19:116	constructor	`/wiki/percent-freeze/`
+19:95-19:116	local.reference	`/wiki/percent-freeze/`
+19:116-19:117	punctuation.bracket	`)`
+31:245-31:250	keyword	`%mode`
+31:250-31:252	local.reference	````
+31:250-31:252	operator	````
+34:259-34:264	keyword	`%mode`
+34:264-34:266	local.reference	````
+34:264-34:266	operator	````
+41:46-41:57	keyword	`%terminates`
+41:57-41:59	local.reference	````
+41:57-41:59	operator	````
+41:94-41:100	keyword	`%total`
+41:100-41:102	local.reference	````
+41:100-41:102	operator	````
+41:102-41:103	punctuation.bracket	`]`
+41:103-41:104	punctuation.bracket	`(`
+41:104-41:124	constructor	`/wiki/percent-total/`
+41:104-41:124	local.reference	`/wiki/percent-total/`
+41:124-41:125	punctuation.bracket	`)`
+53:107-53:113	keyword	`%block`
+53:113-53:115	label	````
+53:113-53:115	local.reference	````
+53:113-53:115	operator	````
+57:70-57:71	punctuation.bracket	`]`
+57:71-57:72	punctuation.bracket	`]`
+58:1-58:2	punctuation.bracket	`[`
+58:2-58:3	punctuation.bracket	`[`
+62:0-62:1	punctuation.bracket	`[`
+62:31-62:32	punctuation.bracket	`]`
+62:32-62:33	punctuation.bracket	`(`
+62:61-62:75	number	`20240303030303`
+62:103-62:104	variable.parameter.builtin	`_`
+62:112-62:113	punctuation.bracket	`)`
+63:1-63:2	punctuation.bracket	`]`
+63:2-63:3	punctuation.bracket	`]`

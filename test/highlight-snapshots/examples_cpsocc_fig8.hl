@@ -1,0 +1,393 @@
+0:0-0:60	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+1:0-1:59	comment	`%%%%% Figure 8 : CPS abstract machine with a control stack `
+2:0-2:60	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:12	constructor	`cstack`
+3:6-3:12	local.reference	`cstack`
+3:6-3:12	type	`cstack`
+3:12-3:15	keyword.return	` %.`
+4:6-4:10	constructor	`cdot`
+4:6-4:10	function	`cdot`
+4:6-4:10	local.reference	`cdot`
+4:6-4:10	variable.parameter	`cdot`
+4:10-4:17	constructor	` cstack`
+4:10-4:17	local.reference	` cstack`
+4:17-4:20	keyword.return	` %.`
+5:6-5:7	function	`;`
+5:6-5:7	local.reference	`;`
+5:6-5:7	operator	`;`
+5:6-5:7	variable.parameter	`;`
+5:7-5:11	operator	` %pi`
+5:12-5:18	constructor	`cstack`
+5:12-5:18	local.reference	`cstack`
+5:19-5:22	operator	`%->`
+5:23-5:28	constructor	`ccont`
+5:23-5:28	local.reference	`ccont`
+5:28-5:32	operator	` %->`
+5:33-5:39	constructor	`cstack`
+5:33-5:39	local.reference	`cstack`
+5:39-5:42	keyword.return	` %.`
+6:6-6:11	keyword.modifier	`%left`
+6:12-6:14	number	`10`
+6:15-6:16	local.reference	`;`
+6:15-6:16	operator	`;`
+6:16-6:19	keyword.return	` %.`
+6:19-7:5	keyword.type	``
+7:6-7:13	constructor	`cstackR`
+7:6-7:13	local.reference	`cstackR`
+7:6-7:13	type	`cstackR`
+7:34-7:36	keyword.return	`%.`
+7:36-8:5	keyword.type	``
+8:6-8:13	constructor	`cstackE`
+8:6-8:13	local.reference	`cstackE`
+8:6-8:13	type	`cstackE`
+8:17-8:20	operator	`%pi`
+8:27-8:30	operator	`%->`
+8:37-8:38	punctuation.bracket	`}`
+8:39-8:40	punctuation.bracket	`{`
+8:40-8:41	variable.parameter.builtin	`_`
+8:42-8:45	operator	`%pi`
+8:52-8:55	operator	`%->`
+8:60-8:61	punctuation.bracket	`}`
+8:62-8:63	punctuation.bracket	`{`
+8:63-8:64	variable.parameter.builtin	`_`
+8:70-8:71	punctuation.bracket	`}`
+8:72-8:74	keyword.return	`%.`
+8:74-9:5	keyword.type	``
+9:6-9:13	constructor	`cstackC`
+9:6-9:13	local.reference	`cstackC`
+9:6-9:13	type	`cstackC`
+9:17-9:20	operator	`%pi`
+9:27-9:30	operator	`%->`
+9:37-9:38	punctuation.bracket	`}`
+9:39-9:40	punctuation.bracket	`{`
+9:40-9:41	variable.parameter.builtin	`_`
+9:42-9:45	operator	`%pi`
+9:52-9:55	operator	`%->`
+9:61-9:62	punctuation.bracket	`}`
+9:63-9:64	punctuation.bracket	`{`
+9:64-9:65	variable.parameter.builtin	`_`
+9:66-9:69	operator	`%pi`
+9:76-9:79	operator	`%->`
+9:86-9:87	punctuation.bracket	`}`
+9:88-9:90	keyword.return	`%.`
+10:6-10:13	constructor	`cstackR`
+10:6-10:13	local.reference	`cstackR`
+10:13-10:17	keyword.modifier	` %in`
+10:17-10:22	keyword.modifier	` %out`
+10:22-10:25	keyword.return	` %.`
+11:6-11:13	constructor	`cstackE`
+11:6-11:13	local.reference	`cstackE`
+11:13-11:17	keyword.modifier	` %in`
+11:17-11:21	keyword.modifier	` %in`
+11:21-11:26	keyword.modifier	` %out`
+11:26-11:29	keyword.return	` %.`
+12:6-12:13	constructor	`cstackC`
+12:6-12:13	local.reference	`cstackC`
+12:13-12:17	keyword.modifier	` %in`
+12:17-12:21	keyword.modifier	` %in`
+12:21-12:26	keyword.modifier	` %out`
+12:26-12:29	keyword.return	` %.`
+13:6-13:17	constructor	`cstack_klam`
+13:6-13:17	function	`cstack_klam`
+13:6-13:17	local.reference	`cstack_klam`
+13:6-13:17	variable.parameter	`cstack_klam`
+13:17-13:21	operator	` %pi`
+13:22-13:23	punctuation.bracket	`(`
+13:23-13:30	constructor	`cstackR`
+13:23-13:30	local.reference	`cstackR`
+13:31-13:32	punctuation.bracket	`(`
+13:32-13:36	constructor	`klam`
+13:32-13:36	local.reference	`klam`
+13:37-13:38	constructor	`E`
+13:37-13:38	local.reference	`E`
+13:38-13:39	punctuation.bracket	`)`
+13:40-13:41	constructor	`A`
+13:40-13:41	local.reference	`A`
+13:41-13:42	punctuation.bracket	`)`
+13:43-13:46	operator	`%<-`
+13:47-13:48	punctuation.bracket	`(`
+13:48-13:55	constructor	`cstackE`
+13:48-13:55	local.reference	`cstackE`
+13:56-13:57	punctuation.bracket	`(`
+13:57-13:57	local.reference	``
+13:57-13:57	operator	``
+13:57-13:58	punctuation.bracket	`[`
+13:58-13:59	constructor	`k`
+13:58-13:59	local.reference	`k`
+13:58-13:59	variable.parameter	`k`
+13:60-13:65	constructor	`ccont`
+13:60-13:65	local.reference	`ccont`
+13:65-13:66	punctuation.bracket	`]`
+13:67-13:71	constructor	`cdot`
+13:67-13:71	local.reference	`cdot`
+13:71-13:72	punctuation.bracket	`)`
+13:73-13:74	constructor	`E`
+13:73-13:74	local.reference	`E`
+13:75-13:76	constructor	`A`
+13:75-13:76	local.reference	`A`
+13:76-13:77	punctuation.bracket	`)`
+13:77-13:80	keyword.return	` %.`
+14:6-14:24	constructor	`cstack_cret_k_init`
+14:6-14:24	function	`cstack_cret_k_init`
+14:6-14:24	local.reference	`cstack_cret_k_init`
+14:6-14:24	variable.parameter	`cstack_cret_k_init`
+14:24-14:32	constructor	` cstackE`
+14:24-14:32	local.reference	` cstackE`
+14:73-14:75	keyword.return	`%.`
+15:6-15:24	constructor	`cstack_cret_k_vlam`
+15:6-15:24	function	`cstack_cret_k_vlam`
+15:6-15:24	local.reference	`cstack_cret_k_vlam`
+15:6-15:24	variable.parameter	`cstack_cret_k_vlam`
+15:24-16:4	operator	``
+16:5-16:6	punctuation.bracket	`(`
+16:6-16:13	constructor	`cstackE`
+16:6-16:13	local.reference	`cstackE`
+16:14-16:15	punctuation.bracket	`(`
+16:15-16:15	local.reference	``
+16:15-16:15	operator	``
+16:15-16:16	punctuation.bracket	`[`
+16:16-16:17	constructor	`k`
+16:16-16:17	local.reference	`k`
+16:16-16:17	variable.parameter	`k`
+16:18-16:23	constructor	`ccont`
+16:18-16:23	local.reference	`ccont`
+16:23-16:24	punctuation.bracket	`]`
+16:25-16:28	constructor	`Phi`
+16:25-16:28	local.reference	`Phi`
+16:29-16:30	constructor	`k`
+16:29-16:30	local.reference	`k`
+16:31-16:32	local.reference	`;`
+16:31-16:32	operator	`;`
+16:33-16:34	punctuation.bracket	`(`
+16:34-16:38	constructor	`vlam`
+16:34-16:38	local.reference	`vlam`
+16:39-16:40	punctuation.bracket	`(`
+16:40-16:40	local.reference	``
+16:40-16:40	operator	``
+16:40-16:41	punctuation.bracket	`[`
+16:41-16:42	constructor	`v`
+16:41-16:42	local.reference	`v`
+16:41-16:42	variable.parameter	`v`
+16:43-16:48	constructor	`ctriv`
+16:43-16:48	local.reference	`ctriv`
+16:48-16:49	punctuation.bracket	`]`
+16:50-16:51	constructor	`E`
+16:50-16:51	local.reference	`E`
+16:52-16:53	constructor	`v`
+16:52-16:53	local.reference	`v`
+16:54-16:55	constructor	`k`
+16:54-16:55	local.reference	`k`
+16:55-16:56	punctuation.bracket	`)`
+16:56-16:57	punctuation.bracket	`)`
+16:57-16:58	punctuation.bracket	`)`
+16:59-16:60	punctuation.bracket	`(`
+16:60-16:60	local.reference	``
+16:60-16:60	operator	``
+16:60-16:61	punctuation.bracket	`[`
+16:61-16:62	constructor	`k`
+16:61-16:62	local.reference	`k`
+16:61-16:62	variable.parameter	`k`
+16:63-16:68	constructor	`ccont`
+16:63-16:68	local.reference	`ccont`
+16:68-16:69	punctuation.bracket	`]`
+16:70-16:74	constructor	`cret`
+16:70-16:74	local.reference	`cret`
+16:75-16:76	constructor	`k`
+16:75-16:76	local.reference	`k`
+16:77-16:78	constructor	`T`
+16:77-16:78	local.reference	`T`
+16:78-16:79	punctuation.bracket	`)`
+16:80-16:81	constructor	`A`
+16:80-16:81	local.reference	`A`
+16:81-16:82	punctuation.bracket	`)`
+17:1-17:4	operator	`%<-`
+17:5-17:6	punctuation.bracket	`(`
+17:6-17:13	constructor	`cstackE`
+17:6-17:13	local.reference	`cstackE`
+17:14-17:17	constructor	`Phi`
+17:14-17:17	local.reference	`Phi`
+17:18-17:19	punctuation.bracket	`(`
+17:19-17:20	constructor	`E`
+17:19-17:20	local.reference	`E`
+17:21-17:22	constructor	`T`
+17:21-17:22	local.reference	`T`
+17:22-17:23	punctuation.bracket	`)`
+17:24-17:25	constructor	`A`
+17:24-17:25	local.reference	`A`
+17:25-17:26	punctuation.bracket	`)`
+17:26-17:29	keyword.return	` %.`
+18:6-18:26	constructor	`cstack_cret_vlam_phi`
+18:6-18:26	function	`cstack_cret_vlam_phi`
+18:6-18:26	local.reference	`cstack_cret_vlam_phi`
+18:6-18:26	variable.parameter	`cstack_cret_vlam_phi`
+18:26-19:4	operator	``
+19:5-19:6	punctuation.bracket	`(`
+19:6-19:13	constructor	`cstackE`
+19:6-19:13	local.reference	`cstackE`
+19:14-19:17	constructor	`Phi`
+19:14-19:17	local.reference	`Phi`
+19:18-19:19	punctuation.bracket	`(`
+19:19-19:20	punctuation.bracket	`[`
+19:20-19:21	constructor	`k`
+19:20-19:21	local.reference	`k`
+19:20-19:21	variable.parameter	`k`
+19:22-19:27	constructor	`ccont`
+19:22-19:27	local.reference	`ccont`
+19:27-19:28	punctuation.bracket	`]`
+19:29-19:33	constructor	`cret`
+19:29-19:33	local.reference	`cret`
+19:34-19:35	punctuation.bracket	`(`
+19:35-19:39	constructor	`vlam`
+19:35-19:39	local.reference	`vlam`
+19:40-19:41	punctuation.bracket	`(`
+19:41-19:41	local.reference	``
+19:41-19:41	operator	``
+19:41-19:42	punctuation.bracket	`[`
+19:42-19:43	constructor	`v`
+19:42-19:43	local.reference	`v`
+19:42-19:43	variable.parameter	`v`
+19:44-19:49	constructor	`ctriv`
+19:44-19:49	local.reference	`ctriv`
+19:49-19:50	punctuation.bracket	`]`
+19:51-19:52	constructor	`E`
+19:51-19:52	local.reference	`E`
+19:53-19:54	constructor	`v`
+19:53-19:54	local.reference	`v`
+19:55-19:56	constructor	`k`
+19:55-19:56	local.reference	`k`
+19:56-19:57	punctuation.bracket	`)`
+19:57-19:58	punctuation.bracket	`)`
+19:59-19:60	constructor	`T`
+19:59-19:60	local.reference	`T`
+19:60-19:61	punctuation.bracket	`)`
+19:63-19:64	punctuation.bracket	`)`
+20:1-20:4	operator	`%<-`
+20:5-20:6	punctuation.bracket	`(`
+20:6-20:13	constructor	`cstackE`
+20:6-20:13	local.reference	`cstackE`
+20:14-20:17	constructor	`Phi`
+20:14-20:17	local.reference	`Phi`
+20:18-20:19	punctuation.bracket	`(`
+20:19-20:20	constructor	`E`
+20:19-20:20	local.reference	`E`
+20:21-20:22	constructor	`T`
+20:21-20:22	local.reference	`T`
+20:22-20:23	punctuation.bracket	`)`
+20:24-20:25	constructor	`A`
+20:24-20:25	local.reference	`A`
+20:25-20:26	punctuation.bracket	`)`
+20:26-20:29	keyword.return	` %.`
+21:6-21:17	constructor	`cstack_capp`
+21:6-21:17	function	`cstack_capp`
+21:6-21:17	local.reference	`cstack_capp`
+21:6-21:17	variable.parameter	`cstack_capp`
+21:17-22:4	operator	``
+22:5-22:6	punctuation.bracket	`(`
+22:6-22:13	constructor	`cstackE`
+22:6-22:13	local.reference	`cstackE`
+22:14-22:17	constructor	`Phi`
+22:14-22:17	local.reference	`Phi`
+22:18-22:19	punctuation.bracket	`(`
+22:19-22:20	punctuation.bracket	`[`
+22:20-22:21	constructor	`k`
+22:20-22:21	local.reference	`k`
+22:20-22:21	variable.parameter	`k`
+22:22-22:27	constructor	`ccont`
+22:22-22:27	local.reference	`ccont`
+22:27-22:28	punctuation.bracket	`]`
+22:29-22:33	constructor	`capp`
+22:29-22:33	local.reference	`capp`
+22:34-22:35	punctuation.bracket	`(`
+22:35-22:39	constructor	`xlam`
+22:35-22:39	local.reference	`xlam`
+22:40-22:41	punctuation.bracket	`(`
+22:41-22:41	local.reference	``
+22:41-22:41	operator	``
+22:41-22:42	punctuation.bracket	`[`
+22:42-22:43	constructor	`x`
+22:42-22:43	local.reference	`x`
+22:42-22:43	variable.parameter	`x`
+22:44-22:49	constructor	`ctriv`
+22:44-22:49	local.reference	`ctriv`
+22:49-22:50	punctuation.bracket	`]`
+22:51-22:55	constructor	`klam`
+22:51-22:55	local.reference	`klam`
+22:56-22:57	punctuation.bracket	`(`
+22:57-22:58	constructor	`E`
+22:57-22:58	local.reference	`E`
+22:59-22:60	constructor	`x`
+22:59-22:60	local.reference	`x`
+22:60-22:61	punctuation.bracket	`)`
+22:61-22:62	punctuation.bracket	`)`
+22:62-22:63	punctuation.bracket	`)`
+22:64-22:65	constructor	`T`
+22:64-22:65	local.reference	`T`
+22:66-22:67	punctuation.bracket	`(`
+22:67-22:68	constructor	`C`
+22:67-22:68	local.reference	`C`
+22:69-22:70	constructor	`k`
+22:69-22:70	local.reference	`k`
+22:70-22:71	punctuation.bracket	`)`
+22:71-22:72	punctuation.bracket	`)`
+22:74-22:75	punctuation.bracket	`)`
+23:1-23:4	operator	`%<-`
+23:5-23:6	punctuation.bracket	`(`
+23:6-23:13	constructor	`cstackC`
+23:6-23:13	local.reference	`cstackC`
+23:14-23:17	constructor	`Phi`
+23:14-23:17	local.reference	`Phi`
+23:18-23:19	constructor	`C`
+23:18-23:19	local.reference	`C`
+23:20-23:24	constructor	`Phi'`
+23:20-23:24	local.reference	`Phi'`
+23:24-23:25	punctuation.bracket	`)`
+23:25-24:4	operator	``
+24:5-24:6	punctuation.bracket	`(`
+24:6-24:13	constructor	`cstackE`
+24:6-24:13	local.reference	`cstackE`
+24:14-24:18	constructor	`Phi'`
+24:14-24:18	local.reference	`Phi'`
+24:19-24:20	punctuation.bracket	`(`
+24:20-24:21	constructor	`E`
+24:20-24:21	local.reference	`E`
+24:22-24:23	constructor	`T`
+24:22-24:23	local.reference	`T`
+24:23-24:24	punctuation.bracket	`)`
+24:25-24:26	constructor	`A`
+24:25-24:26	local.reference	`A`
+24:26-24:27	punctuation.bracket	`)`
+24:27-24:30	keyword.return	` %.`
+25:6-25:18	constructor	`cstack_phi_k`
+25:6-25:18	function	`cstack_phi_k`
+25:6-25:18	local.reference	`cstack_phi_k`
+25:6-25:18	variable.parameter	`cstack_phi_k`
+25:18-25:26	constructor	` cstackC`
+25:18-25:26	local.reference	` cstackC`
+25:26-25:30	constructor	` Phi`
+25:26-25:30	local.reference	` Phi`
+25:49-25:51	keyword.return	`%.`
+26:6-26:17	constructor	`cstack_vlam`
+26:6-26:17	function	`cstack_vlam`
+26:6-26:17	local.reference	`cstack_vlam`
+26:6-26:17	variable.parameter	`cstack_vlam`
+26:17-26:25	constructor	` cstackC`
+26:17-26:25	local.reference	` cstackC`
+26:25-26:29	constructor	` Phi`
+26:25-26:29	local.reference	` Phi`
+26:86-26:88	keyword.return	`%.`
+26:88-27:13	attribute	``
+27:6-27:13	constructor	`cstackR`
+27:6-27:13	local.reference	`cstackR`
+27:6-27:13	variable	`cstackR`
+27:13-27:16	keyword.return	` %.`
+27:16-28:13	attribute	``
+28:6-28:13	constructor	`cstackE`
+28:6-28:13	local.reference	`cstackE`
+28:6-28:13	variable	`cstackE`
+28:13-28:16	keyword.return	` %.`
+28:16-29:13	attribute	``
+29:6-29:13	constructor	`cstackC`
+29:6-29:13	local.reference	`cstackC`
+29:6-29:13	variable	`cstackC`
+29:13-29:16	keyword.return	` %.`

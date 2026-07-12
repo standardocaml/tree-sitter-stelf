@@ -1,0 +1,76 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:14	comment	`%%% syntax.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:10	comment	`%%% Syntax`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword.type	`%sort`
+6:6-6:9	constructor	`loc`
+6:6-6:9	local.reference	`loc`
+6:6-6:9	type	`loc`
+6:9-6:12	keyword.return	` %.`
+6:12-7:9	attribute	``
+7:6-7:9	constructor	`loc`
+7:6-7:9	local.reference	`loc`
+7:6-7:9	variable	`loc`
+7:9-7:12	keyword.return	` %.`
+9:0-9:5	keyword.type	`%sort`
+9:6-9:9	constructor	`exp`
+9:6-9:9	local.reference	`exp`
+9:6-9:9	type	`exp`
+9:9-9:12	keyword.return	` %.`
+9:12-10:9	attribute	``
+10:6-10:9	constructor	`exp`
+10:6-10:9	local.reference	`exp`
+10:6-10:9	variable	`exp`
+10:9-10:12	keyword.return	` %.`
+12:0-12:5	keyword.type	`%sort`
+12:6-12:9	constructor	`val`
+12:6-12:9	local.reference	`val`
+12:6-12:9	type	`val`
+12:9-12:12	keyword.return	` %.`
+12:12-13:9	attribute	``
+13:6-13:9	constructor	`val`
+13:6-13:9	local.reference	`val`
+13:6-13:9	variable	`val`
+13:9-13:12	keyword.return	` %.`
+15:0-15:5	keyword.type	`%sort`
+15:6-15:8	constructor	`st`
+15:6-15:8	local.reference	`st`
+15:6-15:8	type	`st`
+15:8-15:11	keyword.return	` %.`
+15:11-16:8	attribute	``
+16:6-16:8	constructor	`st`
+16:6-16:8	local.reference	`st`
+16:6-16:8	variable	`st`
+16:8-16:11	keyword.return	` %.`
+18:0-18:5	keyword.type	`%sort`
+18:6-18:8	constructor	`tp`
+18:6-18:8	local.reference	`tp`
+18:6-18:8	type	`tp`
+18:8-18:11	keyword.return	` %.`
+18:11-19:8	attribute	``
+19:6-19:8	constructor	`tp`
+19:6-19:8	local.reference	`tp`
+19:6-19:8	variable	`tp`
+19:8-19:11	keyword.return	` %.`
+21:0-21:5	keyword.type	`%sort`
+21:6-21:10	constructor	`sttp`
+21:6-21:10	local.reference	`sttp`
+21:6-21:10	type	`sttp`
+21:10-21:13	keyword.return	` %.`
+21:13-22:10	attribute	``
+22:6-22:10	constructor	`sttp`
+22:6-22:10	local.reference	`sttp`
+22:6-22:10	variable	`sttp`
+22:10-22:13	keyword.return	` %.`
+24:0-24:5	keyword.type	`%sort`
+24:6-24:10	constructor	`mach`
+24:6-24:10	local.reference	`mach`
+24:6-24:10	type	`mach`
+24:10-24:13	keyword.return	` %.`
+24:13-25:10	attribute	``
+25:6-25:10	constructor	`mach`
+25:6-25:10	local.reference	`mach`
+25:6-25:10	variable	`mach`
+25:10-25:13	keyword.return	` %.`

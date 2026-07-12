@@ -6,7 +6,7 @@
 %        
 %                   
 %                                              
-%{! 
+%[[ 
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -38,16 +38,16 @@ In the previous sections, we saw how to represent object-language syntax as the 
 
 However, to adequately represent judgements, we must generalize from simply-typed LF to dependently-typed LF.  A moment's thought reveals why a dependently-typed language is appropriate: Object-language judgements are parametrized by their subjects&mdash;for example <Math formula="\mathsf{even}(n)"/> is parametrized by the number <Math formula="n"/> being judged to be even.  Consequently, to represent judgements themselves as LF types, we should consider LF types that are parametrized by the subjects of object-language judgements.  But the judgement subjects&mdash;the syntax of the language&mdash;are represented as LF terms.  Thus, to represent judgements themselves as LF types, it is natural to consider families of LF types parameterized by LF terms.  
 
-We represent the judgement <Math formula="\mathsf{even}(n)"/> using the following signature: !}%
-%{!! begin hidden !!}%
+We represent the judgement <Math formula="\mathsf{even}(n)"/> using the following signature: %]]
+%[[! begin hidden !%]]
 %sort nat %.
 %term z nat %.
 %term s %pi nat %-> nat %.
-%{!! end hidden !!}%
+%[[! end hidden !%]]
 %sort even {_ nat} %.
 %term even-z even z %.
 %term even-s {N nat} %pi (even N) %-> (even (s (s N))) %.
-%{! The first declaration says that ``even`` is a family of types indexed by a ``nat``.  This means that for every term ``N : nat``, there is a type ``even N``.  Note that the syntax ``->`` is overloaded: it is used to classify both type-level families and and term-level functions.  We then use this type
+%[[ The first declaration says that ``even`` is a family of types indexed by a ``nat``.  This means that for every term ``N : nat``, there is a type ``even N``.  Note that the syntax ``->`` is overloaded: it is used to classify both type-level families and and term-level functions.  We then use this type
 family to define the types of two term constants.
 
 The first term constant, ``even-z``, has type ``even z``.  This constant represents the derivation that consists of the first inference rule above, which concludes <Math formula="\mathsf{even}(\mathsf{zero})"/>.
@@ -57,17 +57,17 @@ The second term constant ``even-s``, corresponds to the second inference rule ab
 The syntax ``{x:A1} A2`` is used to give a type to `even-s` (replacing the term variable `x` with `N`, the type `A1` with `nat`, and the type `A2` with `even N -> even (s (s N))`). This syntax represents a _dependent function type_, which is a generalization of the ordinary function type ``A1 -> A2`` that allows the argument term ``x`` to appear in ``A2``.  We write the ordinary function type ``->`` as a synonym when the argument is not free in the result type (i.e., ``A1 -> A2`` means ``{_:A1} A2``).  Just as with the ordinary function type, LF terms of dependent function type can be applied to a term of the argument type to form a new term.
 
 As an example, the constant ``even-s`` can be applied to a term ``N:nat`` and then a term of type 
-``even N`` _for that ``N``_ to create a term of type ``even (s (s N))`` (again, for that ``N``). It looks like this: !}%
-%{!! begin checked !!}%
+``even N`` _for that ``N``_ to create a term of type ``even (s (s N))`` (again, for that ``N``). It looks like this: %]]
+%[[! begin checked !%]]
 %define test even-s N D %.
-%{!! end checked !!}%
-%{! The dependent function type is used to bind the variable ``N`` in the type ``(even N -> even (s (s N)))``, expressing that the inference rule is schematic in <Math formula="n"/>.
+%[[! end checked !%]]
+%[[ The dependent function type is used to bind the variable ``N`` in the type ``(even N -> even (s (s N)))``, expressing that the inference rule is schematic in <Math formula="n"/>.
 
-When a term of dependent function type is applied to an argument, the argument is substituted into the result type.  For example, the term ``even-s z`` has type ``even z -> even (s (s z))``—i.e., it is the specialization of the inference rule to <Math formula="n = \mathsf{zero}"/>.  That looks like this: !}%
-%{!! begin checked !!}%
+When a term of dependent function type is applied to an argument, the argument is substituted into the result type.  For example, the term ``even-s z`` has type ``even z -> even (s (s z))``—i.e., it is the specialization of the inference rule to <Math formula="n = \mathsf{zero}"/>.  That looks like this: %]]
+%[[! begin checked !%]]
 %define two-is-even even-s z even-z %.
-%{!! end checked !!}%
-%{!
+%[[! end checked !%]]
+%[[
 
 This represents the derivation
 
@@ -110,15 +110,15 @@ This judgement defines addition by induction on the first argument.
 
 ### LF representation
 
-This judgement is represented by the following LF signature: !}%
+This judgement is represented by the following LF signature: %]]
 %sort plus {_ nat} {_ nat} {_ nat} %.
 %term plus-z {N2 nat} plus z N2 N2 %.
 %term plus-s {N1 nat} {N2 nat} {N3 nat} %pi (plus N1 N2 N3) %-> (plus (s N1) N2 (s N3)) %.
-%{! The type family ``plus`` is indexed by three terms of type ``nat`` because the informal judgement has three parameters.  The constants correspond to the two inference rules, inhabiting the type family with terms representing derivations.  For example, this term represents a derivation that <Math formula="2+1 = 3"/>. !}%
-%{!! begin checked !!}%
+%[[ The type family ``plus`` is indexed by three terms of type ``nat`` because the informal judgement has three parameters.  The constants correspond to the two inference rules, inhabiting the type family with terms representing derivations.  For example, this term represents a derivation that <Math formula="2+1 = 3"/>. %]]
+%[[! begin checked !%]]
 %define test2 plus-s (s z) (s z) (s (s z)) (plus-s z (s z) (s z) (plus-z (s z))) %.
-%{!! end checked !!}%
-%{!
+%[[! end checked !%]]
+%[[
 
 ### Adequacy
 
@@ -127,4 +127,4 @@ To check correctness of this representation, we must verify that there is a bije
 
 These adequacy theorems will be more precise after we review the full language of dependently typed LF in the next section.
 
-!}%
+%]]

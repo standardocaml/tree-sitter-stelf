@@ -1,5 +1,5 @@
 %                                         
-%{!
+%[[
 
 Please add your research using Twelf to the links below.  We hope this
 collection of links will encourage collaboration among Twelf users and record
@@ -33,4 +33,4 @@ your work wherever you think it fits best.
 * [Delphin](http://delphin.poswolsky.com/) - An integration of concepts from Twelf and functional programming languages.
 * [Elf](https://web.archive.org/web/20071012232336/http://www.cs.cmu.edu/~fp/elf.html) - The predecessor to Twelf.
 
-!}%
+%]]

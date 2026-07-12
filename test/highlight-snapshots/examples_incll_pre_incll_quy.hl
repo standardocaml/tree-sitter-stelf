@@ -1,0 +1,166 @@
+2:0-2:11	comment	`% 3 + 2 * 1`
+5:0-5:7	keyword	`%define`
+5:8-5:11	constructor	`o1i`
+5:8-5:11	function	`o1i`
+5:8-5:11	local.reference	`o1i`
+5:12-5:16	constructor	`rnil`
+5:12-5:16	local.reference	`rnil`
+5:17-5:19	constructor	`,r`
+5:17-5:19	local.reference	`,r`
+5:19-5:21	local.reference	` #`
+5:19-5:21	operator	` #`
+5:21-5:23	local.reference	` ^`
+5:21-5:23	operator	` ^`
+5:23-5:27	constructor	` fun`
+5:23-5:27	local.reference	` fun`
+5:27-5:31	constructor	` end`
+5:27-5:31	local.reference	` end`
+5:31-5:34	constructor	` ,r`
+5:31-5:34	local.reference	` ,r`
+5:34-5:36	local.reference	` #`
+5:34-5:36	operator	` #`
+5:36-5:38	local.reference	` ^`
+5:36-5:38	operator	` ^`
+5:38-5:42	constructor	` con`
+5:38-5:42	local.reference	` con`
+5:42-5:44	constructor	` 1`
+5:42-5:44	local.reference	` 1`
+5:44-5:47	constructor	` ,r`
+5:44-5:47	local.reference	` ,r`
+5:47-5:49	local.reference	` #`
+5:47-5:49	operator	` #`
+5:49-5:51	local.reference	` ^`
+5:49-5:51	operator	` ^`
+5:51-5:55	constructor	` fun`
+5:51-5:55	local.reference	` fun`
+5:55-5:57	local.reference	` *`
+5:55-5:57	operator	` *`
+5:57-5:60	constructor	` ,r`
+5:57-5:60	local.reference	` ,r`
+5:60-5:62	local.reference	` #`
+5:60-5:62	operator	` #`
+5:62-5:64	local.reference	` ^`
+5:62-5:64	operator	` ^`
+5:64-5:68	constructor	` con`
+5:64-5:68	local.reference	` con`
+5:68-5:70	constructor	` 2`
+5:68-5:70	local.reference	` 2`
+5:70-5:73	constructor	` ,r`
+5:70-5:73	local.reference	` ,r`
+5:73-5:75	local.reference	` #`
+5:73-5:75	operator	` #`
+5:75-5:77	local.reference	` ^`
+5:75-5:77	operator	` ^`
+5:77-5:81	constructor	` fun`
+5:77-5:81	local.reference	` fun`
+5:81-5:83	local.reference	` +`
+5:81-5:83	operator	` +`
+5:83-5:86	constructor	` ,r`
+5:83-5:86	local.reference	` ,r`
+5:86-5:88	local.reference	` #`
+5:86-5:88	operator	` #`
+5:88-5:90	local.reference	` ^`
+5:88-5:90	operator	` ^`
+5:90-5:94	constructor	` con`
+5:90-5:94	local.reference	` con`
+5:94-5:96	constructor	` 3`
+5:94-5:96	local.reference	` 3`
+5:96-5:99	keyword.return	` %.`
+6:8-6:11	constructor	`o1o`
+6:8-6:11	function	`o1o`
+6:8-6:11	local.reference	`o1o`
+6:12-6:16	constructor	`rnil`
+6:12-6:16	local.reference	`rnil`
+6:17-6:19	constructor	`,r`
+6:17-6:19	local.reference	`,r`
+6:19-6:23	constructor	` del`
+6:19-6:23	local.reference	` del`
+6:23-6:26	constructor	` ,r`
+6:23-6:26	local.reference	` ,r`
+6:26-6:30	constructor	` del`
+6:26-6:30	local.reference	` del`
+6:30-6:33	constructor	` ,r`
+6:30-6:33	local.reference	` ,r`
+6:33-6:37	constructor	` del`
+6:33-6:37	local.reference	` del`
+6:37-6:40	constructor	` ,r`
+6:37-6:40	local.reference	` ,r`
+6:40-6:44	constructor	` del`
+6:40-6:44	local.reference	` del`
+6:44-6:47	constructor	` ,r`
+6:44-6:47	local.reference	` ,r`
+6:47-6:51	constructor	` del`
+6:47-6:51	local.reference	` del`
+6:51-6:54	constructor	` ,r`
+6:51-6:54	local.reference	` ,r`
+6:54-6:58	constructor	` del`
+6:54-6:58	local.reference	` del`
+6:58-6:61	keyword.return	` %.`
+7:8-7:10	constructor	`o2`
+7:8-7:10	function	`o2`
+7:8-7:10	local.reference	`o2`
+7:11-7:15	constructor	`rnil`
+7:11-7:15	local.reference	`rnil`
+7:16-7:18	constructor	`,r`
+7:16-7:18	local.reference	`,r`
+7:18-7:20	local.reference	` #`
+7:18-7:20	operator	` #`
+7:20-7:22	local.reference	` ^`
+7:20-7:22	operator	` ^`
+7:22-7:26	constructor	` fun`
+7:22-7:26	local.reference	` fun`
+7:26-7:30	constructor	` end`
+7:26-7:30	local.reference	` end`
+7:30-7:33	constructor	` ,r`
+7:30-7:33	local.reference	` ,r`
+7:33-7:35	local.reference	` #`
+7:33-7:35	operator	` #`
+7:35-7:37	local.reference	` ^`
+7:35-7:37	operator	` ^`
+7:37-7:41	constructor	` con`
+7:37-7:41	local.reference	` con`
+7:41-7:43	constructor	` 1`
+7:41-7:43	local.reference	` 1`
+7:43-7:46	keyword.return	` %.`
+8:7-8:8	number	`1`
+8:9-8:10	variable.parameter.builtin	`_`
+8:11-8:12	variable.parameter.builtin	`_`
+8:13-8:17	constructor	`sqnt`
+8:13-8:17	local.reference	`sqnt`
+8:17-8:22	constructor	` rnil`
+8:17-8:22	local.reference	` rnil`
+8:22-8:27	constructor	` rnil`
+8:22-8:27	local.reference	` rnil`
+8:27-8:30	constructor	` o2`
+8:27-8:30	local.reference	` o2`
+8:30-8:33	constructor	` OO`
+8:30-8:33	local.reference	` OO`
+8:50-8:52	keyword.return	`%.`
+9:7-9:8	number	`1`
+9:9-9:10	variable.parameter.builtin	`_`
+9:11-9:12	variable.parameter.builtin	`_`
+9:13-9:17	constructor	`sqnt`
+9:13-9:17	local.reference	`sqnt`
+9:17-9:22	constructor	` rnil`
+9:17-9:22	local.reference	` rnil`
+9:22-9:27	constructor	` rnil`
+9:22-9:27	local.reference	` rnil`
+9:27-9:30	constructor	` o2`
+9:27-9:30	local.reference	` o2`
+9:30-9:33	constructor	` OO`
+9:30-9:33	local.reference	` OO`
+9:50-9:52	keyword.return	`%.`
+10:7-10:8	number	`1`
+10:9-10:10	variable.parameter.builtin	`_`
+10:11-10:12	variable.parameter.builtin	`_`
+10:13-10:17	constructor	`sqnt`
+10:13-10:17	local.reference	`sqnt`
+10:17-10:22	constructor	` rnil`
+10:17-10:22	local.reference	` rnil`
+10:22-10:27	constructor	` rnil`
+10:22-10:27	local.reference	` rnil`
+10:27-10:31	constructor	` o1i`
+10:27-10:31	local.reference	` o1i`
+10:31-10:35	constructor	` o1o`
+10:31-10:35	local.reference	` o1o`
+10:52-10:54	keyword.return	`%.`

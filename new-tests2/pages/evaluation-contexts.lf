@@ -1,5 +1,5 @@
 %                               
-%{! 
+%[[ 
 
 ## Evaluation contexts, intrinsically typed
 
@@ -8,7 +8,7 @@ Twelf verifies
 - Progress
 - Determinacy of factoring/step (using [%unique](/wiki/percent-unique/))
 
-!}%
+%]]
 %sort tp %.
 %term b tp %.
 %term arr %pi tp %-> tp %-> tp %.
@@ -70,9 +70,9 @@ Twelf verifies
 %worlds () (step _ _) %.
 %total () (step _ _) %.
 %unique step %in %out %.
-%{!
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Evaluation_contexts).
-!}%
+%]]

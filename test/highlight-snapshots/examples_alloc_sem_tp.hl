@@ -1,0 +1,42 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:10	comment	`%%% tp.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:9	comment	`%%% Types`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword	`%term`
+6:6-6:10	constructor	`fn_t`
+6:6-6:10	function	`fn_t`
+6:6-6:10	local.reference	`fn_t`
+6:6-6:10	variable.parameter	`fn_t`
+6:10-6:14	operator	` %pi`
+6:15-6:17	constructor	`tp`
+6:15-6:17	local.reference	`tp`
+6:18-6:21	operator	`%->`
+6:22-6:24	constructor	`tp`
+6:22-6:24	local.reference	`tp`
+6:24-6:28	operator	` %->`
+6:29-6:31	constructor	`tp`
+6:29-6:31	local.reference	`tp`
+6:31-6:34	keyword.return	` %.`
+7:6-7:12	constructor	`unit_t`
+7:6-7:12	function	`unit_t`
+7:6-7:12	local.reference	`unit_t`
+7:6-7:12	variable.parameter	`unit_t`
+7:12-7:15	constructor	` tp`
+7:12-7:15	local.reference	` tp`
+7:15-7:18	keyword.return	` %.`
+8:6-8:12	constructor	`pair_t`
+8:6-8:12	function	`pair_t`
+8:6-8:12	local.reference	`pair_t`
+8:6-8:12	variable.parameter	`pair_t`
+8:12-8:16	operator	` %pi`
+8:17-8:19	constructor	`tp`
+8:17-8:19	local.reference	`tp`
+8:20-8:23	operator	`%->`
+8:24-8:26	constructor	`tp`
+8:24-8:26	local.reference	`tp`
+8:26-8:30	operator	` %->`
+8:31-8:33	constructor	`tp`
+8:31-8:33	local.reference	`tp`
+8:33-8:36	keyword.return	` %.`

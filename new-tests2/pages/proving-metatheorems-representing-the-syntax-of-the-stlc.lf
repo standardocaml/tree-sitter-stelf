@@ -6,7 +6,7 @@
 %        
 %                                                    
 %                                                                              
-%{!
+%[[
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -19,11 +19,11 @@ We consider a λ-calculus with <Math formula="\mathsf{unit}"/> as a base type:
 ```math
 \tau ::= \mathsf{unit} \mid \tau_1 \rightarrow \tau_2
 ```
-The representation of types is no more complicated than the representation of natural numbers in the previous section: !}%
+The representation of types is no more complicated than the representation of natural numbers in the previous section: %]]
 %sort tp %.
 %term unit tp %.
 %term arrow %pi tp %-> tp %-> tp %.
-%{! We leave it to the reader to formulate an appropriate encoding judgement between STLC types <Math formula="\tau"/> and closed LF terms of type ``tp`` and to prove that this encoding is adequate in the usual sense.  
+%[[ We leave it to the reader to formulate an appropriate encoding judgement between STLC types <Math formula="\tau"/> and closed LF terms of type ``tp`` and to prove that this encoding is adequate in the usual sense.  
 
 ## Representing STLC terms
 
@@ -39,12 +39,12 @@ The variable <Math formula="x"/> is considered to be bound by the expression <Ma
 
 ### LF representation
 
-We represent these terms in LF with the following signature: !}%
+We represent these terms in LF with the following signature: %]]
 %sort tm %.
 %term empty tm %.
 %term app %pi tm %-> tm %-> tm %.
 %term lam %pi tp %-> (%pi tm %-> tm) %-> tm %.
-%{! The representation of <Math formula="\langle\rangle"/> as ``empty`` and application as ``app`` is no different than what we did when representing natural numbers.  Two questions you are may be asking are:
+%[[ The representation of <Math formula="\langle\rangle"/> as ``empty`` and application as ``app`` is no different than what we did when representing natural numbers.  Two questions you are may be asking are:
 
 1. How does this LF signature represent variables <Math formula="x"/>, since these don't appear in the LF signature, and
 2. What's going on with the type of ``lam``?
@@ -82,4 +82,4 @@ In fact, the representation of STLC types remains adequate in contexts of this f
 
 Specifically, it is important that LF does not provide any elimination forms for constants.  For example, suppose LF provided a ``case`` construct for case-analyzing the terms of a type, as one would have if ``tm`` were considered to be an inductive definition within the type theory.  Then the term ``([x:tm] case x of empty => empty | ...)`` would need to be considered a canonical form of type ``tm -> tm`` (without knowing what the variable stands for, there is no way to reduce the case).  However, this term does not correspond to any object-language term-with-a-free-variable, so having such a case construct would ruin the adequacy of the representation.  
 
-!}%
+%]]

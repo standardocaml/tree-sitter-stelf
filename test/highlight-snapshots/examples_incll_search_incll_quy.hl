@@ -1,0 +1,31 @@
+0:0-0:6	keyword	`%query`
+0:7-0:8	number	`1`
+0:9-0:10	number	`1`
+0:11-0:12	variable.parameter.builtin	`_`
+0:13-0:17	constructor	`sqnt`
+0:13-0:17	local.reference	`sqnt`
+0:17-0:22	constructor	` rnil`
+0:17-0:22	local.reference	` rnil`
+0:22-0:27	constructor	` rnil`
+0:22-0:27	local.reference	` rnil`
+0:27-0:32	constructor	` rnil`
+0:27-0:32	local.reference	` rnil`
+0:32-0:37	constructor	` rnil`
+0:32-0:37	local.reference	` rnil`
+0:60-0:62	keyword.return	`%.`
+1:7-1:8	number	`1`
+1:9-1:10	number	`1`
+1:11-1:12	variable.parameter.builtin	`_`
+1:13-1:17	constructor	`sqnt`
+1:13-1:17	local.reference	`sqnt`
+1:17-1:22	constructor	` rnil`
+1:17-1:22	local.reference	` rnil`
+1:22-1:27	constructor	` rnil`
+1:22-1:27	local.reference	` rnil`
+1:27-1:32	constructor	` rnil`
+1:27-1:32	local.reference	` rnil`
+1:32-1:37	constructor	` rnil`
+1:32-1:37	local.reference	` rnil`
+1:60-1:62	keyword.return	`%.`
+1:62-2:62	comment	``
+2:62-3:62	comment	``

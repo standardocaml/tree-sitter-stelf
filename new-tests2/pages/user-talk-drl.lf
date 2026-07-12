@@ -1,5 +1,5 @@
 %                         
-%{! Hello! I actually like the monospaced presentation better:
+%[[ Hello! I actually like the monospaced presentation better:
 
 <DisplayMath formula="\texttt{even}(N) \over \texttt{even}(s \, (s \, N))"/>
 
@@ -24,7 +24,7 @@ I'm showering, driving to school, and emailing! — [Rob](/wiki/user-rsimmons/) 
 * new emacs mode with karl's macros
 * for world violations, move some of the info that gets printed on higher chatter to the default, so it's easier to debug
 
-## Example (which Adam did much &lt;strike&gt;better&lt;/strike&gt; slower than me) !}%
+## Example (which Adam did much &lt;strike&gt;better&lt;/strike&gt; slower than me) %]]
 %sort tp %.
 %term unit tp %.
 %term arrow %pi tp %-> tp %-> tp %.
@@ -47,7 +47,7 @@ I'm showering, driving to school, and emailing! — [Rob](/wiki/user-rsimmons/) 
 %term _ %pi (thm (of/lam ([x] [dx] of/app (D x dx) (D' x dx))) XXX) %<- (lemma D D' XXX) %.
 %worlds (ofb) (thm X Y) %.
 %total () (thm X Y) %.
-%{! ### Any var, not just the last one !}%
+%[[ ### Any var, not just the last one %]]
 %sort tp %.
 %term ar %pi tp %-> tp %-> tp %.
 %prec %right 10 ar %.
@@ -72,7 +72,7 @@ I'm showering, driving to school, and emailing! — [Rob](/wiki/user-rsimmons/) 
 %term boo_lam %pi (boo X (of_app D1 D2) B) %<- (contra X D2 D1 B) %.
 %worlds (varBlock) (boo _ _ _) %.
 %total () (boo _ _ _) %.
-%{! ### Delphin Version by Adam
+%[[ ### Delphin Version by Adam
 
 &lt;code&gt;
 sig &lt;tp : type&gt; %name A t                                                                                                                                                         
@@ -108,10 +108,10 @@ fun impossible1 : contextProp -&gt; &lt;of (lam [x] app x x) T&gt; -&gt; &lt;fal
                                                                                                                                                                                   
 fun impossibleGeneral : contextProp -&gt; &lt;x:exp#&gt; -&gt; &lt;of (app x x) T&gt; -&gt; &lt;false&gt;                                                                                                    
    = fn C &lt;x&gt; &lt;of_app D1 D2&gt; =&gt; contraEq (C &lt;x&gt; &lt;D1&gt; &lt;D2&gt;); 
-&lt;/code&gt; !}%
-%{!
+&lt;/code&gt; %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/User_talk:Drl).
-!}%
+%]]

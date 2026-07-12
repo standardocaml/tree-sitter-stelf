@@ -1,0 +1,536 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:18	comment	`%%% dynsem-elf.elf`
+3:0-3:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+4:0-4:28	comment	`%%% Dynamic Semantics Lemmas`
+5:0-5:67	comment	`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`
+6:0-6:5	keyword.type	`%sort`
+6:6-6:30	constructor	`dynsem!step_preserves_wf`
+6:6-6:30	local.reference	`dynsem!step_preserves_wf`
+6:6-6:30	type	`dynsem!step_preserves_wf`
+6:78-6:80	keyword.return	`%.`
+7:6-7:30	constructor	`dynsem!step_preserves_wf`
+7:6-7:30	local.reference	`dynsem!step_preserves_wf`
+7:30-7:34	keyword.modifier	` %in`
+7:34-7:38	keyword.modifier	` %in`
+7:38-7:43	keyword.modifier	` %out`
+7:43-7:46	keyword.return	` %.`
+8:7-8:31	constructor	`dynsem!step_preserves_wf`
+8:7-8:31	local.reference	`dynsem!step_preserves_wf`
+8:7-8:31	module	`dynsem!step_preserves_wf`
+8:32-8:37	keyword	`%term`
+8:38-8:47	constructor	`lam_alloc`
+8:38-8:47	function	`lam_alloc`
+8:38-8:47	local.reference	`lam_alloc`
+8:38-8:47	variable.parameter	`lam_alloc`
+8:47-9:4	operator	``
+9:5-9:6	punctuation.bracket	`(`
+9:6-9:30	constructor	`dynsem!step_preserves_wf`
+9:6-9:30	local.reference	`dynsem!step_preserves_wf`
+9:31-9:35	constructor	`DSWf`
+9:31-9:35	local.reference	`DSWf`
+9:36-9:37	punctuation.bracket	`(`
+9:37-9:51	constructor	`lam_alloc_step`
+9:37-9:51	local.reference	`lam_alloc_step`
+9:52-9:60	constructor	`DStAlloc`
+9:52-9:60	local.reference	`DStAlloc`
+9:60-9:61	punctuation.bracket	`)`
+9:62-9:67	constructor	`DSWf'`
+9:62-9:67	local.reference	`DSWf'`
+9:67-9:68	punctuation.bracket	`)`
+10:1-10:4	operator	`%<-`
+10:5-10:6	punctuation.bracket	`(`
+10:6-10:27	constructor	`st!alloc_preserves_wf`
+10:6-10:27	local.reference	`st!alloc_preserves_wf`
+10:28-10:32	constructor	`DSWf`
+10:28-10:32	local.reference	`DSWf`
+10:33-10:41	constructor	`DStAlloc`
+10:33-10:41	local.reference	`DStAlloc`
+10:42-10:47	constructor	`DSWf'`
+10:42-10:47	local.reference	`DSWf'`
+10:47-10:48	punctuation.bracket	`)`
+10:48-10:51	keyword.return	` %.`
+11:6-11:15	constructor	`app_ctxt1`
+11:6-11:15	function	`app_ctxt1`
+11:6-11:15	local.reference	`app_ctxt1`
+11:6-11:15	variable.parameter	`app_ctxt1`
+11:15-12:4	operator	``
+12:5-12:6	punctuation.bracket	`(`
+12:6-12:30	constructor	`dynsem!step_preserves_wf`
+12:6-12:30	local.reference	`dynsem!step_preserves_wf`
+12:31-12:35	constructor	`DSWf`
+12:31-12:35	local.reference	`DSWf`
+12:36-12:37	punctuation.bracket	`(`
+12:37-12:51	constructor	`app_ctxt1_step`
+12:37-12:51	local.reference	`app_ctxt1_step`
+12:52-12:57	constructor	`DStep`
+12:52-12:57	local.reference	`DStep`
+12:57-12:58	punctuation.bracket	`)`
+12:59-12:64	constructor	`DSWf'`
+12:59-12:64	local.reference	`DSWf'`
+12:64-12:65	punctuation.bracket	`)`
+13:1-13:4	operator	`%<-`
+13:5-13:6	punctuation.bracket	`(`
+13:6-13:30	constructor	`dynsem!step_preserves_wf`
+13:6-13:30	local.reference	`dynsem!step_preserves_wf`
+13:31-13:35	constructor	`DSWf`
+13:31-13:35	local.reference	`DSWf`
+13:36-13:41	constructor	`DStep`
+13:36-13:41	local.reference	`DStep`
+13:42-13:47	constructor	`DSWf'`
+13:42-13:47	local.reference	`DSWf'`
+13:47-13:48	punctuation.bracket	`)`
+13:48-13:51	keyword.return	` %.`
+14:7-14:31	constructor	`dynsem!step_preserves_wf`
+14:7-14:31	local.reference	`dynsem!step_preserves_wf`
+14:7-14:31	module	`dynsem!step_preserves_wf`
+14:32-14:37	keyword	`%term`
+14:38-14:47	constructor	`app_ctxt2`
+14:38-14:47	function	`app_ctxt2`
+14:38-14:47	local.reference	`app_ctxt2`
+14:38-14:47	variable.parameter	`app_ctxt2`
+14:47-15:4	operator	``
+15:5-15:6	punctuation.bracket	`(`
+15:6-15:30	constructor	`dynsem!step_preserves_wf`
+15:6-15:30	local.reference	`dynsem!step_preserves_wf`
+15:31-15:35	constructor	`DSWf`
+15:31-15:35	local.reference	`DSWf`
+15:36-15:37	punctuation.bracket	`(`
+15:37-15:51	constructor	`app_ctxt2_step`
+15:37-15:51	local.reference	`app_ctxt2_step`
+15:52-15:57	constructor	`DStep`
+15:52-15:57	local.reference	`DStep`
+15:57-15:58	punctuation.bracket	`)`
+15:59-15:64	constructor	`DSWf'`
+15:59-15:64	local.reference	`DSWf'`
+15:64-15:65	punctuation.bracket	`)`
+16:1-16:4	operator	`%<-`
+16:5-16:6	punctuation.bracket	`(`
+16:6-16:30	constructor	`dynsem!step_preserves_wf`
+16:6-16:30	local.reference	`dynsem!step_preserves_wf`
+16:31-16:35	constructor	`DSWf`
+16:31-16:35	local.reference	`DSWf`
+16:36-16:41	constructor	`DStep`
+16:36-16:41	local.reference	`DStep`
+16:42-16:47	constructor	`DSWf'`
+16:42-16:47	local.reference	`DSWf'`
+16:47-16:48	punctuation.bracket	`)`
+16:48-16:51	keyword.return	` %.`
+17:6-17:14	constructor	`app_beta`
+17:6-17:14	function	`app_beta`
+17:6-17:14	local.reference	`app_beta`
+17:6-17:14	variable.parameter	`app_beta`
+17:14-17:39	constructor	` dynsem!step_preserves_wf`
+17:14-17:39	local.reference	` dynsem!step_preserves_wf`
+17:39-17:44	constructor	` DSWf`
+17:39-17:44	local.reference	` DSWf`
+17:68-17:70	keyword.return	`%.`
+18:7-18:31	constructor	`dynsem!step_preserves_wf`
+18:7-18:31	local.reference	`dynsem!step_preserves_wf`
+18:7-18:31	module	`dynsem!step_preserves_wf`
+18:32-18:37	keyword	`%term`
+18:38-18:48	constructor	`unit_alloc`
+18:38-18:48	function	`unit_alloc`
+18:38-18:48	local.reference	`unit_alloc`
+18:38-18:48	variable.parameter	`unit_alloc`
+18:48-19:4	operator	``
+19:5-19:6	punctuation.bracket	`(`
+19:6-19:30	constructor	`dynsem!step_preserves_wf`
+19:6-19:30	local.reference	`dynsem!step_preserves_wf`
+19:31-19:35	constructor	`DSWf`
+19:31-19:35	local.reference	`DSWf`
+19:36-19:37	punctuation.bracket	`(`
+19:37-19:52	constructor	`unit_alloc_step`
+19:37-19:52	local.reference	`unit_alloc_step`
+19:53-19:61	constructor	`DStAlloc`
+19:53-19:61	local.reference	`DStAlloc`
+19:61-19:62	punctuation.bracket	`)`
+19:63-19:68	constructor	`DSWf'`
+19:63-19:68	local.reference	`DSWf'`
+19:68-19:69	punctuation.bracket	`)`
+20:1-20:4	operator	`%<-`
+20:5-20:6	punctuation.bracket	`(`
+20:6-20:27	constructor	`st!alloc_preserves_wf`
+20:6-20:27	local.reference	`st!alloc_preserves_wf`
+20:28-20:32	constructor	`DSWf`
+20:28-20:32	local.reference	`DSWf`
+20:33-20:41	constructor	`DStAlloc`
+20:33-20:41	local.reference	`DStAlloc`
+20:42-20:47	constructor	`DSWf'`
+20:42-20:47	local.reference	`DSWf'`
+20:47-20:48	punctuation.bracket	`)`
+20:48-20:51	keyword.return	` %.`
+21:6-21:18	constructor	`letunit_ctxt`
+21:6-21:18	function	`letunit_ctxt`
+21:6-21:18	local.reference	`letunit_ctxt`
+21:6-21:18	variable.parameter	`letunit_ctxt`
+21:18-22:4	operator	``
+22:5-22:6	punctuation.bracket	`(`
+22:6-22:30	constructor	`dynsem!step_preserves_wf`
+22:6-22:30	local.reference	`dynsem!step_preserves_wf`
+22:31-22:35	constructor	`DSWf`
+22:31-22:35	local.reference	`DSWf`
+22:36-22:37	punctuation.bracket	`(`
+22:37-22:54	constructor	`letunit_ctxt_step`
+22:37-22:54	local.reference	`letunit_ctxt_step`
+22:55-22:60	constructor	`DStep`
+22:55-22:60	local.reference	`DStep`
+22:60-22:61	punctuation.bracket	`)`
+22:62-22:67	constructor	`DSWf'`
+22:62-22:67	local.reference	`DSWf'`
+22:67-22:68	punctuation.bracket	`)`
+23:1-23:4	operator	`%<-`
+23:5-23:6	punctuation.bracket	`(`
+23:6-23:30	constructor	`dynsem!step_preserves_wf`
+23:6-23:30	local.reference	`dynsem!step_preserves_wf`
+23:31-23:35	constructor	`DSWf`
+23:31-23:35	local.reference	`DSWf`
+23:36-23:41	constructor	`DStep`
+23:36-23:41	local.reference	`DStep`
+23:42-23:47	constructor	`DSWf'`
+23:42-23:47	local.reference	`DSWf'`
+23:47-23:48	punctuation.bracket	`)`
+23:48-23:51	keyword.return	` %.`
+24:7-24:31	constructor	`dynsem!step_preserves_wf`
+24:7-24:31	local.reference	`dynsem!step_preserves_wf`
+24:7-24:31	module	`dynsem!step_preserves_wf`
+24:32-24:37	keyword	`%term`
+24:38-24:50	constructor	`letunit_beta`
+24:38-24:50	function	`letunit_beta`
+24:38-24:50	local.reference	`letunit_beta`
+24:38-24:50	variable.parameter	`letunit_beta`
+24:50-24:75	constructor	` dynsem!step_preserves_wf`
+24:50-24:75	local.reference	` dynsem!step_preserves_wf`
+24:75-24:80	constructor	` DSWf`
+24:75-24:80	local.reference	` DSWf`
+24:108-24:110	keyword.return	`%.`
+25:6-25:16	constructor	`pair_ctxt1`
+25:6-25:16	function	`pair_ctxt1`
+25:6-25:16	local.reference	`pair_ctxt1`
+25:6-25:16	variable.parameter	`pair_ctxt1`
+25:16-26:4	operator	``
+26:5-26:6	punctuation.bracket	`(`
+26:6-26:30	constructor	`dynsem!step_preserves_wf`
+26:6-26:30	local.reference	`dynsem!step_preserves_wf`
+26:31-26:35	constructor	`DSWf`
+26:31-26:35	local.reference	`DSWf`
+26:36-26:37	punctuation.bracket	`(`
+26:37-26:52	constructor	`pair_ctxt1_step`
+26:37-26:52	local.reference	`pair_ctxt1_step`
+26:53-26:58	constructor	`DStep`
+26:53-26:58	local.reference	`DStep`
+26:58-26:59	punctuation.bracket	`)`
+26:60-26:65	constructor	`DSWf'`
+26:60-26:65	local.reference	`DSWf'`
+26:65-26:66	punctuation.bracket	`)`
+27:1-27:4	operator	`%<-`
+27:5-27:6	punctuation.bracket	`(`
+27:6-27:30	constructor	`dynsem!step_preserves_wf`
+27:6-27:30	local.reference	`dynsem!step_preserves_wf`
+27:31-27:35	constructor	`DSWf`
+27:31-27:35	local.reference	`DSWf`
+27:36-27:41	constructor	`DStep`
+27:36-27:41	local.reference	`DStep`
+27:42-27:47	constructor	`DSWf'`
+27:42-27:47	local.reference	`DSWf'`
+27:47-27:48	punctuation.bracket	`)`
+27:48-27:51	keyword.return	` %.`
+28:7-28:31	constructor	`dynsem!step_preserves_wf`
+28:7-28:31	local.reference	`dynsem!step_preserves_wf`
+28:7-28:31	module	`dynsem!step_preserves_wf`
+28:32-28:37	keyword	`%term`
+28:38-28:48	constructor	`pair_ctxt2`
+28:38-28:48	function	`pair_ctxt2`
+28:38-28:48	local.reference	`pair_ctxt2`
+28:38-28:48	variable.parameter	`pair_ctxt2`
+28:48-29:4	operator	``
+29:5-29:6	punctuation.bracket	`(`
+29:6-29:30	constructor	`dynsem!step_preserves_wf`
+29:6-29:30	local.reference	`dynsem!step_preserves_wf`
+29:31-29:35	constructor	`DSWf`
+29:31-29:35	local.reference	`DSWf`
+29:36-29:37	punctuation.bracket	`(`
+29:37-29:52	constructor	`pair_ctxt2_step`
+29:37-29:52	local.reference	`pair_ctxt2_step`
+29:53-29:58	constructor	`DStep`
+29:53-29:58	local.reference	`DStep`
+29:58-29:59	punctuation.bracket	`)`
+29:60-29:65	constructor	`DSWf'`
+29:60-29:65	local.reference	`DSWf'`
+29:65-29:66	punctuation.bracket	`)`
+30:1-30:4	operator	`%<-`
+30:5-30:6	punctuation.bracket	`(`
+30:6-30:30	constructor	`dynsem!step_preserves_wf`
+30:6-30:30	local.reference	`dynsem!step_preserves_wf`
+30:31-30:35	constructor	`DSWf`
+30:31-30:35	local.reference	`DSWf`
+30:36-30:41	constructor	`DStep`
+30:36-30:41	local.reference	`DStep`
+30:42-30:47	constructor	`DSWf'`
+30:42-30:47	local.reference	`DSWf'`
+30:47-30:48	punctuation.bracket	`)`
+30:48-30:51	keyword.return	` %.`
+31:6-31:16	constructor	`pair_alloc`
+31:6-31:16	function	`pair_alloc`
+31:6-31:16	local.reference	`pair_alloc`
+31:6-31:16	variable.parameter	`pair_alloc`
+31:16-32:4	operator	``
+32:5-32:6	punctuation.bracket	`(`
+32:6-32:30	constructor	`dynsem!step_preserves_wf`
+32:6-32:30	local.reference	`dynsem!step_preserves_wf`
+32:31-32:35	constructor	`DSWf`
+32:31-32:35	local.reference	`DSWf`
+32:36-32:37	punctuation.bracket	`(`
+32:37-32:52	constructor	`pair_alloc_step`
+32:37-32:52	local.reference	`pair_alloc_step`
+32:53-32:61	constructor	`DStAlloc`
+32:53-32:61	local.reference	`DStAlloc`
+32:61-32:62	punctuation.bracket	`)`
+32:63-32:68	constructor	`DSWf'`
+32:63-32:68	local.reference	`DSWf'`
+32:68-32:69	punctuation.bracket	`)`
+33:1-33:4	operator	`%<-`
+33:5-33:6	punctuation.bracket	`(`
+33:6-33:27	constructor	`st!alloc_preserves_wf`
+33:6-33:27	local.reference	`st!alloc_preserves_wf`
+33:28-33:32	constructor	`DSWf`
+33:28-33:32	local.reference	`DSWf`
+33:33-33:41	constructor	`DStAlloc`
+33:33-33:41	local.reference	`DStAlloc`
+33:42-33:47	constructor	`DSWf'`
+33:42-33:47	local.reference	`DSWf'`
+33:47-33:48	punctuation.bracket	`)`
+33:48-33:51	keyword.return	` %.`
+34:7-34:31	constructor	`dynsem!step_preserves_wf`
+34:7-34:31	local.reference	`dynsem!step_preserves_wf`
+34:7-34:31	module	`dynsem!step_preserves_wf`
+34:32-34:37	keyword	`%term`
+34:38-34:50	constructor	`letpair_ctxt`
+34:38-34:50	function	`letpair_ctxt`
+34:38-34:50	local.reference	`letpair_ctxt`
+34:38-34:50	variable.parameter	`letpair_ctxt`
+34:50-35:4	operator	``
+35:5-35:6	punctuation.bracket	`(`
+35:6-35:30	constructor	`dynsem!step_preserves_wf`
+35:6-35:30	local.reference	`dynsem!step_preserves_wf`
+35:31-35:35	constructor	`DSWf`
+35:31-35:35	local.reference	`DSWf`
+35:36-35:37	punctuation.bracket	`(`
+35:37-35:54	constructor	`letpair_ctxt_step`
+35:37-35:54	local.reference	`letpair_ctxt_step`
+35:55-35:60	constructor	`DStep`
+35:55-35:60	local.reference	`DStep`
+35:60-35:61	punctuation.bracket	`)`
+35:62-35:67	constructor	`DSWf'`
+35:62-35:67	local.reference	`DSWf'`
+35:67-35:68	punctuation.bracket	`)`
+36:1-36:4	operator	`%<-`
+36:5-36:6	punctuation.bracket	`(`
+36:6-36:30	constructor	`dynsem!step_preserves_wf`
+36:6-36:30	local.reference	`dynsem!step_preserves_wf`
+36:31-36:35	constructor	`DSWf`
+36:31-36:35	local.reference	`DSWf`
+36:36-36:41	constructor	`DStep`
+36:36-36:41	local.reference	`DStep`
+36:42-36:47	constructor	`DSWf'`
+36:42-36:47	local.reference	`DSWf'`
+36:47-36:48	punctuation.bracket	`)`
+36:48-36:51	keyword.return	` %.`
+37:6-37:18	constructor	`letpair_beta`
+37:6-37:18	function	`letpair_beta`
+37:6-37:18	local.reference	`letpair_beta`
+37:6-37:18	variable.parameter	`letpair_beta`
+37:18-37:43	constructor	` dynsem!step_preserves_wf`
+37:18-37:43	local.reference	` dynsem!step_preserves_wf`
+37:43-37:48	constructor	` DSWf`
+37:43-37:48	local.reference	` DSWf`
+37:76-37:78	keyword.return	`%.`
+38:12-38:17	constructor	`DStep`
+38:12-38:17	local.reference	`DStep`
+38:55-38:57	keyword.return	`%.`
+39:8-39:9	punctuation.bracket	`(`
+39:9-39:10	punctuation.bracket	`)`
+39:11-39:12	punctuation.bracket	`(`
+39:12-39:36	constructor	`dynsem!step_preserves_wf`
+39:12-39:36	local.reference	`dynsem!step_preserves_wf`
+39:37-39:38	constructor	`_`
+39:37-39:38	local.reference	`_`
+39:37-39:38	variable.parameter	`_`
+39:39-39:40	constructor	`_`
+39:39-39:40	local.reference	`_`
+39:39-39:40	variable.parameter	`_`
+39:41-39:42	constructor	`_`
+39:41-39:42	local.reference	`_`
+39:41-39:42	variable.parameter	`_`
+39:42-39:43	punctuation.bracket	`)`
+39:43-39:46	keyword.return	` %.`
+40:8-40:32	constructor	`dynsem!step_preserves_wf`
+40:8-40:32	local.reference	`dynsem!step_preserves_wf`
+40:32-40:36	keyword.modifier	` %in`
+40:36-40:40	keyword.modifier	` %in`
+40:40-40:45	keyword.modifier	` %out`
+40:45-40:48	keyword.return	` %.`
+41:7-41:12	constructor	`DStep`
+41:7-41:12	local.reference	`DStep`
+41:13-41:14	punctuation.bracket	`(`
+41:14-41:38	constructor	`dynsem!step_preserves_wf`
+41:14-41:38	local.reference	`dynsem!step_preserves_wf`
+41:39-41:40	constructor	`_`
+41:39-41:40	local.reference	`_`
+41:39-41:40	variable.parameter	`_`
+41:41-41:46	constructor	`DStep`
+41:41-41:46	local.reference	`DStep`
+41:47-41:48	constructor	`_`
+41:47-41:48	local.reference	`_`
+41:47-41:48	variable.parameter	`_`
+41:48-41:49	punctuation.bracket	`)`
+41:49-41:52	keyword.return	` %.`
+41:52-42:67	comment	``
+42:67-43:67	comment	``
+43:67-44:5	keyword.type	``
+44:6-44:31	constructor	`dynsem!step*_preserves_wf`
+44:6-44:31	local.reference	`dynsem!step*_preserves_wf`
+44:6-44:31	type	`dynsem!step*_preserves_wf`
+44:80-44:82	keyword.return	`%.`
+45:6-45:31	constructor	`dynsem!step*_preserves_wf`
+45:6-45:31	local.reference	`dynsem!step*_preserves_wf`
+45:31-45:35	keyword.modifier	` %in`
+45:35-45:39	keyword.modifier	` %in`
+45:39-45:44	keyword.modifier	` %out`
+45:44-45:47	keyword.return	` %.`
+46:7-46:32	constructor	`dynsem!step*_preserves_wf`
+46:7-46:32	local.reference	`dynsem!step*_preserves_wf`
+46:7-46:32	module	`dynsem!step*_preserves_wf`
+46:33-46:38	keyword	`%term`
+46:39-46:43	constructor	`refl`
+46:39-46:43	function	`refl`
+46:39-46:43	local.reference	`refl`
+46:39-46:43	variable.parameter	`refl`
+46:43-46:69	constructor	` dynsem!step*_preserves_wf`
+46:43-46:69	local.reference	` dynsem!step*_preserves_wf`
+46:69-46:74	constructor	` DSWf`
+46:69-46:74	local.reference	` DSWf`
+46:74-46:85	constructor	` refl_step*`
+46:74-46:85	local.reference	` refl_step*`
+46:85-46:90	constructor	` DSWf`
+46:85-46:90	local.reference	` DSWf`
+46:90-46:93	keyword.return	` %.`
+47:6-47:11	constructor	`trans`
+47:6-47:11	function	`trans`
+47:6-47:11	local.reference	`trans`
+47:6-47:11	variable.parameter	`trans`
+47:11-48:4	operator	``
+48:5-48:6	punctuation.bracket	`(`
+48:6-48:31	constructor	`dynsem!step*_preserves_wf`
+48:6-48:31	local.reference	`dynsem!step*_preserves_wf`
+48:32-48:37	constructor	`DSWf1`
+48:32-48:37	local.reference	`DSWf1`
+48:38-48:39	punctuation.bracket	`(`
+48:39-48:50	constructor	`trans_step*`
+48:39-48:50	local.reference	`trans_step*`
+48:51-48:59	constructor	`DSteps23`
+48:51-48:59	local.reference	`DSteps23`
+48:60-48:68	constructor	`DSteps12`
+48:60-48:68	local.reference	`DSteps12`
+48:68-48:69	punctuation.bracket	`)`
+48:70-48:75	constructor	`DSWf3`
+48:70-48:75	local.reference	`DSWf3`
+48:75-48:76	punctuation.bracket	`)`
+49:1-49:4	operator	`%<-`
+49:5-49:6	punctuation.bracket	`(`
+49:6-49:31	constructor	`dynsem!step*_preserves_wf`
+49:6-49:31	local.reference	`dynsem!step*_preserves_wf`
+49:32-49:37	constructor	`DSWf1`
+49:32-49:37	local.reference	`DSWf1`
+49:38-49:46	constructor	`DSteps12`
+49:38-49:46	local.reference	`DSteps12`
+49:47-49:52	constructor	`DSWf2`
+49:47-49:52	local.reference	`DSWf2`
+49:52-49:53	punctuation.bracket	`)`
+49:53-50:4	operator	``
+50:5-50:6	punctuation.bracket	`(`
+50:6-50:31	constructor	`dynsem!step*_preserves_wf`
+50:6-50:31	local.reference	`dynsem!step*_preserves_wf`
+50:32-50:37	constructor	`DSWf2`
+50:32-50:37	local.reference	`DSWf2`
+50:38-50:46	constructor	`DSteps23`
+50:38-50:46	local.reference	`DSteps23`
+50:47-50:52	constructor	`DSWf3`
+50:47-50:52	local.reference	`DSWf3`
+50:52-50:53	punctuation.bracket	`)`
+50:53-50:56	keyword.return	` %.`
+51:7-51:32	constructor	`dynsem!step*_preserves_wf`
+51:7-51:32	local.reference	`dynsem!step*_preserves_wf`
+51:7-51:32	module	`dynsem!step*_preserves_wf`
+51:33-51:38	keyword	`%term`
+51:39-51:43	constructor	`step`
+51:39-51:43	function	`step`
+51:39-51:43	local.reference	`step`
+51:39-51:43	variable.parameter	`step`
+51:43-52:4	operator	``
+52:5-52:6	punctuation.bracket	`(`
+52:6-52:31	constructor	`dynsem!step*_preserves_wf`
+52:6-52:31	local.reference	`dynsem!step*_preserves_wf`
+52:32-52:36	constructor	`DSWf`
+52:32-52:36	local.reference	`DSWf`
+52:37-52:38	punctuation.bracket	`(`
+52:38-52:48	constructor	`step_step*`
+52:38-52:48	local.reference	`step_step*`
+52:49-52:54	constructor	`DStep`
+52:49-52:54	local.reference	`DStep`
+52:54-52:55	punctuation.bracket	`)`
+52:56-52:61	constructor	`DSWf'`
+52:56-52:61	local.reference	`DSWf'`
+52:61-52:62	punctuation.bracket	`)`
+53:1-53:4	operator	`%<-`
+53:5-53:6	punctuation.bracket	`(`
+53:6-53:30	constructor	`dynsem!step_preserves_wf`
+53:6-53:30	local.reference	`dynsem!step_preserves_wf`
+53:31-53:35	constructor	`DSWf`
+53:31-53:35	local.reference	`DSWf`
+53:36-53:41	constructor	`DStep`
+53:36-53:41	local.reference	`DStep`
+53:42-53:47	constructor	`DSWf'`
+53:42-53:47	local.reference	`DSWf'`
+53:47-53:48	punctuation.bracket	`)`
+53:48-53:51	keyword.return	` %.`
+54:12-54:18	constructor	`DSteps`
+54:12-54:18	local.reference	`DSteps`
+54:58-54:60	keyword.return	`%.`
+55:8-55:9	punctuation.bracket	`(`
+55:9-55:10	punctuation.bracket	`)`
+55:11-55:12	punctuation.bracket	`(`
+55:12-55:37	constructor	`dynsem!step*_preserves_wf`
+55:12-55:37	local.reference	`dynsem!step*_preserves_wf`
+55:38-55:39	constructor	`_`
+55:38-55:39	local.reference	`_`
+55:38-55:39	variable.parameter	`_`
+55:40-55:41	constructor	`_`
+55:40-55:41	local.reference	`_`
+55:40-55:41	variable.parameter	`_`
+55:42-55:43	constructor	`_`
+55:42-55:43	local.reference	`_`
+55:42-55:43	variable.parameter	`_`
+55:43-55:44	punctuation.bracket	`)`
+55:44-55:47	keyword.return	` %.`
+56:8-56:33	constructor	`dynsem!step*_preserves_wf`
+56:8-56:33	local.reference	`dynsem!step*_preserves_wf`
+56:33-56:37	keyword.modifier	` %in`
+56:37-56:41	keyword.modifier	` %in`
+56:41-56:46	keyword.modifier	` %out`
+56:46-56:49	keyword.return	` %.`
+57:7-57:13	constructor	`DSteps`
+57:7-57:13	local.reference	`DSteps`
+57:14-57:15	punctuation.bracket	`(`
+57:15-57:40	constructor	`dynsem!step*_preserves_wf`
+57:15-57:40	local.reference	`dynsem!step*_preserves_wf`
+57:41-57:42	constructor	`_`
+57:41-57:42	local.reference	`_`
+57:41-57:42	variable.parameter	`_`
+57:43-57:49	constructor	`DSteps`
+57:43-57:49	local.reference	`DSteps`
+57:50-57:51	constructor	`_`
+57:50-57:51	local.reference	`_`
+57:50-57:51	variable.parameter	`_`
+57:51-57:52	punctuation.bracket	`)`
+57:52-57:55	keyword.return	` %.`

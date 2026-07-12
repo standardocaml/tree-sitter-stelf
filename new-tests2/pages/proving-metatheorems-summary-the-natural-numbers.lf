@@ -6,7 +6,7 @@
 %         
 %                                               
 %                                                                          
-%{! 
+%[[ 
 
 _This page is part of the introduction to [proving metatheorems with Twelf](/wiki/proving-metatheorems-with-twelf/)._
 
@@ -40,4 +40,4 @@ Before going on to the next section, you may wish to test yourself with the foll
     - Finally, state and prove a theorem `sum-odds` that shows that the sum of two odd numbers produces an even number
 
 
-!}%
+%]]

@@ -1,5 +1,5 @@
 %                                                   
-%{! 
+%[[ 
 
 This is a case study translating the simply lambda calculus into S, K, and I
 combinatory logic.  The correctness of the translation is proven in the
@@ -8,13 +8,13 @@ its reduct's translation.
 
 [William Lovas](/wiki/user-william-lovas/)
 
-!}%
-%{! 
+%]]
+%[[ 
 
 ## Syntax and static semantics
 
-!}%
-%{! 
+%]]
+%[[ 
 
 First we define the syntax of the two languages.  ``term A`` is the
 type of simply-typed lambda-calculus terms of type A; ``cterm A`` is
@@ -27,7 +27,7 @@ Note that since we're using an
 [intrinsic encoding](/wiki/intrinsic-and-extrinsic-encodings/), these syntax
 definitions double as definitions of the languages' static semantics.
 
-!}%
+%]]
 %sort tp %.
 %term i tp %.
 %term => %pi tp %-> tp %-> tp %.
@@ -42,29 +42,29 @@ definitions double as definitions of the languages' static semantics.
 %term k cterm (A => B => A) %.
 %term i cterm (A => A) %.
 %term capp %pi (cterm (A => B)) %-> (cterm A) %-> (cterm B) %.
-%{! 
+%[[ 
 
 We can use Twelf's [abbreviation mechanism](/wiki/abbrev-declaration/) and
 [fixity declarations](/wiki/fixity-declaration/) to obtain some cute syntax.
 
-!}%
+%]]
 %inline @ app %.
 %prec %left 10 @ %.
 %inline @@ capp %.
 %prec %left 10 @@ %.
-%{! 
+%[[ 
 
 ## Dynamic semantics
 
-!}%
-%{! 
+%]]
+%[[ 
 
 Then we define reduction relations on both languages.  ``step`` is the
 single-step reduction relation on lambda terms; ``cstep`` is the
 single-step reduction relation on combinator terms.  For lambda-calculus
 terms, we do not reduce under binders.
 
-!}%
+%]]
 %sort step {_ term A} {_ term A} %.
 %term s-beta step (app (lam ([x] M1 x)) M2) (M1 M2) %.
 %term s-1 %pi (step (app M1 M2) (app M1' M2)) %<- (step M1 M1') %.
@@ -75,23 +75,23 @@ terms, we do not reduce under binders.
 %term cs-s cstep (capp (capp (capp s X) Y) Z) (capp (capp X Z) (capp Y Z)) %.
 %term cs-1 %pi (cstep (capp X Y) (capp X' Y)) %<- (cstep X X') %.
 %term cs-2 %pi (cstep (capp X Y) (capp X Y')) %<- (cstep Y Y') %.
-%{! 
+%[[ 
 
 We also define multi-step reduction on combinator terms.
 
 Our simulation will relate single-step derivations in the lambda-calculus
 to multi-step derivations on the translated terms.
 
-!}%
+%]]
 %sort cstep* {_ cterm A} {_ cterm A} %.
 %term cs-cons %pi (cstep* N N'') %<- (cstep N N') %<- (cstep* N' N'') %.
 %term cs-nil cstep* N N %.
-%{! 
+%[[ 
 
 We can pre-emptively prove some compatibility lemmas about multi-step
 reduction.
 
-!}%
+%]]
 %sort cs-1* {_ cstep* N1 N1'} {_ cstep* (capp N1 N2) (capp N1' N2)} %.
 %mode {%in A tp} {%in B tp} {%in N1 cterm (A => B)} {%in N1' cterm (A => B)} {%in N2 cterm A} {%in CS1 cstep* N1 N1'} {%out CS2 cstep* (capp N1 N2) (capp N1' N2)} cs-1* CS1 CS2 %.
 %term _ cs-1* cs-nil cs-nil %.
@@ -110,12 +110,12 @@ reduction.
 %term _ %pi (cs-trans (cs-cons Cs1 C) Cs2 (cs-cons Cs12 C)) %<- (cs-trans Cs1 Cs2 Cs12) %.
 %worlds () (cs-trans _ _ _) %.
 %total {Cs} (cs-trans Cs _ _) %.
-%{! 
+%[[ 
 
 ## Translation
 
-!}%
-%{! 
+%]]
+%[[ 
 
 We can now define a compositional translation from lambda terms to combinator
 terms in the standard way.  The translation appeals to a function called
@@ -155,18 +155,18 @@ relating LF-level abstractions in the combinator language to closed combinator
 terms, ``bracket ([x] N x) N``.  This definition is essentially an
 instance of [higher-order abstract syntax](/wiki/higher-order-abstract-syntax/).
 
-!}%
+%]]
 %sort trans {_ term A} {_ cterm A} %.
 %sort bracket {_ %pi (cterm A) %-> (cterm B)} {_ cterm (A => B)} %.
 %term t-app %pi (trans (app M1 M2) (capp N1 N2)) %<- (trans M1 N1) %<- (trans M2 N2) %.
-%{! 
+%[[ 
 
 The translation on lambda-abstractions has to work under an extended context
 with a lambda-term variable, a combinator-term variable, and an assumption
 that the one translates to the other.  See the ``%worlds`` declaration
 below.
 
-!}%
+%]]
 %%%
 %%% TODO: complete the translation case for lambda-abstraction
 %%%
@@ -180,17 +180,17 @@ below.
 %block tbind {A tp} [x term A] [y cterm A] [dtrans trans x y]%.
 %worlds (tbind) (bracket _ _) %.
 %worlds (tbind) (trans _ _) %.
-%{! 
+%[[ 
 
 ## Correctness of the translation
 
-!}%
-%{! 
+%]]
+%[[ 
 
 First, we prove the correctness of bracket abstraction itself:
 the application of a bracket abstraction reduces to a substitution.
 
-!}%
+%]]
 %sort subst {_ bracket ([x] N x) N'} {N0} {_ cstep* (capp N' N0) (N N0)} %.
 %mode subst %in %in %out %.
 %term _ subst b-i N0 (cs-cons cs-nil cs-i) %.
@@ -201,36 +201,36 @@ the application of a bracket abstraction reduces to a substitution.
 %term _ subst (b-s (%the (bracket ([x] N2 x) N2') B2) (%the (bracket ([x] N1 x) N1') B1)) N0 XXX-FILL_IN-XXX %.
 %worlds () (subst _ _ _) %.
 %total {B} (subst B _ _) %.
-%{! 
+%[[ 
 
 Then, we can prove simulation, the correctness of translation, by a
 straightforward induction on single-step derivations in the lambda-calculus,
 using the correctness of bracket abstraction as a lemma in the case of a
 beta-reduction.
 
-!}%
+%]]
 %sort simulate {_ step M M'} {_ trans M N} {_ trans M' N'} {_ cstep* N N'} %.
 %mode simulate %in %in %out %out %.
-%{! 
+%[[ 
 
 NB: in the ``s-beta`` case on paper, you have to prove two
 compositionality lemmas.  In Twelf, using higher-order abstract
 syntax, we get them for free.
 
-!}%
+%]]
 %%%
 %%% TODO: prove simulation; there are three cases.
 %%%
 %worlds () (simulate _ _ _ _) %.
 %total D (simulate D _ _ _) %.
-%{! 
+%[[ 
 
 [POPL Tutorial/Typed bracket abstraction (solution)](/wiki/popl-tutorial-typed-bracket-abstraction-solution/)
 
-!}%
-%{!
+%]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/POPL_Tutorial/Typed_bracket_abstraction).
-!}%
+%]]

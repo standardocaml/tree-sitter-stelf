@@ -1,5 +1,5 @@
 %                    
-%{! This **glossary** should include most of the unfamiliar concepts that
+%[[ This **glossary** should include most of the unfamiliar concepts that
 someone with an undergraduate-level understanding of type theory would
 encounter in the process of learning to use Twelf. Some of these links point to
 extensive tutorials, but in those cases the first paragraph or two should
@@ -56,4 +56,4 @@ include a definition of the concept.
 * [Uniqueness lemma](/wiki/uniqueness-lemma/)
 * [Weakening lemma](/wiki/weakening-lemma/)
 * [World checking](/wiki/percent-worlds/)
-* [World subsumption](/wiki/world-subsumption/) !}%
+* [World subsumption](/wiki/world-subsumption/) %]]

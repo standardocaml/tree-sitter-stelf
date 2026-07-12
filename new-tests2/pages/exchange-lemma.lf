@@ -1,10 +1,10 @@
 %                          
 %                     
-%{! **Exchange** is the property of a hypothetical judgment that if <Math formula="\Gamma, A, B \vdash J"/>, then <Math formula="\Gamma, B, A \vdash J"/> (assuming A and B are independent hypotheses).  
+%[[ **Exchange** is the property of a hypothetical judgment that if <Math formula="\Gamma, A, B \vdash J"/>, then <Math formula="\Gamma, B, A \vdash J"/> (assuming A and B are independent hypotheses).  
 
 Often, we represent an an object-language hypothetical judgement by [using LF binding to model hypotheses](/wiki/higher-order-judgements/).  When a judgement is represented in such a fashion, exchange comes "for free" from the LF representation.  In particular, we can exchange hypotheses by re-arranging the order of the lambdas in a derivation.
 
-For example, consider the following simply typed λ-calculus: !}%
+For example, consider the following simply typed λ-calculus: %]]
 %% Syntax
 %sort tp %.
 %term tp/unit tp %.
@@ -20,16 +20,16 @@ For example, consider the following simply typed λ-calculus: !}%
 	%pi (of (exp/lam T E) (tp/arrow T T'))
 	%<- ({x exp} %pi (of x T) %-> (of (E x) T')) %.
 %term of/app %pi (of (exp/app E1 E2) T') %<- (of E2 T) %<- (of E1 (tp/arrow T T')) %.
-%{! Object-language typing is a hypothetical judgement; we represent it using LF variables to model hypotheses (see \{\{proving|title=Representing the judgements of the STLC\}\} for more discussion of this representation). 
+%[[ Object-language typing is a hypothetical judgement; we represent it using LF variables to model hypotheses (see \{\{proving|title=Representing the judgements of the STLC\}\} for more discussion of this representation). 
 
-We can prove exchange for this judgement as follows: !}%
+We can prove exchange for this judgement as follows: %]]
 %sort exchange {_ {x exp} {dx of x T} {y exp} {dy of y T'} of (E x y) T''} {_ {y exp} {dy of y T'} {x exp} {dx of x T} of (E x y) T''} %.
 %mode exchange %in %out %.
 %term _ exchange ([x] [dx of x T] [y] [dy of y T'] D1 x dx y dy) ([y] [dy of y T'] [x] [dx of x T] D1 x dx y dy) %.
 %block of-block {T tp} [x exp] [dx of x T]%.
 %worlds (of-block) (exchange _ _) %.
 %total () (exchange _ _) %.
-%{! The proof simply permutes the LF lambdas.
+%[[ The proof simply permutes the LF lambdas.
 
 In practice, it is rare for exchange to be proven and used as a metatheorem. Instead, exchange is inlined by  manipulating LF lambdas in the appropriate way. 
 
@@ -50,4 +50,4 @@ For example, in the [substitution lemma](/wiki/substitution-lemma/) article, exc
 This page was copied from the MediaWiki version of the Twelf Wiki.
 You can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Exchange_lemma).
-!}%
+%]]

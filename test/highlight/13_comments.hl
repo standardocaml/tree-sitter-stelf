@@ -1,0 +1,8 @@
+0:0-0:22	comment	`% a plain line comment`
+1:0-1:27	comment	`%; a Zed-style line comment`
+2:0-2:41	comment	`%%% the wiki-style triple-percent comment`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:9	constructor	`nat`
+3:6-3:9	local.reference	`nat`
+3:6-3:9	type	`nat`
+3:9-4:23	comment	``

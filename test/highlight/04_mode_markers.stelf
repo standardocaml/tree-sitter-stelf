@@ -1,0 +1,3 @@
+%mode add %in %in %out
+%mode strict %in %out1 %star
+%mode {%in x nat} {%out y nat} pred x y

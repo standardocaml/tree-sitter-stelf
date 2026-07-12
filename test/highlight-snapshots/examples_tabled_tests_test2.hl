@@ -1,0 +1,134 @@
+0:0-0:5	keyword.type	`%sort`
+0:6-0:10	constructor	`node`
+0:6-0:10	local.reference	`node`
+0:6-0:10	type	`node`
+0:10-0:13	keyword.return	` %.`
+1:6-1:7	constructor	`a`
+1:6-1:7	function	`a`
+1:6-1:7	local.reference	`a`
+1:6-1:7	variable.parameter	`a`
+1:7-1:12	constructor	` node`
+1:7-1:12	local.reference	` node`
+1:12-1:15	keyword.return	` %.`
+2:6-2:7	constructor	`b`
+2:6-2:7	function	`b`
+2:6-2:7	local.reference	`b`
+2:6-2:7	variable.parameter	`b`
+2:7-2:12	constructor	` node`
+2:7-2:12	local.reference	` node`
+2:12-2:15	keyword.return	` %.`
+3:6-3:7	constructor	`c`
+3:6-3:7	function	`c`
+3:6-3:7	local.reference	`c`
+3:6-3:7	variable.parameter	`c`
+3:7-3:12	constructor	` node`
+3:7-3:12	local.reference	` node`
+3:12-3:15	keyword.return	` %.`
+4:6-4:7	constructor	`d`
+4:6-4:7	function	`d`
+4:6-4:7	local.reference	`d`
+4:6-4:7	variable.parameter	`d`
+4:7-4:12	constructor	` node`
+4:7-4:12	local.reference	` node`
+4:12-4:15	keyword.return	` %.`
+4:15-5:5	keyword.type	``
+5:6-5:10	constructor	`edge`
+5:6-5:10	local.reference	`edge`
+5:6-5:10	type	`edge`
+5:29-5:31	keyword.return	`%.`
+6:6-6:10	constructor	`e_ab`
+6:6-6:10	function	`e_ab`
+6:6-6:10	local.reference	`e_ab`
+6:6-6:10	variable.parameter	`e_ab`
+6:10-6:15	constructor	` edge`
+6:10-6:15	local.reference	` edge`
+6:15-6:17	constructor	` a`
+6:15-6:17	local.reference	` a`
+6:17-6:19	constructor	` b`
+6:17-6:19	local.reference	` b`
+6:19-6:22	keyword.return	` %.`
+7:6-7:10	constructor	`e_ac`
+7:6-7:10	function	`e_ac`
+7:6-7:10	local.reference	`e_ac`
+7:6-7:10	variable.parameter	`e_ac`
+7:10-7:15	constructor	` edge`
+7:10-7:15	local.reference	` edge`
+7:15-7:17	constructor	` a`
+7:15-7:17	local.reference	` a`
+7:17-7:19	constructor	` c`
+7:17-7:19	local.reference	` c`
+7:19-7:22	keyword.return	` %.`
+8:6-8:10	constructor	`e_ba`
+8:6-8:10	function	`e_ba`
+8:6-8:10	local.reference	`e_ba`
+8:6-8:10	variable.parameter	`e_ba`
+8:10-8:15	constructor	` edge`
+8:10-8:15	local.reference	` edge`
+8:15-8:17	constructor	` b`
+8:15-8:17	local.reference	` b`
+8:17-8:19	constructor	` a`
+8:17-8:19	local.reference	` a`
+8:19-8:22	keyword.return	` %.`
+9:6-9:10	constructor	`e_bd`
+9:6-9:10	function	`e_bd`
+9:6-9:10	local.reference	`e_bd`
+9:6-9:10	variable.parameter	`e_bd`
+9:10-9:15	constructor	` edge`
+9:10-9:15	local.reference	` edge`
+9:15-9:17	constructor	` b`
+9:15-9:17	local.reference	` b`
+9:17-9:19	constructor	` d`
+9:17-9:19	local.reference	` d`
+9:19-9:22	keyword.return	` %.`
+9:22-10:5	keyword.type	``
+10:6-10:12	constructor	`reach'`
+10:6-10:12	local.reference	`reach'`
+10:6-10:12	type	`reach'`
+10:31-10:33	keyword.return	`%.`
+11:15-11:17	keyword.return	`%.`
+12:6-12:11	constructor	`r_cl'`
+12:6-12:11	function	`r_cl'`
+12:6-12:11	local.reference	`r_cl'`
+12:6-12:11	variable.parameter	`r_cl'`
+12:11-12:15	operator	` %pi`
+12:16-12:17	punctuation.bracket	`(`
+12:17-12:23	constructor	`reach'`
+12:17-12:23	local.reference	`reach'`
+12:24-12:25	constructor	`X`
+12:24-12:25	local.reference	`X`
+12:26-12:27	constructor	`Y`
+12:26-12:27	local.reference	`Y`
+12:27-12:28	punctuation.bracket	`)`
+12:29-12:32	operator	`%<-`
+12:33-12:34	punctuation.bracket	`(`
+12:34-12:40	constructor	`reach'`
+12:34-12:40	local.reference	`reach'`
+12:41-12:42	constructor	`X`
+12:41-12:42	local.reference	`X`
+12:43-12:44	constructor	`Z`
+12:43-12:44	local.reference	`Z`
+12:44-12:45	punctuation.bracket	`)`
+12:45-12:49	operator	` %<-`
+12:50-12:51	punctuation.bracket	`(`
+12:51-12:55	constructor	`edge`
+12:51-12:55	local.reference	`edge`
+12:56-12:57	constructor	`Z`
+12:56-12:57	local.reference	`Z`
+12:58-12:59	constructor	`Y`
+12:58-12:59	local.reference	`Y`
+12:59-12:60	punctuation.bracket	`)`
+12:60-12:63	keyword.return	` %.`
+13:6-13:13	constructor	`r_refl'`
+13:6-13:13	function	`r_refl'`
+13:6-13:13	local.reference	`r_refl'`
+13:6-13:13	variable.parameter	`r_refl'`
+13:13-13:20	constructor	` reach'`
+13:13-13:20	local.reference	` reach'`
+13:20-13:22	constructor	` X`
+13:20-13:22	local.reference	` X`
+13:22-13:24	constructor	` X`
+13:22-13:24	local.reference	` X`
+13:24-13:27	keyword.return	` %.`
+14:13-14:14	variable.parameter.builtin	`_`
+14:15-14:16	number	`5`
+14:28-14:30	keyword.return	`%.`

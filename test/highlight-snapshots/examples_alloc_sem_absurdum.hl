@@ -1,0 +1,16 @@
+0:0-0:68	comment	`%%% Simply Typed Lambda Calculus w/ small-step, allocation semantics`
+1:0-1:37	comment	`%%% Author: Matthew Fluet (June 2005)`
+2:0-2:16	comment	`%%% absurdum.elf`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:12	constructor	`absurd`
+3:6-3:12	local.reference	`absurd`
+3:6-3:12	type	`absurd`
+3:12-3:15	keyword.return	` %.`
+3:15-4:12	attribute	``
+4:6-4:12	constructor	`absurd`
+4:6-4:12	local.reference	`absurd`
+4:6-4:12	variable	`absurd`
+4:12-4:15	keyword.return	` %.`
+5:8-5:14	constructor	`absurd`
+5:8-5:14	local.reference	`absurd`
+5:14-5:17	keyword.return	` %.`

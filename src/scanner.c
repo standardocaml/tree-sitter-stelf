@@ -24,7 +24,7 @@ struct state {
   int currentProse;
 };
 
-bool consume_whitespace(struct state* st, TSLexer *lexer) {
+const static bool consume_whitespace(struct state* st, TSLexer *lexer) {
   bool found_whitespace = false;
   while (lexer->lookahead == ' ' || lexer->lookahead == '\t' ||
          lexer->lookahead == '\n' || lexer->lookahead == '\r') {
@@ -67,7 +67,7 @@ void tree_sitter_stelf_external_scanner_deserialize(void *payload,
   }
 }
 #define MAX_PROSE_NAME 255
-bool str_equal(char* s0, const char* s1) {
+const static bool str_equal(char* s0, const char* s1) {
   for (int i = 0; i < MAX_PROSE_NAME; i++) {
     if (s0[i] != s1[i]) {
       return false;
@@ -81,7 +81,7 @@ bool str_equal(char* s0, const char* s1) {
   }
   return true;
 }
-bool parse_prose_name(void* payload, TSLexer *lexer, const bool *valid_symbols) {
+const static bool parse_prose_name(void* payload, TSLexer *lexer, const bool *valid_symbols) {
   char name[MAX_PROSE_NAME] = {0};
   struct state *st = payload;
   // The space between `%prose` and the language name is not skipped for us
@@ -127,12 +127,24 @@ bool parse_prose_name(void* payload, TSLexer *lexer, const bool *valid_symbols) 
 bool tree_sitter_stelf_external_scanner_scan(void *payload, TSLexer *lexer,
                                              const bool *valid_symbols) {
   struct state *st = payload;
+
+  // Zero-width prose-language marker at the end of an `outer_text` run —
+  // must run *before* the BEGIN_STRING peek, otherwise a `%`-word that is a
+  // command boundary (not `%[`) would be advanced past and re-emitted as a
+  // stale token from a later branch. The marker only makes sense right at a
+  // `%` boundary or EOF; anywhere else it would close outer_text early.
+  if (valid_symbols[st->currentProse] &&
+      (lexer->lookahead == '%' || lexer->eof(lexer))) {
+    lexer->mark_end(lexer);
+    lexer->result_symbol = st->currentProse;
+    return true;
+  }
+
   if (valid_symbols[BEGIN_STRING] && lexer->lookahead == '%') {
-    // Fix the token boundary at the current (pre-`%`) position before
-    // peeking ahead, so that if this doesn't turn out to be a real string
-    // (`%[`), the peeked `%` is NOT consumed as part of whatever token we
-    // return instead (e.g. the zero-width prose marker below) — it needs to
-    // stay available for the next real token (a command, `%prose`, etc.).
+    // Freeze the token end at the pre-`%` position before peeking ahead. If
+    // this turns out not to be a real `%[…]` string start we return false so
+    // tree-sitter rolls back to this frozen position and the built-in lexer
+    // gets to see the `%` at position 0 (as a command keyword etc.).
     lexer->mark_end(lexer);
     int string_size = 0;           // Number of `[` in string
     lexer->advance(lexer, false);
@@ -147,13 +159,8 @@ bool tree_sitter_stelf_external_scanner_scan(void *payload, TSLexer *lexer,
       lexer->result_symbol = BEGIN_STRING;
       return true;
     }
-
-    // Not a real string start. Fall through to see if the (still
-    // zero-width, per mark_end above) prose marker applies here instead.
-    if (valid_symbols[st->currentProse]) {
-      lexer->result_symbol = st->currentProse;
-      return true;
-    }
+    // Not a real string start — must return false explicitly so no later
+    // branch (with a fresh mark_end) accidentally consumes the peeked `%`.
     return false;
   }
 
@@ -195,23 +202,8 @@ bool tree_sitter_stelf_external_scanner_scan(void *payload, TSLexer *lexer,
     return parse_prose_name(payload, lexer, valid_symbols);
   }
 
-  // The prose-language marker is zero-width and only makes sense right at the
-  // end of an outer_text run: either we've hit the next `%` (a command,
-  // string, or another %prose header) or the end of the file. Without this
-  // guard the marker can be accepted mid-content, closing outer_text early.
-  //
-  // Two commands are commonly separated by nothing but plain whitespace
-  // (e.g. `%sort t %.`), so peek past any run of it - without permanently
-  // consuming it, via mark_end - to see whether a real boundary (`%`/EOF)
-  // follows right after.
-  if (valid_symbols[st->currentProse]) {
-    lexer->mark_end(lexer);
-    consume_whitespace(st, lexer);
-    if (lexer->lookahead == '%' || lexer->eof(lexer)) {
-      lexer->result_symbol = st->currentProse;
-      return true;
-    }
-  }
-
+  // NOTE: the zero-width `currentProse` marker is handled at the *top* of
+  // this function, before the BEGIN_STRING peek. See that block for the
+  // guard conditions and rationale.
   return false;
 }

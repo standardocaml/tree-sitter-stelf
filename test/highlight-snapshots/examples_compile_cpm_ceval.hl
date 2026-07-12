@@ -1,0 +1,328 @@
+0:0-0:40	comment	`%%% Computations of Continuation Machine`
+1:0-1:26	comment	`%%% Author: Frank Pfenning`
+2:0-2:27	comment	`%%% Single Step Transitions`
+3:0-3:5	keyword.type	`%sort`
+3:6-3:8	local.reference	`=>`
+3:6-3:8	operator	`=>`
+3:6-3:8	type	`=>`
+3:29-3:31	keyword.return	`%.`
+3:31-4:8	attribute	``
+4:6-4:8	local.reference	`=>`
+4:6-4:8	operator	`=>`
+4:6-4:8	variable	`=>`
+4:8-4:11	keyword.return	` %.`
+5:6-5:11	keyword.modifier	`%none`
+5:12-5:13	number	`6`
+5:14-5:16	local.reference	`=>`
+5:14-5:16	operator	`=>`
+5:16-5:19	keyword.return	` %.`
+5:19-6:17	comment	``
+7:6-7:10	constructor	`st_z`
+7:6-7:10	function	`st_z`
+7:6-7:10	local.reference	`st_z`
+7:6-7:10	variable.parameter	`st_z`
+7:10-7:12	constructor	` K`
+7:10-7:12	local.reference	` K`
+7:12-7:14	local.reference	` #`
+7:12-7:14	operator	` #`
+7:41-7:43	keyword.return	`%.`
+8:6-8:10	constructor	`st_s`
+8:6-8:10	function	`st_s`
+8:6-8:10	local.reference	`st_s`
+8:6-8:10	variable.parameter	`st_s`
+8:10-8:12	constructor	` K`
+8:10-8:12	local.reference	` K`
+8:12-8:14	local.reference	` #`
+8:12-8:14	operator	` #`
+8:68-8:70	keyword.return	`%.`
+9:6-9:13	constructor	`st_case`
+9:6-9:13	function	`st_case`
+9:6-9:13	local.reference	`st_case`
+9:6-9:13	variable.parameter	`st_case`
+9:13-9:15	constructor	` K`
+9:13-9:15	local.reference	` K`
+9:15-9:17	local.reference	` #`
+9:15-9:17	operator	` #`
+9:84-9:86	keyword.return	`%.`
+10:6-10:16	constructor	`st_case1_z`
+10:6-10:16	function	`st_case1_z`
+10:6-10:16	local.reference	`st_case1_z`
+10:6-10:16	variable.parameter	`st_case1_z`
+10:16-10:18	constructor	` K`
+10:16-10:18	local.reference	` K`
+10:18-10:20	local.reference	` #`
+10:18-10:20	operator	` #`
+10:53-10:55	keyword.return	`%.`
+11:6-11:16	constructor	`st_case1_s`
+11:6-11:16	function	`st_case1_s`
+11:6-11:16	local.reference	`st_case1_s`
+11:6-11:16	variable.parameter	`st_case1_s`
+11:16-11:18	constructor	` K`
+11:16-11:18	local.reference	` K`
+11:18-11:20	local.reference	` #`
+11:18-11:20	operator	` #`
+11:65-11:67	keyword.return	`%.`
+11:67-12:7	comment	``
+13:6-13:13	constructor	`st_pair`
+13:6-13:13	function	`st_pair`
+13:6-13:13	local.reference	`st_pair`
+13:6-13:13	variable.parameter	`st_pair`
+13:13-13:15	constructor	` K`
+13:13-13:15	local.reference	` K`
+13:15-13:17	local.reference	` #`
+13:15-13:17	operator	` #`
+13:78-13:80	keyword.return	`%.`
+14:6-14:14	constructor	`st_pair1`
+14:6-14:14	function	`st_pair1`
+14:6-14:14	local.reference	`st_pair1`
+14:6-14:14	variable.parameter	`st_pair1`
+14:14-14:16	constructor	` K`
+14:14-14:16	local.reference	` K`
+14:16-14:18	local.reference	` #`
+14:16-14:18	operator	` #`
+14:84-14:86	keyword.return	`%.`
+15:6-15:12	constructor	`st_fst`
+15:6-15:12	function	`st_fst`
+15:6-15:12	local.reference	`st_fst`
+15:6-15:12	variable.parameter	`st_fst`
+15:12-15:14	constructor	` K`
+15:12-15:14	local.reference	` K`
+15:14-15:16	local.reference	` #`
+15:14-15:16	operator	` #`
+15:65-15:67	keyword.return	`%.`
+16:6-16:13	constructor	`st_fst1`
+16:6-16:13	function	`st_fst1`
+16:6-16:13	local.reference	`st_fst1`
+16:6-16:13	variable.parameter	`st_fst1`
+16:13-16:15	constructor	` K`
+16:13-16:15	local.reference	` K`
+16:15-16:17	local.reference	` #`
+16:15-16:17	operator	` #`
+16:58-16:60	keyword.return	`%.`
+17:6-17:12	constructor	`st_snd`
+17:6-17:12	function	`st_snd`
+17:6-17:12	local.reference	`st_snd`
+17:6-17:12	variable.parameter	`st_snd`
+17:12-17:14	constructor	` K`
+17:12-17:14	local.reference	` K`
+17:14-17:16	local.reference	` #`
+17:14-17:16	operator	` #`
+17:65-17:67	keyword.return	`%.`
+18:6-18:13	constructor	`st_snd1`
+18:6-18:13	function	`st_snd1`
+18:6-18:13	local.reference	`st_snd1`
+18:6-18:13	variable.parameter	`st_snd1`
+18:13-18:15	constructor	` K`
+18:13-18:15	local.reference	` K`
+18:15-18:17	local.reference	` #`
+18:15-18:17	operator	` #`
+18:58-18:60	keyword.return	`%.`
+18:60-19:11	comment	``
+20:6-20:12	constructor	`st_lam`
+20:6-20:12	function	`st_lam`
+20:6-20:12	local.reference	`st_lam`
+20:6-20:12	variable.parameter	`st_lam`
+20:12-20:14	constructor	` K`
+20:12-20:14	local.reference	` K`
+20:14-20:16	local.reference	` #`
+20:14-20:16	operator	` #`
+20:55-20:57	keyword.return	`%.`
+21:6-21:12	constructor	`st_app`
+21:6-21:12	function	`st_app`
+21:6-21:12	local.reference	`st_app`
+21:6-21:12	variable.parameter	`st_app`
+21:12-21:14	constructor	` K`
+21:12-21:14	local.reference	` K`
+21:14-21:16	local.reference	` #`
+21:14-21:16	operator	` #`
+21:75-21:77	keyword.return	`%.`
+22:6-22:13	constructor	`st_app1`
+22:6-22:13	function	`st_app1`
+22:6-22:13	local.reference	`st_app1`
+22:6-22:13	variable.parameter	`st_app1`
+22:13-22:15	constructor	` K`
+22:13-22:15	local.reference	` K`
+22:15-22:17	local.reference	` #`
+22:15-22:17	operator	` #`
+22:72-22:74	keyword.return	`%.`
+23:6-23:13	constructor	`st_app2`
+23:6-23:13	function	`st_app2`
+23:6-23:13	local.reference	`st_app2`
+23:6-23:13	variable.parameter	`st_app2`
+23:13-23:15	constructor	` K`
+23:13-23:15	local.reference	` K`
+23:15-23:17	local.reference	` #`
+23:15-23:17	operator	` #`
+23:60-23:62	keyword.return	`%.`
+23:62-24:13	comment	``
+25:6-25:13	constructor	`st_letv`
+25:6-25:13	function	`st_letv`
+25:6-25:13	local.reference	`st_letv`
+25:6-25:13	variable.parameter	`st_letv`
+25:13-25:15	constructor	` K`
+25:13-25:15	local.reference	` K`
+25:15-25:17	local.reference	` #`
+25:15-25:17	operator	` #`
+25:77-25:79	keyword.return	`%.`
+26:6-26:13	constructor	`st_letn`
+26:6-26:13	function	`st_letn`
+26:6-26:13	local.reference	`st_letn`
+26:6-26:13	variable.parameter	`st_letn`
+26:13-26:15	constructor	` K`
+26:13-26:15	local.reference	` K`
+26:15-26:17	local.reference	` #`
+26:15-26:17	operator	` #`
+26:56-26:58	keyword.return	`%.`
+26:58-27:11	comment	``
+28:6-28:12	constructor	`st_fix`
+28:6-28:12	function	`st_fix`
+28:6-28:12	local.reference	`st_fix`
+28:6-28:12	variable.parameter	`st_fix`
+28:12-28:14	constructor	` K`
+28:12-28:14	local.reference	` K`
+28:14-28:16	local.reference	` #`
+28:14-28:16	operator	` #`
+28:54-28:56	keyword.return	`%.`
+28:56-29:8	comment	``
+30:6-30:11	constructor	`st_vl`
+30:6-30:11	function	`st_vl`
+30:6-30:11	local.reference	`st_vl`
+30:6-30:11	variable.parameter	`st_vl`
+30:11-30:13	constructor	` K`
+30:11-30:13	local.reference	` K`
+30:13-30:15	local.reference	` #`
+30:13-30:15	operator	` #`
+30:46-30:48	keyword.return	`%.`
+30:48-31:21	comment	``
+32:6-32:15	constructor	`st_return`
+32:6-32:15	function	`st_return`
+32:6-32:15	local.reference	`st_return`
+32:6-32:15	variable.parameter	`st_return`
+32:15-32:17	constructor	` K`
+32:15-32:17	local.reference	` K`
+32:17-32:19	local.reference	` ;`
+32:17-32:19	operator	` ;`
+32:19-32:21	constructor	` C`
+32:19-32:21	local.reference	` C`
+32:21-32:23	local.reference	` #`
+32:21-32:23	operator	` #`
+32:48-32:50	keyword.return	`%.`
+33:6-33:13	constructor	`st_init`
+33:6-33:13	function	`st_init`
+33:6-33:13	local.reference	`st_init`
+33:6-33:13	variable.parameter	`st_init`
+33:13-33:18	constructor	` init`
+33:13-33:18	local.reference	` init`
+33:18-33:20	local.reference	` #`
+33:18-33:20	operator	` #`
+33:46-33:48	keyword.return	`%.`
+35:0-35:5	keyword.type	`%sort`
+35:6-35:9	local.reference	`=>*`
+35:6-35:9	operator	`=>*`
+35:6-35:9	type	`=>*`
+35:30-35:32	keyword.return	`%.`
+35:32-36:9	attribute	``
+36:6-36:9	local.reference	`=>*`
+36:6-36:9	operator	`=>*`
+36:6-36:9	variable	`=>*`
+36:9-36:12	keyword.return	` %.`
+37:6-37:11	keyword.modifier	`%none`
+37:12-37:13	number	`5`
+37:14-37:17	local.reference	`=>*`
+37:14-37:17	operator	`=>*`
+37:17-37:20	keyword.return	` %.`
+38:6-38:10	constructor	`stop`
+38:6-38:10	function	`stop`
+38:6-38:10	local.reference	`stop`
+38:6-38:10	variable.parameter	`stop`
+38:10-38:12	constructor	` S`
+38:10-38:12	local.reference	` S`
+38:12-38:16	local.reference	` =>*`
+38:12-38:16	operator	` =>*`
+38:16-38:18	constructor	` S`
+38:16-38:18	local.reference	` S`
+38:18-38:21	keyword.return	` %.`
+39:6-39:8	function	`<<`
+39:6-39:8	local.reference	`<<`
+39:6-39:8	operator	`<<`
+39:6-39:8	variable.parameter	`<<`
+39:8-39:12	operator	` %pi`
+39:13-39:14	punctuation.bracket	`(`
+39:14-39:15	constructor	`S`
+39:14-39:15	local.reference	`S`
+39:16-39:19	local.reference	`=>*`
+39:16-39:19	operator	`=>*`
+39:20-39:23	constructor	`S''`
+39:20-39:23	local.reference	`S''`
+39:23-39:24	punctuation.bracket	`)`
+39:25-39:28	operator	`%<-`
+39:29-39:30	punctuation.bracket	`(`
+39:30-39:31	constructor	`S`
+39:30-39:31	local.reference	`S`
+39:32-39:34	local.reference	`=>`
+39:32-39:34	operator	`=>`
+39:35-39:37	constructor	`S'`
+39:35-39:37	local.reference	`S'`
+39:37-39:38	punctuation.bracket	`)`
+39:38-39:42	operator	` %<-`
+39:43-39:44	punctuation.bracket	`(`
+39:44-39:46	constructor	`S'`
+39:44-39:46	local.reference	`S'`
+39:47-39:50	local.reference	`=>*`
+39:47-39:50	operator	`=>*`
+39:51-39:54	constructor	`S''`
+39:51-39:54	local.reference	`S''`
+39:54-39:55	punctuation.bracket	`)`
+39:55-39:58	keyword.return	` %.`
+40:6-40:11	keyword.modifier	`%left`
+40:12-40:13	number	`5`
+40:14-40:16	local.reference	`<<`
+40:14-40:16	operator	`<<`
+40:16-40:19	keyword.return	` %.`
+40:19-41:66	comment	``
+41:66-42:62	comment	``
+44:0-44:5	keyword.type	`%sort`
+44:6-44:11	constructor	`ceval`
+44:6-44:11	local.reference	`ceval`
+44:6-44:11	type	`ceval`
+44:28-44:30	keyword.return	`%.`
+44:30-45:11	attribute	``
+45:6-45:11	constructor	`ceval`
+45:6-45:11	local.reference	`ceval`
+45:6-45:11	variable	`ceval`
+45:11-45:14	keyword.return	` %.`
+46:6-46:9	constructor	`cev`
+46:6-46:9	function	`cev`
+46:6-46:9	local.reference	`cev`
+46:6-46:9	variable.parameter	`cev`
+46:9-46:13	operator	` %pi`
+46:14-46:15	punctuation.bracket	`(`
+46:15-46:20	constructor	`ceval`
+46:15-46:20	local.reference	`ceval`
+46:21-46:22	constructor	`E`
+46:21-46:22	local.reference	`E`
+46:23-46:24	constructor	`V`
+46:23-46:24	local.reference	`V`
+46:24-46:25	punctuation.bracket	`)`
+46:26-46:29	operator	`%<-`
+46:30-46:31	punctuation.bracket	`(`
+46:31-46:35	constructor	`init`
+46:31-46:35	local.reference	`init`
+46:36-46:37	local.reference	`#`
+46:36-46:37	operator	`#`
+46:38-46:39	punctuation.bracket	`(`
+46:39-46:41	constructor	`ev`
+46:39-46:41	local.reference	`ev`
+46:42-46:43	constructor	`E`
+46:42-46:43	local.reference	`E`
+46:43-46:44	punctuation.bracket	`)`
+46:45-46:48	local.reference	`=>*`
+46:45-46:48	operator	`=>*`
+46:49-46:50	punctuation.bracket	`(`
+46:50-46:56	constructor	`answer`
+46:50-46:56	local.reference	`answer`
+46:57-46:58	constructor	`V`
+46:57-46:58	local.reference	`V`
+46:58-46:59	punctuation.bracket	`)`
+46:59-46:60	punctuation.bracket	`)`
+46:60-46:63	keyword.return	` %.`

@@ -1,5 +1,5 @@
 %                                               
-%{! Typically, metatheorems must be verified as total before they can be used to prove other metatheorems. However, one often wishes to develop a proof without first proving some intermediate lemmas. For example, suppose a programmer believes that if metatheorem A is true, he will be able to prove B. However, A may be difficult to prove, and the effort to prove it may be wasted if it does not lead to a proof of B. Instead, the programmer wants to prove B first (assuming A) and then, if successful, proceed to prove A. Therefore, he would like to create a proof of B with a "hole" for A, but still be able to check B.
+%[[ Typically, metatheorems must be verified as total before they can be used to prove other metatheorems. However, one often wishes to develop a proof without first proving some intermediate lemmas. For example, suppose a programmer believes that if metatheorem A is true, he will be able to prove B. However, A may be difficult to prove, and the effort to prove it may be wasted if it does not lead to a proof of B. Instead, the programmer wants to prove B first (assuming A) and then, if successful, proceed to prove A. Therefore, he would like to create a proof of B with a "hole" for A, but still be able to check B.
 
 The newest versions of Twelf provide a direct way to create such holes. Users of earlier versions may take advantage of a curious feature.
 
@@ -7,7 +7,7 @@ The newest versions of Twelf provide a direct way to create such holes. Users of
 
 The [``%trustme``](/wiki/percent-trustme/) declaration instructs Twelf to run the immediately following declaration but suppress any errors that occur. It is commonly used on [``%total``](/wiki/percent-total/) declarations to introduce lemmas that have not yet been proved, in order to develop a proof without first proving some necessary lemmas.
 
-If Twelf is in [unsafe mode](/wiki/unsafe-mode/), it will accept ``%trustme`` before the ``%total`` directive of a metatheorem with an incomplete proof. Twelf will consider such metatheorems total for the purpose of the totality checks of subsequent metatheorems. The following is an example of ``%trustme`` in action. !}%
+If Twelf is in [unsafe mode](/wiki/unsafe-mode/), it will accept ``%trustme`` before the ``%total`` directive of a metatheorem with an incomplete proof. Twelf will consider such metatheorems total for the purpose of the totality checks of subsequent metatheorems. The following is an example of ``%trustme`` in action. %]]
 %sort nat %.
 %term nat/z nat %.
 %term nat/s %pi nat %-> nat %.
@@ -19,7 +19,7 @@ If Twelf is in [unsafe mode](/wiki/unsafe-mode/), it will accept ``%trustme`` be
 %term _ nat-less-immsucc nat/z nat-less/z %.
 %worlds () (nat-less-immsucc _ _) %.
 %total (D1) (nat-less-immsucc D1 _) %.
-%{! When ``%trustme`` directives are no longer needed, unsafe mode can be disabled by inputting the following line into the Twelf server.
+%[[ When ``%trustme`` directives are no longer needed, unsafe mode can be disabled by inputting the following line into the Twelf server.
 
 &lt;code&gt;set unsafe false&lt;/code&gt;
 
@@ -52,10 +52,10 @@ bar : thing -> thing -> type.
 
 To reiterate, in order to use this "feature" you get Twelf to reject the ``%total`` declaration for foo. Then, it will believe that foo is total in checking _subsequent_ theorems. It won't believe that foo is total if you try to rerun ``%total`` for foo itself&mdash;if you re-check the ``%total``, it reruns the totality check, and finds that foo still isn't total.
 
-\{\{tutorial\}\} !}%
-%{!
+\{\{tutorial\}\} %]]
+%[[
 -----
 This page was copied from the MediaWiki version of the Twelf Wiki.
 If anything looks wrong, you can refer to the
 [wayback machine's version here](https://web.archive.org/web/20240303030303/http://twelf.org/wiki/Incremental_metatheorem_development).
-!}%
+%]]
