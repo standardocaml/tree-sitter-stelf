@@ -582,6 +582,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "outer_text",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1281,6 +1291,10 @@
       "types": [
         {
           "type": "command",
+          "named": true
+        },
+        {
+          "type": "outer_text",
           "named": true
         }
       ]

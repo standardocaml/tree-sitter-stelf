@@ -381,12 +381,24 @@ export default grammar({
         repeat(field("ident", $.ident)),
         ")",
       ),
-    seq_cmd: ($) => seq(token("%{"), repeat($.command), token("%}")),
+    seq_cmd: ($) =>
+      seq(
+        token("%{"),
+        optional($.outer_text),
+        repeat(seq($.command, optional($.outer_text))),
+        token("%}"),
+      ),
     scope_cmd: ($) => seq(token("%scope"), field("name", $.ident), $.command),
     open_cmd: ($) =>
       seq(token("%open"), field("name", $.ident), field("id_list", $.id_list)),
     eval_cmd: ($) =>
-      seq(token("%eval"), "%{", repeat(field("command", $.command)), "%}"),
+      seq(
+        token("%eval"),
+        "%{",
+        optional($.outer_text),
+        repeat(seq(field("command", $.command), optional($.outer_text))),
+        "%}",
+      ),
     covers_cmd: ($) => seq(token("%covers"), $.mode_dec),
 
     // `%prose <lang>` opens a prose region; the language tag is emitted by

@@ -1,0 +1,21 @@
+0:0-0:6	keyword	`%scope`
+0:7-0:11	constructor	`demo`
+0:7-0:11	label	`demo`
+0:7-0:11	local.reference	`demo`
+0:12-0:14	punctuation.bracket	`%{`
+2:0-2:5	keyword	`%term`
+2:6-2:10	constructor	`zero`
+2:6-2:10	local.reference	`zero`
+2:6-2:10	variable.parameter	`zero`
+2:10-2:14	local.reference	` nat`
+2:10-2:14	operator	` nat`
+2:14-3:2	puncatation.special	``
+4:0-4:6	keyword	`%prose`
+4:7-4:12	attribute	`latex`
+6:0-6:5	keyword	`%term`
+6:6-6:10	constructor	`succ`
+6:6-6:10	local.reference	`succ`
+6:6-6:10	variable.parameter	`succ`
+6:10-6:14	local.reference	` nat`
+6:10-6:14	operator	` nat`
+6:14-7:2	punctuation.bracket	``

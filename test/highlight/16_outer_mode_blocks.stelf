@@ -1,0 +1,9 @@
+%scope demo %{
+prose right after the opening brace
+%term zero nat
+%. more prose between inner commands
+%prose latex
+$x = y$
+%term succ nat
+%}
+prose right after the closing brace

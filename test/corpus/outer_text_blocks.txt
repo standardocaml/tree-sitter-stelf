@@ -1,0 +1,175 @@
+====
+seq_cmd_prose_after_open
+====
+
+%{ some prose text here %term 0 nat %}
+
+---
+
+(source_file
+  (command
+    (seq_cmd
+      (outer_text
+        (prose_markdown))
+      (command
+        (term_cmd
+          decl: (decl
+            args: (arg
+              (ident))
+            expr: (expr
+              (app
+                head: (atom
+                  (ident)))))))))
+  (outer_text
+    (prose_markdown)))
+====
+seq_cmd_prose_between_commands
+====
+
+%{ %term 0 nat %. some prose between commands %term 1 nat %}
+
+---
+
+(source_file
+  (command
+    (seq_cmd
+      (command
+        (term_cmd
+          decl: (decl
+            args: (arg
+              (ident))
+            expr: (expr
+              (app
+                head: (atom
+                  (ident)))))))
+      (command
+        (stop))
+      (outer_text
+        (prose_markdown))
+      (command
+        (term_cmd
+          decl: (decl
+            args: (arg
+              (ident))
+            expr: (expr
+              (app
+                head: (atom
+                  (ident)))))))))
+  (outer_text
+    (prose_markdown)))
+====
+seq_cmd_prose_after_close
+====
+
+%{ %term 0 nat %} some prose after close
+
+---
+
+(source_file
+  (command
+    (seq_cmd
+      (command
+        (term_cmd
+          decl: (decl
+            args: (arg
+              (ident))
+            expr: (expr
+              (app
+                head: (atom
+                  (ident)))))))))
+  (outer_text
+    (prose_markdown)))
+====
+seq_cmd_nested_in_scope_prose_after_close
+====
+
+%scope s %{ %term a nat %} after close %term c nat
+
+---
+
+(source_file
+  (command
+    (scope_cmd
+      name: (ident)
+      (command
+        (seq_cmd
+          (command
+            (term_cmd
+              decl: (decl
+                args: (arg
+                  (ident))
+                expr: (expr
+                  (app
+                    head: (atom
+                      (ident)))))))))))
+  (outer_text
+    (prose_markdown))
+  (command
+    (term_cmd
+      decl: (decl
+        args: (arg
+          (ident))
+        expr: (expr
+          (app
+            head: (atom
+              (ident)))))))
+  (outer_text
+    (prose_markdown)))
+====
+seq_cmd_prose_lang_switch_inside_block
+====
+
+%{ default markdown text %prose latex $x = y$ %term a nat %}
+
+---
+
+(source_file
+  (command
+    (seq_cmd
+      (outer_text
+        (prose_markdown))
+      (command
+        (prose_header
+          (prose_id)))
+      (outer_text
+        (prose_latex))
+      (command
+        (term_cmd
+          decl: (decl
+            args: (arg
+              (ident))
+            expr: (expr
+              (app
+                head: (atom
+                  (ident)))))))))
+  (outer_text
+    (prose_latex)))
+====
+eval_cmd_prose_between_commands
+====
+
+%eval %{ %decl a %. some prose %decl b %}
+
+---
+
+(source_file
+  (command
+    (eval_cmd
+      command: (command
+        (decl_cmd
+          expr: (expr
+            (app
+              head: (atom
+                (ident))))))
+      command: (command
+        (stop))
+      (outer_text
+        (prose_markdown))
+      command: (command
+        (decl_cmd
+          expr: (expr
+            (app
+              head: (atom
+                (ident))))))))
+  (outer_text
+    (prose_markdown)))
